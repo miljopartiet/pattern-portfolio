@@ -1,7 +1,7 @@
 Markup for Miljöpartiet
 ==
 
-Markup for the new mp.se using Middlemanhttp://middlemanapp.com/
+Markup for the new mp.se using [Middleman](http://middlemanapp.com/)
 
 ## Install
 
