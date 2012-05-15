@@ -1,15 +1,15 @@
 @import "compass";
 
-$link-color:         #0388a6;
-$link-hover-color:   #009ce0;
+$link-color:         #28b728;
+$link-hover-color:   #1c8437;
 $link-focus-color:   false;
 $link-active-color:  false;
 $link-visited-color: false;
 
 $font-color:  #2a2a2a;
-$font-family: sans-serif;
-$base-font-size:   12px;
-$base-line-height: 18px;
+$font-family: georgia, "Times New Roman", times, serif;
+$base-font-size:   16px;
+$base-line-height: 1.5;
 
 $total-cols: 12;
 $col-width: 4em;
@@ -18,15 +18,121 @@ $side-gutter-width: $gutter-width;
 
 @include global-reset;
 
+.topics li:after,
+blockquote small:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear:both;
+}
+
 body {
   font-family: $font-family;
-  color: $font-color; 
+  color: $font-color;
+  font-size:1em;
+  line-height:1.125;
+  padding:1.5em 15px 1.5em 15px;
+}
+
+h1 {
+  margin:0;
+  font-size:(24em/16);
+  line-height:1;
+  color:#000;
+  .vignette {
+    margin-bottom:(2em/14);
+    font-size:(14em/24);
+    line-height:1;
+  }
+}
+
+h2 {
+  margin-top:(24em/18);
+  font-size:(18em/16);
+  line-height:(24/18);
+  .vignette {
+    margin-bottom:(3em/16);
+    font-size:(14em/18);
+    line-height:1;
+  }
+}
+
+h3 {
+  margin-top:(18em/16);
+  font-weight:bold;
+}
+
+.vignette {
+  display:block;
+  text-transform:uppercase;
+  color:#aaa;
+  font-family:"Helvetica Neue", helvetica, sans-serif;
+  letter-spacing:.1em;
+}
+
+p {
+  margin-top:(12em/16);
+}
+
+small {
+  font-size:(14em/16);
+  line-height:(14/18);
+}
+
+ul {
+  list-style:disc;
+  margin-top:(12em/16);
+}
+li {
+  margin:(6em/16) 0 0 1.5em;
+}
+
+blockquote {
+  padding:(12em/16) 0 (12em/16) 0;
+  p {
+    margin-top:(12em/18);
+    font-size:(20em/18);
+    line-height:(24/20);
+    font-style:italic;
+  }
+  small {
+    display:block;
+    margin-top:(30em/14);
+    img {
+      float:left;
+      margin:(-18em/14) 10px 0 0;
+    }
+  }
+}
+
+sup {
+  vertical-align: super;
+  font-size:.7em;
 }
 
 a {
   @include link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color);
 }
 
+.lead {
+  p {
+    margin-top:(12em/18);
+    font-size:(18em/16);
+    line-height:(22/18);
+  }
+}
+
+.topics {
+  ul {list-style:none;}
+  li {margin-left:0;}
+  img {
+    float:right;
+    margin:0 0 10px 10px;
+  }
+}
+
 #main {
-  padding: 50px;
+  margin:0 auto;
+  max-width:30em;
 }
