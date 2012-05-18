@@ -145,8 +145,6 @@ a {
   margin-bottom:.6em;
 }
 
-<<<<<<< Updated upstream
-=======
 .poi ul li {
   a { display: inline; }
   p { display: block; }
@@ -159,19 +157,33 @@ a {
   padding: $gutter-width;
 }
 
-.tabrow {
+.about h2 {
+  margin: .4em 0;
+}
+
+#tabrow {
   list-style: none;
   margin-top: .6em;
   padding: 0;
   position: relative;
-  li {
+  div {
     background-color: #ECECEC;
     border: 1px solid #AAA;
     display: inline-block;
     margin: 0; 
     padding: 0 .6em;
   }
-  li.selected { background: #FFF;}
+  div#selected { background: #FFF;}
+}
+
+#tabrow:after {
+    border-bottom: 1px solid #AAA;
+    content:"";
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    position: absolute;
 }
 
 .events {
@@ -189,17 +201,8 @@ a {
   }
 }
 
-.tabrow:after {
-    border-bottom: 1px solid #AAA;
-    content:"";
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    position: absolute;
-}
 
->>>>>>> Stashed changes
+
 .images {
   margin-top: .6em;
 }
