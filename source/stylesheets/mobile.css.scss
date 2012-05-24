@@ -1,0 +1,42 @@
+@media only screen and (min-width: 320px) {
+
+  // TYPOGRAPHY
+
+  p,
+  li {
+    font-size:(18em/16);
+    line-height:(24/18);
+    li, p {
+      font-size:1em;
+    }
+  }
+  h1 {
+    font-size:3em;
+    line-height:1;
+    .vignette {
+      font-size:(16em/48);
+    }
+  }
+  h2 {
+    margin-top:1em;
+    font-size:(24em/16);
+    line-height:(30/24);
+    .vignette {
+      font-size:(14em/24);
+      line-height:(18/14);
+    }
+  }
+  .lead {
+    p {
+      margin-top:(12em/24);
+      font-size:(24em/16);
+      line-height:(30/24);
+    }
+  }
+  
+  // LAYOUT
+  
+  #wrap {
+    max-width:35em;
+  }
+}

@@ -63,14 +63,6 @@ h3 {
   font-weight:bold;
 }
 
-.vignette {
-  display:block;
-  text-transform:uppercase;
-  color:#aaa;
-  font-family:"Helvetica Neue", helvetica, sans-serif;
-  letter-spacing:.1em;
-}
-
 p {
   margin-top:(12em/16);
 }
@@ -90,6 +82,7 @@ li {
 
 blockquote {
   padding:(12em/16) 0 (12em/16) 0;
+  color:#888;
   p {
     margin-top:(12em/18);
     font-size:(20em/18);
@@ -123,6 +116,14 @@ a {
   }
 }
 
+.vignette {
+  display:block;
+  text-transform:uppercase;
+  color:#aaa;
+  font-family:"Helvetica Neue", helvetica, sans-serif;
+  letter-spacing:.1em;
+}
+
 .topics {
   ul {list-style:none;}
   li {margin-left:0;}
@@ -135,14 +136,16 @@ a {
 
 .contact {
   ul {list-style: none;}
+  li {margin-left:0;}
 }
 
 .breadcrumbs {
-  color:#aaa;
   display:block;
+  margin-bottom:(12em/14);
+  font-size:(14em/16);
   font-family:"Helvetica Neue", helvetica, sans-serif;
   letter-spacing:.1em;
-  margin-bottom:.6em;
+  color:#aaa;
 }
 
 .poi ul li {
@@ -150,64 +153,22 @@ a {
   p { display: block; }
 }
 
-.personinfo p {
-  border: 1px solid #AAA;
-  border-top: none;
-  margin-top: 0;
-  padding: $gutter-width;
-}
-
-.about h2 {
-  margin: .4em 0;
-}
-
-#tabrow {
-  list-style: none;
-  margin-top: .6em;
-  padding: 0;
-  position: relative;
-  div {
-    background-color: #ECECEC;
-    border: 1px solid #AAA;
-    display: inline-block;
-    margin: 0; 
-    padding: 0 .6em;
-  }
-  div#selected { background: #FFF;}
-}
-
-#tabrow:after {
-    border-bottom: 1px solid #AAA;
-    content:"";
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    position: absolute;
-}
-
-.events {
-  border: 1px solid #AAA;
-  padding: $gutter-width;
-  margin: .6em 0;
-  
-  h2 {
-    margin: .2em;
-  }
-
-  ul {
-    border: 1px solid #AAA;
-    padding: $gutter-width;
-  }
-}
-
-
-
 .images {
   margin-top: .6em;
 }
 
-#main {
+#logo {
+  margin-bottom:(24em/16);
+  a {
+    display:block;
+    text-indent:-9999px;
+    height:64px;
+    width:70px;
+    background:transparent url(/images/logo.gif) 0 0 no-repeat;
+  }
+}
+
+#wrap {
   margin:0 auto;
   max-width:30em;
 }

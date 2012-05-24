@@ -83,13 +83,6 @@ h3 {
   margin-top: 1.125em;
   font-weight: bold; }
 
-.vignette {
-  display: block;
-  text-transform: uppercase;
-  color: #aaa;
-  font-family: "Helvetica Neue", helvetica, sans-serif;
-  letter-spacing: .1em; }
-
 p {
   margin-top: 0.75em; }
 
@@ -105,7 +98,8 @@ li {
   margin: 0.375em 0 0 1.5em; }
 
 blockquote {
-  padding: 0.75em 0 0.75em 0; }
+  padding: 0.75em 0 0.75em 0;
+  color: #888; }
   blockquote p {
     margin-top: 0.667em;
     font-size: 1.111em;
@@ -132,6 +126,13 @@ a {
   font-size: 1.125em;
   line-height: 1.222; }
 
+.vignette {
+  display: block;
+  text-transform: uppercase;
+  color: #aaa;
+  font-family: "Helvetica Neue", helvetica, sans-serif;
+  letter-spacing: .1em; }
+
 .topics ul {
   list-style: none; }
 .topics li {
@@ -142,64 +143,34 @@ a {
 
 .contact ul {
   list-style: none; }
+.contact li {
+  margin-left: 0; }
 
 .breadcrumbs {
-  color: #aaa;
   display: block;
+  margin-bottom: 0.857em;
+  font-size: 0.875em;
   font-family: "Helvetica Neue", helvetica, sans-serif;
   letter-spacing: .1em;
-  margin-bottom: .6em; }
+  color: #aaa; }
 
 .poi ul li a {
   display: inline; }
 .poi ul li p {
   display: block; }
 
-.personinfo p {
-  border: 1px solid #AAA;
-  border-top: none;
-  margin-top: 0;
-  padding: 1em; }
-
-.about h2 {
-  margin: .4em 0; }
-
-#tabrow {
-  list-style: none;
-  margin-top: .6em;
-  padding: 0;
-  position: relative; }
-  #tabrow div {
-    background-color: #ECECEC;
-    border: 1px solid #AAA;
-    display: inline-block;
-    margin: 0;
-    padding: 0 .6em; }
-  #tabrow div#selected {
-    background: #FFF; }
-
-#tabrow:after {
-  border-bottom: 1px solid #AAA;
-  content: "";
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  position: absolute; }
-
-.events {
-  border: 1px solid #AAA;
-  padding: 1em;
-  margin: .6em 0; }
-  .events h2 {
-    margin: .2em; }
-  .events ul {
-    border: 1px solid #AAA;
-    padding: 1em; }
-
 .images {
   margin-top: .6em; }
 
-#main {
+#logo {
+  margin-bottom: 1.5em; }
+  #logo a {
+    display: block;
+    text-indent: -9999px;
+    height: 64px;
+    width: 70px;
+    background: transparent url(/images/logo.gif) 0 0 no-repeat; }
+
+#wrap {
   margin: 0 auto;
   max-width: 30em; }

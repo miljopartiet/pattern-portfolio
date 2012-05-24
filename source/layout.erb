@@ -6,11 +6,19 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag "site.css" %>
+    <%= stylesheet_link_tag "mobile.css" %>
     <%= yield_content :head %>
   </head>
   <body class="<%= page_classes %>">
-    <div id="main" role="main">
-      <%= yield %>
+    <div id="wrap">
+      <header role="banner">
+        <div id="logo">
+          <a href="/">Miljöpartiet</a>
+        </div>
+      </header>
+      <div id="main" role="main">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>
