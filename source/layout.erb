@@ -7,9 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag "site.css" %>
     <%= stylesheet_link_tag "mobile.css" %>
+    <%= stylesheet_link_tag "desktop.css" %>
     <%= yield_content :head %>
+    <script type="text/javascript" src="http://fast.fonts.com/jsapi/0f5f9693-1971-43aa-99d8-fc4103986f15.js"></script>
   </head>
-  <body class="<%= page_classes %>">
+  <% if data.page.body_class.present? %>
+  <body class="<%= data.page.body_class %>">
+  <% else %>
+  <body>
+  <% end %>
     <div id="wrap">
       <header role="banner">
         <div id="logo">
@@ -18,6 +24,15 @@
       </header>
       <div id="main" role="main">
         <%= yield %>
+      </div>
+      <footer>
+        <nav role="navigation">
+          <ul>
+            <li class="current"><a href="/topics.html">Vi vill modernisera Sverige</a></li>
+            <li><a href="/persons.html">Om Miljöpartiet</a></li>
+            <li><a href="/conversations.html">Prata politik</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
   </body>
