@@ -75,6 +75,7 @@ li {
 }
 
 blockquote {
+  margin-top:(40em/16);
   border-top:1px solid $grey;
   border-bottom:1px solid $grey;
   padding:(10em/16) 0 (10em/16) 0;
@@ -84,6 +85,9 @@ blockquote {
     font-size:(26em/16);
     line-height:(28/26);
     font-family:$swift;
+  }
+  p:first-child {
+    margin-top:0;
   }
   small {
     display:block;
