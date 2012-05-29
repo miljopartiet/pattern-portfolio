@@ -1,0 +1,55 @@
+@media only screen and (min-width: 768px) {
+  p,
+  li {
+    font-size: 1.125em;
+    line-height: 1.333; }
+    p li, p p,
+    li li,
+    li p {
+      font-size: 1em; }
+
+  h1 {
+    font-size: 2.5em;
+    line-height: 0.95em; }
+    h1 .vignette {
+      font-size: 0.333em; }
+
+  h2 {
+    margin-top: 1em;
+    font-size: 1.625em;
+    line-height: 1.154; }
+    h2 .vignette {
+      font-size: 0.538em;
+      line-height: 1.286; }
+
+  .lead p {
+    margin-top: 0.48em;
+    font-size: 1.563em;
+    line-height: 1.16; }
+
+  body {
+    background: white url(/images/bg.gif) 50% 0 repeat-y; }
+
+  nav[role="navigation"] {
+    position: absolute;
+    top: 0;
+    left: 160px; }
+
+  #wrap {
+    position: relative;
+    margin: 0 auto;
+    max-width: 940px; }
+
+  header[role="banner"] {
+    margin-bottom: 5.625em; }
+
+  body.topic_page .intro,
+  body.topic_page .illustration,
+  body.topic_page .body {
+    margin-left: 17.021%; }
+  body.topic_page .intro {
+    width: 74.468%; }
+  body.topic_page .illustration {
+    margin-top: 30px; }
+  body.topic_page .body {
+    width: 65.957%; } }
