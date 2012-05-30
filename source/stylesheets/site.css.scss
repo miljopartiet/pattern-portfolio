@@ -76,10 +76,11 @@ li {
 
 blockquote {
   margin-top:(40em/16);
-  border-top:1px solid $grey;
-  border-bottom:1px solid $grey;
+  margin-bottom:(40em/16);
+  border-top:1px solid $warm_grey;
+  border-bottom:1px solid $warm_grey;
   padding:(10em/16) 0 (10em/16) 0;
-  color:$grey;
+  color:$text_warm_grey;
   p {
     margin-top:(12em/16);
     font-size:(26em/16);
@@ -112,6 +113,18 @@ a {
   @include link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color);
 }
 
+figure figcaption,
+blockquote small {
+  font-family:"Helvetica Neue", helvetica, arial;
+  font-size:(14em/16);
+  line-height:(18/14);
+  color:$text_light_grey;
+  strong, 
+  b {
+    color:$text_grey;
+  }
+}
+
 .lead {
   p {
     margin-top:(12em/18);
@@ -123,7 +136,7 @@ a {
 .vignette {
   display:block;
   text-transform:uppercase;
-  color:#aaa;
+  color:$text_light_grey;
   font-family:"Helvetica Neue", helvetica, sans-serif;
   letter-spacing:.1em;
 }
@@ -165,19 +178,41 @@ a {
   margin-top:(12em/16);
 }
 
+.share,
+.deepening {
+  h2 {
+    margin-top:(40em/20);
+    font-size:(20em/16);
+    line-height:(22/20);
+  }
+  p {margin-top: (6em/16);}
+}
+.share {
+  ul {
+    list-style:none;
+    margin-top:(6em/16);
+  }
+  li {
+    display:inline-block;
+    margin:0;
+    margin-right:1em;
+  }
+}
+
 #logo {
+  margin-bottom:(20em/16);
   a {
     display:block;
     text-indent:-9999px;
-    height:90px;
-    width:103px;
+    height:50px;
+    width:57px;
     background:transparent url(/images/logo.svg) 0 0 no-repeat;
     background-size:100%;
   }
 }
 nav[role="navigation"] {
   ul {
-    margin:(10em/16) 0 0 0;
+    margin:0;
     list-style:none;
   }
   li {
@@ -207,8 +242,4 @@ nav[role="navigation"] {
       color:#fff;
     }
   }
-}
-
-#wrap {
-  margin:40px;
 }

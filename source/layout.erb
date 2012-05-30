@@ -9,7 +9,8 @@
     <%= stylesheet_link_tag "mobile.css" %>
     <%= stylesheet_link_tag "desktop.css" %>
     <%= yield_content :head %>
-    <script type="text/javascript" src="http://fast.fonts.com/jsapi/0f5f9693-1971-43aa-99d8-fc4103986f15.js"></script>
+    <script src="/javascripts/respond.js"></script>
+    <script src="http://fast.fonts.com/jsapi/0f5f9693-1971-43aa-99d8-fc4103986f15.js"></script>
   </head>
   <% if data.page.body_class.present? %>
   <body class="<%= data.page.body_class %>">

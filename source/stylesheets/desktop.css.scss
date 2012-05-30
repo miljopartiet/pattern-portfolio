@@ -1,5 +1,13 @@
 @import "includes.css.scss";
 
+figure:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear:both;
+}
+
 @media only screen and (min-width: 768px) {
 
   // TYPOGRAPHY
@@ -36,16 +44,24 @@
     }
   }
   
+  figure {
+    img {
+      float:left;
+      margin-right:20px; 
+    }
+  }
+  
   // LAYOUT
   
   body {
+    padding-top:(40em/16);
     background:#fff url(/images/bg.gif) 50% 0 repeat-y;
   }
   
   nav[role="navigation"] {
     position:absolute;
     top:0;
-    left:160px;
+    left:percentage(160/940);
   }
   
   #wrap {
@@ -55,13 +71,22 @@
   }
   
   header[role="banner"] {
-    margin-bottom:(90em/16);
+    margin-bottom:(80em/16);
+  }
+  
+  #logo a {
+    height:90px;
+    width:103px;
   }
   
   body.topic_page {
     .intro,
     .illustration,
-    .body {
+    .body,
+    .local,
+    .current_topics,
+    .calendar,
+    .conversations {
       margin-left:percentage(160/940);
     }
     .intro {
