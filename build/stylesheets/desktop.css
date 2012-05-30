@@ -1,3 +1,10 @@
+figure:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both; }
+
 @media only screen and (min-width: 768px) {
   p,
   li {
@@ -27,13 +34,18 @@
     font-size: 1.563em;
     line-height: 1.16; }
 
+  figure img {
+    float: left;
+    margin-right: 20px; }
+
   body {
+    padding-top: 2.5em;
     background: white url(/images/bg.gif) 50% 0 repeat-y; }
 
   nav[role="navigation"] {
     position: absolute;
     top: 0;
-    left: 160px; }
+    left: 17.021%; }
 
   #wrap {
     position: relative;
@@ -41,11 +53,19 @@
     max-width: 940px; }
 
   header[role="banner"] {
-    margin-bottom: 5.625em; }
+    margin-bottom: 5em; }
+
+  #logo a {
+    height: 90px;
+    width: 103px; }
 
   body.topic_page .intro,
   body.topic_page .illustration,
-  body.topic_page .body {
+  body.topic_page .body,
+  body.topic_page .local,
+  body.topic_page .current_topics,
+  body.topic_page .calendar,
+  body.topic_page .conversations {
     margin-left: 17.021%; }
   body.topic_page .intro {
     width: 74.468%; }
