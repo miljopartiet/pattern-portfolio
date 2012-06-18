@@ -8,105 +8,105 @@ blockquote small:after {
   display: block;
   height: 0;
   overflow: hidden;
-  clear:both;
+  clear: both;
 }
 
 body {
   font-family: $font-family;
   color: $font-color;
-  font-size:1em;
-  line-height:1.125;
-  padding:1.5em 15px 1.5em 15px;
+  font-size: 1em;
+  line-height: 1.125;
+  padding: 1.5em 15px 1.5em 15px;
 }
 
 h1, h2 {
-  font-weight:normal;
+  font-weight: normal;
 }
 
 h1 {
-  margin:0;
-  font-family:$swift;
-  font-size:(24em/16);
-  line-height:1;
+  margin: 0;
+  font-family: $swift;
+  font-size: (24em/16);
+  line-height: 1;
   color:#000;
   .vignette {
-    margin-bottom:(2em/14);
-    font-size:(14em/24);
-    line-height:1;
+    margin-bottom: (2em/14);
+    font-size: (14em/24);
+    line-height: 1;
   }
 }
 
 h2 {
-  margin-top:(24em/18);
-  font-family:$swift;
-  font-size:(18em/16);
-  line-height:(24/18);
+  margin-top: (24em/18);
+  font-family: $swift;
+  font-size: (18em/16);
+  line-height: (24/18);
   .vignette {
-    margin-bottom:(3em/16);
-    font-size:(14em/18);
-    line-height:1;
+    margin-bottom: (3em/16);
+    font-size: (14em/18);
+    line-height: 1;
   }
 }
 
 h3 {
-  margin-top:(18em/16);
-  font-weight:bold;
+  margin-top: (18em/16);
+  font-weight: bold;
 }
 
 p {
-  margin-top:(12em/16);
+  margin-top: (12em/16);
 }
 
 img {
-  max-width:100%;
+  max-width: 100%;
 }
 
 small {
-  font-size:(14em/16);
-  line-height:(18/14);
+  font-size: (14em/16);
+  line-height: (18/14);
 }
 
 ul {
-  list-style:disc;
-  margin-top:(12em/16);
+  list-style: disc;
+  margin-top: (12em/16);
 }
 li {
-  margin:(8em/16) 0 0 1.5em;
+  margin: (8em/16) 0 0 1.5em;
 }
 
 blockquote {
-  margin-top:(40em/16);
-  margin-bottom:(40em/16);
-  border-top:1px solid $warm_grey;
-  border-bottom:1px solid $warm_grey;
-  padding:(10em/16) 0 (10em/16) 0;
-  color:$text_warm_grey;
+  margin-top: (40em/16);
+  margin-bottom: (40em/16);
+  border-top: 1px solid $warm_grey;
+  border-bottom: 1px solid $warm_grey;
+  padding: (10em/16) 0 (10em/16) 0;
+  color: $text_warm_grey;
   p {
-    margin-top:(12em/16);
-    font-size:(26em/16);
-    line-height:(28/26);
-    font-family:$swift;
+    margin-top: (12em/16);
+    font-size: (26em/16);
+    line-height: (28/26);
+    font-family: $swift;
   }
   p:first-child {
-    margin-top:0;
+    margin-top: 0;
   }
   small {
-    display:block;
-    margin-top:(30em/14);
+    display: block;
+    margin-top: (30em/14);
     img {
-      float:left;
-      margin:(-16em/14) 10px 0 0;
+      float: left;
+      margin: (-16em/14) 10px 0 0;
     }
   }
 }
 
 sup {
   vertical-align: super;
-  font-size:.7em;
+  font-size: .7em;
 }
 
 b, strong {
-  font-weight:bold;
+  font-weight: bold;
 }
 
 a {
@@ -115,54 +115,54 @@ a {
 
 figure figcaption,
 blockquote small {
-  font-family:"Helvetica Neue", helvetica, arial;
-  font-size:(14em/16);
-  line-height:(18/14);
-  color:$text_light_grey;
+  font-family: "Helvetica Neue", helvetica, arial;
+  font-size: (14em/16);
+  line-height: (18/14);
+  color: $text_light_grey;
   strong, 
   b {
-    color:$text_grey;
+    color: $text_grey;
   }
 }
 
 .lead {
   p {
-    margin-top:(12em/18);
-    font-size:(18em/16);
-    line-height:(22/18);
+    margin-top: (12em/18);
+    font-size: (18em/16);
+    line-height: (22/18);
   }
 }
 
 .vignette {
-  display:block;
-  text-transform:uppercase;
-  color:$text_light_grey;
-  font-family:"Helvetica Neue", helvetica, sans-serif;
-  letter-spacing:.1em;
+  display: block;
+  text-transform: uppercase;
+  color: $text_light_grey;
+  font-family: "Helvetica Neue", helvetica, sans-serif;
+  letter-spacing: .1em;
 }
 
 .topics {
-  ul {list-style:none;}
-  li {margin-left:0;}
+  ul {list-style: none;}
+  li {margin-left: 0;}
   img {
-    float:right;
-    margin:0 0 10px 10px;
+    float: right;
+    margin: 0 0 10px 10px;
   }
 }
 
 
 .contact {
   ul {list-style: none;}
-  li {margin-left:0;}
+  li {margin-left: 0;}
 }
 
 .breadcrumbs {
-  display:block;
-  margin-bottom:(12em/14);
-  font-size:(14em/16);
-  font-family:"Helvetica Neue", helvetica, sans-serif;
-  letter-spacing:.1em;
-  color:#aaa;
+  display: block;
+  margin-bottom: (12em/14);
+  font-size: (14em/16);
+  font-family: "Helvetica Neue", helvetica, sans-serif;
+  letter-spacing: .1em;
+  color: #aaa;
 }
 
 .poi ul li {
@@ -175,71 +175,71 @@ blockquote small {
 }
 
 .illustration {
-  margin-top:(12em/16);
+  margin-top: (12em/16);
 }
 
 .share,
 .deepening {
   h2 {
-    margin-top:(40em/20);
-    font-size:(20em/16);
-    line-height:(22/20);
+    margin-top: (40em/20);
+    font-size: (20em/16);
+    line-height: (22/20);
   }
   p {margin-top: (6em/16);}
 }
 .share {
   ul {
-    list-style:none;
-    margin-top:(6em/16);
+    list-style: none;
+    margin-top: (6em/16);
   }
   li {
-    display:inline-block;
-    margin:0;
-    margin-right:1em;
+    display: inline-block;
+    margin: 0;
+    margin-right: 1em;
   }
 }
 
 #logo {
-  margin-bottom:(20em/16);
+  margin-bottom: (20em/16);
   a {
-    display:block;
-    text-indent:-9999px;
-    height:50px;
-    width:57px;
-    background:transparent url(/images/logo.svg) 0 0 no-repeat;
-    background-size:100%;
+    display: block;
+    text-indent: -9999px;
+    height: 50px;
+    width: 57px;
+    background: transparent url(/images/logo.svg) 0 0 no-repeat;
+    background-size: 100%;
   }
 }
 nav[role="navigation"] {
   ul {
-    margin:0;
-    list-style:none;
+    margin: 0;
+    list-style: none;
   }
   li {
-    margin:0;
-    font-size:(16em/16);
-    line-height:1;
+    margin: 0;
+    font-size: (16em/16);
+    line-height: 1;
   }
   a {
-    display:inline-block;
-    margin-top:(2em/16);
-    padding:(7em/16) (25em/16) (7em/16) (15em/16);
-    background:$yellow;
-    text-decoration:none;
-    font-family:$swift;
+    display: inline-block;
+    margin-top: (2em/16);
+    padding: (7em/16) (25em/16) (7em/16) (15em/16);
+    background: $yellow;
+    text-decoration: none;
+    font-family: $swift;
     &:hover {
-      background:$green;
-      color:#fff;
+      background: $green;
+      color: #fff;
     }
   }
   li.current {
     a {
-      margin-left:-1em;
-      padding:(12.5em/20) (25em/20) (12.5em/20) 1em;
-      font-size:(20em/16);
-      line-height:1;
-      background:$green;
-      color:#fff;
+      margin-left: -1em;
+      padding: (12.5em/20) (25em/20) (12.5em/20) 1em;
+      font-size: (20em/16);
+      line-height: 1;
+      background: $green;
+      color: #fff;
     }
   }
 }

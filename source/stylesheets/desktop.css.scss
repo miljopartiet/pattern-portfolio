@@ -14,64 +14,64 @@ figure:after {
 
   p,
   li {
-    font-size:(18em/16);
-    line-height:(24/18);
+    font-size: (18em/16);
+    line-height: (24/18);
     li, p {
-      font-size:1em;
+      font-size: 1em;
     }
   }
   h1 {
-    font-size:(40em/16);
-    line-height:(38em/40);
+    font-size: (40em/16);
+    line-height: (38em/40);
     .vignette {
-      font-size:(16em/48);
+      font-size: (16em/48);
     }
   }
   h2 {
-    margin-top:1em;
-    font-size:(26em/16);
-    line-height:(30/26);
+    margin-top: 1em;
+    font-size: (26em/16);
+    line-height: (30/26);
     .vignette {
-      font-size:(14em/26);
-      line-height:(18/14);
+      font-size: (14em/26);
+      line-height: (18/14);
     }
   }
   .lead {
     p {
-      margin-top:(12em/25);
-      font-size:(25em/16);
-      line-height:(29/25);
+      margin-top: (12em/25);
+      font-size: (25em/16);
+      line-height: (29/25);
     }
   }
   
   figure {
     img {
-      float:left;
-      margin-right:20px; 
+      float: left;
+      margin-right: 20px; 
     }
   }
   
   // LAYOUT
   
   body {
-    padding-top:(40em/16);
-    background:#fff url(/images/bg.gif) 50% 0 repeat-y;
+    padding-top: (40em/16);
+    background: #fff url(/images/bg.gif) 50% 0 repeat-y;
   }
   
   nav[role="navigation"] {
-    position:absolute;
-    top:0;
-    left:percentage(160/940);
+    position: absolute;
+    top: 0;
+    left: percentage(160/940);
   }
   
   #wrap {
-    position:relative;
-    margin:0 auto;
-    max-width:940px;
+    position: relative;
+    margin: 0 auto;
+    max-width: 940px;
   }
   
   header[role="banner"] {
-    margin-bottom:(80em/16);
+    margin-bottom: (80em/16);
   }
   
   #logo a {
@@ -87,17 +87,16 @@ figure:after {
     .current_topics,
     .calendar,
     .conversations {
-      margin-left:percentage(160/940);
+      margin-left: percentage(160/940);
     }
     .intro {
-      width:percentage(700/940);
+      width: percentage(700/940);
     }
     .illustration {
-      margin-top:30px;
+      margin-top: 30px;
     }
     .body {
-      width:percentage(620/940);
+      width: percentage(620/940);
     }
   }
-  
 }
