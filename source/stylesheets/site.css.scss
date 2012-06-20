@@ -77,10 +77,10 @@ li {
 blockquote {
   margin-top: (40em/16);
   margin-bottom: (40em/16);
-  border-top: 1px solid $warm_grey;
-  border-bottom: 1px solid $warm_grey;
+  border-top: 1px solid $warm-grey;
+  border-bottom: 1px solid $warm-grey;
   padding: (10em/16) 0 (10em/16) 0;
-  color: $text_warm_grey;
+  color: $text-warm-grey;
   p {
     margin-top: (12em/16);
     font-size: (26em/16);
@@ -118,10 +118,10 @@ blockquote small {
   font-family: "Helvetica Neue", helvetica, arial;
   font-size: (14em/16);
   line-height: (18/14);
-  color: $text_light_grey;
+  color: $text-light-grey;
   strong, 
   b {
-    color: $text_grey;
+    color: $text-grey;
   }
 }
 
@@ -136,7 +136,7 @@ blockquote small {
 .vignette {
   display: block;
   text-transform: uppercase;
-  color: $text_light_grey;
+  color: $text-light-grey;
   font-family: "Helvetica Neue", helvetica, sans-serif;
   letter-spacing: .1em;
 }
