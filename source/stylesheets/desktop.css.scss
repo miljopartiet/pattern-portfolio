@@ -83,10 +83,7 @@ figure:after {
     .intro,
     .illustration,
     .body,
-    .local,
-    .current_topics,
-    .calendar,
-    .conversations {
+    .article-section {
       margin-left: percentage(160/940);
     }
     .intro {
@@ -98,5 +95,12 @@ figure:after {
     .body {
       width: percentage(620/940);
     }
+  }
+  
+  // article section
+  .article-section h2 {
+    color: $green;
+    font-size: (41em/16);
+    line-height: (41/41);
   }
 }

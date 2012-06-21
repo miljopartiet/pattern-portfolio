@@ -3,7 +3,7 @@
 @include global-reset;
 
 .topics li:after,
-blockquote small:after {
+blockquote footer:after {
   content: "\0020";
   display: block;
   height: 0;

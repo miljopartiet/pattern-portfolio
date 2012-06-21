@@ -63,7 +63,7 @@ figure:after {
   body.topic_page .illustration,
   body.topic_page .body,
   body.topic_page .local,
-  body.topic_page .current_topics,
+  body.topic_page .current-topics,
   body.topic_page .calendar,
   body.topic_page .conversations {
     margin-left: 17.021%; }
