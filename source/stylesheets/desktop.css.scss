@@ -11,7 +11,6 @@ figure:after {
 @media only screen and (min-width: 768px) {
 
   // TYPOGRAPHY
-
   p,
   li {
     font-size: (18em/16);
@@ -21,8 +20,9 @@ figure:after {
     }
   }
   h1 {
-    font-size: (40em/16);
-    line-height: (38em/40);
+    font-size: (41em/16);
+    line-height: (41em/40);
+    color: $green;
     .vignette {
       font-size: (16em/48);
     }
@@ -39,8 +39,8 @@ figure:after {
   .lead {
     p {
       margin-top: (12em/25);
-      font-size: (25em/16);
-      line-height: (29/25);
+      font-size: (26em/16);
+      line-height: (30/25);
     }
   }
   
@@ -80,10 +80,7 @@ figure:after {
   }
   
   body.topic_page {
-    .intro,
-    .illustration,
-    .body,
-    .article-section {
+    article {
       margin-left: percentage(160/940);
     }
     .intro {
@@ -97,7 +94,7 @@ figure:after {
     }
   }
   
-  // article section
+  // ARTICLE SECTION
   .article-section h2 {
     color: $green;
     font-size: (41em/16);

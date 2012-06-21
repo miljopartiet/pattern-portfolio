@@ -224,12 +224,14 @@ nav[role="navigation"] {
     display: inline-block;
     margin-top: (2em/16);
     padding: (7em/16) (25em/16) (7em/16) (15em/16);
-    background: $yellow;
+    background: $green;
     text-decoration: none;
     font-family: $swift;
+    color: #fff;
+    // @todo add mixin for this
+    border-radius: 3px;
     &:hover {
-      background: $green;
-      color: #fff;
+      background: $green-dark;
     }
   }
   li.current {
@@ -238,7 +240,7 @@ nav[role="navigation"] {
       padding: (12.5em/20) (25em/20) (12.5em/20) 1em;
       font-size: (20em/16);
       line-height: 1;
-      background: $green;
+      background: $green-dark;
       color: #fff;
     }
   }
