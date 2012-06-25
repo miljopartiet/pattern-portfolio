@@ -19,7 +19,8 @@ body {
   padding: 1.5em 15px 1.5em 15px;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 
@@ -111,6 +112,7 @@ b, strong {
 
 a {
   @include link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color);
+  text-decoration: none;
 }
 
 figure figcaption,
@@ -118,7 +120,7 @@ blockquote small {
   font-family: "Helvetica Neue", helvetica, arial;
   font-size: (14em/16);
   line-height: (18/14);
-  color: $text-light-grey;
+  color: $text-medium-grey;
   strong, 
   b {
     color: $text-grey;
@@ -136,7 +138,7 @@ blockquote small {
 .vignette {
   display: block;
   text-transform: uppercase;
-  color: $text-light-grey;
+  color: $text-medium-grey;
   font-family: "Helvetica Neue", helvetica, sans-serif;
   letter-spacing: .1em;
 }
@@ -178,26 +180,73 @@ blockquote small {
   margin-top: (12em/16);
 }
 
-.share,
+.share {
+  background: $yellow;
+  margin-top: (40em/20);
+  padding: 1.25em;
+  // @todo add mixin for this
+  border-radius: 4px;
+  h2 {
+    margin-top: 0;
+    font-size: (22em/16);
+    line-height: (26/22);
+  }
+  p {
+    margin-top: (6em/16);
+  }
+  a {
+    color: $font-color;
+    text-decoration: underline;
+  }
+  //ul {
+  //  list-style: none;
+  //  margin-top: (6em/16);
+  //}
+  //li {
+  //  display: inline-block;
+  //  margin: 0;
+  //  margin-right: 1em;
+  //}
+}
+
+
 .deepening {
   h2 {
     margin-top: (40em/20);
     font-size: (20em/16);
     line-height: (22/20);
   }
-  p {margin-top: (6em/16);}
-}
-.share {
-  ul {
-    list-style: none;
+  p {
     margin-top: (6em/16);
   }
-  li {
-    display: inline-block;
-    margin: 0;
-    margin-right: 1em;
+}
+
+// ARTICLE SECTION
+.article-section {
+  header {
+    position: relative;
+    border-bottom: 1px solid $warm-grey;
+    padding: 0 0 0.5em 0;
+  }
+  h2 {
+    color: $green;
+  }
+  .vignette {
+    width: 69px;
+    height: 62px;
+    padding: 18px 0 0 22px;
+    background: transparent url(/images/bg-vignette.svg) 0 0 no-repeat;
+    background-size: 100%;
+    font-family: $swift;
+    color: #fff;
+    text-transform: none;
+  }
+  .section-lead {
+    font-family: $arial;
+    color: $text-light-grey;
   }
 }
+
 
 #logo {
   margin-bottom: (20em/16);

@@ -14,7 +14,7 @@ figure:after {
   p,
   li {
     font-size: (18em/16);
-    line-height: (24/18);
+    line-height: (26/18);
     li, p {
       font-size: 1em;
     }
@@ -90,15 +90,42 @@ figure:after {
     .illustration {
       margin-top: 30px;
     }
-    article blockquote {
-        width: percentage(805/620);
+    blockquote {
+      width: percentage(805/620);
+      p {
+        width: percentage(620/805);
+      }
+      footer {
+        width: percentage(145/805);
+        float: right;
+      }
+    }
+    .share {
+      width: percentage(785/620);
+      margin-left: -1.25em;
     }
   }
   
   // ARTICLE SECTION
-  .article-section h2 {
-    color: $green;
-    font-size: (41em/16);
-    line-height: (41/41);
+  .article-section {
+    header {
+      margin-left: percentage(-135/940);
+      padding-left: percentage(135/940);
+    }
+    h2 {
+      font-size: (41em/16);
+      line-height: (41/41);
+    }
+    .section-lead {
+      font-size: (13em/16);
+      line-height: (16/13);
+    }
+    .vignette {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: (23em/41);
+      line-height: (23/23);
+    }
   }
 }
