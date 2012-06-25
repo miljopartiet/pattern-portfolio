@@ -81,16 +81,17 @@ figure:after {
   
   body.topic_page {
     article {
-      margin-left: percentage(160/940);
+      margin-left: percentage(135/940);
     }
-    .intro {
-      width: percentage(700/940);
+    h1,
+    .body {
+      width: percentage(620/805);
     }
     .illustration {
       margin-top: 30px;
     }
-    .body {
-      width: percentage(620/940);
+    article blockquote {
+        width: percentage(805/620);
     }
   }
   
