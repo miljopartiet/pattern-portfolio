@@ -54,6 +54,10 @@ h3 {
   font-weight: bold;
 }
 
+h4 {
+  margin: 1em 0 -.75em 0;
+}
+
 p {
   margin-top: (12em/16);
 }
@@ -221,15 +225,29 @@ blockquote small {
   }
 }
 
+// ARTICLE 
+article {
+  li {
+    margin: 0 0 0 1em;
+  }
+}
+
 // ARTICLE SECTION
 .article-section {
   header {
     position: relative;
+    padding: 0 0 0.7em 0;
     border-bottom: 1px solid $warm-grey;
-    padding: 0 0 0.5em 0;
   }
   h2 {
     color: $green;
+  }
+  h3 {
+    font-weight: normal;
+    font-family: $swift;
+  }
+  a.more:before {
+    content: "+ ";
   }
   .vignette {
     width: 69px;
@@ -242,6 +260,26 @@ blockquote small {
     text-transform: none;
   }
   .section-lead {
+    margin-top: 0.5em;
+    font-family: $arial;
+    color: $text-light-grey;
+  }
+  .article-subsection {
+    margin-top: 2.5em;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  .subsection-header {
+    padding: 0 0 0.4em 0;
+    border-bottom: 1px solid $warm-grey;
+    h3,
+    .subsection-lead {
+      display: inline;  
+    }
+  }
+  .subsection-lead {
+    margin-left: .5em;
     font-family: $arial;
     color: $text-light-grey;
   }

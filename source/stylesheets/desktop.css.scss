@@ -84,7 +84,8 @@ figure:after {
       margin-left: percentage(135/940);
     }
     h1,
-    .body {
+    .body,
+    .article-section {
       width: percentage(620/805);
     }
     .illustration {
@@ -109,23 +110,33 @@ figure:after {
   // ARTICLE SECTION
   .article-section {
     header {
-      margin-left: percentage(-135/940);
-      padding-left: percentage(135/940);
+      width: percentage(695/620);
+      margin-left: percentage(-135/620);
+      padding-left: percentage(135/620);
     }
     h2 {
+      width: percentage(620/695);
       font-size: (41em/16);
       line-height: (41/41);
     }
-    .section-lead {
+    .subsection-header {
+      width: percentage(695/620);
+    }
+    .section-lead,
+    .subsection-lead {
       font-size: (13em/16);
       line-height: (16/13);
     }
     .vignette {
       position: absolute;
       left: 0;
-      top: 0;
+      top: 2.5em;
       font-size: (23em/41);
       line-height: (23/23);
+    }
+    h3 {
+      font-size: (26em/16);
+      line-height: (30/26);
     }
   }
 }
