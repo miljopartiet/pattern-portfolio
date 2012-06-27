@@ -2,8 +2,9 @@
 @import "includes.css.scss";
 @include global-reset;
 
+// Clearing
 .topics li:after,
-blockquote footer:after {
+figure:after {
   content: "\0020";
   display: block;
   height: 0;
@@ -11,6 +12,7 @@ blockquote footer:after {
   clear: both;
 }
 
+// Generic
 body {
   font-family: $font-family;
   color: $font-color;
@@ -19,34 +21,35 @@ body {
   padding: 1.5em 15px 1.5em 15px;
 }
 
-h1,
-h2 {
-  font-weight: normal;
-}
-
 h1 {
   margin: 0;
   font-family: $swift;
+  font-weight: normal;
   font-size: (24em/16);
   line-height: 1;
-  color:#000;
+  color: #000;
+  /*
   .vignette {
     margin-bottom: (2em/14);
     font-size: (14em/24);
     line-height: 1;
   }
+  */
 }
 
 h2 {
   margin-top: (24em/18);
   font-family: $swift;
+  font-weight: normal;
   font-size: (18em/16);
   line-height: (24/18);
+  /*
   .vignette {
     margin-bottom: (3em/16);
     font-size: (14em/18);
     line-height: 1;
   }
+  */
 }
 
 h3 {
@@ -63,55 +66,8 @@ p {
 }
 
 img {
+  display: block;
   max-width: 100%;
-}
-
-small {
-  font-size: (14em/16);
-  line-height: (18/14);
-}
-
-ul {
-  list-style: disc;
-  margin-top: (12em/16);
-}
-li {
-  margin: (8em/16) 0 0 1.5em;
-}
-
-blockquote {
-  margin-top: (40em/16);
-  margin-bottom: (40em/16);
-  border-top: 1px solid $warm-grey;
-  border-bottom: 1px solid $warm-grey;
-  padding: (10em/16) 0 (10em/16) 0;
-  color: $text-warm-grey;
-  p {
-    margin-top: (12em/16);
-    font-size: (26em/16);
-    line-height: (28/26);
-    font-family: $swift;
-  }
-  p:first-child {
-    margin-top: 0;
-  }
-  small {
-    display: block;
-    margin-top: (30em/14);
-    img {
-      float: left;
-      margin: (-16em/14) 10px 0 0;
-    }
-  }
-}
-
-sup {
-  vertical-align: super;
-  font-size: .7em;
-}
-
-b, strong {
-  font-weight: bold;
 }
 
 a {
@@ -119,175 +75,47 @@ a {
   text-decoration: none;
 }
 
-figure figcaption,
-blockquote small {
-  font-family: "Helvetica Neue", helvetica, arial;
-  font-size: (14em/16);
-  line-height: (18/14);
-  color: $text-medium-grey;
-  strong, 
-  b {
-    color: $text-grey;
-  }
-}
-
-.lead {
-  p {
-    margin-top: (12em/18);
-    font-size: (18em/16);
-    line-height: (22/18);
-  }
-}
-
-.vignette {
-  display: block;
-  text-transform: uppercase;
-  color: $text-medium-grey;
-  font-family: "Helvetica Neue", helvetica, sans-serif;
-  letter-spacing: .1em;
-}
-
-.topics {
-  ul {list-style: none;}
-  li {margin-left: 0;}
-  img {
-    float: right;
-    margin: 0 0 10px 10px;
-  }
-}
-
-
-.contact {
-  ul {list-style: none;}
-  li {margin-left: 0;}
-}
-
-.breadcrumbs {
-  display: block;
-  margin-bottom: (12em/14);
-  font-size: (14em/16);
-  font-family: "Helvetica Neue", helvetica, sans-serif;
-  letter-spacing: .1em;
-  color: #aaa;
-}
-
-.poi ul li {
-  a { display: inline; }
-  p { display: block; }
-}
-
-.images {
-  margin-top: .6em;
-}
-
-.illustration {
+ul {
+  list-style: disc;
   margin-top: (12em/16);
 }
 
-.share {
-  background: $yellow;
-  margin-top: (40em/20);
-  padding: 1.25em;
-  // @todo add mixin for this
-  border-radius: 4px;
-  h2 {
-    margin-top: 0;
-    font-size: (22em/16);
-    line-height: (26/22);
-  }
-  p {
-    margin-top: (6em/16);
-  }
-  a {
-    color: $font-color;
-    text-decoration: underline;
-  }
-  //ul {
-  //  list-style: none;
-  //  margin-top: (6em/16);
-  //}
-  //li {
-  //  display: inline-block;
-  //  margin: 0;
-  //  margin-right: 1em;
-  //}
+ol {
+  list-style: decimal;
+  margin-top: (12em/16);
 }
 
-
-.deepening {
-  h2 {
-    margin-top: (40em/20);
-    font-size: (20em/16);
-    line-height: (22/20);
-  }
-  p {
-    margin-top: (6em/16);
-  }
+li {
+  /*
+  margin: (8em/16) 0 0 1.5em;
+  */
+  margin: 0 0 0 1.5em;
 }
 
-// ARTICLE 
-article {
-  li {
-    margin: 0 0 0 1em;
-  }
+small {
+  font-size: (14em/16);
+  line-height: (18/14);
 }
 
-// ARTICLE SECTION
-.article-section {
-  header {
-    position: relative;
-    padding: 0 0 0.7em 0;
-    border-bottom: 1px solid $warm-grey;
-  }
-  h2 {
-    color: $green;
-  }
-  h3 {
-    font-weight: normal;
-    font-family: $swift;
-  }
-  a.more:before {
-    content: "+ ";
-  }
-  .vignette {
-    width: 69px;
-    height: 62px;
-    padding: 18px 0 0 22px;
-    background: transparent url(/images/bg-vignette.svg) 0 0 no-repeat;
-    background-size: 100%;
-    font-family: $swift;
-    color: #fff;
-    text-transform: none;
-  }
-  .section-lead {
-    margin-top: 0.5em;
-    font-family: $arial;
-    color: $text-light-grey;
-  }
-  .article-subsection {
-    margin-top: 2.5em;
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-  .subsection-header {
-    padding: 0 0 0.4em 0;
-    border-bottom: 1px solid $warm-grey;
-    h3,
-    .subsection-lead {
-      display: inline;  
-    }
-  }
-  .subsection-lead {
-    margin-left: .5em;
-    font-family: $arial;
-    color: $text-light-grey;
-  }
+sup {
+  vertical-align: super;
+  font-size: .7em;
 }
 
+b,
+strong {
+  font-weight: bold;
+}
 
+i,
+em {
+  font-style: italic;
+}
+
+// Logo
 #logo {
   margin-bottom: (20em/16);
+  
   a {
     display: block;
     text-indent: -9999px;
@@ -297,16 +125,20 @@ article {
     background-size: 100%;
   }
 }
+
+// Navigation
 nav[role="navigation"] {
   ul {
     margin: 0;
     list-style: none;
   }
+  
   li {
     margin: 0;
     font-size: (16em/16);
     line-height: 1;
   }
+  
   a {
     display: inline-block;
     margin-top: (2em/16);
@@ -317,10 +149,12 @@ nav[role="navigation"] {
     color: #fff;
     // @todo add mixin for this
     border-radius: 3px;
+    
     &:hover {
       background: $green-dark;
     }
   }
+  
   li.current {
     a {
       margin-left: -1em;
@@ -329,6 +163,219 @@ nav[role="navigation"] {
       line-height: 1;
       background: $green-dark;
       color: #fff;
+    }
+  }
+}
+
+// Blockquote
+blockquote {
+  margin-top: (40em/16);
+  margin-bottom: (40em/16);
+  border-top: 1px solid $warm-grey;
+  border-bottom: 1px solid $warm-grey;
+  padding: (10em/16) 0 (10em/16) 0;
+  color: $text-warm-grey;
+  
+  p {
+    margin-top: (12em/16);
+    font-family: $swift;
+    font-size: (26em/16);
+    line-height: (28/26);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  
+  footer {
+    font-family: $arial;
+    font-size: (14em/16);
+    line-height: (18/14);
+    color: $text-medium-grey;
+
+    a {
+      font-weight: bold;
+      color: $text-medium-grey;
+    }
+  }
+}
+
+
+// Captions
+figure figcaption,
+blockquote small {
+  font-family: "Helvetica Neue", helvetica, arial;
+  font-size: (14em/16);
+  line-height: (18/14);
+  color: $text-medium-grey;
+  
+  strong, 
+  b {
+    color: $text-grey;
+  }
+}
+
+// Page lead
+.lead {
+  p {
+    margin-top: (12em/18);
+    font-size: (18em/16);
+    line-height: (22/18);
+  }
+}
+
+/*
+.vignette {
+  display: block;
+  text-transform: uppercase;
+  color: $text-medium-grey;
+  font-family: "Helvetica Neue", helvetica, sans-serif;
+  letter-spacing: .1em;
+}
+*/
+
+/*
+.contact {
+  ul {
+    list-style: none;
+  }
+  li {
+    margin-left: 0;
+  }
+}
+*/
+
+// Breadcrumbs
+.breadcrumbs {
+  display: block;
+  margin-bottom: (12em/14);
+  font-size: (14em/16);
+  font-family: "Helvetica Neue", helvetica, sans-serif;
+  letter-spacing: .1em;
+  color: #aaa;
+}
+
+/*
+.poi ul li {
+  a { display: inline; }
+  p { display: block; }
+}
+
+.images {
+  margin-top: .6em;
+}
+*/
+
+// Main image
+.illustration {
+  margin-top: (12em/16);
+}
+
+// Share
+.share {
+  background: $yellow;
+  margin-top: (40em/20);
+  padding: 1.25em;
+  // @todo add mixin for this
+  border-radius: 4px;
+  
+  h2 {
+    margin-top: 0;
+    font-size: (22em/16);
+    line-height: (26/22);
+  }
+  
+  p {
+    margin-top: (6em/16);
+  }
+  
+  a {
+    color: $font-color;
+    text-decoration: underline;
+  }
+}
+
+// Deepening
+.deepening {
+  h2 {
+    margin-top: (40em/20);
+    font-size: (20em/16);
+    line-height: (22/20);
+  }
+  
+  p {
+    margin-top: (6em/16);
+  }
+}
+
+// Article section
+.article-section {
+  header {
+    position: relative;
+    padding: 0 0 0.7em 0;
+    border-bottom: 1px solid $warm-grey;
+  }
+  
+  h2 {
+    color: $green;
+  }
+  
+  h3 {
+    font-weight: normal;
+    font-family: $swift;
+  }
+  
+  a.more:before {
+    content: "+ ";
+  }
+  
+  .vignette {
+    width: 69px;
+    height: 62px;
+    padding: 18px 0 0 22px;
+    background: transparent url(/images/bg-vignette.svg) 0 0 no-repeat;
+    background-size: 100%;
+    font-family: $swift;
+    color: #fff;
+    text-transform: none;
+  }
+  
+  .section-lead {
+    margin-top: 0.5em;
+    font-family: $arial;
+    color: $text-light-grey;
+  }
+  
+  .article-subsection {
+    margin-top: 2.5em;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  
+  .subsection-header {
+    padding: 0 0 0.4em 0;
+    border-bottom: 1px solid $warm-grey;
+    
+    h3,
+    .subsection-lead {
+      display: inline;  
+    }
+  }
+  
+  .subsection-lead {
+    margin-left: .5em;
+    font-family: $arial;
+    color: $text-light-grey;
+  }
+  
+  .hidden {
+    position: absolute;
+    left: -9999px;
+  }
+  &.related-topics {
+    .vignette {
+      top: .5em;
     }
   }
 }

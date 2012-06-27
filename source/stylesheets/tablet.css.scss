@@ -1,40 +1,29 @@
 @import "includes.css.scss";
 
-@media only screen and (min-width: 920px) {
+@media only screen and (min-width: 768px) {
   // Typography
   p,
   li {
-    font-size: (18em/16);
-    line-height: (26/18);
-
+    font-size: (17em/16);
+    line-height: (24/17);
+    
     li, p {
       font-size: 1em;
     }
   }
-
+  
   h1 {
-    font-size: (41em/16);
-    line-height: (41em/41);
+    font-size: (37em/16);
+    line-height: (37em/37);
     color: $green;
-    /*
-    .vignette {
-      font-size: (16em/48);
-    }
-    */
   }
-
+  
   h2 {
     margin-top: 1em;
-    font-size: (26em/16);
-    line-height: (30/26);
-    /*
-    .vignette {
-      font-size: (14em/26);
-      line-height: (18/14);
-    }
-    */
+    font-size: (22em/16);
+    line-height: (26/22);
   }
-
+  
   .lead {
     p {
       margin-top: (12em/25);
@@ -42,7 +31,7 @@
       line-height: (30/25);
     }
   }
-
+  
   .article-section {
     h2 {
       font-size: (41em/16);
@@ -65,8 +54,9 @@
       line-height: (30/26);
     }
   }
+}
 
-
+@media only screen and (min-width: 768px) and (max-width: 920px) {  
   // Layout
   body {
     padding-top: (40em/16);
@@ -96,72 +86,64 @@
   
   article {
     margin-left: percentage(135/940);
-
+    
     h1,
     .body,
     .article-section {
       width: percentage(620/805);
     }
-
+    
     .illustration {
       margin-top: 30px;
     }
-
+    
+    figure {
+      width: percentage(640/805);
+    }
+    
     blockquote {
       width: percentage(805/620);
-
+      
       p {
         width: percentage(620/805);
+        font-size: (18em/16);
+        line-height: (24em/18);
       }
-
+      
       footer {
         width: percentage(145/805);
-        float: right;
-
+        
         img {
           margin-bottom: 1em;  
         }
-
-        a {
-          display: block;
-        }
       }
     }
+    
     .share {
       width: percentage(785/620);
       margin-left: -1.25em;
     }
-
-    figure {
-      &>div {
-        float: left;
-        width: percentage(640/805);
-      }
-
-      figcaption {
-        float: right;
-        width: percentage(165/805);
-        xmargin: 0 0 0 20px;
-      }
+  }
+  
+  .article-section {
+    header {
+      width: percentage(695/620);
+      margin-left: percentage(-135/620);
+      padding-left: percentage(135/620);
     }
-
-    .article-section {
-      header {
-        width: percentage(695/620);
-        margin-left: percentage(-135/620);
-        padding-left: percentage(135/620);
-      }
-      h2 {
-        width: percentage(620/695);
-      }
-      .subsection-header {
-        width: percentage(695/620);
-      }
-      .vignette {
-        position: absolute;
-        left: 0;
-        top: 2.5em;
-      }
+    
+    h2 {
+      width: percentage(620/695);
+    }
+    
+    .subsection-header {
+      width: percentage(695/620);
+    }
+    
+    .vignette {
+      position: absolute;
+      left: 0;
+      top: 2.5em;
     }
   }
 }
