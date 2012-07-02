@@ -1,33 +1,22 @@
-@media only screen and (min-width: 920px) {
+@media only screen and (min-width: 768px) {
   p,
   li {
-    font-size: 1.125em;
-    line-height: 1.444; }
+    font-size: 1.063em;
+    line-height: 1.412; }
     p li, p p,
     li li,
     li p {
       font-size: 1em; }
 
   h1 {
-    font-size: 2.563em;
+    font-size: 2.313em;
     line-height: 1em;
-    color: #339933;
-    /*
-    .vignette {
-      font-size: (16em/48);
-    }
-    */ }
+    color: #339933; }
 
   h2 {
     margin-top: 1em;
-    font-size: 1.625em;
-    line-height: 1.154;
-    /*
-    .vignette {
-      font-size: (14em/26);
-      line-height: (18/14);
-    }
-    */ }
+    font-size: 1.375em;
+    line-height: 1.182; }
 
   .lead p {
     margin-top: 0.48em;
@@ -46,8 +35,8 @@
     line-height: 1; }
   .article-section h3 {
     font-size: 1.625em;
-    line-height: 1.154; }
-
+    line-height: 1.154; } }
+@media only screen and (min-width: 768px) and (max-width: 920px) {
   body {
     padding-top: 2.5em;
     background: white url(/images/bg.gif) 50% 0 repeat-y; }
@@ -77,36 +66,31 @@
       width: 77.019%; }
     article .illustration {
       margin-top: 30px; }
+    article figure {
+      width: 79.503%; }
     article blockquote {
       width: 129.839%; }
       article blockquote p {
-        width: 77.019%; }
+        width: 77.019%;
+        font-size: 1.125em;
+        line-height: 1.333em; }
       article blockquote footer {
-        width: 18.012%;
-        float: right; }
+        width: 18.012%; }
         article blockquote footer img {
           margin-bottom: 1em; }
-        article blockquote footer a {
-          display: block; }
     article .share {
       width: 126.613%;
       margin-left: -1.25em; }
-    article figure > div {
-      float: left;
-      width: 79.503%; }
-    article figure figcaption {
-      float: right;
-      width: 20.497%;
-      xmargin: 0 0 0 20px; }
-    article .article-section header {
-      width: 112.097%;
-      margin-left: -21.774%;
-      padding-left: 21.774%; }
-    article .article-section h2 {
-      width: 89.209%; }
-    article .article-section .subsection-header {
-      width: 112.097%; }
-    article .article-section .vignette {
-      position: absolute;
-      left: 0;
-      top: 2.5em; } }
+
+  .article-section header {
+    width: 112.097%;
+    margin-left: -21.774%;
+    padding-left: 21.774%; }
+  .article-section h2 {
+    width: 89.209%; }
+  .article-section .subsection-header {
+    width: 112.097%; }
+  .article-section .vignette {
+    position: absolute;
+    left: 0;
+    top: 2.5em; } }
