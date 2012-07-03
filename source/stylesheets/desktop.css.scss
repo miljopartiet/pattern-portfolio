@@ -1,7 +1,7 @@
 @import "includes.css.scss";
 
 @media only screen and (min-width: 920px) {
-  // Typography
+  /* Typography */
   p,
   li {
     font-size: (18em/16);
@@ -15,7 +15,6 @@
   h1 {
     font-size: (41em/16);
     line-height: (41em/41);
-    color: $green;
     /*
     .vignette {
       font-size: (16em/48);
@@ -39,7 +38,14 @@
     p {
       margin-top: (12em/25);
       font-size: (26em/16);
-      line-height: (30/25);
+      line-height: (30/26);
+    }
+  }
+  
+  blockquote {
+    p {
+      font-size: (26em/16);
+      line-height: (28/26);
     }
   }
 
@@ -57,7 +63,6 @@
     
     .vignette {
       font-size: (23em/41);
-      line-height: (23/23);
     }
     
     h3 {
@@ -67,7 +72,7 @@
   }
 
 
-  // Layout
+  /* Layout */
   body {
     padding-top: (40em/16);
     background: #fff url(/images/bg.gif) 50% 0 repeat-y;
@@ -80,8 +85,6 @@
   }
   
   #wrap {
-    position: relative;
-    margin: 0 auto;
     max-width: 940px;
   }
   
@@ -115,10 +118,12 @@
       }
 
       footer {
+        padding-top: 0.8em;
         width: percentage(145/805);
         float: right;
 
         img {
+          margin-top: -100%;
           margin-bottom: 1em;  
         }
 
@@ -127,6 +132,7 @@
         }
       }
     }
+    
     .share {
       width: percentage(785/620);
       margin-left: -1.25em;
@@ -140,8 +146,8 @@
 
       figcaption {
         float: right;
-        width: percentage(165/805);
-        xmargin: 0 0 0 20px;
+        width: percentage(145/805);
+        margin: 0 0 0 percentage(20/805);
       }
     }
 

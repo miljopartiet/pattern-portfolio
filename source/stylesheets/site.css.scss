@@ -2,7 +2,7 @@
 @import "includes.css.scss";
 @include global-reset;
 
-// Clearing
+/* Clearing */
 .topics li:after,
 figure:after {
   content: "\0020";
@@ -12,13 +12,13 @@ figure:after {
   clear: both;
 }
 
-// Generic
+/* Generic */
 body {
   font-family: $font-family;
   color: $font-color;
   font-size: 1em;
-  line-height: 1.125;
-  padding: 1.5em 15px 1.5em 15px;
+  line-height: (20/16);
+  padding: 1.5em 15px;
 }
 
 h1 {
@@ -27,7 +27,7 @@ h1 {
   font-weight: normal;
   font-size: (24em/16);
   line-height: 1;
-  color: #000;
+  color: $green;
   /*
   .vignette {
     margin-bottom: (2em/14);
@@ -112,7 +112,7 @@ em {
   font-style: italic;
 }
 
-// Logo
+/* Logo */
 #logo {
   margin-bottom: (20em/16);
   
@@ -126,7 +126,7 @@ em {
   }
 }
 
-// Navigation
+/* Navigation */
 nav[role="navigation"] {
   ul {
     margin: 0;
@@ -167,20 +167,26 @@ nav[role="navigation"] {
   }
 }
 
-// Blockquote
+/* Layout */
+#wrap {
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Blockquote */
 blockquote {
-  margin-top: (40em/16);
-  margin-bottom: (40em/16);
+  margin-top: (20em/16);
+  margin-bottom: (20em/16);
   border-top: 1px solid $warm-grey;
   border-bottom: 1px solid $warm-grey;
-  padding: (10em/16) 0 (10em/16) 0;
+  padding: (10em/16) 0;
   color: $text-warm-grey;
   
-  p {
+  &>p {
     margin-top: (12em/16);
     font-family: $swift;
-    font-size: (26em/16);
-    line-height: (28/26);
+    font-size: (18em/16);
+    line-height: (22/18);
 
     &:first-child {
       margin-top: 0;
@@ -191,20 +197,20 @@ blockquote {
     font-family: $arial;
     font-size: (14em/16);
     line-height: (18/14);
-    color: $text-medium-grey;
-
-    a {
+    .name {
       font-weight: bold;
+      color: $text-grey;
+    }
+    .title {
       color: $text-medium-grey;
     }
   }
 }
 
 
-// Captions
-figure figcaption,
-blockquote small {
-  font-family: "Helvetica Neue", helvetica, arial;
+/* Captions */
+figure figcaption {
+  font-family: $arial;
   font-size: (14em/16);
   line-height: (18/14);
   color: $text-medium-grey;
@@ -215,7 +221,7 @@ blockquote small {
   }
 }
 
-// Page lead
+/* Page lead */
 .lead {
   p {
     margin-top: (12em/18);
@@ -245,7 +251,7 @@ blockquote small {
 }
 */
 
-// Breadcrumbs
+/* Breadcrumbs */
 .breadcrumbs {
   display: block;
   margin-bottom: (12em/14);
@@ -266,12 +272,12 @@ blockquote small {
 }
 */
 
-// Main image
+/* Main image */
 .illustration {
   margin-top: (12em/16);
 }
 
-// Share
+/* Share */
 .share {
   background: $yellow;
   margin-top: (40em/20);
@@ -295,7 +301,7 @@ blockquote small {
   }
 }
 
-// Deepening
+/* Deepening */
 .deepening {
   h2 {
     margin-top: (40em/20);
@@ -308,7 +314,7 @@ blockquote small {
   }
 }
 
-// Article section
+/* Article section */
 .article-section {
   header {
     position: relative;
@@ -330,12 +336,13 @@ blockquote small {
   }
   
   .vignette {
-    width: 69px;
-    height: 62px;
-    padding: 18px 0 0 22px;
+    width: (69em/23);
+    height: (62em/23);
+    padding: (18em/23) 0 0 (22em/23);
     background: transparent url(/images/bg-vignette.svg) 0 0 no-repeat;
     background-size: 100%;
     font-family: $swift;
+    line-height: 1em;
     color: #fff;
     text-transform: none;
   }
