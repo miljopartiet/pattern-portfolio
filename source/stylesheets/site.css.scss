@@ -193,8 +193,10 @@ blockquote {
   
   footer {
     font-family: $arial;
-    font-size: (14em/16);
-    line-height: (18/14);
+    p {
+      font-size: (14em/16);
+      line-height: (18/14);
+    }
     .name {
       font-weight: bold;
       color: $text-grey;
@@ -208,6 +210,8 @@ blockquote {
 
 /* Captions */
 figure figcaption {
+  padding-bottom: .5em;
+  border-bottom: 1px solid $warm-grey;
   font-family: $arial;
   font-size: (14em/16);
   line-height: (18/14);
