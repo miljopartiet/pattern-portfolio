@@ -352,6 +352,7 @@ figure figcaption {
   
   .article-subsection {
     margin-top: 2.5em;
+    
     &:first-child {
       margin-top: 0;
     }
@@ -377,7 +378,9 @@ figure figcaption {
     position: absolute;
     left: -9999px;
   }
+  
   &.related-topics {
+  
     .vignette {
       top: .5em;
     }
@@ -385,16 +388,23 @@ figure figcaption {
 }
 
 .conversation {
-  margin: 0;
   list-style: none;
+  margin: 1em 0 0 0;
+  padding: (23em/16) 0;
+
+  .content {
+    position: relative;
+    z-index: 1;
+    padding: 0.75em 1em;
   
-  p:first-child {
-    margin: 0;
+    p:first-child {
+      margin: 0;
+    }
   }
 
   .byline {
     font-family: $arial;
-    color: $text-medium-grey;
+    color: $text-light-grey;
     font-size: (14em/16);
     line-height: (18/14);
 
@@ -405,7 +415,7 @@ figure figcaption {
     
     img {
       position: absolute;
-      bottom: -1em;
+      bottom: (-23em/16);
     }
     
     .arrow {
@@ -419,22 +429,38 @@ figure figcaption {
   }
 
   .question {
+    @include border-radius(3px 3px 3px 0);
     position: relative;
-    z-index: 1;
-    margin-bottom: -1em;
+    z-index: 2;
+    margin-bottom: -.75em;
     margin-right: percentage(110/620);
-    background: $yellow;
-    padding: .75em;
+
+    .content {
+      padding-bottom: 1.08em;
+      background: $yellow;
     
-    &>p {
-      font-family: $swift;
-      font-size: (22em/16);
-      line-height: (24/22);
+      &:after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: block;
+        width: percentage(441/510);
+        height: .75em;
+        content: "";
+        background: rgba(0, 0, 0, .04);
+        @include border-radius(3px 0 3px 0);
+      }
+
+      p {
+        font-family: $swift;
+        font-size: (22em/16);
+        line-height: (24/22);
+      }
     }
 
     .byline {
       p {
-        top: -1em;
+        top: (-23em/16);
       }
 
       img {
@@ -453,26 +479,30 @@ figure figcaption {
     position: relative;
     margin-left: percentage(70/620);
     margin-right: percentage(75/620);
-    background: #eee;
-    padding: .75em;
+    @include border-radius(3px 3px 0 3px);
 
-    &>p {
-      font-size: 1em;
-      line-height: (20/16);
+    .content {
+      background: $beige;
+      padding-top: 1.08em;
+
+      p {
+        font-size: 1em;
+        line-height: (20/16);
+      }
     }
 
     .byline {
       p {
-        bottom: -1em;
+        bottom: (-23em/16);
       }
       
       img {
-        right: percentage(-75/510);
+        right: percentage(-80/510);
       }
 
       .arrow {
         right: percentage(-25/620);
-        border-left: 25px solid #eee;      
+        border-left: 25px solid $beige;      
       }
     }
   }
