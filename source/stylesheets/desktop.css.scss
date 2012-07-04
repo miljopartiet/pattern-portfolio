@@ -73,6 +73,30 @@
     }
   }
 
+  .conversation {
+    .byline {
+      font-size: (14em/16);
+      line-height: (18/14);
+    }
+  
+    .question {
+      .content {
+        p {
+          font-size: (22em/16);
+          line-height: (24/22);
+        }
+      }
+    }
+
+    .answer {
+      .content {
+        p {
+          line-height: (20/16);
+        }
+      }
+    }
+  }
+
 
   /* Layout */
   body {

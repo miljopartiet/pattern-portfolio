@@ -13,13 +13,21 @@
       font-size: (14em/16);
     }
   }
+
+  .conversation {
+    .byline {
+      font-size: (12em/16);
+    }
+  }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
 /* Layout */
+  /*
   #wrap {
     background: rgba(0, 255, 0, .1);    
   }
+  */
   
   blockquote {
     overflow: hidden;
@@ -44,6 +52,29 @@
       margin-top: .5em;
       padding-bottom: .5em;
       border-bottom: 1px solid $warm-grey;
+    }
+  }
+  
+  .conversation {
+    img {
+      display: none;
+    }
+    
+    .question {
+      margin-right: percentage(70/510);
+
+      .content {
+        padding-bottom: 1.08em;
+        background: $yellow;
+      
+        &:after {
+          width: percentage(445/510);
+        }
+      }
+    }
+
+    .answer {
+      margin-right: 0;
     }
   }
 }

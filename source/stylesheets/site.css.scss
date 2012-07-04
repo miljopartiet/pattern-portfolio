@@ -405,8 +405,6 @@ figure figcaption {
   .byline {
     font-family: $arial;
     color: $text-light-grey;
-    font-size: (14em/16);
-    line-height: (18/14);
 
     p {
       position: absolute;
@@ -453,8 +451,6 @@ figure figcaption {
 
       p {
         font-family: $swift;
-        font-size: (22em/16);
-        line-height: (24/22);
       }
     }
 
@@ -486,7 +482,6 @@ figure figcaption {
       padding-top: 1.08em;
 
       p {
-        font-size: 1em;
         line-height: (20/16);
       }
     }
