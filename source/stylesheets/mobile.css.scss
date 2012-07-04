@@ -8,9 +8,9 @@
       font-size: (13em/18);
     }
     
-    .section-lead {
+    .section-lead,
+    .subsection-lead {
       font-size: (14em/16);
-      
     }
   }
 }
@@ -41,10 +41,8 @@
     }
 
     figcaption {
-      width: 100%;
       margin-top: .5em;
       padding-bottom: .5em;
-      padding-right: percentage(20/768);
       border-bottom: 1px solid $warm-grey;
     }
   }
