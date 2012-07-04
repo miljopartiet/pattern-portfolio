@@ -431,11 +431,11 @@ figure figcaption {
     z-index: 2;
     margin-bottom: -.75em;
     margin-right: percentage(110/620);
-    border-radius: 3px 3px 3px 0;
 
     .content {
       padding-bottom: 1.08em;
       background: $yellow;
+      border-radius: 3px 3px 3px 0;
     
       &:after {
         position: absolute;
@@ -475,10 +475,10 @@ figure figcaption {
     position: relative;
     margin-left: percentage(70/620);
     margin-right: percentage(75/620);
-    border-radius: 3px 3px 0 3px;
 
     .content {
       background: $beige;
+      border-radius: 3px 3px 0 3px;
       padding-top: 1.08em;
 
       p {
