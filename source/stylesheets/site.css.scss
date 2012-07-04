@@ -147,9 +147,7 @@ nav[role="navigation"] {
     text-decoration: none;
     font-family: $swift;
     color: #fff;
-    // @todo add mixin for this
-    border-radius: 3px;
-    
+    @include border-radius(3px);
     &:hover {
       background: $green-dark;
     }
@@ -282,8 +280,7 @@ figure figcaption {
   background: $yellow;
   margin-top: (40em/20);
   padding: 1.25em;
-  // @todo add mixin for this
-  border-radius: 4px;
+  @include border-radius(4px);
   
   h2 {
     margin-top: 0;
