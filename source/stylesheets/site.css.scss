@@ -386,3 +386,97 @@ figure figcaption {
     }
   }
 }
+
+.conversation {
+  margin: 0;
+  list-style: none;
+  
+  p:first-child {
+    margin: 0;
+  }
+
+  .byline {
+    font-family: $arial;
+    color: $text-medium-grey;
+    font-size: (14em/16);
+    line-height: (18/14);
+
+    p {
+      position: absolute;
+      margin: 0;
+    }
+    
+    img {
+      position: absolute;
+      bottom: -1em;
+    }
+    
+    .arrow {
+      position: absolute;
+      width: 0;
+      font-size: 0;
+      line-height: 0;
+      bottom: 0;
+      border-top: 25px solid transparent;
+    }
+  }
+
+  .question {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -1em;
+    margin-right: percentage(110/620);
+    background: $yellow;
+    padding: .75em;
+    
+    &>p {
+      font-family: $swift;
+      font-size: (22em/16);
+      line-height: (24/22);
+    }
+
+    .byline {
+      p {
+        top: -1em;
+      }
+
+      img {
+        left: percentage(-75/510);
+      }
+
+      .arrow {
+        left: percentage(-25/620);
+        border-top: 25px solid transparent;
+        border-right: 25px solid $yellow;      
+      }
+    }
+  }
+
+  .answer {
+    position: relative;
+    margin-left: percentage(70/620);
+    margin-right: percentage(75/620);
+    background: #eee;
+    padding: .75em;
+
+    &>p {
+      font-size: 1em;
+      line-height: (20/16);
+    }
+
+    .byline {
+      p {
+        bottom: -1em;
+      }
+      
+      img {
+        right: percentage(-75/510);
+      }
+
+      .arrow {
+        right: percentage(-25/620);
+        border-left: 25px solid #eee;      
+      }
+    }
+  }
+}
