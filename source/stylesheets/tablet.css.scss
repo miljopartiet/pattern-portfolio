@@ -56,6 +56,13 @@
       line-height: (30/26);
     }
   }
+  
+  .related-topics {
+    h3 {
+      font-size: (22em/16);
+      line-height: (24/22);
+    }
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 919px) {
@@ -73,7 +80,6 @@
   
   #wrap {
     max-width: 768px;
-    background: rgba(255,0,0,.1);
   }
   
   header[role="banner"] {
@@ -150,6 +156,17 @@
       position: absolute;
       left: 0;
       top: 2.5em;
+    }
+  }
+
+  .related-topics {
+    li {
+      width: 31%;
+      margin-left: 3%;
+      
+      &:first-child {
+        margin-left: 0;
+      }
     }
   }
 }
