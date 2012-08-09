@@ -34,6 +34,18 @@
     }
   }
   
+  .share {
+    h2 {
+      font-size: (20em/16);
+      line-height: (22/20);
+    }
+    
+    p {
+      font-size: (17em/16);
+      line-height: (24/17);
+    }
+  }
+  
   .article-section {
     h2 {
       font-size: (41em/16);
@@ -61,6 +73,19 @@
     h3 {
       font-size: (22em/16);
       line-height: (24/22);
+    }
+  }
+
+  #feedback {
+    
+    h2 {
+      font-size: (18em/16);
+      line-height: (22/18); 
+    }
+    
+    p {
+      font-size: (18em/16);
+      line-height: (24/18);
     }
   }
 }
@@ -167,6 +192,14 @@
       &:first-child {
         margin-left: 0;
       }
+    }
+  }
+
+  #feedback {
+    
+    h2,
+    p {
+      display: inline;
     }
   }
 }
