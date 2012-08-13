@@ -1,17 +1,19 @@
 @media only screen and (min-width: 920px) {
+  /* Typography */
+  /*
   p,
   li {
-    font-size: 1.125em;
-    line-height: 1.444; }
-    p li, p p,
-    li li,
-    li p {
-      font-size: 1em; }
-
+    font-size: (18em/16);
+    line-height: (26/18);
+    li, 
+    p {
+      font-size: 1em;
+    }
+  }
+  */
   h1 {
     font-size: 2.563em;
     line-height: 1em;
-    color: #339933;
     /*
     .vignette {
       font-size: (16em/48);
@@ -32,7 +34,24 @@
   .lead p {
     margin-top: 0.48em;
     font-size: 1.625em;
-    line-height: 1.2; }
+    line-height: 1.154; }
+
+  blockquote > p {
+    font-size: 1.625em;
+    line-height: 1.077; }
+
+  article .body > p,
+  article .body > ul,
+  article .body > ol {
+    font-size: 1.125em;
+    line-height: 1.444; }
+
+  .share h2 {
+    font-size: 1.375em;
+    line-height: 1.182; }
+  .share p {
+    font-size: 1.125em;
+    line-height: 1.444; }
 
   .article-section h2 {
     font-size: 2.563em;
@@ -42,12 +61,32 @@
     font-size: 0.813em;
     line-height: 1.231; }
   .article-section .vignette {
-    font-size: 0.561em;
-    line-height: 1; }
+    font-size: 0.561em; }
   .article-section h3 {
     font-size: 1.625em;
     line-height: 1.154; }
 
+  .conversation .byline {
+    font-size: 0.875em;
+    line-height: 1.286; }
+  .conversation .question .content p {
+    font-size: 1.375em;
+    line-height: 1.091; }
+  .conversation .answer .content p {
+    line-height: 1.25; }
+
+  .related-topics h3 {
+    font-size: 1.375em;
+    line-height: 1.091; }
+
+  #feedback h2 {
+    font-size: 1.375em;
+    line-height: 1.091; }
+  #feedback p {
+    font-size: 1.125em;
+    line-height: 1.333; }
+
+  /* Layout */
   body {
     padding-top: 2.5em;
     background: white url(/images/bg.gif) 50% 0 repeat-y; }
@@ -58,8 +97,6 @@
     left: 17.021%; }
 
   #wrap {
-    position: relative;
-    margin: 0 auto;
     max-width: 940px; }
 
   header[role="banner"] {
@@ -82,9 +119,11 @@
       article blockquote p {
         width: 77.019%; }
       article blockquote footer {
+        padding-top: 0.7em;
         width: 18.012%;
         float: right; }
         article blockquote footer img {
+          margin-top: -100%;
           margin-bottom: 1em; }
         article blockquote footer a {
           display: block; }
@@ -96,8 +135,8 @@
       width: 79.503%; }
     article figure figcaption {
       float: right;
-      width: 20.497%;
-      xmargin: 0 0 0 20px; }
+      width: 18.012%;
+      margin: 0 0 0 2.484%; }
     article .article-section header {
       width: 112.097%;
       margin-left: -21.774%;
@@ -109,4 +148,9 @@
     article .article-section .vignette {
       position: absolute;
       left: 0;
-      top: 2.5em; } }
+      top: 2.5em; }
+    article .related-topics li {
+      width: 31%;
+      margin-left: 3%; }
+      article .related-topics li:first-child {
+        margin-left: 0; } }

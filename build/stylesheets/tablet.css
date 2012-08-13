@@ -1,13 +1,16 @@
 @media only screen and (min-width: 768px) {
+  /* Typography */
+  /*
   p,
   li {
-    font-size: 1.063em;
-    line-height: 1.412; }
-    p li, p p,
-    li li,
-    li p {
-      font-size: 1em; }
-
+    font-size: (17em/16);
+    line-height: (24/17);
+    li,
+    p {
+      font-size: 1em;
+    }
+  }
+  */
   h1 {
     font-size: 2.313em;
     line-height: 1em;
@@ -20,8 +23,15 @@
 
   .lead p {
     margin-top: 0.48em;
-    font-size: 1.625em;
-    line-height: 1.2; }
+    font-size: 1.375em;
+    line-height: 1.182; }
+
+  .share h2 {
+    font-size: 1.25em;
+    line-height: 1.1; }
+  .share p {
+    font-size: 1.063em;
+    line-height: 1.412; }
 
   .article-section h2 {
     font-size: 2.563em;
@@ -35,8 +45,20 @@
     line-height: 1; }
   .article-section h3 {
     font-size: 1.625em;
-    line-height: 1.154; } }
-@media only screen and (min-width: 768px) and (max-width: 920px) {
+    line-height: 1.154; }
+
+  .related-topics h3 {
+    font-size: 1.375em;
+    line-height: 1.091; }
+
+  #feedback h2 {
+    font-size: 1.125em;
+    line-height: 1.222; }
+  #feedback p {
+    font-size: 1.125em;
+    line-height: 1.333; } }
+@media only screen and (min-width: 768px) and (max-width: 919px) {
+  /* Layout */
   body {
     padding-top: 2.5em;
     background: white url(/images/bg.gif) 50% 0 repeat-y; }
@@ -47,9 +69,7 @@
     left: 17.021%; }
 
   #wrap {
-    position: relative;
-    margin: 0 auto;
-    max-width: 940px; }
+    max-width: 768px; }
 
   header[role="banner"] {
     margin-bottom: 5em; }
@@ -59,25 +79,26 @@
     width: 103px; }
 
   article {
-    margin-left: 14.362%; }
+    margin-left: 12.37%;
+    width: 87.63%; }
     article h1,
     article .body,
     article .article-section {
-      width: 77.019%; }
+      xwidth: 77.019%; }
     article .illustration {
       margin-top: 30px; }
-    article figure {
-      width: 79.503%; }
-    article blockquote {
-      width: 129.839%; }
-      article blockquote p {
-        width: 77.019%;
-        font-size: 1.125em;
-        line-height: 1.333em; }
-      article blockquote footer {
-        width: 18.012%; }
-        article blockquote footer img {
-          margin-bottom: 1em; }
+    article figcaption {
+      width: 100%;
+      margin-top: .5em;
+      padding-bottom: .5em;
+      padding-right: 2.604%;
+      border-bottom: 1px solid #cccccc; }
+    article blockquote p {
+      width: 77.019%;
+      font-size: 1.125em;
+      line-height: 1.333em; }
+    article blockquote footer {
+      float: right; }
     article .share {
       width: 126.613%;
       margin-left: -1.25em; }
@@ -93,4 +114,14 @@
   .article-section .vignette {
     position: absolute;
     left: 0;
-    top: 2.5em; } }
+    top: 2.5em; }
+
+  .related-topics li {
+    width: 31%;
+    margin-left: 3%; }
+    .related-topics li:first-child {
+      margin-left: 0; }
+
+  #feedback h2,
+  #feedback p {
+    display: inline; } }
