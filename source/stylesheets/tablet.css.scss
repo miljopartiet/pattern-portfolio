@@ -90,13 +90,60 @@
   }
 }
 
+@media only screen and (min-width: 768px) {
+  /* Navigation */
+
+  #skip-to-navigation {
+    display:none;
+  }
+  
+  nav[role="navigation"] {
+    ul {
+      margin: 0;
+      list-style: none;
+    }
+    
+    li {
+      margin: 0;
+      font-size: (16em/16);
+      line-height: 1;
+    }
+    
+    a {
+      display: inline-block;
+      margin-top: (2em/16);
+      padding: (7em/16) (25em/16) (7em/16) (15em/16);
+      background: $green;
+      text-decoration: none;
+      font-family: $swift;
+      color: #fff;
+      border-radius: 3px;
+      &:hover {
+        background: $green-dark;
+      }
+    }
+    
+    li.current {
+      a {
+        margin-left: -1em;
+        padding: (12.5em/20) (25em/20) (12.5em/20) 1em;
+        font-size: (20em/16);
+        line-height: 1;
+        background: $green-dark;
+        color: #fff;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 919px) {
+
   /* Layout */
   body {
     padding-top: (40em/16);
-    background: #fff url(/images/bg.gif) 50% 0 repeat-y;
+    background: #fff;
   }
-  
+
   nav[role="navigation"] {
     position: absolute;
     top: 0;
@@ -117,13 +164,16 @@
   }
   
   article {
-    margin-left: percentage(95/768);
-    width: percentage(673/768);
+    margin-left: percentage(50/768);
+    width: percentage(718/768);
     
     h1,
     .body,
     .article-section {
       xwidth: percentage(620/805);
+    }
+    .body {
+      position:relative;
     }
     
     .illustration {
@@ -141,13 +191,15 @@
     
     blockquote {
       
-      p {
-        width: percentage(620/805);
+      > p {
+        width: percentage(543/718);
         font-size: (18em/16);
         line-height: (24em/18);
+        float:left;
       }
       
       footer {
+        width: percentage(145/718);
         float: right;
         
         img {
@@ -157,8 +209,10 @@
     }
     
     .share {
-      width: percentage(785/620);
-      margin-left: -1.25em;
+      -moz-box-sizing: border-box;
+           box-sizing: border-box;
+      width: percentage((718 + 40) / 718);
+      margin-left: percentage((20/718)*-1);
     }
   }
   

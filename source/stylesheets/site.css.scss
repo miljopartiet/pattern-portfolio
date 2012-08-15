@@ -126,45 +126,6 @@ em {
   }
 }
 
-/* Navigation */
-nav[role="navigation"] {
-  ul {
-    margin: 0;
-    list-style: none;
-  }
-  
-  li {
-    margin: 0;
-    font-size: (16em/16);
-    line-height: 1;
-  }
-  
-  a {
-    display: inline-block;
-    margin-top: (2em/16);
-    padding: (7em/16) (25em/16) (7em/16) (15em/16);
-    background: $green;
-    text-decoration: none;
-    font-family: $swift;
-    color: #fff;
-    border-radius: 3px;
-    &:hover {
-      background: $green-dark;
-    }
-  }
-  
-  li.current {
-    a {
-      margin-left: -1em;
-      padding: (12.5em/20) (25em/20) (12.5em/20) 1em;
-      font-size: (20em/16);
-      line-height: 1;
-      background: $green-dark;
-      color: #fff;
-    }
-  }
-}
-
 /* Layout */
 #wrap {
   position: relative;

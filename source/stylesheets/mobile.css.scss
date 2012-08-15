@@ -22,7 +22,30 @@
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
-/* Layout */
+  /* Layout */
+
+  #skip-to-navigation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    background: $beige;
+    padding: .2em .4em;
+  }
+
+  nav[role="navigation"] {
+    width: 100%;
+  }
+  
+  nav[role="navigation"].selected {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    width: 100%;
+    background: $beige;
+  }
+
   blockquote {
     overflow: hidden;
 
