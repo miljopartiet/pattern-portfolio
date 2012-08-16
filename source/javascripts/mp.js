@@ -3,37 +3,38 @@ $(function() {
 
   Mp.NavigationToggler = function(element) {
     var $toggler = $(element),
-        $nav = $('#main-navigation');
+        $nav;
 
-    var hide = function() {
-      $nav.animate({
-        marginTop: '-' + $nav.height() + 'px'
-      }, 200, function() {
-        $nav.removeClass('selected').css('marginTop', '0px');
-      });
-    };
+    var setup = function() {
+      var $original_nav = $('#main-navigation');
+      $nav = $original_nav.clone();
+      $nav.attr('id', 'top-navigation');
 
-    var show = function() {
-      $nav.addClass('selected');
-      $nav.css({
-        marginTop: '-' + $nav.height() + 'px'
-      });
+      $nav.append('<a href="#" class="close">Stäng meny</span>');
+      $nav.on('click', 'a.close', hide);
 
-      $nav.animate({
-        marginTop: '0px'
-      }, 300);
+      $('body').append($nav);
+      var se = document.createElement('style');
+      se.type = 'text/css';
+      var rules = "#top-navigation { margin-top: -"+ $nav.height() +"px; }";
+      rules += "#top-navigation.inactive { margin-top: -"+ $nav.height() +"px; }";
+      se.innerHTML = rules;
 
-    };
-
-    var toggle = function(e) {
-      e.preventDefault();
-      if ($nav.hasClass('selected')) {
-        hide();
-      } else {
-        show();
-      }
+      document.getElementsByTagName("head")[0].appendChild(se);
     }
-    $toggler.bind('click', toggle);
+
+    var hide = function(e) {
+      e.preventDefault();
+      $nav.addClass('inactive').removeClass('active');
+    };
+
+    var show = function(e) {
+      e.preventDefault();
+      $nav.addClass('active').removeClass('inactive');
+    };
+
+    $toggler.bind('click', show);
+    setup();
   }
 
   $(document).ready(function() {
