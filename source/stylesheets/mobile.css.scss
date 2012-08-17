@@ -2,12 +2,12 @@
 
 @media only screen and (min-width: 320px) {
 /* Typography */
-    
+
   .article-section {
     .vignette {
       font-size: (13em/18);
     }
-    
+
     .section-lead,
     .subsection-lead {
       font-size: (14em/16);
@@ -32,14 +32,14 @@
     background: $beige;
     padding: .2em .4em;
     color:rgb(188, 185, 178);
-    
+
   }
 
   nav[role="navigation"] {
     width: 100%;
     background: $beige;
   }
-    
+
   #top-navigation {
     position: absolute;
     top: 0;
@@ -47,11 +47,11 @@
     z-index: 999;
 
     &.active {
-      @include transition(margin-top, 0.35s, ease-in-out);
+      @include transition(margin-top 0.35s ease-in-out);
       margin-top:0px;
     }
     &.inactive {
-      @include transition(margin-top, 0.2s, ease-out);
+      @include transition(margin-top 0.2s ease-out);
     }
 
     ul,li {
@@ -99,19 +99,19 @@
       margin-top: .5em;
     }
   }
-  
+
   .conversation {
     img {
       display: none;
     }
-    
+
     .question {
       margin-right: percentage(70/510);
 
       .content {
         padding-bottom: 1.08em;
         background: $yellow;
-      
+
         &:after {
           width: percentage(445/510);
         }
@@ -124,7 +124,7 @@
   }
 
   #feedback {
-    
+
     h2,
     p {
       display: inline;
