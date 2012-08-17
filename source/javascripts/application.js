@@ -3,6 +3,7 @@ $(function() {
 
   Mp.NavigationToggler = function(element) {
     var $toggler = $(element),
+        setup_run = false,
         $nav;
 
     var setup = function() {
@@ -21,6 +22,7 @@ $(function() {
       se.innerHTML = rules;
 
       document.getElementsByTagName("head")[0].appendChild(se);
+      setup_run = true;
     }
 
     var hide = function(e) {
@@ -34,7 +36,9 @@ $(function() {
     };
 
     $toggler.bind('click', show);
-    setup();
+    $toggler.bind('mouseenter', function() {
+      setup();
+    });
   }
 
   $(document).ready(function() {
