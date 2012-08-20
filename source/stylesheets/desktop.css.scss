@@ -54,7 +54,7 @@
 
   article {
     .body,
-    .body .article-section {
+    .article-section {
       > p,
       > ul,
       > ol {
@@ -77,11 +77,6 @@
   }
 
   .article-section {
-    h2 {
-      font-size: (41em/16);
-      line-height: (41/41);
-    }
-
     .section-lead,
     .subsection-lead {
       font-size: (13em/16);
@@ -175,21 +170,10 @@
       width: percentage(620/805);
     }
 
-    .body .article-section {
-      width: 100%;
-      h2 {
-        font-size: (26em/16);
-        a {
-          display:block;
-          font-size: (18em/26);
-          margin-bottom:.5em;
-        }
-      }
-    }
-
     .illustration {
       margin-top: 30px;
     }
+
     p,
     ul,
     ol {
@@ -220,7 +204,6 @@
     }
 
     .share {
-      width: percentage(785/620);
       margin-left: -1.25em;
     }
 
@@ -249,8 +232,6 @@
           margin-right: - percentage((145/695)/2);
 
         }
-      }
-      h2 {
       }
       .subsection-header {
         width: percentage(695/620);

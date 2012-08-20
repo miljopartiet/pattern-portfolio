@@ -304,10 +304,23 @@ figure figcaption {
 
 /* Article section */
 .article-section {
+  margin-top: (60em/16);
+
   header {
-    position: relative;
-    padding: 0 0 0.7em 0;
     border-bottom: 1px solid $warm-grey;
+    margin-bottom: -1px;
+    position: relative;
+    padding: 0 0 0.2em 0;
+  }
+
+  h2 {
+    font-size: (26em/16);
+
+    a.topic {
+      display:block;
+      font-size: (18em/26);
+      margin-bottom:.5em;
+    }
   }
 
   h3 {
@@ -339,6 +352,7 @@ figure figcaption {
 
   .article-subsection {
     margin-top: 2.5em;
+    border-top: 1px solid $warm-grey;
 
     &:first-child {
       margin-top: 0;
@@ -370,6 +384,30 @@ figure figcaption {
 
     .vignette {
       top: .5em;
+    }
+  }
+}
+
+.news-blocks,
+.calendar {
+  ul {
+    list-style: none;
+  }
+  li {
+    margin:0;
+    a {
+      display:block;
+      margin: 0 0 (20em/22) 55px;
+      font-size: (22em/16);
+      .meta {
+        font-size: (14em/22);
+        color: $text-grey;
+        display: block;
+      }
+    }
+    img {
+      margin-left: -55px;
+      float: left;
     }
   }
 }

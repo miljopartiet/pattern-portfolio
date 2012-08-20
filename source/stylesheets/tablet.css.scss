@@ -13,19 +13,19 @@
     }
   }
   */
-  
+
   h1 {
     font-size: (37em/16);
     line-height: (37em/37);
     color: $green;
   }
-  
+
   h2 {
     margin-top: 1em;
     font-size: (22em/16);
     line-height: (26/22);
   }
-  
+
   .lead {
     p {
       margin-top: (12em/25);
@@ -33,42 +33,38 @@
       line-height: (26/22);
     }
   }
-  
+
   .share {
     h2 {
       font-size: (20em/16);
       line-height: (22/20);
     }
-    
+
     p {
       font-size: (17em/16);
       line-height: (24/17);
     }
   }
-  
+
   .article-section {
-    h2 {
-      font-size: (41em/16);
-      line-height: (41/41);
-    }
-    
+
     .section-lead,
     .subsection-lead {
       font-size: (13em/16);
       line-height: (16/13);
     }
-    
+
     .vignette {
       font-size: (23em/41);
       line-height: (23/23);
     }
-    
+
     h3 {
       font-size: (26em/16);
       line-height: (30/26);
     }
   }
-  
+
   .related-topics {
     h3 {
       font-size: (22em/16);
@@ -77,12 +73,12 @@
   }
 
   #feedback {
-    
+
     h2 {
       font-size: (18em/16);
-      line-height: (22/18); 
+      line-height: (22/18);
     }
-    
+
     p {
       font-size: (18em/16);
       line-height: (24/18);
@@ -96,19 +92,19 @@
   #skip-to-navigation {
     display:none;
   }
-  
+
   nav[role="navigation"] {
     ul {
       margin: 0;
       list-style: none;
     }
-    
+
     li {
       margin: 0;
       font-size: (16em/16);
       line-height: 1;
     }
-    
+
     a {
       display: inline-block;
       margin-top: (2em/16);
@@ -122,7 +118,7 @@
         background: $green-dark;
       }
     }
-    
+
     li.current {
       a {
         margin-left: -1em;
@@ -149,24 +145,24 @@
     top: 0;
     left: percentage(160/940);
   }
-  
+
   #wrap {
     max-width: 768px;
   }
-  
+
   header[role="banner"] {
     margin-bottom: (80em/16);
   }
-  
+
   #logo a {
     height: 90px;
     width: 103px;
   }
-  
+
   article {
     margin-left: percentage(50/768);
     width: percentage(718/768);
-    
+
     h1,
     .body,
     .article-section {
@@ -175,12 +171,12 @@
     .body {
       position:relative;
     }
-    
+
     .illustration {
       margin-top: 30px;
     }
-    
-    
+
+
     figcaption {
       width: 100%;
       margin-top: .5em;
@@ -188,26 +184,26 @@
       padding-right: percentage(20/768);
       border-bottom: 1px solid $warm-grey;
     }
-    
+
     blockquote {
-      
+
       > p {
         width: percentage(543/718);
         font-size: (18em/16);
         line-height: (24em/18);
         float:left;
       }
-      
+
       footer {
         width: percentage(145/718);
         float: right;
-        
+
         img {
-          
+
         }
       }
     }
-    
+
     .share {
       -moz-box-sizing: border-box;
            box-sizing: border-box;
@@ -215,22 +211,22 @@
       margin-left: percentage((20/718)*-1);
     }
   }
-  
+
   .article-section {
     header {
       width: percentage(695/620);
       margin-left: percentage(-135/620);
       padding-left: percentage(135/620);
     }
-    
+
     h2 {
       width: percentage(620/695);
     }
-    
+
     .subsection-header {
       width: percentage(695/620);
     }
-    
+
     .vignette {
       position: absolute;
       left: 0;
@@ -242,7 +238,7 @@
     li {
       width: 31%;
       margin-left: 3%;
-      
+
       &:first-child {
         margin-left: 0;
       }
@@ -250,7 +246,7 @@
   }
 
   #feedback {
-    
+
     h2,
     p {
       display: inline;
