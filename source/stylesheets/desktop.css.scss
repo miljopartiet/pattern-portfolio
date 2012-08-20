@@ -7,7 +7,7 @@
   li {
     font-size: (18em/16);
     line-height: (26/18);
-    li, 
+    li,
     p {
       font-size: 1em;
     }
@@ -15,8 +15,9 @@
   */
 
   h1 {
-    font-size: (41em/16);
-    line-height: (41em/41);
+    font-size: (42em/16);
+    line-height: 1.1;
+
     /*
     .vignette {
       font-size: (16em/48);
@@ -38,21 +39,22 @@
 
   .lead {
     p {
-      margin-top: (12em/25);
+      margin-top: (12em/26);
       font-size: (26em/16);
-      line-height: (30/26);
+      line-height: (32/26);
     }
   }
-  
+
   blockquote {
     &>p {
       font-size: (26em/16);
       line-height: (28/26);
     }
   }
-  
+
   article {
-    .body {
+    .body,
+    .body .article-section {
       > p,
       > ul,
       > ol {
@@ -67,7 +69,7 @@
       font-size: (22em/16);
       line-height: (26/22);
     }
-    
+
     p {
       font-size: (18em/16);
       line-height: (26/18);
@@ -79,17 +81,17 @@
       font-size: (41em/16);
       line-height: (41/41);
     }
-    
+
     .section-lead,
     .subsection-lead {
       font-size: (13em/16);
       line-height: (16/13);
     }
-    
+
     .vignette {
       font-size: (23em/41);
     }
-    
+
     h3 {
       font-size: (26em/16);
       line-height: (30/26);
@@ -101,7 +103,7 @@
       font-size: (14em/16);
       line-height: (18/14);
     }
-  
+
     .question {
       .content {
         p {
@@ -119,7 +121,7 @@
       }
     }
   }
-  
+
   .related-topics {
     h3 {
       font-size: (22em/16);
@@ -127,12 +129,12 @@
     }
   }
 
-  #feedback {  
+  #feedback {
     h2 {
       font-size: (22em/16);
-      line-height: (24/22); 
+      line-height: (24/22);
     }
-    
+
     p {
       font-size: (18em/16);
       line-height: (24/18);
@@ -145,37 +147,53 @@
     padding-top: (40em/16);
     background: #fff url(/images/bg.gif) 50% 0 repeat-y;
   }
-  
+
   nav[role="navigation"] {
     position: absolute;
     top: 0;
     left: percentage(160/940);
   }
-  
+
   #wrap {
     max-width: 940px;
   }
-  
+
   header[role="banner"] {
     margin-bottom: (80em/16);
   }
-  
+
   #logo a {
     height: 90px;
     width: 103px;
   }
-  
+
   article {
     margin-left: percentage(135/940);
 
-    h1,
     .body,
     .article-section {
       width: percentage(620/805);
     }
 
+    .body .article-section {
+      width: 100%;
+      h2 {
+        font-size: (26em/16);
+        a {
+          display:block;
+          font-size: (18em/26);
+          margin-bottom:.5em;
+        }
+      }
+    }
+
     .illustration {
       margin-top: 30px;
+    }
+    p,
+    ul,
+    ol {
+      width: percentage(585/620);
     }
 
     blockquote {
@@ -192,7 +210,7 @@
 
         img {
           margin-top: -100%;
-          margin-bottom: 1em;  
+          margin-bottom: 1em;
         }
 
         a {
@@ -200,7 +218,7 @@
         }
       }
     }
-    
+
     .share {
       width: percentage(785/620);
       margin-left: -1.25em;
@@ -216,17 +234,23 @@
         float: right;
         width: percentage(145/805);
         margin: 0 0 0 percentage(20/805);
+        border:none;
       }
     }
 
     .article-section {
       header {
         width: percentage(695/620);
-        margin-left: percentage(-135/620);
-        padding-left: percentage(135/620);
+        border-top: 1px solid #ccc;
+        border-bottom: none;
+        .section-lead {
+          float: right;
+          width: percentage(145/695);
+          margin-right: - percentage((145/695)/2);
+
+        }
       }
       h2 {
-        width: percentage(620/695);
       }
       .subsection-header {
         width: percentage(695/620);
@@ -237,12 +261,12 @@
         top: 2.5em;
       }
     }
-    
+
     .related-topics {
       li {
         width: 31%;
         margin-left: 3%;
-        
+
         &:first-child {
           margin-left: 0;
         }

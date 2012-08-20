@@ -78,18 +78,24 @@
 
   blockquote {
     overflow: hidden;
-
+    padding-bottom: 0;
+    p {
+      padding-left: 1em;
+    }
+    footer {
+      text-align: right;
+    }
     img {
-      float: left;
+      float: right;
       width: 15%;
-      margin: 0 .5em 0 0;
+      margin: 0 .5em 0 1em;
     }
     .name {
       display: block;
     }
   }
 
-  article {    
+  article {
     .vignette {
       float: right;
       margin-top: -1em;

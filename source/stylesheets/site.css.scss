@@ -26,7 +26,7 @@ h1 {
   font-family: $swift;
   font-weight: normal;
   font-size: (24em/16);
-  line-height: 1;
+  line-height: 1.1;
   color: $green;
   /*
   .vignette {
@@ -115,7 +115,7 @@ em {
 /* Logo */
 #logo {
   margin-bottom: (20em/16);
-  
+
   a {
     display: block;
     text-indent: -9999px;
@@ -140,7 +140,7 @@ blockquote {
   border-bottom: 1px solid $warm-grey;
   padding: (10em/16) 0;
   color: $text-warm-grey;
-  
+
   &>p {
     margin-top: (12em/16);
     font-family: $swift;
@@ -151,7 +151,7 @@ blockquote {
       margin-top: 0;
     }
   }
-  
+
   footer {
     font-family: $arial;
     p {
@@ -177,8 +177,8 @@ figure figcaption {
   font-size: (14em/16);
   line-height: (18/14);
   color: $text-medium-grey;
-  
-  strong, 
+
+  strong,
   b {
     color: $text-grey;
   }
@@ -246,17 +246,17 @@ figure figcaption {
   margin-top: (40em/20);
   padding: 1.25em;
   border-radius: 4px;
-  
+
   h2 {
     display: inline;
     margin-top: 0;
   }
-  
+
   p {
     display: inline;
     margin-top: (6em/16);
   }
-  
+
   a {
     color: $font-color;
     text-decoration: underline;
@@ -270,7 +270,7 @@ figure figcaption {
     font-size: (20em/16);
     line-height: (22/20);
   }
-  
+
   p {
     margin-top: (6em/16);
   }
@@ -283,20 +283,16 @@ figure figcaption {
     padding: 0 0 0.7em 0;
     border-bottom: 1px solid $warm-grey;
   }
-  
-  h2 {
-    color: $green;
-  }
-  
+
   h3 {
     font-weight: normal;
     font-family: $swift;
   }
-  
+
   a.more:before {
     content: "+ ";
   }
-  
+
   .vignette {
     width: (69em/23);
     height: (62em/23);
@@ -308,44 +304,44 @@ figure figcaption {
     color: #fff;
     text-transform: none;
   }
-  
+
   .section-lead {
     margin-top: 0.5em;
     font-family: $arial;
     color: $text-light-grey;
   }
-  
+
   .article-subsection {
     margin-top: 2.5em;
-    
+
     &:first-child {
       margin-top: 0;
     }
   }
-  
+
   .subsection-header {
     padding: 0 0 0.4em 0;
     border-bottom: 1px solid $warm-grey;
-    
+
     h3,
     .subsection-lead {
-      display: inline;  
+      display: inline;
     }
   }
-  
+
   .subsection-lead {
     margin-left: .5em;
     font-family: $arial;
     color: $text-light-grey;
   }
-  
+
   .hidden {
     position: absolute;
     left: -9999px;
   }
-  
+
   &.related-topics {
-  
+
     .vignette {
       top: .5em;
     }
@@ -361,7 +357,7 @@ figure figcaption {
     position: relative;
     z-index: 1;
     padding: 0.75em 1em;
-  
+
     p:first-child {
       margin: 0;
     }
@@ -375,12 +371,12 @@ figure figcaption {
       position: absolute;
       margin: 0;
     }
-    
+
     img {
       position: absolute;
       bottom: (-23em/16);
     }
-    
+
     .arrow {
       position: absolute;
       width: 0;
@@ -401,7 +397,7 @@ figure figcaption {
       padding-bottom: 1.08em;
       background: $yellow;
       border-radius: 3px 3px 3px 0;
-    
+
       &:after {
         position: absolute;
         right: 0;
@@ -431,7 +427,7 @@ figure figcaption {
       .arrow {
         left: percentage(-24/620);
         border-top: 25px solid transparent;
-        border-right: 25px solid $yellow;      
+        border-right: 25px solid $yellow;
       }
     }
   }
@@ -455,14 +451,14 @@ figure figcaption {
       p {
         bottom: (-23em/16);
       }
-      
+
       img {
         right: percentage(-80/510);
       }
 
       .arrow {
         right: percentage(-24/620);
-        border-left: 25px solid $beige;      
+        border-left: 25px solid $beige;
       }
     }
   }
@@ -502,7 +498,7 @@ figure figcaption {
     font-family: $swift;
     font-weight: normal;
   }
-  
+
   p {
     margin: 0;
   }
