@@ -117,13 +117,6 @@
     }
   }
 
-  .related-topics {
-    h3 {
-      font-size: (22em/16);
-      line-height: (24/22);
-    }
-  }
-
   #feedback {
     h2 {
       font-size: (22em/16);
@@ -241,17 +234,6 @@
         position: absolute;
         left: 0;
         top: 2.5em;
-      }
-    }
-
-    .related-topics {
-      li {
-        width: 31%;
-        margin-left: 3%;
-
-        &:first-child {
-          margin-left: 0;
-        }
       }
     }
   }
