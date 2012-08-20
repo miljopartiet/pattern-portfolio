@@ -227,9 +227,10 @@
         border-top: 1px solid #ccc;
         border-bottom: none;
         .section-lead {
+          margin-top: (20em/13);
           float: right;
           width: percentage(145/695);
-          margin-right: - percentage((145/695)/2);
+          margin-right: - percentage(115/695);
 
         }
       }
