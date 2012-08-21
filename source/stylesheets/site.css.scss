@@ -359,6 +359,11 @@ figure figcaption {
     }
   }
 
+  header + .article-subsection {
+    border-top: none;
+    margin-top: 0;
+  }
+
   .subsection-header {
     padding: 0 0 0.4em 0;
     border-bottom: 1px solid $warm-grey;
@@ -381,6 +386,9 @@ figure figcaption {
   }
 
   &.related-topics {
+    h2 {
+      font-size: (22em/16);
+    }
 
     .vignette {
       top: .5em;
