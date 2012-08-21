@@ -5,25 +5,27 @@
   li {
     font-size: (18em/16);
     line-height: (26/18);
-    li, 
+    li,
     p {
       font-size: 1em;
     }
   }
   */
+  /* line 17, desktop.css.scss */
   h1 {
-    font-size: 2.563em;
-    line-height: 1em;
+    font-size: 2.625em;
+    line-height: 1.1;
     /*
     .vignette {
       font-size: (16em/48);
     }
     */ }
 
+  /* line 28, desktop.css.scss */
   h2 {
     margin-top: 1em;
     font-size: 1.625em;
-    line-height: 1.154;
+    line-height: 1.15385;
     /*
     .vignette {
       font-size: (14em/26);
@@ -31,126 +33,157 @@
     }
     */ }
 
+  /* line 41, desktop.css.scss */
   .lead p {
-    margin-top: 0.48em;
+    margin-top: 0.46154em;
     font-size: 1.625em;
-    line-height: 1.154; }
+    line-height: 1.23077; }
 
+  /* line 49, desktop.css.scss */
   blockquote > p {
     font-size: 1.625em;
-    line-height: 1.077; }
+    line-height: 1.07692; }
 
+  /* line 60, desktop.css.scss */
   article .body > p,
   article .body > ul,
-  article .body > ol {
+  article .body > ol,
+  article .article-section > p,
+  article .article-section > ul,
+  article .article-section > ol {
     font-size: 1.125em;
-    line-height: 1.444; }
+    line-height: 1.44444; }
 
+  /* line 68, desktop.css.scss */
   .share h2 {
     font-size: 1.375em;
-    line-height: 1.182; }
+    line-height: 1.18182; }
+  /* line 73, desktop.css.scss */
   .share p {
     font-size: 1.125em;
-    line-height: 1.444; }
+    line-height: 1.44444; }
 
-  .article-section h2 {
-    font-size: 2.563em;
-    line-height: 1; }
+  /* line 81, desktop.css.scss */
   .article-section .section-lead,
   .article-section .subsection-lead {
-    font-size: 0.813em;
-    line-height: 1.231; }
+    font-size: 0.8125em;
+    line-height: 1.23077; }
+  /* line 86, desktop.css.scss */
   .article-section .vignette {
-    font-size: 0.561em; }
+    font-size: 0.56098em; }
+  /* line 90, desktop.css.scss */
   .article-section h3 {
     font-size: 1.625em;
-    line-height: 1.154; }
+    line-height: 1.15385; }
 
+  /* line 97, desktop.css.scss */
   .conversation .byline {
     font-size: 0.875em;
-    line-height: 1.286; }
+    line-height: 1.28571; }
+  /* line 104, desktop.css.scss */
   .conversation .question .content p {
     font-size: 1.375em;
-    line-height: 1.091; }
+    line-height: 1.09091; }
+  /* line 113, desktop.css.scss */
   .conversation .answer .content p {
     line-height: 1.25; }
 
-  .related-topics h3 {
-    font-size: 1.375em;
-    line-height: 1.091; }
-
+  /* line 121, desktop.css.scss */
   #feedback h2 {
     font-size: 1.375em;
-    line-height: 1.091; }
+    line-height: 1.09091; }
+  /* line 126, desktop.css.scss */
   #feedback p {
     font-size: 1.125em;
-    line-height: 1.333; }
+    line-height: 1.33333; }
 
   /* Layout */
+  /* line 134, desktop.css.scss */
   body {
     padding-top: 2.5em;
     background: white url(/images/bg.gif) 50% 0 repeat-y; }
 
+  /* line 139, desktop.css.scss */
   nav[role="navigation"] {
     position: absolute;
     top: 0;
-    left: 17.021%; }
+    left: 17.02128%; }
 
+  /* line 145, desktop.css.scss */
   #wrap {
     max-width: 940px; }
 
+  /* line 149, desktop.css.scss */
   header[role="banner"] {
     margin-bottom: 5em; }
 
+  /* line 153, desktop.css.scss */
   #logo a {
     height: 90px;
     width: 103px; }
 
+  /* line 158, desktop.css.scss */
   article {
-    margin-left: 14.362%; }
-    article h1,
+    margin-left: 14.3617%; }
+    /* line 162, desktop.css.scss */
     article .body,
     article .article-section {
-      width: 77.019%; }
+      width: 77.01863%; }
+    /* line 166, desktop.css.scss */
     article .illustration {
       margin-top: 30px; }
+    /* line 172, desktop.css.scss */
+    article p,
+    article ul,
+    article ol {
+      width: 94.35484%; }
+    /* line 176, desktop.css.scss */
     article blockquote {
-      width: 129.839%; }
+      width: 129.83871%; }
+      /* line 179, desktop.css.scss */
       article blockquote p {
-        width: 77.019%; }
+        width: 77.01863%; }
+      /* line 183, desktop.css.scss */
       article blockquote footer {
         padding-top: 0.7em;
-        width: 18.012%;
+        width: 18.01242%;
         float: right; }
+        /* line 188, desktop.css.scss */
         article blockquote footer img {
           margin-top: -100%;
           margin-bottom: 1em; }
+        /* line 193, desktop.css.scss */
         article blockquote footer a {
           display: block; }
+    /* line 199, desktop.css.scss */
     article .share {
-      width: 126.613%;
       margin-left: -1.25em; }
+    /* line 204, desktop.css.scss */
     article figure > div {
       float: left;
-      width: 79.503%; }
+      width: 79.50311%; }
+    /* line 209, desktop.css.scss */
     article figure figcaption {
       float: right;
-      width: 18.012%;
-      margin: 0 0 0 2.484%; }
+      width: 18.01242%;
+      margin: 0 0 0 2.48447%;
+      border: none; }
+    /* line 218, desktop.css.scss */
     article .article-section header {
-      width: 112.097%;
-      margin-left: -21.774%;
-      padding-left: 21.774%; }
-    article .article-section h2 {
-      width: 89.209%; }
+      width: 112.09677%;
+      border-top: 1px solid #ccc;
+      border-bottom: none; }
+      /* line 222, desktop.css.scss */
+      article .article-section header .section-lead {
+        margin-top: 1.53846em;
+        float: right;
+        width: 20.86331%;
+        margin-right: -16.54676%; }
+    /* line 230, desktop.css.scss */
     article .article-section .subsection-header {
-      width: 112.097%; }
+      width: 112.09677%; }
+    /* line 233, desktop.css.scss */
     article .article-section .vignette {
       position: absolute;
       left: 0;
-      top: 2.5em; }
-    article .related-topics li {
-      width: 31%;
-      margin-left: 3%; }
-      article .related-topics li:first-child {
-        margin-left: 0; } }
+      top: 2.5em; } }

@@ -1,42 +1,118 @@
 @media only screen and (min-width: 320px) {
   /* Typography */
+  /* line 7, mobile.css.scss */
   .article-section .vignette {
-    font-size: 0.722em; }
+    font-size: 0.72222em; }
+  /* line 12, mobile.css.scss */
   .article-section .section-lead,
   .article-section .subsection-lead {
     font-size: 0.875em; }
 
+  /* line 18, mobile.css.scss */
   .conversation .byline {
     font-size: 0.75em; } }
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   /* Layout */
+  /* line 31, mobile.css.scss */
+  #skip-to-navigation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 988;
+    background: #f8f6f1;
+    padding: .2em .4em;
+    color: #bcb9b2; }
+
+  /* line 42, mobile.css.scss */
+  nav[role="navigation"] {
+    width: 100%;
+    background: #f8f6f1; }
+
+  /* line 47, mobile.css.scss */
+  #top-navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999; }
+    /* line 53, mobile.css.scss */
+    #top-navigation.active {
+      -webkit-transition: margin-top 0.35s ease-in-out;
+      -moz-transition: margin-top 0.35s ease-in-out;
+      -ms-transition: margin-top 0.35s ease-in-out;
+      -o-transition: margin-top 0.35s ease-in-out;
+      transition: margin-top 0.35s ease-in-out;
+      margin-top: 0px; }
+    /* line 57, mobile.css.scss */
+    #top-navigation.inactive {
+      -webkit-transition: margin-top 0.2s ease-out;
+      -moz-transition: margin-top 0.2s ease-out;
+      -ms-transition: margin-top 0.2s ease-out;
+      -o-transition: margin-top 0.2s ease-out;
+      transition: margin-top 0.2s ease-out; }
+    /* line 61, mobile.css.scss */
+    #top-navigation ul, #top-navigation li {
+      padding: 0;
+      margin: 0;
+      list-style: none; }
+    /* line 66, mobile.css.scss */
+    #top-navigation a {
+      display: block;
+      border-bottom: 1px solid #fff;
+      line-height: 2.5;
+      padding: 0 1em;
+      font-weight: bold; }
+      /* line 72, mobile.css.scss */
+      #top-navigation a.close {
+        text-align: right;
+        font-size: .8em;
+        font-weight: normal;
+        color: #bcb9b2; }
+
+  /* line 83, mobile.css.scss */
   blockquote {
-    overflow: hidden; }
+    overflow: hidden;
+    padding-bottom: 0; }
+    /* line 86, mobile.css.scss */
+    blockquote p {
+      padding-left: 1em; }
+    /* line 89, mobile.css.scss */
+    blockquote footer {
+      text-align: right; }
+    /* line 92, mobile.css.scss */
     blockquote img {
-      float: left;
+      float: right;
       width: 15%;
-      margin: 0 .5em 0 0; }
+      margin: 0 .5em 0 1em; }
+    /* line 97, mobile.css.scss */
     blockquote .name {
       display: block; }
 
+  /* line 103, mobile.css.scss */
   article .vignette {
     float: right;
     margin-top: -1em; }
+  /* line 108, mobile.css.scss */
   article figcaption {
     margin-top: .5em; }
 
+  /* line 114, mobile.css.scss */
   .conversation img {
     display: none; }
+  /* line 118, mobile.css.scss */
   .conversation .question {
-    margin-right: 13.725%; }
+    margin-right: 13.72549%; }
+    /* line 121, mobile.css.scss */
     .conversation .question .content {
       padding-bottom: 1.08em;
       background: #ffe900; }
+      /* line 125, mobile.css.scss */
       .conversation .question .content:after {
-        width: 87.255%; }
+        width: 87.2549%; }
+  /* line 131, mobile.css.scss */
   .conversation .answer {
     margin-right: 0; }
 
+  /* line 139, mobile.css.scss */
   #feedback h2,
   #feedback p {
     display: inline; } }
