@@ -403,9 +403,11 @@ figure figcaption {
   }
 }
 
+/* TODO: Make this generic */
 .news-blocks,
 .calendar {
   ul {
+    margin-top: (30em/16);
     list-style: none;
   }
   li {
@@ -414,16 +416,32 @@ figure figcaption {
       display:block;
       margin: 0 0 (20em/22) 55px;
       font-size: (22em/16);
+      font-family: $swift;
       .meta {
+        font-family: $font-family;
         font-size: (14em/22);
         color: $text-grey;
         display: block;
       }
     }
-    img {
+    .label {
+      display: block;
+      width: 35px;
       margin-left: -55px;
       float: left;
     }
+  }
+}
+.calendar {
+  .label {
+    text-align:center;
+    text-indent: -.2em;
+    color: #fff;
+    background: transparent url(/images/calendar.svg) 0 50% no-repeat;
+    font-size: (16.25em/22);
+    line-height:(43em/16.25);
+    background-size: (35em/16.25) (42.5em/16.25);
+    height: (42.5em/16.25);
   }
 }
 
