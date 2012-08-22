@@ -3,6 +3,7 @@
 @include global-reset;
 
 /* Clearing */
+nav[role="site"]:after,
 .topics li:after,
 figure:after {
   content: "\0020";
@@ -18,7 +19,7 @@ body {
   color: $font-color;
   font-size: 1em;
   line-height: (20/16);
-  padding: 1.5em 15px;
+  padding: 1.5em 0;
 }
 
 h1 {
@@ -130,6 +131,12 @@ em {
 #wrap {
   position: relative;
   margin: 0 auto;
+}
+
+header[role="banner"],
+#main {
+  margin: 0 15px;
+
 }
 
 /* Blockquote */

@@ -27,7 +27,7 @@
   #skip-to-navigation {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 15px;
     z-index: 988;
     background: $beige;
     padding: .2em .4em;
@@ -35,9 +35,53 @@
 
   }
 
-  nav[role="navigation"] {
+  nav[role="site"] {
     width: 100%;
     background: $beige;
+    padding-bottom: 15px;
+    ul {
+      margin:0;
+      list-style: square;
+    }
+    a {
+      line-height: 1.5;
+    }
+    .sections {
+      font: normal (18em/16) $swift;
+      li {
+        margin:0;
+      }
+      list-style:none;
+      a {
+        padding:0 (15em/16);
+        display: block;
+        line-height: 2.5;
+        border-bottom:1px solid #fff;
+      }
+    }
+    .first,
+    .second {
+      margin-top: 15px;
+      list-style-position: inside;
+      float: left;
+      width: percentage(144/320);
+      li {
+        margin-left: 15px;
+        white-space:nowrap;
+      }
+    }
+    .first {
+    }
+    .second {
+      border-left: 1px solid #fff;
+    }
+    form {
+      display:none;
+    }
+  }
+
+  #main-navigation {
+    display: none;
   }
 
   #top-navigation {
@@ -53,28 +97,17 @@
     &.inactive {
       @include transition(margin-top 0.2s ease-out);
     }
+    a.close {
+      display: block;
+      text-align: right;
+      font-size: .8em;
+      font-weight: normal;
+      color: rgb(188, 185, 178);
+      clear: both;
+      padding-right: 15px;
 
-    ul,li {
-      padding:0;
-      margin:0;
-      list-style:none;
-    }
-    a {
-      display:block;
-      border-bottom:1px solid #fff;
-      line-height: 2.5;
-      padding:0 1em;
-      font-weight:bold;
-      &.close {
-        text-align:right;
-        font-size:.8em;
-        font-weight:normal;
-        color:rgb(188, 185, 178);
-      }
     }
   }
-
-
 
   blockquote {
     overflow: hidden;
