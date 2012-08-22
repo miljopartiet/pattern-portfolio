@@ -170,3 +170,11 @@
     }
   }
 }
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  banner,
+  #main {
+    width: percentage(520/600);
+    margin: 0 auto;
+  }
+}
