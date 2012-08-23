@@ -234,13 +234,17 @@
 
         }
       }
+
       .subsection-header {
         width: percentage(695/620);
       }
+
       .vignette {
+        display: block;
+        font-size: (23em/16);
         position: absolute;
-        left: 0;
-        top: 2.5em;
+        left: - (110em/23);
+        top: -1em;
       }
     }
   }
