@@ -4,9 +4,6 @@
 /* Typography */
 
   .article-section {
-    .vignette {
-      font-size: (13em/18);
-    }
 
     .section-lead,
     .subsection-lead {
@@ -130,8 +127,7 @@
 
   article {
     .vignette {
-      float: right;
-      margin-top: -1em;
+      display: none;
     }
 
     figcaption {
