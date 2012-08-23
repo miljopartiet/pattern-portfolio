@@ -202,13 +202,23 @@ figure figcaption {
 
 
 /* Breadcrumbs */
-.breadcrumbs {
+nav[role="breadcrumbs"] {
+  border-top: 1px solid $warm-grey;
   display: block;
-  margin-bottom: (12em/14);
-  font-size: (14em/16);
-  font-family: "Helvetica Neue", helvetica, sans-serif;
-  letter-spacing: .1em;
+  @include small-text((22em/16), 1);
+  margin: (20em/22) 0;
+  padding-top: (10em/22);
   color: #aaa;
+  a,
+  span {
+    font-size: (13em/22);
+    padding: 0 .3em;
+    position: relative;
+    top: -.35em;
+    &:first-child {
+      padding-left: 0;
+    }
+  }
 }
 
 /*
