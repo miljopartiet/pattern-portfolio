@@ -160,17 +160,9 @@ blockquote {
   }
 
   footer {
-    font-family: $arial;
-    p {
-      font-size: (14em/16);
-      line-height: (18/14);
-    }
-    .name {
-      font-weight: bold;
-      color: $text-grey;
-    }
+    @include small-text;
     .title {
-      color: $text-medium-grey;
+      color: $text-light-grey;
     }
   }
 }
@@ -180,10 +172,7 @@ blockquote {
 figure figcaption {
   padding-bottom: .5em;
   border-bottom: 1px solid $warm-grey;
-  font-family: $arial;
-  font-size: (14em/16);
-  line-height: (18/14);
-  color: $text-medium-grey;
+  @include small-text((13em/16), (18/14));
 
   strong,
   b {
@@ -343,8 +332,7 @@ nav[role="breadcrumbs"] {
 
   .section-lead {
     margin-top: 0.5em;
-    font-family: $arial;
-    color: $text-light-grey;
+    @include small-text;
   }
 
   .article-subsection {
@@ -373,8 +361,7 @@ nav[role="breadcrumbs"] {
 
   .subsection-lead {
     margin-left: .5em;
-    font-family: $arial;
-    color: $text-light-grey;
+    @include small-text;
   }
 
   .hidden {
@@ -388,6 +375,7 @@ nav[role="breadcrumbs"] {
     }
 
     .vignette {
+      left: -5em;
       top: .5em;
     }
   }
@@ -451,8 +439,7 @@ nav[role="breadcrumbs"] {
   }
 
   .byline {
-    font-family: $arial;
-    color: $text-light-grey;
+    @include small-text;
 
     p {
       position: absolute;
@@ -565,18 +552,5 @@ nav[role="breadcrumbs"] {
 }
 
 #feedback {
-  margin: 2em 0 0 0;
-  background: #f7f3eb;
-  padding: 1.25em;
-  border-radius: 4px;
-
-  h2 {
-    margin: 0;
-    font-family: $swift;
-    font-weight: normal;
-  }
-
-  p {
-    margin: 0;
-  }
+  @include small-text;
 }
