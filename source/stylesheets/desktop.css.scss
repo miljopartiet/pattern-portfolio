@@ -174,18 +174,25 @@
     }
 
     blockquote {
+      overflow: visible;
       width: percentage(805/620);
 
-      p {
+      > p {
         width: percentage(620/805);
+        margin-bottom: .5em;
       }
 
       footer {
-        padding-top: 0.7em;
         width: percentage(145/805);
         float: right;
 
+        p {
+          position: static;
+        }
+
         img {
+          float: none;
+          width: auto;
           margin-top: -100%;
           margin-bottom: 1em;
         }

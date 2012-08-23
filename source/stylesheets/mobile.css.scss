@@ -16,6 +16,33 @@
       font-size: (12em/16);
     }
   }
+
+  /* Layout */
+
+  blockquote {
+    overflow: hidden;
+    padding-bottom: 0;
+    p {
+      padding-left: 1em;
+    }
+    footer {
+      text-align: right;
+      position: relative;
+      @include clear-me;
+      p {
+        position: absolute;
+        bottom: .5em;
+        left: 0;
+        width: percentage(246/320);
+      }
+    }
+    img {
+      float: right;
+      width: percentage(45/320);
+      margin: 0 percentage(6/320) 0 percentage(13/320);
+    }
+  }
+
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
@@ -106,29 +133,6 @@
     }
   }
 
-  blockquote {
-    overflow: hidden;
-    padding-bottom: 0;
-    p {
-      padding-left: 1em;
-    }
-    footer {
-      text-align: right;
-      position: relative;
-      @include clear-me;
-      p {
-        position: absolute;
-        bottom: .5em;
-        left: 0;
-        width: percentage(246/320);
-      }
-    }
-    img {
-      float: right;
-      width: percentage(45/320);
-      margin: 0 percentage(6/320) 0 percentage(13/320);
-    }
-  }
 
   article {
     .vignette {
@@ -160,14 +164,6 @@
 
     .answer {
       margin-right: 0;
-    }
-  }
-
-  #feedback {
-
-    h2,
-    p {
-      display: inline;
     }
   }
 }
