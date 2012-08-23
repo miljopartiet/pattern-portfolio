@@ -2,17 +2,16 @@
 
 @media only screen and (min-width: 768px) {
   /* Typography */
-  /*
   p,
-  li {
-    font-size: (17em/16);
+  ol,
+  ul {
+    font-size: (18em/16);
     line-height: (24/17);
     li,
     p {
       font-size: 1em;
     }
   }
-  */
 
   h1 {
     font-size: (37em/16);
@@ -51,7 +50,7 @@
     .section-lead,
     .subsection-lead {
       font-size: (13em/16);
-      line-height: (16/13);
+      line-height: (17/13);
     }
 
     .vignette {
@@ -125,7 +124,15 @@
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 919px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  $screen-width: 768;
+  $content-width: 580;
+
+  banner,
+  #main {
+    width: 580px;
+    margin: 0 auto;
+  }
 
   /* Layout */
   body {
@@ -136,11 +143,7 @@
   nav[role="navigation"] {
     position: absolute;
     top: 0;
-    left: percentage(160/940);
-  }
-
-  #wrap {
-    max-width: 768px;
+    left: percentage(160/$screen-width);
   }
 
   header[role="banner"] {
@@ -148,53 +151,19 @@
   }
 
   #logo a {
-    height: 90px;
-    width: 103px;
+    height: (90em/16);
+    width: (103em/16);
   }
 
   article {
-    margin-left: percentage(50/768);
-    width: percentage(718/768);
-
-    h1,
-    .body,
-    .article-section {
-      xwidth: percentage(620/805);
-    }
     .body {
       position:relative;
-    }
-
-    .illustration {
-      margin-top: 30px;
-    }
-
-
-    figcaption {
-      width: 100%;
-      margin-top: .5em;
-      padding-bottom: .5em;
-      padding-right: percentage(20/768);
-      border-bottom: 1px solid $warm-grey;
-    }
-
-    blockquote {
-
-      > p {
-        width: percentage(543/718);
-        font-size: (18em/16);
-        line-height: (24em/18);
-        float:left;
+      > p,
+      > ul,
+      > ol {
+        width: percentage(560/580);
       }
 
-      footer {
-        width: percentage(145/718);
-        float: right;
-
-        img {
-
-        }
-      }
     }
 
     .share {
@@ -202,36 +171,6 @@
            box-sizing: border-box;
       width: percentage((718 + 40) / 718);
       margin-left: percentage((20/718)*-1);
-    }
-  }
-
-  .article-section {
-    header {
-      width: percentage(695/620);
-      margin-left: percentage(-135/620);
-      padding-left: percentage(135/620);
-    }
-
-    h2 {
-      width: percentage(620/695);
-    }
-
-    .subsection-header {
-      width: percentage(695/620);
-    }
-
-    .vignette {
-      position: absolute;
-      left: 0;
-      top: 2.5em;
-    }
-  }
-
-  #feedback {
-
-    h2,
-    p {
-      display: inline;
     }
   }
 }
