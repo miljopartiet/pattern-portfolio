@@ -142,8 +142,15 @@
     left: percentage(160/940);
   }
 
+  #main {
+    width: 940px;
+    margin: 0 auto;
+  }
   #wrap {
-    max-width: 940px;
+    nav[role="breadcrumbs"],
+    > footer {
+      margin: 0 percentage(135/940);
+    }
   }
 
   header[role="banner"] {
@@ -165,6 +172,9 @@
 
     .illustration {
       margin-top: 30px;
+      figcaption {
+        margin: 0;
+      }
     }
 
     p,
