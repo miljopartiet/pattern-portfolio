@@ -7,7 +7,10 @@ $(function() {
         $nav;
 
     var setup = function() {
-      var $original_nav = $('#main-navigation');
+      if (setup_run) {
+        return;
+      }
+      var $original_nav = $('nav[role="site"]');
       $nav = $original_nav.clone();
       $nav.attr('id', 'top-navigation');
 

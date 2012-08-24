@@ -22,6 +22,13 @@
           <a href="/">Miljöpartiet</a>
         </div>
         <a href="#main-navigation" id="skip-to-navigation">Meny</a>
+        <nav role="navigation" id="main-navigation">
+          <ul>
+            <li class="current"><a href="/topics.html">Vi vill modernisera Sverige</a></li>
+            <li><a href="/persons.html">Om Miljöpartiet</a></li>
+            <li><a href="/conversations.html">Prata politik</a></li>
+          </ul>
+        </nav>
       </header>
       <div id="main" role="main">
         
@@ -56,10 +63,10 @@
       <p>Det finns starka skäl att prioritera bostäder till unga. Det är främst de som inte kommer in på bostadsmarknaden idag.</p>
       <footer>
         <a href="/person">
-          <img src="http://placehold.it/145x145" alt="">
+          <img src="/images/sketch/asa_145x145.png" alt="">
           <p>
-            <span class="name">Åsa Romson</span>
-            <span class="title">språkrör och ansvarig för bopolitik</span>
+            <span class="name">Åsa Romson</span>,
+            <span class="title">språkrör och riksdagsledamot sedan 2003</span>
           </p>
         </a>
       </footer>
@@ -123,6 +130,7 @@
 
   <section class="article-section current-topics">
     <header>
+      <span class="vignette">Just nu</span>
       <p class="section-lead">Aktuellt inom ämnet bostad. Visa <a href="#">andra ämnen</a></p>
     </header>
     <div class="article-subsection news-blocks">
@@ -133,7 +141,7 @@
       <ul>
         <li>
           <a href="">
-            <img src="http://placehold.it/35x35" alt="">
+            <img src="http://placehold.it/35x35" alt="" class="label">
             Bostadslånen - en skuldfälla
             <span class="meta">
               Idag, aftonbladet.se
@@ -142,14 +150,14 @@
         </li>
         <li>
           <a href="">
-            <img src="http://placehold.it/35x35" alt="">
+            <img src="http://placehold.it/35x35" alt="" class="label">
             Rusta upp miljonprogrammen nu
             <span class="meta">Torsdag 14 juni, svd.se</span>
           </a>
         </li>
         <li>
-          <a href="http://placehold.it/35x35">
-            <img src="" alt="">
+          <a href="#">
+            <img src="http://placehold.it/35x35" alt="" class="label">
             Miljö- och friluftsstaden
             <span class="meta">
               Carl Schytter, 23 sep 2011, mp.se
@@ -164,6 +172,7 @@
         <!-- event, using hCalender microformat -->
         <li class="vevent">
           <a href="#">
+            <span class="label">5</span>
             <span class="summary">Ekonomiskt seminarium om bolånen</span>
             <span class="meta">
               <time datetime="2012-05-27T13:00" class="dtstart">
@@ -182,6 +191,7 @@
         <!-- /event -->
         <li class="vevent">
           <a href="#">
+            <span class="label">6</span>
             <span class="summary">Åsa Romson debatterar bostadsbristen i SVT Agenda</span>
             <span class="meta">
             <time datetime="2012-06-23T21:15" class="dtstart">
@@ -199,6 +209,7 @@
         <!-- whole day event -->
         <li class="vevent">
           <a href="#">
+            <span class="label">22</span>
             <span class="summary">Lansering av nya mp.se</span>
             <span class="meta">
               <span class="date" class="dstart">Torsdag 22 maj
@@ -297,22 +308,39 @@
     </ul>
   </section>
 </article>
+<nav role="breadcrumbs" class="breadcrumbs">
+  <a href="/">Hem</a> /
+  <a href="#">Vi vill modernisera Sverige</a> /
+  <span>Bostad</span>
+</nav>
 
       </div>
       <footer>
-        <div id="feedback">
-          <h2>Ge dina synpunkter på denna sida!</h2>
-          <p>
-            Kan vi förbättra något? Har du hittat något som är felaktigt eller svårbegripligt? Hjälp oss <a href="">quiaepres veliquam</a> ressum que ea prione si beruptaquam dolorrum.
-          </p>
-        </div>
-        <nav role="navigation" id="main-navigation">
-          <ul>
-            <li class="current"><a href="/topics.html">Vi vill modernisera Sverige</a></li>
-            <li><a href="/persons.html">Om Miljöpartiet</a></li>
-            <li><a href="/conversations.html">Prata politik</a></li>
+        <nav role="site">
+          <ul class="sections">
+            <li class="start"><a href="/">Startsida</a></li>
+            <li class="current"><a href="/topics.html">Så vill vi modernisera Sverige</a></li>
+            <li><a href="/persons.html">Om Miljöpartiet de gröna</a></li>
+            <li><a href="/conversations.html">Prata politik med oss</a></li>
           </ul>
+          <ul class="first">
+            <li><a href="#">Bli medlem</a></li>
+            <li><a href="#">Kontakt</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Skolarbeten</a></li>
+          </ul>
+          <ul class="second">
+            <li><a href="#">Other languages</a></li>
+            <li><a href="#">Lättläst</a></li>
+            <li><a href="#">Ge en gåva</a></li>
+            <li><a href="#">Lediga jobb</a></li>
+          </ul>
+          <form action="/search" method="get">
+            <input type="search" name="query">
+          </form>
         </nav>
+        <p id="feedback">Vi vill gärna ha dina synpunkter på vår webb. Kan vi förbättra något? <a href="#">Skriv till oss och berätta!</a></p>
+        <p id="copyright">Allt innehåll är licensierat under en Creative Commons Erkännande 3.0 Unported Licens om inte annat anges.</p>
       </div>
     </div>
   </body>

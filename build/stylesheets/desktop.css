@@ -1,4 +1,4 @@
-@media only screen and (min-width: 920px) {
+@media only screen and (min-width: 1024px) {
   /* Typography */
   /*
   p,
@@ -110,80 +110,97 @@
     left: 17.02128%; }
 
   /* line 145, desktop.css.scss */
-  #wrap {
-    max-width: 940px; }
+  #main {
+    width: 940px;
+    margin: 0 auto; }
 
-  /* line 149, desktop.css.scss */
+  /* line 151, desktop.css.scss */
+  #wrap nav[role="breadcrumbs"],
+  #wrap > footer {
+    margin: 0 14.3617%; }
+
+  /* line 156, desktop.css.scss */
   header[role="banner"] {
     margin-bottom: 5em; }
 
-  /* line 153, desktop.css.scss */
+  /* line 160, desktop.css.scss */
   #logo a {
     height: 90px;
     width: 103px; }
 
-  /* line 158, desktop.css.scss */
+  /* line 165, desktop.css.scss */
   article {
     margin-left: 14.3617%; }
-    /* line 162, desktop.css.scss */
+    /* line 169, desktop.css.scss */
     article .body,
     article .article-section {
       width: 77.01863%; }
-    /* line 166, desktop.css.scss */
+    /* line 173, desktop.css.scss */
     article .illustration {
       margin-top: 30px; }
-    /* line 172, desktop.css.scss */
+      /* line 175, desktop.css.scss */
+      article .illustration figcaption {
+        margin: 0; }
+    /* line 182, desktop.css.scss */
     article p,
     article ul,
     article ol {
       width: 94.35484%; }
-    /* line 176, desktop.css.scss */
+    /* line 186, desktop.css.scss */
     article blockquote {
+      overflow: visible;
       width: 129.83871%; }
-      /* line 179, desktop.css.scss */
-      article blockquote p {
-        width: 77.01863%; }
-      /* line 183, desktop.css.scss */
+      /* line 190, desktop.css.scss */
+      article blockquote > p {
+        width: 77.01863%;
+        margin-bottom: .5em; }
+      /* line 195, desktop.css.scss */
       article blockquote footer {
-        padding-top: 0.7em;
         width: 18.01242%;
         float: right; }
-        /* line 188, desktop.css.scss */
+        /* line 199, desktop.css.scss */
+        article blockquote footer p {
+          position: static; }
+        /* line 203, desktop.css.scss */
         article blockquote footer img {
+          float: none;
+          width: auto;
           margin-top: -100%;
           margin-bottom: 1em; }
-        /* line 193, desktop.css.scss */
+        /* line 210, desktop.css.scss */
         article blockquote footer a {
           display: block; }
-    /* line 199, desktop.css.scss */
+    /* line 216, desktop.css.scss */
     article .share {
       margin-left: -1.25em; }
-    /* line 204, desktop.css.scss */
+    /* line 221, desktop.css.scss */
     article figure > div {
       float: left;
       width: 79.50311%; }
-    /* line 209, desktop.css.scss */
+    /* line 226, desktop.css.scss */
     article figure figcaption {
       float: right;
       width: 18.01242%;
       margin: 0 0 0 2.48447%;
       border: none; }
-    /* line 218, desktop.css.scss */
+    /* line 235, desktop.css.scss */
     article .article-section header {
       width: 112.09677%;
       border-top: 1px solid #ccc;
       border-bottom: none; }
-      /* line 222, desktop.css.scss */
+      /* line 239, desktop.css.scss */
       article .article-section header .section-lead {
         margin-top: 1.53846em;
         float: right;
         width: 20.86331%;
         margin-right: -16.54676%; }
-    /* line 230, desktop.css.scss */
+    /* line 248, desktop.css.scss */
     article .article-section .subsection-header {
       width: 112.09677%; }
-    /* line 233, desktop.css.scss */
+    /* line 252, desktop.css.scss */
     article .article-section .vignette {
+      display: block;
+      font-size: 1.4375em;
       position: absolute;
-      left: 0;
-      top: 2.5em; } }
+      left: -4.78261em;
+      top: -1em; } }
