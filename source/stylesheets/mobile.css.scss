@@ -47,6 +47,9 @@
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   /* Layout */
+  #wrap {
+    margin: 0 15px;
+  }
 
   #skip-to-navigation {
     position: absolute;
@@ -133,6 +136,10 @@
     }
   }
 
+  nav[role="breadcrumbs"] {
+    display: none;
+  }
+
 
   article {
     .vignette {
@@ -169,7 +176,11 @@
 }
 
 @media only screen and (min-width: 600px) and (max-width: 767px) {
-  banner,
+  #wrap {
+    margin: 0;
+  }
+
+  header[role="banner"],
   #main {
     width: percentage(480/600);
     margin: 0 auto;

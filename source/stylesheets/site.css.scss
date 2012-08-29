@@ -133,17 +133,10 @@ em {
   margin: 0 auto;
 }
 
-header[role="banner"],
-#main {
-  margin: 0 15px;
-
-}
-
 /* Blockquote */
 blockquote {
   margin-top: (20em/16);
   margin-bottom: (20em/16);
-  border-top: 1px solid $warm-grey;
   border-bottom: 1px solid $warm-grey;
   padding: (10em/16) 0;
   color: $text-warm-grey;
@@ -192,11 +185,9 @@ figure figcaption {
 
 /* Breadcrumbs */
 nav[role="breadcrumbs"] {
-  border-top: 1px solid $warm-grey;
   display: block;
   @include small-text((22em/16), 1);
-  margin: (20em/22) 0;
-  padding-top: (10em/22);
+  margin-top: (20em/22);
   color: #aaa;
   a,
   span {
@@ -303,9 +294,7 @@ nav[role="breadcrumbs"] {
     font-size: (26em/16);
 
     a.topic {
-      display:block;
-      font-size: (18em/26);
-      margin-bottom:.5em;
+      font-size: (20em/26);
     }
   }
 
@@ -380,7 +369,7 @@ nav[role="breadcrumbs"] {
 .news-blocks,
 .calendar {
   ul {
-    margin-top: (30em/16);
+    margin-top: (30em/18);
     list-style: none;
   }
   li {
@@ -388,11 +377,13 @@ nav[role="breadcrumbs"] {
     a {
       display:block;
       margin: 0 0 (20em/22) 55px;
-      font-size: (22em/16);
+      font-size: (22em/18);
+      line-height: (24em/22);
       font-family: $swift;
       .meta {
-        font-family: $font-family;
+        font-family: $arial;
         font-size: (14em/22);
+        line-height: (18em/14);
         color: $text-grey;
         display: block;
       }

@@ -1,6 +1,10 @@
 @import "includes.css.scss";
 
 @media only screen and (min-width: 1024px) {
+  @mixin desktop-small-text {
+    font-size: (14em/16);
+    line-height: (18/14);
+  }
   /* Typography */
   /*
   p,
@@ -50,6 +54,16 @@
       font-size: (26em/16);
       line-height: (28/26);
     }
+    footer p {
+      font-size: (14em/13);
+      line-height: (18/14);
+    }
+  }
+
+  figure {
+    figcaption {
+      @include desktop-small-text;
+    }
   }
 
   article {
@@ -79,8 +93,7 @@
   .article-section {
     .section-lead,
     .subsection-lead {
-      font-size: (13em/16);
-      line-height: (16/13);
+      @include desktop-small-text;
     }
 
     .vignette {
@@ -95,8 +108,7 @@
 
   .conversation {
     .byline {
-      font-size: (14em/16);
-      line-height: (18/14);
+      @include desktop-small-text;
     }
 
     .question {
@@ -133,41 +145,40 @@
   /* Layout */
   body {
     padding-top: (40em/16);
-    background: #fff url(/images/bg.gif) 50% 0 repeat-y;
+    background: transparent url(/images/bg.gif) 50% 0 repeat-y;
+  }
+
+  #wrap {
+    max-width: 970px;
+    & > nav[role="breadcrumbs"] {
+      width: auto;
+      margin: 0 0 0 165px;
+    }
   }
 
   nav[role="navigation"] {
     position: absolute;
     top: 0;
-    left: percentage(160/940);
-  }
-
-  #main {
-    width: 940px;
-    margin: 0 auto;
-  }
-  #wrap {
-    nav[role="breadcrumbs"],
-    > footer {
-      margin: 0 percentage(135/940);
-    }
+    left: 165px;
   }
 
   header[role="banner"] {
     margin-bottom: (80em/16);
   }
 
+  #main {
+    margin-left: 165px;
+  }
+
   #logo a {
-    height: 90px;
-    width: 103px;
+    width: 133px;
+    height: 116px;
   }
 
   article {
-    margin-left: percentage(135/940);
-
     .body,
     .article-section {
-      width: percentage(620/805);
+      width: percentage(640/805);
     }
 
     .illustration {
@@ -180,16 +191,17 @@
     p,
     ul,
     ol {
-      width: percentage(585/620);
+      width: percentage(585/640);
     }
 
     blockquote {
       overflow: visible;
-      width: percentage(805/620);
+      width: percentage(805/640);
 
       > p {
-        width: percentage(620/805);
+        width: percentage(585/805);
         margin-bottom: .5em;
+        padding-left: 0;
       }
 
       footer {
@@ -233,7 +245,7 @@
 
     .article-section {
       header {
-        width: percentage(695/620);
+        width: percentage(695/640);
         border-top: 1px solid #ccc;
         border-bottom: none;
         .section-lead {
@@ -241,21 +253,35 @@
           float: right;
           width: percentage(145/695);
           margin-right: - percentage(115/695);
+        }
 
+        &.vignetted {
+          @include box-sizing(border-box);
+          width: percentage(860/640);
+          margin-left: -165px;
+          padding-left: 165px;
+          .vignette {
+            display: block;
+            font-size: (23em/16);
+            position: absolute;
+            top: -.5em;
+            left: 0;
+          }
         }
       }
 
+      .article-subsection {
+        @include box-sizing(border-box);
+        width: percentage(695/640);
+        padding-right: percentage(55/640);
+      }
       .subsection-header {
-        width: percentage(695/620);
+        width: percentage(695/640);
       }
 
-      .vignette {
-        display: block;
-        font-size: (23em/16);
-        position: absolute;
-        left: - (110em/23);
-        top: -1em;
-      }
+    }
+
+    .related-topics header {
     }
   }
 }
