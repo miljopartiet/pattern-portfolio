@@ -2,7 +2,7 @@
 
 @media only screen and (min-width: 1024px) {
   @mixin desktop-small-text {
-    font-size: (14em/16);
+    font-size: (14em/18);
     line-height: (18/14);
   }
   /* Typography */
@@ -63,18 +63,6 @@
   figure {
     figcaption {
       @include desktop-small-text;
-    }
-  }
-
-  article {
-    .body,
-    .article-section {
-      > p,
-      > ul,
-      > ol {
-        font-size: (18em/16);
-        line-height: (26/18);
-      }
     }
   }
 
