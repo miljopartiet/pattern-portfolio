@@ -173,6 +173,10 @@ figure figcaption {
   margin: 0 auto;
 }
 
+header[role="banner"] {
+  position: relative;
+}
+
 #logo {
   margin-bottom: (20em/16);
   a {

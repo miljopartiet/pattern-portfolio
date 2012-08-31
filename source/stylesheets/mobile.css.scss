@@ -3,6 +3,10 @@
 @media only screen and (min-width: 320px) {
   // Typography
 
+  #skip-to-navigation {
+    font: (13em/16)/1 $swift;
+  }
+
   .article-section {
     .section-lead,
     .subsection-lead {
@@ -53,10 +57,10 @@
   #skip-to-navigation {
     position: absolute;
     top: 0;
-    right: 15px;
+    right: 0;
     z-index: 988;
     background: $beige;
-    padding: .2em .4em;
+    padding: 5px 25px 5px 10px;
     color:rgb(188, 185, 178);
   }
 
