@@ -29,13 +29,6 @@ h1 {
   font-size: (24em/16);
   line-height: 1.1;
   color: $green;
-  /*
-  .vignette {
-    margin-bottom: (2em/14);
-    font-size: (14em/24);
-    line-height: 1;
-  }
-  */
 }
 
 h2 {
@@ -44,13 +37,6 @@ h2 {
   font-weight: normal;
   font-size: (18em/16);
   line-height: (24/18);
-  /*
-  .vignette {
-    margin-bottom: (3em/16);
-    font-size: (14em/18);
-    line-height: 1;
-  }
-  */
 }
 
 h3 {
@@ -87,9 +73,6 @@ ol {
 }
 
 li {
-  /*
-  margin: (8em/16) 0 0 1.5em;
-  */
   margin: 0 0 0 1.5em;
 }
 
@@ -113,105 +96,10 @@ em {
   font-style: italic;
 }
 
-/* Logo */
-#logo {
-  margin-bottom: (20em/16);
-
-  a {
-    display: block;
-    text-indent: -9999px;
-    height: 50px;
-    width: 57px;
-    background: transparent url(/images/logo.svg) 0 0 no-repeat;
-    background-size: 100%;
-  }
-}
-
-/* Layout */
-#wrap {
-  position: relative;
-  margin: 0 auto;
-}
-
-/* Blockquote */
-blockquote {
-  margin-top: (20em/16);
-  margin-bottom: (20em/16);
-  border-bottom: 1px solid $warm-grey;
-  padding: (10em/16) 0;
-  color: $text-warm-grey;
-
-  &>p {
-    margin-top: (12em/16);
-    font-family: $swift;
-    font-size: (18em/16);
-    line-height: (22/18);
-
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-
-  footer {
-    @include small-text;
-    .title {
-      color: $text-light-grey;
-    }
-  }
-}
-
-
-/* Captions */
-figure figcaption {
-  padding-bottom: .5em;
-  border-bottom: 1px solid $warm-grey;
-  @include small-text((13em/16), (18/14));
-
-  strong,
-  b {
-    color: $text-grey;
-  }
-}
-
-/* Page lead */
-.lead {
-  p {
-    margin-top: (12em/18);
-    font-size: (18em/16);
-    line-height: (22/18);
-  }
-}
-
-
-/* Breadcrumbs */
-nav[role="breadcrumbs"] {
-  display: block;
-  @include small-text((22em/16), 1);
-  margin-top: (20em/22);
-  color: #aaa;
-  a,
-  span {
-    font-size: (13em/22);
-    padding: 0 .3em;
-    position: relative;
-    top: -.35em;
-    &:first-child {
-      padding-left: 0;
-    }
-  }
-}
-
-/*
-.poi ul li {
-  a { display: inline; }
-  p { display: block; }
-}
-
-.images {
-  margin-top: .6em;
-}
-*/
-
+//
+// General purpose content types
+//
+// Media files
 .embedded-video {
   position: relative;
   padding-top: 25px;
@@ -237,13 +125,129 @@ nav[role="breadcrumbs"] {
     height: 100%;
   }
 }
+// Captions for media files
+figure figcaption {
+  padding-bottom: .5em;
+  border-bottom: 1px solid $warm-grey;
+  @include small-text((13em/16), (18/14));
 
-/* Main image */
+  strong,
+  b {
+    color: $text-grey;
+  }
+}
+// Lists with icons or images
+.icon-list {
+  margin-top: (30em/18);
+  list-style: none;
+  li {
+    margin:0;
+    a {
+      display:block;
+      margin: 0 0 (20em/22) 55px;
+      font-size: (22em/18);
+      line-height: (24em/22);
+      font-family: $swift;
+      .meta {
+        font-family: $arial;
+        font-size: (14em/22);
+        line-height: (18em/14);
+        color: $text-grey;
+        display: block;
+      }
+    }
+    .icon {
+      display: block;
+      width: 35px;
+      margin-left: -55px;
+      float: left;
+    }
+  }
+}
+
+//
+// Layout
+//
+#wrap {
+  position: relative;
+  margin: 0 auto;
+}
+
+#logo {
+  margin-bottom: (20em/16);
+  a {
+    display: block;
+    text-indent: -9999px;
+    height: 50px;
+    width: 57px;
+    background: transparent url(/images/logo.svg) 0 0 no-repeat;
+    background-size: 100%;
+  }
+}
+
+// Navigation elements
+
+// Breadcrumbs
+// Can be found both in the top of the page
+// and in the page footer
+nav[role="breadcrumbs"] {
+  display: block;
+  @include small-text((22em/16), 1);
+  margin-top: (20em/22);
+  color: #aaa;
+  a,
+  span {
+    font-size: (13em/22);
+    padding: 0 .3em;
+    position: relative;
+    top: -.35em;
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+}
+
+//
+// Article contents
+//
+
+// Page lead
+.lead p {
+  margin-top: (12em/18);
+  font-size: (18em/16);
+  line-height: (22/18);
+}
+
+blockquote {
+  margin-top: (20em/16);
+  margin-bottom: (20em/16);
+  border-bottom: 1px solid $warm-grey;
+  padding: (10em/16) 0;
+  color: $text-warm-grey;
+
+  & > p {
+    margin-top: (12em/16);
+    font-family: $swift;
+    font-size: (18em/16);
+    line-height: (22/18);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  footer {
+    @include small-text;
+    .title {
+      color: $text-light-grey;
+    }
+  }
+}
+// Main image
 .illustration {
   margin-top: (12em/16);
 }
 
-/* Share */
 .share {
   background: $yellow;
   margin-top: (40em/20);
@@ -266,7 +270,7 @@ nav[role="breadcrumbs"] {
   }
 }
 
-/* Deepening */
+// Lists of related articles
 .deepening {
   h2 {
     margin-top: (40em/20);
@@ -279,7 +283,9 @@ nav[role="breadcrumbs"] {
   }
 }
 
-/* Article section */
+//
+// Article sections after the main content
+//
 .article-section {
   margin-top: (60em/16);
 
@@ -324,6 +330,7 @@ nav[role="breadcrumbs"] {
     @include small-text;
   }
 
+   // Subsections
   .article-subsection {
     margin-top: 2.5em;
     border-top: 1px solid $warm-grey;
@@ -333,30 +340,25 @@ nav[role="breadcrumbs"] {
     }
   }
 
-  header + .article-subsection {
-    border-top: none;
-    margin-top: 0;
-  }
-
-  .subsection-header {
-    padding: 0 0 0.4em 0;
-    border-bottom: 1px solid $warm-grey;
-
-    h3,
-    .subsection-lead {
-      display: inline;
+    header + .article-subsection {
+      border-top: none;
+      margin-top: 0;
     }
-  }
 
-  .subsection-lead {
-    margin-left: .5em;
-    @include small-text;
-  }
+    .subsection-header {
+      padding: 0 0 0.4em 0;
+      border-bottom: 1px solid $warm-grey;
 
-  .hidden {
-    position: absolute;
-    left: -9999px;
-  }
+      h3,
+      .subsection-lead {
+        display: inline;
+      }
+    }
+
+    .subsection-lead {
+      margin-left: .5em;
+      @include small-text;
+    }
 
   &.related-topics {
     h2 {
@@ -365,39 +367,10 @@ nav[role="breadcrumbs"] {
   }
 }
 
-/* TODO: Make this generic */
-.news-blocks,
-.calendar {
-  ul {
-    margin-top: (30em/18);
-    list-style: none;
-  }
-  li {
-    margin:0;
-    a {
-      display:block;
-      margin: 0 0 (20em/22) 55px;
-      font-size: (22em/18);
-      line-height: (24em/22);
-      font-family: $swift;
-      .meta {
-        font-family: $arial;
-        font-size: (14em/22);
-        line-height: (18em/14);
-        color: $text-grey;
-        display: block;
-      }
-    }
-    .label {
-      display: block;
-      width: 35px;
-      margin-left: -55px;
-      float: left;
-    }
-  }
-}
-.calendar {
-  .label {
+// Add calendar style icons to the icon list
+// in the calendar subsection
+.calendar .icon-list {
+  .icon {
     text-align:center;
     text-indent: -.2em;
     color: #fff;

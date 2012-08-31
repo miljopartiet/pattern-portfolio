@@ -1,10 +1,9 @@
 @import "includes.css.scss";
 
 @media only screen and (min-width: 320px) {
-/* Typography */
+  // Typography
 
   .article-section {
-
     .section-lead,
     .subsection-lead {
       line-height: (17/13);
@@ -17,8 +16,7 @@
     }
   }
 
-  /* Layout */
-
+  // Layout
   blockquote {
     overflow: hidden;
     padding-bottom: 0;
@@ -42,11 +40,12 @@
       margin: 0 percentage(6/320) 0 percentage(13/320);
     }
   }
-
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
-  /* Layout */
+  //
+  // Layout
+  //
   #wrap {
     margin: 0 15px;
   }
@@ -59,9 +58,12 @@
     background: $beige;
     padding: .2em .4em;
     color:rgb(188, 185, 178);
-
   }
 
+  //
+  // Navigational elements
+  //
+  // Site navigation is found in the bottom of the page
   nav[role="site"] {
     width: 100%;
     background: $beige;
@@ -106,11 +108,13 @@
       display:none;
     }
   }
-
-  #main-navigation {
+  // The top navigation and breadcrumbs is not used in the mobile view
+  // instead we point users to the more complete site navigation
+  #main-navigation,
+  nav[role="breadcrumbs"] {
     display: none;
   }
-
+  // This is the site navigation when activated in a mobile view
   #top-navigation {
     position: absolute;
     top: 0;
@@ -135,11 +139,6 @@
 
     }
   }
-
-  nav[role="breadcrumbs"] {
-    display: none;
-  }
-
 
   article {
     .vignette {

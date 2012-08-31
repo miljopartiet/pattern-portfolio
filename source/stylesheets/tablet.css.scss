@@ -25,12 +25,10 @@
     line-height: (26/22);
   }
 
-  .lead {
-    p {
-      margin-top: (12em/25);
-      font-size: (22em/16);
-      line-height: (26/22);
-    }
+  .lead p {
+    margin-top: (12em/25);
+    font-size: (22em/16);
+    line-height: (26/22);
   }
 
   .share {
@@ -40,7 +38,7 @@
     }
 
     p {
-      font-size: (17em/16);
+      font-size: (17em/18);
       line-height: (24/17);
     }
   }
@@ -62,6 +60,27 @@
       line-height: (30/26);
     }
   }
+
+  .conversation {
+    .question {
+      .content {
+        p {
+          font-size: (22em/18);
+          line-height: (24/22);
+        }
+      }
+    }
+
+    .answer {
+      .content {
+        p {
+          font-size: (16em/18);
+          line-height: (20/16);
+        }
+      }
+    }
+  }
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -84,7 +103,7 @@
 
     li {
       margin: 0;
-      font-size: (16em/16);
+      font-size: (16em/18);
       line-height: 1;
     }
 
@@ -106,7 +125,7 @@
       a {
         margin-left: -20px;
         padding: (12.5em/20) (25em/20) (12.5em/20) 1em;
-        font-size: (20em/16);
+        font-size: (20em/18);
         line-height: 1;
         background: $green-dark;
         color: #fff;
@@ -116,14 +135,13 @@
 
   footer nav[role="breadcrumbs"] {
     border-bottom: 1px solid $warm-grey;
-    margin-right: 115px;
     padding-bottom: 12px;
   }
   nav[role="site"] {
-    @include small-text((13em/18), (17/18));
     border-bottom: 1px solid $warm-grey;
     padding: 15px 0;
     ul {
+      @include small-text((13em/16), (18/14));
       float: left;
       width: percentage(180/580);
       margin: 0 20px 0 0;
@@ -141,7 +159,6 @@
       margin: 0 0 0 0;
     }
     form {
-      margin-right: 185px;
       text-align:right;
     }
   }
@@ -159,7 +176,7 @@
 
   /* Layout */
   body {
-    padding-top: (40em/16);
+    padding-top: (40em/18);
     background: #fff;
   }
 
@@ -170,7 +187,7 @@
   }
 
   header[role="banner"] {
-    margin-bottom: (80em/16);
+    margin-bottom: (80em/18);
   }
 
   #logo a {

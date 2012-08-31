@@ -1,32 +1,10 @@
 @import "includes.css.scss";
 
 @media only screen and (min-width: 1024px) {
-  @mixin desktop-small-text {
-    font-size: (14em/18);
-    line-height: (18/14);
-  }
-  /* Typography */
-  /*
-  p,
-  li {
-    font-size: (18em/16);
-    line-height: (26/18);
-    li,
-    p {
-      font-size: 1em;
-    }
-  }
-  */
-
+// Typography
   h1 {
     font-size: (42em/16);
     line-height: 1.1;
-
-    /*
-    .vignette {
-      font-size: (16em/48);
-    }
-    */
   }
 
   h2 {
@@ -62,7 +40,8 @@
 
   figure {
     figcaption {
-      @include desktop-small-text;
+      font-size: (14em/16);
+      line-height: (18/14);
     }
   }
 
@@ -73,7 +52,6 @@
     }
 
     p {
-      font-size: (18em/16);
       line-height: (26/18);
     }
   }
@@ -81,7 +59,8 @@
   .article-section {
     .section-lead,
     .subsection-lead {
-      @include desktop-small-text;
+      font-size: (14em/16);
+      line-height: (18/14);
     }
 
     .vignette {
@@ -94,29 +73,6 @@
     }
   }
 
-  .conversation {
-    .byline {
-      @include desktop-small-text;
-    }
-
-    .question {
-      .content {
-        p {
-          font-size: (22em/16);
-          line-height: (24/22);
-        }
-      }
-    }
-
-    .answer {
-      .content {
-        p {
-          line-height: (20/16);
-        }
-      }
-    }
-  }
-
   #feedback {
     h2 {
       font-size: (22em/16);
@@ -124,8 +80,13 @@
     }
 
     p {
-      font-size: (18em/16);
       line-height: (24/18);
+    }
+  }
+
+  nav[role="site"] {
+    ul {
+      @include small-text((14em/16), (17/13));
     }
   }
 
@@ -268,8 +229,14 @@
       }
 
     }
+  }
 
-    .related-topics header {
+  footer nav[role="breadcrumbs"] {
+    margin-right: 115px;
+  }
+  nav[role="site"] {
+    form {
+      margin-right: 185px;
     }
   }
 }

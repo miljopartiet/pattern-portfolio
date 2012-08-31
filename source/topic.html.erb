@@ -2,19 +2,17 @@
 body_class: "topic_page"
 current_nav: topics
 ---
-
 <% content_for :head do %>
   <title>Bostäder: 30 000 nya bostäder på 30m2 för 3000 SEK/mån till personer under 30 år</title>
-<% end%>
+<% end %>
+
 <article>
-  <div class="intro">
-    <header>
-      <h1>Trettitusen nya bostäder för tretusen i månaden till våra unga</h1>
-      <div class="lead">
-        <p>När bostadsbristen ökar drabbas ungdomar och studenter först. Därför vill Miljöpartiet öka bostadsbyggandet med 30&nbsp;000 extra yt-, kostnads-, och energieffektiva hyresrätter till 2018.</p>
-      </div>
-    </header>
-  </div>
+  <header class="intro">
+    <h1>Trettitusen nya bostäder för tretusen i månaden till våra unga</h1>
+    <div class="lead">
+      <p>När bostadsbristen ökar drabbas ungdomar och studenter först. Därför vill Miljöpartiet öka bostadsbyggandet med 30&nbsp;000 extra yt-, kostnads-, och energieffektiva hyresrätter till 2018.</p>
+    </div>
+  </header>
   <div class="illustration">
     <figure>
       <div>
@@ -108,14 +106,10 @@ current_nav: topics
       <p class="section-lead">Aktuellt inom ämnet bostad. Visa <a href="#">andra ämnen</a></p>
     </header>
     <div class="article-subsection news-blocks">
-      <!--
-      TODO: hidden header?
-      <h3>Aktuellt om bostäder</h3>
-      -->
-      <ul>
+      <ul class="icon-list">
         <li>
           <a href="">
-            <img src="http://placehold.it/35x35" alt="" class="label">
+            <img src="http://placehold.it/35x35" alt="" class="icon">
             Bostadslånen - en skuldfälla
             <span class="meta">
               Idag, aftonbladet.se
@@ -124,14 +118,14 @@ current_nav: topics
         </li>
         <li>
           <a href="">
-            <img src="http://placehold.it/35x35" alt="" class="label">
+            <img src="http://placehold.it/35x35" alt="" class="icon">
             Rusta upp miljonprogrammen nu
             <span class="meta">Torsdag 14 juni, svd.se</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <img src="http://placehold.it/35x35" alt="" class="label">
+            <img src="http://placehold.it/35x35" alt="" class="icon">
             Miljö- och friluftsstaden
             <span class="meta">
               Carl Schytter, 23 sep 2011, mp.se
@@ -142,11 +136,11 @@ current_nav: topics
     </div>
 
     <div class="article-subsection calendar">
-      <ul>
+      <ul class="icon-list">
         <!-- event, using hCalender microformat -->
         <li class="vevent">
           <a href="#">
-            <span class="label">5</span>
+            <span class="icon">5</span>
             <span class="summary">Ekonomiskt seminarium om bolånen</span>
             <span class="meta">
               <time datetime="2012-05-27T13:00" class="dtstart">
@@ -165,7 +159,7 @@ current_nav: topics
         <!-- /event -->
         <li class="vevent">
           <a href="#">
-            <span class="label">6</span>
+            <span class="icon">6</span>
             <span class="summary">Åsa Romson debatterar bostadsbristen i SVT Agenda</span>
             <span class="meta">
             <time datetime="2012-06-23T21:15" class="dtstart">
@@ -183,7 +177,7 @@ current_nav: topics
         <!-- whole day event -->
         <li class="vevent">
           <a href="#">
-            <span class="label">22</span>
+            <span class="icon">22</span>
             <span class="summary">Lansering av nya mp.se</span>
             <span class="meta">
               <span class="date" class="dstart">Torsdag 22 maj
@@ -202,32 +196,6 @@ current_nav: topics
 
     <div class="article-subsection conversations">
       <ul>
-        <li class="conversation">
-          <div class="question">
-            <div class="content">
-              <p>
-                Hur ställer ni gröna partier er till landsbygdsinfrastruktur
-              </p>
-            </div>
-            <div class="byline">
-              <img src="http://placehold.it/48x48" alt="">
-              <p>Fredrika Gullfor (@gullfot) på twitter</p>
-              <span class="arrow"></span>
-            </div>
-          </div>
-          <div class="answer">
-            <div class="content">
-              <p>
-                En grön stad ska klara av att spara energi och transporter, minska avfallshanteringen och ha ett Cabo. lenda velest vellamentum ressimos qui omnisi dolessum facerum.
-              </p>
-            </div>
-            <div class="byline">
-              <img src="http://placehold.it/48x48" alt="">
-              <p><a href="">Per Bolund</a>, ekonomisk talesman för Miljöpartiet</p>
-              <span class="arrow"></span>
-            </div>
-          </div>
-        </li>
         <li class="conversation">
           <div class="question">
             <div class="content">
