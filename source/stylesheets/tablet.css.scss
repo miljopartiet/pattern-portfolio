@@ -145,16 +145,21 @@
     ul {
       @include small-text((13em/16), (18/14));
       float: left;
-      width: percentage(180/580);
+      width: (160em/13);
       margin: 0 20px 0 0;
       list-style: none;
       &.first,
       &.second {
-        width: percentage(80/580);
         li {
           border-left: 1px solid $warm-grey;
           padding-left: 10px;
         }
+      }
+      &.first {
+        width: (80em/13);
+      }
+      &.second {
+        width: (110em/13);
       }
     }
     li {
@@ -162,6 +167,9 @@
     }
     form {
       text-align:right;
+      input {
+        width: (140em/14);
+      }
     }
   }
 }

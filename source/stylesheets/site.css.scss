@@ -207,6 +207,22 @@ nav[role="breadcrumbs"] {
   }
 }
 
+nav[role="site"] {
+  input {
+    background: $beige;
+    border: 1px solid $beige;
+    padding: 3px 5px;
+    font-size: (14em/16);
+    @include box-sizing(border-box);
+    -webkit-appearance: none;
+    @include border-radius(4px);
+    &:focus {
+      outline: none;
+      border: 1px solid $warm-grey;
+    }
+  }
+}
+
 //
 // Article contents
 //

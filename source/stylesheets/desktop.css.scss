@@ -237,6 +237,9 @@
   nav[role="site"] {
     form {
       margin-right: 185px;
+      input {
+        width: (220em/14);
+      }
     }
   }
 }
