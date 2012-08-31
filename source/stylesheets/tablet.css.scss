@@ -135,6 +135,7 @@
   }
 
   footer nav[role="breadcrumbs"] {
+    border-top: none;
     border-bottom: 1px solid $warm-grey;
     padding-bottom: 12px;
   }
@@ -183,14 +184,20 @@
   // Layout
   //
   body {
-    padding-top: 30px;
+    background: $beige;
+    padding: 0 percentage(30/768) 0 0;
+  }
+
+  #wrap {
     background: #fff;
+    margin: 0;
+    padding: (30em/16) 0 0 percentage(30/768);
   }
 
   header[role="banner"],
   #main,
   #wrap > footer {
-    width: 580px;
+    width: (580em/16);
     margin: 0 auto;
   }
 

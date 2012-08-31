@@ -4,7 +4,7 @@
   // Typography
 
   #skip-to-navigation {
-    font: (13em/16)/1 $swift;
+    @include small-text;
   }
 
   .article-section {
@@ -44,6 +44,10 @@
       margin: 0 percentage(6/320) 0 percentage(13/320);
     }
   }
+
+  #wrap > footer {
+    margin-top: (40em/16);
+  }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
@@ -61,7 +65,7 @@
     z-index: 988;
     background: $beige;
     padding: 5px 25px 5px 10px;
-    color:rgb(188, 185, 178);
+    color: rgb(188, 185, 178);
   }
 
   //
@@ -112,10 +116,16 @@
       display:none;
     }
   }
+  // Expand the navigation to the window border when viewed in the footer
+  footer nav[role="site"] {
+    width: percentage(350/320);
+    margin-left: - percentage(15/320);
+  }
+
   // The top navigation and breadcrumbs is not used in the mobile view
   // instead we point users to the more complete site navigation
   #main-navigation,
-  nav[role="breadcrumbs"] {
+  #wrap > nav[role="breadcrumbs"] {
     display: none;
   }
   // This is the site navigation when activated in a mobile view
@@ -179,13 +189,28 @@
 }
 
 @media only screen and (min-width: 600px) and (max-width: 767px) {
+  body {
+    background: $beige;
+    padding: 0 (20em/16) 0 0;
+  }
   #wrap {
+    background: #fff;
     margin: 0;
+    padding: (20em/16) 0 0 (20em/16);
   }
 
   header[role="banner"],
-  #main {
-    width: percentage(480/600);
+  #main,
+  nav[role="breadcrumbs"] {
+    width: (520em/16);
     margin: 0 auto;
+  }
+  // TODO generalize the different breadcrumbs layouts
+  #wrap > nav[role="breadcrumbs"] {
+    border: none;
+    display: block;
+  }
+  // Reset footer site navigation overflow
+  footer nav[role="site"] {
   }
 }

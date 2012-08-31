@@ -196,9 +196,11 @@ header[role="banner"] {
 // and in the page footer
 nav[role="breadcrumbs"] {
   display: block;
-  @include small-text((22em/16), 1);
-  margin-top: (20em/22);
-  color: #aaa;
+  p {
+    @include small-text((22em/16), 1);
+    margin: 0;
+    color: #aaa;
+  }
   a,
   span {
     font-size: (13em/22);
@@ -209,6 +211,12 @@ nav[role="breadcrumbs"] {
       padding-left: 0;
     }
   }
+}
+
+footer nav[role="breadcrumbs"] {
+  border-top: 1px solid $warm-grey;
+  padding-top: 10px;
+  margin-bottom: 15px;
 }
 
 nav[role="site"] {
