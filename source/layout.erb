@@ -22,7 +22,6 @@
         <div id="logo">
           <a href="/">Miljöpartiet</a>
         </div>
-        <a href="#main-navigation" id="skip-to-navigation">Meny</a>
         <nav role="navigation" id="main-navigation">
           <ul>
             <li<%= ' class="current"' if data.page.current_nav == 'topics' %>><a href="/topics.html">Vår politik</a></li>
@@ -30,6 +29,18 @@
             <li<%= ' class="current"' if data.page.current_nav == 'conversations' %>><a href="/conversations.html">Prata politik</a></li>
           </ul>
         </nav>
+        <div id="secondary-navigation">
+          <form action="/search" method="get" class="search">
+            <input type="search" name="query">
+          </form>
+          <div>
+            <a href="#">Bli medlem</a>
+            <a href="#">Kontakt</a>
+            <a href="#">Press</a>
+            <a href="#site-navigation" class="more">+ Fler</a>
+          </div>
+          <a href="#main-navigation" id="skip-to-navigation">Meny</a>
+        </div>
       </header>
       <% if content_for? :breadcrumbs %>
       <nav role="breadcrumbs" class="breadcrumbs">
@@ -45,7 +56,7 @@
           <p><%= yield_content :breadcrumbs %></p>
         </nav>
         <% end %>
-        <nav role="site">
+        <nav role="site" id="site-navigation">
           <ul class="sections">
             <li class="start"><a href="/">Hem</a></li>
             <li class="current"><a href="/topics.html">Vi vill modernisera Sverige</a></li>

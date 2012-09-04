@@ -101,22 +101,44 @@
   }
 
   nav[role="navigation"] {
-    position: absolute;
-    top: 0;
-    left: 165px;
+    margin-left: (33em/16);
   }
 
   header[role="banner"] {
     margin-bottom: (80em/16);
   }
 
-  #main {
-    margin-left: 165px;
+  #logo {
+    width: (133em/16);
+    a {
+      width: (133em/16);
+      height: (116em/16);
+    }
   }
 
-  #logo a {
-    width: 133px;
-    height: 116px;
+  #secondary-navigation {
+    width: percentage(275/970);
+    margin-right: percentage(115/970);
+    form {
+      float: left;
+      text-align: left;
+    }
+    input {
+      width: (200em/14);
+    }
+    div {
+      margin: 0 percentage((115/275) * -1) 0 0;
+      float: right;
+      width: percentage(145/275);
+      a {
+        line-height: (20/14);
+        display: block;
+      }
+    }
+  }
+
+  #main {
+    margin-left: 165px;
   }
 
   article {

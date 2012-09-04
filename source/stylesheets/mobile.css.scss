@@ -2,11 +2,6 @@
 
 @media only screen and (min-width: 320px) {
   // Typography
-
-  #skip-to-navigation {
-    @include small-text;
-  }
-
   .article-section {
     .section-lead,
     .subsection-lead {
@@ -73,14 +68,11 @@
     margin: 0 15px;
   }
 
-  #skip-to-navigation {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 988;
-    background: $beige;
-    padding: 5px 25px 5px 10px;
-    color: rgb(188, 185, 178);
+  header[role="banner"] {
+    @include clear-me;
+    .search {
+      display: inline;
+    }
   }
 
   //
@@ -168,6 +160,24 @@
 
     }
   }
+  #logo {
+    float: left;
+    width: percentage(100/320);
+  }
+  #secondary-navigation {
+    width: percentage(200/320);
+    display: inline;
+    div {
+      display: none;
+    }
+  }
+    #skip-to-navigation {
+      @include small-text;
+      background: $beige;
+      padding: 5px 25px 5px 10px;
+      color: rgb(188, 185, 178);
+      border-radius: 4px;
+    }
 
   article {
     .vignette {
@@ -224,9 +234,6 @@
   #wrap > nav[role="breadcrumbs"] {
     border: none;
     display: block;
-  }
-  // Reset footer site navigation overflow
-  footer nav[role="site"] {
   }
 
   .labeled-list {

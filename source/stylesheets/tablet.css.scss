@@ -97,6 +97,15 @@
     }
   }
 
+  header[role="banner"] {
+    @include clear-me;
+    position: relative;
+  }
+
+  #logo {
+    float: left;
+  }
+
   #wrap > nav[role="breadcrumbs"] {
     width: 580px;
     margin: 0 auto;
@@ -139,6 +148,43 @@
       }
     }
   }
+
+  nav[role="navigation"] {
+    float: left;
+  }
+
+  #secondary-navigation {
+    position: relative;
+    border-bottom: 1px solid $warm-grey;
+    float: right;
+    padding-bottom: (6em/16);
+    width: percentage(220/768);
+    a {
+      @include small-text;
+      white-space: nowrap;
+      margin-right: .2em;
+      &:hover {
+        color: $green;
+      }
+      &.more {
+        position: absolute;
+        right: 0;
+        bottom: -1.8em;
+        margin-right: 0;
+      }
+    }
+    form {
+      display: block;
+      text-align: center;
+    }
+    input {
+      width: (140em/16);
+    }
+    div {
+      margin-top: (10em/16);
+    }
+  }
+
 
   footer nav[role="breadcrumbs"] {
     border-top: none;
@@ -223,20 +269,51 @@
   }
 
   header[role="banner"] {
-    position: relative;
     margin-bottom: (90em/16);
   }
 
-  #logo a {
-    height: (90em/16);
-    width: (103em/16);
-    margin-left: -(64em/16);
+  #logo {
+    a {
+      height: (90em/16);
+      width: (103em/16);
+      margin-left: -(64em/16);
+    }
   }
 
   nav[role="navigation"] {
-    position: absolute;
-    top: 0;
-    left: percentage(70/$content-width);
+    float: left;
+  }
+
+  #secondary-navigation {
+    position: relative;
+    border-bottom: 1px solid $warm-grey;
+    float: right;
+    padding-bottom: (6em/16);
+    width: percentage(220/768);
+    a {
+      @include small-text;
+      white-space: nowrap;
+      margin-right: .2em;
+      &:hover {
+        color: $green;
+      }
+      &.more {
+        position: absolute;
+        right: 0;
+        bottom: -1.8em;
+        margin-right: 0;
+      }
+    }
+    form {
+      display: block;
+      text-align: center;
+    }
+    input {
+      width: (140em/16);
+    }
+    div {
+      margin-top: (10em/16);
+    }
   }
 
 
