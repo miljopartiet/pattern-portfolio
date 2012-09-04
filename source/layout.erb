@@ -31,24 +31,20 @@
           </ul>
         </nav>
       </header>
+      <% if content_for? :breadcrumbs %>
       <nav role="breadcrumbs" class="breadcrumbs">
-        <p>
-          <a href="/">Hem</a> /
-          <a href="#">Vi vill modernisera Sverige</a> /
-          <span>Bostad</span>
-        </p>
+        <p><%= yield_content :breadcrumbs %></p>
       </nav>
+      <% end %>
       <div id="main" role="main">
         <%= yield %>
       </div>
       <footer>
+        <% if content_for? :breadcrumbs %>
         <nav role="breadcrumbs" class="breadcrumbs">
-          <p>
-            <a href="/">Hem</a> /
-            <a href="#">Vi vill modernisera Sverige</a> /
-            <span>Bostad</span>
-          </p>
+          <p><%= yield_content :breadcrumbs %></p>
         </nav>
+        <% end %>
         <nav role="site">
           <ul class="sections">
             <li class="start"><a href="/">Hem</a></li>
