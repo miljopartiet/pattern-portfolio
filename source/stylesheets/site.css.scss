@@ -283,7 +283,6 @@ blockquote {
   border-radius: 4px;
 
   h2 {
-    display: inline;
     margin-top: 0;
   }
 
@@ -295,19 +294,6 @@ blockquote {
   a {
     color: $font-color;
     text-decoration: underline;
-  }
-}
-
-// Lists of related articles
-.deepening {
-  h2 {
-    margin-top: (40em/20);
-    font-size: (20em/16);
-    line-height: (22/20);
-  }
-
-  p {
-    margin-top: (6em/16);
   }
 }
 
@@ -394,6 +380,18 @@ blockquote {
   &.related-topics {
     h2 {
       font-size: (22em/16);
+    }
+  }
+
+  // Lists of related articles
+  &.deepening {
+    h2 {
+      font-size: (20em/16);
+      line-height: (22/20);
+    }
+
+    p {
+      margin-top: (6em/16);
     }
   }
 }
