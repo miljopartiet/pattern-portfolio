@@ -173,6 +173,21 @@
       }
     }
   }
+
+  .labeled-list {
+    width: 580px;
+    margin: auto;
+
+    .label {
+    }
+    .list {
+      @include columns(2 20px);
+      li {
+        font-size: (16em/20);
+      }
+    }
+  }
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
