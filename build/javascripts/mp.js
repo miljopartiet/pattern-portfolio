@@ -25,13 +25,15 @@ $(function() {
       $nav.on('click', 'a.close', hide);
 
       $('body').append($nav);
-      var se = document.createElement('style');
-      se.type = 'text/css';
-      var rules = "#top-navigation { margin-top: -"+ $nav.height() +"px; }";
-      rules += "#top-navigation.inactive { margin-top: -"+ $nav.height() +"px; }";
-      se.innerHTML = rules;
+      var offset = $nav.outerHeight(),
+          style = document.createElement('style'),
+          rules = "#top-navigation { margin-top: -"+ offset +"px; }";
 
-      document.getElementsByTagName("head")[0].appendChild(se);
+      rules += "#top-navigation.inactive { margin-top: -"+ offset +"px; }";
+      style.type = 'text/css';
+      style.innerHTML = rules;
+
+      document.getElementsByTagName("head")[0].appendChild(style);
       setup_run = true;
     }
 

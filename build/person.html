@@ -21,20 +21,27 @@
         <div id="logo">
           <a href="/">Miljöpartiet</a>
         </div>
-        <a href="#main-navigation" id="skip-to-navigation">Meny</a>
         <nav role="navigation" id="main-navigation">
           <ul>
-            <li><a href="/topics.html">Vi vill modernisera Sverige</a></li>
+            <li><a href="/topics.html">Vår politik</a></li>
             <li class="current"><a href="/persons.html">Om Miljöpartiet de gröna</a></li>
             <li><a href="/conversations.html">Prata politik</a></li>
           </ul>
         </nav>
+        <div id="secondary-navigation">
+          <form action="/search" method="get" class="search">
+            <input type="search" name="query">
+          </form>
+          <div>
+            <a href="#">Bli medlem</a>
+            <a href="#">Kontakt</a>
+            <a href="#">Press</a>
+            <a href="#site-navigation" class="more">+ Fler</a>
+          </div>
+          <a href="#main-navigation" id="skip-to-navigation">Meny</a>
+        </div>
       </header>
-      <nav role="breadcrumbs" class="breadcrumbs">
-        <a href="/">Hem</a> /
-        <a href="/topics.html">Vi vill modernisera Sverige</a> /
-        <span>Bostad</span>
-      </nav>
+      
       <div id="main" role="main">
         
 <div class="breadcrumbs"><a href="/">Hem</a> / <a href="/persons.html">Om Miljöpartiet de gröna</a></div>
@@ -192,12 +199,8 @@
 
       </div>
       <footer>
-        <nav role="breadcrumbs" class="breadcrumbs">
-          <a href="/">Hem</a> /
-          <a href="/topics.html">Vi vill modernisera Sverige</a> /
-          <span>Bostad</span>
-        </nav>
-        <nav role="site">
+        
+        <nav role="site" id="site-navigation">
           <ul class="sections">
             <li class="start"><a href="/">Hem</a></li>
             <li class="current"><a href="/topics.html">Vi vill modernisera Sverige</a></li>
@@ -216,7 +219,7 @@
             <li><a href="#">Ge en gåva</a></li>
             <li><a href="#">Lediga jobb</a></li>
           </ul>
-          <form action="/search" method="get">
+          <form action="/search" method="get" class="search">
             <input type="search" name="query">
           </form>
         </nav>
