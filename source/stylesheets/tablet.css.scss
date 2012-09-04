@@ -91,6 +91,12 @@
     display:none;
   }
 
+  nav[role="breadcrumbs"] {
+    p {
+      font-size: (14em/16);
+    }
+  }
+
   #wrap > nav[role="breadcrumbs"] {
     width: 580px;
     margin: 0 auto;
