@@ -328,7 +328,10 @@ blockquote {
     font-size: (26em/16);
 
     a.topic {
+      display: block;
       font-size: (20em/26);
+      line-height: (30/20);
+      text-transform: uppercase;
     }
   }
 
