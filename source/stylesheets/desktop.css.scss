@@ -97,6 +97,20 @@
 
   nav[role="navigation"] {
     margin-left: (33em/16);
+    li {
+      font-size: (16em/18);
+      line-height: (30/16);
+    }
+    a {
+      margin-top: (2em/16);
+      padding: 0 (25em/16) 0 (15em/16);
+    }
+    li.current {
+      font-size: (20em/18);
+      a {
+        padding-right: (25em/20);
+      }
+    }
   }
 
   #logo {

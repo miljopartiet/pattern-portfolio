@@ -102,21 +102,23 @@
   }
 
   nav[role="navigation"] {
+    float: left;
+
     ul {
-      margin: 0 0 0 20px;
+      margin: 0 0 0 (20em/18);
       list-style: none;
     }
 
     li {
       margin: 0;
-      font-size: (16em/18);
-      line-height: 1;
+      font-size: (13em/18);
+      line-height: (25.1/13);
     }
 
     a {
       display: inline-block;
-      margin-top: (2em/16);
-      padding: (7em/16) (25em/16) (7em/16) (15em/16);
+      margin-top: (2em/13);
+      padding: 0 (25em/13) 0 (12em/13);
       background: $green;
       text-decoration: none;
       font-family: $swift;
@@ -128,19 +130,15 @@
     }
 
     li.current {
+      font-size: (16em/18);
+      line-height: (36/16);
       a {
-        margin-left: -20px;
-        padding: (12.5em/20) (25em/20) (12.5em/20) 1em;
-        font-size: (20em/18);
-        line-height: 1;
+        margin: 0 0 0 -20px;
+        padding: 0 (25em/16) 0 20px;
         background: $green-dark;
         color: #fff;
       }
     }
-  }
-
-  nav[role="navigation"] {
-    float: left;
   }
 
   #secondary-navigation {
@@ -280,10 +278,6 @@
       width: (103em/16);
       margin-left: -(64em/16);
     }
-  }
-
-  nav[role="navigation"] {
-    float: left;
   }
 
   #secondary-navigation {
