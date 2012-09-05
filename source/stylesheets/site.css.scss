@@ -175,6 +175,12 @@ figure figcaption {
   }
 }
 
+// FIXME: terrible class name
+// How should we handle generic smaller paragraphs
+.copy {
+  @include small-text;
+}
+
 //
 // Layout
 //
