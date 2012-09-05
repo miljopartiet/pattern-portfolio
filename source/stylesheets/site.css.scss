@@ -178,8 +178,9 @@ figure figcaption {
 
 // FIXME: terrible class name
 // How should we handle generic smaller paragraphs
-.copy {
-  @include small-text;
+p.copy {
+  font: normal (12em/10)/(17/11) $arial;
+  color: $text-light-grey;
 }
 
 //
@@ -606,4 +607,10 @@ blockquote {
 
 #feedback {
   @include small-text;
+}
+
+#copyright {
+  padding-left: (35em/12);
+  background: transparent url(/images/cc.svg) 0 50% no-repeat;
+  background-size: (20em/12) (20em/12);
 }
