@@ -236,16 +236,17 @@
   /* line 242, mobile.css.scss */
   #wrap > nav[role="breadcrumbs"] {
     border: none;
-    display: block; }
+    display: block;
+    margin-bottom: 0.625em; }
 
-  /* line 248, mobile.css.scss */
+  /* line 249, mobile.css.scss */
   .labeled-list .group {
     padding-top: 0.625em; }
-  /* line 251, mobile.css.scss */
+  /* line 252, mobile.css.scss */
   .labeled-list .label {
     float: none;
     width: 100%; }
-  /* line 255, mobile.css.scss */
+  /* line 256, mobile.css.scss */
   .labeled-list .list {
     margin-top: 0.625em;
     float: none;
@@ -254,7 +255,7 @@
     -moz-columns: 2 20px;
     columns: 2 20px; }
 
-  /* line 263, mobile.css.scss */
+  /* line 264, mobile.css.scss */
   #logo-full {
     width: 32.5em;
     height: 2.55556em;
