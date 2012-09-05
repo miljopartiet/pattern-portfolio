@@ -292,8 +292,17 @@ form.search {
 //
 // Article contents
 //
-article h1 {
-  color: $green;
+article {
+  h1 {
+    color: $green;
+  }
+  p a,
+  li a {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 // Page lead
 .lead p {
