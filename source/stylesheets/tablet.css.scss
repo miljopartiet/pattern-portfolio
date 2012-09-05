@@ -173,13 +173,13 @@
       }
     }
     form {
-      display: block;
-      text-align: center;
+      text-align: right;
     }
     input {
       width: (140em/16);
     }
     div {
+      text-align: right;
       margin-top: (10em/16);
     }
   }
@@ -306,10 +306,6 @@
         bottom: -1.8em;
         margin-right: 0;
       }
-    }
-    form {
-      display: block;
-      text-align: center;
     }
     input {
       width: (140em/16);

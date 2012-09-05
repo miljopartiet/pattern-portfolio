@@ -252,6 +252,7 @@ form.search {
     background-size: (15em/14) (15em/14);
     border: 1px solid $beige;
     padding: 3px 20px 3px 5px;
+    margin: 0;
     @include box-sizing(border-box);
     border-radius: 4px;
     &:focus {
@@ -269,7 +270,7 @@ form.search {
     background: transparent url(/images/search.svg) 0 0 no-repeat;
     background-size: 100%;
     position: absolute;
-    top: 7px;
+    top: 5px;
     right: 5px;
 
     &:hover {

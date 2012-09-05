@@ -70,9 +70,6 @@
 
   header[role="banner"] {
     @include clear-me;
-    .search {
-      display: inline;
-    }
   }
 
   //
@@ -114,13 +111,11 @@
         white-space:nowrap;
       }
     }
-    .first {
-    }
     .second {
       border-left: 1px solid #fff;
     }
     form {
-      display:none;
+      display: none;
     }
   }
   // Expand the navigation to the window border when viewed in the footer
@@ -168,16 +163,24 @@
 
   #secondary-navigation {
     text-align: right;
+    form {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: (6em/16);
+    }
     div {
       display: none;
     }
   }
     #skip-to-navigation {
       @include small-text;
+      line-height: (25em/13);
       background: $beige;
-      padding: 5px 25px 5px 10px;
+      padding: 0 25px 0 10px;
       color: rgb(188, 185, 178);
       border-radius: 4px;
+      display: inline-block;
+      vertical-align: top;
     }
 
   article {
