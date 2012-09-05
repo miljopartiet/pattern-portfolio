@@ -28,7 +28,6 @@ h1 {
   font-weight: normal;
   font-size: (24em/16);
   line-height: 1.1;
-  color: $green;
 }
 
 h2 {
@@ -266,7 +265,9 @@ form.search {
 //
 // Article contents
 //
-
+article h1 {
+  color: $green;
+}
 // Page lead
 .lead p {
   margin-top: (12em/18);
