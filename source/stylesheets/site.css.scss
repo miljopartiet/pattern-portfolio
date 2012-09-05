@@ -449,13 +449,14 @@ blockquote {
 .calendar .icon-list {
   .icon {
     text-align:center;
-    text-indent: -.2em;
+    text-indent: -.3em;
     color: #fff;
+    font-size: (18em/22);
     background: transparent url(/images/calendar.svg) 0 50% no-repeat;
-    font-size: (16.25em/22);
-    line-height:(43em/16.25);
-    background-size: (35em/16.25) (42.5em/16.25);
-    height: (42.5em/16.25);
+    background-size: (39em/18) (46em/18);
+    line-height:(51em/18);
+    width: (39em/18);
+    height: (46em/18);
   }
 }
 
