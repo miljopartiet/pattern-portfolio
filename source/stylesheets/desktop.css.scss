@@ -92,19 +92,11 @@
   }
 
   #wrap {
-    max-width: 970px;
-    & > nav[role="breadcrumbs"] {
-      width: auto;
-      margin: 0 0 0 165px;
-    }
+    max-width: (970em/16);
   }
 
   nav[role="navigation"] {
     margin-left: (33em/16);
-  }
-
-  header[role="banner"] {
-    margin-bottom: (80em/16);
   }
 
   #logo {
@@ -246,6 +238,11 @@
       }
 
     }
+  }
+  // Breadcrumbs
+  #wrap > nav[role="breadcrumbs"] {
+    width: auto;
+    margin-left: (165em/16);
   }
 
   footer nav[role="breadcrumbs"] {

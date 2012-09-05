@@ -229,6 +229,7 @@ nav[role="breadcrumbs"] {
   }
   a,
   span {
+    color: $text-light-grey;
     position: relative;
     &:first-child {
       padding-left: 0;
@@ -239,6 +240,10 @@ nav[role="breadcrumbs"] {
     margin-right: (5em/13);
     background: url(/images/breadcrumb-slash.svg) 100% 50% no-repeat;
     background-size: (11em/13) (18em/13);
+    &:hover {
+      text-decoration: underline;
+      color: $green;
+    }
   }
 }
 
