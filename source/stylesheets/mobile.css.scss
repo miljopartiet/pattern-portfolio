@@ -160,10 +160,12 @@
 
     }
   }
+
   #logo {
     float: left;
     width: percentage(100/320);
   }
+
   #secondary-navigation {
     text-align: right;
     div {
@@ -210,6 +212,11 @@
       margin-right: 0;
     }
   }
+
+  #logo-full {
+    height: ((46em*(235/290))) / 16;
+    background-size: (235em/16) ((46em*(235/290)) / 16);
+  }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 767px) {
@@ -251,4 +258,9 @@
     }
   }
 
+  #logo-full {
+    width: (520em/16);
+    height: (46em/18);
+    background-size: (290em/18) (46em/18);
+  }
 }

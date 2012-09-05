@@ -279,4 +279,8 @@
       @include columns(3 20px);
     }
   }
+
+  #logo-full {
+    margin-right: (185em/18);
+  }
 }
