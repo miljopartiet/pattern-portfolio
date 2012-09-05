@@ -165,8 +165,7 @@
     width: percentage(100/320);
   }
   #secondary-navigation {
-    width: percentage(200/320);
-    display: inline;
+    text-align: right;
     div {
       display: none;
     }
