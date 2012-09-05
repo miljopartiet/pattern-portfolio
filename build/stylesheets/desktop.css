@@ -68,49 +68,48 @@
     font-family: arial, sans-serif;
     color: #999999; }
 
-  /* Layout */
   /* line 90, desktop.css.scss */
   body {
-    padding-top: 2.5em;
-    background: transparent url(/images/bg.gif) 50% 0 repeat-y; }
+    padding-top: 2.5em; }
 
-  /* line 95, desktop.css.scss */
+  /* line 94, desktop.css.scss */
   #wrap {
     max-width: 970px; }
-    /* line 97, desktop.css.scss */
+    /* line 96, desktop.css.scss */
     #wrap > nav[role="breadcrumbs"] {
       width: auto;
       margin: 0 0 0 165px; }
 
-  /* line 103, desktop.css.scss */
+  /* line 102, desktop.css.scss */
   nav[role="navigation"] {
     margin-left: 2.0625em; }
 
-  /* line 107, desktop.css.scss */
+  /* line 106, desktop.css.scss */
   header[role="banner"] {
     margin-bottom: 5em; }
 
-  /* line 111, desktop.css.scss */
+  /* line 110, desktop.css.scss */
   #logo {
     width: 8.3125em; }
-    /* line 113, desktop.css.scss */
+    /* line 112, desktop.css.scss */
     #logo a {
       width: 8.3125em;
       height: 7.25em; }
 
-  /* line 119, desktop.css.scss */
+  /* line 118, desktop.css.scss */
   #secondary-navigation {
     width: 28.35052%;
     margin-right: 11.85567%; }
-    /* line 122, desktop.css.scss */
+    /* line 121, desktop.css.scss */
     #secondary-navigation form {
       float: left;
       text-align: left; }
-    /* line 126, desktop.css.scss */
+    /* line 125, desktop.css.scss */
     #secondary-navigation input {
       width: 14.28571em; }
-    /* line 129, desktop.css.scss */
+    /* line 128, desktop.css.scss */
     #secondary-navigation div {
+      text-align: left;
       margin: 0 -41.81818% 0 0;
       float: right;
       width: 52.72727%; }
@@ -249,4 +248,8 @@
       width: 63.91753%;
       -webkit-columns: 3 20px;
       -moz-columns: 3 20px;
-      columns: 3 20px; } }
+      columns: 3 20px; }
+
+  /* line 283, desktop.css.scss */
+  #logo-full {
+    margin-right: 10.27778em; } }
