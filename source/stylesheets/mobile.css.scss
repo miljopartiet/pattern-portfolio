@@ -25,7 +25,7 @@
     footer {
       text-align: right;
       position: relative;
-      @include clear-me;
+      @include clearfix;
       p {
         position: absolute;
         bottom: .5em;
@@ -46,7 +46,7 @@
 
   .labeled-list {
     .group {
-      @include clear-me;
+      @include clearfix;
     }
     .label {
       float: left;
@@ -69,7 +69,7 @@
   }
 
   header[role="banner"] {
-    @include clear-me;
+    @include clearfix;
   }
 
   //

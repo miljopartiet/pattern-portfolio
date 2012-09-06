@@ -28,15 +28,6 @@ $arial: arial, sans-serif;
 $base-font-size: 16px;
 $base-line-height: 1.5;
 
-@mixin clear-me {
-  &:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden;
-    clear: both;
-  }
-}
 @mixin small-text($size: (13em/16), $line: (17/16), $color: $text-light-grey) {
   font-size: $size;
   line-height: $line;
