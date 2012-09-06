@@ -23,4 +23,6 @@ Build the deployable folder.
 
 Commit and push your changes and then deploy to Deplol.
 
+    git add build/*
+    git commit -m "Build"
     git push deplol master
