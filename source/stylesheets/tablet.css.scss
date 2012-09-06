@@ -83,14 +83,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-  //
-  // Navigation elements
-  //
-  #skip-to-navigation {
-    display:none;
-  }
-
-
   header[role="banner"] {
     @include clear-me;
     position: relative;
@@ -99,6 +91,13 @@
 
   #logo {
     float: left;
+  }
+
+  //
+  // Navigation elements
+  //
+  #skip-to-navigation {
+    display:none;
   }
 
   nav[role="navigation"] {
@@ -125,7 +124,7 @@
       color: #fff;
       border-radius: 3px;
       &:hover {
-        background: $green-dark;
+        background-color: $green-dark;
       }
     }
 
@@ -135,7 +134,7 @@
       a {
         margin: 0 0 0 -20px;
         padding: 0 (25em/16) 0 20px;
-        background: $green-dark;
+        background-color: $green-dark;
         color: #fff;
       }
     }
