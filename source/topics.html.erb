@@ -114,13 +114,13 @@ current_nav: topics
   </section>
 </article>
 
-<div class="">
+<nav>
   <h1>Alla frågor A-Ö</h1>
   <form class="speech-bubble" action="/search/topics" method="get">
     <input type="search" placeholder="Sök fråga">
     <button>Sök</button>
   </form>
-  <nav id="topics">
+  <div id="topics">
     <ol class="labeled-list">
     <% Topics.in_groups.each do |group, topics| %>
       <li class="group">
@@ -134,4 +134,4 @@ current_nav: topics
     <% end %>
     </ol>
   </nav>
-</div>
+</nav>
