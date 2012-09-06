@@ -46,6 +46,11 @@
   }
 
   .speech-bubble {
+    background: $yellow url(/images/yellow-grain.png) 100% 0 repeat-y;
+    background-size: 20px 50px;
+    padding: 15px 55px 15px 35px;
+    margin: (20em/16) (145em/16) (20em/16) 0;
+
     h2 {
       font-size: (22em/16);
       line-height: (26/22);
