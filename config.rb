@@ -1,3 +1,4 @@
+require "lib/news"
 require "lib/topics"
 ###
 # Compass

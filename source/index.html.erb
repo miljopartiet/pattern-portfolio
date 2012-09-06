@@ -1,8 +1,50 @@
 <% content_for :head do %>
   <title>Miljöpartiet</title>
 <% end%>
-
-<ul>
-  <li><a href="/person.html">Person</a></li>
-  <li><a href="/topic.html">Ämne</a></li>
-</ul>
+<div id="start-page">
+<article>
+  <div class="illustration">
+    <figure>
+      <div>
+        <div class="embedded-video widescreen vimeo">
+          <iframe src="http://player.vimeo.com/video/28932766?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        </div>
+      </div>
+      <figcaption>
+        <b>Liten rubrik</b>
+        Faccus si veliquate laboreh enihit ressit, se volupta tempero idercipsam aciendias qui totatec estint volorem alicatus.
+      </figcaption>
+    </figure>
+  </div>
+  <div class="body">
+    <blockquote>
+      <p>Samhällets ekonomiska utveckling bromsas upp genom att personer måste avstå jobb eller utbildning på orter med bostadsbrist.</p>
+      <footer>
+        <a href="/person">
+          <img src="/images/sketch/asa_145x145.png" alt="">
+          <p>
+            <span class="name">Åsa Romson</span>,
+            <span class="title">språkrör och riksdagsledamot sedan 2003</span>
+          </p>
+        </a>
+      </footer>
+    </blockquote>
+    <ul class="icon-list">
+    <% News.all.each do |post| %>
+      <li>
+        <a href="#">
+          <img src="http://placehold.it/35x35" alt="" class="icon">
+          <%= post.title %>
+          <span class="meta">
+            <%= post.time %>, <%= post.source_title %>, <%= post.source %>
+          </span>
+        </a>
+      </li>
+    <% end %>
+    </ul>
+  </div>
+</article>
+<article>
+  <%= partial "main_topics" %>
+</article>
+</div>
