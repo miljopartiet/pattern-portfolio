@@ -91,6 +91,7 @@
 
   #logo {
     float: left;
+    margin-top: -7px;
   }
 
   //
@@ -128,11 +129,15 @@
       }
     }
 
+    li:first-child a {
+      margin-top: 0;
+    }
+
     li.current {
       font-size: (16em/18);
       line-height: (36/16);
       a {
-        margin: 0 0 0 -20px;
+        margin-left: -20px;
         padding: 0 (25em/16) 0 20px;
         background-color: $green-dark;
         color: #fff;
