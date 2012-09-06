@@ -294,4 +294,10 @@
   #logo-full {
     margin-right: (185em/18);
   }
+
+  #copyright {
+    @include box-sizing(border-box);
+    margin-right: (185em/12);
+  }
+
 }
