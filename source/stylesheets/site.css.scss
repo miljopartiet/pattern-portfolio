@@ -154,7 +154,8 @@ figure figcaption {
   li {
     margin:0;
     a {
-      display:block;
+      text-decoration: none;
+      display: block;
       margin: 0 0 (20em/22) 55px;
       font-size: (22em/18);
       line-height: (24em/22);
@@ -296,7 +297,7 @@ article {
     color: $green;
   }
   p a,
-  li a {
+  li > a {
     text-decoration: underline;
     &:hover {
       text-decoration: none;
@@ -330,6 +331,12 @@ blockquote {
 
   footer {
     @include small-text;
+    .name {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
     .title {
       color: $text-light-grey;
     }
