@@ -79,38 +79,44 @@
   nav[role="site"] {
     width: 100%;
     background: $beige;
-    padding-bottom: 15px;
     ul {
       margin:0;
       list-style: square;
+      color: $green;
     }
     a {
       line-height: 1.5;
     }
     .sections {
       font: normal (18em/16) $swift;
-      list-style:none;
-
+      list-style: none;
       li {
         margin: 0;
+        border-bottom:1px solid #fff;
       }
-
       a {
-        padding:0 (15em/16);
+        margin: 0 (15em/18);
         display: block;
         line-height: 2.5;
-        border-bottom:1px solid #fff;
+        background: transparent url(/images/arrows-right.svg) 100% -36px no-repeat;
+        &:hover {
+          background-position: 100% -100px;
+        }
       }
     }
     .first,
     .second {
       margin-top: 15px;
+      margin-bottom: 15px;
       list-style-position: inside;
       float: left;
       width: percentage(144/320);
       li {
         margin-left: 15px;
-        white-space:nowrap;
+        white-space: nowrap;
+      }
+      a {
+        background-image: none;
       }
     }
     .second {
@@ -141,20 +147,26 @@
 
     &.active {
       @include transition(margin-top 0.35s ease-in-out);
-      margin-top:0px;
+      margin-top: 0px;
     }
     &.inactive {
       @include transition(margin-top 0.2s ease-out);
     }
     a.close {
+      @include small-text;
+      line-height: 1;
       display: block;
       text-align: right;
-      font-size: .8em;
-      font-weight: normal;
-      color: rgb(188, 185, 178);
       clear: both;
-      padding-right: 15px;
-
+      border-top: 1px solid #fff;
+      padding: (10em/13) 0;
+      span {
+        display: block;
+        padding-right: 24px;
+        margin-right: 15px;
+        background: $beige url(/images/close.svg) 100% 50% no-repeat;
+        background-size: (14em/13) (14em/13);
+      }
     }
   }
 
@@ -170,6 +182,9 @@
       vertical-align: top;
       margin-right: (6em/16);
     }
+    input {
+      width: (120em/14);
+    }
     div {
       display: none;
     }
@@ -177,12 +192,11 @@
     #skip-to-navigation {
       @include small-text;
       line-height: (25em/13);
-      background: $beige;
-      padding: 0 25px 0 10px;
-      color: rgb(188, 185, 178);
-      border-radius: 4px;
+      background: $beige url(/images/arrow-down.svg) 89% 50% no-repeat;
+      background-size: (14em/13) (9em/13);
       display: inline-block;
-      vertical-align: top;
+      border-radius: 4px;
+      padding: 0 25px 0 10px;
     }
 
   article {
