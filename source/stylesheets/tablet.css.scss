@@ -194,7 +194,7 @@
 
   nav[role="site"] {
     border-bottom: 1px solid $warm-grey;
-    padding: 15px 0;
+    padding-bottom: 15px;
     ul {
       @include small-text((13em/16), (18/14));
       float: left;
