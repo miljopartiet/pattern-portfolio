@@ -30,7 +30,7 @@
     line-height: (26/22);
   }
 
-  .share {
+  .speech-bubble {
     h2 {
       font-size: (20em/16);
       line-height: (22/20);
@@ -320,7 +320,7 @@
 
     }
 
-    .share {
+    .speech-bubble {
       @include box-sizing(border-box);
       width: percentage((718 + 40) / 718);
       margin-left: percentage((20/718)*-1);

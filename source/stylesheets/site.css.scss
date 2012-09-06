@@ -347,21 +347,28 @@ blockquote {
   margin-top: (12em/16);
 }
 
-.share {
+.speech-bubble {
+	position: relative;
   background: $yellow;
-  margin-top: (40em/20);
-  padding: 1.25em;
-  border-radius: 4px;
-
+  margin-top: (20em/20);
+  padding: 15px 35px;
+  border-radius: 4px 4px 4px 0;
+  &:after {
+    content:"";
+    position:absolute;
+    bottom: 0;
+    left: -20px;
+    border-width: 0 0 20px 20px;
+    border-style: solid;
+    border-color: $yellow transparent;
+  }
   h2 {
     margin-top: 0;
   }
-
   p {
     display: inline;
     margin-top: (6em/16);
   }
-
   a {
     color: $font-color;
     text-decoration: underline;
