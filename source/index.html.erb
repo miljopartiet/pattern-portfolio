@@ -29,11 +29,13 @@
         </a>
       </footer>
     </blockquote>
+  </div>
+  <section class="news-posts article-section">
     <ul class="icon-list">
     <% News.all.each do |post| %>
       <li>
         <a href="#">
-          <img src="http://placehold.it/35x35" alt="" class="icon">
+          <img src="/images/sketch/dn.png" alt="" class="icon">
           <%= post.title %>
           <span class="meta">
             <%= post.time %>, <%= post.source_title %>, <%= post.source %>
@@ -42,9 +44,18 @@
       </li>
     <% end %>
     </ul>
+  </section>
+  <div class="speech-bubble article-section">
+    <h2>Prata med oss på dina villkor</h2>
+    <p>Vi finns såklart även på Facebook och Twitter. Klicka på knappen då får du se vad:</p>
   </div>
 </article>
 <article>
   <%= partial "main_topics" %>
+  <p><a href="/topics.html">Läs mer om hur vi vill modernisera Sverige</a>
+  <div class="speech-bubble article-section">
+    <h2>Vad vill vi göra just där du bor?</h2>
+    <p>Vi finns i hela landet och driver grön politik på din gata. Klicka på knappen då får du se vad:</p>
+  </div>
 </article>
 </div>

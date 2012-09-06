@@ -244,6 +244,19 @@
     background-size: (290em/18) (46em/18);
   }
 
+  .news-posts .icon-list {
+    margin: 0;
+    li {
+      padding: (20em/18) 0;
+      border-bottom: 1px solid $warm-grey;
+      &:first-child {
+        padding-top: 0;
+      }
+    }
+    a {
+      margin: 0;
+    }
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {

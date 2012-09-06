@@ -211,10 +211,6 @@
       }
     }
 
-    .speech-bubble {
-      margin-left: -1.25em;
-    }
-
     figure {
       &>div {
         float: left;
@@ -313,6 +309,12 @@
   #copyright {
     @include box-sizing(border-box);
     margin-right: (185em/12);
+  }
+
+  // News list
+  .news-posts ul.icon-list {
+    width: auto;
+    margin-right: (20em/18);
   }
 
 }
