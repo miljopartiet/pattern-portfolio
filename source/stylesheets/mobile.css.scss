@@ -1,42 +1,271 @@
+@import "includes.css.scss";
+
 @media only screen and (min-width: 320px) {
+  // Typography
+  .article-section {
+    .section-lead,
+    .subsection-lead {
+      line-height: (17/13);
+    }
+  }
 
-  // TYPOGRAPHY
+  .conversation {
+    .byline {
+      font-size: (12em/16);
+    }
+  }
 
-  p,
-  li {
-    font-size:(18em/16);
-    line-height:(24/18);
-    li, p {
-      font-size:1em;
-    }
-  }
-  h1 {
-    font-size:3em;
-    line-height:1;
-    .vignette {
-      font-size:(16em/48);
-    }
-  }
-  h2 {
-    margin-top:1em;
-    font-size:(24em/16);
-    line-height:(30/24);
-    .vignette {
-      font-size:(14em/24);
-      line-height:(18/14);
-    }
-  }
-  .lead {
+  // Layout
+  blockquote {
+    overflow: hidden;
+    padding-bottom: 0;
     p {
-      margin-top:(12em/24);
-      font-size:(24em/16);
-      line-height:(30/24);
+      padding-left: 1em;
+    }
+    footer {
+      text-align: right;
+      position: relative;
+      @include clear-me;
+      p {
+        position: absolute;
+        bottom: .5em;
+        left: 0;
+        width: percentage(246/320);
+      }
+    }
+    img {
+      float: right;
+      width: percentage(45/320);
+      margin: 0 percentage(6/320) 0 percentage(13/320);
     }
   }
-  
-  // LAYOUT
-  
+
+  #wrap > footer {
+    margin-top: (40em/16);
+  }
+
+  .labeled-list {
+    .group {
+      @include clear-me;
+    }
+    .label {
+      float: left;
+      width: percentage(75/290);
+      margin-right: percentage(15/290);
+    }
+    .list {
+      float: left;
+      width: percentage(200/290);
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  //
+  // Layout
+  //
   #wrap {
-    max-width:35em;
+    margin: 0 15px;
+  }
+
+  header[role="banner"] {
+    @include clear-me;
+  }
+
+  //
+  // Navigational elements
+  //
+  // Site navigation is found in the bottom of the page
+  nav[role="site"] {
+    width: 100%;
+    background: $beige;
+    padding-bottom: 15px;
+    ul {
+      margin:0;
+      list-style: square;
+    }
+    a {
+      line-height: 1.5;
+    }
+    .sections {
+      font: normal (18em/16) $swift;
+      list-style:none;
+
+      li {
+        margin: 0;
+      }
+
+      a {
+        padding:0 (15em/16);
+        display: block;
+        line-height: 2.5;
+        border-bottom:1px solid #fff;
+      }
+    }
+    .first,
+    .second {
+      margin-top: 15px;
+      list-style-position: inside;
+      float: left;
+      width: percentage(144/320);
+      li {
+        margin-left: 15px;
+        white-space:nowrap;
+      }
+    }
+    .second {
+      border-left: 1px solid #fff;
+    }
+    form {
+      display: none;
+    }
+  }
+  // Expand the navigation to the window border when viewed in the footer
+  footer nav[role="site"] {
+    width: percentage(350/320);
+    margin-left: - percentage(15/320);
+  }
+
+  // The top navigation and breadcrumbs is not used in the mobile view
+  // instead we point users to the more complete site navigation
+  #main-navigation,
+  #wrap > nav[role="breadcrumbs"] {
+    display: none;
+  }
+  // This is the site navigation when activated in a mobile view
+  #top-navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    &.active {
+      @include transition(margin-top 0.35s ease-in-out);
+      margin-top:0px;
+    }
+    &.inactive {
+      @include transition(margin-top 0.2s ease-out);
+    }
+    a.close {
+      display: block;
+      text-align: right;
+      font-size: .8em;
+      font-weight: normal;
+      color: rgb(188, 185, 178);
+      clear: both;
+      padding-right: 15px;
+
+    }
+  }
+
+  #logo {
+    float: left;
+    width: percentage(100/320);
+  }
+
+  #secondary-navigation {
+    text-align: right;
+    form {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: (6em/16);
+    }
+    div {
+      display: none;
+    }
+  }
+    #skip-to-navigation {
+      @include small-text;
+      line-height: (25em/13);
+      background: $beige;
+      padding: 0 25px 0 10px;
+      color: rgb(188, 185, 178);
+      border-radius: 4px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+  article {
+    .vignette {
+      display: none;
+    }
+
+    figcaption {
+      margin-top: .5em;
+    }
+  }
+
+  .conversation {
+    img {
+      display: none;
+    }
+
+    .question {
+      margin-right: percentage(70/510);
+
+      .content {
+        padding-bottom: 1.08em;
+        background: $yellow;
+
+        &:after {
+          width: percentage(445/510);
+        }
+      }
+    }
+
+    .answer {
+      margin-right: 0;
+    }
+  }
+
+  #logo-full {
+    height: ((46em*(235/290))) / 16;
+    background-size: (235em/16) ((46em*(235/290)) / 16);
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  body {
+    padding: 0 (20em/16) 0 0;
+  }
+  #wrap {
+    background: #fff;
+    margin: 0;
+    padding: (20em/16) 0 0 (20em/16);
+  }
+
+  header[role="banner"],
+  #main,
+  nav[role="breadcrumbs"] {
+    width: (520em/16);
+    margin: 0 auto;
+  }
+  // TODO generalize the different breadcrumbs layouts
+  #wrap > nav[role="breadcrumbs"] {
+    border: none;
+    display: block;
+    margin-bottom: (10em/16);
+  }
+
+  .labeled-list {
+    .group {
+      padding-top: (10em/16);
+    }
+    .label {
+      float: none;
+      width: 100%;
+    }
+    .list {
+      margin-top: (10em/16);
+      float: none;
+      width: 100%;
+      @include columns(2 20px);
+    }
+  }
+
+  #logo-full {
+    width: (520em/16);
+    height: (46em/18);
+    background-size: (290em/18) (46em/18);
   }
 }

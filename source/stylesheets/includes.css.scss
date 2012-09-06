@@ -1,0 +1,50 @@
+@import "bourbon/_bourbon.scss";
+
+// COLOR PALETTE
+
+$yellow: #ffe900;
+$green: #339933;
+$green-dark: #00730a;
+$beige: #f5f3ee;
+
+$text-grey: #666;
+$text-light-grey: #999;
+$text-medium-grey: #767676;
+$text-warm-grey: #bcb8b2;
+
+$warm-grey: #ddd;
+
+$link-color: $green;
+$link-hover-color: #1c8437;
+$link-focus-color: false;
+$link-active-color: false;
+$link-visited-color: false;
+
+$font-color: #2a2a2a;
+$font-family: georgia, "Times New Roman", times, serif;
+$swift: "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif;
+$helvetica: "Helvetica Neue", helvetica, arial;
+$arial: arial, sans-serif;
+$base-font-size: 16px;
+$base-line-height: 1.5;
+
+@mixin clear-me {
+  &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+  }
+}
+@mixin small-text($size: (13em/16), $line: (17/16), $color: $text-light-grey) {
+  font-size: $size;
+  line-height: $line;
+  font-family: $arial;
+  color: $text-light-grey;
+}
+
+$total-cols: 12;
+$col-width: 4em;
+$gutter-width: 1em;
+$side-gutter-width: $gutter-width;
