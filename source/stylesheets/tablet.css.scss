@@ -257,6 +257,27 @@
       margin: 0;
     }
   }
+
+  .grid {
+    .container {
+      width: percentage(600/580);
+    }
+    .column {
+      margin: (25em/16) (20em/16) 0 0;
+      &.c2 {
+        width: percentage(280/600);
+      }
+      &.c3 {
+        width: percentage(180/600);
+      }
+    }
+  }
+
+  .people .grid {
+    a h2 {
+      font-size: (20em/16);
+    }
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {

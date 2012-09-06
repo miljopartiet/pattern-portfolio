@@ -95,6 +95,21 @@
     max-width: (970em/16);
   }
 
+  .grid {
+    .container {
+      width: percentage(660/640);
+    }
+    .column {
+      margin: (25em/16) (20em/16) 0 0;
+      &.c2 {
+        width: percentage(310/660);
+      }
+      &.c3 {
+        width: percentage(200/660);
+      }
+    }
+  }
+
   nav[role="navigation"] {
     margin-left: (33em/16);
     li {
@@ -316,5 +331,4 @@
     width: auto;
     margin-right: (20em/18);
   }
-
 }

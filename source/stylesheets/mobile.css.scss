@@ -282,4 +282,17 @@
     height: (46em/18);
     background-size: (290em/18) (46em/18);
   }
+
+  .grid {
+    .container {
+      width: percentage(540/520);
+    }
+    .column {
+      margin: (25em/16) (20em/16) 0 0;
+      &.c2,
+      &.c3 {
+        width: percentage(250/540);
+      }
+    }
+  }
 }
