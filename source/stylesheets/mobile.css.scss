@@ -89,10 +89,12 @@
     }
     .sections {
       font: normal (18em/16) $swift;
-      li {
-        margin:0;
-      }
       list-style:none;
+
+      li {
+        margin: 0;
+      }
+
       a {
         padding:0 (15em/16);
         display: block;

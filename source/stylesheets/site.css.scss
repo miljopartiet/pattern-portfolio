@@ -258,7 +258,6 @@ form.search {
   input {
     font-size: (14em/16);
     background: $beige;
-    background-size: (15em/14) (15em/14);
     border: 1px solid $beige;
     padding: 3px 20px 3px 5px;
     margin: 0;
@@ -284,7 +283,7 @@ form.search {
 
     &:hover {
       cursor: pointer;
-      background-image: url(/images/search-hover.svg);
+      background-position: 0 ((50em/16) * -1);
     }
   }
 }
@@ -306,9 +305,9 @@ article {
 }
 // Page lead
 .lead p {
-  margin-top: (12em/18);
   font-size: (18em/16);
   line-height: (22/18);
+  margin-top: (12em/18);
 }
 
 blockquote {
