@@ -37,11 +37,11 @@
     line-height: 1.28571; }
 
   /* line 49, desktop.css.scss */
-  .share h2 {
+  .speech-bubble h2 {
     font-size: 1.375em;
     line-height: 1.18182; }
   /* line 54, desktop.css.scss */
-  .share p {
+  .speech-bubble p {
     line-height: 1.44444; }
 
   /* line 61, desktop.css.scss */
@@ -76,170 +76,198 @@
   #wrap {
     max-width: 60.625em; }
 
-  /* line 98, desktop.css.scss */
+  /* line 99, desktop.css.scss */
+  .grid .container {
+    width: 103.125%; }
+  /* line 102, desktop.css.scss */
+  .grid .column {
+    margin: 1.5625em 1.25em 0 0; }
+    /* line 104, desktop.css.scss */
+    .grid .column.c2 {
+      width: 46.9697%; }
+    /* line 107, desktop.css.scss */
+    .grid .column.c3 {
+      width: 30.30303%; }
+
+  /* line 113, desktop.css.scss */
   nav[role="navigation"] {
     margin-left: 2.0625em; }
-    /* line 100, desktop.css.scss */
+    /* line 115, desktop.css.scss */
     nav[role="navigation"] li {
       font-size: 0.88889em;
       line-height: 1.875; }
-    /* line 104, desktop.css.scss */
+    /* line 119, desktop.css.scss */
     nav[role="navigation"] a {
       margin-top: 0.125em;
-      padding: 0 1.5625em 0 0.9375em; }
-    /* line 108, desktop.css.scss */
+      padding: 0 0 0 0.9375em; }
+      /* line 122, desktop.css.scss */
+      nav[role="navigation"] a:hover {
+        background-color: #00730a; }
+    /* line 126, desktop.css.scss */
+    nav[role="navigation"] span {
+      display: block;
+      margin-right: 7px;
+      padding-right: 1.4375em;
+      background: transparent url(/images/arrows-right.svg) 100% 8px no-repeat; }
+    /* line 132, desktop.css.scss */
     nav[role="navigation"] li.current {
       font-size: 1.11111em; }
-      /* line 110, desktop.css.scss */
+      /* line 134, desktop.css.scss */
       nav[role="navigation"] li.current a {
-        padding-right: 1.25em; }
+        padding-right: 1.25em;
+        background-image: none; }
+      /* line 138, desktop.css.scss */
+      nav[role="navigation"] li.current span {
+        margin: 0;
+        padding: 0;
+        background: transparent; }
 
-  /* line 116, desktop.css.scss */
+  /* line 146, desktop.css.scss */
   #logo {
     width: 8.3125em; }
-    /* line 118, desktop.css.scss */
+    /* line 148, desktop.css.scss */
     #logo a {
       width: 8.3125em;
       height: 7.25em; }
 
-  /* line 124, desktop.css.scss */
+  /* line 154, desktop.css.scss */
   #secondary-navigation {
     width: 28.35052%;
     margin-right: 11.85567%; }
-    /* line 127, desktop.css.scss */
+    /* line 157, desktop.css.scss */
     #secondary-navigation form {
       float: left;
       text-align: left; }
-    /* line 131, desktop.css.scss */
+    /* line 161, desktop.css.scss */
     #secondary-navigation input {
       width: 14.28571em; }
-    /* line 134, desktop.css.scss */
+    /* line 164, desktop.css.scss */
     #secondary-navigation div {
       text-align: left;
       margin: 0 -41.81818% 0 0;
       float: right;
       width: 52.72727%; }
-      /* line 139, desktop.css.scss */
+      /* line 169, desktop.css.scss */
       #secondary-navigation div a {
         line-height: 1.42857;
         display: block; }
 
-  /* line 146, desktop.css.scss */
+  /* line 176, desktop.css.scss */
   #main {
     margin-left: 165px; }
 
-  /* line 152, desktop.css.scss */
-  article .body,
-  article .article-section {
+  /* line 181, desktop.css.scss */
+  article .body {
     width: 79.50311%; }
-  /* line 156, desktop.css.scss */
+  /* line 185, desktop.css.scss */
   article .illustration {
     margin-top: 30px; }
-    /* line 158, desktop.css.scss */
+    /* line 187, desktop.css.scss */
     article .illustration figcaption {
       margin: 0; }
-  /* line 165, desktop.css.scss */
+  /* line 194, desktop.css.scss */
   article p,
   article ul,
   article ol {
     width: 91.40625%; }
-  /* line 169, desktop.css.scss */
+  /* line 198, desktop.css.scss */
   article blockquote {
     overflow: visible;
     width: 125.78125%; }
-    /* line 173, desktop.css.scss */
+    /* line 202, desktop.css.scss */
     article blockquote > p {
       width: 72.67081%;
       margin-bottom: .5em;
       padding-left: 0; }
-    /* line 179, desktop.css.scss */
+    /* line 208, desktop.css.scss */
     article blockquote footer {
       width: 18.01242%;
       float: right; }
-      /* line 183, desktop.css.scss */
+      /* line 212, desktop.css.scss */
       article blockquote footer p {
         position: static; }
-      /* line 187, desktop.css.scss */
+      /* line 216, desktop.css.scss */
       article blockquote footer img {
         float: none;
         width: auto;
         margin-top: -100%;
         margin-bottom: 1em; }
-      /* line 194, desktop.css.scss */
+      /* line 223, desktop.css.scss */
       article blockquote footer a {
         display: block; }
-  /* line 200, desktop.css.scss */
-  article .share {
-    margin-left: -1.25em; }
-  /* line 205, desktop.css.scss */
+  /* line 230, desktop.css.scss */
   article figure > div {
     float: left;
     width: 79.50311%; }
-  /* line 210, desktop.css.scss */
+  /* line 235, desktop.css.scss */
   article figure figcaption {
     float: right;
     width: 18.01242%;
     margin: 0 0 0 2.48447%;
     border: none; }
-  /* line 219, desktop.css.scss */
-  article .article-section header {
-    width: 108.59375%;
-    border-top: 1px solid #ccc;
-    border-bottom: none; }
-    /* line 223, desktop.css.scss */
-    article .article-section header .section-lead {
-      margin-top: 1.53846em;
-      float: right;
-      width: 20.86331%;
-      margin-right: -16.54676%; }
-    /* line 230, desktop.css.scss */
-    article .article-section header.vignetted {
+
+  /* line 243, desktop.css.scss */
+  .article-section {
+    width: 79.50311%; }
+    /* line 246, desktop.css.scss */
+    .article-section header {
+      width: 108.59375%;
+      border-top: 1px solid #ccc;
+      border-bottom: none; }
+      /* line 250, desktop.css.scss */
+      .article-section header .section-lead {
+        margin-top: 1.53846em;
+        float: right;
+        width: 20.86331%;
+        margin-right: -16.54676%; }
+      /* line 257, desktop.css.scss */
+      .article-section header.vignetted {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 134.375%;
+        margin-left: -165px;
+        padding-left: 165px; }
+        /* line 262, desktop.css.scss */
+        .article-section header.vignetted .vignette {
+          display: block;
+          font-size: 1.4375em;
+          position: absolute;
+          top: -0.5em;
+          left: 0; }
+    /* line 272, desktop.css.scss */
+    .article-section .article-subsection {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
-      width: 134.375%;
-      margin-left: -165px;
-      padding-left: 165px; }
-      /* line 235, desktop.css.scss */
-      article .article-section header.vignetted .vignette {
-        display: block;
-        font-size: 1.4375em;
-        position: absolute;
-        top: -0.5em;
-        left: 0; }
-  /* line 245, desktop.css.scss */
-  article .article-section .article-subsection {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 108.59375%;
-    padding-right: 8.59375%; }
-  /* line 250, desktop.css.scss */
-  article .article-section .subsection-header {
-    width: 108.59375%; }
+      width: 108.59375%;
+      padding-right: 8.59375%; }
+    /* line 277, desktop.css.scss */
+    .article-section .subsection-header {
+      width: 108.59375%; }
 
-  /* line 257, desktop.css.scss */
+  /* line 283, desktop.css.scss */
   #wrap > nav[role="breadcrumbs"] {
     width: auto;
     margin-left: 10.3125em; }
 
-  /* line 262, desktop.css.scss */
+  /* line 288, desktop.css.scss */
   footer nav[role="breadcrumbs"] {
     margin-right: 115px; }
 
-  /* line 266, desktop.css.scss */
+  /* line 292, desktop.css.scss */
   nav[role="site"] form {
     margin-right: 185px; }
-    /* line 268, desktop.css.scss */
+    /* line 294, desktop.css.scss */
     nav[role="site"] form input {
       width: 15.71429em; }
 
-  /* line 274, desktop.css.scss */
+  /* line 300, desktop.css.scss */
   #topics {
     width: 120.49689%;
     margin-left: -20.49689%; }
 
-  /* line 278, desktop.css.scss */
+  /* line 304, desktop.css.scss */
   .labeled-list {
     width: 100%; }
     /* line 32, includes.css.scss */
@@ -249,18 +277,30 @@
       height: 0;
       overflow: hidden;
       clear: both; }
-    /* line 283, desktop.css.scss */
+    /* line 309, desktop.css.scss */
     .labeled-list .label {
       float: left;
       width: 17.01031%;
       margin: 0; }
-    /* line 288, desktop.css.scss */
+    /* line 314, desktop.css.scss */
     .labeled-list .list {
       width: 63.91753%;
       -webkit-columns: 3 20px;
       -moz-columns: 3 20px;
       columns: 3 20px; }
 
-  /* line 294, desktop.css.scss */
+  /* line 320, desktop.css.scss */
   #logo-full {
-    margin-right: 10.27778em; } }
+    margin-right: 10.27778em; }
+
+  /* line 324, desktop.css.scss */
+  #copyright {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-right: 15.41667em; }
+
+  /* line 330, desktop.css.scss */
+  .news-posts ul.icon-list {
+    width: auto;
+    margin-right: 1.11111em; } }

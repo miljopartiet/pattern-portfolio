@@ -21,7 +21,7 @@ $(function() {
       $nav = $original_nav.clone();
       $nav.attr('id', 'top-navigation');
 
-      $nav.append('<a href="#" class="close">Stäng meny</span>');
+      $nav.append('<a href="#" class="close"><span>Stäng meny</span></a>');
       $nav.on('click', 'a.close', hide);
 
       $('body').append($nav);
