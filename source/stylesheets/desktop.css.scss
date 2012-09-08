@@ -11,12 +11,6 @@
     margin-top: 1em;
     font-size: (26em/16);
     line-height: (30/26);
-    /*
-    .vignette {
-      font-size: (14em/26);
-      line-height: (18/14);
-    }
-    */
   }
 
   .lead {
@@ -28,7 +22,7 @@
   }
 
   blockquote {
-    &>p {
+    & > p {
       font-size: (26em/16);
       line-height: (28/26);
     }
@@ -335,5 +329,8 @@
   .news-posts ul.icon-list {
     width: auto;
     margin-right: (20em/18);
+    a {
+      margin-right: (35em/22);
+    }
   }
 }

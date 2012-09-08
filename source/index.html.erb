@@ -6,13 +6,11 @@
   <div class="illustration">
     <figure>
       <div>
-        <div class="embedded-video widescreen vimeo">
-          <iframe src="http://player.vimeo.com/video/28932766?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-        </div>
+        <img src="/images/banners/living.jpg" alt="Bostadsbristen kräver politiskt agerande.">
       </div>
       <figcaption>
-        <b>Liten rubrik</b>
-        Faccus si veliquate laboreh enihit ressit, se volupta tempero idercipsam aciendias qui totatec estint volorem alicatus.
+        <b>Bostad</b>
+        Alla behöver en bostad. Men bristen på bostäder ökar. Därför vill Miljöpartiet bygga fler billiga och miljövänliga bostäder.
       </figcaption>
     </figure>
   </div>
@@ -36,7 +34,7 @@
       <li>
         <a href="#">
           <img src="/images/sketch/dn.png" alt="" class="icon">
-          <%= post.title %>
+          <span class="title"><%= post.title %></span>
           <span class="meta">
             <%= post.time %>, <%= post.source_title %>, <%= post.source %>
           </span>
@@ -44,6 +42,7 @@
       </li>
     <% end %>
     </ul>
+    <p><a href="#" class="action">Visa fler nyheter</a></p>
   </section>
   <div class="speech-bubble">
     <h2>Prata med oss på dina villkor</h2>

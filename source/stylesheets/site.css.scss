@@ -220,6 +220,27 @@ figure figcaption {
   }
 }
 
+.action {
+  font: (14em/16)/1 $arial;
+  background: $beige;
+  margin-top: 1em;
+  padding: (10em/14) (15em/14);
+  border-radius: (14em/14);
+}
+.action a,
+a.action {
+  text-decoration: none;
+}
+button.action {
+  background: $green;
+  color: #fff;
+  border: none;
+  padding: (8em/14) (30em/14);
+  &:hover {
+    background: $green-dark;
+    cursor: pointer;
+  }
+}
 // FIXME: terrible class name
 // How should we handle generic smaller paragraphs
 p.copy {
@@ -315,6 +336,7 @@ footer nav[role="breadcrumbs"] {
     text-indent: -9999em;
     border: none;
     padding: 0;
+    margin: 0;
     font-size: 1em;
     width: (15em/16);
     height: (15em/16);
@@ -392,8 +414,7 @@ blockquote {
 .speech-bubble {
 	position: relative;
   background: $yellow;
-  margin-top: (20em/20);
-  padding: 15px 35px;
+  padding: 20px 35px;
   border-radius: 4px 4px 4px 0;
   &:after {
     content:"";
@@ -716,4 +737,19 @@ blockquote {
   padding-left: (35em/12);
   background: transparent url(/images/cc.svg) 0 50% no-repeat;
   background-size: (20em/12) (20em/12);
+}
+
+ol.topics {
+  list-style: none;
+  li {
+    margin: (25em/16) 0 0 0;
+  }
+  h3 {
+    display: inline;
+    margin: 0;
+    font-size: (22em/16);
+  }
+  p {
+    display: inline;
+  }
 }

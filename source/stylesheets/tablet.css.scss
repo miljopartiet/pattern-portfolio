@@ -252,14 +252,25 @@
   .news-posts .icon-list {
     margin: 0;
     li {
-      padding: (20em/18) 0;
+      padding: (15em/18) 0;
       border-bottom: 1px solid $warm-grey;
       &:first-child {
         padding-top: 0;
       }
+      &:last-child {
+        border: none;
+        padding-bottom: 0;
+      }
     }
     a {
       margin: 0;
+    }
+    .meta {
+      margin-top: (10em/22);
+    }
+    .title {
+      font-size: (26em/22);
+      line-height: (30/26);
     }
   }
 
