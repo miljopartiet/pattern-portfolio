@@ -107,6 +107,49 @@ input[type="search"] {
   -webkit-appearance: textfield;
 }
 
+#{$all-text-inputs},
+textarea {
+  font-size: (14em/16);
+  line-height: 1;
+  color: #000;
+  border: none;
+  padding: 11px 15px 10px 15px;
+  margin: (15em/16) 0 0 0;
+  @include box-sizing(border-box);
+  width: 70%;
+  resize: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+::-webkit-input-placeholder {
+  @include placeholder-styles;
+}
+:-moz-placeholder {
+  @include placeholder-styles;
+}
+:-ms-input-placeholder {
+  @include placeholder-styles;
+}
+:focus::-webkit-input-placeholder {
+  color: $text-light-grey;
+}
+:focus:-moz-placeholder {
+  color: $text-light-grey;
+}
+:focus:-ms-input-placeholder {
+  color: $text-light-grey;
+}
+
+textarea {
+  width: 100%;
+  line-height: (18/14);
+}
+button {
+  margin: (15em/16) 0 0 0;
+}
+
 //
 // General purpose content types
 //
@@ -254,18 +297,17 @@ footer nav[role="breadcrumbs"] {
   margin-bottom: 15px;
 }
 
-form.search {
+.search {
   position: relative;
   input {
-    font-size: (14em/16);
+    width: 100%;
     background: $beige;
     border: 1px solid $beige;
     padding: 3px 20px 3px 5px;
     margin: 0;
-    @include box-sizing(border-box);
     border-radius: 4px;
+    @include box-sizing(border-box);
     &:focus {
-      outline: none;
       border: 1px solid $warm-grey;
     }
   }
@@ -369,9 +411,8 @@ blockquote {
     display: inline;
     margin-top: (6em/16);
   }
-  a {
-    color: $font-color;
-    text-decoration: underline;
+  input {
+    background: #fff;
   }
 }
 

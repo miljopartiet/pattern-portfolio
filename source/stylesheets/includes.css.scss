@@ -35,6 +35,10 @@ $base-line-height: 1.5;
   color: $text-light-grey;
 }
 
+@mixin placeholder-styles {
+  color: $text-warm-grey;
+}
+
 $total-cols: 12;
 $col-width: 4em;
 $gutter-width: 1em;
