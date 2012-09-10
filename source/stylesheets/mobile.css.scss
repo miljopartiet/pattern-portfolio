@@ -239,12 +239,9 @@
 }
 
 @media only screen and (min-width: 600px) and (max-width: 767px) {
-  body {
-    padding: 0 (20em/16) 0 0;
-  }
   #wrap {
     background: #fff;
-    margin: 0;
+    margin: 0 (20em/16) 0 0;
     padding: (20em/16) 0 0 (20em/16);
   }
 

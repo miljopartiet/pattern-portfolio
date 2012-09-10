@@ -1,5 +1,20 @@
 $(function() {
+  "use strict";
   var Mp = {};
+
+  Mp.CookieChecker = function() {
+    var cookie = Cookies.get('allow-cookies'),
+        $message;
+    if (! cookie) {
+      $message = $('#cookies');
+      $message.on('click', 'a.confirm', function(e) {
+        e.preventDefault();
+        $message.hide();
+        Cookies.set('allow-cookies', true);
+      });
+      $message.show();
+    }
+  };
 
   Mp.NavigationToggler = function(element) {
     var $toggler = $(element),
@@ -48,6 +63,7 @@ $(function() {
 
   $(document).ready(function() {
     Mp.NavigationToggler('#skip-to-navigation');
+    Mp.CookieChecker();
   });
 
 }(jQuery));
