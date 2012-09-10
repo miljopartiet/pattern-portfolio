@@ -18,13 +18,14 @@
     /* line 25, mobile.css.scss */
     blockquote footer {
       text-align: right;
-      position: relative; }
-      /* line 32, includes.css.scss */
+      position: relative;
+      zoom: 1; }
+      /* line 18, bourbon/addons/_clearfix.scss */
+      blockquote footer:before, blockquote footer:after {
+        content: "";
+        display: table; }
+      /* line 23, bourbon/addons/_clearfix.scss */
       blockquote footer:after {
-        content: "\0020";
-        display: block;
-        height: 0;
-        overflow: hidden;
         clear: both; }
       /* line 29, mobile.css.scss */
       blockquote footer p {
@@ -42,13 +43,16 @@
   #wrap > footer {
     margin-top: 2.5em; }
 
-  /* line 32, includes.css.scss */
-  .labeled-list .group:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden;
-    clear: both; }
+  /* line 48, mobile.css.scss */
+  .labeled-list .group {
+    zoom: 1; }
+    /* line 18, bourbon/addons/_clearfix.scss */
+    .labeled-list .group:before, .labeled-list .group:after {
+      content: "";
+      display: table; }
+    /* line 23, bourbon/addons/_clearfix.scss */
+    .labeled-list .group:after {
+      clear: both; }
   /* line 51, mobile.css.scss */
   .labeled-list .label {
     float: left;
@@ -63,13 +67,16 @@
   #wrap {
     margin: 0 15px; }
 
-  /* line 32, includes.css.scss */
-  header[role="banner"]:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden;
-    clear: both; }
+  /* line 71, mobile.css.scss */
+  header[role="banner"] {
+    zoom: 1; }
+    /* line 18, bourbon/addons/_clearfix.scss */
+    header[role="banner"]:before, header[role="banner"]:after {
+      content: "";
+      display: table; }
+    /* line 23, bourbon/addons/_clearfix.scss */
+    header[role="banner"]:after {
+      clear: both; }
 
   /* line 79, mobile.css.scss */
   nav[role="site"] {
@@ -189,7 +196,7 @@
       vertical-align: top;
       margin-right: 0.375em; }
     /* line 185, mobile.css.scss */
-    #secondary-navigation input {
+    #secondary-navigation .search {
       width: 8.57143em; }
     /* line 188, mobile.css.scss */
     #secondary-navigation div {
