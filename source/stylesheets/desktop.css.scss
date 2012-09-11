@@ -37,7 +37,7 @@
     background: $yellow url(/images/yellow-grain.png) 100% 0 repeat-y;
     background-size: 20px 50px;
     padding-right: 55px;
-    margin: (40em/16) (145em/16) (40em/16) 0;
+    margin-right: (145em/16);
 
     h2 {
       font-size: (20em/16);
@@ -159,6 +159,7 @@
 
   #secondary-navigation {
     width: percentage(275/970);
+    margin-top: (23em/16);
     margin-right: percentage(115/970);
     form {
       float: left;
@@ -172,7 +173,7 @@
     }
     div {
       text-align: left;
-      margin: 0 percentage((115/275) * -1) 0 0;
+      margin: - (25em/14) percentage((115/275) * -1) 0 0;
       float: right;
       width: percentage(145/275);
       a {

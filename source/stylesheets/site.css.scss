@@ -335,7 +335,7 @@ blockquote {
     height: 50px;
     width: 57px;
     background: transparent url(/images/logo.svg) 0 0 no-repeat;
-    background-size: 100%;
+    background-size: 99.9%;
   }
 }
 
@@ -427,7 +427,9 @@ footer nav.breadcrumbs {
 	position: relative;
   background: $yellow;
   padding: 15px 20px;
+  margin: (40em/16) 0;
   border-radius: 4px 4px 4px 0;
+  @include box-sizing(border-box);
   &:after {
     content:"";
     position:absolute;
