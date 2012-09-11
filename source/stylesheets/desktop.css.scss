@@ -1,7 +1,9 @@
 @import "includes.css.scss";
 
 @media only screen and (min-width: 1024px) {
-// Typography
+  //
+  // General elements
+  //
   h1 {
     font-size: (42em/16);
     line-height: 1.1;
@@ -55,15 +57,28 @@
     }
   }
 
-  .article-section {
-    .section-lead,
-    .subsection-lead {
-      font-size: (14em/16);
-      line-height: (18/14);
+  .labeled-list {
+    width: 100%;
+    .group {
+      @include clearfix;
+     }
+    .label {
+      float: left;
+      width: percentage(165/970);
+      margin: 0;
     }
+    .list {
+      width: percentage(620/970);
+      @include columns(3 20px);
+    }
+  }
 
-    .vignette {
-      font-size: (23em/41);
+  // News list
+  .news-posts ul.icon-list {
+    width: auto;
+    margin-right: (20em/18);
+    a {
+      margin-right: (35em/22);
     }
   }
 
@@ -76,19 +91,6 @@
     p {
       line-height: (24/18);
     }
-  }
-
-  nav[role="site"] {
-    ul {
-      @include small-text((14em/16), (17/13));
-    }
-  }
-
-
-  // Layout
-  #wrap {
-    padding-top: (40em/16);
-    max-width: (970em/16);
   }
 
   .grid {
@@ -106,7 +108,24 @@
     }
   }
 
-  nav[role="navigation"] {
+  //
+  // Layout
+  //
+  #wrap {
+    padding-top: (40em/16);
+    max-width: (970em/16);
+  }
+
+  // In the site banner
+  #logo {
+    width: (133em/16);
+    a {
+      width: (133em/16);
+      height: (116em/16);
+    }
+  }
+
+  #top-navigation {
     margin-left: (33em/16);
     li {
       font-size: (16em/18);
@@ -125,7 +144,7 @@
       padding-right: (23em/16);
       background: transparent url(/images/arrows-right.svg) 100% 8px no-repeat;
     }
-    li.current {
+    li.active-trail {
       font-size: (20em/18);
       a {
         padding-right: (25em/20);
@@ -139,14 +158,6 @@
     }
   }
 
-  #logo {
-    width: (133em/16);
-    a {
-      width: (133em/16);
-      height: (116em/16);
-    }
-  }
-
   #secondary-navigation {
     width: percentage(275/970);
     margin-right: percentage(115/970);
@@ -156,6 +167,9 @@
     }
     .search {
       width: (200em/16);
+      input {
+        width: 100%;
+      }
     }
     div {
       text-align: left;
@@ -169,6 +183,15 @@
     }
   }
 
+  //
+  // Navigation elements
+  // Breadcrumbs
+  #wrap > nav.breadcrumbs {
+    width: auto;
+    margin-left: (165em/16);
+  }
+
+  // Main content
   #main {
     margin-left: 165px;
   }
@@ -223,7 +246,7 @@
     }
 
     figure {
-      &>div {
+      & > div {
         float: left;
         width: percentage(640/805);
       }
@@ -236,6 +259,7 @@
       }
     }
   }
+
   .article-section {
     width: percentage(640/805);
 
@@ -243,13 +267,6 @@
       width: percentage(695/640);
       border-top: 1px solid #ccc;
       border-bottom: none;
-      .section-lead {
-        margin-top: (20em/13);
-        float: right;
-        width: percentage(145/695);
-        margin-right: - percentage(115/695);
-      }
-
       &.vignetted {
         @include box-sizing(border-box);
         width: percentage(860/640);
@@ -273,43 +290,42 @@
     .subsection-header {
       width: percentage(695/640);
     }
+
+    .section-lead,
+    .subsection-lead {
+      font-size: (14em/16);
+      line-height: (18/14);
+    }
+
+    .section-lead {
+      margin-top: (20em/14);
+      float: right;
+      width: percentage(145/695);
+      margin-right: - percentage(115/695);
+    }
   }
 
-  // Breadcrumbs
-  #wrap > nav[role="breadcrumbs"] {
-    width: auto;
-    margin-left: (165em/16);
+  #topics {
+    width: percentage(970/805);
+    margin-left: - percentage(165/805);
   }
 
-  footer nav[role="breadcrumbs"] {
+  //
+  // Footer contents
+  //
+  footer nav.breadcrumbs {
     margin-right: 115px;
   }
-  nav[role="site"] {
+
+  #site-navigation {
+    ul {
+      @include small-text((14em/16), (17/13));
+    }
     form {
       margin-right: 185px;
       input {
         width: (220em/14);
       }
-    }
-  }
-
-  #topics {
-      width: percentage(970/805);
-      margin-left: - percentage(165/805);
-  }
-  .labeled-list {
-    width: 100%;
-    .group {
-      @include clearfix;
-     }
-    .label {
-      float: left;
-      width: percentage(165/970);
-      margin: 0;
-    }
-    .list {
-      width: percentage(620/970);
-      @include columns(3 20px);
     }
   }
 
@@ -320,14 +336,5 @@
   #copyright {
     @include box-sizing(border-box);
     margin-right: (185em/12);
-  }
-
-  // News list
-  .news-posts ul.icon-list {
-    width: auto;
-    margin-right: (20em/18);
-    a {
-      margin-right: (35em/22);
-    }
   }
 }

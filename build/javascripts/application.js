@@ -1,5 +1,20 @@
 $(function() {
+  "use strict";
   var Mp = {};
+
+  Mp.CookieChecker = function() {
+    var cookie = Cookies.get('allow-cookies'),
+        $message;
+    if (! cookie) {
+      $message = $('#cookies');
+      $message.on('click', 'a.confirm', function(e) {
+        e.preventDefault();
+        $message.hide();
+        Cookies.set('allow-cookies', true);
+      });
+      $message.show();
+    }
+  };
 
   Mp.NavigationToggler = function(element) {
     var $toggler = $(element),
@@ -10,9 +25,10 @@ $(function() {
       if (setup_run) {
         return;
       }
-      var $original_nav = $('nav[role="site"]');
+      var $original_nav = $('#site-navigation');
       $nav = $original_nav.clone();
-      $nav.attr('id', 'top-navigation');
+      $nav.attr('id', 'site-top-navigation');
+      console.log($original_nav);
 
       $nav.append('<a href="#" class="close"><span>Stäng meny</span></a>');
       $nav.on('click', 'a.close', hide);
@@ -20,9 +36,9 @@ $(function() {
       $('body').append($nav);
       var offset = $nav.outerHeight(),
           style = document.createElement('style'),
-          rules = "#top-navigation { margin-top: -"+ offset +"px; }";
+          rules = "#site-top-navigation { margin-top: -"+ offset +"px; }";
 
-      rules += "#top-navigation.inactive { margin-top: -"+ offset +"px; }";
+      rules += "#site-top-navigation.inactive { margin-top: -"+ offset +"px; }";
       style.type = 'text/css';
       style.innerHTML = rules;
 
@@ -31,6 +47,7 @@ $(function() {
     }
 
     var hide = function(e) {
+      console.log(e);
       e.preventDefault();
       $nav.addClass('inactive').removeClass('active');
     };
@@ -48,6 +65,7 @@ $(function() {
 
   $(document).ready(function() {
     Mp.NavigationToggler('#skip-to-navigation');
+    Mp.CookieChecker();
   });
 
 }(jQuery));

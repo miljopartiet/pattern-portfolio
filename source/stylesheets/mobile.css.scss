@@ -1,7 +1,6 @@
 @import "includes.css.scss";
 
 @media only screen and (min-width: 320px) {
-  // Typography
   .article-section {
     .section-lead,
     .subsection-lead {
@@ -15,7 +14,6 @@
     }
   }
 
-  // Layout
   blockquote {
     overflow: hidden;
     padding-bottom: 0;
@@ -68,15 +66,11 @@
     margin: 0 15px;
   }
 
-  header[role="banner"] {
-    @include clearfix;
-  }
-
   //
   // Navigational elements
   //
   // Site navigation is found in the bottom of the page
-  nav[role="site"] {
+  nav.main-navigation {
     width: 100%;
     background: $beige;
     ul {
@@ -88,9 +82,11 @@
       line-height: 1.5;
     }
     .sections {
-      font: normal (18em/16) $swift;
-      list-style: none;
+      ul {
+        list-style: none;
+      }
       li {
+        font: normal (18em/16) $swift;
         margin: 0;
         border-bottom:1px solid #fff;
       }
@@ -108,9 +104,11 @@
     .second {
       margin-top: 15px;
       margin-bottom: 15px;
-      list-style-position: inside;
       float: left;
       width: percentage(144/320);
+      ul {
+        list-style-position: inside;
+      }
       li {
         margin-left: 15px;
         white-space: nowrap;
@@ -127,19 +125,19 @@
     }
   }
   // Expand the navigation to the window border when viewed in the footer
-  footer nav[role="site"] {
+  #site-navigation {
     width: percentage(350/320);
     margin-left: - percentage(15/320);
   }
 
   // The top navigation and breadcrumbs is not used in the mobile view
   // instead we point users to the more complete site navigation
-  #main-navigation,
-  #wrap > nav[role="breadcrumbs"] {
+  #top-navigation,
+  #wrap > nav.breadcrumbs {
     display: none;
   }
   // This is the site navigation when activated in a mobile view
-  #top-navigation {
+  #site-top-navigation {
     position: absolute;
     top: 0;
     left: 0;
@@ -245,14 +243,14 @@
     padding: (20em/16) 0 0 (20em/16);
   }
 
-  header[role="banner"],
+  #site-banner,
   #main,
-  nav[role="breadcrumbs"] {
+  nav.breadcrumbs {
     width: (520em/16);
     margin: 0 auto;
   }
   // TODO generalize the different breadcrumbs layouts
-  #wrap > nav[role="breadcrumbs"] {
+  #wrap > nav.breadcrumbs {
     border: none;
     display: block;
     margin-bottom: (10em/16);

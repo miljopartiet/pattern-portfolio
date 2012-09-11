@@ -1,21 +1,21 @@
 @media only screen and (min-width: 320px) {
-  /* line 7, mobile.css.scss */
+  /* line 6, mobile.css.scss */
   .article-section .section-lead,
   .article-section .subsection-lead {
     line-height: 1.30769; }
 
-  /* line 13, mobile.css.scss */
+  /* line 12, mobile.css.scss */
   .conversation .byline {
     font-size: 0.75em; }
 
-  /* line 19, mobile.css.scss */
+  /* line 17, mobile.css.scss */
   blockquote {
     overflow: hidden;
     padding-bottom: 0; }
-    /* line 22, mobile.css.scss */
+    /* line 20, mobile.css.scss */
     blockquote p {
       padding-left: 1em; }
-    /* line 25, mobile.css.scss */
+    /* line 23, mobile.css.scss */
     blockquote footer {
       text-align: right;
       position: relative;
@@ -27,23 +27,23 @@
       /* line 23, bourbon/addons/_clearfix.scss */
       blockquote footer:after {
         clear: both; }
-      /* line 29, mobile.css.scss */
+      /* line 27, mobile.css.scss */
       blockquote footer p {
         position: absolute;
         bottom: .5em;
         left: 0;
         width: 76.875%; }
-    /* line 36, mobile.css.scss */
+    /* line 34, mobile.css.scss */
     blockquote img {
       float: right;
       width: 14.0625%;
       margin: 0 1.875% 0 4.0625%; }
 
-  /* line 43, mobile.css.scss */
+  /* line 41, mobile.css.scss */
   #wrap > footer {
     margin-top: 2.5em; }
 
-  /* line 48, mobile.css.scss */
+  /* line 46, mobile.css.scss */
   .labeled-list .group {
     zoom: 1; }
     /* line 18, bourbon/addons/_clearfix.scss */
@@ -53,117 +53,109 @@
     /* line 23, bourbon/addons/_clearfix.scss */
     .labeled-list .group:after {
       clear: both; }
-  /* line 51, mobile.css.scss */
+  /* line 49, mobile.css.scss */
   .labeled-list .label {
     float: left;
     width: 25.86207%;
     margin-right: 5.17241%; }
-  /* line 56, mobile.css.scss */
+  /* line 54, mobile.css.scss */
   .labeled-list .list {
     float: left;
     width: 68.96552%; } }
 @media only screen and (min-width: 320px) and (max-width: 767px) {
-  /* line 67, mobile.css.scss */
+  /* line 65, mobile.css.scss */
   #wrap {
     margin: 0 15px; }
 
-  /* line 71, mobile.css.scss */
-  header[role="banner"] {
-    zoom: 1; }
-    /* line 18, bourbon/addons/_clearfix.scss */
-    header[role="banner"]:before, header[role="banner"]:after {
-      content: "";
-      display: table; }
-    /* line 23, bourbon/addons/_clearfix.scss */
-    header[role="banner"]:after {
-      clear: both; }
-
-  /* line 79, mobile.css.scss */
-  nav[role="site"] {
+  /* line 73, mobile.css.scss */
+  nav.main-navigation {
     width: 100%;
     background: #f5f3ee; }
-    /* line 82, mobile.css.scss */
-    nav[role="site"] ul {
+    /* line 76, mobile.css.scss */
+    nav.main-navigation ul {
       margin: 0;
       list-style: square;
       color: #339933; }
-    /* line 87, mobile.css.scss */
-    nav[role="site"] a {
+    /* line 81, mobile.css.scss */
+    nav.main-navigation a {
       line-height: 1.5; }
-    /* line 90, mobile.css.scss */
-    nav[role="site"] .sections {
-      font: normal 1.125em "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif;
+    /* line 85, mobile.css.scss */
+    nav.main-navigation .sections ul {
       list-style: none; }
-      /* line 93, mobile.css.scss */
-      nav[role="site"] .sections li {
-        margin: 0;
-        border-bottom: 1px solid #fff; }
-      /* line 97, mobile.css.scss */
-      nav[role="site"] .sections a {
-        margin: 0 0.83333em;
-        display: block;
-        line-height: 2.5;
-        background: transparent url(/images/arrows-right.svg) 100% -36px no-repeat; }
-        /* line 102, mobile.css.scss */
-        nav[role="site"] .sections a:hover {
-          background-position: 100% -100px; }
-    /* line 108, mobile.css.scss */
-    nav[role="site"] .first,
-    nav[role="site"] .second {
+    /* line 88, mobile.css.scss */
+    nav.main-navigation .sections li {
+      font: normal 1.125em "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif;
+      margin: 0;
+      border-bottom: 1px solid #fff; }
+    /* line 93, mobile.css.scss */
+    nav.main-navigation .sections a {
+      margin: 0 0.83333em;
+      display: block;
+      line-height: 2.5;
+      background: transparent url(/images/arrows-right.svg) 100% -36px no-repeat; }
+      /* line 98, mobile.css.scss */
+      nav.main-navigation .sections a:hover {
+        background-position: 100% -100px; }
+    /* line 104, mobile.css.scss */
+    nav.main-navigation .first,
+    nav.main-navigation .second {
       margin-top: 15px;
       margin-bottom: 15px;
-      list-style-position: inside;
       float: left;
       width: 45%; }
-      /* line 114, mobile.css.scss */
-      nav[role="site"] .first li,
-      nav[role="site"] .second li {
+      /* line 109, mobile.css.scss */
+      nav.main-navigation .first ul,
+      nav.main-navigation .second ul {
+        list-style-position: inside; }
+      /* line 112, mobile.css.scss */
+      nav.main-navigation .first li,
+      nav.main-navigation .second li {
         margin-left: 15px;
         white-space: nowrap; }
-      /* line 118, mobile.css.scss */
-      nav[role="site"] .first a,
-      nav[role="site"] .second a {
+      /* line 116, mobile.css.scss */
+      nav.main-navigation .first a,
+      nav.main-navigation .second a {
         background-image: none; }
-    /* line 122, mobile.css.scss */
-    nav[role="site"] .second {
+    /* line 120, mobile.css.scss */
+    nav.main-navigation .second {
       border-left: 1px solid #fff; }
-    /* line 125, mobile.css.scss */
-    nav[role="site"] form {
+    /* line 123, mobile.css.scss */
+    nav.main-navigation form {
       display: none; }
 
-  /* line 130, mobile.css.scss */
-  footer nav[role="site"] {
+  /* line 128, mobile.css.scss */
+  #site-navigation {
     width: 109.375%;
     margin-left: -4.6875%; }
 
-  /* line 138, mobile.css.scss */
-  #main-navigation,
-  #wrap > nav[role="breadcrumbs"] {
+  /* line 136, mobile.css.scss */
+  #top-navigation,
+  #wrap > nav.breadcrumbs {
     display: none; }
 
-  /* line 142, mobile.css.scss */
-  #top-navigation {
+  /* line 140, mobile.css.scss */
+  #site-top-navigation {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 999; }
-    /* line 148, mobile.css.scss */
-    #top-navigation.active {
+    /* line 146, mobile.css.scss */
+    #site-top-navigation.active {
       -webkit-transition: margin-top 0.35s ease-in-out;
       -moz-transition: margin-top 0.35s ease-in-out;
       -ms-transition: margin-top 0.35s ease-in-out;
       -o-transition: margin-top 0.35s ease-in-out;
       transition: margin-top 0.35s ease-in-out;
       margin-top: 0px; }
-    /* line 152, mobile.css.scss */
-    #top-navigation.inactive {
+    /* line 150, mobile.css.scss */
+    #site-top-navigation.inactive {
       -webkit-transition: margin-top 0.2s ease-out;
       -moz-transition: margin-top 0.2s ease-out;
       -ms-transition: margin-top 0.2s ease-out;
       -o-transition: margin-top 0.2s ease-out;
       transition: margin-top 0.2s ease-out; }
-    /* line 155, mobile.css.scss */
-    #top-navigation a.close {
+    /* line 153, mobile.css.scss */
+    #site-top-navigation a.close {
       font-size: 0.8125em;
       line-height: 1.0625;
       font-family: arial, sans-serif;
@@ -174,35 +166,35 @@
       clear: both;
       border-top: 1px solid #fff;
       padding: 0.76923em 0; }
-      /* line 163, mobile.css.scss */
-      #top-navigation a.close span {
+      /* line 161, mobile.css.scss */
+      #site-top-navigation a.close span {
         display: block;
         padding-right: 24px;
         margin-right: 15px;
         background: #f5f3ee url(/images/close.svg) 100% 50% no-repeat;
         background-size: 1.07692em 1.07692em; }
 
-  /* line 173, mobile.css.scss */
+  /* line 171, mobile.css.scss */
   #logo {
     float: left;
     width: 31.25%; }
 
-  /* line 178, mobile.css.scss */
+  /* line 176, mobile.css.scss */
   #secondary-navigation {
     text-align: right; }
-    /* line 180, mobile.css.scss */
+    /* line 178, mobile.css.scss */
     #secondary-navigation form {
       display: inline-block;
       vertical-align: top;
       margin-right: 0.375em; }
-    /* line 185, mobile.css.scss */
+    /* line 183, mobile.css.scss */
     #secondary-navigation .search {
       width: 8.57143em; }
-    /* line 188, mobile.css.scss */
+    /* line 186, mobile.css.scss */
     #secondary-navigation div {
       display: none; }
 
-  /* line 192, mobile.css.scss */
+  /* line 190, mobile.css.scss */
   #skip-to-navigation {
     font-size: 0.8125em;
     line-height: 1.0625;
@@ -215,66 +207,62 @@
     border-radius: 4px;
     padding: 0 25px 0 10px; }
 
-  /* line 203, mobile.css.scss */
+  /* line 201, mobile.css.scss */
   article .vignette {
     display: none; }
-  /* line 207, mobile.css.scss */
+  /* line 205, mobile.css.scss */
   article figcaption {
     margin-top: .5em; }
 
-  /* line 213, mobile.css.scss */
+  /* line 211, mobile.css.scss */
   .conversation img {
     display: none; }
-  /* line 217, mobile.css.scss */
+  /* line 215, mobile.css.scss */
   .conversation .question {
     margin-right: 13.72549%; }
-    /* line 220, mobile.css.scss */
+    /* line 218, mobile.css.scss */
     .conversation .question .content {
       padding-bottom: 1.08em;
       background: #ffe900; }
-      /* line 224, mobile.css.scss */
+      /* line 222, mobile.css.scss */
       .conversation .question .content:after {
         width: 87.2549%; }
-  /* line 230, mobile.css.scss */
+  /* line 228, mobile.css.scss */
   .conversation .answer {
     margin-right: 0; }
 
-  /* line 235, mobile.css.scss */
+  /* line 233, mobile.css.scss */
   #logo-full {
     height: 2.32974em;
     background-size: 14.6875em 2.32974em; } }
 @media only screen and (min-width: 600px) and (max-width: 767px) {
-  /* line 242, mobile.css.scss */
-  body {
-    padding: 0 1.25em 0 0; }
-
-  /* line 245, mobile.css.scss */
+  /* line 240, mobile.css.scss */
   #wrap {
     background: #fff;
-    margin: 0;
+    margin: 0 1.25em 0 0;
     padding: 1.25em 0 0 1.25em; }
 
-  /* line 253, mobile.css.scss */
-  header[role="banner"],
+  /* line 248, mobile.css.scss */
+  #site-banner,
   #main,
-  nav[role="breadcrumbs"] {
+  nav.breadcrumbs {
     width: 32.5em;
     margin: 0 auto; }
 
-  /* line 258, mobile.css.scss */
-  #wrap > nav[role="breadcrumbs"] {
+  /* line 253, mobile.css.scss */
+  #wrap > nav.breadcrumbs {
     border: none;
     display: block;
     margin-bottom: 0.625em; }
 
-  /* line 265, mobile.css.scss */
+  /* line 260, mobile.css.scss */
   .labeled-list .group {
     padding-top: 0.625em; }
-  /* line 268, mobile.css.scss */
+  /* line 263, mobile.css.scss */
   .labeled-list .label {
     float: none;
     width: 100%; }
-  /* line 272, mobile.css.scss */
+  /* line 267, mobile.css.scss */
   .labeled-list .list {
     margin-top: 0.625em;
     float: none;
@@ -283,18 +271,18 @@
     -moz-columns: 2 20px;
     columns: 2 20px; }
 
-  /* line 280, mobile.css.scss */
+  /* line 275, mobile.css.scss */
   #logo-full {
     width: 32.5em;
     height: 2.55556em;
     background-size: 16.11111em 2.55556em; }
 
-  /* line 287, mobile.css.scss */
+  /* line 282, mobile.css.scss */
   .grid .container {
     width: 103.84615%; }
-  /* line 290, mobile.css.scss */
+  /* line 285, mobile.css.scss */
   .grid .column {
     margin: 1.5625em 1.25em 0 0; }
-    /* line 293, mobile.css.scss */
+    /* line 288, mobile.css.scss */
     .grid .column.c2, .grid .column.c3 {
       width: 46.2963%; } }

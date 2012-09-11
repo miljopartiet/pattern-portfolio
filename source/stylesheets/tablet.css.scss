@@ -1,7 +1,5 @@
 @import "includes.css.scss";
-
 @media only screen and (min-width: 768px) {
-  /* Typography */
   p,
   ol,
   ul {
@@ -80,12 +78,7 @@
     }
   }
 
-}
-
-@media only screen and (min-width: 768px) {
-  header[role="banner"] {
-    @include clearfix;
-    position: relative;
+  #site-banner {
     margin-bottom: (40em/16);
   }
 
@@ -101,7 +94,7 @@
     display:none;
   }
 
-  nav[role="navigation"] {
+  #top-navigation {
     float: left;
 
     ul {
@@ -133,7 +126,7 @@
       margin-top: 0;
     }
 
-    li.current {
+    li.active-trail {
       font-size: (16em/18);
       line-height: (36/16);
       a {
@@ -169,7 +162,10 @@
       text-align: right;
     }
     .search {
-      width: (140em/16);
+      text-align: right;
+      input {
+        width: (140em/16);
+      }
     }
     div {
       text-align: right;
@@ -178,46 +174,48 @@
   }
 
   // Breadcrumbs
-  nav[role="breadcrumbs"] {
+  nav.breadcrumbs {
     p {
       font-size: (14em/16);
     }
   }
 
-  #wrap > nav[role="breadcrumbs"] {
+  #wrap > nav.breadcrumbs {
     width: (580em/16);
     margin: 0 auto;
     margin-bottom: (15em/16);
   }
 
-  footer nav[role="breadcrumbs"] {
-    border-top: none;
-    border-bottom: 1px solid $warm-grey;
-    padding-bottom: 12px;
+  footer nav.breadcrumbs {
+    border: none;
   }
 
-  nav[role="site"] {
+  nav.main-navigation {
+    border-top: 1px solid $warm-grey;
     border-bottom: 1px solid $warm-grey;
-    padding-bottom: 15px;
-    ul {
-      @include small-text((13em/16), (18/14));
+    padding: 15px 0;
+    & > div {
       float: left;
-      width: (160em/13);
+      width: (170em/16);
       margin: 0 20px 0 0;
+    }
+    .first,
+    .second {
+      li {
+        border-left: 1px solid $warm-grey;
+        padding-left: 10px;
+      }
+    }
+    .first {
+      width: (100em/16);
+    }
+    .second {
+      width: (120em/16);
+    }
+    ul {
+      margin: 0;
+      @include small-text((13em/16), (18/14));
       list-style: none;
-      &.first,
-      &.second {
-        li {
-          border-left: 1px solid $warm-grey;
-          padding-left: 10px;
-        }
-      }
-      &.first {
-        width: (80em/13);
-      }
-      &.second {
-        width: (110em/13);
-      }
     }
     li {
       margin: 0 0 0 0;
@@ -225,7 +223,7 @@
     form {
       text-align:right;
       input {
-        width: (140em/14);
+        width: (140em/16);
       }
     }
   }
@@ -297,9 +295,6 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  $screen-width: 768;
-  $content-width: 580;
-
   //
   // Layout
   //
@@ -309,7 +304,7 @@
     padding: (30em/16) 0 (50em/16) percentage(30/768);
   }
 
-  header[role="banner"],
+  #site-banner,
   #main,
   #wrap > footer {
     width: (580em/16);
@@ -344,9 +339,6 @@
         bottom: -1.8em;
         margin-right: 0;
       }
-    }
-    .search {
-      width: (140em/16);
     }
     div {
       margin-top: (10em/16);

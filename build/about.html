@@ -13,19 +13,26 @@
     <script src="/javascripts/mp.js"></script>
   </head>
   <body>
+    <div id="cookies">
+      <p>
+        Denna webbplats <a href="#">använder cookies</a>.
+        Genom att fortsätta surfa på webbplatsen accepterar du vår använding av cookies.
+      </p>
+      <a href="#" class="confirm action">Ok, stäng detta meddelande</a>
+    </div>
     <div id="wrap">
-      <header role="banner">
+      <header role="banner" id="site-banner">
         <div id="logo">
           <a href="/">Miljöpartiet</a>
         </div>
-        <nav role="navigation" id="main-navigation">
+        <nav role="navigation" id="top-navigation">
           <ul>
             <li><a href="/topics.html"><span>Vår politik</span></a></li>
-            <li class="current"><a href="/about.html"><span>Om Miljöpartiet de gröna</span></a></li>
+            <li class="active-trail"><a href="/about.html"><span>Om Miljöpartiet de gröna</span></a></li>
             <li><a href="/conversations.html"><span>Prata politik</span></a></li>
           </ul>
         </nav>
-        <div id="secondary-navigation">
+        <div role="navigation" id="secondary-navigation">
           <form action="/search" method="get" class="search">
             <input type="search" name="query">
             <button type="submit">Sök</button>
@@ -36,7 +43,7 @@
             <a href="#">Press</a>
             <a href="#site-navigation" class="more">+ Fler</a>
           </div>
-          <a href="#main-navigation" id="skip-to-navigation">Meny</a>
+          <a href="#site-navigation" id="skip-to-navigation">Meny</a>
         </div>
       </header>
       
@@ -52,7 +59,7 @@
     <figure>
       <div>
         <div class="embedded-video widescreen vimeo">
-          <iframe src="http://player.vimeo.com/video/14921567?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+          <iframe src="http://player.vimeo.com/video/14921567?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="281" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
         </div>
       </div>
       <figcaption>
@@ -178,25 +185,31 @@
       </div>
       <footer>
         
-        <nav role="site" id="site-navigation">
-          <ul class="sections">
-            <li class="start"><a href="/">Hem</a></li>
-            <li class="current"><a href="/topics.html">Vi vill modernisera Sverige</a></li>
-            <li><a href="/persons.html">Om Miljöpartiet de gröna</a></li>
-            <li><a href="/conversations.html">Prata politik</a></li>
-          </ul>
-          <ul class="first">
-            <li><a href="#">Bli medlem</a></li>
-            <li><a href="#">Kontakt</a></li>
-            <li><a href="#">Press</a></li>
-            <li><a href="#">Skolarbeten</a></li>
-          </ul>
-          <ul class="second">
-            <li><a href="#">Other languages</a></li>
-            <li><a href="#">Lättläst</a></li>
-            <li><a href="#">Ge en gåva</a></li>
-            <li><a href="#">Lediga jobb</a></li>
-          </ul>
+        <nav role="navigation search" id="site-navigation" class="main-navigation">
+          <div class="sections">
+            <ul>
+              <li class="start"><a href="/">Hem</a></li>
+              <li class="active-trail"><a href="/topics.html">Vi vill modernisera Sverige</a></li>
+              <li><a href="/persons.html">Om Miljöpartiet de gröna</a></li>
+              <li><a href="/conversations.html">Prata politik</a></li>
+            </ul>
+          </div>
+          <div class="first">
+            <ul>
+              <li><a href="#">Bli medlem</a></li>
+              <li><a href="#">Kontakt</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Skolarbeten</a></li>
+            </ul>
+          </div>
+          <div class="second">
+            <ul>
+              <li><a href="#">Other languages</a></li>
+              <li><a href="#">Lättläst</a></li>
+              <li><a href="#">Ge en gåva</a></li>
+              <li><a href="#">Lediga jobb</a></li>
+            </ul>
+          </div>
           <form action="/search" method="get" class="search">
             <input type="search" name="query">
             <button type="submit">Sök</button>

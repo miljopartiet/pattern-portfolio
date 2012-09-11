@@ -21,18 +21,18 @@
       <a href="#" class="confirm action">Ok, stäng detta meddelande</a>
     </div>
     <div id="wrap">
-      <header role="banner">
+      <header role="banner" id="site-banner">
         <div id="logo">
           <a href="/">Miljöpartiet</a>
         </div>
-        <nav role="navigation" id="main-navigation">
+        <nav role="navigation" id="top-navigation">
           <ul>
-            <li<%= ' class="current"' if data.page.current_nav == 'topics' %>><a href="/topics.html"><span>Vår politik</span></a></li>
-            <li<%= ' class="current"' if data.page.current_nav == 'about' %>><a href="/about.html"><span>Om Miljöpartiet de gröna</span></a></li>
-            <li<%= ' class="current"' if data.page.current_nav == 'conversations' %>><a href="/conversations.html"><span>Prata politik</span></a></li>
+            <li<%= ' class="active-trail"' if data.page.current_nav == 'topics' %>><a href="/topics.html"><span>Vår politik</span></a></li>
+            <li<%= ' class="active-trail"' if data.page.current_nav == 'about' %>><a href="/about.html"><span>Om Miljöpartiet de gröna</span></a></li>
+            <li<%= ' class="active-trail"' if data.page.current_nav == 'conversations' %>><a href="/conversations.html"><span>Prata politik</span></a></li>
           </ul>
         </nav>
-        <div id="secondary-navigation">
+        <div role="navigation" id="secondary-navigation">
           <form action="/search" method="get" class="search">
             <input type="search" name="query">
             <button type="submit">Sök</button>
@@ -43,11 +43,11 @@
             <a href="#">Press</a>
             <a href="#site-navigation" class="more">+ Fler</a>
           </div>
-          <a href="#main-navigation" id="skip-to-navigation">Meny</a>
+          <a href="#site-navigation" id="skip-to-navigation">Meny</a>
         </div>
       </header>
       <% if content_for? :breadcrumbs %>
-      <nav role="breadcrumbs" class="breadcrumbs">
+      <nav class="breadcrumbs">
         <p><%= yield_content :breadcrumbs %></p>
       </nav>
       <% end %>
@@ -56,29 +56,35 @@
       </div>
       <footer>
         <% if content_for? :breadcrumbs %>
-        <nav role="breadcrumbs" class="breadcrumbs">
+        <nav class="breadcrumbs">
           <p><%= yield_content :breadcrumbs %></p>
         </nav>
         <% end %>
-        <nav role="site" id="site-navigation">
-          <ul class="sections">
-            <li class="start"><a href="/">Hem</a></li>
-            <li class="current"><a href="/topics.html">Vi vill modernisera Sverige</a></li>
-            <li><a href="/persons.html">Om Miljöpartiet de gröna</a></li>
-            <li><a href="/conversations.html">Prata politik</a></li>
-          </ul>
-          <ul class="first">
-            <li><a href="#">Bli medlem</a></li>
-            <li><a href="#">Kontakt</a></li>
-            <li><a href="#">Press</a></li>
-            <li><a href="#">Skolarbeten</a></li>
-          </ul>
-          <ul class="second">
-            <li><a href="#">Other languages</a></li>
-            <li><a href="#">Lättläst</a></li>
-            <li><a href="#">Ge en gåva</a></li>
-            <li><a href="#">Lediga jobb</a></li>
-          </ul>
+        <nav role="navigation search" id="site-navigation" class="main-navigation">
+          <div class="sections">
+            <ul>
+              <li class="start"><a href="/">Hem</a></li>
+              <li class="active-trail"><a href="/topics.html">Vi vill modernisera Sverige</a></li>
+              <li><a href="/persons.html">Om Miljöpartiet de gröna</a></li>
+              <li><a href="/conversations.html">Prata politik</a></li>
+            </ul>
+          </div>
+          <div class="first">
+            <ul>
+              <li><a href="#">Bli medlem</a></li>
+              <li><a href="#">Kontakt</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Skolarbeten</a></li>
+            </ul>
+          </div>
+          <div class="second">
+            <ul>
+              <li><a href="#">Other languages</a></li>
+              <li><a href="#">Lättläst</a></li>
+              <li><a href="#">Ge en gåva</a></li>
+              <li><a href="#">Lediga jobb</a></li>
+            </ul>
+          </div>
           <form action="/search" method="get" class="search">
             <input type="search" name="query">
             <button type="submit">Sök</button>
