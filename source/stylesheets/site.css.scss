@@ -459,6 +459,14 @@ article {
   }
 }
 
+article + article {
+  margin-top: 40px;
+  h1 {
+    padding-top: 20px;
+    border-top: 1px solid $warm-grey;
+  }
+}
+
 // Article sections after the main content
 .article-section {
   margin-top: (60em/16);

@@ -260,6 +260,13 @@
     }
   }
 
+  article + article {
+    h1 {
+      margin-right: (115em/42);
+    }
+
+  }
+
   .article-section {
     width: percentage(640/805);
 
