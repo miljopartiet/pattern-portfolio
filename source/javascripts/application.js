@@ -50,6 +50,9 @@ $(function() {
 
     var init = function(element, opts) {
       $element = $(element);
+      if ($element.size() == 0) {
+        return;
+      }
       $suggest_list = $('<div id="search-suggestions" class="suggestions" style="display:none;position:absolute;"></div>');
       $suggest_list.css({
         width: $element.outerWidth() + 'px'
