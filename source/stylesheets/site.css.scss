@@ -788,3 +788,14 @@ ol.topics {
     }
   }
 }
+#search-suggestions {
+  background: #fff;
+  a {
+    display: block;
+    border-bottom: 1px solid $warm-grey;
+    padding: 5px 15px;
+    &.focused {
+      color: #000;
+    }
+  }
+}
