@@ -193,7 +193,9 @@
       margin-right: (6em/16);
     }
     .search {
-      width: (120em/14);
+      input {
+        width: (120em/14);
+      }
     }
     div {
       display: none;
