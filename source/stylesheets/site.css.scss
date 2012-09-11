@@ -43,6 +43,23 @@ p {
   margin-top: (12em/16);
 }
 
+h2 {
+  & + p,
+  & + ul,
+  & + ol {
+    margin-top: (4em/16);
+  }
+}
+
+h3 {
+  & + p,
+  & + ul,
+  & + ol {
+    margin-top: 0;
+  }
+}
+
+
 img {
   display: block;
   max-width: 100%;
@@ -202,23 +219,24 @@ figcaption {
 }
 // Lists with icons or images
 .icon-list {
-  margin-top: (30em/18);
+  margin-top: (20em/18);
   list-style: none;
   li {
     margin:0;
     a {
       text-decoration: none;
       display: block;
-      margin: 0 0 (20em/22) 55px;
-      font-size: (22em/18);
-      line-height: (24em/22);
       font-family: $swift;
+      font-size: (20em/18);
+      line-height: (22em/20);
+      margin: 0 0 (10em/20) 55px;
       .meta {
         font-family: $arial;
-        font-size: (14em/22);
+        font-size: (14em/20);
         line-height: (18em/14);
         color: $text-grey;
         display: block;
+        margin-top: (2em/14);
       }
     }
     .icon {
@@ -265,10 +283,9 @@ p.copy {
 }
 
 blockquote {
-  margin-top: (20em/16);
-  margin-bottom: (20em/16);
+  margin-top: (30em/16);
+  margin-bottom: (30em/16);
   border-bottom: 1px solid $warm-grey;
-  padding: (10em/16) 0;
   color: $text-warm-grey;
 
   & > p {
@@ -325,6 +342,7 @@ blockquote {
 #logo-full {
   background: transparent url(/images/logo-full.svg) 100% 0 no-repeat;
   text-indent: -9999em;
+  margin: (20em/16) 0 (40em/16) 0;
   a {
     display: block;
   }
@@ -408,7 +426,7 @@ footer nav.breadcrumbs {
 .speech-bubble {
 	position: relative;
   background: $yellow;
-  padding: 20px 35px;
+  padding: 15px 20px;
   border-radius: 4px 4px 4px 0;
   &:after {
     content:"";
@@ -469,7 +487,7 @@ article + article {
 
 // Article sections after the main content
 .article-section {
-  margin-top: (60em/16);
+  margin-top: (40em/16);
 
   header {
     border-bottom: 1px solid $warm-grey;
@@ -483,9 +501,11 @@ article + article {
 
     a.topic {
       display: block;
-      font-size: (20em/26);
-      line-height: (30/20);
+      font-size: (18em/26);
+      line-height: (25/18);
       text-transform: uppercase;
+      text-rendering: optimizeLegibility;
+      letter-spacing: 0.06em;
     }
   }
 
@@ -517,7 +537,7 @@ article + article {
 
    // Subsections
   .article-subsection {
-    margin-top: 2.5em;
+    margin-top: (20em/16);
     border-top: 1px solid $warm-grey;
 
     &:first-child {
@@ -544,24 +564,6 @@ article + article {
       margin-left: .5em;
       @include small-text;
     }
-
-  &.related-topics {
-    h2 {
-      font-size: (22em/16);
-    }
-  }
-
-  // Lists of related articles
-  &.deepening {
-    h2 {
-      font-size: (20em/16);
-      line-height: (22/20);
-    }
-
-    p {
-      margin-top: (6em/16);
-    }
-  }
 }
 
 .people .grid {
@@ -577,6 +579,7 @@ article + article {
     }
     p {
       margin: 0;
+      font-size: (14em/16);
     }
     &:hover {
       h2 {
@@ -604,7 +607,7 @@ article + article {
 
 .conversation {
   list-style: none;
-  margin: 1em 0 0 0;
+  margin: (20em/16) 0 0 0;
   padding: (23em/16) 0;
 
   .content {
@@ -726,7 +729,10 @@ article + article {
   }
   img {
     float: right;
-    margin: 0.75em 0 5px 5px;
+    margin: 0.75em 20px 5px 5px;
+  }
+  img + p {
+    margin-top: (4em/18);
   }
 }
 
@@ -754,7 +760,7 @@ article + article {
 
 #copyright {
   padding-left: (35em/12);
-  background: transparent url(/images/cc.svg) 0 50% no-repeat;
+  background: transparent url(/images/cc.svg) 0 2px no-repeat;
   background-size: (20em/12) (20em/12);
 }
 
@@ -764,10 +770,11 @@ ol.topics {
   li {
     margin: (25em/16) 0 0 0;
   }
+  h2,
   h3 {
     display: inline;
     margin: 0;
-    font-size: (22em/16);
+    padding: 0 (5em/20) 0 0;
   }
   p {
     display: inline;

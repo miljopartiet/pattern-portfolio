@@ -22,25 +22,21 @@
     line-height: (26/22);
   }
 
-  .lead p {
-    margin-top: (12em/25);
-    font-size: (22em/16);
-    line-height: (26/22);
-  }
-
   .speech-bubble {
     h2 {
       font-size: (20em/16);
       line-height: (22/20);
     }
-
-    p {
-      font-size: (17em/18);
-      line-height: (24/17);
-    }
   }
 
   .article-section {
+    header {
+      padding: 0;
+    }
+    // FIXME: This won't work
+    header + * {
+      margin-top: 20px;
+    }
 
     .section-lead,
     .subsection-lead {
@@ -53,8 +49,8 @@
     }
 
     h3 {
-      font-size: (18em/16);
-      line-height: (24/18);
+      font-size: (20em/16);
+      line-height: (22/20);
     }
   }
 
@@ -145,9 +141,9 @@
     padding-bottom: (6em/16);
     width: percentage(220/768);
     a {
-      @include small-text;
+      @include small-text((14em/16), (18/14));
       white-space: nowrap;
-      margin-right: .2em;
+      margin-right: 0;
       &:hover {
         color: $green;
       }
@@ -291,6 +287,9 @@
     a h2 {
       font-size: (20em/16);
     }
+    a p {
+      font-size: (16em/16);
+    }
   }
 }
 
@@ -325,9 +324,8 @@
     border-bottom: 1px solid $warm-grey;
     float: right;
     padding-bottom: (6em/16);
-    width: percentage(220/768);
+    width: percentage(230/768);
     a {
-      @include small-text;
       white-space: nowrap;
       margin-right: .2em;
       &:hover {
@@ -354,7 +352,15 @@
       > ol {
         width: percentage(560/580);
       }
+    }
 
+    .lead p {
+      margin-top: (12em/25);
+      font-size: (22em/16);
+      line-height: (26/22);
+    }
+    .illustration {
+      margin-top: (20em/16);
     }
 
     .speech-bubble {

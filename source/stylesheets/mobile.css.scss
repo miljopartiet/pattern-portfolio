@@ -40,15 +40,17 @@
 
   .grid {
     .container {
-      width: percentage(310/290);
+      width: percentage(304/284);
     }
     .column {
       margin: (25em/16) (20em/16) 0 0;
+      &.c2,
       &.c3 {
-        width: percentage(135/310);
+        width: percentage(132/304);
       }
     }
   }
+
 
   #wrap > footer {
     margin-top: (40em/16);
@@ -60,12 +62,12 @@
     }
     .label {
       float: left;
-      width: percentage(75/290);
-      margin-right: percentage(15/290);
+      width: percentage(75/284);
+      margin-right: percentage(15/284);
     }
     .list {
       float: left;
-      width: percentage(200/290);
+      width: percentage(200/284);
     }
   }
 }
@@ -75,11 +77,11 @@
   // Layout
   //
   #wrap {
-    margin: 0 15px;
+    margin: 0 18px;
   }
 
   #site-banner {
-    padding-top: 15px;
+    padding-top: 18px;
   }
 
   //
@@ -250,12 +252,20 @@
   }
 
   #logo-full {
-    height: ((46em*(235/290))) / 16;
-    background-size: (235em/16) ((46em*(235/290)) / 16);
+    height: ((46em*(235/284))) / 16;
+    background-size: (235em/16) ((46em*(235/284)) / 16);
   }
 }
 
+@media only screen and (min-width: 600px) {
+  ul {
+    li {
+      margin-left: 0;
+    }
+  }
+}
 @media only screen and (min-width: 600px) and (max-width: 767px) {
+
   #wrap {
     background: #fff;
     margin: 0 (20em/16) 0 0;
@@ -298,7 +308,7 @@
   #logo-full {
     width: (520em/16);
     height: (46em/18);
-    background-size: (290em/18) (46em/18);
+    background-size: (284em/18) (46em/18);
   }
 
   .grid {

@@ -15,14 +15,6 @@
     line-height: (30/26);
   }
 
-  .lead {
-    p {
-      margin-top: (12em/26);
-      font-size: (26em/16);
-      line-height: (32/26);
-    }
-  }
-
   blockquote {
     & > p {
       font-size: (26em/16);
@@ -44,12 +36,12 @@
   .speech-bubble {
     background: $yellow url(/images/yellow-grain.png) 100% 0 repeat-y;
     background-size: 20px 50px;
-    padding: 15px 55px 15px 35px;
-    margin: (20em/16) (145em/16) (20em/16) 0;
+    padding-right: 55px;
+    margin: (40em/16) (145em/16) (40em/16) 0;
 
     h2 {
-      font-size: (22em/16);
-      line-height: (26/22);
+      font-size: (20em/16);
+      line-height: (22/20);
     }
 
     p {
@@ -119,6 +111,7 @@
   //
   #wrap {
     padding-top: (40em/16);
+    padding-bottom: (40em/16);
     max-width: (970em/16);
   }
 
@@ -207,6 +200,14 @@
       width: percentage(640/805);
     }
 
+    .lead {
+      p {
+        margin-top: (12em/26);
+        font-size: (26em/16);
+        line-height: (32/26);
+      }
+    }
+
     .illustration {
       margin-top: 30px;
       figcaption {
@@ -233,16 +234,17 @@
       footer {
         width: percentage(145/805);
         float: right;
+        text-align: left;
 
         p {
           position: static;
+          padding: 0;
         }
 
         img {
           float: none;
           width: auto;
-          margin-top: -100%;
-          margin-bottom: 1em;
+          margin: -100% 0 1em 0;
         }
 
         a {
