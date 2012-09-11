@@ -38,6 +38,18 @@
     }
   }
 
+  .grid {
+    .container {
+      width: percentage(310/290);
+    }
+    .column {
+      margin: (25em/16) (20em/16) 0 0;
+      &.c3 {
+        width: percentage(135/310);
+      }
+    }
+  }
+
   #wrap > footer {
     margin-top: (40em/16);
   }
