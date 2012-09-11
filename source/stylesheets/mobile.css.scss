@@ -78,6 +78,10 @@
     margin: 0 15px;
   }
 
+  #site-banner {
+    padding-top: 15px;
+  }
+
   //
   // Navigational elements
   //
@@ -186,6 +190,7 @@
   }
 
   #secondary-navigation {
+    padding-top: 12px;
     text-align: right;
     form {
       display: inline-block;
@@ -262,6 +267,10 @@
   nav.breadcrumbs {
     width: (520em/16);
     margin: 0 auto;
+  }
+  #site-banner,
+  #secondary-navigation {
+    padding-top: 0;
   }
   // TODO generalize the different breadcrumbs layouts
   #wrap > nav.breadcrumbs {
