@@ -156,6 +156,9 @@
       }
     }
   }
+  body.front #top-navigation {
+    margin-left: (13em/16);
+  }
 
   #secondary-navigation {
     width: percentage(275/970);

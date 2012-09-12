@@ -12,7 +12,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.22/jquery-ui.min.js"></script>
     <script src="/javascripts/mp.js"></script>
   </head>
-  <body>
+  <body<%= " class=\"#{data.page.body_class}\"" if data.page.body_class.present? %>>
     <div id="cookies">
       <p>
         Denna webbplats <a href="#">använder cookies</a>.
