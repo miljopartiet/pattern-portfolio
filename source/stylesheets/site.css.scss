@@ -14,7 +14,8 @@ body {
   background-size: 3000px 25px;
 }
 
-h1 {
+h1,
+h2{
   margin: 0;
   font-family: $swift;
   font-weight: normal;
@@ -23,13 +24,8 @@ h1 {
 }
 
 h2 {
-  margin-top: (24em/18);
-  font-family: $swift;
-  font-weight: normal;
-  font-size: (18em/16);
-  line-height: (24/18);
+  margin-top: (24em/24);
 }
-
 h3 {
   margin-top: (18em/16);
   font-weight: bold;

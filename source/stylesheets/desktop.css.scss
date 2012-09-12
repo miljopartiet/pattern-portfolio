@@ -9,26 +9,11 @@
     line-height: 1.1;
   }
 
-  h2 {
-    margin-top: 1em;
-    font-size: (26em/16);
-    line-height: (30/26);
-  }
-
   .speech-bubble {
     background: $yellow url(/images/yellow-grain.png) 100% 0 repeat-y;
     background-size: 20px 50px;
     padding-right: 55px;
     margin-right: (145em/16);
-
-    h2 {
-      font-size: (20em/16);
-      line-height: (22/20);
-    }
-
-    p {
-      line-height: (26/18);
-    }
   }
 
   .article-section {
@@ -291,12 +276,6 @@
     }
     .subsection-header {
       width: percentage(695/640);
-    }
-
-    .section-lead,
-    .subsection-lead {
-      font-size: (14em/16);
-      line-height: (18/14);
     }
 
     .section-lead {

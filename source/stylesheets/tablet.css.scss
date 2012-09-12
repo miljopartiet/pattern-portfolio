@@ -17,15 +17,20 @@
   }
 
   h2 {
+    font-size: (26em/16);
+    line-height: (30/26);
     margin-top: 1em;
-    font-size: (22em/16);
-    line-height: (26/22);
+  }
+
+  h3 {
+    font-size: (20em/16);
+    line-height: (22/20);
   }
 
   blockquote {
     & > p {
-      font-size: (26em/16);
-      line-height: (28/26);
+      font-size: (22em/16);
+      line-height: (26/22);
     }
     footer p {
       font-size: (14em/13);
@@ -45,13 +50,17 @@
       font-size: (20em/16);
       line-height: (22/20);
     }
+
+    p {
+      line-height: (26/18);
+    }
   }
 
   .article-section {
     .section-lead,
     .subsection-lead {
-      font-size: (13em/16);
-      line-height: (17/13);
+      font-size: (14em/16);
+      line-height: (18/14);
     }
 
     .vignette {
@@ -360,7 +369,6 @@
     }
   }
 
-
   article {
     .body {
       position:relative;
@@ -381,4 +389,12 @@
       margin-top: (20em/16);
     }
   }
+
+  .article-section {
+    .section-lead a,
+    .subsection-lead a {
+      text-decoration: none;
+    }
+  }
+
 }
