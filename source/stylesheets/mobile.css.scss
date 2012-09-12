@@ -249,10 +249,20 @@
 }
 
 @media only screen and (min-width: 600px) {
+  h1 {
+    font-size: (33em/16);
+    line-height: (35/33);
+  }
+
   ul {
     li {
       margin-left: 0;
     }
+  }
+
+  article .lead p {
+    font-size: (20em/16);
+    line-height: (24/20);
   }
 }
 @media only screen and (min-width: 600px) and (max-width: 767px) {

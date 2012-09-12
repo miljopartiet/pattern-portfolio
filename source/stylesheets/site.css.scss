@@ -15,19 +15,22 @@ body {
 }
 
 h1,
-h2{
+h2 {
   margin: 0;
   font-family: $swift;
   font-weight: normal;
   font-size: (24em/16);
-  line-height: 1.1;
+  line-height: (26/24);
 }
 
 h2 {
   margin-top: (24em/24);
 }
+
 h3 {
-  margin-top: (18em/16);
+  font-size: (18em/16);
+  line-height: (20/18);
+  margin-top: (18em/18);
   font-weight: bold;
 }
 
@@ -54,7 +57,6 @@ h3 {
     margin-top: 0;
   }
 }
-
 
 img {
   display: block;
@@ -514,11 +516,9 @@ article + article {
   }
 
   h2 {
-    font-size: (26em/16);
-
     a.topic {
       display: block;
-      font-size: (18em/26);
+      font-size: (18em/24);
       line-height: (25/18);
       text-transform: uppercase;
       text-rendering: optimizeLegibility;
