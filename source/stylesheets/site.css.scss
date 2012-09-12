@@ -767,10 +767,10 @@ article + article {
   background-size: (20em/12) (20em/12);
 }
 
-ol.topics {
+.topics {
   @include clearfix;
   list-style: none;
-  li {
+  .topic {
     margin: (25em/16) 0 0 0;
   }
   h2,
