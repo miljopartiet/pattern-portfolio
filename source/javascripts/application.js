@@ -229,10 +229,8 @@ $(function() {
     };
 
     $toggler.bind('click', show);
-    $toggler.bind('mouseenter', function() {
-      setup();
-    });
-  }
+    setup();
+  };
 
   $(document).ready(function() {
     Mp.NavigationToggler('#skip-to-navigation');
