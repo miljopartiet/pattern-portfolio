@@ -15,24 +15,6 @@
     line-height: (30/26);
   }
 
-  blockquote {
-    & > p {
-      font-size: (26em/16);
-      line-height: (28/26);
-    }
-    footer p {
-      font-size: (14em/13);
-      line-height: (18/14);
-    }
-  }
-
-  figure {
-    figcaption {
-      font-size: (14em/16);
-      line-height: (18/14);
-    }
-  }
-
   .speech-bubble {
     background: $yellow url(/images/yellow-grain.png) 100% 0 repeat-y;
     background-size: 20px 50px;
