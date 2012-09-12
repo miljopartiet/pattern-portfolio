@@ -92,26 +92,15 @@
     a {
       margin-top: (2em/16);
       padding: 0 0 0 (15em/16);
-      &:hover {
-        background-color: $green-dark;
-      }
     }
     span {
-      display: block;
-      margin-right: 7px;
       padding-right: (23em/16);
-      background: transparent url(/images/arrows-right.svg) 100% 8px no-repeat;
+      background-position: 100% 8px;
     }
     li.active-trail {
       font-size: (20em/18);
       a {
         padding-right: (25em/20);
-        background-image: none;
-      }
-      span {
-        margin: 0;
-        padding: 0;
-        background: transparent;
       }
     }
   }

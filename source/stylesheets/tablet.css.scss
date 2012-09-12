@@ -126,7 +126,7 @@
     a {
       display: inline-block;
       margin-top: (2em/13);
-      padding: 0 (25em/13) 0 (12em/13);
+      padding: 0 0 0 (12em/13);
       background: $green;
       text-decoration: none;
       font-family: $swift;
@@ -135,6 +135,12 @@
       &:hover {
         background-color: $green-dark;
       }
+    }
+    span {
+      display: block;
+      margin-right: 7px;
+      padding-right: (18em/16);
+      background: transparent url(/images/arrows-right.svg) 100% 6px no-repeat;
     }
 
     li:first-child a {
@@ -149,6 +155,11 @@
         padding: 0 (25em/16) 0 20px;
         background-color: $green-dark;
         color: #fff;
+      }
+      span {
+        margin: 0;
+        padding: 0;
+        background: transparent;
       }
     }
   }
