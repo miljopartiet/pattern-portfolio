@@ -188,6 +188,7 @@
 
   #logo {
     float: left;
+    margin-right: (25em/16);
   }
 
   #secondary-navigation {
@@ -275,7 +276,8 @@
   #main,
   nav.breadcrumbs {
     width: (520em/16);
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
   }
   #site-banner,
   #secondary-navigation {

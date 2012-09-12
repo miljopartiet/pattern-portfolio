@@ -324,10 +324,10 @@ blockquote {
 #site-banner {
   @include clearfix;
   position: relative;
+  margin-bottom: (20em/16);
 }
 
 #logo {
-  margin-bottom: (20em/16);
   width: 57px;
 
   a {
