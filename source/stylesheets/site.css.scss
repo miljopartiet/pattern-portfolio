@@ -761,10 +761,6 @@ article + article {
   }
 }
 
-#feedback {
-  @include small-text;
-}
-
 #copyright {
   padding-left: (35em/12);
   background: transparent url(/images/cc.svg) 0 2px no-repeat;
