@@ -232,18 +232,21 @@
       width: (170em/16);
       margin: 0 20px 0 0;
     }
-    .first,
-    .second {
-      li {
-        border-left: 1px solid $warm-grey;
-        padding-left: 10px;
+    .inner {
+      .first,
+      .second {
+        li {
+          border-left: 1px solid $warm-grey;
+          padding-left: 10px;
+        }
       }
-    }
-    .first {
-      width: (100em/16);
-    }
-    .second {
-      width: (120em/16);
+      .first {
+        width: (100em/16);
+      }
+      .second {
+        width: (120em/16);
+      }
+
     }
     ul {
       margin: 0;
