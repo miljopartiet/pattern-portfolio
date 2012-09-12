@@ -30,11 +30,6 @@
   }
 
   .article-section {
-    // FIXME: This won't work
-    header + * {
-      margin-top: 20px;
-    }
-
     .section-lead,
     .subsection-lead {
       font-size: (13em/16);
