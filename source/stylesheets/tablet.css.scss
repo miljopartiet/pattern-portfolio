@@ -319,7 +319,11 @@
     a {
       height: (90em/16);
       width: (103em/16);
+      background-size: 100%;
       margin-left: -(45em/16);
+      &:hover {
+        background-position: 0 ((180em/16) * -1);
+      }
     }
   }
 

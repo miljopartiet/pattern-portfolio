@@ -117,10 +117,13 @@
 
   // In the site banner
   #logo {
-    width: (133em/16);
+    width: (130em/16);
     a {
-      width: (133em/16);
-      height: (116em/16);
+      width: (130em/16);
+      height: (114em/16);
+      &:hover {
+        background-position: 0 ((228em/16) * -1);
+      }
     }
   }
 
