@@ -9,9 +9,15 @@ class News
     end
   end
 
-  def self.all
+  def self.all(limit = nil)
     @all ||= self.load.map do |attrs|
       self.new attrs
+    end
+
+    if limit && limit < @all.size
+      @all[0...limit]
+    else
+      @all
     end
   end
 
