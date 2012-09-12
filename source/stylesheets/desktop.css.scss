@@ -278,7 +278,9 @@
 
   #site-navigation {
     ul {
-      @include small-text((14em/16), (17/13));
+      @include small-text;
+      font-size: (14em/16);
+      line-height: (18em/14);
     }
     form {
       margin-right: 185px;

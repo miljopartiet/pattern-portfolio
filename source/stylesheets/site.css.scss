@@ -203,10 +203,13 @@ button {
 figure {
   @include clearfix;
 }
+
 figcaption {
   padding-bottom: .5em;
   border-bottom: 1px solid $warm-grey;
-  @include small-text((13em/16), (18/14));
+  @include small-text;
+  font-size: (13em/16);
+  line-height: (18/13);
 
   strong,
   b {
@@ -297,6 +300,8 @@ blockquote {
 
   footer {
     @include small-text;
+    font-size: (13em/16);
+    line-height: (17/13);
     .name {
       text-decoration: underline;
       &:hover {
@@ -359,7 +364,9 @@ blockquote {
 nav.breadcrumbs {
   display: block;
   p {
-    @include small-text((13em/16), (18/13));
+    @include small-text;
+    font-size: (13em/16);
+    line-height: (17/13);
     margin: 0;
   }
   a,
@@ -537,9 +544,12 @@ article + article {
     text-transform: none;
   }
 
-  .section-lead {
-    margin-top: 0.5em;
+  .section-lead,
+  .subsection-lead {
     @include small-text;
+    font-size: (13em/16);
+    line-height: (17/13);
+    margin-top: .5em;
   }
 
    // Subsections
@@ -565,11 +575,6 @@ article + article {
       .subsection-lead {
         display: inline;
       }
-    }
-
-    .subsection-lead {
-      margin-left: .5em;
-      @include small-text;
     }
 }
 
@@ -628,11 +633,12 @@ article + article {
   }
 
   .byline {
-    @include small-text;
-
     p {
       position: absolute;
       margin: 0;
+      @include small-text;
+      font-size: (13em/16);
+      line-height: (17/13);
     }
 
     img {
@@ -680,7 +686,7 @@ article + article {
 
     .byline {
       p {
-        top: (-23em/16);
+        top: (-23em/13);
       }
 
       img {
@@ -712,7 +718,7 @@ article + article {
 
     .byline {
       p {
-        bottom: (-23em/16);
+        bottom: (-23em/13);
       }
 
       img {
@@ -789,6 +795,8 @@ article + article {
   width: 100%;
   background: #000;
   @include small-text;
+  font-size: (13em/16);
+  line-height: (17/13);
   color: #fff;
   padding: 0 20px;
   p {

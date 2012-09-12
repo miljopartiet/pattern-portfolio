@@ -74,6 +74,11 @@
   }
 
   .conversation {
+    .byline p {
+      font-size: (14em/16);
+      line-height: (18/14);
+    }
+
     .question {
       .content {
         p {
@@ -171,7 +176,9 @@
     padding-bottom: (6em/16);
     width: percentage(220/768);
     a {
-      @include small-text((14em/16), (18/14));
+      @include small-text;
+      font-size: (14em/16);
+      line-height: (18/14);
       white-space: nowrap;
       margin-right: 0;
       &:hover {
@@ -240,7 +247,9 @@
     }
     ul {
       margin: 0;
-      @include small-text((13em/16), (18/14));
+      @include small-text;
+      font-size: (14em/16);
+      line-height: (18/14);
       list-style: none;
     }
     li {

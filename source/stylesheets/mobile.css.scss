@@ -1,19 +1,6 @@
 @import "includes.css.scss";
 
 @media only screen and (min-width: 320px) {
-  .article-section {
-    .section-lead,
-    .subsection-lead {
-      line-height: (17/13);
-    }
-  }
-
-  .conversation {
-    .byline {
-      font-size: (12em/16);
-    }
-  }
-
   blockquote {
     overflow: hidden;
     padding-bottom: 0;
@@ -172,7 +159,8 @@
     }
     a.close {
       @include small-text;
-      line-height: 14px;
+      font-size: (13em/16);
+      line-height: (14/13);
       display: block;
       text-align: right;
       clear: both;
@@ -211,6 +199,8 @@
   }
     #skip-to-navigation {
       @include small-text;
+      font-size: (13em/16);
+      line-height: (17/13);
       line-height: (25em/13);
       background: $beige url(/images/arrow-down.svg) 89% 50% no-repeat;
       background-size: (14em/13) (9em/13);
