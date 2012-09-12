@@ -286,6 +286,7 @@
       width: percentage(695/640);
       border-top: 1px solid #ccc;
       border-bottom: none;
+      padding: 0;
       &.vignetted {
         @include box-sizing(border-box);
         width: percentage(860/640);

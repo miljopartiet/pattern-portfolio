@@ -30,9 +30,6 @@
   }
 
   .article-section {
-    header {
-      padding: 0;
-    }
     // FIXME: This won't work
     header + * {
       margin-top: 20px;
