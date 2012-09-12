@@ -228,7 +228,7 @@
 
     header {
       width: percentage(695/640);
-      border-top: 1px solid #ccc;
+      border-top: 1px solid $warm-grey;
       border-bottom: none;
       padding: 0;
       &.vignetted {
