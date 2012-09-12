@@ -117,7 +117,8 @@
 
   // In the site banner
   #logo {
-    width: (130em/16);
+    width: (165em/16);
+    margin: 0;
     a {
       width: (130em/16);
       height: (114em/16);
@@ -128,7 +129,6 @@
   }
 
   #top-navigation {
-    margin-left: (33em/16);
     li {
       font-size: (16em/18);
       line-height: (30/16);
