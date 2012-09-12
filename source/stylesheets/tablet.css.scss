@@ -209,7 +209,7 @@
     border-top: 1px solid $warm-grey;
     border-bottom: 1px solid $warm-grey;
     padding: 15px 0;
-    & > div {
+    .inner > div {
       float: left;
       width: (170em/16);
       margin: 0 20px 0 0;

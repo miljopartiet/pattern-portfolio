@@ -86,8 +86,10 @@
   //
   // Site navigation is found in the bottom of the page
   nav.main-navigation {
-    width: 100%;
     background: $beige;
+    .inner {
+      padding: 0 18px;
+    }
     ul {
       margin:0;
       list-style: square;
@@ -106,7 +108,7 @@
         border-bottom:1px solid #fff;
       }
       a {
-        margin: 0 (15em/18);
+        margin: 0;
         display: block;
         line-height: 2.5;
         background: transparent url(/images/arrows-right.svg) 100% -36px no-repeat;
@@ -141,8 +143,9 @@
   }
   // Expand the navigation to the window border when viewed in the footer
   #site-navigation {
-    width: percentage(350/320);
-    margin-left: - percentage(15/320);
+    position: relative;
+    margin-left: -18px;
+    margin-right: -18px;
   }
 
   // The top navigation and breadcrumbs is not used in the mobile view
@@ -153,6 +156,7 @@
   }
   // This is the site navigation when activated in a mobile view
   #site-top-navigation {
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -270,7 +274,8 @@
 
   #site-banner,
   #main,
-  nav.breadcrumbs {
+  nav.breadcrumbs,
+  nav.main-navigation .inner {
     width: (520em/16);
     margin-right: auto;
     margin-left: auto;
@@ -278,6 +283,9 @@
   #site-banner,
   #secondary-navigation {
     padding-top: 0;
+  }
+  nav.main-navigation .inner {
+    padding: 0;
   }
   // TODO generalize the different breadcrumbs layouts
   #wrap > nav.breadcrumbs {

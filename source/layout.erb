@@ -61,34 +61,36 @@
         </nav>
         <% end %>
         <nav role="navigation search" id="site-navigation" class="main-navigation">
-          <div class="sections">
-            <ul>
-              <li class="start"><a href="/">Hem</a></li>
-              <li class="active-trail"><a href="/topics.html">Vi vill modernisera Sverige</a></li>
-              <li><a href="/about.html">Om Miljöpartiet de gröna</a></li>
-              <li><a href="/conversations.html">Prata politik</a></li>
-            </ul>
+          <div class="inner">
+            <div class="sections">
+              <ul>
+                <li class="start"><a href="/">Hem</a></li>
+                <li class="active-trail"><a href="/topics.html">Vi vill modernisera Sverige</a></li>
+                <li><a href="/about.html">Om Miljöpartiet de gröna</a></li>
+                <li><a href="/conversations.html">Prata politik</a></li>
+              </ul>
+            </div>
+            <div class="first">
+              <ul>
+                <li><a href="#">Bli medlem</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Skolarbeten</a></li>
+              </ul>
+            </div>
+            <div class="second">
+              <ul>
+                <li><a href="#">Other languages</a></li>
+                <li><a href="#">Lättläst</a></li>
+                <li><a href="#">Ge en gåva</a></li>
+                <li><a href="#">Lediga jobb</a></li>
+              </ul>
+            </div>
+            <form action="/search" method="get" class="search">
+              <input type="search" name="query">
+              <button type="submit">Sök</button>
+            </form>
           </div>
-          <div class="first">
-            <ul>
-              <li><a href="#">Bli medlem</a></li>
-              <li><a href="#">Kontakt</a></li>
-              <li><a href="#">Press</a></li>
-              <li><a href="#">Skolarbeten</a></li>
-            </ul>
-          </div>
-          <div class="second">
-            <ul>
-              <li><a href="#">Other languages</a></li>
-              <li><a href="#">Lättläst</a></li>
-              <li><a href="#">Ge en gåva</a></li>
-              <li><a href="#">Lediga jobb</a></li>
-            </ul>
-          </div>
-          <form action="/search" method="get" class="search">
-            <input type="search" name="query">
-            <button type="submit">Sök</button>
-          </form>
         </nav>
         <p id="logo-full"><a href="/">Miljöpartiet de gröna</a></p>
         <p id="copyright" class="copy">
