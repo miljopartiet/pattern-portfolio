@@ -200,7 +200,9 @@ $(function() {
       }
       var $original_nav = $('#site-navigation');
       $nav = $original_nav.clone();
-      $nav.attr('id', 'site-top-navigation');
+      $nav.attr('id', 'site-top-navigation').css({
+        visibility: 'hidden'
+      });
 
       $nav.append('<a href="#" class="close"><span>Stäng meny</span></a>');
       $nav.on('click', 'a.close', hide);
@@ -225,6 +227,7 @@ $(function() {
 
     var show = function(e) {
       e.preventDefault();
+      $nav.css('visibility', 'visible');
       $nav.addClass('active').removeClass('inactive');
     };
 
