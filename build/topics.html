@@ -47,15 +47,8 @@
         </div>
       </header>
       
-      <nav class="breadcrumbs">
-        <p>  <a href="/">Hem</a>
-  <span>Vår politik</a>
-</p>
-      </nav>
-      
       <div id="main" role="main">
-        
-<article>
+        <article>
   <header class="intro">
   <h1>Modernisera Sverige</h1>
   <div class="lead">
@@ -73,24 +66,24 @@
   </figure>
 </div>
 <div class="body">
-  <ol class="topics">
-    <li>
-      <h2><a href="/topic.html">Klimatet.</a></h2>
+  <div class="topics">
+    <div class="topic">
+      <h2><a href="/topic.html">Klimatet</a></h2>
       <p>Klimatförändringarna är vår tids största utmaning. Vi vill investera i hållbara lösningar, som möter klimatutmaningen och skapar nya jobb.</p>
-    </li>
-    <li>
-      <h2><a href="/topic.html">Nya jobb.</a></h2>
+    </div>
+    <div class="topic">
+      <h2><a href="/topic.html">Nya jobb</a></h2>
       <p>Många saknar jobb i Sverige, inte minst ungdomar. Vi behöver en politik som verkligen skapar nya jobb. Den utmaningen är vi beredda att ta tag i.</p>
-    </li>
-    <li>
-      <h2><a href="/topic.html">Skola och utbildning.</a></h2>
+    </div>
+    <div class="topic">
+      <h2><a href="/topic.html">Skola och utbildning</a></h2>
       <p>Miljöpartiet vill ha en skola som präglas av hög kvalitet och pedagogisk mångfald. Vi vill skapa förutsättningar för olika profiler och inriktningar, där varje elev får möjlighet att utvecklas.</p>
-    </li>
-    <li>
-      <h2><a href="/topic.html">Migration och lika rätt.</a></h2>
+    </div>
+    <div class="topic">
+      <h2><a href="/topic.html">Migration och lika rätt</a></h2>
       <p>Miljöpartiet vill skapa ett Sverige där alla är välkomna; oavsett var du kommer ifrån, vem du älskar eller om du har någon funktionsnedsättning. Ett samhälle som ger upp att vara bra för alla är snart inte bra för någon.</p>
-    </li>
-  </ol>
+    </div>
+  </div>
 </div>
 
   <section class="article-section local">
@@ -99,36 +92,36 @@
     </header>
 
     <h2><a href="#" class="topic">Östersund</a> En ekologisk kommun mitt i sameland</h2>
-    <ol class="topics">
-      <li>
-        <h3><a href="#">En skola för livet.</a></h3>
+    <div class="topics">
+      <div class="topic">
+        <h3><a href="#">En skola för livet</a></h3>
         <p>Miljöpartiet i Östersund vill ge de kommunala skolorna större pedagogisk frihet och satsa på matkvalitén i skolan. Vi vill anpassa barnomsorgen efter familjers behov och ha mindre barngrupper i förskolan.</p>
-      </li>
-      <li>
-        <h3><a href="#">Ungdomarnas situation.</a></h3>
+      </div>
+      <div class="topic">
+        <h3><a href="#">Ungdomarnas situation</a></h3>
         <p>Kommunens satsning på ”Mötesplatser unga” ska utvecklas vidare. Vi vill också bygga boende för ungdomar/studenter, stärka arbetet mot droger och skapa satsa på praktikplatser och jobb för unga.</p>
-      </li>
-      <li>
-        <h3><a href="#">Ungdomarnas situation.</a></h3>
+      </div>
+      <div class="topic">
+        <h3><a href="#">Ungdomarnas situation</a></h3>
         <p>Kommunens satsning på ”Mötesplatser unga” ska utvecklas vidare. Vi vill också bygga boende för ungdomar/studenter, stärka arbetet mot droger och skapa satsa på praktikplatser och jobb för unga.</p>
-      </li>
-    </ol>
+      </div>
+    </div>
 
     <h2><a href="#" class="topic">Jämtland</a> Ett livskraftigt Jämtland</h2>
-    <ol class="topics">
-      <li>
-        <h3><a href="#">Stoppa klimatkatastrofen med förnybar energi.</a></h3>
+    <div class="topics">
+      <div class="topic">
+        <h3><a href="#">Stoppa klimatkatastrofen med förnybar energi</a></h3>
         <p>Klimathotet är globalt, men alla utsläpp är lokala. Miljöpartiet i Jämtland vill bygga ett center för miljöteknik i Sveg, utveckla järnvägstrafiken och bryt olje- och fossilbränsleberoendet. Jämtland, med sin potential för förnybar energi, ska vara drivande i klimatomställningen.</p>
-      </li>
-      <li>
-        <h3><a href="#">Matriket Jämtland.</a></h3>
+      </div>
+      <div class="topic">
+        <h3><a href="#">Matriket Jämtland</a></h3>
         <p>Mat ska hänga samman med livskvalitet och god miljö. Vi vill ha mer ekologisk mat, kortare djurtransporter och småskaliga slakterier.</p>
-      </li>
-      <li>
-        <h3><a href="#">Grönare närmiljö.</a></h3>
+      </div>
+      <div class="topic">
+        <h3><a href="#">Grönare närmiljö</a></h3>
         <p>Vi vill skapa ett friluftsområde på Storsjö strand, återställa Storsjön vid Sölvbacka strömmar och värna om en miljö fri från giftiga kemikalier.</p>
-      </li>
-    </ol>
+      </div>
+    </div>
   </section>
 
   <section class="article-section current-topics">
@@ -167,7 +160,7 @@
   <h1>Alla frågor A-Ö</h1>
   <form class="speech-bubble" action="/search/topics" method="get">
     <div class="search">
-      <input type="search" placeholder="Sök fråga">
+      <input type="search" placeholder="Sök fråga" id="topics-search">
       <button type="input">Sök</button>
     </div>
   </form>
@@ -312,41 +305,37 @@
       </div>
       <footer>
         
-        <nav class="breadcrumbs">
-          <p>  <a href="/">Hem</a>
-  <span>Vår politik</a>
-</p>
-        </nav>
-        
         <nav role="navigation search" id="site-navigation" class="main-navigation">
-          <div class="sections">
-            <ul>
-              <li class="start"><a href="/">Hem</a></li>
-              <li class="active-trail"><a href="/topics.html">Vi vill modernisera Sverige</a></li>
-              <li><a href="/persons.html">Om Miljöpartiet de gröna</a></li>
-              <li><a href="/conversations.html">Prata politik</a></li>
-            </ul>
+          <div class="inner">
+            <div class="sections">
+              <ul>
+                <li class="start"><a href="/">Hem</a></li>
+                <li class="active-trail"><a href="/topics.html">Vi vill modernisera Sverige</a></li>
+                <li><a href="/about.html">Om Miljöpartiet de gröna</a></li>
+                <li><a href="/conversations.html">Prata politik</a></li>
+              </ul>
+            </div>
+            <div class="first">
+              <ul>
+                <li><a href="#">Bli medlem</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Skolarbeten</a></li>
+              </ul>
+            </div>
+            <div class="second">
+              <ul>
+                <li><a href="#">Other languages</a></li>
+                <li><a href="#">Lättläst</a></li>
+                <li><a href="#">Ge en gåva</a></li>
+                <li><a href="#">Lediga jobb</a></li>
+              </ul>
+            </div>
+            <form action="/search" method="get" class="search">
+              <input type="search" name="query">
+              <button type="submit">Sök</button>
+            </form>
           </div>
-          <div class="first">
-            <ul>
-              <li><a href="#">Bli medlem</a></li>
-              <li><a href="#">Kontakt</a></li>
-              <li><a href="#">Press</a></li>
-              <li><a href="#">Skolarbeten</a></li>
-            </ul>
-          </div>
-          <div class="second">
-            <ul>
-              <li><a href="#">Other languages</a></li>
-              <li><a href="#">Lättläst</a></li>
-              <li><a href="#">Ge en gåva</a></li>
-              <li><a href="#">Lediga jobb</a></li>
-            </ul>
-          </div>
-          <form action="/search" method="get" class="search">
-            <input type="search" name="query">
-            <button type="submit">Sök</button>
-          </form>
         </nav>
         <p id="logo-full"><a href="/">Miljöpartiet de gröna</a></p>
         <p id="copyright" class="copy">

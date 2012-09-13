@@ -3,6 +3,58 @@
 (function(f,e){var b=function(c,d,a){return 1===arguments.length?b.get(c):b.set(c,d,a)};b.get=function(c){f.cookie!==b._cacheString&&b._populateCache();return b._cache[c]};b.defaults={path:"/"};b.set=function(c,d,a){a={path:a&&a.path||b.defaults.path,domain:a&&a.domain||b.defaults.domain,expires:a&&a.expires||b.defaults.expires,secure:a&&a.secure!==e?a.secure:b.defaults.secure};d===e&&(a.expires=-1);switch(typeof a.expires){case "number":a.expires=new Date((new Date).getTime()+1E3*a.expires);break;
 case "string":a.expires=new Date(a.expires)}c=encodeURIComponent(c)+"="+(d+"").replace(/[^!#-+\--:<-[\]-~]/g,encodeURIComponent);c+=a.path?";path="+a.path:"";c+=a.domain?";domain="+a.domain:"";c+=a.expires?";expires="+a.expires.toGMTString():"";c+=a.secure?";secure":"";f.cookie=c;return b};b.expire=function(c,d){return b.set(c,e,d)};b._populateCache=function(){b._cache={};b._cacheString=f.cookie;for(var c=b._cacheString.split("; "),d=0;d<c.length;d++){var a=c[d].indexOf("="),g=decodeURIComponent(c[d].substr(0,
 a)),a=decodeURIComponent(c[d].substr(a+1));b._cache[g]===e&&(b._cache[g]=a)}};b.enabled=function(){var c="1"===b.set("cookies.js","1").get("cookies.js");b.expire("cookies.js");return c}();"function"===typeof define&&define.amd?define(function(){return b}):"undefined"!==typeof exports?("undefined"!=typeof module&&module.exports&&(exports=module.exports=b),exports.Cookies=b):window.Cookies=b})(document);
+/*
+ * Natural Sort algorithm for Javascript - Version 0.6 - Released under MIT license
+ * Author: Jim Palmer (based on chunking idea from Dave Koelle)
+ * Contributors: Mike Grier (mgrier.com), Clint Priest, Kyle Adams, guillermo
+ */
+
+function naturalSort(a, b) {
+  var re = /(^-?[0-9]+(\.?[0-9]*)[df]?e?[0-9]?$|^0x[0-9a-f]+$|[0-9]+)/gi,
+    sre = /(^[ ]*|[ ]*$)/g,
+    dre = /(^([\w ]+,?[\w ]+)?[\w ]+,?[\w ]+\d+:\d+(:\d+)?[\w ]?|^\d{1,4}[\/\-]\d{1,4}[\/\-]\d{1,4}|^\w+, \w+ \d+, \d{4})/,
+    hre = /^0x[0-9a-f]+$/i,
+    ore = /^0/,
+    // convert all to strings and trim()
+    x = a.toString().replace(sre, '') || '',
+    y = b.toString().replace(sre, '') || '',
+    // chunk/tokenize
+    xN = x.replace(re, '\0$1\0').replace(/\0$/,'').replace(/^\0/,'').split('\0'),
+    yN = y.replace(re, '\0$1\0').replace(/\0$/,'').replace(/^\0/,'').split('\0'),
+    // numeric, hex or date detection
+    xD = parseInt(x.match(hre)) || (xN.length != 1 && x.match(dre) && Date.parse(x)),
+    yD = parseInt(y.match(hre)) || xD && y.match(dre) && Date.parse(y) || null;
+  // first try and sort Hex codes or Dates
+  if (yD) {
+    if ( xD < yD ) {
+      return -1;
+    } else if ( xD > yD ) {
+      return 1;
+    }
+  }
+  // natural sorting through split numeric strings and default strings
+  for (var cLoc=0, numS=Math.max(xN.length, yN.length); cLoc < numS; cLoc++) {
+    // find floats not starting with '0', string or 0 if not defined (Clint Priest)
+    oFxNcL = !(xN[cLoc] || '').match(ore) && parseFloat(xN[cLoc]) || xN[cLoc] || 0;
+    oFyNcL = !(yN[cLoc] || '').match(ore) && parseFloat(yN[cLoc]) || yN[cLoc] || 0;
+    // handle numeric vs string comparison - number < string - (Kyle Adams)
+    if (isNaN(oFxNcL) !== isNaN(oFyNcL)) {
+      return (isNaN(oFxNcL)) ? 1 : -1;
+    // rely on string comparison if different types - i.e. '02' < 2 != '02' < '2'
+    } else if (typeof oFxNcL !== typeof oFyNcL) {
+      oFxNcL += '';
+      oFyNcL += '';
+    }
+    if (oFxNcL < oFyNcL) {
+      return -1;
+    }
+    if (oFxNcL > oFyNcL) {
+      return 1;
+    }
+  }
+  return 0;
+}
+;
 /*! matchMedia() polyfill - Test a CSS media type/query in JS. Authors & copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Zakas. Dual MIT/BSD license */
 /*! NOTE: If you're already including a window.matchMedia polyfill via Modernizr or otherwise, you don't need this part */
 
@@ -28,6 +80,179 @@ $(function() {
     }
   };
 
+  Mp.searchAsYouType = (function() {
+    var $element, $suggest_list,
+    positionOffsetX, positionOffsetY,
+    options,
+    focused = -1, current_suggestions = [];
+
+    var movementKeys = {
+      '16': null, // Shift
+      '27': function() { // esc
+        hide();
+        $element.blur();
+      },
+      '37': null, // Arrow left
+      '38': function(e) { // Arrow up
+        focusPrevious();
+        e.preventDefault(e);
+      },
+      '39': null, // Arrow right
+      '40': function(e) { // Arrow down
+        focusNext();
+        e.preventDefault();
+      },
+      '9': function(e) { // tab
+        !e.shiftKey ? focusNext() : focusPrevious();
+        e.preventDefault();
+      },
+      '13': function(e) { // enter
+        e.preventDefault();
+        $suggest_list.find("a.focused").trigger("click");
+      }
+    };
+
+    var init = function(element, opts) {
+      $element = $(element);
+      if ($element.size() == 0) {
+        return;
+      }
+      $suggest_list = $('<div id="search-suggestions" class="suggestions" style="display:none;position:absolute;"></div>');
+      $suggest_list.css({
+        width: $element.outerWidth() + 'px'
+      });
+      var $body = $('body');
+      positionOffsetX = parseInt($body.css('paddingLeft'), 10);
+      positionOffsetY = parseInt($body.css('paddingTop'), 10) + $element.outerHeight();
+
+      options = $.extend({
+        source: []
+      }, opts || {});
+
+      if (typeof options.source === 'function') {
+        options.source = options.source.call(this);
+      }
+
+      $element.on('keydown.autocomplete', function(e) {
+        var func = movementKeys[e.keyCode.toString()];
+        if (typeof func === 'function') {
+          func.call(this, e);
+        }
+      }).on('keyup.autocomplete', function(e) {
+        if (typeof movementKeys[e.keyCode.toString()] !== 'undefined') {
+          e.preventDefault();
+          return;
+        }
+        search($element.val());
+      }).on('focus.autocomplete', function() {
+        if ($.trim($element.val()) !== '') {
+          show();
+        }
+      }).on('blur.autocomplete', function() {
+        focusSuggestion(-1);
+      });
+
+      $(window).on('resize.autocomplete', position);
+
+      $suggest_list.appendTo('body');
+    };
+
+    var search = function(value) {
+      var value = $.trim(value);
+      if (value === '') {
+        update([]);
+        hide();
+      } else if (value !== '') {
+        update(searchSources(value));
+        if ($suggest_list.is(':hidden')) {
+          show();
+        }
+      }
+    };
+
+    var searchSources = function(value) {
+      var test = new RegExp('^' + value + '|\\s' + value, 'i');
+      return $.grep(options.source, function(company) {
+        return test.exec(company.name) !== null;
+      });
+    };
+
+    var update = function(matches) {
+      current_suggestions = matches;
+      focused = -1;
+
+      if (current_suggestions.length == 0) {
+        current_suggestions.push(notFound());
+      }
+
+      var html = [];
+      $.each(current_suggestions, function(i, c) {
+        html.push('<a href="'+ c.href +'">'+ c.name +'</a>');
+      });
+      $suggest_list.html(html.join(''));
+    };
+
+    var show = function() {
+      position();
+      $suggest_list.show();
+      $("#search").addClass("has-results");
+      $(document).on('click.autocomplete', function(e) {
+        var el = $suggest_list.get(0);
+        if (e.target !== $element.get(0) && e.target !== el && !$.contains(el, e.target)) {
+          hide();
+          $element.blur();
+        }
+      });
+    };
+
+    var hide = function() {
+      $suggest_list.hide();
+      $("#search").removeClass("has-results");
+      $(document).off('click.autocomplete');
+    };
+
+    var focusNext = function() {
+      var num = current_suggestions.length;
+      if (num > 0 && focused < (num - 1)) {
+        focusSuggestion(focused + 1);
+      } else if (focused === (num - 1)) {
+        focusSuggestion(0);
+      }
+    };
+
+    var focusPrevious = function() {
+      if (focused !== -1) {
+        focusSuggestion(focused - 1);
+      } else {
+        focusSuggestion(current_suggestions.length - 1);
+      }
+    };
+
+    var focusSuggestion = function(num) {
+      $suggest_list.find('a').removeClass('focused')
+      .filter(':nth-child('+ (num + 1) +')')
+      .addClass('focused');
+      focused = num;
+    };
+
+    var position = function() {
+      var position = $element.offset();
+      $suggest_list.css({
+        'top': Math.round(position.top + positionOffsetY) + 'px',
+        'left': Math.round(position.left + positionOffsetX) + 'px'
+      });
+    };
+
+    var notFound = function () {
+      return {
+        name: 'No matches found',
+        id: null
+      }
+    };
+
+    return init;
+  })();
+
   Mp.NavigationToggler = function(element) {
     var $toggler = $(element),
         setup_run = false,
@@ -39,8 +264,9 @@ $(function() {
       }
       var $original_nav = $('#site-navigation');
       $nav = $original_nav.clone();
-      $nav.attr('id', 'site-top-navigation');
-      console.log($original_nav);
+      $nav.attr('id', 'site-top-navigation').css({
+        visibility: 'hidden'
+      });
 
       $nav.append('<a href="#" class="close"><span>Stäng meny</span></a>');
       $nav.on('click', 'a.close', hide);
@@ -59,28 +285,41 @@ $(function() {
     }
 
     var hide = function(e) {
-      console.log(e);
       e.preventDefault();
       $nav.addClass('inactive').removeClass('active');
     };
 
     var show = function(e) {
       e.preventDefault();
+      $nav.css('visibility', 'visible');
       $nav.addClass('active').removeClass('inactive');
     };
 
     $toggler.bind('click', show);
-    $toggler.bind('mouseenter', function() {
-      setup();
-    });
-  }
+    setup();
+  };
 
   $(document).ready(function() {
     Mp.NavigationToggler('#skip-to-navigation');
     Mp.CookieChecker();
+    Mp.searchAsYouType('#topics-search', {
+      source: function() {
+        var items = $.map($('#topics a'), function(link) {
+          return {
+            name: $(link).text(),
+            href: link.href
+          };
+        });
+
+        return items.sort(function(self, other) {
+          return naturalSort(self.name, other.name);
+        });
+      }
+    })
   });
 
 }(jQuery));
+
 
 
 
