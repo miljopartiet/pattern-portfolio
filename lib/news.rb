@@ -9,13 +9,13 @@ class News
     end
   end
 
-  def self.all(limit = nil)
+  def self.all(limit = nil, offset = 0)
     @all ||= self.load.map do |attrs|
       self.new attrs
     end
 
     if limit && limit < @all.size
-      @all[0...limit]
+      @all[offset...(limit + offset)]
     else
       @all
     end
