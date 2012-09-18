@@ -3,14 +3,14 @@
   var Mp = {};
 
   Mp.CookieChecker = function() {
-    var cookie = Cookies.get('allow-cookies'),
+    var cookie = $.cookie('allow-cookies'),
         $message;
     if (! cookie) {
       $message = $('#cookies');
       $message.bind('click', 'a.confirm', function(e) {
         e.preventDefault();
         $message.hide();
-        Cookies.set('allow-cookies', true);
+        $.cookie('allow-cookies', true, { expires: 365, path: '/' });
       });
       $message.show();
     }
