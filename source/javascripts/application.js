@@ -1,4 +1,4 @@
-$(function() {
+(function($) {
   "use strict";
   var Mp = {};
 
@@ -7,7 +7,7 @@ $(function() {
         $message;
     if (! cookie) {
       $message = $('#cookies');
-      $message.on('click', 'a.confirm', function(e) {
+      $message.bind('click', 'a.confirm', function(e) {
         e.preventDefault();
         $message.hide();
         Cookies.set('allow-cookies', true);
@@ -69,26 +69,26 @@ $(function() {
         options.source = options.source.call(this);
       }
 
-      $element.on('keydown.autocomplete', function(e) {
+      $element.bind('keydown.autocomplete', function(e) {
         var func = movementKeys[e.keyCode.toString()];
         if (typeof func === 'function') {
           func.call(this, e);
         }
-      }).on('keyup.autocomplete', function(e) {
+      }).bind('keyup.autocomplete', function(e) {
         if (typeof movementKeys[e.keyCode.toString()] !== 'undefined') {
           e.preventDefault();
           return;
         }
         search($element.val());
-      }).on('focus.autocomplete', function() {
+      }).bind('focus.autocomplete', function() {
         if ($.trim($element.val()) !== '') {
           show();
         }
-      }).on('blur.autocomplete', function() {
+      }).bind('blur.autocomplete', function() {
         focusSuggestion(-1);
       });
 
-      $(window).on('resize.autocomplete', position);
+      $(window).bind('resize.autocomplete', position);
 
       $suggest_list.appendTo('body');
     };
@@ -132,7 +132,7 @@ $(function() {
       position();
       $suggest_list.show();
       $("#search").addClass("has-results");
-      $(document).on('click.autocomplete', function(e) {
+      $(document).bind('click.autocomplete', function(e) {
         var el = $suggest_list.get(0);
         if (e.target !== $element.get(0) && e.target !== el && !$.contains(el, e.target)) {
           hide();
@@ -205,7 +205,7 @@ $(function() {
       });
 
       $nav.append('<a href="#" class="close"><span>Stäng meny</span></a>');
-      $nav.on('click', 'a.close', hide);
+      $nav.bind('click', 'a.close', hide);
 
       $('body').append($nav);
       var offset = $nav.outerHeight(),
