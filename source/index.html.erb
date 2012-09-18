@@ -32,19 +32,7 @@ body_class: front
     </blockquote>
   </div>
   <section class="news-posts article-section">
-    <ul class="icon-list">
-    <% News.all(5).each do |post| %>
-      <li>
-        <a href="#">
-          <img src="/images/sketch/dn.png" alt="" class="icon">
-          <span class="title"><%= post.title %></span>
-          <span class="meta">
-            <%= post.time %>, <%= post.source_title %>, <%= post.source %>
-          </span>
-        </a>
-      </li>
-    <% end %>
-    </ul>
+    <%= partial 'news_list' %>
     <p><a href="#" class="action">Visa fler nyheter</a></p>
   </section>
   <div class="speech-bubble">
