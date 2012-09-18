@@ -144,7 +144,7 @@
     var hide = function() {
       $suggest_list.hide();
       $("#search").removeClass("has-results");
-      $(document).off('click.autocomplete');
+      $(document).unbind('click.autocomplete');
     };
 
     var focusNext = function() {
