@@ -59,6 +59,11 @@
   .tabbed {
     header {
       padding: 0;
+      margin-top: 56px;
+      margin-bottom: 56px;
+    }
+    .article-subsection {
+      border: none;
     }
     .tabs {
       margin-bottom: -16px;
