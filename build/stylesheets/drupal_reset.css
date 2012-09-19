@@ -6,3 +6,7 @@ ul.menu li {
     padding: 0;
     list-style-image: none;
     list-style-type: none; }
+
+/* line 9, drupal_reset.css.scss */
+.calendar {
+  width: auto; }
