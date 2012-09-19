@@ -1,8 +1,15 @@
-/*! Cookies.js - 0.2.0; Copyright (c) 2012, Scott Hamper; http://www.opensource.org/licenses/MIT */
 
-(function(f,e){var b=function(c,d,a){return 1===arguments.length?b.get(c):b.set(c,d,a)};b.get=function(c){f.cookie!==b._cacheString&&b._populateCache();return b._cache[c]};b.defaults={path:"/"};b.set=function(c,d,a){a={path:a&&a.path||b.defaults.path,domain:a&&a.domain||b.defaults.domain,expires:a&&a.expires||b.defaults.expires,secure:a&&a.secure!==e?a.secure:b.defaults.secure};d===e&&(a.expires=-1);switch(typeof a.expires){case "number":a.expires=new Date((new Date).getTime()+1E3*a.expires);break;
-case "string":a.expires=new Date(a.expires)}c=encodeURIComponent(c)+"="+(d+"").replace(/[^!#-+\--:<-[\]-~]/g,encodeURIComponent);c+=a.path?";path="+a.path:"";c+=a.domain?";domain="+a.domain:"";c+=a.expires?";expires="+a.expires.toGMTString():"";c+=a.secure?";secure":"";f.cookie=c;return b};b.expire=function(c,d){return b.set(c,e,d)};b._populateCache=function(){b._cache={};b._cacheString=f.cookie;for(var c=b._cacheString.split("; "),d=0;d<c.length;d++){var a=c[d].indexOf("="),g=decodeURIComponent(c[d].substr(0,
-a)),a=decodeURIComponent(c[d].substr(a+1));b._cache[g]===e&&(b._cache[g]=a)}};b.enabled=function(){var c="1"===b.set("cookies.js","1").get("cookies.js");b.expire("cookies.js");return c}();"function"===typeof define&&define.amd?define(function(){return b}):"undefined"!==typeof exports?("undefined"!=typeof module&&module.exports&&(exports=module.exports=b),exports.Cookies=b):window.Cookies=b})(document);
+/**
+ * Cookie plugin 1.0
+ *
+ * Copyright (c) 2006 Klaus Hartl (stilbuero.de)
+ * Dual licensed under the MIT and GPL licenses:
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.gnu.org/licenses/gpl.html
+ *
+ */
+
+jQuery.cookie=function(b,j,m){if(typeof j!="undefined"){m=m||{};if(j===null){j="";m.expires=-1}var e="";if(m.expires&&(typeof m.expires=="number"||m.expires.toUTCString)){var f;if(typeof m.expires=="number"){f=new Date();f.setTime(f.getTime()+(m.expires*24*60*60*1000))}else{f=m.expires}e="; expires="+f.toUTCString()}var l=m.path?"; path="+(m.path):"";var g=m.domain?"; domain="+(m.domain):"";var a=m.secure?"; secure":"";document.cookie=[b,"=",encodeURIComponent(j),e,l,g,a].join("")}else{var d=null;if(document.cookie&&document.cookie!=""){var k=document.cookie.split(";");for(var h=0;h<k.length;h++){var c=jQuery.trim(k[h]);if(c.substring(0,b.length+1)==(b+"=")){d=decodeURIComponent(c.substring(b.length+1));break}}}return d}};
 /*
  * Natural Sort algorithm for Javascript - Version 0.6 - Released under MIT license
  * Author: Jim Palmer (based on chunking idea from Dave Koelle)
@@ -62,21 +69,21 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
 
 /*! Respond.js v1.1.0: min/max-width media query polyfill. (c) Scott Jehl. MIT/GPLv2 Lic. j.mp/respondjs  */
 (function(e){e.respond={};respond.update=function(){};respond.mediaQueriesSupported=e.matchMedia&&e.matchMedia("only all").matches;if(respond.mediaQueriesSupported){return}var w=e.document,s=w.documentElement,i=[],k=[],q=[],o={},h=30,f=w.getElementsByTagName("head")[0]||s,g=w.getElementsByTagName("base")[0],b=f.getElementsByTagName("link"),d=[],a=function(){var D=b,y=D.length,B=0,A,z,C,x;for(;B<y;B++){A=D[B],z=A.href,C=A.media,x=A.rel&&A.rel.toLowerCase()==="stylesheet";if(!!z&&x&&!o[z]){if(A.styleSheet&&A.styleSheet.rawCssText){m(A.styleSheet.rawCssText,z,C);o[z]=true}else{if((!/^([a-zA-Z:]*\/\/)/.test(z)&&!g)||z.replace(RegExp.$1,"").split("/")[0]===e.location.host){d.push({href:z,media:C})}}}}u()},u=function(){if(d.length){var x=d.shift();n(x.href,function(y){m(y,x.href,x.media);o[x.href]=true;u()})}},m=function(I,x,z){var G=I.match(/@media[^\{]+\{([^\{\}]*\{[^\}\{]*\})+/gi),J=G&&G.length||0,x=x.substring(0,x.lastIndexOf("/")),y=function(K){return K.replace(/(url\()['"]?([^\/\)'"][^:\)'"]+)['"]?(\))/g,"$1"+x+"$2$3")},A=!J&&z,D=0,C,E,F,B,H;if(x.length){x+="/"}if(A){J=1}for(;D<J;D++){C=0;if(A){E=z;k.push(y(I))}else{E=G[D].match(/@media *([^\{]+)\{([\S\s]+?)$/)&&RegExp.$1;k.push(RegExp.$2&&y(RegExp.$2))}B=E.split(",");H=B.length;for(;C<H;C++){F=B[C];i.push({media:F.split("(")[0].match(/(only\s+)?([a-zA-Z]+)\s?/)&&RegExp.$2||"all",rules:k.length-1,hasquery:F.indexOf("(")>-1,minw:F.match(/\(min\-width:[\s]*([\s]*[0-9\.]+)(px|em)[\s]*\)/)&&parseFloat(RegExp.$1)+(RegExp.$2||""),maxw:F.match(/\(max\-width:[\s]*([\s]*[0-9\.]+)(px|em)[\s]*\)/)&&parseFloat(RegExp.$1)+(RegExp.$2||"")})}}j()},l,r,v=function(){var z,A=w.createElement("div"),x=w.body,y=false;A.style.cssText="position:absolute;font-size:1em;width:1em";if(!x){x=y=w.createElement("body");x.style.background="none"}x.appendChild(A);s.insertBefore(x,s.firstChild);z=A.offsetWidth;if(y){s.removeChild(x)}else{x.removeChild(A)}z=p=parseFloat(z);return z},p,j=function(I){var x="clientWidth",B=s[x],H=w.compatMode==="CSS1Compat"&&B||w.body[x]||B,D={},G=b[b.length-1],z=(new Date()).getTime();if(I&&l&&z-l<h){clearTimeout(r);r=setTimeout(j,h);return}else{l=z}for(var E in i){var K=i[E],C=K.minw,J=K.maxw,A=C===null,L=J===null,y="em";if(!!C){C=parseFloat(C)*(C.indexOf(y)>-1?(p||v()):1)}if(!!J){J=parseFloat(J)*(J.indexOf(y)>-1?(p||v()):1)}if(!K.hasquery||(!A||!L)&&(A||H>=C)&&(L||H<=J)){if(!D[K.media]){D[K.media]=[]}D[K.media].push(k[K.rules])}}for(var E in q){if(q[E]&&q[E].parentNode===f){f.removeChild(q[E])}}for(var E in D){var M=w.createElement("style"),F=D[E].join("\n");M.type="text/css";M.media=E;f.insertBefore(M,G.nextSibling);if(M.styleSheet){M.styleSheet.cssText=F}else{M.appendChild(w.createTextNode(F))}q.push(M)}},n=function(x,z){var y=c();if(!y){return}y.open("GET",x,true);y.onreadystatechange=function(){if(y.readyState!=4||y.status!=200&&y.status!=304){return}z(y.responseText)};if(y.readyState==4){return}y.send(null)},c=(function(){var x=false;try{x=new XMLHttpRequest()}catch(y){x=new ActiveXObject("Microsoft.XMLHTTP")}return function(){return x}})();a();respond.update=a;function t(){j(true)}if(e.addEventListener){e.addEventListener("resize",t,false)}else{if(e.attachEvent){e.attachEvent("onresize",t)}}})(this);
-$(function() {
+(function($) {
   "use strict";
   var Mp = {};
 
   Mp.CookieChecker = function() {
-    var cookie = Cookies.get('allow-cookies'),
+    var cookie = $.cookie('allow-cookies'),
         $message;
     if (! cookie) {
       $message = $('#cookies');
-      $message.on('click', 'a.confirm', function(e) {
+      $message.bind('click', 'a.confirm', function(e) {
         e.preventDefault();
         $message.hide();
-        Cookies.set('allow-cookies', true);
+        $.cookie('allow-cookies', true, { expires: 365, path: '/' });
       });
-      $message.show();
+      $('body').prepend($message.show());
     }
   };
 
@@ -133,26 +140,26 @@ $(function() {
         options.source = options.source.call(this);
       }
 
-      $element.on('keydown.autocomplete', function(e) {
+      $element.bind('keydown.autocomplete', function(e) {
         var func = movementKeys[e.keyCode.toString()];
         if (typeof func === 'function') {
           func.call(this, e);
         }
-      }).on('keyup.autocomplete', function(e) {
+      }).bind('keyup.autocomplete', function(e) {
         if (typeof movementKeys[e.keyCode.toString()] !== 'undefined') {
           e.preventDefault();
           return;
         }
         search($element.val());
-      }).on('focus.autocomplete', function() {
+      }).bind('focus.autocomplete', function() {
         if ($.trim($element.val()) !== '') {
           show();
         }
-      }).on('blur.autocomplete', function() {
+      }).bind('blur.autocomplete', function() {
         focusSuggestion(-1);
       });
 
-      $(window).on('resize.autocomplete', position);
+      $(window).bind('resize.autocomplete', position);
 
       $suggest_list.appendTo('body');
     };
@@ -196,7 +203,7 @@ $(function() {
       position();
       $suggest_list.show();
       $("#search").addClass("has-results");
-      $(document).on('click.autocomplete', function(e) {
+      $(document).bind('click.autocomplete', function(e) {
         var el = $suggest_list.get(0);
         if (e.target !== $element.get(0) && e.target !== el && !$.contains(el, e.target)) {
           hide();
@@ -208,7 +215,7 @@ $(function() {
     var hide = function() {
       $suggest_list.hide();
       $("#search").removeClass("has-results");
-      $(document).off('click.autocomplete');
+      $(document).unbind('click.autocomplete');
     };
 
     var focusNext = function() {
@@ -269,7 +276,7 @@ $(function() {
       });
 
       $nav.append('<a href="#" class="close"><span>Stäng meny</span></a>');
-      $nav.on('click', 'a.close', hide);
+      $nav.bind('click', 'a.close', hide);
 
       $('body').append($nav);
       var offset = $nav.outerHeight(),
@@ -315,7 +322,9 @@ $(function() {
           return naturalSort(self.name, other.name);
         });
       }
-    })
+    });
+
+    $('section.tabbed').tabs();
   });
 
 }(jQuery));
