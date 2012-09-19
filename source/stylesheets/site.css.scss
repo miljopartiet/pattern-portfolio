@@ -813,6 +813,20 @@ article + article {
     display: inline;
     margin: 0;
     padding: 0 (5em/20) 0 0;
+    position: relative;
+    & > .number {
+      font-size: (20em/26);
+      line-height: 32px;
+      position: absolute;
+      left: -55px;
+      background: transparent url(/images/bg-vignette.svg) 0 0 no-repeat;
+      display: block;
+      width: 35px;
+      height: 32px;
+      color: #fff;
+      text-align: center;
+      background-size: 100%;
+    }
   }
   p {
     display: inline;
