@@ -270,10 +270,13 @@
     width: 580px;
     margin: auto;
 
-    .label {
-    }
+    .label,
     .list {
-      @include columns(2 20px);
+      width: 100%;
+    }
+
+    .list {
+      @include columns(3 20px);
       li {
         font-size: (16em/20);
       }

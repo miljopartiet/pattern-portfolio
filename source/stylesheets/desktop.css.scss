@@ -26,11 +26,11 @@
     width: 100%;
     .group {
       @include clearfix;
-     }
+    }
     .label {
       float: left;
       width: percentage(165/970);
-      margin: 0;
+      margin-right: percentage(20/970);
     }
     .list {
       width: percentage(620/970);
@@ -277,6 +277,23 @@
   #topics {
     width: percentage(970/805);
     margin-left: - percentage(165/805);
+  }
+
+  .tabbed {
+    header {
+      padding: 0;
+    }
+    .tabs {
+      margin-top: -17px;
+      li {
+        margin: 0;
+      }
+      a.action {
+        font-size: (14em/18);
+      }
+    }
+    .ui-tabs-panel {
+    }
   }
 
   //

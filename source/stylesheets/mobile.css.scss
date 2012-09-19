@@ -51,7 +51,24 @@
     }
     .list {
       float: left;
-      width: percentage(200/284);
+      width: percentage(194/284);
+    }
+  }
+
+  // TODO: Fix header margins
+  .tabbed {
+    header {
+      padding: 0;
+    }
+    .tabs {
+      margin-bottom: -16px;
+      li {
+        margin: 0;
+      }
+      a.action {
+        font-size: (12em/16);
+        margin-right: (20em/12);
+      }
     }
   }
 }

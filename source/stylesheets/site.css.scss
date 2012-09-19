@@ -254,7 +254,6 @@ figcaption {
   font: (14em/16)/1 $arial;
   background: $green;
   color: #fff;
-  margin-top: 1em;
   padding: (10em/14) (15em/14);
   border-radius: (14em/14);
   white-space: nowrap;
@@ -787,6 +786,13 @@ article + article {
   .label {
     font: bold (26em/16)/(28/26) $swift;
     color: #000;
+    margin-bottom: (10em/26);
+  }
+  &.text-labels {
+    .label {
+      font-size: (20em/16);
+      line-height: (22/20);
+    }
   }
   .list {
     margin: 0;
