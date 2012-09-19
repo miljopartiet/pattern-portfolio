@@ -1,10 +1,8 @@
-#wrap {
-  ul.menu li {
-    margin-left: 0;
-    &.leaf {
-      padding: 0;
-      list-style-image: none;
-      list-style-type: none;
-    }
+ul.menu li {
+  margin-left: 0;
+  &.leaf {
+    padding: 0;
+    list-style-image: none;
+    list-style-type: none;
   }
 }
