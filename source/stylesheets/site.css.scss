@@ -375,6 +375,13 @@ blockquote {
 #site-navigation {
   @include clearfix;
 }
+#secondary-navigation {
+  ul,
+  li { display: inline; }
+  li {
+    font-size: (14em/16);
+  }
+}
 // Breadcrumbs
 // Can be found both in the top of the page
 // and in the page footer
