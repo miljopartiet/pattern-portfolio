@@ -252,18 +252,33 @@ figcaption {
 // Button like action links
 .action {
   font: (14em/16)/1 $arial;
-  background: $beige;
+  background: $green;
+  color: #fff;
   margin-top: 1em;
   padding: (10em/14) (15em/14);
   border-radius: (14em/14);
   white-space: nowrap;
 }
 .action a,
-a.action {
+a.action,
+.ui-tabs-nav a
+{
   text-decoration: none;
+  &:hover {
+    background: $green-dark;
+    color: #fff;
+  }
+  &.current,
+  &.current:hover {
+    background: $yellow;
+    color: #000;
+  }
+}
+.ui-tabs-nav .ui-state-active a {
+  background: $yellow;
+  color: #000;
 }
 button.action {
-  background: $green;
   color: #fff;
   border: none;
   padding: (8em/14) (30em/14);
@@ -827,4 +842,17 @@ article + article {
       color: #000;
     }
   }
+}
+
+// jQuery UI
+
+.ui-tabs-nav {
+  margin: 0;
+  list-style: none;
+  li {
+    display: inline;
+  }
+}
+.ui-tabs-hide {
+  display: none;
 }

@@ -251,7 +251,9 @@
           return naturalSort(self.name, other.name);
         });
       }
-    })
+    });
+
+    $('section.tabbed').tabs();
   });
 
 }(jQuery));
