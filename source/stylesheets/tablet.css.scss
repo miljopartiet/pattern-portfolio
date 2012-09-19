@@ -184,12 +184,12 @@
       &:hover {
         color: $green;
       }
-      &.more {
-        position: absolute;
-        right: 0;
-        bottom: -1.8em;
-        margin-right: 0;
-      }
+    }
+    .more a {
+      position: absolute;
+      right: 0;
+      bottom: -1.8em;
+      margin-right: 0;
     }
     form {
       text-align: right;
@@ -384,12 +384,12 @@
       &:hover {
         color: $green;
       }
-      &.more {
-        position: absolute;
-        right: 0;
-        bottom: -1.8em;
-        margin-right: 0;
-      }
+    }
+    .more a {
+      position: absolute;
+      right: 0;
+      bottom: -1.8em;
+      margin-right: 0;
     }
     div {
       margin-top: (10em/16);
