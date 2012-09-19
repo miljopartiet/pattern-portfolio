@@ -254,6 +254,16 @@
     });
 
     $('section.tabbed').tabs();
+    $('#conversation-form').hide();
+    $('#go-to-form').bind('click', function(e) {
+      e.preventDefault();
+      var $form = $('#conversation-form');
+      if ($form.is(':visible')) {
+        $('#conversation-form').slideUp();
+      } else {
+        $('#conversation-form').slideDown();
+      }
+    });
   });
 
 }(jQuery));
