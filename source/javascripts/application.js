@@ -12,7 +12,7 @@
         $message.hide();
         $.cookie('allow-cookies', true, { expires: 365, path: '/' });
       });
-      $message.show();
+      $('body').prepend($message.show());
     }
   };
 

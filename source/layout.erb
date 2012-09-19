@@ -14,13 +14,6 @@
     <script src="/javascripts/mp.js"></script>
   </head>
   <body<%= " class=\"#{data.page.body_class}\"" if data.page.body_class.present? %>>
-    <div id="cookies">
-      <p>
-        Denna webbplats <a href="#">använder cookies</a>.
-        Genom att fortsätta surfa på webbplatsen accepterar du vår använding av cookies.
-      </p>
-      <a href="#" class="confirm action">Ok, stäng detta meddelande</a>
-    </div>
     <div id="wrap">
       <header role="banner" id="site-banner">
         <div id="logo">
@@ -99,6 +92,13 @@
           Vi vill gärna ha dina synpunkter på vår webb. Kan vi förbättra något? <a href="mailto:mp@exaple.com">Skriv till oss och berätta!</a>
         </p>
       </footer>
+    </div>
+    <div id="cookies">
+      <p>
+        Denna webbplats <a href="#">använder cookies</a>.
+        Genom att fortsätta surfa på webbplatsen accepterar du vår använding av cookies.
+      </p>
+      <a href="#" class="confirm action">Ok, stäng detta meddelande</a>
     </div>
   </body>
 </html>
