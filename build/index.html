@@ -21,10 +21,10 @@
           <a href="/">Miljöpartiet</a>
         </div>
         <nav role="navigation" id="top-navigation">
-          <ul>
-            <li><a href="/topics.html"><span>Vår politik</span></a></li>
-            <li><a href="/about.html"><span>Om Miljöpartiet de gröna</span></a></li>
-            <li><a href="/conversations.html"><span>Prata politik</span></a></li>
+          <ul class="menu">
+            <li class="leaf"><a href="/topics.html"><span>Vår politik</span></a></li>
+            <li class="leaf"><a href="/about.html"><span>Om Miljöpartiet de gröna</span></a></li>
+            <li class="leaf"><a href="/conversations.html"><span>Prata politik</span></a></li>
           </ul>
         </nav>
         <div role="navigation" id="secondary-navigation">
@@ -33,9 +33,11 @@
             <button type="submit">Sök</button>
           </form>
           <div>
-            <a href="#">Bli medlem</a>
-            <a href="#">Kontakt</a>
-            <a href="#">Press</a>
+            <ul class="menu">
+              <li class="leaf"><a href="#">Bli medlem</a>
+              <li class="leaf"><a href="#">Kontakt</a>
+              <li class="leaf"><a href="#">Press</a>
+            </ul>
             <a href="#site-navigation" class="more">+ Fler</a>
           </div>
           <a href="#site-navigation" id="skip-to-navigation">Meny</a>
@@ -119,7 +121,7 @@
   </li>
 </ul>
 
-    <p><a href="#" class="action">Visa fler nyheter</a></p>
+    <a href="#" class="action">Visa fler nyheter</a>
   </section>
   <div class="speech-bubble">
     <h2>Prata med oss på dina villkor</h2>
@@ -259,27 +261,27 @@
         <nav role="navigation search" id="site-navigation" class="main-navigation">
           <div class="inner">
             <div class="sections">
-              <ul>
-                <li class="start"><a href="/">Hem</a></li>
-                <li class="active-trail"><a href="/topics.html">Vi vill modernisera Sverige</a></li>
-                <li><a href="/about.html">Om Miljöpartiet de gröna</a></li>
-                <li><a href="/conversations.html">Prata politik</a></li>
+              <ul class="menu">
+                <li class="leaf start"><a href="/">Hem</a></li>
+                <li class="leaf active-trail"><a href="/topics.html">Vi vill modernisera Sverige</a></li>
+                <li class="leaf"><a href="/about.html">Om Miljöpartiet de gröna</a></li>
+                <li class="leaf"><a href="/conversations.html">Prata politik</a></li>
               </ul>
             </div>
             <div class="first">
-              <ul>
-                <li><a href="#">Bli medlem</a></li>
-                <li><a href="#">Kontakt</a></li>
-                <li><a href="#">Press</a></li>
-                <li><a href="#">Skolarbeten</a></li>
+              <ul class="menu">
+                <li class="leaf"><a href="#">Bli medlem</a></li>
+                <li class="leaf"><a href="#">Kontakt</a></li>
+                <li class="leaf"><a href="#">Press</a></li>
+                <li class="leaf"><a href="#">Skolarbeten</a></li>
               </ul>
             </div>
             <div class="second">
-              <ul>
-                <li><a href="#">Other languages</a></li>
-                <li><a href="#">Lättläst</a></li>
-                <li><a href="#">Ge en gåva</a></li>
-                <li><a href="#">Lediga jobb</a></li>
+              <ul class="menu">
+                <li class="leaf"><a href="#">Other languages</a></li>
+                <li class="leaf"><a href="#">Lättläst</a></li>
+                <li class="leaf"><a href="#">Ge en gåva</a></li>
+                <li class="leaf"><a href="#">Lediga jobb</a></li>
               </ul>
             </div>
             <form action="/search" method="get" class="search">

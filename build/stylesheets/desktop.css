@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media only screen and (min-width: 1024px) {
   /* line 7, desktop.css.scss */
   h1 {
@@ -151,55 +152,65 @@
     width: 91.40625%; }
   /* line 172, desktop.css.scss */
   article blockquote {
+    position: relative;
     overflow: visible;
     width: 125.78125%; }
     /* line 176, desktop.css.scss */
+    article blockquote:before {
+      content: "”";
+      font-family: "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif;
+      font-size: 5em;
+      line-height: 1;
+      position: absolute;
+      left: -0.71em;
+      text-rendering: optimizeLegibility; }
+    /* line 187, desktop.css.scss */
     article blockquote > p {
       width: 72.67081%;
       margin-bottom: .5em;
       padding-left: 0; }
-    /* line 182, desktop.css.scss */
+    /* line 193, desktop.css.scss */
     article blockquote footer {
       width: 18.01242%;
       float: right;
       text-align: left; }
-      /* line 187, desktop.css.scss */
+      /* line 198, desktop.css.scss */
       article blockquote footer p {
         position: static;
         padding: 0; }
-      /* line 192, desktop.css.scss */
+      /* line 203, desktop.css.scss */
       article blockquote footer img {
         float: none;
         width: auto;
         margin: -100% 0 1em 0; }
-      /* line 198, desktop.css.scss */
+      /* line 209, desktop.css.scss */
       article blockquote footer a {
         display: block; }
-  /* line 205, desktop.css.scss */
+  /* line 216, desktop.css.scss */
   article figure > div {
     float: left;
     width: 79.50311%; }
-  /* line 210, desktop.css.scss */
+  /* line 221, desktop.css.scss */
   article figure figcaption {
     float: right;
     width: 18.01242%;
     margin: 0 0 0 2.48447%;
     border: none; }
 
-  /* line 220, desktop.css.scss */
+  /* line 231, desktop.css.scss */
   article + article h1 {
     margin-right: 2.7381em; }
 
-  /* line 226, desktop.css.scss */
+  /* line 237, desktop.css.scss */
   .article-section {
     width: 79.50311%; }
-    /* line 229, desktop.css.scss */
+    /* line 240, desktop.css.scss */
     .article-section header {
       width: 108.59375%;
       border-top: 1px solid #dddddd;
       border-bottom: none;
       padding: 0; }
-      /* line 234, desktop.css.scss */
+      /* line 245, desktop.css.scss */
       .article-section header.vignetted {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -207,57 +218,57 @@
         width: 134.375%;
         margin-left: -165px;
         padding-left: 165px; }
-        /* line 239, desktop.css.scss */
+        /* line 250, desktop.css.scss */
         .article-section header.vignetted .vignette {
           display: block;
           font-size: 1.4375em;
           position: absolute;
           top: -0.5em;
           left: 0; }
-    /* line 249, desktop.css.scss */
+    /* line 260, desktop.css.scss */
     .article-section .article-subsection {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       width: 108.59375%;
       padding-right: 8.59375%; }
-    /* line 254, desktop.css.scss */
+    /* line 265, desktop.css.scss */
     .article-section .subsection-header {
       width: 108.59375%; }
-    /* line 258, desktop.css.scss */
+    /* line 269, desktop.css.scss */
     .article-section .section-lead {
       margin-top: 1.42857em;
       float: right;
       width: 20.86331%;
       margin-right: -16.54676%; }
 
-  /* line 266, desktop.css.scss */
+  /* line 277, desktop.css.scss */
   #topics {
     width: 120.49689%;
     margin-left: -20.49689%; }
 
-  /* line 274, desktop.css.scss */
+  /* line 285, desktop.css.scss */
   footer nav.breadcrumbs {
     margin-right: 115px; }
 
-  /* line 279, desktop.css.scss */
+  /* line 290, desktop.css.scss */
   #site-navigation ul {
     font-family: arial, sans-serif;
     color: #999999;
     font-size: 0.875em;
     line-height: 1.28571em; }
-  /* line 284, desktop.css.scss */
+  /* line 295, desktop.css.scss */
   #site-navigation form {
     margin-right: 185px; }
-    /* line 286, desktop.css.scss */
+    /* line 297, desktop.css.scss */
     #site-navigation form input {
       width: 15.71429em; }
 
-  /* line 292, desktop.css.scss */
+  /* line 303, desktop.css.scss */
   #logo-full {
     margin-right: 10.27778em; }
 
-  /* line 296, desktop.css.scss */
+  /* line 307, desktop.css.scss */
   #copyright {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;

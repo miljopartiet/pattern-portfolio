@@ -333,7 +333,7 @@
     /* line 378, tablet.css.scss */
     #secondary-navigation a {
       white-space: nowrap;
-      margin-right: .2em; }
+      margin-left: .2em; }
       /* line 381, tablet.css.scss */
       #secondary-navigation a:hover {
         color: #339933; }
