@@ -21,6 +21,7 @@ h2 {
   font-weight: normal;
   font-size: (24em/16);
   line-height: (26/24);
+  text-rendering: optimizeLegibility;
 }
 
 h2 {
@@ -458,7 +459,7 @@ footer nav.breadcrumbs {
 	position: relative;
   background: $yellow;
   padding: 15px 20px;
-  margin: (40em/16) 0;
+  margin: (60em/16) 0;
   border-radius: 4px 4px 4px 0;
   @include box-sizing(border-box);
   &:after {
@@ -509,7 +510,7 @@ article {
   .lead p {
     font-size: (18em/16);
     line-height: (22/18);
-    margin-top: (12em/18);
+    margin-top: (8em/18);
   }
 }
 
@@ -524,7 +525,7 @@ article + article {
 
 // Article sections after the main content
 .article-section {
-  margin-top: (40em/16);
+  margin-top: (60em/16);
 
   header {
     border-bottom: 1px solid $warm-grey;
@@ -533,10 +534,10 @@ article + article {
     padding: 0 0 0.2em 0;
   }
   // FIXME: This won't work
-  & + *,
-  header + * {
-    margin-top: 20px;
-  }
+  //& + *,
+  //header + * {
+  //  margin-top: 20px;
+  //}
 
   h2 {
     a.topic {
@@ -625,7 +626,7 @@ article + article {
 
 // Add calendar style icons to the icon list
 // in the calendar subsection
-.calendar .icon-list {
+.icon-list.calendar {
   .icon {
     text-align:center;
     text-indent: -.3em;
@@ -818,6 +819,7 @@ article + article {
       font-size: (20em/26);
       line-height: 32px;
       position: absolute;
+      top: 3px;
       left: -55px;
       background: transparent url(/images/bg-vignette.svg) 0 0 no-repeat;
       display: block;
