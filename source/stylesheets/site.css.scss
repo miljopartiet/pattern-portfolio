@@ -740,6 +740,10 @@ article + article {
     }
 
     .byline {
+      p {
+        bottom: (-23em/13);
+      }
+
       img {
         right: percentage(-80/510);
       }
