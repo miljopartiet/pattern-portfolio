@@ -361,9 +361,9 @@
       width: 96.55172%; }
   /* line 409, tablet.css.scss */
   article .lead p {
-    margin-top: 0.48em;
     font-size: 1.375em;
-    line-height: 1.18182; }
+    line-height: 1.18182;
+    margin-top: 0.36364em; }
   /* line 415, tablet.css.scss */
   article .illustration {
     margin-top: 1.25em; }
