@@ -145,3 +145,28 @@ current_nav: about
     </ul>
   </div>
 </article>
+<article>
+<header class="intro">
+  <h1>Miljöpartiet runt om i Sverige</h1>
+  <form class="speech-bubble" action="/search/topics" method="get">
+    <div class="search">
+      <input type="search" placeholder="Sök kommun" id="topics-search">
+      <button type="input">Sök</button>
+    </div>
+  </form>
+  <div id="topics">
+    <ol class="labeled-list text-labels">
+    <% Localities.all.each do |group, localities| %>
+      <li class="group">
+        <span class="label"><%= group %></span>
+        <ol class="list">
+        <% localities.each do |locality| %><li>
+          <a href="#"><%= locality %></a>
+        </li><% end %>
+        </ol>
+      </li>
+    <% end %>
+    </ol>
+  </nav>
+</article>
+

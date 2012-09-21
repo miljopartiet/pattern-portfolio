@@ -1,5 +1,6 @@
 require "lib/news"
 require "lib/topics"
+require "lib/localities"
 ###
 # Compass
 ###
