@@ -132,10 +132,9 @@
       margin-bottom: 15px;
       float: left;
       width: percentage(144/320);
-      ul {
-        list-style-position: inside;
-      }
       li {
+        list-style: disc;
+        list-style-position: inside;
         margin-left: 15px;
         white-space: nowrap;
       }
