@@ -254,11 +254,12 @@ figcaption {
 
 // Button like action links
 .action {
-  font: (14em/16)/1 $arial;
+  font: (14em/16) $arial;
+  line-height: (30/14);
   background: $green;
   color: #fff;
-  padding: (10em/14) (15em/14);
-  border-radius: (14em/14);
+  padding: 0 (18em/14);
+  border-radius: (15em/14);
   white-space: nowrap;
   display: inline-block;
 }
