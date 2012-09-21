@@ -165,7 +165,9 @@ button {
 // The container's width must be equal to column widths + column margins
 .grid {
   overflow: hidden;
-  .container {}
+  .container {
+    margin-top: (20em/16);
+  }
   .column {
     display: inline-block;
     vertical-align: top;
