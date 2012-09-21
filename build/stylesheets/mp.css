@@ -1320,11 +1320,11 @@ article + article {
     line-height: 1.28571; }
   /* line 84, tablet.css.scss */
   .conversation .question .content p {
-    font-size: 1.22222em;
-    line-height: 1.09091; }
+    font-size: 1.25em;
+    line-height: 1.1; }
   /* line 93, tablet.css.scss */
   .conversation .answer .content p {
-    font-size: 0.88889em;
+    font-size: 1em;
     line-height: 1.25; }
 
   /* line 101, tablet.css.scss */
