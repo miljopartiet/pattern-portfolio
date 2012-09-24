@@ -209,6 +209,12 @@
         a {
           display: block;
         }
+        .name {
+          text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+          }
+        }
       }
     }
 
@@ -231,7 +237,6 @@
     h1 {
       margin-right: (115em/42);
     }
-
   }
 
   .article-section {
@@ -262,6 +267,7 @@
       width: percentage(695/640);
       padding-right: percentage(55/640);
     }
+
     .subsection-header {
       width: percentage(695/640);
     }
@@ -271,6 +277,16 @@
       float: right;
       width: percentage(145/695);
       margin-right: - percentage(115/695);
+    }
+
+    .section-lead,
+    .subsection-lead {
+      a {
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
     }
   }
 

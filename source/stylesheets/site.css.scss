@@ -323,12 +323,6 @@ blockquote {
     @include small-text;
     font-size: (13em/16);
     line-height: (17/13);
-    .name {
-      text-decoration: underline;
-      &:hover {
-        text-decoration: none;
-      }
-    }
     .title {
       color: $text-light-grey;
     }
@@ -576,6 +570,9 @@ article + article {
     font-size: (13em/16);
     line-height: (17/13);
     margin-top: .5em;
+    a {
+      text-decoration: none;
+    }
   }
 
    // Subsections
