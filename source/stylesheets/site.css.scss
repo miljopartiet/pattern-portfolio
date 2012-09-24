@@ -458,22 +458,34 @@ footer nav.breadcrumbs {
     position:absolute;
     bottom: 0;
     left: -20px;
-    border-width: 0 0 20px 20px;
+    border-width: 0 0 20px 21px;
     border-style: solid;
     border-color: $yellow transparent;
+  }
+  .inner {
+    @include clearfix;
   }
   h2 {
     margin-top: 0;
   }
   p {
-    display: inline;
     margin-top: (6em/16);
   }
   input {
     background: #fff;
   }
-  ul {
+  li {
     margin-left: 1em;
+  }
+  .aside {
+    margin-top: 1em;
+  }
+  .position-me {
+    .choose {
+      margin-top: (10em/14);
+      font-family: $arial;
+      font-size: (14em/18);
+    }
   }
 }
 

@@ -12,8 +12,28 @@
   .speech-bubble {
     background: $yellow url(/images/yellow-grain.png) 100% 0 repeat-y;
     background-size: 20px 50px;
-    padding-right: 55px;
     margin-right: (145em/16);
+    .main {
+      width: percentage(400/620);
+    }
+    .aside {
+      width: percentage(200/620);
+      box-sizing: border-box;
+    }
+    ul,
+    p { width: auto; }
+  }
+  .vcard {
+    .main,
+    .aside {
+      margin-top: 1em;
+    }
+    .main {
+      width: percentage(220/620);
+    }
+    .aside {
+      width: percentage(400/620);
+    }
   }
 
   .article-section {
