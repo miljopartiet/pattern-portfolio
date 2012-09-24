@@ -270,11 +270,6 @@
     width: 580px;
     margin: auto;
 
-    .label,
-    .list {
-      width: 100%;
-    }
-
     .list {
       @include columns(3 20px);
       li {
@@ -418,4 +413,22 @@
       margin-top: (20em/16);
     }
   }
+
+  .labeled-list {
+    .label {
+      width: 1em;
+      text-align: right;
+      margin: 0 0 0 ((1em + (20em/16)) * -1);
+    }
+    .list {
+      width: 100%;
+    }
+
+    &.text-labels .label {
+      text-align: left;
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+
 }

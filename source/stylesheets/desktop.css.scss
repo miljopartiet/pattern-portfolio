@@ -29,8 +29,10 @@
     }
     .label {
       float: left;
+      text-align: left;
       width: percentage(165/970);
       margin-right: percentage(20/970);
+      margin-left: 0;
     }
     .list {
       width: percentage(620/970);
