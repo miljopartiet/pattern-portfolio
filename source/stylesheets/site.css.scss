@@ -272,14 +272,9 @@ a.action,
     background: $green-dark;
     color: #fff;
   }
-  &.current,
-  &.current:hover {
-    background: $yellow;
-    color: #000;
-  }
 }
 .ui-tabs-nav .ui-state-active a {
-  background: $yellow;
+  background: $warm-grey;
   color: #000;
 }
 button.action {
