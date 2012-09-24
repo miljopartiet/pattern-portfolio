@@ -337,7 +337,7 @@
       margin-top: (10em/16);
       float: none;
       width: 100%;
-      @include columns(2 20px);
+      @include columns(2, 20px);
     }
   }
 

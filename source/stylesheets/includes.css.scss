@@ -37,6 +37,16 @@ $base-line-height: 1.5;
   color: $text-warm-grey;
 }
 
+@mixin columns($count, $gap) {
+  -moz-column-count: $count;
+  -moz-column-gap: $gap;
+  -webkit-column-count: $count;
+  -webkit-column-gap : $gap;
+  column-count: $count;
+  column-gap: $gap;
+}
+
+
 $total-cols: 12;
 $col-width: 4em;
 $gutter-width: 1em;

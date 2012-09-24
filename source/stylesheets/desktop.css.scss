@@ -36,7 +36,6 @@
     }
     .list {
       width: percentage(620/970);
-      @include columns(3 20px);
     }
   }
 

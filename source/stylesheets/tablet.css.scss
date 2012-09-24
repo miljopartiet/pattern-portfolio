@@ -271,7 +271,7 @@
     margin: auto;
 
     .list {
-      @include columns(3 20px);
+      @include columns(3, 20px);
       li {
         font-size: (16em/20);
       }
