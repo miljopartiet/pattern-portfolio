@@ -223,24 +223,24 @@ figcaption {
 }
 // Lists with icons or images
 .icon-list {
-  margin-top: (20em/18);
+  margin-top: (20em/16);
   list-style: none;
   li {
     margin:0;
+    font-family: $swift;
+    font-size: (20em/16);
     a {
       text-decoration: none;
       display: block;
-      font-family: $swift;
-      font-size: (20em/18);
       line-height: (22em/20);
       margin: 0 0 (10em/20) 55px;
       .meta {
         font-family: $arial;
-        font-size: (14em/20);
-        line-height: (18em/14);
+        font-size: (13em/20);
+        line-height: (18em/13);
         color: $text-grey;
         display: block;
-        margin-top: (2em/14);
+        margin-top: (2em/13);
       }
     }
     .icon {
