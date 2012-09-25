@@ -32,8 +32,8 @@
 
   /* line 31, tablet.css.scss */
   blockquote > p {
-    font-size: 1.375em;
-    line-height: 1.18182; }
+    font-size: 1.5em;
+    line-height: 1.16667; }
   /* line 35, tablet.css.scss */
   blockquote footer p {
     font-size: 1.07692em;
@@ -46,89 +46,90 @@
 
   /* line 49, tablet.css.scss */
   .speech-bubble h2 {
-    font-size: 1.25em;
-    line-height: 1.1; }
-  /* line 54, tablet.css.scss */
-  .speech-bubble p {
-    line-height: 1.44444; }
-  /* line 57, tablet.css.scss */
+    font-size: 1.5em;
+    line-height: 1.3; }
+  /* line 55, tablet.css.scss */
+  .speech-bubble p,
+  .speech-bubble li {
+    line-height: 1.33333; }
+  /* line 58, tablet.css.scss */
   .speech-bubble .main {
     margin-top: 0;
-    border-right: 1px solid #f5f3ee;
+    border-right: 1px solid #d7c82f;
     padding-right: 20px;
     box-sizing: border-box;
     float: left;
     width: 60%; }
-  /* line 65, tablet.css.scss */
+  /* line 66, tablet.css.scss */
   .speech-bubble .aside {
     margin-top: 0;
-    border-left: 1px solid #f5f3ee;
+    border-left: 1px solid #d7c82f;
     margin-left: -1px;
     padding-left: 20px;
     float: left;
     width: 33%; }
-  /* line 75, tablet.css.scss */
+  /* line 76, tablet.css.scss */
   .speech-bubble .main ul:first-child,
   .speech-bubble .aside ul:first-child {
     margin-top: 0; }
 
-  /* line 82, tablet.css.scss */
+  /* line 83, tablet.css.scss */
   .vcard .main,
   .vcard .aside {
-    margin-top: 1em; }
+    margin-top: 0.125em; }
 
-  /* line 89, tablet.css.scss */
+  /* line 90, tablet.css.scss */
   .article-section .section-lead,
   .article-section .subsection-lead {
     font-size: 0.875em;
     line-height: 1.28571; }
-  /* line 94, tablet.css.scss */
+  /* line 95, tablet.css.scss */
   .article-section .vignette {
     display: none; }
-  /* line 98, tablet.css.scss */
+  /* line 99, tablet.css.scss */
   .article-section h3 {
     font-size: 1.25em;
     line-height: 1.1; }
 
-  /* line 105, tablet.css.scss */
+  /* line 106, tablet.css.scss */
   .conversation .byline p {
     font-size: 0.875em;
     line-height: 1.28571; }
-  /* line 112, tablet.css.scss */
+  /* line 113, tablet.css.scss */
   .conversation .question .content p {
     font-size: 1.25em;
     line-height: 1.1; }
-  /* line 121, tablet.css.scss */
+  /* line 122, tablet.css.scss */
   .conversation .answer .content p {
     font-size: 1em;
     line-height: 1.25; }
 
-  /* line 129, tablet.css.scss */
+  /* line 130, tablet.css.scss */
   #site-banner {
     margin-bottom: 2.5em; }
 
-  /* line 133, tablet.css.scss */
+  /* line 134, tablet.css.scss */
   #logo {
     float: left;
     margin-top: -7px; }
 
-  /* line 141, tablet.css.scss */
+  /* line 142, tablet.css.scss */
   #skip-to-navigation {
     display: none; }
 
-  /* line 145, tablet.css.scss */
+  /* line 146, tablet.css.scss */
   #top-navigation {
     float: left; }
-    /* line 148, tablet.css.scss */
+    /* line 149, tablet.css.scss */
     #top-navigation ul {
       margin: 0 0 0 1.11111em;
       list-style: none; }
-    /* line 153, tablet.css.scss */
+    /* line 154, tablet.css.scss */
     #top-navigation li {
       margin: 0;
       font-size: 0.72222em;
       line-height: 1.93077; }
-    /* line 159, tablet.css.scss */
+    /* line 160, tablet.css.scss */
     #top-navigation a {
       display: inline-block;
       margin-top: 0.15385em;
@@ -138,42 +139,42 @@
       font-family: "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif;
       color: #fff;
       border-radius: 3px; }
-      /* line 168, tablet.css.scss */
+      /* line 169, tablet.css.scss */
       #top-navigation a:hover {
         background-color: #00730a; }
-    /* line 172, tablet.css.scss */
+    /* line 173, tablet.css.scss */
     #top-navigation span {
       display: block;
       margin-right: 7px;
       padding-right: 1.125em;
       background: transparent url(/images/arrows-right.svg) 100% 6px no-repeat; }
-    /* line 179, tablet.css.scss */
+    /* line 180, tablet.css.scss */
     #top-navigation li:first-child a {
       margin-top: 0; }
-    /* line 183, tablet.css.scss */
+    /* line 184, tablet.css.scss */
     #top-navigation li.active-trail {
       font-size: 0.88889em;
       line-height: 2.25; }
-      /* line 186, tablet.css.scss */
+      /* line 187, tablet.css.scss */
       #top-navigation li.active-trail a {
         margin-left: -20px;
         padding: 0 1.5625em 0 20px;
         background-color: #00730a;
         color: #fff; }
-      /* line 192, tablet.css.scss */
+      /* line 193, tablet.css.scss */
       #top-navigation li.active-trail span {
         margin: 0;
         padding: 0;
         background: transparent; }
 
-  /* line 200, tablet.css.scss */
+  /* line 201, tablet.css.scss */
   #secondary-navigation {
     position: relative;
     border-bottom: 1px solid #dddddd;
     float: right;
     padding-bottom: 0.375em;
     width: 28.64583%; }
-    /* line 206, tablet.css.scss */
+    /* line 207, tablet.css.scss */
     #secondary-navigation a {
       font-family: arial, sans-serif;
       color: #999999;
@@ -181,65 +182,65 @@
       line-height: 1.28571;
       white-space: nowrap;
       margin-right: 0; }
-      /* line 212, tablet.css.scss */
+      /* line 213, tablet.css.scss */
       #secondary-navigation a:hover {
         color: #339933; }
-    /* line 216, tablet.css.scss */
+    /* line 217, tablet.css.scss */
     #secondary-navigation .more a {
       position: absolute;
       right: 0;
       bottom: -1.8em;
       margin-right: 0; }
-    /* line 222, tablet.css.scss */
+    /* line 223, tablet.css.scss */
     #secondary-navigation form {
       text-align: right; }
-    /* line 225, tablet.css.scss */
+    /* line 226, tablet.css.scss */
     #secondary-navigation .search {
       text-align: right; }
-      /* line 227, tablet.css.scss */
+      /* line 228, tablet.css.scss */
       #secondary-navigation .search input {
         width: 8.75em; }
-    /* line 231, tablet.css.scss */
+    /* line 232, tablet.css.scss */
     #secondary-navigation div {
       text-align: right;
       margin-top: 0.625em; }
 
-  /* line 239, tablet.css.scss */
+  /* line 240, tablet.css.scss */
   nav.breadcrumbs p {
     font-size: 0.875em; }
 
-  /* line 244, tablet.css.scss */
+  /* line 245, tablet.css.scss */
   #wrap > nav.breadcrumbs {
     width: 36.25em;
     margin: 0 auto;
     margin-bottom: 0.9375em; }
 
-  /* line 250, tablet.css.scss */
+  /* line 251, tablet.css.scss */
   footer nav.breadcrumbs {
     border: none; }
 
-  /* line 254, tablet.css.scss */
+  /* line 255, tablet.css.scss */
   nav.main-navigation {
     border-top: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
     padding: 15px 0; }
-    /* line 258, tablet.css.scss */
+    /* line 259, tablet.css.scss */
     nav.main-navigation .inner > div {
       float: left;
       width: 10.625em;
       margin: 0 20px 0 0; }
-    /* line 266, tablet.css.scss */
+    /* line 267, tablet.css.scss */
     nav.main-navigation .inner .first li,
     nav.main-navigation .inner .second li {
       border-left: 1px solid #dddddd;
       padding-left: 10px; }
-    /* line 271, tablet.css.scss */
+    /* line 272, tablet.css.scss */
     nav.main-navigation .inner .first {
       width: 6.25em; }
-    /* line 274, tablet.css.scss */
+    /* line 275, tablet.css.scss */
     nav.main-navigation .inner .second {
       width: 7.5em; }
-    /* line 279, tablet.css.scss */
+    /* line 280, tablet.css.scss */
     nav.main-navigation ul {
       margin: 0;
       font-family: arial, sans-serif;
@@ -247,21 +248,21 @@
       font-size: 0.875em;
       line-height: 1.28571;
       list-style: none; }
-    /* line 286, tablet.css.scss */
+    /* line 287, tablet.css.scss */
     nav.main-navigation li {
       margin: 0 0 0 0; }
-    /* line 289, tablet.css.scss */
+    /* line 290, tablet.css.scss */
     nav.main-navigation form {
       text-align: right; }
-      /* line 291, tablet.css.scss */
+      /* line 292, tablet.css.scss */
       nav.main-navigation form input {
         width: 8.75em; }
 
-  /* line 297, tablet.css.scss */
+  /* line 298, tablet.css.scss */
   .labeled-list {
     width: 580px;
     margin: auto; }
-    /* line 301, tablet.css.scss */
+    /* line 302, tablet.css.scss */
     .labeled-list .list {
       -moz-column-count: 3;
       -moz-column-gap: 20px;
@@ -269,69 +270,69 @@
       -webkit-column-gap: 20px;
       column-count: 3;
       column-gap: 20px; }
-      /* line 303, tablet.css.scss */
+      /* line 304, tablet.css.scss */
       .labeled-list .list li {
         font-size: 0.8em; }
 
-  /* line 309, tablet.css.scss */
+  /* line 310, tablet.css.scss */
   #logo-full {
     height: 2.55556em;
     background-size: 16.11111em 2.55556em; }
 
-  /* line 314, tablet.css.scss */
+  /* line 315, tablet.css.scss */
   .news-posts .icon-list {
     margin: 0; }
-    /* line 316, tablet.css.scss */
+    /* line 317, tablet.css.scss */
     .news-posts .icon-list li {
       font-size: 1.44444em;
       padding: 0.57692em 0;
       border-bottom: 1px solid #dddddd; }
-      /* line 320, tablet.css.scss */
+      /* line 321, tablet.css.scss */
       .news-posts .icon-list li:first-child {
         padding-top: 0; }
-      /* line 323, tablet.css.scss */
+      /* line 324, tablet.css.scss */
       .news-posts .icon-list li:last-child {
         border: none;
         padding-bottom: 0; }
-    /* line 328, tablet.css.scss */
+    /* line 329, tablet.css.scss */
     .news-posts .icon-list a {
       margin: 0; }
-    /* line 331, tablet.css.scss */
+    /* line 332, tablet.css.scss */
     .news-posts .icon-list .title {
       line-height: 1.15385; }
-    /* line 334, tablet.css.scss */
+    /* line 335, tablet.css.scss */
     .news-posts .icon-list .meta {
       font-size: 0.53846em;
       line-height: 1.28571;
       margin-top: 0.14286em; }
 
-  /* line 342, tablet.css.scss */
+  /* line 343, tablet.css.scss */
   .grid .container {
     width: 103.44828%; }
-  /* line 345, tablet.css.scss */
+  /* line 346, tablet.css.scss */
   .grid .column {
     margin: 0 1.5625em 1.25em 0 0; }
-    /* line 348, tablet.css.scss */
+    /* line 349, tablet.css.scss */
     .grid .column.c2 {
       width: 46.66667%; }
-    /* line 351, tablet.css.scss */
+    /* line 352, tablet.css.scss */
     .grid .column.c3 {
       width: 30%; }
 
-  /* line 358, tablet.css.scss */
+  /* line 359, tablet.css.scss */
   .people .grid a h2 {
     font-size: 1.25em; }
-  /* line 361, tablet.css.scss */
+  /* line 362, tablet.css.scss */
   .people .grid a p {
     font-size: 1em; } }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  /* line 371, tablet.css.scss */
+  /* line 372, tablet.css.scss */
   #wrap {
     background: #fff;
     margin: 0 3.90625% 0 0;
     padding: 1.875em 0 3.125em 3.90625%; }
 
-  /* line 379, tablet.css.scss */
+  /* line 380, tablet.css.scss */
   #site-banner,
   #main,
   #wrap > footer {
@@ -339,70 +340,70 @@
     margin-left: auto;
     margin-right: auto; }
 
-  /* line 385, tablet.css.scss */
+  /* line 386, tablet.css.scss */
   #logo {
     width: 6.4375em;
     margin-right: 1.25em;
     margin-left: -2.8125em; }
-    /* line 390, tablet.css.scss */
+    /* line 391, tablet.css.scss */
     #logo a {
       height: 5.625em;
       width: 6.4375em;
       background-size: 100%; }
-      /* line 394, tablet.css.scss */
+      /* line 395, tablet.css.scss */
       #logo a:hover {
         background-position: 0 -11.25em; }
 
-  /* line 400, tablet.css.scss */
+  /* line 401, tablet.css.scss */
   #secondary-navigation {
     position: relative;
     border-bottom: 1px solid #dddddd;
     float: right;
     padding-bottom: 0.5em;
     width: 29.94792%; }
-    /* line 406, tablet.css.scss */
+    /* line 407, tablet.css.scss */
     #secondary-navigation a {
       white-space: nowrap;
       margin-left: .2em; }
-      /* line 409, tablet.css.scss */
+      /* line 410, tablet.css.scss */
       #secondary-navigation a:hover {
         color: #339933; }
-    /* line 413, tablet.css.scss */
+    /* line 414, tablet.css.scss */
     #secondary-navigation .more a {
       position: absolute;
       right: 0;
       bottom: -1.8em;
       margin-right: 0; }
-    /* line 419, tablet.css.scss */
+    /* line 420, tablet.css.scss */
     #secondary-navigation div {
       margin-top: 0.625em; }
 
-  /* line 425, tablet.css.scss */
+  /* line 426, tablet.css.scss */
   article .body {
     position: relative; }
-    /* line 429, tablet.css.scss */
+    /* line 430, tablet.css.scss */
     article .body > p,
     article .body > ul,
     article .body > ol {
       width: 96.55172%; }
-  /* line 434, tablet.css.scss */
+  /* line 435, tablet.css.scss */
   article .lead p {
     font-size: 1.375em;
     line-height: 1.18182;
     margin-top: 0.36364em; }
-  /* line 440, tablet.css.scss */
+  /* line 441, tablet.css.scss */
   article .illustration {
     margin-top: 1.25em; }
 
-  /* line 446, tablet.css.scss */
+  /* line 447, tablet.css.scss */
   .labeled-list .label {
     width: 1em;
     text-align: right;
     margin: 0 0 0 -2.25em; }
-  /* line 451, tablet.css.scss */
+  /* line 452, tablet.css.scss */
   .labeled-list .list {
     width: 100%; }
-  /* line 455, tablet.css.scss */
+  /* line 456, tablet.css.scss */
   .labeled-list.text-labels .label {
     text-align: left;
     margin-left: 0;

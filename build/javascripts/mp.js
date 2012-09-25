@@ -306,6 +306,15 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
     setup();
   };
 
+  Mp.focusAndCopy = function(selector) {
+    var select = function() {
+      this.setSelectionRange(0, 9999);
+    };
+    $(selector).bind('focus', select).bind('click', function() {
+      this.focus();
+    });
+  };
+
   $(document).ready(function() {
     Mp.NavigationToggler('#skip-to-navigation');
     Mp.CookieChecker();
@@ -335,6 +344,8 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
         $('#conversation-form').slideDown();
       }
     });
+
+    Mp.focusAndCopy('input.share');
   });
 
 }(jQuery));

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @media only screen and (min-width: 1024px) {
   /* line 7, desktop.css.scss */
   h1 {
@@ -12,10 +11,10 @@
     margin-right: 9.0625em; }
     /* line 16, desktop.css.scss */
     .speech-bubble .main {
-      width: 64.51613%; }
+      width: 63.93443%; }
     /* line 19, desktop.css.scss */
     .speech-bubble .aside {
-      width: 32.25806%;
+      width: 32.78689%;
       box-sizing: border-box; }
     /* line 24, desktop.css.scss */
     .speech-bubble ul,
@@ -25,7 +24,7 @@
   /* line 28, desktop.css.scss */
   .vcard .main,
   .vcard .aside {
-    margin-top: 1em; }
+    margin-top: 0.625em; }
   /* line 31, desktop.css.scss */
   .vcard .main {
     width: 35.48387%; }
@@ -176,67 +175,58 @@
     overflow: visible;
     width: 125.78125%; }
     /* line 197, desktop.css.scss */
-    article blockquote:before {
-      content: "”";
-      font-family: "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif;
-      font-size: 5em;
-      line-height: 1;
-      position: absolute;
-      left: -0.71em;
-      text-rendering: optimizeLegibility; }
-    /* line 208, desktop.css.scss */
     article blockquote > p {
       width: 72.67081%;
       margin-bottom: .5em;
       padding-left: 0; }
-    /* line 214, desktop.css.scss */
+    /* line 203, desktop.css.scss */
     article blockquote footer {
       width: 18.01242%;
       float: right;
       text-align: left; }
-      /* line 219, desktop.css.scss */
+      /* line 208, desktop.css.scss */
       article blockquote footer p {
         position: static;
         padding: 0; }
-      /* line 224, desktop.css.scss */
+      /* line 213, desktop.css.scss */
       article blockquote footer img {
         float: none;
         width: auto;
         margin: -100% 0 1em 0; }
-      /* line 230, desktop.css.scss */
+      /* line 219, desktop.css.scss */
       article blockquote footer a {
         display: block; }
-      /* line 233, desktop.css.scss */
+      /* line 222, desktop.css.scss */
       article blockquote footer .name {
         text-decoration: underline; }
-        /* line 235, desktop.css.scss */
+        /* line 224, desktop.css.scss */
         article blockquote footer .name:hover {
           text-decoration: none; }
-  /* line 243, desktop.css.scss */
+  /* line 232, desktop.css.scss */
   article figure > div {
     float: left;
     width: 79.50311%; }
-  /* line 248, desktop.css.scss */
+  /* line 237, desktop.css.scss */
   article figure figcaption {
     float: right;
     width: 18.01242%;
     margin: 0 0 0 2.48447%;
     border: none; }
 
-  /* line 258, desktop.css.scss */
+  /* line 247, desktop.css.scss */
   article + article h1 {
     margin-right: 2.7381em; }
 
-  /* line 263, desktop.css.scss */
+  /* line 252, desktop.css.scss */
   .article-section {
     width: 79.50311%; }
-    /* line 266, desktop.css.scss */
+    /* line 255, desktop.css.scss */
     .article-section header {
       width: 108.59375%;
       border-top: 1px solid #dddddd;
       border-bottom: none;
       padding: 0; }
-      /* line 271, desktop.css.scss */
+      /* line 260, desktop.css.scss */
       .article-section header.vignetted {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -244,82 +234,82 @@
         width: 134.375%;
         margin-left: -165px;
         padding-left: 165px; }
-        /* line 276, desktop.css.scss */
+        /* line 265, desktop.css.scss */
         .article-section header.vignetted .vignette {
           display: block;
           font-size: 1.4375em;
           position: absolute;
           top: -0.5em;
           left: 0; }
-    /* line 286, desktop.css.scss */
+    /* line 275, desktop.css.scss */
     .article-section .article-subsection {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       width: 108.59375%;
       padding-right: 8.59375%; }
-    /* line 292, desktop.css.scss */
+    /* line 281, desktop.css.scss */
     .article-section .subsection-header {
       width: 108.59375%; }
-    /* line 296, desktop.css.scss */
+    /* line 285, desktop.css.scss */
     .article-section .section-lead {
       margin-top: 1.42857em;
       float: right;
       width: 20.86331%;
       margin-right: -16.54676%; }
-    /* line 305, desktop.css.scss */
+    /* line 294, desktop.css.scss */
     .article-section .section-lead a,
     .article-section .subsection-lead a {
       text-decoration: underline; }
-      /* line 307, desktop.css.scss */
+      /* line 296, desktop.css.scss */
       .article-section .section-lead a:hover,
       .article-section .subsection-lead a:hover {
         text-decoration: none; }
 
-  /* line 315, desktop.css.scss */
+  /* line 304, desktop.css.scss */
   .related-topics img {
     margin-right: 20px; }
 
-  /* line 318, desktop.css.scss */
+  /* line 307, desktop.css.scss */
   #topics {
     width: 120.49689%;
     margin-left: -20.49689%; }
 
-  /* line 324, desktop.css.scss */
+  /* line 313, desktop.css.scss */
   .tabbed header {
     padding: 0; }
-  /* line 327, desktop.css.scss */
+  /* line 316, desktop.css.scss */
   .tabbed .tabs {
     margin-top: -17px; }
-    /* line 329, desktop.css.scss */
+    /* line 318, desktop.css.scss */
     .tabbed .tabs li {
       margin: 0; }
-    /* line 332, desktop.css.scss */
+    /* line 321, desktop.css.scss */
     .tabbed .tabs a.action {
       font-size: 0.77778em; }
 
-  /* line 343, desktop.css.scss */
+  /* line 332, desktop.css.scss */
   footer nav.breadcrumbs {
     margin-right: 115px; }
 
-  /* line 348, desktop.css.scss */
+  /* line 337, desktop.css.scss */
   #site-navigation ul {
     font-family: arial, sans-serif;
     color: #999999;
     font-size: 0.875em;
     line-height: 1.28571em; }
-  /* line 353, desktop.css.scss */
+  /* line 342, desktop.css.scss */
   #site-navigation form {
     margin-right: 185px; }
-    /* line 355, desktop.css.scss */
+    /* line 344, desktop.css.scss */
     #site-navigation form input {
       width: 15.71429em; }
 
-  /* line 361, desktop.css.scss */
+  /* line 350, desktop.css.scss */
   #logo-full {
     margin-right: 10.27778em; }
 
-  /* line 365, desktop.css.scss */
+  /* line 354, desktop.css.scss */
   #copyright {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
