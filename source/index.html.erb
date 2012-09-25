@@ -32,21 +32,22 @@ body_class: front
     </blockquote>
   </div>
   <section class="news-posts article-section">
+
     <%= partial 'news_list' %>
-    <a href="#" class="action">Visa fler nyheter</a>
+
+    <div class="fetch-more">
+      <a href="#" class="action">Visa fler nyheter</a>
+    </div>
+
   </section>
-  <div class="speech-bubble">
-    <h2>Vad tycker du?</h2>
-    <p><a href="/prata">Prata politik</a> med oss. Vi finns även på <a href="https://www.facebook.com/miljopartiet">Facebook</a> och <a href="http://twitter.com/miljopartiet">Twitter</a>.</p>
-  </div>
-</article>
+
+  <%= partial 'bubbles/follow' %>
+
+ </article>
 <article>
   <%= partial "main_topics" %>
   <p><a href="/topics.html">Läs mer om hur vi vill modernisera Sverige</a>
-  <div class="speech-bubble">
-    <h2>Nära dig</h2>
-    <p>Vi finns nära dig. Genom att <a href="#">välja kommun</a> får du veta vad vi vill göra där du bor.</p>
-  </div>
+  <%= partial 'bubbles/localize' %>
 </article>
 <article>
   <header class="intro">

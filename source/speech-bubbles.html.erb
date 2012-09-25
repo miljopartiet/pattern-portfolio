@@ -6,21 +6,7 @@
   <span>Bubblor</span>
 <% end %>
 <article>
-<div class="speech-bubble">
-  <div class="inner">
-    <div class="main">
-      <h2>Vad vill vi göra där du bor?</h2>
-      <p>Vi finns i hela landet och driver grön politik på din gata. Klicka på knappen så får du se:</p>
-    </div>
-    <div class="aside">
-      <div class="position-me">
-        <a class="action" href="#">Använd din position</a>
-        <span class="choose">eller <a href="#">välj kommun manuellt</a></span>
-      </div>
-    </div>
-  </div>
-</div>
-
+<%= partial 'bubbles/localize' %>
 <div class="speech-bubble">
   <div class="inner">
     <h2>Dela och diskutera denna sida</h2>
@@ -50,24 +36,7 @@
     </div>
   </div>
 </div>
-
-<div class="speech-bubble">
-  <div class="inner">
-    <div class="main">
-      <h2>Följ oss som det passar dig</h2>
-      <p>Miljöpartiet finns självklart både på Facebook och Twitter. Dessutom har vi flera <a href="#">RSS-flöden</a> som kanske passar just dig.</p>
-    </div>
-    <div class="aside">
-      <ul>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Flickr</a></li>
-        <li><a href="#">Google+</a></li>
-        <li><a href="#">MP-bloggar</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+<%= partial 'bubbles/follow' %>
 
 <div class="speech-bubble vcard">
   <div class="inner">
