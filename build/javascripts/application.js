@@ -236,12 +236,13 @@
   };
 
   Mp.focusAndCopy = function(selector) {
-    var select = function() {
-      this.setSelectionRange(0, 9999);
+    var selectIt = function() {
+      var input = this;
+      window.setTimeout(function(){
+        input.select();
+      }, 5);
     };
-    $(selector).bind('focus', select).bind('click', function() {
-      this.focus();
-    });
+    $(selector).bind('focus', selectIt).bind('click', selectIt);
   };
 
   $(document).ready(function() {
