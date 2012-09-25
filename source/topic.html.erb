@@ -93,10 +93,7 @@ current_nav: topics
     </ul>
   </section>
 
-  <div class="speech-bubble">
-    <h2>Diskutera med dina vänner.</h2>
-    <p>Direktlänk till denna sida: <a href="/topic.html">http://www.mp.se/vill/bostad</a></p>
-  </div>
+  <%= partial 'bubbles/share', locals: { url: "http://www.mp.se/vill/bostad" } %>
 
   <section class="article-section current-topics">
     <header class="vignetted">
