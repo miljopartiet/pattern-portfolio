@@ -9,17 +9,38 @@
   .speech-bubble {
     background: #ffe900 url(/images/yellow-grain.png) 100% 0 repeat-y;
     background-size: 20px 50px;
-    padding-right: 55px;
     margin-right: 9.0625em; }
+    /* line 16, desktop.css.scss */
+    .speech-bubble .main {
+      width: 64.51613%; }
+    /* line 19, desktop.css.scss */
+    .speech-bubble .aside {
+      width: 32.25806%;
+      box-sizing: border-box; }
+    /* line 24, desktop.css.scss */
+    .speech-bubble ul,
+    .speech-bubble p {
+      width: auto; }
 
-  /* line 20, desktop.css.scss */
+  /* line 28, desktop.css.scss */
+  .vcard .main,
+  .vcard .aside {
+    margin-top: 1em; }
+  /* line 31, desktop.css.scss */
+  .vcard .main {
+    width: 35.48387%; }
+  /* line 34, desktop.css.scss */
+  .vcard .aside {
+    width: 64.51613%; }
+
+  /* line 40, desktop.css.scss */
   .article-section .conversation {
     margin-right: 1.11111em; }
 
-  /* line 25, desktop.css.scss */
+  /* line 45, desktop.css.scss */
   .labeled-list {
     width: 100%; }
-    /* line 27, desktop.css.scss */
+    /* line 47, desktop.css.scss */
     .labeled-list .group {
       zoom: 1; }
       /* line 18, bourbon/addons/_clearfix.scss */
@@ -29,133 +50,132 @@
       /* line 23, bourbon/addons/_clearfix.scss */
       .labeled-list .group:after {
         clear: both; }
-    /* line 30, desktop.css.scss */
+    /* line 50, desktop.css.scss */
     .labeled-list .label {
       float: left;
+      text-align: left;
       width: 17.01031%;
-      margin-right: 2.06186%; }
-    /* line 35, desktop.css.scss */
+      margin-right: 2.06186%;
+      margin-left: 0; }
+    /* line 57, desktop.css.scss */
     .labeled-list .list {
-      width: 63.91753%;
-      -webkit-columns: 3 20px;
-      -moz-columns: 3 20px;
-      columns: 3 20px; }
+      width: 63.91753%; }
 
-  /* line 42, desktop.css.scss */
+  /* line 63, desktop.css.scss */
   .news-posts ul.icon-list {
     width: auto;
     margin-right: 1.11111em; }
-    /* line 45, desktop.css.scss */
+    /* line 66, desktop.css.scss */
     .news-posts ul.icon-list a {
       margin-right: 1.59091em; }
 
-  /* line 51, desktop.css.scss */
+  /* line 72, desktop.css.scss */
   .grid .container {
     width: 103.125%; }
-  /* line 55, desktop.css.scss */
+  /* line 76, desktop.css.scss */
   .grid .column.c2 {
     width: 46.9697%; }
-  /* line 58, desktop.css.scss */
+  /* line 79, desktop.css.scss */
   .grid .column.c3 {
     width: 30.30303%; }
 
-  /* line 67, desktop.css.scss */
+  /* line 88, desktop.css.scss */
   #wrap {
     padding-top: 2.5em;
     padding-bottom: 2.5em;
     max-width: 60.625em; }
 
-  /* line 74, desktop.css.scss */
+  /* line 95, desktop.css.scss */
   #logo {
     width: 10.3125em;
     margin: 0; }
-    /* line 77, desktop.css.scss */
+    /* line 98, desktop.css.scss */
     #logo a {
       width: 8.125em;
       height: 7.125em; }
-      /* line 80, desktop.css.scss */
+      /* line 101, desktop.css.scss */
       #logo a:hover {
         background-position: 0 -14.25em; }
 
-  /* line 87, desktop.css.scss */
+  /* line 108, desktop.css.scss */
   #top-navigation li {
     font-size: 0.88889em;
     line-height: 1.875; }
-  /* line 91, desktop.css.scss */
+  /* line 112, desktop.css.scss */
   #top-navigation a {
     margin-top: 0.125em;
     padding: 0 0 0 0.9375em; }
-  /* line 95, desktop.css.scss */
+  /* line 116, desktop.css.scss */
   #top-navigation span {
     padding-right: 1.4375em;
     background-position: 100% 8px; }
-  /* line 99, desktop.css.scss */
+  /* line 120, desktop.css.scss */
   #top-navigation li.active-trail {
     font-size: 1.11111em; }
-    /* line 101, desktop.css.scss */
+    /* line 122, desktop.css.scss */
     #top-navigation li.active-trail a {
       padding-right: 1.25em; }
 
-  /* line 107, desktop.css.scss */
+  /* line 128, desktop.css.scss */
   #secondary-navigation {
     width: 28.35052%;
     margin-top: 1.4375em;
     margin-right: 11.85567%; }
-    /* line 111, desktop.css.scss */
+    /* line 132, desktop.css.scss */
     #secondary-navigation form {
       float: left;
       text-align: left; }
-    /* line 115, desktop.css.scss */
+    /* line 136, desktop.css.scss */
     #secondary-navigation .search {
       width: 12.5em; }
-      /* line 117, desktop.css.scss */
+      /* line 138, desktop.css.scss */
       #secondary-navigation .search input {
         width: 100%; }
-    /* line 121, desktop.css.scss */
+    /* line 142, desktop.css.scss */
     #secondary-navigation div {
       text-align: left;
       margin: -1.78571em -41.81818% 0 0;
       float: right;
       width: 52.72727%; }
-      /* line 126, desktop.css.scss */
+      /* line 147, desktop.css.scss */
       #secondary-navigation div a {
         line-height: 1.42857;
         display: block; }
 
-  /* line 136, desktop.css.scss */
+  /* line 157, desktop.css.scss */
   #wrap > nav.breadcrumbs {
     width: auto;
     margin-left: 10.3125em; }
 
-  /* line 142, desktop.css.scss */
+  /* line 163, desktop.css.scss */
   #main {
     margin-left: 165px; }
 
-  /* line 147, desktop.css.scss */
+  /* line 168, desktop.css.scss */
   article .body {
     width: 79.50311%; }
-  /* line 152, desktop.css.scss */
+  /* line 173, desktop.css.scss */
   article .lead p {
     font-size: 1.625em;
     line-height: 1.23077;
     margin-top: 0.30769em; }
-  /* line 159, desktop.css.scss */
+  /* line 180, desktop.css.scss */
   article .illustration {
     margin-top: 30px; }
-    /* line 161, desktop.css.scss */
+    /* line 182, desktop.css.scss */
     article .illustration figcaption {
       margin: 0; }
-  /* line 168, desktop.css.scss */
+  /* line 189, desktop.css.scss */
   article p,
   article ul,
   article ol {
     width: 91.40625%; }
-  /* line 172, desktop.css.scss */
+  /* line 193, desktop.css.scss */
   article blockquote {
     position: relative;
     overflow: visible;
     width: 125.78125%; }
-    /* line 176, desktop.css.scss */
+    /* line 197, desktop.css.scss */
     article blockquote:before {
       content: "”";
       font-family: "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif;
@@ -164,53 +184,59 @@
       position: absolute;
       left: -0.71em;
       text-rendering: optimizeLegibility; }
-    /* line 187, desktop.css.scss */
+    /* line 208, desktop.css.scss */
     article blockquote > p {
       width: 72.67081%;
       margin-bottom: .5em;
       padding-left: 0; }
-    /* line 193, desktop.css.scss */
+    /* line 214, desktop.css.scss */
     article blockquote footer {
       width: 18.01242%;
       float: right;
       text-align: left; }
-      /* line 198, desktop.css.scss */
+      /* line 219, desktop.css.scss */
       article blockquote footer p {
         position: static;
         padding: 0; }
-      /* line 203, desktop.css.scss */
+      /* line 224, desktop.css.scss */
       article blockquote footer img {
         float: none;
         width: auto;
         margin: -100% 0 1em 0; }
-      /* line 209, desktop.css.scss */
+      /* line 230, desktop.css.scss */
       article blockquote footer a {
         display: block; }
-  /* line 216, desktop.css.scss */
+      /* line 233, desktop.css.scss */
+      article blockquote footer .name {
+        text-decoration: underline; }
+        /* line 235, desktop.css.scss */
+        article blockquote footer .name:hover {
+          text-decoration: none; }
+  /* line 243, desktop.css.scss */
   article figure > div {
     float: left;
     width: 79.50311%; }
-  /* line 221, desktop.css.scss */
+  /* line 248, desktop.css.scss */
   article figure figcaption {
     float: right;
     width: 18.01242%;
     margin: 0 0 0 2.48447%;
     border: none; }
 
-  /* line 231, desktop.css.scss */
+  /* line 258, desktop.css.scss */
   article + article h1 {
     margin-right: 2.7381em; }
 
-  /* line 237, desktop.css.scss */
+  /* line 263, desktop.css.scss */
   .article-section {
     width: 79.50311%; }
-    /* line 240, desktop.css.scss */
+    /* line 266, desktop.css.scss */
     .article-section header {
       width: 108.59375%;
       border-top: 1px solid #dddddd;
       border-bottom: none;
       padding: 0; }
-      /* line 245, desktop.css.scss */
+      /* line 271, desktop.css.scss */
       .article-section header.vignetted {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -218,74 +244,82 @@
         width: 134.375%;
         margin-left: -165px;
         padding-left: 165px; }
-        /* line 250, desktop.css.scss */
+        /* line 276, desktop.css.scss */
         .article-section header.vignetted .vignette {
           display: block;
           font-size: 1.4375em;
           position: absolute;
           top: -0.5em;
           left: 0; }
-    /* line 260, desktop.css.scss */
+    /* line 286, desktop.css.scss */
     .article-section .article-subsection {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       width: 108.59375%;
       padding-right: 8.59375%; }
-    /* line 265, desktop.css.scss */
+    /* line 292, desktop.css.scss */
     .article-section .subsection-header {
       width: 108.59375%; }
-    /* line 269, desktop.css.scss */
+    /* line 296, desktop.css.scss */
     .article-section .section-lead {
       margin-top: 1.42857em;
       float: right;
       width: 20.86331%;
       margin-right: -16.54676%; }
+    /* line 305, desktop.css.scss */
+    .article-section .section-lead a,
+    .article-section .subsection-lead a {
+      text-decoration: underline; }
+      /* line 307, desktop.css.scss */
+      .article-section .section-lead a:hover,
+      .article-section .subsection-lead a:hover {
+        text-decoration: none; }
 
-  /* line 278, desktop.css.scss */
+  /* line 315, desktop.css.scss */
   .related-topics img {
     margin-right: 20px; }
 
-  /* line 281, desktop.css.scss */
+  /* line 318, desktop.css.scss */
   #topics {
     width: 120.49689%;
     margin-left: -20.49689%; }
 
-  /* line 287, desktop.css.scss */
+  /* line 324, desktop.css.scss */
   .tabbed header {
     padding: 0; }
-  /* line 290, desktop.css.scss */
+  /* line 327, desktop.css.scss */
   .tabbed .tabs {
     margin-top: -17px; }
-    /* line 292, desktop.css.scss */
+    /* line 329, desktop.css.scss */
     .tabbed .tabs li {
       margin: 0; }
-    /* line 295, desktop.css.scss */
+    /* line 332, desktop.css.scss */
     .tabbed .tabs a.action {
       font-size: 0.77778em; }
 
-  /* line 306, desktop.css.scss */
+  /* line 343, desktop.css.scss */
   footer nav.breadcrumbs {
     margin-right: 115px; }
 
-  /* line 311, desktop.css.scss */
+  /* line 348, desktop.css.scss */
   #site-navigation ul {
     font-family: arial, sans-serif;
     color: #999999;
     font-size: 0.875em;
     line-height: 1.28571em; }
-  /* line 316, desktop.css.scss */
+  /* line 353, desktop.css.scss */
   #site-navigation form {
     margin-right: 185px; }
-    /* line 318, desktop.css.scss */
+    /* line 355, desktop.css.scss */
     #site-navigation form input {
       width: 15.71429em; }
 
-  /* line 324, desktop.css.scss */
+  /* line 361, desktop.css.scss */
   #logo-full {
     margin-right: 10.27778em; }
 
-  /* line 328, desktop.css.scss */
+  /* line 365, desktop.css.scss */
   #copyright {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
