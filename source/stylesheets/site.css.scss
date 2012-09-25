@@ -253,6 +253,9 @@ figcaption {
   }
 }
 
+.fetch-more {
+  margin-top: (20em/16);
+}
 // Button like action links
 .action {
   font: (14em/16) $arial;
@@ -606,21 +609,26 @@ article + article {
     }
   }
 
-    header + .article-subsection {
-      border-top: none;
-      margin-top: 0;
-    }
+  header + .article-subsection {
+    border-top: none;
+    margin-top: 0;
+  }
 
-    .subsection-header {
-      padding: 0 0 0.4em 0;
-      border-bottom: 1px solid $warm-grey;
+  .subsection-header {
+    padding: 0 0 0.4em 0;
+    border-bottom: 1px solid $warm-grey;
 
-      h3,
-      .subsection-lead {
-        display: inline;
-      }
+    h3,
+    .subsection-lead {
+      display: inline;
     }
+  }
 }
+
+.illustration + .article-section {
+  margin-top: (40em/16);
+}
+
 
 .people .grid {
   img {
