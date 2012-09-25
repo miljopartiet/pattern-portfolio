@@ -235,6 +235,16 @@
     setup();
   };
 
+  Mp.focusAndCopy = function(selector) {
+    var selectIt = function() {
+      var input = this;
+      window.setTimeout(function(){
+        input.select();
+      }, 5);
+    };
+    $(selector).bind('focus', selectIt).bind('click', selectIt);
+  };
+
   $(document).ready(function() {
     Mp.NavigationToggler('#skip-to-navigation');
     Mp.CookieChecker();
@@ -264,6 +274,8 @@
         $('#conversation-form').slideDown();
       }
     });
+
+    Mp.focusAndCopy('input.share');
   });
 
 }(jQuery));
