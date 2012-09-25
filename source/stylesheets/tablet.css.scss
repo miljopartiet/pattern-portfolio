@@ -29,8 +29,8 @@
 
   blockquote {
     & > p {
-      font-size: (22em/16);
-      line-height: (26/22);
+      font-size: (24em/16);
+      line-height: (28/24);
     }
     footer p {
       font-size: (14em/13);
@@ -47,16 +47,17 @@
 
   .speech-bubble {
     h2 {
-      font-size: (20em/16);
-      line-height: (22/20);
+      font-size: (24em/16);
+      line-height: (26/20);
     }
 
-    p {
-      line-height: (26/18);
+    p,
+    li {
+      line-height: (24/18);
     }
     .main {
       margin-top: 0;
-      border-right: 1px solid $beige;
+      border-right: 1px solid #d7c82f;
       padding-right: 20px;
       box-sizing: border-box;
       float: left;
@@ -64,7 +65,7 @@
     }
     .aside {
       margin-top: 0;
-      border-left: 1px solid $beige;
+      border-left: 1px solid #d7c82f;
       margin-left: -1px;
       padding-left: 20px;
       float: left;
@@ -80,7 +81,7 @@
   .vcard {
     .main,
     .aside {
-      margin-top: 1em;
+      margin-top: (2em/16);
     }
   }
 

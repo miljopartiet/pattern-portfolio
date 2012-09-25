@@ -14,10 +14,10 @@
     background-size: 20px 50px;
     margin-right: (145em/16);
     .main {
-      width: percentage(400/620);
+      width: percentage(390/610);
     }
     .aside {
-      width: percentage(200/620);
+      width: percentage(200/610);
       box-sizing: border-box;
     }
     ul,
@@ -26,7 +26,7 @@
   .vcard {
     .main,
     .aside {
-      margin-top: 1em;
+      margin-top: (10em/16);
     }
     .main {
       width: percentage(220/620);
@@ -194,17 +194,6 @@
       position: relative;
       overflow: visible;
       width: percentage(805/640);
-      &:before {
-        content: "”";
-        font-family: $swift;
-        font-size: (80em/16);
-        line-height: 1;
-        position: absolute;
-        left: -.71em;
-        text-rendering: optimizeLegibility;
-
-      }
-
       > p {
         width: percentage(585/805);
         margin-bottom: .5em;

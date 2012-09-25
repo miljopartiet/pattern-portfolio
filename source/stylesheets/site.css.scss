@@ -119,6 +119,7 @@ input[type="search"] {
 
 #{$all-text-inputs},
 textarea {
+  font-family: $arial;
   font-size: (14em/16);
   line-height: 1;
   color: #000;
@@ -301,6 +302,16 @@ blockquote {
   margin-bottom: (30em/16);
   border-bottom: 1px solid $warm-grey;
   color: $text-warm-grey;
+  &:before {
+    content: "”";
+    font-family: $swift;
+    font-size: (24em/16);
+    line-height: 1;
+    position: absolute;
+    top: .15em;
+    left: -.69em;
+    text-rendering: optimizeLegibility;
+  }
 
   & > p {
     margin-top: (12em/16);
@@ -449,7 +460,7 @@ footer nav.breadcrumbs {
 .speech-bubble {
 	position: relative;
   background: $yellow;
-  padding: 15px 20px;
+  padding: 20px 25px;
   margin: (60em/16) 0;
   border-radius: 4px 4px 4px 0;
   @include box-sizing(border-box);
@@ -468,8 +479,9 @@ footer nav.breadcrumbs {
   h2 {
     margin-top: 0;
   }
-  p {
-    margin-top: (6em/16);
+  p,
+  ul {
+    margin-top: (2em/18);
   }
   input {
     background: #fff;
@@ -481,10 +493,13 @@ footer nav.breadcrumbs {
     margin-top: 1em;
   }
   .position-me {
+    margin-top: 15px;
+    text-align: center;
     .choose {
-      margin-top: (10em/14);
+      margin-top: (8em/14);
+      display: block;
       font-family: $arial;
-      font-size: (14em/18);
+      font-size: (14em/16);
     }
   }
 }
