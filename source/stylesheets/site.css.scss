@@ -162,6 +162,13 @@ button {
   margin: (15em/16) 0 0 0;
 }
 
+#wrap input.share {
+  border: none;
+  padding: 3px 7px;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.6);
+}
+
 // Basic grid using inline block
 // The container's width must be equal to column widths + column margins
 .grid {
@@ -628,7 +635,6 @@ article + article {
 .illustration + .article-section {
   margin-top: (40em/16);
 }
-
 
 .people .grid {
   img {
