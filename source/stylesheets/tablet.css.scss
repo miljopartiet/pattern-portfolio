@@ -345,6 +345,10 @@
     }
   }
 
+  .topics .topic .number {
+    display: block;
+  }
+
   .grid {
     .container {
       width: percentage(600/580);
