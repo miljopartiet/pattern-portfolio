@@ -28,7 +28,9 @@
   }
 
   blockquote {
+    overflow: visible;
     & > p {
+      margin-left: 0;
       font-size: (24em/16);
       line-height: (28/24);
     }

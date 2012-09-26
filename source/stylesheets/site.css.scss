@@ -312,25 +312,27 @@ blockquote {
   margin-bottom: (30em/16);
   border-bottom: 1px solid $warm-grey;
   color: $text-warm-grey;
-  &:before {
-    content: "”";
-    font-family: $swift;
-    font-size: (24em/16);
-    line-height: 1;
-    position: absolute;
-    top: .15em;
-    left: -.69em;
-    text-rendering: optimizeLegibility;
-  }
 
   & > p {
-    margin-top: (12em/16);
     font-family: $swift;
     font-size: (18em/16);
     line-height: (22/18);
+    margin-top: (12em/16);
+    margin-left: 1em;
 
     &:first-child {
+      position: relative;
       margin-top: 0;
+      &:before {
+        content: "”";
+        font-family: $swift;
+        font-size: (24em/16);
+        line-height: 1;
+        position: absolute;
+        top: .15em;
+        left: -.69em;
+        text-rendering: optimizeLegibility;
+      }
     }
   }
 
