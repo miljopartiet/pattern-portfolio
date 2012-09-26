@@ -170,6 +170,29 @@
   article {
     .body {
       width: percentage(640/805);
+      figure {
+        &.full {
+          margin-right: (60em/16);
+        }
+        &.right {
+          width: percentage(310/640);
+          margin-right: -55px;
+          padding-top: 10px;
+          border-top: 1px solid $warm-grey;
+          div {
+            width: 235px;
+            float: left;
+            margin-right: 40px;
+          }
+          figcaption {
+            float: right;
+            margin: 0;
+            width: 145px;
+            margin: 0 -110px 0 0;
+            border: none;
+          }
+        }
+      }
     }
 
     .body,
@@ -192,8 +215,18 @@
 
     .illustration {
       margin-top: 30px;
-      figcaption {
-        margin: 0;
+      figure {
+        & > div {
+          float: left;
+          width: percentage(640/805);
+        }
+
+        figcaption {
+          float: right;
+          width: percentage(145/805);
+          margin: 0 0 0 percentage(20/805);
+          border:none;
+        }
       }
     }
 
@@ -230,20 +263,6 @@
             text-decoration: none;
           }
         }
-      }
-    }
-
-    figure {
-      & > div {
-        float: left;
-        width: percentage(640/805);
-      }
-
-      figcaption {
-        float: right;
-        width: percentage(145/805);
-        margin: 0 0 0 percentage(20/805);
-        border:none;
       }
     }
   }
