@@ -861,11 +861,10 @@ article + article {
   @include clearfix;
   list-style: none;
   .topic {
-    margin: (25em/16) 0 0 0;
+    margin: (25em/16) (60em/16) 0 0;
   }
   h2,
   h3 {
-    display: inline;
     margin: 0;
     padding: 0 (5em/20) 0 0;
     position: relative;
@@ -884,7 +883,10 @@ article + article {
       background-size: 100%;
     }
   }
+  h2,
+  h3,
   p {
+    margin-right: 0;
     display: inline;
   }
 }
