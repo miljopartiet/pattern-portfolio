@@ -51,10 +51,13 @@
       float: left;
       text-align: left;
       width: percentage(165/970);
-      margin-right: percentage(20/970);
+      margin-right: 0;
       margin-left: 0;
     }
+    &.labeled-list .list,
     .list {
+      @include columns(3, 20px);
+      margin-top: 0;
       width: percentage(620/970);
     }
   }

@@ -836,11 +836,15 @@ article + article {
       -o-column-break-inside: avoid;
       -ms-column-break-inside: avoid;
       column-break-inside: avoid;
+      vertical-align: top;
+      word-wrap: break-word;
+
     }
     // Fix missing column-break-inside support
     a {
       display: inline-block;
       vertical-align: top;
+      word-wrap: break-word;
     }
   }
 }
