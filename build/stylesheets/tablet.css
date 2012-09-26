@@ -138,7 +138,7 @@
       display: inline-block;
       margin-top: 0.15385em;
       padding: 0 0 0 0.92308em;
-      background: #339933;
+      background: #2b912c;
       text-decoration: none;
       font-family: "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif;
       color: #fff;
@@ -188,7 +188,7 @@
       margin-right: 0; }
       /* line 215, tablet.css.scss */
       #secondary-navigation a:hover {
-        color: #339933; }
+        color: #2b912c; }
     /* line 219, tablet.css.scss */
     #secondary-navigation .more a {
       position: absolute;
@@ -379,7 +379,7 @@
       margin-left: .2em; }
       /* line 420, tablet.css.scss */
       #secondary-navigation a:hover {
-        color: #339933; }
+        color: #2b912c; }
     /* line 424, tablet.css.scss */
     #secondary-navigation .more a {
       position: absolute;
