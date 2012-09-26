@@ -54,179 +54,189 @@
       float: left;
       text-align: left;
       width: 17.01031%;
-      margin-right: 2.06186%;
+      margin-right: 0;
       margin-left: 0; }
-    /* line 57, desktop.css.scss */
+    /* line 58, desktop.css.scss */
+    .labeled-list.labeled-list .list,
     .labeled-list .list {
+      -moz-column-count: 3;
+      -moz-column-gap: 20px;
+      -webkit-column-count: 3;
+      -webkit-column-gap: 20px;
+      column-count: 3;
+      column-gap: 20px;
+      margin-top: 0;
       width: 63.91753%; }
 
-  /* line 63, desktop.css.scss */
+  /* line 66, desktop.css.scss */
   .news-posts ul.icon-list {
     width: auto;
     margin-right: 1.11111em; }
-    /* line 66, desktop.css.scss */
+    /* line 69, desktop.css.scss */
     .news-posts ul.icon-list a {
       margin-right: 1.59091em; }
 
-  /* line 72, desktop.css.scss */
+  /* line 75, desktop.css.scss */
   .grid .container {
     width: 103.125%; }
-  /* line 76, desktop.css.scss */
+  /* line 79, desktop.css.scss */
   .grid .column.c2 {
     width: 46.9697%; }
-  /* line 79, desktop.css.scss */
+  /* line 82, desktop.css.scss */
   .grid .column.c3 {
     width: 30.30303%; }
 
-  /* line 88, desktop.css.scss */
+  /* line 91, desktop.css.scss */
   #wrap {
     padding-top: 2.5em;
     padding-bottom: 2.5em;
     max-width: 60.625em; }
 
-  /* line 95, desktop.css.scss */
+  /* line 98, desktop.css.scss */
   #logo {
     width: 10.3125em;
     margin: 0; }
-    /* line 98, desktop.css.scss */
+    /* line 101, desktop.css.scss */
     #logo a {
       width: 8.125em;
       height: 7.125em; }
-      /* line 101, desktop.css.scss */
+      /* line 104, desktop.css.scss */
       #logo a:hover {
         background-position: 0 -14.25em; }
 
-  /* line 108, desktop.css.scss */
+  /* line 111, desktop.css.scss */
   #top-navigation li {
     font-size: 0.88889em;
     line-height: 1.875; }
-  /* line 112, desktop.css.scss */
+  /* line 115, desktop.css.scss */
   #top-navigation a {
     margin-top: 0.125em;
     padding: 0 0 0 0.9375em; }
-  /* line 116, desktop.css.scss */
+  /* line 119, desktop.css.scss */
   #top-navigation span {
     padding-right: 1.4375em;
     background-position: 100% 8px; }
-  /* line 120, desktop.css.scss */
+  /* line 123, desktop.css.scss */
   #top-navigation li.active-trail {
     font-size: 1.11111em; }
-    /* line 122, desktop.css.scss */
+    /* line 125, desktop.css.scss */
     #top-navigation li.active-trail a {
       padding-right: 1.25em; }
 
-  /* line 128, desktop.css.scss */
+  /* line 131, desktop.css.scss */
   #secondary-navigation {
     width: 28.35052%;
     margin-top: 1.4375em;
     margin-right: 11.85567%; }
-    /* line 132, desktop.css.scss */
+    /* line 135, desktop.css.scss */
     #secondary-navigation form {
       float: left;
       text-align: left; }
-    /* line 136, desktop.css.scss */
+    /* line 139, desktop.css.scss */
     #secondary-navigation .search {
       width: 12.5em; }
-      /* line 138, desktop.css.scss */
+      /* line 141, desktop.css.scss */
       #secondary-navigation .search input {
         width: 100%; }
-    /* line 142, desktop.css.scss */
+    /* line 145, desktop.css.scss */
     #secondary-navigation div {
       text-align: left;
       margin: -1.78571em -41.81818% 0 0;
       float: right;
       width: 52.72727%; }
-      /* line 147, desktop.css.scss */
+      /* line 150, desktop.css.scss */
       #secondary-navigation div a {
         line-height: 1.42857;
         display: block; }
 
-  /* line 157, desktop.css.scss */
+  /* line 160, desktop.css.scss */
   #wrap > nav.breadcrumbs {
     width: auto;
     margin-left: 10.3125em; }
 
-  /* line 163, desktop.css.scss */
+  /* line 166, desktop.css.scss */
   #main {
     margin-left: 165px; }
 
-  /* line 168, desktop.css.scss */
+  /* line 171, desktop.css.scss */
   article .body {
     width: 79.50311%; }
-  /* line 173, desktop.css.scss */
+  /* line 180, desktop.css.scss */
+  article .body > p, article .body > ul, article .body > ol,
+  article .article-section > p,
+  article .article-section > ul,
+  article .article-section > ol,
+  article .article-subsection > p,
+  article .article-subsection > ul,
+  article .article-subsection > ol {
+    margin-right: 3.33333em; }
+  /* line 186, desktop.css.scss */
   article .lead p {
     font-size: 1.625em;
     line-height: 1.23077;
     margin-top: 0.30769em; }
-  /* line 180, desktop.css.scss */
+  /* line 193, desktop.css.scss */
   article .illustration {
     margin-top: 30px; }
-    /* line 182, desktop.css.scss */
+    /* line 195, desktop.css.scss */
     article .illustration figcaption {
       margin: 0; }
-  /* line 189, desktop.css.scss */
-  article p,
-  article ul,
-  article ol {
-    width: 91.40625%; }
-  /* line 193, desktop.css.scss */
+  /* line 200, desktop.css.scss */
   article blockquote {
-    position: relative;
-    overflow: visible;
     width: 125.78125%; }
-    /* line 197, desktop.css.scss */
+    /* line 202, desktop.css.scss */
     article blockquote > p {
       width: 72.67081%;
       margin-bottom: .5em;
       padding-left: 0; }
-    /* line 203, desktop.css.scss */
+    /* line 208, desktop.css.scss */
     article blockquote footer {
       width: 18.01242%;
       float: right;
       text-align: left; }
-      /* line 208, desktop.css.scss */
+      /* line 213, desktop.css.scss */
       article blockquote footer p {
         position: static;
         padding: 0; }
-      /* line 213, desktop.css.scss */
+      /* line 218, desktop.css.scss */
       article blockquote footer img {
         float: none;
         width: auto;
         margin: -100% 0 1em 0; }
-      /* line 219, desktop.css.scss */
+      /* line 224, desktop.css.scss */
       article blockquote footer a {
         display: block; }
-      /* line 222, desktop.css.scss */
+      /* line 227, desktop.css.scss */
       article blockquote footer .name {
         text-decoration: underline; }
-        /* line 224, desktop.css.scss */
+        /* line 229, desktop.css.scss */
         article blockquote footer .name:hover {
           text-decoration: none; }
-  /* line 232, desktop.css.scss */
+  /* line 237, desktop.css.scss */
   article figure > div {
     float: left;
     width: 79.50311%; }
-  /* line 237, desktop.css.scss */
+  /* line 242, desktop.css.scss */
   article figure figcaption {
     float: right;
     width: 18.01242%;
     margin: 0 0 0 2.48447%;
     border: none; }
 
-  /* line 247, desktop.css.scss */
+  /* line 252, desktop.css.scss */
   article + article h1 {
     margin-right: 2.7381em; }
 
-  /* line 252, desktop.css.scss */
+  /* line 257, desktop.css.scss */
   .article-section {
     width: 79.50311%; }
-    /* line 255, desktop.css.scss */
+    /* line 260, desktop.css.scss */
     .article-section header {
       width: 108.59375%;
       border-top: 1px solid #dddddd;
       border-bottom: none;
       padding: 0; }
-      /* line 260, desktop.css.scss */
+      /* line 265, desktop.css.scss */
       .article-section header.vignetted {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -234,82 +244,86 @@
         width: 134.375%;
         margin-left: -165px;
         padding-left: 165px; }
-        /* line 265, desktop.css.scss */
+        /* line 270, desktop.css.scss */
         .article-section header.vignetted .vignette {
           display: block;
           font-size: 1.4375em;
           position: absolute;
           top: -0.5em;
           left: 0; }
-    /* line 275, desktop.css.scss */
+    /* line 280, desktop.css.scss */
     .article-section .article-subsection {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       width: 108.59375%;
       padding-right: 8.59375%; }
-    /* line 281, desktop.css.scss */
+    /* line 286, desktop.css.scss */
     .article-section .subsection-header {
       width: 108.59375%; }
-    /* line 285, desktop.css.scss */
+    /* line 290, desktop.css.scss */
     .article-section .section-lead {
       margin-top: 1.42857em;
       float: right;
       width: 20.86331%;
       margin-right: -16.54676%; }
-    /* line 294, desktop.css.scss */
+    /* line 299, desktop.css.scss */
     .article-section .section-lead a,
     .article-section .subsection-lead a {
       text-decoration: underline; }
-      /* line 296, desktop.css.scss */
+      /* line 301, desktop.css.scss */
       .article-section .section-lead a:hover,
       .article-section .subsection-lead a:hover {
         text-decoration: none; }
 
-  /* line 304, desktop.css.scss */
+  /* line 309, desktop.css.scss */
   .related-topics img {
     margin-right: 20px; }
 
-  /* line 307, desktop.css.scss */
+  /* line 312, desktop.css.scss */
+  .topics .topic {
+    margin-right: 3.75em; }
+
+  /* line 316, desktop.css.scss */
   #topics {
     width: 120.49689%;
     margin-left: -20.49689%; }
 
-  /* line 313, desktop.css.scss */
+  /* line 322, desktop.css.scss */
   .tabbed header {
     padding: 0; }
-  /* line 316, desktop.css.scss */
+  /* line 325, desktop.css.scss */
   .tabbed .tabs {
     margin-top: -17px; }
-    /* line 318, desktop.css.scss */
+    /* line 327, desktop.css.scss */
     .tabbed .tabs li {
       margin: 0; }
-    /* line 321, desktop.css.scss */
+    /* line 330, desktop.css.scss */
     .tabbed .tabs a.action {
       font-size: 0.77778em; }
 
-  /* line 332, desktop.css.scss */
+  /* line 341, desktop.css.scss */
   footer nav.breadcrumbs {
     margin-right: 115px; }
 
-  /* line 337, desktop.css.scss */
+  /* line 346, desktop.css.scss */
   #site-navigation ul {
     font-family: arial, sans-serif;
     color: #999999;
     font-size: 0.875em;
     line-height: 1.28571em; }
-  /* line 342, desktop.css.scss */
+  /* line 351, desktop.css.scss */
   #site-navigation form {
     margin-right: 185px; }
-    /* line 344, desktop.css.scss */
+    /* line 353, desktop.css.scss */
     #site-navigation form input {
       width: 15.71429em; }
 
-  /* line 350, desktop.css.scss */
+  /* line 359, desktop.css.scss */
   #logo-full {
     margin-right: 10.27778em; }
 
-  /* line 354, desktop.css.scss */
+  /* line 363, desktop.css.scss */
   #copyright {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
