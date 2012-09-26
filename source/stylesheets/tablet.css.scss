@@ -431,10 +431,14 @@
   article {
     .body {
       position:relative;
-      > p,
-      > ul,
-      > ol {
-        width: percentage(560/580);
+    }
+    .body,
+    .article-section,
+    .article-subsection {
+      & > p,
+      & > ul,
+      & > ol {
+        margin-right: (20em/18);
       }
     }
 
@@ -447,6 +451,10 @@
     .illustration {
       margin-top: (20em/16);
     }
+  }
+
+  .topics .topic {
+    margin-right: (20em/16);
   }
 
   .labeled-list {

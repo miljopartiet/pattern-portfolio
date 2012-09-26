@@ -172,6 +172,16 @@
       width: percentage(640/805);
     }
 
+    .body,
+    .article-section,
+    .article-subsection {
+      & > p,
+      & > ul,
+      & > ol {
+        margin-right: (60em/18);
+      }
+    }
+
     .lead {
       p {
         font-size: (26em/16);
@@ -185,12 +195,6 @@
       figcaption {
         margin: 0;
       }
-    }
-
-    p,
-    ul,
-    ol {
-      margin-right: (60em/18);
     }
 
     blockquote {
@@ -303,6 +307,10 @@
 
   .related-topics {
     img { margin-right: 20px }
+  }
+
+  .topics .topic {
+    margin-right: (60em/16);
   }
 
   #topics {
