@@ -234,10 +234,14 @@
     .vignette {
       display: none;
     }
+
     .lead p {
       margin-top: (2em/16);
     }
+  }
 
+  .body figure {
+    margin-top: (12em/16);
   }
 
   article + article,
