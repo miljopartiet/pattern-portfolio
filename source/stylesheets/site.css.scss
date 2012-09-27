@@ -386,10 +386,10 @@ blockquote {
 }
 
 #logo-full {
-  background: transparent url(/images/logo-full.svg) 100% 0 no-repeat;
-  text-indent: -9999em;
-  margin: (20em/16) 0 (40em/16) 0;
   a {
+    background: transparent url(/images/logo-full.svg) 100% 0 no-repeat;
+    text-indent: -9999em;
+    margin: (20em/16) 0 (40em/16) 0;
     display: block;
   }
 }

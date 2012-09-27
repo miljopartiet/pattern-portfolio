@@ -317,9 +317,10 @@
     }
   }
 
-  #logo-full {
+  #logo-full a {
     height: ((46em*(235/284))) / 16;
     background-size: (235em/16) ((46em*(235/284)) / 16);
+    background-position: 0 0;
   }
 
   .labeled-list {
