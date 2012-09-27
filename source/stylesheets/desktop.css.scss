@@ -120,11 +120,24 @@
       padding-right: (23em/16);
       background-position: 100% 8px;
     }
-    li.active-trail {
-      font-size: (20em/18);
-      a {
-        padding-right: (25em/20);
-      }
+    #top-navigation li.active-trail a {
+      padding-right: (25em/20);
+    }
+  }
+
+  #top-navigation li.active-trail,
+  .front #top-navigation li:first-child {
+    font-size: (20em/18);
+  }
+  
+  .front #top-navigation li:first-child {
+    a {
+      padding-right:0;
+    }
+    span {
+      margin-right:14px;
+      background-position: 100% 15px;
+      padding-right: (15em/16);
     }
   }
 

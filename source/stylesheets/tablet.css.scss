@@ -186,11 +186,7 @@
     }
 
     li.active-trail {
-      font-size: (16em/18);
-      line-height: (36/16);
       a {
-        margin-left: -20px;
-        padding: 0 (25em/16) 0 20px;
         background-color: $green-dark;
         color: #fff;
       }
@@ -199,6 +195,16 @@
         padding: 0;
         background: transparent;
       }
+    }
+  }
+  
+  #top-navigation li.active-trail,
+  .front #top-navigation li:first-child {
+    font-size: (16em/18);
+    line-height: (36/16);
+    a {
+      margin-left: -20px;
+      padding: 0 20px 0 20px;
     }
   }
 
