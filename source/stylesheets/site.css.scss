@@ -217,12 +217,10 @@ figure {
 }
 
 figcaption {
-  border-bottom: 1px solid $warm-grey;
   @include small-text;
   font-size: (13em/16);
-  line-height: (18/13);
-  margin-top: (10em/13);
-  padding-bottom: .2em;
+  line-height: (16/13);
+  margin-top: (5em/16);
 
   strong,
   b {
@@ -245,7 +243,7 @@ figcaption {
       .meta {
         font-family: $arial;
         font-size: (13em/20);
-        line-height: (18em/13);
+        line-height: (16/13);
         color: $text-grey;
         display: block;
         margin-top: (2em/13);
@@ -307,8 +305,8 @@ p.copy {
 }
 
 blockquote {
-  margin-top: (30em/16);
-  margin-bottom: (30em/16);
+  margin-top: (20em/16);
+  margin-bottom: (20em/16);
   border-bottom: 1px solid $warm-grey;
   color: $text-warm-grey;
 
@@ -532,7 +530,7 @@ article {
 
   // Main image
   .illustration {
-    margin-top: (12em/16);
+    margin-top: (20em/16);
   }
 
   // Page lead
@@ -602,6 +600,10 @@ article + article {
     font-size: (13em/16);
     line-height: (17/13);
     margin-top: .5em;
+    b,
+    strong {
+      color: $text-grey;
+    }
     a {
       text-decoration: none;
     }
@@ -634,7 +636,7 @@ article + article {
 }
 
 .illustration + .article-section {
-  margin-top: (40em/16);
+  margin-top: (30em/16);
 }
 
 .people .grid {
@@ -684,7 +686,7 @@ article + article {
   .content {
     position: relative;
     z-index: 1;
-    padding: 0.75em 1em;
+    padding: 20px 25px;
 
     p:first-child {
       margin: 0;
@@ -860,7 +862,7 @@ article + article {
   @include clearfix;
   list-style: none;
   .topic {
-    margin: (25em/16) 0 0 0;
+    margin: (20em/16) 0 0 0;
   }
   h2,
   h3 {
