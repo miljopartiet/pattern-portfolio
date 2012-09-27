@@ -3,11 +3,10 @@
 @media only screen and (min-width: 320px) {
   blockquote {
     overflow: hidden;
-    padding-bottom: 0;
     footer {
+      @include clearfix;
       text-align: right;
       position: relative;
-      @include clearfix;
       p {
         position: absolute;
         bottom: .5em;

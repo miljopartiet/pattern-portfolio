@@ -231,32 +231,44 @@
     }
 
     blockquote {
+      @include clearfix;
+      padding-top: 30px;
+      padding-bottom: 0;
+      position: relative;
+
       width: percentage(805/640);
-      > p {
-        width: percentage(585/805);
+      > div {
+        width: percentage(485/805);
         margin-bottom: .5em;
         padding-left: 0;
+        float: left;
       }
 
       footer {
-        width: percentage(145/805);
-        float: right;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin-bottom: 0;
+        padding-bottom: 1em;
+        width: percentage(320/805);
         text-align: left;
 
-        p {
-          position: static;
-          padding: 0;
-        }
-
         img {
-          float: none;
-          width: auto;
-          margin: -100% 0 1em 0;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 135px;
+          margin: 0 0 0 0;
         }
 
-        a {
-          display: block;
+        p {
+          float: left;
+          padding: 0;
+          width: percentage(145/320);
+          position: static;
+          margin: 0 0 0 175px;
         }
+
         .name {
           text-decoration: underline;
           &:hover {

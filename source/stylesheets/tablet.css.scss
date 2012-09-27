@@ -29,14 +29,16 @@
 
   blockquote {
     overflow: visible;
-    & > p {
+    & > div p {
       margin-left: 0;
       font-size: (24em/16);
       line-height: (28/24);
     }
-    footer p {
-      font-size: (14em/13);
-      line-height: (18/14);
+    footer {
+      p {
+        font-size: (14em/13);
+        line-height: (18/14);
+      }
     }
   }
 
