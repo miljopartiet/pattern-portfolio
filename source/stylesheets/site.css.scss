@@ -79,6 +79,14 @@ ol {
   margin-top: (12em/16);
 }
 
+ol ol,
+ul ul,
+ol ul,
+ul, ol {
+  margin-top: 0;
+  margin-left: 1em;
+}
+
 li {
   margin: 0 0 0 1.5em;
 }
