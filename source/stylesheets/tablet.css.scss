@@ -50,6 +50,9 @@
   }
 
   .speech-bubble {
+    width: percentage(620/580);
+    box-sizing: border-box;
+
     h2 {
       font-size: (24em/16);
       line-height: (26/20);
@@ -65,7 +68,7 @@
       padding-right: 20px;
       box-sizing: border-box;
       float: left;
-      width: 60%;
+      width: percentage(390/570);
     }
     .aside {
       margin-top: 0;
@@ -73,7 +76,8 @@
       margin-left: -1px;
       padding-left: 20px;
       float: left;
-      width: 33%;
+      box-sizing: border-box;
+      width: percentage(180/570);
     }
     .main,
     .aside {
@@ -86,6 +90,7 @@
     .main,
     .aside {
       margin-top: (2em/16);
+      width: 50%;
     }
   }
 

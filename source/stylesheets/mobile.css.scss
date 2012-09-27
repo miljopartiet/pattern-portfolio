@@ -256,14 +256,18 @@
     p {
       margin-top: (2em/16);
     }
+    &.vcard .main,
     .aside {
       margin-top: (10em/16);
-      ul li {
-        display: inline-block;
-        margin-left: 0;
-        margin-right: .3em;
-      }
     }
+
+    .aside li,
+    &.vcard li {
+      display: inline-block;
+      margin-left: 0;
+      margin-right: .3em;
+    }
+
   }
 
   .topics .topic {
