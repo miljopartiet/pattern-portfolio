@@ -272,6 +272,20 @@
       padding-right: 0;
     }
   }
+
+  .icon-list {
+    li {
+      a {
+        margin-left: 45px;
+      }
+
+      .icon {
+        width: 25px;
+        margin-left: -45px;
+      }
+    }
+  }
+
   .conversation {
     img {
       display: none;
