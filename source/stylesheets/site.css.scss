@@ -445,8 +445,10 @@ footer nav.breadcrumbs {
 }
 
 .search {
+  width: 60%;
   position: relative;
   padding: 10px 10px 0 10px;
+  margin-top: -10px;
   margin-left: -10px;
   &.active-suggestions {
     background: $beige;
@@ -460,10 +462,9 @@ footer nav.breadcrumbs {
   input {
     width: 100%;
     background: $beige;
-    border: 1px solid $beige;
-    padding: 3px 20px 3px 5px;
+    padding: 7px 20px 7px 10px;
     margin: 0;
-    border-radius: 4px;
+    border-radius: 6px;
     @include box-sizing(border-box);
     &:focus {
       border: 1px solid $warm-grey;
@@ -949,16 +950,18 @@ article + article {
   @include box-shadow(0px 3px 3px 0 rgba(0, 0, 0, 0.25));
   a {
     &:first-child {
-      padding-top: 20px;
+      margin-top: 10px;
       border: none;
     }
     font-family: $arial;
     font-size: (14em/16);
     display: block;
-    border-top: 1px solid #fff;
+    border-top: 1px solid darken($beige, 10%);
     padding: 10px 15px;
+    margin-right: -10px;
+    margin-left: -10px;
     &.focused {
-      color: #000;
+      background: darken($beige, 5%);
     }
   }
 }
