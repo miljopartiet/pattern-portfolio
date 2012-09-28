@@ -446,6 +446,17 @@ footer nav.breadcrumbs {
 
 .search {
   position: relative;
+  padding: 10px 10px 0 10px;
+  margin-left: -10px;
+  &.active-suggestions {
+    background: $beige;
+    border-radius: 6px 6px 0 0;
+    @include box-shadow(0px 3px 3px 0 rgba(0, 0, 0, 0.25));
+    input,
+    input:focus {
+      border: 1px solid transparent;
+    }
+  }
   input {
     width: 100%;
     background: $beige;
@@ -469,8 +480,8 @@ footer nav.breadcrumbs {
     background: transparent url(/images/search.svg) 0 0 no-repeat;
     background-size: 100%;
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 15px;
+    right: 15px;
 
     &:hover {
       cursor: pointer;
@@ -524,6 +535,9 @@ footer nav.breadcrumbs {
       font-size: (14em/16);
     }
   }
+}
+form.speech-bubble {
+  margin-bottom: 0;
 }
 
 //
@@ -928,15 +942,29 @@ article + article {
   }
 }
 #search-suggestions {
-  background: #fff;
+  background: $beige;
+  padding: 0 10px;
+  margin-left: -10px;
+  border-radius: 0 0 6px 6px;
+  @include box-shadow(0px 3px 3px 0 rgba(0, 0, 0, 0.25));
   a {
+    &:first-child {
+      padding-top: 20px;
+      border: none;
+    }
+    font-family: $arial;
+    font-size: (14em/16);
     display: block;
-    border-bottom: 1px solid $warm-grey;
-    padding: 5px 15px;
+    border-top: 1px solid #fff;
+    padding: 10px 15px;
     &.focused {
       color: #000;
     }
   }
+}
+
+.front .article-section.news-posts {
+  margin-top: 30px;
 }
 
 // jQuery UI
