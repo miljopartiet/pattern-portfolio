@@ -508,22 +508,35 @@ footer nav.breadcrumbs {
 
 /* line 447, site.css.scss */
 .search {
-  position: relative; }
-  /* line 449, site.css.scss */
+  width: 60%;
+  position: relative;
+  padding: 10px 10px 0 10px;
+  margin-top: -10px;
+  margin-left: -10px; }
+  /* line 453, site.css.scss */
+  .search.active-suggestions {
+    background: #f5f3ee;
+    border-radius: 6px 6px 0 0;
+    -webkit-box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.25); }
+    /* line 458, site.css.scss */
+    .search.active-suggestions input,
+    .search.active-suggestions input:focus {
+      border: 1px solid transparent; }
+  /* line 462, site.css.scss */
   .search input {
     width: 100%;
     background: #f5f3ee;
-    border: 1px solid #f5f3ee;
-    padding: 3px 20px 3px 5px;
+    padding: 7px 20px 7px 10px;
     margin: 0;
-    border-radius: 4px;
+    border-radius: 6px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-    /* line 457, site.css.scss */
+    /* line 469, site.css.scss */
     .search input:focus {
       border: 1px solid #dddddd; }
-  /* line 461, site.css.scss */
+  /* line 473, site.css.scss */
   .search button {
     text-indent: -9999em;
     border: none;
@@ -535,14 +548,14 @@ footer nav.breadcrumbs {
     background: transparent url(/images/search.svg) 0 0 no-repeat;
     background-size: 100%;
     position: absolute;
-    top: 5px;
-    right: 5px; }
-    /* line 475, site.css.scss */
+    top: 15px;
+    right: 15px; }
+    /* line 487, site.css.scss */
     .search button:hover {
       cursor: pointer;
       background-position: 0 -3.125em; }
 
-/* line 482, site.css.scss */
+/* line 494, site.css.scss */
 .speech-bubble {
   position: relative;
   background: #ffe900;
@@ -552,7 +565,7 @@ footer nav.breadcrumbs {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-  /* line 489, site.css.scss */
+  /* line 501, site.css.scss */
   .speech-bubble:after {
     content: "";
     position: absolute;
@@ -561,7 +574,7 @@ footer nav.breadcrumbs {
     border-width: 0 0 20px 21px;
     border-style: solid;
     border-color: #ffe900 transparent; }
-  /* line 498, site.css.scss */
+  /* line 510, site.css.scss */
   .speech-bubble .inner {
     zoom: 1; }
     /* line 18, bourbon/addons/_clearfix.scss */
@@ -571,72 +584,76 @@ footer nav.breadcrumbs {
     /* line 23, bourbon/addons/_clearfix.scss */
     .speech-bubble .inner:after {
       clear: both; }
-  /* line 501, site.css.scss */
+  /* line 513, site.css.scss */
   .speech-bubble h2 {
     margin-top: 0; }
-  /* line 505, site.css.scss */
+  /* line 517, site.css.scss */
   .speech-bubble p,
   .speech-bubble ul {
     margin-top: 0.11111em; }
-  /* line 508, site.css.scss */
+  /* line 520, site.css.scss */
   .speech-bubble input {
     background: #fff; }
-  /* line 511, site.css.scss */
+  /* line 523, site.css.scss */
   .speech-bubble li {
     margin-left: 1em; }
-  /* line 514, site.css.scss */
+  /* line 526, site.css.scss */
   .speech-bubble .aside {
     margin-top: 1em; }
-  /* line 517, site.css.scss */
+  /* line 529, site.css.scss */
   .speech-bubble .position-me {
     margin-top: 15px;
     text-align: center; }
-    /* line 520, site.css.scss */
+    /* line 532, site.css.scss */
     .speech-bubble .position-me .choose {
       margin-top: 0.57143em;
       display: block;
       font-family: arial, sans-serif;
       font-size: 0.875em; }
 
-/* line 533, site.css.scss */
+/* line 540, site.css.scss */
+form.speech-bubble {
+  margin-bottom: 0; }
+
+/* line 548, site.css.scss */
 article h1 {
   color: #2b912c; }
-/* line 537, site.css.scss */
+/* line 552, site.css.scss */
 article p a,
 article li > a {
   text-decoration: underline; }
-  /* line 539, site.css.scss */
+  /* line 554, site.css.scss */
   article p a:hover,
   article li > a:hover {
     text-decoration: none; }
-/* line 545, site.css.scss */
+/* line 560, site.css.scss */
 article .illustration {
   margin-top: 1.25em; }
-/* line 550, site.css.scss */
+/* line 565, site.css.scss */
 article .lead p {
   font-size: 1.125em;
   line-height: 1.22222;
   margin-top: 0.44444em; }
 
-/* line 557, site.css.scss */
+/* line 572, site.css.scss */
 article + article {
   margin-top: 40px; }
-  /* line 559, site.css.scss */
+  /* line 574, site.css.scss */
   article + article h1 {
     padding-top: 20px;
     border-top: 1px solid #dddddd;
     color: #000; }
 
-/* line 567, site.css.scss */
+/* line 582, site.css.scss */
 .article-section {
   margin-top: 3.75em; }
-  /* line 570, site.css.scss */
+  /* line 585, site.css.scss */
   .article-section header {
     border-bottom: 1px solid #dddddd;
     margin-bottom: -1px;
     position: relative;
     padding: 0 0 0.2em 0; }
-  /* line 583, site.css.scss */
+  /* line 598, site.css.scss */
   .article-section h2 a.topic {
     display: block;
     font-size: 0.75em;
@@ -644,11 +661,11 @@ article + article {
     text-transform: uppercase;
     text-rendering: optimizeLegibility;
     letter-spacing: 0.06em; }
-  /* line 593, site.css.scss */
+  /* line 608, site.css.scss */
   .article-section h3 {
     font-weight: normal;
     font-family: "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif; }
-  /* line 598, site.css.scss */
+  /* line 613, site.css.scss */
   .article-section .vignette {
     width: 3em;
     height: 2.69565em;
@@ -659,7 +676,7 @@ article + article {
     line-height: 1em;
     color: #fff;
     text-transform: none; }
-  /* line 611, site.css.scss */
+  /* line 626, site.css.scss */
   .article-section .section-lead,
   .article-section .subsection-lead {
     font-family: arial, sans-serif;
@@ -667,60 +684,60 @@ article + article {
     font-size: 0.8125em;
     line-height: 1.30769;
     margin-top: .5em; }
-    /* line 617, site.css.scss */
+    /* line 632, site.css.scss */
     .article-section .section-lead b,
     .article-section .section-lead strong,
     .article-section .subsection-lead b,
     .article-section .subsection-lead strong {
       color: #666666; }
-    /* line 620, site.css.scss */
+    /* line 635, site.css.scss */
     .article-section .section-lead a,
     .article-section .subsection-lead a {
       text-decoration: none; }
-  /* line 626, site.css.scss */
+  /* line 641, site.css.scss */
   .article-section .article-subsection {
     margin-top: 1.25em;
     border-top: 1px solid #dddddd; }
-    /* line 630, site.css.scss */
+    /* line 645, site.css.scss */
     .article-section .article-subsection:first-child {
       margin-top: 0; }
-  /* line 635, site.css.scss */
+  /* line 650, site.css.scss */
   .article-section header + .article-subsection {
     border-top: none;
     margin-top: 0; }
-  /* line 640, site.css.scss */
+  /* line 655, site.css.scss */
   .article-section .subsection-header {
     padding: 0 0 0.4em 0;
     border-bottom: 1px solid #dddddd; }
-    /* line 645, site.css.scss */
+    /* line 660, site.css.scss */
     .article-section .subsection-header h3,
     .article-section .subsection-header .subsection-lead {
       display: inline; }
 
-/* line 651, site.css.scss */
+/* line 666, site.css.scss */
 .illustration + .article-section {
   margin-top: 1.875em; }
 
-/* line 656, site.css.scss */
+/* line 671, site.css.scss */
 .people .grid img {
   margin: 0; }
-/* line 659, site.css.scss */
+/* line 674, site.css.scss */
 .people .grid a {
   color: #000; }
-  /* line 661, site.css.scss */
+  /* line 676, site.css.scss */
   .people .grid a h2 {
     font-size: 1em;
     color: #2b912c;
     margin-top: 10px; }
-  /* line 666, site.css.scss */
+  /* line 681, site.css.scss */
   .people .grid a p {
     margin: 0;
     font-size: 0.875em; }
-  /* line 671, site.css.scss */
+  /* line 686, site.css.scss */
   .people .grid a:hover h2 {
     color: #00730a; }
 
-/* line 681, site.css.scss */
+/* line 696, site.css.scss */
 .icon-list.calendar .icon {
   text-align: center;
   text-indent: -0.3em;
@@ -732,20 +749,20 @@ article + article {
   width: 2.16667em;
   height: 2.55556em; }
 
-/* line 694, site.css.scss */
+/* line 709, site.css.scss */
 .conversation {
   list-style: none;
   margin: 1.25em 0 0 0;
   padding: 1.4375em 0; }
-  /* line 699, site.css.scss */
+  /* line 714, site.css.scss */
   .conversation .content {
     position: relative;
     z-index: 1;
     padding: 20px 25px; }
-    /* line 704, site.css.scss */
+    /* line 719, site.css.scss */
     .conversation .content p:first-child {
       margin: 0; }
-  /* line 710, site.css.scss */
+  /* line 725, site.css.scss */
   .conversation .byline p {
     position: absolute;
     margin: 0;
@@ -753,11 +770,11 @@ article + article {
     color: #999999;
     font-size: 0.8125em;
     line-height: 1.30769; }
-  /* line 718, site.css.scss */
+  /* line 733, site.css.scss */
   .conversation .byline img {
     position: absolute;
     bottom: -1.4375em; }
-  /* line 723, site.css.scss */
+  /* line 738, site.css.scss */
   .conversation .byline .arrow {
     position: absolute;
     width: 0;
@@ -765,17 +782,17 @@ article + article {
     line-height: 0;
     bottom: 0;
     border-top: 25px solid transparent; }
-  /* line 733, site.css.scss */
+  /* line 748, site.css.scss */
   .conversation .question {
     position: relative;
     z-index: 2;
     margin-bottom: -0.75em;
     margin-right: 17.74194%; }
-    /* line 739, site.css.scss */
+    /* line 754, site.css.scss */
     .conversation .question .content {
       background: #ffe900;
       border-radius: 3px 3px 3px 0; }
-      /* line 743, site.css.scss */
+      /* line 758, site.css.scss */
       .conversation .question .content:after {
         position: absolute;
         right: 0;
@@ -786,81 +803,81 @@ article + article {
         content: "";
         background: rgba(0, 0, 0, 0.04);
         border-radius: 3px 0 3px 0; }
-      /* line 755, site.css.scss */
+      /* line 770, site.css.scss */
       .conversation .question .content p {
         font-family: "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif; }
-    /* line 761, site.css.scss */
+    /* line 776, site.css.scss */
     .conversation .question .byline p {
       top: -1.76923em; }
-    /* line 765, site.css.scss */
+    /* line 780, site.css.scss */
     .conversation .question .byline img {
       left: -14.70588%; }
-    /* line 769, site.css.scss */
+    /* line 784, site.css.scss */
     .conversation .question .byline .arrow {
       left: -3.87097%;
       border-top: 25px solid transparent;
       border-right: 25px solid #ffe900; }
-  /* line 777, site.css.scss */
+  /* line 792, site.css.scss */
   .conversation .answer {
     position: relative;
     margin-left: 11.29032%;
     margin-right: 12.09677%; }
-    /* line 782, site.css.scss */
+    /* line 797, site.css.scss */
     .conversation .answer .content {
       background: #f5f3ee;
       border-radius: 3px 3px 0 3px; }
-      /* line 786, site.css.scss */
+      /* line 801, site.css.scss */
       .conversation .answer .content p {
         line-height: 1.25; }
-    /* line 792, site.css.scss */
+    /* line 807, site.css.scss */
     .conversation .answer .byline img {
       right: -15.68627%; }
-    /* line 796, site.css.scss */
+    /* line 811, site.css.scss */
     .conversation .answer .byline p {
       padding-top: 0.76923em; }
-    /* line 800, site.css.scss */
+    /* line 815, site.css.scss */
     .conversation .answer .byline .arrow {
       right: -3.87097%;
       border-left: 25px solid #f5f3ee; }
 
-/* line 809, site.css.scss */
+/* line 824, site.css.scss */
 .related-topics ul {
   list-style: none; }
-/* line 812, site.css.scss */
+/* line 827, site.css.scss */
 .related-topics li {
   margin-left: 0; }
-/* line 815, site.css.scss */
+/* line 830, site.css.scss */
 .related-topics img {
   float: right;
   margin: 0.75em 0 5px 5px; }
-/* line 819, site.css.scss */
+/* line 834, site.css.scss */
 .related-topics img + p {
   margin-top: 0.22222em; }
 
-/* line 824, site.css.scss */
+/* line 839, site.css.scss */
 .labeled-list {
   list-style: none;
   margin: 0; }
-  /* line 827, site.css.scss */
+  /* line 842, site.css.scss */
   .labeled-list .group {
     border-top: 1px solid #dddddd;
     padding: 1.25em 0 0 0;
     margin: 1.25em 0 0 0; }
-  /* line 832, site.css.scss */
+  /* line 847, site.css.scss */
   .labeled-list .label {
     font: bold 1.50893em "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif;
     color: #000;
     margin-bottom: 0.38462em; }
-  /* line 838, site.css.scss */
+  /* line 853, site.css.scss */
   .labeled-list.text-labels .label {
     font-size: 1.25em;
     line-height: 1.1; }
-  /* line 843, site.css.scss */
+  /* line 858, site.css.scss */
   .labeled-list .list {
     margin: 0;
     list-style: disc;
     width: 100%; }
-    /* line 847, site.css.scss */
+    /* line 862, site.css.scss */
     .labeled-list .list li {
       -webkit-column-break-inside: avoid;
       -moz-column-break-inside: avoid;
@@ -869,19 +886,19 @@ article + article {
       column-break-inside: avoid;
       vertical-align: top;
       word-wrap: break-word; }
-    /* line 858, site.css.scss */
+    /* line 873, site.css.scss */
     .labeled-list .list a {
       display: inline-block;
       vertical-align: top;
       word-wrap: break-word; }
 
-/* line 866, site.css.scss */
+/* line 881, site.css.scss */
 #copyright {
   padding-left: 2.91667em;
   background: transparent url(/images/cc.svg) 0 2px no-repeat;
   background-size: 1.66667em 1.66667em; }
 
-/* line 872, site.css.scss */
+/* line 887, site.css.scss */
 .topics {
   zoom: 1;
   list-style: none; }
@@ -892,16 +909,16 @@ article + article {
   /* line 23, bourbon/addons/_clearfix.scss */
   .topics:after {
     clear: both; }
-  /* line 875, site.css.scss */
+  /* line 890, site.css.scss */
   .topics .topic {
     margin: 1.25em 0 0 0; }
-  /* line 879, site.css.scss */
+  /* line 894, site.css.scss */
   .topics h2,
   .topics h3 {
     margin: 0;
     padding: 0 0.25em 0 0;
     position: relative; }
-    /* line 883, site.css.scss */
+    /* line 898, site.css.scss */
     .topics h2 > .number,
     .topics h3 > .number {
       display: none;
@@ -916,14 +933,14 @@ article + article {
       background-size: 35px 32px;
       color: #fff;
       text-align: center; }
-  /* line 900, site.css.scss */
+  /* line 915, site.css.scss */
   .topics h2,
   .topics h3,
   .topics p {
     margin-right: 0;
     display: inline; }
 
-/* line 906, site.css.scss */
+/* line 921, site.css.scss */
 #cookies {
   display: none;
   width: 100%;
@@ -934,14 +951,14 @@ article + article {
   line-height: 1.30769;
   color: #fff;
   padding: 0 20px; }
-  /* line 915, site.css.scss */
+  /* line 930, site.css.scss */
   #cookies p {
     display: inline-block;
     margin: 10px .5em 10px 0; }
-  /* line 919, site.css.scss */
+  /* line 934, site.css.scss */
   #cookies a {
     color: #fff; }
-    /* line 921, site.css.scss */
+    /* line 936, site.css.scss */
     #cookies a.action {
       display: inline-block;
       background: #dddddd;
@@ -949,26 +966,43 @@ article + article {
       line-height: 1;
       margin: 10px 0; }
 
-/* line 930, site.css.scss */
+/* line 945, site.css.scss */
 #search-suggestions {
-  background: #fff; }
-  /* line 932, site.css.scss */
+  background: #f5f3ee;
+  padding: 0 10px;
+  margin-left: -10px;
+  border-radius: 0 0 6px 6px;
+  -webkit-box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.25); }
+  /* line 951, site.css.scss */
   #search-suggestions a {
+    font-family: arial, sans-serif;
+    font-size: 0.875em;
     display: block;
-    border-bottom: 1px solid #dddddd;
-    padding: 5px 15px; }
-    /* line 936, site.css.scss */
+    border-top: 1px solid #e2dcce;
+    padding: 10px 15px;
+    margin-right: -10px;
+    margin-left: -10px; }
+    /* line 952, site.css.scss */
+    #search-suggestions a:first-child {
+      margin-top: 10px;
+      border: none; }
+    /* line 963, site.css.scss */
     #search-suggestions a.focused {
-      color: #000; }
+      background: #ece8de; }
 
-/* line 944, site.css.scss */
+/* line 969, site.css.scss */
+.front .article-section.news-posts {
+  margin-top: 30px; }
+
+/* line 975, site.css.scss */
 .ui-tabs-nav {
   margin: 0;
   list-style: none; }
-  /* line 947, site.css.scss */
+  /* line 978, site.css.scss */
   .ui-tabs-nav li {
     display: inline; }
 
-/* line 951, site.css.scss */
+/* line 982, site.css.scss */
 .ui-tabs-hide {
   display: none; }

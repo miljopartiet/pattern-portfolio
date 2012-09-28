@@ -62,7 +62,9 @@
       positionOffsetY = parseInt($body.css('paddingTop'), 10) + $element.outerHeight();
 
       options = $.extend({
-        source: []
+        source: [],
+        onShow: $.noop,
+        onHide: $.noop
       }, opts || {});
 
       if (typeof options.source === 'function') {
@@ -139,12 +141,14 @@
           $element.blur();
         }
       });
+      options.onShow($element, $suggest_list);
     };
 
     var hide = function() {
       $suggest_list.hide();
       $("#search").removeClass("has-results");
       $(document).unbind('click.autocomplete');
+      options.onHide($element, $suggest_list);
     };
 
     var focusNext = function() {
@@ -280,6 +284,12 @@
         return items.sort(function(self, other) {
           return naturalSort(self.name, other.name);
         });
+      },
+      onShow: function($element) {
+        $element.parent().addClass('active-suggestions');
+      },
+      onHide: function($element) {
+        $element.parent().removeClass('active-suggestions');
       }
     });
 
