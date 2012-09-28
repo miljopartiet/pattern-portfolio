@@ -123,10 +123,11 @@
         current_suggestions.push(notFound());
       }
 
-      var html = [];
+      var html = ['<ul>'];
       $.each(current_suggestions, function(i, c) {
-        html.push('<a href="'+ c.href +'">'+ c.name +'</a>');
+        html.push('<li><a href="'+ c.href +'">'+ c.name +'</a></li>');
       });
+      html.push('</ul>');
       $suggest_list.html(html.join(''));
     };
 
@@ -169,9 +170,9 @@
     };
 
     var focusSuggestion = function(num) {
-      $suggest_list.find('a').removeClass('focused')
-      .filter(':nth-child('+ (num + 1) +')')
-      .addClass('focused');
+      $suggest_list.find('li').removeClass('focused')
+        .filter(':nth-child('+ (num + 1) +')')
+        .addClass('focused');
       focused = num;
     };
 

@@ -555,19 +555,11 @@ form.speech-bubble {
   padding-right: 25px;
   padding-bottom: 10px;
   margin-left: -25px;
-  a {
-    &:first-child {
-      margin-top: 10px;
-      border: none;
-    }
-    font-family: $arial;
-    font-size: (14em/16);
-    display: block;
-    border-top: 1px solid #d7c82f;
-    padding: 10px 15px;
-    &.focused {
-      background: darken($yellow, 2%);
-    }
+  ul {
+    margin-left: 20px;
+  }
+  .focused a {
+    color: $green-dark;
   }
 }
 
