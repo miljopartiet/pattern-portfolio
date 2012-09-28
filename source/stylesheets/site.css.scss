@@ -887,12 +887,12 @@ article + article {
       position: absolute;
       top: 3px;
       left: -55px;
-      background: transparent url(/images/bg-vignette.svg) 0 0 no-repeat;
       width: 35px;
       height: 32px;
+      background: transparent url(/images/bg-vignette.svg) 0 0 no-repeat;
+      background-size: 35px 32px;
       color: #fff;
       text-align: center;
-      background-size: 100%;
     }
   }
   h2,
