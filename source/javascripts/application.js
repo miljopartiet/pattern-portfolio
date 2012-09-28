@@ -205,19 +205,36 @@
       });
 
       $nav.append('<a href="#" class="close"><span>Stäng meny</span></a>');
-      $nav.bind('click', 'a.close', hide);
+      $nav.find('a.close').bind('click', hide);
 
       $('body').append($nav);
-      var offset = $nav.outerHeight(),
-          style = document.createElement('style'),
-          rules = "#site-top-navigation { margin-top: -"+ offset +"px; }";
+      var style = document.createElement('style');
 
-      rules += "#site-top-navigation.inactive { margin-top: -"+ offset +"px; }";
+      style.id = 'navigation-styles';
       style.type = 'text/css';
-      style.innerHTML = rules;
+      style.innerHTML = calculateRules($nav);
 
       document.getElementsByTagName("head")[0].appendChild(style);
       setup_run = true;
+    }
+
+    var calculateRules = function(element) {
+      var offset = element.outerHeight(),
+          rules = "#site-top-navigation { margin-top: -"+ offset +"px; }";
+
+      rules += "#site-top-navigation.inactive { margin-top: -"+ offset +"px; }";
+
+      return rules;
+    };
+
+    var reset = function() {
+      if (!setup_run) {
+        setup();
+        return;
+      }
+
+      var style_element = document.getElementById('navigation-styles');
+      style_element.innerHTML = calculateRules(style_element);
     }
 
     var hide = function(e) {
@@ -232,6 +249,9 @@
     };
 
     $toggler.bind('click', show);
+    $(document).bind('resize', function() {
+      setTimeout(reset, 200);
+    });
     setup();
   };
 
