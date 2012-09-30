@@ -696,6 +696,10 @@ article + article {
   }
 }
 
+header.intro .article-section {
+  margin-top: (40em/16);
+}
+
 .illustration + .article-section {
   margin-top: (30em/16);
 }
@@ -738,6 +742,7 @@ article + article {
     height: (46em/18);
   }
 }
+
 .conversations {
   .details {
     @include small-text;
@@ -792,17 +797,49 @@ article + article {
     .toggler {
       display: block;
       color: $text-light-grey;
+
       text-decoration: underline;
       &:hover {
         text-decoration: none;
       }
     }
+
+    .related {
+      display: block;
+      margin-top: (5em/13);
+    }
+  }
+
+  .fetch-more {
+    clear: both;
+    padding-top: (40em/16);
   }
 }
+
+.body .conversations {
+  .fetch-more {
+    margin-left: percentage(70/620);
+  }
+}
+
 .conversation {
   list-style: none;
   margin: (20em/16) 0 0 0;
   padding: (23em/16) 0;
+
+  a {
+    .read-more {
+      color: $green;
+      text-decoration: underline;
+    }
+
+    &:hover {
+      .read-more {
+        color: $green-dark;
+        text-decoration: none;
+      }
+    }
+  }
 
   .content {
     position: relative;
@@ -811,6 +848,9 @@ article + article {
 
     p:first-child {
       margin: 0;
+    }
+    p {
+      color: #2A2A2A;
     }
   }
 
@@ -834,6 +874,7 @@ article + article {
       font-size: 0;
       line-height: 0;
       bottom: 0;
+      color: $yellow;
       border-top: 25px solid transparent;
     }
   }
@@ -909,6 +950,18 @@ article + article {
         right: percentage(-24/620);
         border-left: 25px solid $beige;
       }
+    }
+  }
+}
+
+// Related conversations on a conversation permalink
+header.intro + .conversations {
+  .article-section:first-child {
+    margin-top: (40em/16);
+    border-top: none;
+    .conversation,
+    .details {
+      margin-top: 0
     }
   }
 }

@@ -36,12 +36,6 @@
     }
   }
 
-  .article-section {
-    .conversation {
-      margin-right: (20em/18);
-    }
-  }
-
   .conversations {
     @include clearfix;
     .article-section {
@@ -83,6 +77,17 @@
       .topic {
         margin-top: (12em/14);
       }
+    }
+  }
+
+  // Conversation page styles for the main conversation
+  .body {
+    .conversation {
+      width: percentage(620/640);
+    }
+    .details {
+      width: percentage(145/640);
+      margin-right: percentage(-165/640);
     }
   }
 
