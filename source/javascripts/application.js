@@ -284,7 +284,7 @@
       $votable.append('<a href="#" class="show-results toggler">'+ $votable.data('show-results-copy') +'</a>');
       $results.append('<a href="#" class="show-votable toggler">'+ $results.data('show-votable-copy') +'</a>');
 
-      $voting.delegate('a.show-results', 'click', function(e) {
+      $voting.delegate('button, a.show-results', 'click', function(e) {
         console.log(e);
         e.preventDefault();
         $votable.hide();
