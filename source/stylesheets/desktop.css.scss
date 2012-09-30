@@ -42,6 +42,42 @@
     }
   }
 
+  .conversations {
+    @include clearfix;
+    .article-section {
+      @include clearfix;
+      width: percentage(695/805);
+      border-top: 1px solid $warm-grey;
+    }
+    .conversation,
+    .details {
+      margin-top: (20em/14);
+    }
+    .conversation {
+      float: left;
+      width: percentage(620/695);
+      margin-right: percentage(40/695);
+    }
+    .details {
+      @include small-text;
+      font-size: (14em/16);
+      float: left;
+      margin-right: percentage(-145/695);
+      width: percentage(145/695);
+      .comments,
+      .voting,
+      .show-results {
+        margin-top: (12em/14);
+      }
+      .meta + .voting {
+        border-top: 1px solid $warm-grey;
+      }
+      .voting .topic {
+        margin-top: (12em/14);
+      }
+    }
+  }
+
   .labeled-list {
     width: 100%;
     .group {

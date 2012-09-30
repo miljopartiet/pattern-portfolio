@@ -304,6 +304,16 @@ button.action {
     background: #fff;
     color: $green;
   }
+  &.negative {
+    background: $red;
+    &:hover {
+      background: darken($red, 10%);
+    }
+    &:active {
+      color: $red;
+      background: #fff;
+    }
+  }
 }
 // FIXME: terrible class name
 // How should we handle generic smaller paragraphs
@@ -728,7 +738,19 @@ article + article {
     height: (46em/18);
   }
 }
+.conversations {
+  .details {
+    @include small-text;
 
+    .time,
+    .comments,
+    .voting,
+    .topic,
+    .show-results {
+      display: block;
+    }
+  }
+}
 .conversation {
   list-style: none;
   margin: (20em/16) 0 0 0;
