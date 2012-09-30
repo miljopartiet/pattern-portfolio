@@ -66,14 +66,48 @@
       width: percentage(145/695);
       .comments,
       .voting,
-      .show-results {
+      a.toggler,
+      .results {
         margin-top: (12em/14);
       }
       .meta + .voting {
         border-top: 1px solid $warm-grey;
       }
-      .voting .topic {
+    }
+    .voting {
+      .topic {
         margin-top: (12em/14);
+      }
+      .results {
+        .answer,
+        .summary {
+          display: block;
+          margin-top: (12em/14);
+        }
+        .answer .summary {
+          margin-top: (4em/14);
+        }
+
+        b {
+          display: inline-block;
+          width: percentage(35/145);
+        }
+
+        .meter {
+          display: inline-block;
+          width: percentage(110/145);
+          span {
+            display: inline-block;
+            text-indent: -9999px;
+          }
+        }
+
+        .positive .meter span {
+          background: $green;
+        }
+        .negative .meter span {
+          background: $red;
+        }
       }
     }
   }

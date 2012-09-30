@@ -745,9 +745,16 @@ article + article {
     .time,
     .comments,
     .voting,
-    .topic,
-    .show-results {
+    .topic {
       display: block;
+    }
+    .toggler {
+      display: block;
+      color: $text-light-grey;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 }
