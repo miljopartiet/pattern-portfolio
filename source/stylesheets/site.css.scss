@@ -743,10 +743,9 @@ article + article {
     @include small-text;
     font-size: (13em/16);
     line-height: (15/14);
-    margin-top: (12em/16);
     padding-top: (8em/13);
     border-top: 1px solid $warm-grey;
-    margin-left: percentage(70/620);
+    margin: (12em/16) percentage(75/620) 0 percentage(70/620);
 
     .topic {
       display: block;
