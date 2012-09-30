@@ -59,17 +59,22 @@
       margin-right: percentage(40/695);
     }
     .details {
-      @include small-text;
-      font-size: (14em/16);
       float: left;
+      border: none;
+      padding-top: 0;
+      margin-left: 0;
       margin-right: percentage(-145/695);
       width: percentage(145/695);
-      .comments,
-      .voting,
-      a.toggler,
-      .results {
+
+      .time,
+      .comments {
+        display: block;
+      }
+
+      .comments {
         margin-top: (12em/14);
       }
+
       .meta + .voting {
         border-top: 1px solid $warm-grey;
       }
@@ -77,37 +82,6 @@
     .voting {
       .topic {
         margin-top: (12em/14);
-      }
-      .results {
-        .answer,
-        .summary {
-          display: block;
-          margin-top: (12em/14);
-        }
-        .answer .summary {
-          margin-top: (4em/14);
-        }
-
-        b {
-          display: inline-block;
-          width: percentage(35/145);
-        }
-
-        .meter {
-          display: inline-block;
-          width: percentage(110/145);
-          span {
-            display: inline-block;
-            text-indent: -9999px;
-          }
-        }
-
-        .positive .meter span {
-          background: $green;
-        }
-        .negative .meter span {
-          background: $red;
-        }
       }
     }
   }
