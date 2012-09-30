@@ -10,6 +10,63 @@
  */
 
 jQuery.cookie=function(b,j,m){if(typeof j!="undefined"){m=m||{};if(j===null){j="";m.expires=-1}var e="";if(m.expires&&(typeof m.expires=="number"||m.expires.toUTCString)){var f;if(typeof m.expires=="number"){f=new Date();f.setTime(f.getTime()+(m.expires*24*60*60*1000))}else{f=m.expires}e="; expires="+f.toUTCString()}var l=m.path?"; path="+(m.path):"";var g=m.domain?"; domain="+(m.domain):"";var a=m.secure?"; secure":"";document.cookie=[b,"=",encodeURIComponent(j),e,l,g,a].join("")}else{var d=null;if(document.cookie&&document.cookie!=""){var k=document.cookie.split(";");for(var h=0;h<k.length;h++){var c=jQuery.trim(k[h]);if(c.substring(0,b.length+1)==(b+"=")){d=decodeURIComponent(c.substring(b.length+1));break}}}return d}};
+/*! A fix for the iOS orientationchange zoom bug.
+  Script by @scottjehl, rebound by @wilto.
+  MIT / GPLv2 License.
+  */
+
+(function(w){
+
+  // This fix addresses an iOS bug, so return early if the UA claims it's something else.
+  var ua = navigator.userAgent;
+  if( !( /iPhone|iPad|iPod/.test( navigator.platform ) && /OS [1-5]_[0-9_]* like Mac OS X/i.test(ua) && ua.indexOf( "AppleWebKit" ) > -1 ) ){
+    return;
+  }
+
+  var doc = w.document;
+
+  if( !doc.querySelector ){ return; }
+
+  var meta = doc.querySelector( "meta[name=viewport]" ),
+  initialContent = meta && meta.getAttribute( "content" ),
+  disabledZoom = initialContent + ",maximum-scale=1",
+  enabledZoom = initialContent + ",maximum-scale=10",
+  enabled = true,
+  x, y, z, aig;
+
+  if( !meta ){ return; }
+
+  function restoreZoom(){
+    meta.setAttribute( "content", enabledZoom );
+    enabled = true;
+  }
+
+  function disableZoom(){
+    meta.setAttribute( "content", disabledZoom );
+    enabled = false;
+  }
+
+  function checkTilt( e ){
+    aig = e.accelerationIncludingGravity;
+    x = Math.abs( aig.x );
+    y = Math.abs( aig.y );
+    z = Math.abs( aig.z );
+
+    // If portrait orientation and in one of the danger zones
+    if ( (!w.orientation || w.orientation === 180) && ( x > 7 || ( ( z > 6 && y < 8 || z < 8 && y > 6 ) && x > 5 ) ) ){
+      if ( enabled ) {
+        disableZoom();
+      }
+    }
+    else if( !enabled ){
+      restoreZoom();
+    }
+  }
+
+  w.addEventListener( "orientationchange", restoreZoom, false );
+  w.addEventListener( "devicemotion", checkTilt, false );
+
+})(this);
 /*
  * Natural Sort algorithm for Javascript - Version 0.6 - Released under MIT license
  * Author: Jim Palmer (based on chunking idea from Dave Koelle)
@@ -194,10 +251,11 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
         current_suggestions.push(notFound());
       }
 
-      var html = [];
+      var html = ['<ul>'];
       $.each(current_suggestions, function(i, c) {
-        html.push('<a href="'+ c.href +'">'+ c.name +'</a>');
+        html.push('<li><a href="'+ c.href +'">'+ c.name +'</a></li>');
       });
+      html.push('</ul>');
       $suggest_list.html(html.join(''));
     };
 
@@ -240,9 +298,9 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
     };
 
     var focusSuggestion = function(num) {
-      $suggest_list.find('a').removeClass('focused')
-      .filter(':nth-child('+ (num + 1) +')')
-      .addClass('focused');
+      $suggest_list.find('li').removeClass('focused')
+        .filter(':nth-child('+ (num + 1) +')')
+        .addClass('focused');
       focused = num;
     };
 
@@ -340,6 +398,35 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
     $(selector).bind('focus', selectIt).bind('click', selectIt);
   };
 
+  Mp.voting = function() {
+    $('div.voting').each(function() {
+      var $voting = $(this),
+          $votable = $voting.find('div.votable'),
+          $results = $voting.find('div.results');
+      if ($results.size() == 0) {
+        return;
+      }
+
+      $results.hide();
+
+      $votable.append('<a href="#" class="show-results toggler">'+ $votable.data('show-results-copy') +'</a>');
+      $results.append('<a href="#" class="show-votable toggler">'+ $results.data('show-votable-copy') +'</a>');
+
+      $voting.delegate('button, a.show-results', 'click', function(e) {
+        console.log(e);
+        e.preventDefault();
+        $votable.hide();
+        $results.show();
+      });
+
+      $voting.delegate('a.show-votable', 'click', function(e) {
+        e.preventDefault();
+        $results.hide();
+        $votable.show();
+      });
+    });
+  }
+
   $(document).ready(function() {
     Mp.NavigationToggler('#skip-to-navigation');
     Mp.CookieChecker();
@@ -377,9 +464,11 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
     });
 
     Mp.focusAndCopy('input.share');
+    Mp.voting();
   });
 
 }(jQuery));
+
 
 
 

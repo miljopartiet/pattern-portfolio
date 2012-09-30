@@ -377,31 +377,41 @@ button.action {
   button.action:active {
     background: #fff;
     color: #2b912c; }
+  /* line 307, site.css.scss */
+  button.action.negative {
+    background: #c41230; }
+    /* line 309, site.css.scss */
+    button.action.negative:hover {
+      background: #950e25; }
+    /* line 312, site.css.scss */
+    button.action.negative:active {
+      color: #c41230;
+      background: #fff; }
 
-/* line 310, site.css.scss */
+/* line 320, site.css.scss */
 p.copy {
   font: normal 0.77647em arial, sans-serif;
   color: #999999; }
 
-/* line 315, site.css.scss */
+/* line 325, site.css.scss */
 blockquote {
   margin-top: 1.25em;
   margin-bottom: 1.25em;
   padding-bottom: 0.3125em;
   border-bottom: 1px solid #dddddd;
   color: #bcb8b2; }
-  /* line 323, site.css.scss */
+  /* line 333, site.css.scss */
   blockquote > div p {
     font-family: "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif;
     font-size: 1.125em;
     line-height: 1.22222;
     margin-top: 0.66667em;
     margin-left: 1em; }
-    /* line 330, site.css.scss */
+    /* line 340, site.css.scss */
     blockquote > div p:first-child {
       position: relative;
       margin-top: 0; }
-      /* line 333, site.css.scss */
+      /* line 343, site.css.scss */
       blockquote > div p:first-child:before {
         content: "”";
         font-family: "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif;
@@ -411,24 +421,24 @@ blockquote {
         top: .05em;
         left: -0.59em;
         text-rendering: optimizeLegibility; }
-  /* line 347, site.css.scss */
+  /* line 357, site.css.scss */
   blockquote footer {
     font-family: arial, sans-serif;
     color: #999999;
     font-size: 0.8125em;
     line-height: 1.30769;
     margin-bottom: -0.38462em; }
-    /* line 352, site.css.scss */
+    /* line 362, site.css.scss */
     blockquote footer .title {
       color: #999999; }
 
-/* line 361, site.css.scss */
+/* line 371, site.css.scss */
 #wrap {
   position: relative;
   margin: 1.5em auto 0 auto;
   padding-bottom: 2.5em; }
 
-/* line 367, site.css.scss */
+/* line 377, site.css.scss */
 #site-banner {
   zoom: 1;
   position: relative;
@@ -441,10 +451,10 @@ blockquote {
   #site-banner:after {
     clear: both; }
 
-/* line 373, site.css.scss */
+/* line 383, site.css.scss */
 #logo {
   width: 57px; }
-  /* line 376, site.css.scss */
+  /* line 386, site.css.scss */
   #logo a {
     display: block;
     text-indent: -9999px;
@@ -452,18 +462,18 @@ blockquote {
     height: 57px;
     background: transparent url(/images/logo.svg) 0 0 no-repeat;
     background-size: 100%; }
-    /* line 383, site.css.scss */
+    /* line 393, site.css.scss */
     #logo a:hover {
       background-position: 0 -114px; }
 
-/* line 390, site.css.scss */
+/* line 400, site.css.scss */
 #logo-full a {
   background: transparent url(/images/logo-full.svg) 100% 0 no-repeat;
   text-indent: -9999em;
   margin: 1.25em 0 2.5em 0;
   display: block; }
 
-/* line 400, site.css.scss */
+/* line 410, site.css.scss */
 #site-navigation {
   zoom: 1; }
   /* line 18, bourbon/addons/_clearfix.scss */
@@ -474,54 +484,54 @@ blockquote {
   #site-navigation:after {
     clear: both; }
 
-/* line 405, site.css.scss */
+/* line 415, site.css.scss */
 #secondary-navigation ul,
 #secondary-navigation li {
   display: inline; }
-/* line 406, site.css.scss */
+/* line 416, site.css.scss */
 #secondary-navigation li {
   font-size: 0.875em; }
 
-/* line 413, site.css.scss */
+/* line 423, site.css.scss */
 nav.breadcrumbs {
   display: block; }
-  /* line 415, site.css.scss */
+  /* line 425, site.css.scss */
   nav.breadcrumbs p {
     font-family: arial, sans-serif;
     color: #999999;
     font-size: 0.8125em;
     line-height: 1.30769;
     margin: 0; }
-  /* line 422, site.css.scss */
+  /* line 432, site.css.scss */
   nav.breadcrumbs a,
   nav.breadcrumbs span {
     color: #999999;
     position: relative; }
-    /* line 425, site.css.scss */
+    /* line 435, site.css.scss */
     nav.breadcrumbs a:first-child,
     nav.breadcrumbs span:first-child {
       padding-left: 0; }
-  /* line 429, site.css.scss */
+  /* line 439, site.css.scss */
   nav.breadcrumbs a {
     padding-right: 1.53846em;
     margin-right: 0.38462em;
     background: url(/images/breadcrumb-slash.svg) 100% 50% no-repeat;
     background-size: 0.84615em 1.38462em; }
-    /* line 434, site.css.scss */
+    /* line 444, site.css.scss */
     nav.breadcrumbs a:hover {
       text-decoration: underline;
       color: #2b912c; }
 
-/* line 441, site.css.scss */
+/* line 451, site.css.scss */
 footer nav.breadcrumbs {
   border-top: 1px solid #dddddd;
   padding-top: 10px;
   margin-bottom: 15px; }
 
-/* line 447, site.css.scss */
+/* line 457, site.css.scss */
 .search {
   position: relative; }
-  /* line 449, site.css.scss */
+  /* line 459, site.css.scss */
   .search input {
     width: 100%;
     background: #f5f3ee;
@@ -529,10 +539,10 @@ footer nav.breadcrumbs {
     padding: 3px 20px 3px 5px;
     margin: 0;
     border-radius: 4px; }
-    /* line 456, site.css.scss */
+    /* line 466, site.css.scss */
     .search input:focus {
       border: 1px solid #dddddd; }
-  /* line 460, site.css.scss */
+  /* line 470, site.css.scss */
   .search button {
     text-indent: -9999em;
     border: none;
@@ -546,12 +556,12 @@ footer nav.breadcrumbs {
     position: absolute;
     top: 5px;
     right: 5px; }
-    /* line 474, site.css.scss */
+    /* line 484, site.css.scss */
     .search button:hover {
       cursor: pointer;
       background-position: 0 -3.125em; }
 
-/* line 481, site.css.scss */
+/* line 491, site.css.scss */
 .speech-bubble {
   position: relative;
   background: #ffe900;
@@ -561,7 +571,7 @@ footer nav.breadcrumbs {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-  /* line 488, site.css.scss */
+  /* line 498, site.css.scss */
   .speech-bubble:after {
     content: "";
     position: absolute;
@@ -570,7 +580,7 @@ footer nav.breadcrumbs {
     border-width: 0 0 20px 21px;
     border-style: solid;
     border-color: #ffe900 transparent; }
-  /* line 497, site.css.scss */
+  /* line 507, site.css.scss */
   .speech-bubble .inner {
     zoom: 1; }
     /* line 18, bourbon/addons/_clearfix.scss */
@@ -580,96 +590,110 @@ footer nav.breadcrumbs {
     /* line 23, bourbon/addons/_clearfix.scss */
     .speech-bubble .inner:after {
       clear: both; }
-  /* line 500, site.css.scss */
+  /* line 510, site.css.scss */
   .speech-bubble h2 {
     margin-top: 0; }
-  /* line 504, site.css.scss */
+  /* line 514, site.css.scss */
   .speech-bubble p,
   .speech-bubble ul {
     margin-top: 0.11111em; }
-  /* line 507, site.css.scss */
+  /* line 517, site.css.scss */
   .speech-bubble input {
     background: #fff; }
-  /* line 510, site.css.scss */
+  /* line 520, site.css.scss */
   .speech-bubble li {
     margin-left: 1em; }
-  /* line 513, site.css.scss */
+  /* line 523, site.css.scss */
   .speech-bubble .aside {
     margin-top: 1em; }
-  /* line 516, site.css.scss */
+  /* line 526, site.css.scss */
   .speech-bubble .position-me {
     margin-top: 15px;
     text-align: center; }
-    /* line 519, site.css.scss */
+    /* line 529, site.css.scss */
     .speech-bubble .position-me .choose {
       margin-top: 0.57143em;
       display: block;
       font-family: arial, sans-serif;
       font-size: 0.875em; }
 
-/* line 527, site.css.scss */
+/* line 537, site.css.scss */
 form.speech-bubble {
+  margin-top: 40px;
   margin-bottom: 0; }
-  /* line 530, site.css.scss */
+  /* line 541, site.css.scss */
   form.speech-bubble .search {
     width: 60%;
     padding: 10px 10px 0 10px;
     margin-top: -10px;
     margin-left: -10px; }
-    /* line 535, site.css.scss */
+    /* line 546, site.css.scss */
     form.speech-bubble .search input {
       padding: 7px 20px 7px 10px;
       border-radius: 6px; }
-    /* line 539, site.css.scss */
+    /* line 550, site.css.scss */
     form.speech-bubble .search.active-suggestions {
-      background: #f5f3ee;
-      border-radius: 6px 6px 0 0;
-      -webkit-box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.25);
-      box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.25); }
-      /* line 544, site.css.scss */
+      background: #ffe900;
+      border-radius: 6px 6px 0 0; }
+      /* line 554, site.css.scss */
       form.speech-bubble .search.active-suggestions input,
       form.speech-bubble .search.active-suggestions input:focus {
         border: 1px solid transparent; }
 
-/* line 556, site.css.scss */
+/* line 561, site.css.scss */
+#search-suggestions {
+  background: #ffe900;
+  border-radius: 0 0 4px 4px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  margin-left: -25px; }
+  /* line 568, site.css.scss */
+  #search-suggestions ul {
+    margin-left: 20px; }
+  /* line 571, site.css.scss */
+  #search-suggestions .focused a {
+    color: #00730a; }
+
+/* line 581, site.css.scss */
 article h1 {
   color: #2b912c; }
-/* line 560, site.css.scss */
+/* line 585, site.css.scss */
 article p a,
 article li > a {
   text-decoration: underline; }
-  /* line 562, site.css.scss */
+  /* line 587, site.css.scss */
   article p a:hover,
   article li > a:hover {
     text-decoration: none; }
-/* line 568, site.css.scss */
+/* line 593, site.css.scss */
 article .illustration {
   margin-top: 1.25em; }
-/* line 573, site.css.scss */
+/* line 598, site.css.scss */
 article .lead p {
   font-size: 1.125em;
   line-height: 1.22222;
   margin-top: 0.44444em; }
 
-/* line 580, site.css.scss */
+/* line 605, site.css.scss */
 article + article {
   margin-top: 40px; }
-  /* line 582, site.css.scss */
+  /* line 607, site.css.scss */
   article + article h1 {
     padding-top: 20px;
     border-top: 1px solid #dddddd;
     color: #000; }
 
-/* line 590, site.css.scss */
+/* line 615, site.css.scss */
 .article-section {
   margin-top: 3.75em; }
-  /* line 593, site.css.scss */
+  /* line 618, site.css.scss */
   .article-section header {
     border-bottom: 1px solid #dddddd;
     margin-bottom: -1px;
     position: relative;
     padding: 0 0 0.2em 0; }
-  /* line 606, site.css.scss */
+  /* line 631, site.css.scss */
   .article-section h2 a.topic {
     display: block;
     font-size: 0.75em;
@@ -677,11 +701,11 @@ article + article {
     text-transform: uppercase;
     text-rendering: optimizeLegibility;
     letter-spacing: 0.06em; }
-  /* line 616, site.css.scss */
+  /* line 641, site.css.scss */
   .article-section h3 {
     font-weight: normal;
     font-family: "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif; }
-  /* line 621, site.css.scss */
+  /* line 646, site.css.scss */
   .article-section .vignette {
     width: 3em;
     height: 2.69565em;
@@ -692,7 +716,7 @@ article + article {
     line-height: 1em;
     color: #fff;
     text-transform: none; }
-  /* line 634, site.css.scss */
+  /* line 659, site.css.scss */
   .article-section .section-lead,
   .article-section .subsection-lead {
     font-family: arial, sans-serif;
@@ -700,60 +724,64 @@ article + article {
     font-size: 0.8125em;
     line-height: 1.30769;
     margin-top: .5em; }
-    /* line 640, site.css.scss */
+    /* line 665, site.css.scss */
     .article-section .section-lead b,
     .article-section .section-lead strong,
     .article-section .subsection-lead b,
     .article-section .subsection-lead strong {
       color: #666666; }
-    /* line 643, site.css.scss */
+    /* line 668, site.css.scss */
     .article-section .section-lead a,
     .article-section .subsection-lead a {
       text-decoration: none; }
-  /* line 649, site.css.scss */
+  /* line 674, site.css.scss */
   .article-section .article-subsection {
     margin-top: 1.25em;
     border-top: 1px solid #dddddd; }
-    /* line 653, site.css.scss */
+    /* line 678, site.css.scss */
     .article-section .article-subsection:first-child {
       margin-top: 0; }
-  /* line 658, site.css.scss */
+  /* line 683, site.css.scss */
   .article-section header + .article-subsection {
     border-top: none;
     margin-top: 0; }
-  /* line 663, site.css.scss */
+  /* line 688, site.css.scss */
   .article-section .subsection-header {
     padding: 0 0 0.4em 0;
     border-bottom: 1px solid #dddddd; }
-    /* line 668, site.css.scss */
+    /* line 693, site.css.scss */
     .article-section .subsection-header h3,
     .article-section .subsection-header .subsection-lead {
       display: inline; }
 
-/* line 674, site.css.scss */
+/* line 699, site.css.scss */
+header.intro .article-section {
+  margin-top: 2.5em; }
+
+/* line 703, site.css.scss */
 .illustration + .article-section {
   margin-top: 1.875em; }
 
-/* line 679, site.css.scss */
+/* line 708, site.css.scss */
 .people .grid img {
   margin: 0; }
-/* line 682, site.css.scss */
+/* line 711, site.css.scss */
 .people .grid a {
   color: #000; }
-  /* line 684, site.css.scss */
+  /* line 713, site.css.scss */
   .people .grid a h2 {
     font-size: 1em;
     color: #2b912c;
     margin-top: 10px; }
-  /* line 689, site.css.scss */
+  /* line 718, site.css.scss */
   .people .grid a p {
     margin: 0;
     font-size: 0.875em; }
-  /* line 694, site.css.scss */
+  /* line 723, site.css.scss */
   .people .grid a:hover h2 {
     color: #00730a; }
 
-/* line 704, site.css.scss */
+/* line 733, site.css.scss */
 .icon-list.calendar .icon {
   text-align: center;
   text-indent: -0.3em;
@@ -765,20 +793,95 @@ article + article {
   width: 2.16667em;
   height: 2.55556em; }
 
-/* line 717, site.css.scss */
+/* line 747, site.css.scss */
+.conversations .details {
+  font-family: arial, sans-serif;
+  color: #999999;
+  font-size: 0.8125em;
+  line-height: 1.07143;
+  padding-top: 0.61538em;
+  border-top: 1px solid #dddddd;
+  margin: 0.75em 12.09677% 0 11.29032%; }
+  /* line 755, site.css.scss */
+  .conversations .details .topic {
+    display: block; }
+  /* line 761, site.css.scss */
+  .conversations .details .voting,
+  .conversations .details .results,
+  .conversations .details .toggler {
+    margin-top: 0.92308em; }
+  /* line 767, site.css.scss */
+  .conversations .details .results .answer,
+  .conversations .details .results .summary {
+    display: block;
+    margin-top: 0.85714em; }
+  /* line 771, site.css.scss */
+  .conversations .details .results .answer .summary {
+    margin-top: 0.28571em; }
+  /* line 775, site.css.scss */
+  .conversations .details .results b {
+    display: inline-block;
+    width: 24.13793%; }
+  /* line 780, site.css.scss */
+  .conversations .details .results .meter {
+    display: inline-block;
+    width: 75.86207%; }
+    /* line 783, site.css.scss */
+    .conversations .details .results .meter span {
+      display: inline-block;
+      text-indent: -9999px; }
+  /* line 789, site.css.scss */
+  .conversations .details .results .positive .meter span {
+    background: #2b912c; }
+  /* line 792, site.css.scss */
+  .conversations .details .results .negative .meter span {
+    background: #c41230; }
+  /* line 797, site.css.scss */
+  .conversations .details .toggler {
+    display: block;
+    color: #999999;
+    text-decoration: underline; }
+    /* line 802, site.css.scss */
+    .conversations .details .toggler:hover {
+      text-decoration: none; }
+  /* line 807, site.css.scss */
+  .conversations .details .related {
+    display: block;
+    margin-top: 0.92308em; }
+/* line 813, site.css.scss */
+.conversations .fetch-more {
+  clear: both;
+  padding-top: 2.5em; }
+
+/* line 820, site.css.scss */
+.body .conversations .fetch-more {
+  margin-left: 11.29032%; }
+
+/* line 825, site.css.scss */
 .conversation {
   list-style: none;
   margin: 1.25em 0 0 0;
   padding: 1.4375em 0; }
-  /* line 722, site.css.scss */
+  /* line 831, site.css.scss */
+  .conversation a .read-more {
+    color: #2b912c;
+    text-decoration: underline; }
+  /* line 837, site.css.scss */
+  .conversation a:hover .read-more {
+    color: #00730a;
+    text-decoration: none; }
+  /* line 844, site.css.scss */
   .conversation .content {
     position: relative;
     z-index: 1;
     padding: 20px 25px; }
-    /* line 727, site.css.scss */
+    /* line 849, site.css.scss */
     .conversation .content p:first-child {
       margin: 0; }
-  /* line 733, site.css.scss */
+    /* line 852, site.css.scss */
+    .conversation .content p {
+      color: #2A2A2A; }
+  /* line 858, site.css.scss */
   .conversation .byline p {
     position: absolute;
     margin: 0;
@@ -786,29 +889,30 @@ article + article {
     color: #999999;
     font-size: 0.8125em;
     line-height: 1.30769; }
-  /* line 741, site.css.scss */
+  /* line 866, site.css.scss */
   .conversation .byline img {
     position: absolute;
     bottom: -1.4375em; }
-  /* line 746, site.css.scss */
+  /* line 871, site.css.scss */
   .conversation .byline .arrow {
     position: absolute;
     width: 0;
     font-size: 0;
     line-height: 0;
     bottom: 0;
+    color: #ffe900;
     border-top: 25px solid transparent; }
-  /* line 756, site.css.scss */
+  /* line 882, site.css.scss */
   .conversation .question {
     position: relative;
     z-index: 2;
     margin-bottom: -0.75em;
     margin-right: 17.74194%; }
-    /* line 762, site.css.scss */
+    /* line 888, site.css.scss */
     .conversation .question .content {
       background: #ffe900;
       border-radius: 3px 3px 3px 0; }
-      /* line 766, site.css.scss */
+      /* line 892, site.css.scss */
       .conversation .question .content:after {
         position: absolute;
         right: 0;
@@ -819,81 +923,90 @@ article + article {
         content: "";
         background: rgba(0, 0, 0, 0.04);
         border-radius: 3px 0 3px 0; }
-      /* line 778, site.css.scss */
+      /* line 904, site.css.scss */
       .conversation .question .content p {
         font-family: "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif; }
-    /* line 784, site.css.scss */
+    /* line 910, site.css.scss */
     .conversation .question .byline p {
       top: -1.76923em; }
-    /* line 788, site.css.scss */
+    /* line 914, site.css.scss */
     .conversation .question .byline img {
       left: -14.70588%; }
-    /* line 792, site.css.scss */
+    /* line 918, site.css.scss */
     .conversation .question .byline .arrow {
       left: -3.87097%;
       border-top: 25px solid transparent;
       border-right: 25px solid #ffe900; }
-  /* line 800, site.css.scss */
+  /* line 926, site.css.scss */
   .conversation .answer {
     position: relative;
     margin-left: 11.29032%;
     margin-right: 12.09677%; }
-    /* line 805, site.css.scss */
+    /* line 931, site.css.scss */
     .conversation .answer .content {
       background: #f5f3ee;
       border-radius: 3px 3px 0 3px; }
-      /* line 809, site.css.scss */
+      /* line 935, site.css.scss */
       .conversation .answer .content p {
         line-height: 1.25; }
-    /* line 815, site.css.scss */
+    /* line 941, site.css.scss */
     .conversation .answer .byline img {
       right: -15.68627%; }
-    /* line 819, site.css.scss */
+    /* line 945, site.css.scss */
     .conversation .answer .byline p {
       padding-top: 0.76923em; }
-    /* line 823, site.css.scss */
+    /* line 949, site.css.scss */
     .conversation .answer .byline .arrow {
       right: -3.87097%;
       border-left: 25px solid #f5f3ee; }
 
-/* line 832, site.css.scss */
+/* line 959, site.css.scss */
+header.intro + .conversations .article-section:first-child {
+  margin-top: 2.5em;
+  border-top: none; }
+  /* line 963, site.css.scss */
+  header.intro + .conversations .article-section:first-child .conversation,
+  header.intro + .conversations .article-section:first-child .details {
+    margin-top: 0; }
+
+/* line 970, site.css.scss */
 .related-topics ul {
   list-style: none; }
-/* line 835, site.css.scss */
+/* line 973, site.css.scss */
 .related-topics li {
   margin-left: 0; }
-/* line 838, site.css.scss */
+/* line 976, site.css.scss */
 .related-topics img {
   float: right;
   margin: 0.75em 0 5px 5px; }
-/* line 842, site.css.scss */
+/* line 980, site.css.scss */
 .related-topics img + p {
   margin-top: 0.22222em; }
 
-/* line 847, site.css.scss */
+/* line 985, site.css.scss */
 .labeled-list {
   list-style: none;
   margin: 0; }
-  /* line 850, site.css.scss */
+  /* line 988, site.css.scss */
   .labeled-list .group {
     border-top: 1px solid #dddddd;
     padding: 1.25em 0 0 0;
     margin: 1.25em 0 0 0; }
-  /* line 855, site.css.scss */
+  /* line 993, site.css.scss */
   .labeled-list .label {
     font: bold 1.50893em "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif;
     color: #000;
     margin-bottom: 0.38462em; }
-  /* line 861, site.css.scss */
+  /* line 999, site.css.scss */
   .labeled-list.text-labels .label {
     font-size: 1.25em;
     line-height: 1.1; }
-  /* line 866, site.css.scss */
+  /* line 1004, site.css.scss */
   .labeled-list .list {
     margin: 0;
     list-style: disc;
     width: 100%; }
-    /* line 870, site.css.scss */
+    /* line 1008, site.css.scss */
     .labeled-list .list li {
       -webkit-column-break-inside: avoid;
       -moz-column-break-inside: avoid;
@@ -902,19 +1015,19 @@ article + article {
       column-break-inside: avoid;
       vertical-align: top;
       word-wrap: break-word; }
-    /* line 881, site.css.scss */
+    /* line 1019, site.css.scss */
     .labeled-list .list a {
       display: inline-block;
       vertical-align: top;
       word-wrap: break-word; }
 
-/* line 889, site.css.scss */
+/* line 1027, site.css.scss */
 #copyright {
   padding-left: 2.91667em;
   background: transparent url(/images/cc.svg) 0 2px no-repeat;
   background-size: 1.66667em 1.66667em; }
 
-/* line 895, site.css.scss */
+/* line 1033, site.css.scss */
 .topics {
   zoom: 1;
   list-style: none; }
@@ -925,16 +1038,16 @@ article + article {
   /* line 23, bourbon/addons/_clearfix.scss */
   .topics:after {
     clear: both; }
-  /* line 898, site.css.scss */
+  /* line 1036, site.css.scss */
   .topics .topic {
     margin: 1.25em 0 0 0; }
-  /* line 902, site.css.scss */
+  /* line 1040, site.css.scss */
   .topics h2,
   .topics h3 {
     margin: 0;
     padding: 0 0.25em 0 0;
     position: relative; }
-    /* line 906, site.css.scss */
+    /* line 1044, site.css.scss */
     .topics h2 > .number,
     .topics h3 > .number {
       display: none;
@@ -949,14 +1062,14 @@ article + article {
       background-size: 35px 32px;
       color: #fff;
       text-align: center; }
-  /* line 923, site.css.scss */
+  /* line 1061, site.css.scss */
   .topics h2,
   .topics h3,
   .topics p {
     margin-right: 0;
     display: inline; }
 
-/* line 929, site.css.scss */
+/* line 1067, site.css.scss */
 #cookies {
   display: none;
   width: 100%;
@@ -967,14 +1080,14 @@ article + article {
   line-height: 1.30769;
   color: #fff;
   padding: 0 20px; }
-  /* line 938, site.css.scss */
+  /* line 1076, site.css.scss */
   #cookies p {
     display: inline-block;
     margin: 10px .5em 10px 0; }
-  /* line 942, site.css.scss */
+  /* line 1080, site.css.scss */
   #cookies a {
     color: #fff; }
-    /* line 944, site.css.scss */
+    /* line 1082, site.css.scss */
     #cookies a.action {
       display: inline-block;
       background: #dddddd;
@@ -982,44 +1095,19 @@ article + article {
       line-height: 1;
       margin: 10px 0; }
 
-/* line 953, site.css.scss */
-#search-suggestions {
-  background: #f5f3ee;
-  padding: 0 10px;
-  margin-left: -10px;
-  border-radius: 0 0 6px 6px;
-  -webkit-box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.25); }
-  /* line 959, site.css.scss */
-  #search-suggestions a {
-    font-family: arial, sans-serif;
-    font-size: 0.875em;
-    display: block;
-    border-top: 1px solid #e2dcce;
-    padding: 10px 15px;
-    margin-right: -10px;
-    margin-left: -10px; }
-    /* line 960, site.css.scss */
-    #search-suggestions a:first-child {
-      margin-top: 10px;
-      border: none; }
-    /* line 971, site.css.scss */
-    #search-suggestions a.focused {
-      background: #ece8de; }
-
-/* line 977, site.css.scss */
+/* line 1092, site.css.scss */
 .front .article-section.news-posts {
   margin-top: 30px; }
 
-/* line 983, site.css.scss */
+/* line 1098, site.css.scss */
 .ui-tabs-nav {
   margin: 0;
   list-style: none; }
-  /* line 986, site.css.scss */
+  /* line 1101, site.css.scss */
   .ui-tabs-nav li {
     display: inline; }
 
-/* line 990, site.css.scss */
+/* line 1105, site.css.scss */
 .ui-tabs-hide {
   display: none; }
 /* line 3, mobile.css.scss */
@@ -1305,64 +1393,68 @@ blockquote {
     margin-left: -45px; }
 
   /* line 295, mobile.css.scss */
+  .conversations .details {
+    margin-right: 0; }
+
+  /* line 300, mobile.css.scss */
   .conversation img {
     display: none; }
-  /* line 299, mobile.css.scss */
+  /* line 304, mobile.css.scss */
   .conversation .content {
     padding: 15px 20px; }
-  /* line 303, mobile.css.scss */
+  /* line 308, mobile.css.scss */
   .conversation .question {
     margin-right: 13.72549%; }
-    /* line 307, mobile.css.scss */
+    /* line 312, mobile.css.scss */
     .conversation .question .content:after {
       width: 87.2549%; }
-  /* line 313, mobile.css.scss */
+  /* line 318, mobile.css.scss */
   .conversation .answer {
     margin-right: 0; }
 
-  /* line 318, mobile.css.scss */
+  /* line 323, mobile.css.scss */
   #logo-full a {
     height: 2.37896em;
     background-size: 14.6875em 2.37896em;
     background-position: 0 0; }
 
-  /* line 325, mobile.css.scss */
+  /* line 330, mobile.css.scss */
   .labeled-list.text-labels .label {
     float: none;
     width: 100%;
     margin-right: 0; } }
 @media only screen and (min-width: 600px) {
-  /* line 335, mobile.css.scss */
+  /* line 340, mobile.css.scss */
   h1 {
     font-size: 2.0625em;
     line-height: 1.06061; }
 
-  /* line 341, mobile.css.scss */
+  /* line 346, mobile.css.scss */
   ul li {
     margin-left: 0; }
 
-  /* line 346, mobile.css.scss */
+  /* line 351, mobile.css.scss */
   article .lead p {
     font-size: 1.25em;
     line-height: 1.2; }
 
-  /* line 351, mobile.css.scss */
+  /* line 356, mobile.css.scss */
   .body figure {
     margin-top: 1.25em; }
-    /* line 353, mobile.css.scss */
+    /* line 358, mobile.css.scss */
     .body figure.right {
       float: right;
       width: 40%;
       margin: 0.625em 0 0.625em 1.25em; } }
 @media only screen and (min-width: 600px) and (max-width: 767px) {
-  /* line 363, mobile.css.scss */
+  /* line 368, mobile.css.scss */
   #wrap {
     background: #fff;
     margin: 0 1.25em 0 0;
     padding-top: 1.25em;
     padding-left: 1.25em; }
 
-  /* line 373, mobile.css.scss */
+  /* line 378, mobile.css.scss */
   #site-banner,
   #main,
   nav.breadcrumbs,
@@ -1371,29 +1463,29 @@ blockquote {
     margin-right: auto;
     margin-left: auto; }
 
-  /* line 379, mobile.css.scss */
+  /* line 384, mobile.css.scss */
   #site-banner,
   #secondary-navigation {
     padding-top: 0; }
 
-  /* line 382, mobile.css.scss */
+  /* line 387, mobile.css.scss */
   nav.main-navigation .inner {
     padding: 0; }
 
-  /* line 386, mobile.css.scss */
+  /* line 391, mobile.css.scss */
   #wrap > nav.breadcrumbs {
     border: none;
     display: block;
     margin-bottom: 0.625em; }
 
-  /* line 393, mobile.css.scss */
+  /* line 398, mobile.css.scss */
   .labeled-list .group {
     padding-top: 0.625em; }
-  /* line 396, mobile.css.scss */
+  /* line 401, mobile.css.scss */
   .labeled-list .label {
     float: none;
     width: 100%; }
-  /* line 400, mobile.css.scss */
+  /* line 405, mobile.css.scss */
   .labeled-list .list {
     margin-top: 0.625em;
     float: none;
@@ -1405,16 +1497,16 @@ blockquote {
     column-count: 2;
     column-gap: 20px; }
 
-  /* line 408, mobile.css.scss */
+  /* line 413, mobile.css.scss */
   #logo-full {
     width: 32.5em;
     height: 2.55556em;
     background-size: 15.77778em 2.55556em; }
 
-  /* line 415, mobile.css.scss */
+  /* line 420, mobile.css.scss */
   .grid .container {
     width: 103.84615%; }
-  /* line 420, mobile.css.scss */
+  /* line 425, mobile.css.scss */
   .grid .column.c2, .grid .column.c3 {
     width: 46.2963%; } }
 @media only screen and (min-width: 768px) {
@@ -1526,44 +1618,49 @@ blockquote {
     line-height: 1.1; }
 
   /* line 114, tablet.css.scss */
+  .conversations .details {
+    font-size: 0.875em;
+    line-height: 1.28571; }
+
+  /* line 120, tablet.css.scss */
   .conversation .byline p {
     font-size: 0.875em;
     line-height: 1.28571; }
-  /* line 121, tablet.css.scss */
+  /* line 127, tablet.css.scss */
   .conversation .question .content p {
     font-size: 1.25em;
     line-height: 1.1; }
-  /* line 130, tablet.css.scss */
+  /* line 136, tablet.css.scss */
   .conversation .answer .content p {
     font-size: 1em;
     line-height: 1.25; }
 
-  /* line 138, tablet.css.scss */
+  /* line 144, tablet.css.scss */
   #site-banner {
     margin-bottom: 2.5em; }
 
-  /* line 142, tablet.css.scss */
+  /* line 148, tablet.css.scss */
   #logo {
     float: left;
     margin-top: -7px; }
 
-  /* line 150, tablet.css.scss */
+  /* line 156, tablet.css.scss */
   #skip-to-navigation {
     display: none; }
 
-  /* line 154, tablet.css.scss */
+  /* line 160, tablet.css.scss */
   #top-navigation {
     float: left; }
-    /* line 157, tablet.css.scss */
+    /* line 163, tablet.css.scss */
     #top-navigation ul {
       margin: 0 0 0 1.11111em;
       list-style: none; }
-    /* line 162, tablet.css.scss */
+    /* line 168, tablet.css.scss */
     #top-navigation li {
       margin: 0;
       font-size: 0.72222em;
       line-height: 1.93077; }
-    /* line 168, tablet.css.scss */
+    /* line 174, tablet.css.scss */
     #top-navigation a {
       display: inline-block;
       margin-top: 0.15385em;
@@ -1573,53 +1670,53 @@ blockquote {
       font-family: "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif;
       color: #fff;
       border-radius: 3px; }
-      /* line 177, tablet.css.scss */
+      /* line 183, tablet.css.scss */
       #top-navigation a:hover {
         background-color: #00730a; }
-    /* line 181, tablet.css.scss */
+    /* line 187, tablet.css.scss */
     #top-navigation span {
       display: block;
       margin-right: 7px;
       padding-right: 1.125em;
       background: transparent url(/images/arrows-right.svg) 100% 6px no-repeat;
       background-size: 9px 128px; }
-    /* line 189, tablet.css.scss */
+    /* line 195, tablet.css.scss */
     #top-navigation li:first-child a {
       margin-top: 0; }
-    /* line 194, tablet.css.scss */
+    /* line 200, tablet.css.scss */
     #top-navigation li.active-trail a {
       background-color: #00730a;
       color: #fff; }
-    /* line 198, tablet.css.scss */
+    /* line 204, tablet.css.scss */
     #top-navigation li.active-trail span {
       margin: 0;
       padding: 0;
       background: transparent; }
 
-  /* line 207, tablet.css.scss */
+  /* line 213, tablet.css.scss */
   #top-navigation li.active-trail,
   .front #top-navigation li:first-child {
     font-size: 0.88889em;
     line-height: 2.25; }
-    /* line 210, tablet.css.scss */
+    /* line 216, tablet.css.scss */
     #top-navigation li.active-trail a,
     .front #top-navigation li:first-child a {
       margin-left: -20px;
       padding: 0 20px 0 20px; }
-    /* line 214, tablet.css.scss */
+    /* line 220, tablet.css.scss */
     #top-navigation li.active-trail span,
     .front #top-navigation li:first-child span {
       margin: 0;
       background-position: 100% 10px; }
 
-  /* line 220, tablet.css.scss */
+  /* line 226, tablet.css.scss */
   #secondary-navigation {
     position: relative;
     border-bottom: 1px solid #dddddd;
     float: right;
     padding-bottom: 0.375em;
     width: 28.64583%; }
-    /* line 226, tablet.css.scss */
+    /* line 232, tablet.css.scss */
     #secondary-navigation a {
       font-family: arial, sans-serif;
       color: #999999;
@@ -1627,65 +1724,65 @@ blockquote {
       line-height: 1.28571;
       white-space: nowrap;
       margin-right: 0; }
-      /* line 232, tablet.css.scss */
+      /* line 238, tablet.css.scss */
       #secondary-navigation a:hover {
         color: #2b912c; }
-    /* line 236, tablet.css.scss */
+    /* line 242, tablet.css.scss */
     #secondary-navigation .more a {
       position: absolute;
       right: 0;
       bottom: -1.8em;
       margin-right: 0; }
-    /* line 242, tablet.css.scss */
+    /* line 248, tablet.css.scss */
     #secondary-navigation form {
       text-align: right; }
-    /* line 245, tablet.css.scss */
+    /* line 251, tablet.css.scss */
     #secondary-navigation .search {
       text-align: right; }
-      /* line 247, tablet.css.scss */
+      /* line 253, tablet.css.scss */
       #secondary-navigation .search input {
         width: 8.75em; }
-    /* line 251, tablet.css.scss */
+    /* line 257, tablet.css.scss */
     #secondary-navigation div {
       text-align: right;
       margin-top: 0.625em; }
 
-  /* line 259, tablet.css.scss */
+  /* line 265, tablet.css.scss */
   nav.breadcrumbs p {
     font-size: 0.875em; }
 
-  /* line 264, tablet.css.scss */
+  /* line 270, tablet.css.scss */
   #wrap > nav.breadcrumbs {
     width: 36.25em;
     margin: 0 auto;
     margin-bottom: 0.9375em; }
 
-  /* line 270, tablet.css.scss */
+  /* line 276, tablet.css.scss */
   footer nav.breadcrumbs {
     border: none; }
 
-  /* line 274, tablet.css.scss */
+  /* line 280, tablet.css.scss */
   nav.main-navigation {
     border-top: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
     padding: 15px 0; }
-    /* line 278, tablet.css.scss */
+    /* line 284, tablet.css.scss */
     nav.main-navigation .inner > div {
       float: left;
       width: 10.625em;
       margin: 0 20px 0 0; }
-    /* line 286, tablet.css.scss */
+    /* line 292, tablet.css.scss */
     nav.main-navigation .inner .first li,
     nav.main-navigation .inner .second li {
       border-left: 1px solid #dddddd;
       padding-left: 10px; }
-    /* line 291, tablet.css.scss */
+    /* line 297, tablet.css.scss */
     nav.main-navigation .inner .first {
       width: 6.25em; }
-    /* line 294, tablet.css.scss */
+    /* line 300, tablet.css.scss */
     nav.main-navigation .inner .second {
       width: 7.5em; }
-    /* line 299, tablet.css.scss */
+    /* line 305, tablet.css.scss */
     nav.main-navigation ul {
       margin: 0;
       font-family: arial, sans-serif;
@@ -1693,21 +1790,21 @@ blockquote {
       font-size: 0.875em;
       line-height: 1.28571;
       list-style: none; }
-    /* line 306, tablet.css.scss */
+    /* line 312, tablet.css.scss */
     nav.main-navigation li {
       margin: 0 0 0 0; }
-    /* line 309, tablet.css.scss */
+    /* line 315, tablet.css.scss */
     nav.main-navigation form {
       text-align: right; }
-      /* line 311, tablet.css.scss */
+      /* line 317, tablet.css.scss */
       nav.main-navigation form input {
         width: 8.75em; }
 
-  /* line 317, tablet.css.scss */
+  /* line 323, tablet.css.scss */
   .labeled-list {
     width: 580px;
     margin: auto; }
-    /* line 321, tablet.css.scss */
+    /* line 327, tablet.css.scss */
     .labeled-list .list {
       -moz-column-count: 2;
       -moz-column-gap: 20px;
@@ -1716,76 +1813,76 @@ blockquote {
       column-count: 2;
       column-gap: 20px;
       margin-top: 0; }
-      /* line 324, tablet.css.scss */
+      /* line 330, tablet.css.scss */
       .labeled-list .list li {
         font-size: 0.8em; }
-    /* line 328, tablet.css.scss */
+    /* line 334, tablet.css.scss */
     .labeled-list.text-labels .list {
       margin-top: 0.625em; }
 
-  /* line 333, tablet.css.scss */
+  /* line 339, tablet.css.scss */
   #logo-full a {
     height: 2.55556em;
     background-size: 16.11111em 2.55556em; }
 
-  /* line 338, tablet.css.scss */
+  /* line 344, tablet.css.scss */
   .news-posts .icon-list {
     margin: 0; }
-    /* line 340, tablet.css.scss */
+    /* line 346, tablet.css.scss */
     .news-posts .icon-list li {
       font-size: 1.44444em;
       padding: 0.57692em 0;
       border-bottom: 1px solid #dddddd; }
-      /* line 344, tablet.css.scss */
+      /* line 350, tablet.css.scss */
       .news-posts .icon-list li:first-child {
         padding-top: 0; }
-      /* line 347, tablet.css.scss */
+      /* line 353, tablet.css.scss */
       .news-posts .icon-list li:last-child {
         border: none;
         padding-bottom: 0; }
-    /* line 352, tablet.css.scss */
+    /* line 358, tablet.css.scss */
     .news-posts .icon-list a {
       margin: 0; }
-    /* line 355, tablet.css.scss */
+    /* line 361, tablet.css.scss */
     .news-posts .icon-list .title {
       line-height: 1.15385; }
-    /* line 358, tablet.css.scss */
+    /* line 364, tablet.css.scss */
     .news-posts .icon-list .meta {
       font-size: 0.53846em;
       line-height: 1.28571;
       margin-top: 0.14286em; }
 
-  /* line 365, tablet.css.scss */
+  /* line 371, tablet.css.scss */
   .topics .topic .number {
     display: block; }
 
-  /* line 370, tablet.css.scss */
+  /* line 376, tablet.css.scss */
   .grid .container {
     width: 103.44828%; }
-  /* line 373, tablet.css.scss */
+  /* line 379, tablet.css.scss */
   .grid .column {
     margin: 0 1.5625em 1.25em 0 0; }
-    /* line 376, tablet.css.scss */
+    /* line 382, tablet.css.scss */
     .grid .column.c2 {
       width: 46.66667%; }
-    /* line 379, tablet.css.scss */
+    /* line 385, tablet.css.scss */
     .grid .column.c3 {
       width: 30%; }
 
-  /* line 386, tablet.css.scss */
+  /* line 392, tablet.css.scss */
   .people .grid a h2 {
     font-size: 1.25em; }
-  /* line 389, tablet.css.scss */
+  /* line 395, tablet.css.scss */
   .people .grid a p {
     font-size: 1em; } }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  /* line 399, tablet.css.scss */
+  /* line 405, tablet.css.scss */
   #wrap {
     background: #fff;
     margin: 0 3.90625% 0 0;
     padding: 1.875em 0 3.125em 3.90625%; }
 
-  /* line 407, tablet.css.scss */
+  /* line 413, tablet.css.scss */
   #site-banner,
   #main,
   #wrap > footer {
@@ -1793,48 +1890,48 @@ blockquote {
     margin-left: auto;
     margin-right: auto; }
 
-  /* line 413, tablet.css.scss */
+  /* line 419, tablet.css.scss */
   #logo {
     width: 6.4375em;
     margin-right: 1.25em;
     margin-left: -2.8125em; }
-    /* line 418, tablet.css.scss */
+    /* line 424, tablet.css.scss */
     #logo a {
       height: 5.625em;
       width: 6.4375em;
       background-size: 100%; }
-      /* line 422, tablet.css.scss */
+      /* line 428, tablet.css.scss */
       #logo a:hover {
         background-position: 0 -11.25em; }
 
-  /* line 428, tablet.css.scss */
+  /* line 434, tablet.css.scss */
   #secondary-navigation {
     position: relative;
     border-bottom: 1px solid #dddddd;
     float: right;
     padding-bottom: 0.5em;
     width: 29.94792%; }
-    /* line 434, tablet.css.scss */
+    /* line 440, tablet.css.scss */
     #secondary-navigation a {
       white-space: nowrap;
       margin-left: .2em; }
-      /* line 437, tablet.css.scss */
+      /* line 443, tablet.css.scss */
       #secondary-navigation a:hover {
         color: #2b912c; }
-    /* line 441, tablet.css.scss */
+    /* line 447, tablet.css.scss */
     #secondary-navigation .more a {
       position: absolute;
       right: 0;
       bottom: -1.8em;
       margin-right: 0; }
-    /* line 447, tablet.css.scss */
+    /* line 453, tablet.css.scss */
     #secondary-navigation div {
       margin-top: 0.625em; }
 
-  /* line 453, tablet.css.scss */
+  /* line 459, tablet.css.scss */
   article .body {
     position: relative; }
-  /* line 461, tablet.css.scss */
+  /* line 467, tablet.css.scss */
   article .body > p, article .body > ul, article .body > ol,
   article .article-section > p,
   article .article-section > ul,
@@ -1843,28 +1940,28 @@ blockquote {
   article .article-subsection > ul,
   article .article-subsection > ol {
     margin-right: 1.11111em; }
-  /* line 466, tablet.css.scss */
+  /* line 472, tablet.css.scss */
   article .lead p {
     font-size: 1.375em;
     line-height: 1.18182;
     margin-top: 0.36364em; }
-  /* line 472, tablet.css.scss */
+  /* line 478, tablet.css.scss */
   article .illustration {
     margin-top: 1.25em; }
 
-  /* line 477, tablet.css.scss */
+  /* line 483, tablet.css.scss */
   .topics .topic {
     margin-right: 1.25em; }
 
-  /* line 482, tablet.css.scss */
+  /* line 488, tablet.css.scss */
   .labeled-list .label {
     width: 1em;
     text-align: right;
     margin: 0 0 0 -2.25em; }
-  /* line 487, tablet.css.scss */
+  /* line 493, tablet.css.scss */
   .labeled-list .list {
     width: 100%; }
-  /* line 491, tablet.css.scss */
+  /* line 497, tablet.css.scss */
   .labeled-list.text-labels .label {
     text-align: left;
     margin-left: 0;
@@ -1903,14 +2000,71 @@ blockquote {
   .vcard .aside {
     width: 64.51613%; }
 
-  /* line 40, desktop.css.scss */
-  .article-section .conversation {
-    margin-right: 1.11111em; }
+  /* line 39, desktop.css.scss */
+  .conversations {
+    zoom: 1; }
+    /* line 18, bourbon/addons/_clearfix.scss */
+    .conversations:before, .conversations:after {
+      content: "";
+      display: table; }
+    /* line 23, bourbon/addons/_clearfix.scss */
+    .conversations:after {
+      clear: both; }
+    /* line 41, desktop.css.scss */
+    .conversations .article-section {
+      zoom: 1;
+      width: 86.3354%;
+      border-top: 1px solid #dddddd; }
+      /* line 18, bourbon/addons/_clearfix.scss */
+      .conversations .article-section:before, .conversations .article-section:after {
+        content: "";
+        display: table; }
+      /* line 23, bourbon/addons/_clearfix.scss */
+      .conversations .article-section:after {
+        clear: both; }
+    /* line 47, desktop.css.scss */
+    .conversations .conversation,
+    .conversations .details {
+      margin-top: 1.42857em; }
+    /* line 50, desktop.css.scss */
+    .conversations .conversation {
+      float: left;
+      width: 89.20863%;
+      margin-right: 5.7554%; }
+    /* line 55, desktop.css.scss */
+    .conversations .details {
+      float: left;
+      border: none;
+      padding-top: 0;
+      margin-left: 0;
+      margin-right: -20.86331%;
+      width: 20.86331%; }
+      /* line 64, desktop.css.scss */
+      .conversations .details .time,
+      .conversations .details .comments {
+        display: block; }
+      /* line 68, desktop.css.scss */
+      .conversations .details .comments {
+        margin-top: 0.85714em; }
+      /* line 72, desktop.css.scss */
+      .conversations .details .meta + .voting {
+        border-top: 1px solid #dddddd; }
+    /* line 77, desktop.css.scss */
+    .conversations .voting .topic {
+      margin-top: 0.85714em; }
 
-  /* line 45, desktop.css.scss */
+  /* line 85, desktop.css.scss */
+  .body .conversation {
+    width: 96.875%; }
+  /* line 88, desktop.css.scss */
+  .body .details {
+    width: 22.65625%;
+    margin-right: -25.78125%; }
+
+  /* line 94, desktop.css.scss */
   .labeled-list {
     width: 100%; }
-    /* line 47, desktop.css.scss */
+    /* line 96, desktop.css.scss */
     .labeled-list .group {
       zoom: 1; }
       /* line 18, bourbon/addons/_clearfix.scss */
@@ -1920,14 +2074,14 @@ blockquote {
       /* line 23, bourbon/addons/_clearfix.scss */
       .labeled-list .group:after {
         clear: both; }
-    /* line 50, desktop.css.scss */
+    /* line 99, desktop.css.scss */
     .labeled-list .label {
       float: left;
       text-align: left;
       width: 17.01031%;
       margin-right: 0;
       margin-left: 0; }
-    /* line 58, desktop.css.scss */
+    /* line 107, desktop.css.scss */
     .labeled-list.labeled-list .list,
     .labeled-list .list {
       -moz-column-count: 3;
@@ -1939,132 +2093,132 @@ blockquote {
       margin-top: 0;
       width: 63.91753%; }
 
-  /* line 66, desktop.css.scss */
+  /* line 115, desktop.css.scss */
   .news-posts ul.icon-list {
     width: auto;
     margin-right: 1.11111em; }
-    /* line 69, desktop.css.scss */
+    /* line 118, desktop.css.scss */
     .news-posts ul.icon-list a {
       margin-right: 1.59091em; }
 
-  /* line 75, desktop.css.scss */
+  /* line 124, desktop.css.scss */
   .grid .container {
     width: 103.125%; }
-  /* line 79, desktop.css.scss */
+  /* line 128, desktop.css.scss */
   .grid .column.c2 {
     width: 46.9697%; }
-  /* line 82, desktop.css.scss */
+  /* line 131, desktop.css.scss */
   .grid .column.c3 {
     width: 30.30303%; }
 
-  /* line 91, desktop.css.scss */
+  /* line 140, desktop.css.scss */
   #wrap {
     padding-top: 2.5em;
     padding-bottom: 2.5em;
     max-width: 60.625em; }
 
-  /* line 98, desktop.css.scss */
+  /* line 147, desktop.css.scss */
   #logo {
     width: 10.3125em;
     margin: 0; }
-    /* line 101, desktop.css.scss */
+    /* line 150, desktop.css.scss */
     #logo a {
       width: 8.125em;
       height: 7.125em; }
-      /* line 104, desktop.css.scss */
+      /* line 153, desktop.css.scss */
       #logo a:hover {
         background-position: 0 -14.25em; }
 
-  /* line 111, desktop.css.scss */
+  /* line 160, desktop.css.scss */
   #top-navigation li {
     font-size: 0.88889em;
     line-height: 1.875; }
-  /* line 115, desktop.css.scss */
+  /* line 164, desktop.css.scss */
   #top-navigation a {
     margin-top: 0.125em;
     padding: 0 0 0 0.9375em; }
-  /* line 119, desktop.css.scss */
+  /* line 168, desktop.css.scss */
   #top-navigation span {
     padding-right: 1.4375em;
     background-position: 100% 8px; }
-  /* line 123, desktop.css.scss */
+  /* line 172, desktop.css.scss */
   #top-navigation #top-navigation li.active-trail a {
     padding-right: 1.25em; }
 
-  /* line 129, desktop.css.scss */
+  /* line 178, desktop.css.scss */
   #top-navigation li.active-trail,
   .front #top-navigation li:first-child {
     font-size: 1.11111em; }
 
-  /* line 134, desktop.css.scss */
+  /* line 183, desktop.css.scss */
   .front #top-navigation li:first-child a {
     padding-right: 0; }
-  /* line 137, desktop.css.scss */
+  /* line 186, desktop.css.scss */
   .front #top-navigation li:first-child span {
     margin-right: 14px;
     background-position: 100% 15px;
     padding-right: 0.9375em; }
 
-  /* line 144, desktop.css.scss */
+  /* line 193, desktop.css.scss */
   #secondary-navigation {
     width: 28.35052%;
     margin-top: 1.4375em;
     margin-right: 11.85567%; }
-    /* line 148, desktop.css.scss */
+    /* line 197, desktop.css.scss */
     #secondary-navigation form {
       float: left;
       text-align: left; }
-    /* line 152, desktop.css.scss */
+    /* line 201, desktop.css.scss */
     #secondary-navigation .search {
       width: 12.5em; }
-      /* line 154, desktop.css.scss */
+      /* line 203, desktop.css.scss */
       #secondary-navigation .search input {
         width: 100%; }
-    /* line 158, desktop.css.scss */
+    /* line 207, desktop.css.scss */
     #secondary-navigation div {
       text-align: left;
       margin: -1.78571em -41.81818% 0 0;
       float: right;
       width: 52.72727%; }
-      /* line 163, desktop.css.scss */
+      /* line 212, desktop.css.scss */
       #secondary-navigation div a {
         line-height: 1.42857;
         display: block; }
 
-  /* line 173, desktop.css.scss */
+  /* line 222, desktop.css.scss */
   #wrap > nav.breadcrumbs {
     width: auto;
     margin-left: 10.3125em; }
 
-  /* line 179, desktop.css.scss */
+  /* line 228, desktop.css.scss */
   #main {
     margin-left: 165px; }
 
-  /* line 184, desktop.css.scss */
+  /* line 233, desktop.css.scss */
   article .body {
     width: 79.50311%; }
-    /* line 187, desktop.css.scss */
+    /* line 236, desktop.css.scss */
     article .body figure.full {
       margin-right: 3.75em; }
-    /* line 190, desktop.css.scss */
+    /* line 239, desktop.css.scss */
     article .body figure.right {
       width: 48.4375%;
       margin-right: -55px;
       padding-top: 10px;
       border-top: 1px solid #dddddd; }
-      /* line 195, desktop.css.scss */
+      /* line 244, desktop.css.scss */
       article .body figure.right div {
         width: 235px;
         float: left;
         margin-right: 40px; }
-      /* line 200, desktop.css.scss */
+      /* line 249, desktop.css.scss */
       article .body figure.right figcaption {
         float: right;
         margin: 0;
         width: 145px;
         margin: 0 -110px 0 0;
         border: none; }
-  /* line 216, desktop.css.scss */
+  /* line 265, desktop.css.scss */
   article .body > p, article .body > ul, article .body > ol,
   article .article-section > p,
   article .article-section > ul,
@@ -2073,25 +2227,25 @@ blockquote {
   article .article-subsection > ul,
   article .article-subsection > ol {
     margin-right: 3.33333em; }
-  /* line 222, desktop.css.scss */
+  /* line 271, desktop.css.scss */
   article .lead p {
     font-size: 1.625em;
     line-height: 1.23077;
     margin-top: 0.30769em; }
-  /* line 229, desktop.css.scss */
+  /* line 278, desktop.css.scss */
   article .illustration {
     margin-top: 1.875em; }
-    /* line 232, desktop.css.scss */
+    /* line 281, desktop.css.scss */
     article .illustration figure > div {
       float: left;
       width: 79.50311%; }
-    /* line 237, desktop.css.scss */
+    /* line 286, desktop.css.scss */
     article .illustration figure figcaption {
       float: right;
       width: 18.01242%;
       margin: 0 0 0 2.48447%;
       border: none; }
-  /* line 246, desktop.css.scss */
+  /* line 295, desktop.css.scss */
   article blockquote {
     zoom: 1;
     padding-top: 30px;
@@ -2105,13 +2259,13 @@ blockquote {
     /* line 23, bourbon/addons/_clearfix.scss */
     article blockquote:after {
       clear: both; }
-    /* line 253, desktop.css.scss */
+    /* line 302, desktop.css.scss */
     article blockquote > div {
       width: 60.24845%;
       margin-bottom: .5em;
       padding-left: 0;
       float: left; }
-    /* line 260, desktop.css.scss */
+    /* line 309, desktop.css.scss */
     article blockquote footer {
       position: absolute;
       right: 0;
@@ -2120,41 +2274,41 @@ blockquote {
       padding-bottom: 1em;
       width: 39.75155%;
       text-align: left; }
-      /* line 269, desktop.css.scss */
+      /* line 318, desktop.css.scss */
       article blockquote footer img {
         position: absolute;
         left: 0;
         bottom: 0;
         width: 135px;
         margin: 0 0 0 0; }
-      /* line 277, desktop.css.scss */
+      /* line 326, desktop.css.scss */
       article blockquote footer p {
         float: left;
         padding: 0;
         width: 45.3125%;
         position: static;
         margin: 0 0 0 175px; }
-      /* line 285, desktop.css.scss */
+      /* line 334, desktop.css.scss */
       article blockquote footer .name {
         text-decoration: underline; }
-        /* line 287, desktop.css.scss */
+        /* line 336, desktop.css.scss */
         article blockquote footer .name:hover {
           text-decoration: none; }
 
-  /* line 296, desktop.css.scss */
+  /* line 345, desktop.css.scss */
   article + article h1 {
     margin-right: 2.7381em; }
 
-  /* line 301, desktop.css.scss */
+  /* line 350, desktop.css.scss */
   .article-section {
     width: 79.50311%; }
-    /* line 304, desktop.css.scss */
+    /* line 353, desktop.css.scss */
     .article-section header {
       width: 108.59375%;
       border-top: 1px solid #dddddd;
       border-bottom: none;
       padding: 0; }
-      /* line 309, desktop.css.scss */
+      /* line 358, desktop.css.scss */
       .article-section header.vignetted {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -2162,86 +2316,86 @@ blockquote {
         width: 134.375%;
         margin-left: -165px;
         padding-left: 165px; }
-        /* line 314, desktop.css.scss */
+        /* line 363, desktop.css.scss */
         .article-section header.vignetted .vignette {
           display: block;
           font-size: 1.4375em;
           position: absolute;
           top: -0.5em;
           left: 0; }
-    /* line 324, desktop.css.scss */
+    /* line 373, desktop.css.scss */
     .article-section .article-subsection {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       width: 108.59375%;
       padding-right: 8.59375%; }
-    /* line 330, desktop.css.scss */
+    /* line 379, desktop.css.scss */
     .article-section .subsection-header {
       width: 108.59375%; }
-    /* line 334, desktop.css.scss */
+    /* line 383, desktop.css.scss */
     .article-section .section-lead {
       margin-top: 1.42857em;
       float: right;
       width: 20.86331%;
       margin-right: -16.54676%; }
-    /* line 343, desktop.css.scss */
+    /* line 392, desktop.css.scss */
     .article-section .section-lead a,
     .article-section .subsection-lead a {
       text-decoration: underline; }
-      /* line 345, desktop.css.scss */
+      /* line 394, desktop.css.scss */
       .article-section .section-lead a:hover,
       .article-section .subsection-lead a:hover {
         text-decoration: none; }
 
-  /* line 353, desktop.css.scss */
+  /* line 402, desktop.css.scss */
   .related-topics img {
     margin-right: 20px; }
 
-  /* line 356, desktop.css.scss */
+  /* line 405, desktop.css.scss */
   .topics .topic {
     margin-right: 3.75em; }
 
-  /* line 360, desktop.css.scss */
+  /* line 409, desktop.css.scss */
   #topics {
     width: 120.49689%;
     margin-left: -20.49689%; }
 
-  /* line 366, desktop.css.scss */
+  /* line 415, desktop.css.scss */
   .tabbed header {
     padding: 0; }
-  /* line 369, desktop.css.scss */
+  /* line 418, desktop.css.scss */
   .tabbed .tabs {
     margin-top: -17px; }
-    /* line 371, desktop.css.scss */
+    /* line 420, desktop.css.scss */
     .tabbed .tabs li {
       margin: 0; }
-    /* line 374, desktop.css.scss */
+    /* line 423, desktop.css.scss */
     .tabbed .tabs a.action {
       font-size: 0.77778em; }
 
-  /* line 385, desktop.css.scss */
+  /* line 434, desktop.css.scss */
   footer nav.breadcrumbs {
     margin-right: 115px; }
 
-  /* line 390, desktop.css.scss */
+  /* line 439, desktop.css.scss */
   #site-navigation ul {
     font-family: arial, sans-serif;
     color: #999999;
     font-size: 0.875em;
     line-height: 1.28571em; }
-  /* line 395, desktop.css.scss */
+  /* line 444, desktop.css.scss */
   #site-navigation form {
     margin-right: 185px; }
-    /* line 397, desktop.css.scss */
+    /* line 446, desktop.css.scss */
     #site-navigation form input {
       width: 15.71429em; }
 
-  /* line 403, desktop.css.scss */
+  /* line 452, desktop.css.scss */
   #logo-full a {
     margin-right: 10.27778em; }
 
-  /* line 407, desktop.css.scss */
+  /* line 456, desktop.css.scss */
   #copyright {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
