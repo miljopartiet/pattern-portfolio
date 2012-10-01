@@ -14,13 +14,16 @@ nav.main-navigation .inner {
   margin-right: auto;
   margin-left: auto;
 }
+
 #site-banner,
 #secondary-navigation {
   padding-top: 0;
 }
+
 nav.main-navigation .inner {
   padding: 0;
 }
+
 // TODO generalize the different breadcrumbs layouts
 #wrap > nav.breadcrumbs {
   border: none;
@@ -32,10 +35,12 @@ nav.main-navigation .inner {
   .group {
     padding-top: (10em/16);
   }
+
   .label {
     float: none;
     width: 100%;
   }
+
   .list {
     margin-top: (10em/16);
     float: none;
@@ -54,6 +59,7 @@ nav.main-navigation .inner {
   .container {
     width: percentage(540/520);
   }
+
   .column {
     &.c2,
     &.c3 {

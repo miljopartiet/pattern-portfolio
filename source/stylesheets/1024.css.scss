@@ -11,23 +11,31 @@ h1 {
   background-size: 20px 50px;
   margin-right: (145em/16);
   width: auto;
+
   .main {
     width: percentage(390/610);
   }
+
   .aside {
     width: percentage(200/610);
   }
+
   ul,
-  p { width: auto; }
+  p {
+    width: auto;
+  }
 }
+
 .vcard {
   .main,
   .aside {
     margin-top: (10em/16);
   }
+
   .main {
     width: percentage(220/620);
   }
+
   .aside {
     width: percentage(400/620);
   }
@@ -35,15 +43,18 @@ h1 {
 
 .conversations {
   @include clearfix;
+
   .article-section {
     @include clearfix;
     width: percentage(695/805);
     border-top: 1px solid $warm-grey;
   }
+
   .conversation,
   .details {
     margin-top: (20em/14);
   }
+
   .conversation {
     float: left;
     width: percentage(620/695);
@@ -70,6 +81,7 @@ h1 {
       border-top: 1px solid $warm-grey;
     }
   }
+
   .voting {
     .topic {
       margin-top: (12em/14);
@@ -82,6 +94,7 @@ h1 {
   .conversation {
     width: percentage(620/640);
   }
+
   .details {
     width: percentage(145/640);
     margin-right: percentage(-165/640);
@@ -90,9 +103,11 @@ h1 {
 
 .labeled-list {
   width: 100%;
+
   .group {
     @include clearfix;
   }
+
   .label {
     float: left;
     text-align: left;
@@ -100,6 +115,7 @@ h1 {
     margin-right: 0;
     margin-left: 0;
   }
+
   &.labeled-list .list,
   .list {
     @include columns(3, 20px);
@@ -112,6 +128,7 @@ h1 {
 .news-posts ul.icon-list {
   width: auto;
   margin-right: (20em/18);
+
   a {
     margin-right: (35em/22);
   }
@@ -121,10 +138,12 @@ h1 {
   .container {
     width: percentage(660/640);
   }
+
   .column {
     &.c2 {
       width: percentage(310/660);
     }
+
     &.c3 {
       width: percentage(200/660);
     }
@@ -144,9 +163,11 @@ h1 {
 #logo {
   width: (165em/16);
   margin: 0;
+
   a {
     width: (130em/16);
     height: (114em/16);
+
     &:hover {
       background-position: 0 ((228em/16) * -1);
     }
@@ -158,14 +179,17 @@ h1 {
     font-size: (16em/18);
     line-height: (30/16);
   }
+
   a {
     margin-top: (2em/16);
     padding: 0 0 0 (15em/16);
   }
+
   span {
     padding-right: (23em/16);
     background-position: 100% 8px;
   }
+
   #top-navigation li.active-trail a {
     padding-right: (25em/20);
   }
@@ -180,6 +204,7 @@ h1 {
   a {
     padding-right:0;
   }
+
   span {
     margin-right:14px;
     background-position: 100% 15px;
@@ -191,21 +216,25 @@ h1 {
   width: percentage(275/970);
   margin-top: (23em/16);
   margin-right: percentage(115/970);
+
   form {
     float: left;
     text-align: left;
   }
+
   .search {
     width: (200em/16);
     input {
       width: 100%;
     }
   }
+
   div {
     text-align: left;
     margin: - (25em/14) percentage((115/275) * -1) 0 0;
     float: right;
     width: percentage(145/275);
+
     a {
       line-height: (20/14);
       display: block;
@@ -229,20 +258,24 @@ h1 {
 article {
   .body {
     width: percentage(640/805);
+
     figure {
       &.full {
         margin-right: (60em/16);
       }
+
       &.right {
         width: percentage(310/640);
         margin-right: -55px;
         padding-top: 10px;
         border-top: 1px solid $warm-grey;
+
         div {
           width: 235px;
           float: left;
           margin-right: 40px;
         }
+
         figcaption {
           float: right;
           margin: 0;
@@ -274,6 +307,7 @@ article {
 
   .illustration {
     margin-top: (30em/16);
+
     figure {
       & > div {
         float: left;
@@ -294,8 +328,8 @@ article {
     padding-top: 30px;
     padding-bottom: 0;
     position: relative;
-
     width: percentage(805/640);
+
     > div {
       width: percentage(485/805);
       margin-bottom: .5em;
@@ -330,6 +364,7 @@ article {
 
       .name {
         text-decoration: underline;
+
         &:hover {
           text-decoration: none;
         }
@@ -352,11 +387,13 @@ article + article {
     border-top: 1px solid $warm-grey;
     border-bottom: none;
     padding: 0;
+
     &.vignetted {
       @include box-sizing(border-box);
       width: percentage(860/640);
       margin-left: -165px;
       padding-left: 165px;
+
       .vignette {
         display: block;
         font-size: (23em/16);
@@ -388,6 +425,7 @@ article + article {
   .subsection-lead {
     a {
       text-decoration: underline;
+
       &:hover {
         text-decoration: none;
       }
@@ -412,16 +450,17 @@ article + article {
   header {
     padding: 0;
   }
+
   .tabs {
     margin-top: -17px;
+
     li {
       margin: 0;
     }
+
     a.action {
       font-size: (14em/18);
     }
-  }
-  .ui-tabs-panel {
   }
 }
 
@@ -438,8 +477,10 @@ footer nav.breadcrumbs {
     font-size: (14em/16);
     line-height: (18em/14);
   }
+
   form {
     margin-right: 185px;
+
     input {
       width: (220em/14);
     }
