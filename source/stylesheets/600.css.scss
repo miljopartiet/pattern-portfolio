@@ -1,0 +1,27 @@
+h1 {
+  font-size: (33em/16);
+  line-height: (35/33);
+}
+
+ul {
+  li {
+    margin-left: 0;
+  }
+}
+
+article .lead p {
+  font-size: (20em/16);
+  line-height: (24/20);
+}
+
+.body {
+  figure {
+    margin-top: (20em/16);
+    &.right {
+      float: right;
+      width: percentage(240/600);
+      margin: (10em/16) 0 (10em/16) (20em/16);
+    }
+  }
+}
+

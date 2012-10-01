@@ -1,0 +1,64 @@
+// Rules for 600px - 767px devices
+#wrap {
+  background: #fff;
+  margin: 0 (20em/16) 0 0;
+  padding-top: (20em/16);
+  padding-left: (20em/16);
+}
+
+#site-banner,
+#main,
+nav.breadcrumbs,
+nav.main-navigation .inner {
+  width: (520em/16);
+  margin-right: auto;
+  margin-left: auto;
+}
+#site-banner,
+#secondary-navigation {
+  padding-top: 0;
+}
+nav.main-navigation .inner {
+  padding: 0;
+}
+// TODO generalize the different breadcrumbs layouts
+#wrap > nav.breadcrumbs {
+  border: none;
+  display: block;
+  margin-bottom: (10em/16);
+}
+
+.labeled-list {
+  .group {
+    padding-top: (10em/16);
+  }
+  .label {
+    float: none;
+    width: 100%;
+  }
+  .list {
+    margin-top: (10em/16);
+    float: none;
+    width: 100%;
+    @include columns(2, 20px);
+  }
+}
+
+#logo-full {
+  width: (520em/16);
+  height: (46em/18);
+  background-size: (284em/18) (46em/18);
+}
+
+.grid {
+  .container {
+    width: percentage(540/520);
+  }
+  .column {
+    &.c2,
+    &.c3 {
+      width: percentage(250/540);
+    }
+  }
+}
+

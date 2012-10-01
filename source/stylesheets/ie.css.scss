@@ -1,0 +1,71 @@
+@import "compass";
+@import "includes.css.scss";
+
+@import "600";
+@import "768";
+@import "1024";
+
+// PNG replacements
+#logo a {
+  background: transparent url(../images/logo.png) 0 0 no-repeat;
+}
+
+#logo-full a {
+  background: transparent url(../images/logo-full.png) 100% 0 no-repeat;
+}
+
+nav.breadcrumbs a {
+  background: url(../images/breadcrumb-slash.png) 100% 50% no-repeat;
+}
+
+.search button {
+  background: transparent url(../images/search.png) 0 0 no-repeat;
+}
+
+.article-section .vignette {
+  background: transparent url(../images/bg-vignette.png) 0 0 no-repeat;
+}
+
+ul.calendar {
+  background: transparent url(../images/calendar.png) 0 50% no-repeat;
+}
+
+#copyright {
+  background: transparent url(../images/cc.svg) 0 2px no-repeat;
+}
+
+.topics {
+  h2,
+  h3 {
+    .number {
+      background: transparent url(../images/bg-vignette.svg) 0 0 no-repeat;
+    }
+  }
+}
+
+#top-navigation {
+  span {
+    background: transparent url(../images/arrows-right.svg) 100% 6px no-repeat;
+  }
+}
+
+// Inline block fixes
+.inline-block-fix {
+  zoom: 1;
+  *display: inline;
+}
+.conversations .details .results {
+  b,
+  .meter,
+  .meter span {
+    @extend .inline-block-fix;
+  }
+}
+
+.labeled-list .list a,
+#cookies a.action,
+.grid .column,
+.action,
+#top-navigation a {
+  @extend .inline-block-fix;
+}

@@ -121,11 +121,25 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
+
 input[type="search"] {
   -webkit-appearance: textfield;
 }
 
-#{$all-text-inputs},
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
 textarea {
   font-family: $arial;
   font-size: (14em/16);
@@ -137,6 +151,7 @@ textarea {
   @include box-sizing(border-box);
   width: 70%;
   resize: none;
+
   &:focus {
     border: 1px solid $warm-grey;
     outline: none;
@@ -152,6 +167,7 @@ textarea {
 :-ms-input-placeholder {
   @include placeholder-styles;
 }
+
 :focus::-webkit-input-placeholder {
   color: $text-light-grey;
 }
@@ -181,13 +197,21 @@ button {
 // The container's width must be equal to column widths + column margins
 .grid {
   overflow: hidden;
+
   .container {
     margin-top: (20em/16);
+    width: percentage(304/284);
   }
+
   .column {
     display: inline-block;
     vertical-align: top;
-    margin-bottom: (20em/16);
+    margin: 0 (20em/16) (25em/16) 0;
+
+    &.c2,
+    &.c3 {
+      width: percentage(132/304);
+    }
   }
 }
 
@@ -205,6 +229,7 @@ button {
   &.widescreen {
     padding-bottom: 57.25%;
   }
+
   &.vimeo {
     padding-top: 0;
   }
@@ -239,15 +264,18 @@ figcaption {
 .icon-list {
   margin-top: (20em/16);
   list-style: none;
+
   li {
     margin:0;
     font-family: $swift;
     font-size: (20em/16);
+
     a {
       text-decoration: none;
       display: block;
       line-height: (22em/20);
       margin: 0 0 (10em/20) 55px;
+
       .meta {
         font-family: $arial;
         font-size: (13em/20);
@@ -257,6 +285,7 @@ figcaption {
         margin-top: (2em/13);
       }
     }
+
     .icon {
       display: block;
       width: 35px;
@@ -269,6 +298,7 @@ figcaption {
 .fetch-more {
   margin-top: (20em/16);
 }
+
 // Button like action links
 .action {
   font: (14em/16) $arial;
@@ -280,35 +310,43 @@ figcaption {
   white-space: nowrap;
   display: inline-block;
 }
+
 .action a,
 a.action,
-.ui-tabs-nav a
-{
+.ui-tabs-nav a {
   text-decoration: none;
+
   &:hover {
     background: $green-dark;
     color: #fff;
   }
 }
+
 .ui-tabs-nav .ui-state-active a {
   background: $green-dark;
 }
+
 button.action {
   color: #fff;
   border: none;
+
   &:hover {
     background: $green-dark;
     cursor: pointer;
   }
+
   &:active {
     background: #fff;
     color: $green;
   }
+
   &.negative {
     background: $red;
+
     &:hover {
       background: darken($red, 10%);
     }
+
     &:active {
       color: $red;
       background: #fff;
@@ -323,6 +361,7 @@ p.copy {
 }
 
 blockquote {
+  overflow: hidden;
   margin-top: (20em/16);
   margin-bottom: (20em/16);
   padding-bottom: (5em/16);
@@ -340,6 +379,7 @@ blockquote {
       &:first-child {
         position: relative;
         margin-top: 0;
+
         &:before {
           content: "”";
           font-family: $swift;
@@ -355,10 +395,27 @@ blockquote {
   }
 
   footer {
+    @include clearfix;
     @include small-text;
     font-size: (13em/16);
     line-height: (17/13);
     margin-bottom: (-5em/13);
+    text-align: right;
+    position: relative;
+
+    p {
+      position: absolute;
+      bottom: .5em;
+      left: 0;
+      width: percentage(246/320);
+    }
+
+    img {
+      float: right;
+      width: percentage(45/320);
+      margin: 0 percentage(6/320) 0 percentage(13/320);
+    }
+
     .title {
       color: $text-light-grey;
     }
@@ -372,6 +429,10 @@ blockquote {
   position: relative;
   margin: 1.5em auto 0 auto;
   padding-bottom: (40em/16);
+}
+
+#wrap > footer {
+  margin-top: (80em/16);
 }
 
 #site-banner {
@@ -390,6 +451,7 @@ blockquote {
     height: 57px;
     background: transparent url(../images/logo.svg) 0 0 no-repeat;
     background-size: 100%;
+
     &:hover {
       background-position: 0 -114px;
     }
@@ -410,9 +472,13 @@ blockquote {
 #site-navigation {
   @include clearfix;
 }
+
 #secondary-navigation {
   ul,
-  li { display: inline; }
+  li {
+    display: inline;
+  }
+
   li {
     font-size: (14em/16);
   }
@@ -422,25 +488,30 @@ blockquote {
 // and in the page footer
 nav.breadcrumbs {
   display: block;
+
   p {
     @include small-text;
     font-size: (13em/16);
     line-height: (17/13);
     margin: 0;
   }
+
   a,
   span {
     color: $text-light-grey;
     position: relative;
+
     &:first-child {
       padding-left: 0;
     }
   }
+
   a {
     padding-right: (20em/13);
     margin-right: (5em/13);
     background: url(../images/breadcrumb-slash.svg) 100% 50% no-repeat;
     background-size: (11em/13) (18em/13);
+
     &:hover {
       text-decoration: underline;
       color: $green;
@@ -456,6 +527,7 @@ footer nav.breadcrumbs {
 
 .search {
   position: relative;
+
   input {
     width: 100%;
     background: $beige;
@@ -463,10 +535,12 @@ footer nav.breadcrumbs {
     padding: 3px 20px 3px 5px;
     margin: 0;
     border-radius: 4px;
+
     &:focus {
       border: 1px solid $warm-grey;
     }
   }
+
   button {
     text-indent: -9999em;
     border: none;
@@ -495,6 +569,7 @@ footer nav.breadcrumbs {
   margin: (60em/16) 0;
   border-radius: 4px 4px 4px 0;
   @include box-sizing(border-box);
+
   &:after {
     content:"";
     position:absolute;
@@ -504,28 +579,36 @@ footer nav.breadcrumbs {
     border-style: solid;
     border-color: $yellow transparent;
   }
+
   .inner {
     @include clearfix;
   }
+
   h2 {
     margin-top: 0;
   }
+
   p,
   ul {
     margin-top: (2em/18);
   }
+
   input {
     background: #fff;
   }
+
   li {
     margin-left: 1em;
   }
+
   .aside {
     margin-top: 1em;
   }
+
   .position-me {
     margin-top: 15px;
     text-align: center;
+
     .choose {
       margin-top: (8em/14);
       display: block;
@@ -534,6 +617,7 @@ footer nav.breadcrumbs {
     }
   }
 }
+
 form.speech-bubble {
   margin-top: 40px;
   margin-bottom: 0;
@@ -543,13 +627,16 @@ form.speech-bubble {
     padding: 10px 10px 0 10px;
     margin-top: -10px;
     margin-left: -10px;
+
     input {
       padding: 7px 20px 7px 10px;
       border-radius: 6px;
     }
+
     &.active-suggestions {
       background: $yellow;
       border-radius: 6px 6px 0 0;
+
       input,
       input:focus {
         border: 1px solid transparent;
@@ -565,14 +652,15 @@ form.speech-bubble {
   padding-right: 25px;
   padding-bottom: 10px;
   margin-left: -25px;
+
   ul {
     margin-left: 20px;
   }
+
   .focused a {
     color: $green-dark;
   }
 }
-
 
 //
 // Article contents
@@ -581,9 +669,11 @@ article {
   h1 {
     color: $green;
   }
+
   p a,
   li > a {
     text-decoration: underline;
+
     &:hover {
       text-decoration: none;
     }
@@ -604,6 +694,7 @@ article {
 
 article + article {
   margin-top: 40px;
+
   h1 {
     padding-top: 20px;
     border-top: 1px solid $warm-grey;
@@ -621,11 +712,6 @@ article + article {
     position: relative;
     padding: 0 0 0.2em 0;
   }
-  // FIXME: This won't work
-  //& + *,
-  //header + * {
-  //  margin-top: 20px;
-  //}
 
   h2 {
     a.topic {
@@ -661,10 +747,12 @@ article + article {
     font-size: (13em/16);
     line-height: (17/13);
     margin-top: .5em;
+
     b,
     strong {
       color: $text-grey;
     }
+
     a {
       text-decoration: none;
     }
@@ -708,17 +796,21 @@ header.intro .article-section {
   img {
     margin: 0;
   }
+
   a {
     color: #000;
+
     h2 {
       font-size: 1em;
       color: $green;
       margin-top: 10px;
     }
+
     p {
       margin: 0;
       font-size: (14em/16);
     }
+
     &:hover {
       h2 {
         color: $green-dark;
@@ -768,6 +860,7 @@ header.intro .article-section {
         display: block;
         margin-top: (12em/14);
       }
+
       .answer .summary {
         margin-top: (4em/14);
       }
@@ -780,6 +873,7 @@ header.intro .article-section {
       .meter {
         display: inline-block;
         width: percentage(110/145);
+
         span {
           display: inline-block;
           text-indent: -9999px;
@@ -789,6 +883,7 @@ header.intro .article-section {
       .positive .meter span {
         background: $green;
       }
+
       .negative .meter span {
         background: $red;
       }
@@ -797,8 +892,8 @@ header.intro .article-section {
     .toggler {
       display: block;
       color: $text-light-grey;
-
       text-decoration: underline;
+
       &:hover {
         text-decoration: none;
       }
@@ -849,6 +944,7 @@ header.intro .article-section {
     p:first-child {
       margin: 0;
     }
+
     p {
       color: #2A2A2A;
     }
@@ -959,6 +1055,7 @@ header.intro + .conversations {
   .article-section:first-child {
     margin-top: (40em/16);
     border-top: none;
+
     .conversation,
     .details {
       margin-top: 0
@@ -970,13 +1067,16 @@ header.intro + .conversations {
   ul {
     list-style: none;
   }
+
   li {
     margin-left: 0;
   }
+
   img {
     float: right;
     margin: 0.75em 0 5px 5px;
   }
+
   img + p {
     margin-top: (4em/18);
   }
@@ -985,26 +1085,36 @@ header.intro + .conversations {
 .labeled-list {
   list-style: none;
   margin: 0;
+
   .group {
+    @include clearfix;
     border-top: 1px solid $warm-grey;
     padding: (20em/16) 0 0 0;
     margin: (20em/16) 0 0 0;
   }
+
   .label {
     font: bold (26em/16)/(28/26) $swift;
     color: #000;
     margin-bottom: (10em/26);
+    float: left;
+    width: percentage(75/284);
+    margin-right: percentage(15/284);
   }
+
   &.text-labels {
     .label {
       font-size: (20em/16);
       line-height: (22/20);
     }
   }
+
   .list {
-    margin: 0;
+    margin: (10em/16) 0 0 0;
     list-style: disc;
-    width: 100%;
+    float: left;
+    width: percentage(194/284);
+
     li {
       -webkit-column-break-inside: avoid;
       -moz-column-break-inside: avoid;
@@ -1024,6 +1134,31 @@ header.intro + .conversations {
   }
 }
 
+.tabbed {
+  header {
+    padding: 0;
+    margin-top: 56px;
+    margin-bottom: 56px;
+  }
+
+  .article-subsection {
+    border: none;
+  }
+
+  .tabs {
+    margin-bottom: -14px;
+
+    li {
+      margin: 0;
+    }
+
+    a.action {
+      font-size: (12em/16);
+      margin-right: (20em/12);
+    }
+  }
+}
+
 #copyright {
   padding-left: (35em/12);
   background: transparent url(../images/cc.svg) 0 2px no-repeat;
@@ -1033,14 +1168,17 @@ header.intro + .conversations {
 .topics {
   @include clearfix;
   list-style: none;
+
   .topic {
     margin: (20em/16) 0 0 0;
   }
+
   h2,
   h3 {
     margin: 0;
     padding: 0 (5em/20) 0 0;
     position: relative;
+
     & > .number {
       display: none;
       font-size: (20em/26);
@@ -1056,6 +1194,7 @@ header.intro + .conversations {
       text-align: center;
     }
   }
+
   h2,
   h3,
   p {
@@ -1073,12 +1212,15 @@ header.intro + .conversations {
   line-height: (17/13);
   color: #fff;
   padding: 0 20px;
+
   p {
     display: inline-block;
     margin: 10px .5em 10px 0;
   }
+
   a {
     color: #fff;
+
     &.action {
       display: inline-block;
       background: $warm-grey;
@@ -1094,10 +1236,10 @@ header.intro + .conversations {
 }
 
 // jQuery UI
-
 .ui-tabs-nav {
   margin: 0;
   list-style: none;
+
   li {
     display: inline;
   }
