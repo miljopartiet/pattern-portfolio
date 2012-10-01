@@ -6,6 +6,11 @@
 @import "1024";
 
 // PNG replacements
+body {
+  background: #fff url(../images/bg-1x.png) 50% 0 repeat-y;
+  font-size: 16px;
+}
+
 #logo a {
   background: transparent url(../images/logo-1x.png) 0 0 no-repeat;
 }
@@ -26,8 +31,8 @@ nav.breadcrumbs a {
   background: transparent url(../images/bg-vignette-1x.png) 0 0 no-repeat;
 }
 
-ul.calendar {
-  background: transparent url(../images/calendar-1x.png) 0 50% no-repeat;
+ul.calendar .icon {
+  background: transparent url(../images/calendar-1x.png) 0 50% no-repeat !important;
 }
 
 #copyright {
@@ -68,4 +73,19 @@ ul.calendar {
 .action,
 #top-navigation a {
   @extend .inline-block-fix;
+}
+
+// Layout
+
+#wrap {
+  width: 970px;
+}
+#main {
+  //width: 100%;
+  //width: auto;
+  zoom: 1;
+}
+
+img {
+	width: auto\9; /* ie8 */
 }
