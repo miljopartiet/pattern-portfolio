@@ -1228,9 +1228,13 @@ header.intro + .conversations {
     &.action {
       display: inline-block;
       background: $warm-grey;
+      color: #000;
       font-size: 1em;
-      line-height: 1;
       margin: 10px 0;
+
+      &:hover {
+        background: darken($warm-grey, 2%);
+      }
     }
   }
 }
