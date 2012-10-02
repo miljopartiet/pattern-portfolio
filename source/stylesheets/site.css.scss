@@ -322,10 +322,6 @@ a.action,
   }
 }
 
-.ui-tabs-nav .ui-state-active a {
-  background: $green-dark;
-}
-
 button.action {
   color: #fff;
   border: none;
@@ -1146,9 +1142,11 @@ header.intro + .conversations {
   }
 
   .tabs {
-    margin-bottom: -14px;
+    margin: 0 0 -14px 0;
+    list-style: none;
 
     li {
+      display: inline;
       margin: 0;
     }
 
@@ -1237,14 +1235,9 @@ header.intro + .conversations {
 }
 
 // jQuery UI
-.ui-tabs-nav {
-  margin: 0;
-  list-style: none;
-
-  li {
-    display: inline;
-  }
-}
 .ui-tabs-hide {
   display: none;
+}
+.ui-tabs-nav .ui-state-active a {
+  background: $green-dark;
 }
