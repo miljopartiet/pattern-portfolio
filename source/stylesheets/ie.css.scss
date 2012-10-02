@@ -31,8 +31,10 @@ nav.breadcrumbs a {
   background-image: url(../images/bg-vignette-1x.png);
 }
 
-ul.calendar .icon {
+#wrap ul.calendar .icon {
   background-image: url(../images/calendar-1x.png);
+  line-height: 1;
+  padding-top: 28px;
 }
 
 #copyright {
