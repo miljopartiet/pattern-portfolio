@@ -52,7 +52,6 @@ figure {
 
 .speech-bubble {
   width: percentage(620/580);
-  @include box-sizing(border-box);
 
   h2 {
     font-size: (24em/16);

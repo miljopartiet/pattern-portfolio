@@ -83,6 +83,47 @@ nav.breadcrumbs a {
   @extend .inline-block-fix;
 }
 
+// Box-sizing border-box fixes
+.lte7 {
+  textarea {
+    width: 90%;
+    display: block;
+  }
+
+  .speech-bubble {
+    // Remove padding (20) from width
+    .main {
+      width: percentage(370/610);
+    }
+
+    .aside {
+      width: percentage(180/610);
+    }
+  }
+
+  form.speech-bubble {
+    input {
+      width: 60%;
+    }
+
+    textarea {
+      width: 70%;
+    }
+  }
+
+  .article-section {
+    header.vignetted {
+      // Remove padding (165) from width
+      width: percentage(695/640);
+    }
+
+    .article-subsection {
+      // Remove padding (55) from width
+      width: percentage(640/640);
+    }
+  }
+}
+
 // Layout
 
 #wrap {

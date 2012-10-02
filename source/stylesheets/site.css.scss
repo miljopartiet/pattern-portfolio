@@ -561,7 +561,7 @@ footer nav.breadcrumbs {
 .speech-bubble {
 	position: relative;
   background: $yellow;
-  padding: 20px 25px;
+  padding: 20px 20px 20px 25px;
   margin: (60em/16) 0;
   border-radius: 4px 4px 4px 0;
   @include box-sizing(border-box);
