@@ -199,30 +199,6 @@
         setup_run = false,
         $nav;
 
-    var setup = function() {
-      if (setup_run) {
-        return;
-      }
-      var $original_nav = $('#site-navigation');
-      $nav = $original_nav.clone();
-      $nav.attr('id', 'site-top-navigation').css({
-        visibility: 'hidden'
-      });
-
-      $nav.append('<a href="#" class="close"><span>Stäng meny</span></a>');
-      $nav.find('a.close').bind('click', hide);
-
-      $('body').append($nav);
-      var style = document.createElement('style');
-
-      style.id = 'navigation-styles';
-      style.type = 'text/css';
-      style.innerHTML = calculateRules($nav);
-
-      document.getElementsByTagName("head")[0].appendChild(style);
-      setup_run = true;
-    }
-
     var calculateRules = function(element) {
       var offset = element.outerHeight(),
           rules = "#site-top-navigation { margin-top: -"+ offset +"px; }";
@@ -251,6 +227,30 @@
       e.preventDefault();
       $nav.css('visibility', 'visible');
       $nav.addClass('active').removeClass('inactive');
+    };
+
+    var setup = function() {
+      if (setup_run) {
+        return;
+      }
+      var $original_nav = $('#site-navigation');
+      $nav = $original_nav.clone();
+      $nav.attr('id', 'site-top-navigation').css({
+        visibility: 'hidden'
+      });
+
+      $nav.append('<a href="#" class="close"><span>Stäng meny</span></a>');
+      $nav.find('a.close').bind('click', hide);
+
+      $('body').append($nav);
+      var style = document.createElement('style');
+
+      style.id = 'navigation-styles';
+      style.type = 'text/css';
+      style.innerHTML = calculateRules($nav);
+
+      document.getElementsByTagName("head")[0].appendChild(style);
+      setup_run = true;
     };
 
     $toggler.bind('click', show);
@@ -300,13 +300,6 @@
   };
 
   Mp.placeholderFallback = function() {
-    if (!$('html').hasClass('lte9')) {
-      console.log($('html'));
-      return;
-    } else {
-      console.log('continue');
-    }
-
     var setPlaceholder = function(element) {
       var $element = $(element),
           value    = $.trim($element.val()),
@@ -339,8 +332,18 @@
   };
 
   $(document).ready(function() {
-    Mp.NavigationToggler('#skip-to-navigation');
+    var $html = $('html');
+
+    if (! $html.hasClass('lte8')) {
+      Mp.NavigationToggler('#skip-to-navigation');
+    }
+
+    if ($html.hasClass('lte9')) {
+      Mp.placeholderFallback();
+    }
+
     Mp.CookieChecker();
+
     Mp.searchAsYouType('#topics-search', {
       source: function() {
         var items = $.map($('#topics a'), function(link) {
@@ -361,8 +364,6 @@
         $element.parent().removeClass('active-suggestions');
       }
     });
-
-    Mp.placeholderFallback();
 
     $('section.tabbed').tabs();
     $('#conversation-form').hide();
