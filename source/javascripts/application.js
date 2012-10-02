@@ -331,6 +331,52 @@
     });
   };
 
+  // Fallback for browsers not supporting css columns
+  // This is only targeted towards lists for now
+  Mp.columnsFallback = function(element, column_count) {
+    var $container = $(element);
+    if ($container.size() === 0) {
+      return;
+    }
+
+    $container.each(function() {
+      var $element    = $(this),
+          $items      = $element.find('li'),
+          size        = $items.size(),
+          break_point = Math.ceil(size / column_count) - 1,
+          html        = [],
+          columns     = [];
+
+      for (var i = 0; i < column_count; i++) {
+        columns.push(['<div class="column c'+column_count+'"><ul>']);
+      }
+
+      var index = 0,
+          column = 0;
+      for (var i = 0; i < size; i++) {
+        columns[column].push($items[i].outerHTML);
+
+        if (index !== break_point) {
+          index++;
+        } else {
+          index = 0;
+          column++;
+        }
+      }
+
+      for (var i = 0; i < column_count; i++) {
+        columns[i].push('</ul></div>');
+        columns[i] = columns[i].join("");
+      }
+
+      html.push('<div class="grid"><div class="container">');
+      html.push(columns.join(""));
+      html.push('</div></div>');
+
+      $element.replaceWith(html.join(""));
+    });
+  };
+
   $(document).ready(function() {
     var $html = $('html');
 
@@ -340,6 +386,7 @@
 
     if ($html.hasClass('lte9')) {
       Mp.placeholderFallback();
+      Mp.columnsFallback('#topics ol.labeled-list ol', 3);
     }
 
     Mp.CookieChecker();
