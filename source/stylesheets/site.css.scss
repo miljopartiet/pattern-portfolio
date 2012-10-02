@@ -1179,7 +1179,7 @@ header.intro + .conversations {
     padding: 0 (5em/20) 0 0;
     position: relative;
 
-    & > .number {
+    .number {
       display: none;
       font-size: (20em/26);
       line-height: 32px;

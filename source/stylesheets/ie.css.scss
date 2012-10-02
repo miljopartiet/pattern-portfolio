@@ -39,11 +39,13 @@ ul.calendar .icon {
   background-image: url(../images/cc-1x.png);
 }
 
-.topics {
+#wrap .topics {
   h2,
   h3 {
     .number {
-      background-image: url(../images/bg-vignette-1x.png);
+      background-image: url(../images/bg-vignette-small-1x.png);
+      line-height: 1;
+      padding-top: 4px;
     }
   }
 }
@@ -52,6 +54,10 @@ ul.calendar .icon {
   span {
     background-image: url(../images/arrows-right-1x.png);
   }
+}
+
+.speech-bubble {
+  background-image: url(../images/yellow-grain-1x.png);
 }
 
 // Inline block fixes
