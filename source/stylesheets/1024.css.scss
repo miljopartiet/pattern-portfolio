@@ -265,6 +265,7 @@ article {
       }
 
       &.right {
+        position: relative;
         width: percentage(310/640);
         margin-right: -55px;
         padding-top: 10px;
@@ -277,11 +278,12 @@ article {
         }
 
         figcaption {
-          float: right;
-          margin: 0;
-          width: 145px;
-          margin: 0 -110px 0 0;
           border: none;
+          width: 145px;
+          position: absolute;
+          top: 10px;
+          right: -110px;
+          margin: 0;
         }
       }
     }
