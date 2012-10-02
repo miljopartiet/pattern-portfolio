@@ -297,7 +297,46 @@
         $votable.show();
       });
     });
-  }
+  };
+
+  Mp.placeholderFallback = function() {
+    if (!$('html').hasClass('lte9')) {
+      console.log($('html'));
+      return;
+    } else {
+      console.log('continue');
+    }
+
+    var setPlaceholder = function(element) {
+      var $element = $(element),
+          value    = $.trim($element.val()),
+          placeholder = $element.attr('placeholder');
+      if (value !== '') {
+        return;
+      }
+      $element.addClass('placeholder').val(placeholder);
+    };
+
+    var removePlaceholder = function(element) {
+      var $element = $(element),
+          value    = $.trim($element.val()),
+          placeholder = $element.attr('placeholder');
+
+      if (value === placeholder) {
+        $element.val('').removeClass('placeholder');
+      }
+    };
+
+    $('input[placeholder], textarea[placeholder]').filter(function() {
+      return $.trim($(this).val()) === '';
+    }).bind('focus.placeholder', function() {
+      removePlaceholder(this);
+    }).bind('blur.placeholder', function() {
+      setPlaceholder(this);
+    }).each(function() {
+      setPlaceholder(this);
+    });
+  };
 
   $(document).ready(function() {
     Mp.NavigationToggler('#skip-to-navigation');
@@ -322,6 +361,8 @@
         $element.parent().removeClass('active-suggestions');
       }
     });
+
+    Mp.placeholderFallback();
 
     $('section.tabbed').tabs();
     $('#conversation-form').hide();
