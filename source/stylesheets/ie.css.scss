@@ -7,50 +7,50 @@
 
 // PNG replacements
 body {
-  background: #fff url(../images/bg-1x.png) 50% 0 repeat-y;
+  background-image: url(../images/bg-1x.png);
   font-size: 16px;
 }
 
 #logo a {
-  background: transparent url(../images/logo-1x.png) 0 0 no-repeat;
+  background-image: url(../images/logo-1x.png);
 }
 
 #logo-full a {
-  background: transparent url(../images/logo-full-1x.png) 100% 0 no-repeat;
+  background-image: url(../images/logo-full-1x.png);
 }
 
 nav.breadcrumbs a {
-  background: url(../images/breadcrumb-slash-1x.png) 100% 50% no-repeat;
+  background-image: url(../images/breadcrumb-slash-1x.png);
 }
 
 .search button {
-  background: transparent url(../images/search-1x.png) 0 0 no-repeat;
+  background-image: url(../images/search-1x.png);
 }
 
 .article-section .vignette {
-  background: transparent url(../images/bg-vignette-1x.png) 0 0 no-repeat;
+  background-image: url(../images/bg-vignette-1x.png);
 }
 
 ul.calendar .icon {
-  background: transparent url(../images/calendar-1x.png) 0 50% no-repeat !important;
+  background-image: url(../images/calendar-1x.png);
 }
 
 #copyright {
-  background: transparent url(../images/cc-1x.png) 0 2px no-repeat;
+  background-image: url(../images/cc-1x.png);
 }
 
 .topics {
   h2,
   h3 {
     .number {
-      background: transparent url(../images/bg-vignette-1x.png) 0 0 no-repeat;
+      background-image: url(../images/bg-vignette-1x.png);
     }
   }
 }
 
 #top-navigation {
   span {
-    background: transparent url(../images/arrows-right-1x.png) 100% 6px no-repeat;
+    background-image: url(../images/arrows-right-1x.png);
   }
 }
 
