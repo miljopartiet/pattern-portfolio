@@ -663,8 +663,16 @@ form.speech-bubble {
     margin-left: 20px;
   }
 
+  a {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   .focused a {
     color: $green-dark;
+    text-decoration: none;
   }
 }
 
