@@ -1112,7 +1112,7 @@ header.intro + .conversations {
     color: #000;
     margin-bottom: (10em/26);
     float: left;
-    width: percentage(75/284);
+    width: percentage(30/284);
     margin-right: percentage(15/284);
   }
 
@@ -1122,10 +1122,14 @@ header.intro + .conversations {
       font-size: (20em/16);
       line-height: (22/20);
     }
+
+    .list {
+      margin-top: (10em/16);
+    }
   }
 
   .list {
-    margin: (10em/16) 0 0 0;
+    margin: 0;
     list-style: disc;
     float: left;
     width: percentage(194/284);
