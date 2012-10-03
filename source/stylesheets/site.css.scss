@@ -1118,6 +1118,7 @@ header.intro + .conversations {
 
   &.text-labels {
     .label {
+      display: block;
       font-size: (20em/16);
       line-height: (22/20);
     }
