@@ -31,3 +31,12 @@ article .lead p {
   }
 }
 
+blockquote {
+  & > div p {
+    margin-right: (55em/18);
+  }
+  footer {
+    margin-top: -40px;
+  }
+}
+
