@@ -38,7 +38,7 @@
             <li class="leaf<%= ' active-trail' if data.page.current_nav == 'conversations' %>"><a href="/conversations.html"><span>Prata politik</span></a></li>
           </ul>
         </nav>
-        <div id="secondary-navigation">
+        <div id="secondary-navigation" data-limit="3" data-show-more-copy="+ Fler" data-show-less-copy="- Färre">
           <form action="/search" method="get" class="search">
             <input type="search" name="query">
             <button type="submit">Sök</button>
@@ -48,7 +48,11 @@
               <li class="leaf"><a href="#">Bli medlem</a>
               <li class="leaf"><a href="#">Kontakt</a>
               <li class="leaf"><a href="#">Press</a>
-              <li class="leaf more"><a href="#site-navigation">+ Fler</a></li>
+              <li class="leaf"><a href="#">Skolarbeten</a></li>
+              <li class="leaf"><a href="#">Other languages</a></li>
+              <li class="leaf"><a href="#">Lättläst</a></li>
+              <li class="leaf"><a href="#">Ge en gåva</a></li>
+              <li class="leaf"><a href="#">Lediga jobb</a></li>
             </ul>
           </div>
           <a href="#site-navigation" id="skip-to-navigation">Meny</a>
