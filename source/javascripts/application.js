@@ -378,7 +378,7 @@
     });
   };
 
-  Mp.navigationToggler = function() {
+  Mp.SideNavigationToggler = function() {
     var $nav      = $('#secondary-navigation'),
         limit     = ($nav.data('limit') || 3) - 1,
         show_more = $nav.data('show-more-copy'),
@@ -428,7 +428,7 @@
 
     Mp.CookieChecker();
 
-    Mp.navigationToggler();
+    Mp.SideNavigationToggler();
 
     Mp.searchAsYouType('#topics-search', {
       source: function() {
