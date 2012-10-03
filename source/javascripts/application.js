@@ -109,7 +109,8 @@
     };
 
     var searchSources = function(value) {
-      var test = new RegExp('^' + value + '|\\s' + value, 'i');
+      var pattern = value.replace(/\s+/, '|'),
+          test = new RegExp(pattern, 'gi');
       return $.grep(options.source, function(company) {
         return test.exec(company.name) !== null;
       });
