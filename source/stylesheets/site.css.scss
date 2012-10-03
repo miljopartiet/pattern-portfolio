@@ -996,6 +996,7 @@ header.intro .article-section {
     margin-right: percentage(110/620);
 
     .content {
+      padding-bottom: 25px;
       background: $yellow;
       border-radius: 3px 3px 3px 0;
 
@@ -1039,6 +1040,7 @@ header.intro .article-section {
     margin-right: percentage(75/620);
 
     .content {
+      padding-top: 25px;
       background: $beige;
       border-radius: 3px 3px 0 3px;
 
@@ -1061,6 +1063,13 @@ header.intro .article-section {
         border-left: 25px solid $beige;
       }
     }
+  }
+}
+
+.body .conversation {
+  .question .content p {
+    font-size: (24em/16);
+    line-height: (26/24);
   }
 }
 

@@ -130,6 +130,7 @@ figure {
     line-height: (18/14);
   }
 }
+
 .conversation {
   .byline p {
     font-size: (14em/16);
@@ -152,6 +153,13 @@ figure {
         line-height: (20/16);
       }
     }
+  }
+}
+
+.body .conversation {
+  .question .content p {
+    font-size: (26em/16);
+    line-height: (30/26);
   }
 }
 
