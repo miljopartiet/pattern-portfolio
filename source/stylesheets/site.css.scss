@@ -156,7 +156,6 @@ textarea {
     outline: none;
   }
 }
-
 input.placeholder,
 textarea.placeholder {
   @include placeholder-styles;
@@ -192,6 +191,7 @@ button {
 
 #wrap input.share {
   border: none;
+  margin-top: 0;
   padding: 3px 7px;
   line-height: 1;
   background: rgba(255, 255, 255, 0.6);

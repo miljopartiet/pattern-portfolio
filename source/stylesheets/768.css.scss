@@ -10,6 +10,16 @@ ul {
   }
 }
 
+#wrap {
+  p,
+  li {
+    input,
+    textarea {
+      font-size: (14em/18);
+    }
+  }
+}
+
 h1 {
   font-size: (37em/16);
   line-height: (37em/37);
