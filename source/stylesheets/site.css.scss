@@ -149,7 +149,6 @@ textarea {
   padding: 10px 15px 10px 15px;
   margin: (15em/16) 0 0 0;
   @include box-sizing(border-box);
-  width: 70%;
   resize: none;
 
   &:focus {
@@ -596,6 +595,10 @@ footer nav.breadcrumbs {
     margin-top: (2em/18);
   }
 
+  form {
+    margin-right: (20em/16);
+  }
+
   input {
     background: #fff;
   }
@@ -626,12 +629,12 @@ form.speech-bubble {
   margin-bottom: 0;
 
   .search {
-    width: 60%;
     padding: 10px 10px 0 10px;
     margin-top: -10px;
     margin-left: -10px;
 
     input {
+      width: 100%;
       padding: 7px 20px 7px 10px;
       border-radius: 6px;
     }
