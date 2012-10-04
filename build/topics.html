@@ -40,7 +40,7 @@
         </nav>
         <div id="secondary-navigation" data-limit="3" data-show-more-copy="+ Fler" data-show-less-copy="- Färre">
           <form action="/search" method="get" class="search">
-            <input type="search" name="query">
+            <input type="search" name="query" id="main-search" data-source="/data/search.json" autocomplete="off">
             <button type="submit">Sök</button>
           </form>
           <div>
@@ -325,10 +325,10 @@
   </header>
   <form class="speech-bubble" action="/search/topics" method="get">
     <div class="search">
-      <input type="search" placeholder="Sök fråga" id="topics-search">
+      <input type="search" placeholder="Sök fråga" id="list-search" data-target-list="#topics">
     </div>
   </form>
-  <div id="topics">
+  <div class="labeled-list-container" id="topics">
     <ol class="labeled-list">
     
       <li class="group">
@@ -421,21 +421,7 @@
         <li>
           <a href="#">E-Demokrati</a>
         </li><li>
-          <a href="#">Egenvård</a>
-        </li><li>
-          <a href="#">Ekologiskt lantbruk</a>
-        </li><li>
-          <a href="#">Elevinflytande</a>
-        </li><li>
           <a href="#">EMU</a>
-        </li><li>
-          <a href="#">Energi</a>
-        </li><li>
-          <a href="#">Energieffektivisering</a>
-        </li><li>
-          <a href="#">Entreprenörskap</a>
-        </li><li>
-          <a href="#">Etiska regler för politiker</a>
         </li><li>
           <a href="#">EU</a>
         </li><li>
@@ -454,6 +440,20 @@
           <a href="#">EU:s budget</a>
         </li><li>
           <a href="#">EU:s utrikes- och säkerhetspolitik</a>
+        </li><li>
+          <a href="#">Egenvård</a>
+        </li><li>
+          <a href="#">Ekologiskt lantbruk</a>
+        </li><li>
+          <a href="#">Elevinflytande</a>
+        </li><li>
+          <a href="#">Energi</a>
+        </li><li>
+          <a href="#">Energieffektivisering</a>
+        </li><li>
+          <a href="#">Entreprenörskap</a>
+        </li><li>
+          <a href="#">Etiska regler för politiker</a>
         </li><li>
           <a href="#">Euron</a>
         </li><li>
