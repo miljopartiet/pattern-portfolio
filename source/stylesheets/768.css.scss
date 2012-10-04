@@ -1,0 +1,467 @@
+p,
+ol,
+ul {
+  font-size: (18em/16);
+  line-height: (25/18);
+
+  li,
+  p {
+    font-size: 1em;
+  }
+}
+
+#wrap {
+  p,
+  li {
+    input,
+    textarea {
+      font-size: (14em/18);
+    }
+  }
+}
+
+h1 {
+  font-size: (37em/16);
+  line-height: (37em/37);
+}
+
+h2 {
+  font-size: (26em/16);
+  line-height: (30/26);
+  margin-top: 1em;
+}
+
+h3 {
+  font-size: (20em/16);
+  line-height: (22/20);
+}
+
+blockquote {
+  overflow: visible;
+
+  & > div p {
+    margin-left: 0;
+    font-size: (24em/16);
+    line-height: (28/24);
+  }
+
+  footer {
+    p {
+      font-size: (14em/13);
+      line-height: (18/14);
+    }
+  }
+}
+
+figure {
+  figcaption {
+    font-size: (14em/16);
+    line-height: (18/14);
+  }
+}
+
+.speech-bubble {
+  width: percentage(620/580);
+
+  h2 {
+    font-size: (24em/16);
+    line-height: (26/20);
+  }
+
+  p,
+  li {
+    line-height: (24/18);
+  }
+
+  .main,
+  .aside {
+    @include box-sizing(border-box);
+    float: left;
+    margin-top: 0;
+
+    ul:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .main {
+    border-right: 1px solid #d7c82f;
+    padding-right: 20px;
+    width: percentage(390/570);
+  }
+
+  .aside {
+    border-left: 1px solid #d7c82f;
+    margin-left: -1px;
+    padding-left: 20px;
+    float: left;
+    width: percentage(179/570);
+  }
+}
+
+.vcard {
+  .main,
+  .aside {
+    margin-top: (2em/16);
+    width: 50%;
+  }
+}
+
+.article-section {
+  .section-lead,
+  .subsection-lead {
+    font-size: (14em/16);
+    line-height: (18/14);
+  }
+
+  .vignette {
+    display: none;
+  }
+
+  h3 {
+    font-size: (20em/16);
+    line-height: (22/20);
+  }
+}
+
+.conversations {
+  .details {
+    font-size: (14em/16);
+    line-height: (18/14);
+  }
+}
+
+.conversation {
+  .byline p {
+    font-size: (14em/16);
+    line-height: (18/14);
+  }
+
+  .question {
+    .content {
+      p {
+        font-size: (20em/16);
+        line-height: (22/20);
+      }
+    }
+  }
+
+  .answer {
+    .content {
+      p {
+        font-size: (16em/16);
+        line-height: (20/16);
+      }
+    }
+  }
+}
+
+.body .conversation {
+  .question .content p {
+    font-size: (26em/16);
+    line-height: (30/26);
+  }
+}
+
+#site-banner {
+  margin-bottom: (40em/16);
+}
+
+#logo {
+  float: left;
+  margin-top: -7px;
+}
+
+//
+// Navigation elements
+//
+#skip-to-navigation {
+  display:none;
+}
+
+#top-navigation {
+  float: left;
+
+  ul {
+    margin: 0 0 0 (20em/18);
+    list-style: none;
+  }
+
+  li {
+    margin: 0;
+    font-size: (13em/18);
+    line-height: (25.1/13);
+  }
+
+  a {
+    display: inline-block;
+    margin-top: (2em/13);
+    padding: 0 0 0 (12em/13);
+    background: $green;
+    text-decoration: none;
+    font-family: $swift;
+    color: #fff;
+    border-radius: 3px;
+
+    &:hover {
+      background-color: $green-dark;
+    }
+  }
+
+  span {
+    display: block;
+    margin-right: 7px;
+    padding-right: (18em/16);
+    background: transparent url(../images/arrows-right.svg) 100% 6px no-repeat;
+    background-size: 9px 128px;
+  }
+
+  li:first-child a {
+    margin-top: 0;
+  }
+
+  li.active-trail {
+    a {
+      background-color: $green-dark;
+      color: #fff;
+    }
+
+    span {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+    }
+  }
+}
+
+#top-navigation li.active-trail,
+.front #top-navigation li:first-child {
+  font-size: (16em/18);
+  line-height: (36/16);
+
+  a {
+    margin-left: -20px;
+    padding: 0 20px 0 20px;
+  }
+
+  span {
+    margin: 0;
+    background-position: 100% 10px;
+  }
+}
+
+#secondary-navigation {
+  position: relative;
+  border-bottom: 1px solid $warm-grey;
+  float: right;
+  padding-bottom: (6em/16);
+  width: percentage(220/768);
+
+  a {
+    @include small-text;
+    font-size: (14em/16);
+    line-height: (18/14);
+    white-space: nowrap;
+    margin-right: 0;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  .more a {
+    position: absolute;
+    right: 0;
+    bottom: -1.8em;
+    margin-right: 0;
+  }
+
+  form {
+    text-align: right;
+  }
+
+  .search {
+    text-align: right;
+
+    input {
+      width: (140em/16);
+    }
+  }
+
+  & >div {
+    text-align: right;
+    margin-top: (10em/16);
+  }
+}
+
+// Breadcrumbs
+nav.breadcrumbs {
+  p {
+    font-size: (14em/16);
+  }
+}
+
+#wrap > nav.breadcrumbs {
+  width: (580em/16);
+  margin: 0 auto;
+  margin-bottom: (15em/16);
+}
+
+footer nav.breadcrumbs {
+  border: none;
+}
+
+nav.main-navigation {
+  border-top: 1px solid $warm-grey;
+  border-bottom: 1px solid $warm-grey;
+  padding: 15px 0;
+
+  .inner > div {
+    float: left;
+    width: (170em/16);
+    margin: 0 20px 0 0;
+  }
+
+  .inner {
+    .first,
+    .second {
+      li {
+        border-left: 1px solid $warm-grey;
+        padding-left: 10px;
+      }
+    }
+
+    .first {
+      width: (100em/16);
+    }
+
+    .second {
+      width: (120em/16);
+    }
+  }
+
+  ul {
+    margin: 0;
+    @include small-text;
+    font-size: (14em/16);
+    line-height: (18/14);
+    list-style: none;
+  }
+
+  li {
+    margin: 0 0 0 0;
+  }
+
+  form {
+    text-align:right;
+
+    input {
+      width: (140em/16);
+    }
+  }
+}
+
+.labeled-list {
+  width: 580px;
+  margin: auto;
+
+  .list {
+    @include columns(2, 20px);
+    margin-top: 0;
+
+    li {
+      font-size: (16em/20);
+    }
+  }
+
+  &.text-labels .list {
+    margin-top: (10em/16);
+  }
+}
+
+#logo-full a {
+  height: (46em/18);
+  background-size: (290em/18) (46em/18);
+}
+
+.news-posts .icon-list {
+  margin: 0;
+
+  li {
+    font-size: (26em/18);
+    padding: (15em/26) 0;
+    border-bottom: 1px solid $warm-grey;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      border: none;
+      padding-bottom: 0;
+    }
+  }
+
+  a {
+    margin: 0;
+  }
+
+  .title {
+    line-height: (30/26);
+  }
+
+  .meta {
+    font-size: (14em/26);
+    line-height: (18/14);
+    margin-top: (2em/14);
+  }
+}
+
+.topics .topic .number {
+  display: block;
+}
+
+.grid {
+  .container {
+    width: percentage(600/580);
+  }
+
+  .column {
+    margin: 0 (25em/16) (20em/16) 0 0;
+
+    &.c2 {
+      width: percentage(280/600);
+    }
+
+    &.c3 {
+      width: percentage(180/600);
+    }
+  }
+}
+
+// This is used for IE9 and below
+.labeled-list .grid {
+  width: 100%;
+  .container {
+    margin: 0;
+    width: percentage(600/580);
+    .c3 {
+      width: percentage(280/600);
+    }
+    ul {
+      margin-left: 1.2em;
+      font-size: (16em/18);
+    }
+  }
+}
+
+
+.people .grid {
+  a h2 {
+    font-size: (20em/16);
+  }
+
+  a p {
+    font-size: (16em/16);
+  }
+}

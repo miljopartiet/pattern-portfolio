@@ -9,6 +9,10 @@ class News
     end
   end
 
+  def icon
+    "#{File.basename(source, '.*')}.png"
+  end
+
   def self.all(limit = nil, offset = 0)
     @all ||= self.load.map do |attrs|
       self.new attrs

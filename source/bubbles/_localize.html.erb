@@ -9,6 +9,16 @@
         <a class="action" href="#">Använd din position</a>
         <span class="choose">eller <a href="#">välj kommun manuellt</a></span>
       </div>
+      <div class="localities" style="display: none;">
+        <form action="#" method="post">
+          <select>
+          <% Localities.values.each do |locality| %>
+            <option value="<%= locality %>"><%= locality %></option>
+          <% end %>
+          </select>
+          <button type="submit">Välj</button>
+        </form>
+      </div>
     </div>
   </div>
 </div>

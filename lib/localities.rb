@@ -70,6 +70,15 @@ class Localities
       ]
     }
   end
+
+  def self.values
+    values = []
+    self.all.each do |k, v|
+      values += v
+    end
+
+    values.sort
+  end
 end
 
 
