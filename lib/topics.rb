@@ -5,7 +5,7 @@ class Topics
     topics = self.all
     topics = topics.sample limit if sample
 
-    topics[0...limit].sort.group_by { |topic| topic[0].upcase }
+    topics.take(limit).sort.group_by { |topic| topic[0].upcase }
   end
 
   def self.all
