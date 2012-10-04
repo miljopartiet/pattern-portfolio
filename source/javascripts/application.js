@@ -269,35 +269,6 @@
     $(selector).bind('focus', selectIt).bind('click', selectIt);
   };
 
-  Mp.voting = function() {
-    $('div.voting').each(function() {
-      var $voting = $(this),
-          $votable = $voting.find('div.votable'),
-          $results = $voting.find('div.results');
-      if ($results.size() == 0) {
-        return;
-      }
-
-      $results.hide();
-
-      $votable.append('<a href="#" class="show-results toggler">'+ $votable.data('show-results-copy') +'</a>');
-      $results.append('<a href="#" class="show-votable toggler">'+ $results.data('show-votable-copy') +'</a>');
-
-      $voting.delegate('button, a.show-results', 'click', function(e) {
-        console.log(e);
-        e.preventDefault();
-        $votable.hide();
-        $results.show();
-      });
-
-      $voting.delegate('a.show-votable', 'click', function(e) {
-        e.preventDefault();
-        $results.hide();
-        $votable.show();
-      });
-    });
-  };
-
   Mp.placeholderFallback = function() {
     var setPlaceholder = function(element) {
       var $element = $(element),
@@ -464,7 +435,6 @@
     });
 
     Mp.focusAndCopy('input.share');
-    Mp.voting();
   });
 
 }(jQuery));
