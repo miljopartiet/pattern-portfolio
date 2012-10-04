@@ -17,22 +17,6 @@ body_class: front
       </figcaption>
     </figure>
   </div>
-  <div class="body">
-    <blockquote>
-      <div>
-        <p>Samhällets utveckling bromsas upp när människor måste avstå jobb eller utbildning på grund av bostadsbrist.</p>
-      </div>
-      <footer>
-        <a href="/person.html">
-          <img src="images/sketch/asa_145x145.png" alt="">
-          <p>
-            <span class="name">Åsa Romson</span>,
-            <span class="title">språkrör och riksdagsledamot sedan 2003</span>
-          </p>
-        </a>
-      </footer>
-    </blockquote>
-  </div>
   <section class="news-posts article-section">
 
     <%= partial 'news_list' %>
@@ -47,7 +31,7 @@ body_class: front
 
  </article>
 <article>
-  <%= partial "main_topics" %>
+<%= partial "main_topics", locals: { title: "Vår politik" } %>
   <p><a href="/topics.html">Läs mer om hur vi vill modernisera Sverige</a>
   <%= partial 'bubbles/localize' %>
 </article>
