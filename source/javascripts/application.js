@@ -513,4 +513,8 @@
     Mp.focusAndCopy('input.share');
   });
 
+
+  if (! ('Mp' in window)) {
+    window.Mp = Mp;
+  }
 }(jQuery));
