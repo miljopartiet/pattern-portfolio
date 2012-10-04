@@ -125,6 +125,12 @@ nav.breadcrumbs a {
       // Remove padding (55) from width
       width: percentage(640/640);
     }
+
+    .section-lead {
+      position: absolute;
+      top: -3px;
+      right: 0;
+    }
   }
 }
 
