@@ -27,6 +27,10 @@ h1 {
 }
 
 .vcard {
+  .inner {
+    padding-right: 20px;
+  }
+
   .main,
   .aside {
     margin-top: (10em/16);
