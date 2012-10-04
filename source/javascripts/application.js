@@ -64,7 +64,8 @@
       options = $.extend({
         source: [],
         onShow: $.noop,
-        onHide: $.noop
+        onHide: $.noop,
+        onNoResults: hide
       }, opts || {});
 
       if (typeof options.source === 'function') {
@@ -83,8 +84,9 @@
         }
         search($element.val());
       }).bind('focus.autocomplete', function() {
-        if ($.trim($element.val()) !== '') {
-          show();
+        var value = $.trim($element.val());
+        if (value !== '') {
+          search(value);
         }
       }).bind('blur.autocomplete', function() {
         focusSuggestion(-1);
@@ -101,9 +103,14 @@
         update([]);
         hide();
       } else if (value !== '') {
-        update(searchSources(value));
-        if ($suggest_list.is(':hidden')) {
-          show();
+        var matches = searchSources(value);
+        if (matches.length !== 0) {
+          update(matches);
+          if ($suggest_list.is(':hidden')) {
+            show();
+          }
+        } else {
+          options.onNoResults();
         }
       }
     };
@@ -119,10 +126,6 @@
     var update = function(matches) {
       current_suggestions = matches;
       focused = -1;
-
-      if (current_suggestions.length == 0) {
-        current_suggestions.push(notFound());
-      }
 
       var html = ['<ul>'];
       $.each(current_suggestions, function(i, c) {
@@ -183,13 +186,6 @@
         'top': Math.round(position.top + positionOffsetY) + 'px',
         'left': Math.round(position.left + positionOffsetX) + 'px'
       });
-    };
-
-    var notFound = function () {
-      return {
-        name: 'No matches found',
-        id: null
-      }
     };
 
     return init;
