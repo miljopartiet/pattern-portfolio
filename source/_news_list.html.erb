@@ -2,7 +2,9 @@
 <% News.all(3).each do |post| %>
   <li>
     <a href="#">
-      <img src="images/sketch/dn.png" alt="" class="icon">
+      <span class="icon">
+        <img src="images/sources/<%= post.icon %>" alt="">
+      </span>
       <span class="title"><%= post.title %></span>
       <span class="meta">
         <%= post.time %>, <%= post.source_title %>, <%= post.source %>
