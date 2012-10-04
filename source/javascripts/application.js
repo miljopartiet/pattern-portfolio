@@ -69,7 +69,7 @@
       }, opts || {});
 
       if (typeof options.source === 'function') {
-        options.source = options.source.call(this);
+        options.source = options.source.call(this, $element);
       }
 
       $element.bind('keydown.autocomplete', function(e) {
@@ -118,8 +118,10 @@
     var searchSources = function(value) {
       var pattern = value.replace(/\s+/, '|'),
           test = new RegExp(pattern, 'gi');
-      return $.grep(options.source, function(company) {
-        return test.exec(company.name) !== null;
+      return $.grep(options.source, function(match) {
+        return test.exec(match.name) !== null;
+      }).sort(function(me, other) {
+        return me.name.search(value) > other.name.search(value) ? 1 : -1;
       });
     };
 
