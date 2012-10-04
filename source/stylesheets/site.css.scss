@@ -534,12 +534,18 @@ footer nav.breadcrumbs {
     width: 100%;
     background: $beige;
     border: 1px solid $beige;
-    padding: 3px 20px 3px 5px;
+    padding: 3px 20px 3px 10px;
     margin: 0;
     border-radius: 4px;
 
     &:focus {
       border: 1px solid $warm-grey;
+    }
+
+    &.has-suggestions {
+      border: 1px solid $warm-grey;
+      border-bottom: 1px solid $beige;
+      border-radius: 4px 4px 0 0;
     }
   }
 
@@ -651,7 +657,7 @@ form.speech-bubble {
   }
 }
 
-#search-suggestions {
+.suggestions {
   background: $yellow;
   border-radius: 0 0 4px 4px;
   padding-left: 25px;
@@ -673,6 +679,55 @@ form.speech-bubble {
   .focused a {
     color: $green-dark;
     text-decoration: none;
+  }
+}
+
+.main-search {
+  @include box-sizing(border-box);
+  background: $beige;
+  padding: (10em/16) 0 (10em/16) 0;
+  margin: 0;
+  border: 1px solid $warm-grey;
+  border-top: none;
+
+  ul,
+  li {
+    list-style: none;
+    margin: 0;
+  }
+
+  a {
+    padding: (4em/16) (10em/16);
+    display: block;
+    font-size: (16em/18);
+    line-height: (18/16);
+    text-decoration: none;
+
+    &:hover {
+      .name {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .name {
+    text-decoration: underline;
+  }
+
+  .category {
+    display: block;
+    margin-top: 2px;
+    @include small-text;
+    font-size: (13em/18);
+    line-height: (16/13);
+  }
+
+  .focused {
+    background: darken($beige, 5%);
+
+    .name {
+      text-decoration: none;
+    }
   }
 }
 

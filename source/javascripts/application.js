@@ -2,6 +2,8 @@
   "use strict";
   var Mp = {};
 
+  Mp.suggestion_instances = -1;
+
   Mp.CookieChecker = function() {
     var cookie = $.cookie('allow-cookies'),
         $message;
@@ -17,181 +19,242 @@
   };
 
   Mp.searchAsYouType = (function() {
-    var $element, $suggest_list,
-        positionOffsetX, positionOffsetY,
-        options,
-        focused = -1, current_suggestions = [];
+    var Suggest = function(element, options) {
+      var self = this;
+      this.element = $(element);
+      if (this.element.size() == 0) {
+        return;
+      }
 
-    var movementKeys = {
+      if (! 'suggestion_instances' in Mp) {
+        Mp.suggestion_instances = -1;
+      };
+      Mp.suggestion_instances += 1;
+      this._id = Mp.suggestion_instances;
+
+      this.focused = -1;
+      this.current_suggestions = [];
+
+      this.options = $.extend({
+        limit: false,
+        source: [],
+        onShow: $.noop,
+        onHide: $.noop,
+        onNoResults: self.hide,
+        onSetup: $.noop,
+        itemTemplate: function(item) {
+          return '<li><a href="'+ item.href +'">'+ item.name +'</a></li>';
+        },
+        sortFunction: this.defaultSortFunction
+      }, options || {});
+
+      this.setup();
+    }
+
+    Suggest.prototype.defaultSortFunction = function(one, other) {
+      return one.name.search(this.query()) > other.name.search(this.query()) ? 1 : -1;
+    };
+
+    Suggest.prototype.setup = function() {
+      this.container = $('<div id="suggestions-'+ this._id +'" class="suggestions" style="display:none;position:absolute;"></div>');
+      this.container.css({
+        width: this.element.outerWidth() + 'px'
+      });
+
+      var $body = $('body');
+      this.offsets = {
+        x: parseInt($body.css('paddingLeft'), 10),
+        y: parseInt($body.css('paddingTop'), 10) + this.element.outerHeight()
+      };
+
+      if (typeof this.options.source === 'function') {
+        var self = this;
+        setTimeout(function() {
+          self.options.source.call(self);
+        }, 20);
+      } else {
+        this.source = this.options.source;
+      }
+
+      $body.append(this.container);
+
+      this.setupListeners();
+      this.options.onSetup.call(this);
+    };
+
+    Suggest.prototype.setupListeners = function() {
+      var self = this,
+          namespaced = function(event) {
+            return event +'.autocomplete'+ self._id;
+          };
+      this.element.bind(namespaced('keydown'), function(e) {
+        var func = self.movementKeys[e.keyCode.toString()];
+
+        if (typeof func === 'function') {
+          func.call(self, e);
+        }
+      });
+
+      this.element.bind(namespaced('keyup'), function(e) {
+        if (typeof self.movementKeys[e.keyCode.toString()] !== 'undefined') {
+          e.preventDefault();
+          return;
+        }
+        self._query = null;
+        self.search(self.query());
+      });
+
+      this.element.bind(namespaced('focus'), function() {
+        if (self.query() !== '') {
+          self.search(self.query());
+        }
+      });
+
+      this.element.bind(namespaced('blur'), function() {
+        self.focusSuggestion(-1);
+      });
+
+      $(window).bind(namespaced('resize'), function() {
+        self.position();
+      });
+    };
+
+    Suggest.prototype.query = function() {
+      if (!this._query) {
+        this._query = $.trim(this.element.val());
+      }
+
+      return this._query;
+    };
+
+    Suggest.prototype.movementKeys = {
       '16': null, // Shift
       '27': function() { // esc
-        hide();
-        $element.blur();
+        this.hide();
+        this.element.blur();
       },
       '37': null, // Arrow left
       '38': function(e) { // Arrow up
-        focusPrevious();
+        this.focusPrevious();
         e.preventDefault(e);
       },
       '39': null, // Arrow right
       '40': function(e) { // Arrow down
-        focusNext();
+        this.focusNext();
         e.preventDefault();
       },
       '9': function(e) { // tab
-        !e.shiftKey ? focusNext() : focusPrevious();
+        !e.shiftKey ? this.focusNext() : this.focusPrevious();
         e.preventDefault();
       },
       '13': function(e) { // enter
         e.preventDefault();
-        $suggest_list.find("a.focused").trigger("click");
+        this.container.find("a.focused").trigger("click");
       }
     };
 
-    var init = function(element, opts) {
-      $element = $(element);
-      if ($element.size() == 0) {
-        return;
-      }
-      $suggest_list = $('<div id="search-suggestions" class="suggestions" style="display:none;position:absolute;"></div>');
-      $suggest_list.css({
-        width: $element.outerWidth() + 'px'
-      });
-      var $body = $('body');
-      positionOffsetX = parseInt($body.css('paddingLeft'), 10);
-      positionOffsetY = parseInt($body.css('paddingTop'), 10) + $element.outerHeight();
-
-      options = $.extend({
-        source: [],
-        onShow: $.noop,
-        onHide: $.noop,
-        onNoResults: hide
-      }, opts || {});
-
-      if (typeof options.source === 'function') {
-        options.source = options.source.call(this, $element);
-      }
-
-      $element.bind('keydown.autocomplete', function(e) {
-        var func = movementKeys[e.keyCode.toString()];
-        if (typeof func === 'function') {
-          func.call(this, e);
-        }
-      }).bind('keyup.autocomplete', function(e) {
-        if (typeof movementKeys[e.keyCode.toString()] !== 'undefined') {
-          e.preventDefault();
-          return;
-        }
-        search($element.val());
-      }).bind('focus.autocomplete', function() {
-        var value = $.trim($element.val());
-        if (value !== '') {
-          search(value);
-        }
-      }).bind('blur.autocomplete', function() {
-        focusSuggestion(-1);
-      });
-
-      $(window).bind('resize.autocomplete', position);
-
-      $suggest_list.appendTo('body');
-    };
-
-    var search = function(value) {
-      var value = $.trim(value);
+    Suggest.prototype.search = function(value) {
+      var value = this.query();
       if (value === '') {
-        update([]);
-        hide();
-      } else if (value !== '') {
-        var matches = searchSources(value);
+        this.update([]);
+        this.hide();
+      } else {
+        var matches = this.searchSources(value);
         if (matches.length !== 0) {
-          update(matches);
-          if ($suggest_list.is(':hidden')) {
-            show();
+          if (this.options.limit !== false) {
+            matches = matches.splice(0, this.options.limit);
+          }
+          this.update(matches);
+          if (this.container.is(':hidden')) {
+            this.show();
           }
         } else {
-          options.onNoResults();
+          this.options.onNoResults.call(this);
         }
       }
     };
 
-    var searchSources = function(value) {
-      var pattern = value.replace(/\s+/, '|'),
+    Suggest.prototype.searchSources = function(value) {
+      var self = this,
+          pattern = value.replace(/\s+/, '|'),
           test = new RegExp(pattern, 'gi');
-      return $.grep(options.source, function(match) {
+      return $.grep(this.source, function(match) {
         return test.exec(match.name) !== null;
-      }).sort(function(me, other) {
-        return me.name.search(value) > other.name.search(value) ? 1 : -1;
+      }).sort(function(one, other) {
+        return self.options.sortFunction.call(self, one, other);
       });
     };
 
-    var update = function(matches) {
-      current_suggestions = matches;
-      focused = -1;
+    Suggest.prototype.update = function(matches) {
+      this.current_suggestions = matches;
+      this.focused = -1;
 
-      var html = ['<ul>'];
-      $.each(current_suggestions, function(i, c) {
-        html.push('<li><a href="'+ c.href +'">'+ c.name +'</a></li>');
+      var self = this,
+          html = ['<ul>'];
+      $.each(this.current_suggestions, function(i, item) {
+        html.push(self.options.itemTemplate.call(this, item));
       });
       html.push('</ul>');
-      $suggest_list.html(html.join(''));
+
+      this.container.html(html.join(''));
     };
 
-    var show = function() {
-      position();
-      $suggest_list.show();
-      $("#search").addClass("has-results");
-      $(document).bind('click.autocomplete', function(e) {
-        var el = $suggest_list.get(0);
-        if (e.target !== $element.get(0) && e.target !== el && !$.contains(el, e.target)) {
-          hide();
-          $element.blur();
+    Suggest.prototype.show = function() {
+      this.position();
+      this.container.show();
+      var self = this;
+      $(document).bind(('click.autocomplete'+ this._id), function(e) {
+        var el = self.container.get(0);
+        if (e.target !== self.element.get(0) && e.target !== el && !$.contains(el, e.target)) {
+          self.hide();
+          self.element.blur();
         }
       });
-      options.onShow($element, $suggest_list);
+      this.options.onShow.call(this);
     };
 
-    var hide = function() {
-      $suggest_list.hide();
-      $("#search").removeClass("has-results");
-      $(document).unbind('click.autocomplete');
-      options.onHide($element, $suggest_list);
+    Suggest.prototype.hide = function() {
+      this.container.hide();
+      $(document).unbind('click.autocomplete-'+ this._id);
+      this.options.onHide.call(this);
     };
 
-    var focusNext = function() {
-      var num = current_suggestions.length;
-      if (num > 0 && focused < (num - 1)) {
-        focusSuggestion(focused + 1);
-      } else if (focused === (num - 1)) {
-        focusSuggestion(0);
+    Suggest.prototype.focusNext = function() {
+      var num = this.current_suggestions.length;
+      if (num > 0 && this.focused < (num - 1)) {
+        this.focusSuggestion(this.focused + 1);
+      } else if (this.focused === (num - 1)) {
+        this.focusSuggestion(0);
       }
     };
 
-    var focusPrevious = function() {
-      if (focused !== -1) {
-        focusSuggestion(focused - 1);
+    Suggest.prototype.focusPrevious = function() {
+      if (this.focused !== -1) {
+        this.focusSuggestion(this.focused - 1);
       } else {
-        focusSuggestion(current_suggestions.length - 1);
+        this.focusSuggestion(this.current_suggestions.length - 1);
       }
     };
 
-    var focusSuggestion = function(num) {
-      $suggest_list.find('li').removeClass('focused')
+    Suggest.prototype.focusSuggestion = function(num) {
+      this.container.find('li').removeClass('focused')
         .filter(':nth-child('+ (num + 1) +')')
         .addClass('focused');
-      focused = num;
+      this.focused = num;
     };
 
-    var position = function() {
-      var position = $element.offset();
-      $suggest_list.css({
-        'top': Math.round(position.top + positionOffsetY) + 'px',
-        'left': Math.round(position.left + positionOffsetX) + 'px'
+    Suggest.prototype.position = function() {
+      var position = this.element.offset();
+      this.container.css({
+        'top': Math.round(position.top + this.offsets.y) + 'px',
+        'left': Math.round(position.left + this.offsets.x) + 'px'
       });
     };
 
-    return init;
-  })();
+    return function(selector, options) {
+      new Suggest(selector, options);
+    };
+  }());
 
   Mp.NavigationToggler = function(element) {
     var $toggler = $(element),
@@ -399,9 +462,50 @@
 
     Mp.SideNavigationToggler();
 
+    Mp.searchAsYouType('#main-search', {
+      limit: 25,
+      source: function() {
+        var self = this,
+            source_url = this.element.data('source');
+
+        $.getJSON(source_url, function(data) {
+          self.source = data;
+        });
+      },
+      itemTemplate: function(item) {
+        var html = ['<li><a href="'+item.href+'">'];
+        html.push('<span class="name">');
+        html.push(item.name);
+        html.push('</span>');
+        html.push('<span class="category">');
+        html.push(item.category);
+        html.push('</span>');
+        html.push('</a></li>');
+
+        return html.join('');
+      },
+      onSetup: function() {
+        this.container.addClass('main-search');
+      },
+      onShow: function() {
+        this.element.addClass('has-suggestions');
+      },
+      onHide: function() {
+        this.element.removeClass('has-suggestions');
+      },
+      sortFunction: function(one, other) {
+        if (one.score !== other.score) {
+          return one.score < other.score ? 1 : -1;
+        } else {
+          return this.defaultSortFunction(one, other);
+        }
+      }
+    });
+
+    // Suggestions for lists (topics and localities)
     Mp.searchAsYouType('#list-search', {
-      source: function(element) {
-        var target   = element.data('target-list'),
+      source: function() {
+        var target   = this.element.data('target-list'),
             selector = (target ? (target + ' a') : 'div.labeled-list-container a'),
             items    = $.map($(selector), function(link) {
               return {
@@ -410,15 +514,15 @@
               };
             });
 
-        return items.sort(function(self, other) {
+        this.source = items.sort(function(self, other) {
           return self.name.localeCompare(other.name);
         });
       },
-      onShow: function($element) {
-        $element.parent().addClass('active-suggestions');
+      onShow: function() {
+        this.element.parent().addClass('active-suggestions');
       },
-      onHide: function($element) {
-        $element.parent().removeClass('active-suggestions');
+      onHide: function() {
+        this.element.parent().removeClass('active-suggestions');
       }
     });
 
