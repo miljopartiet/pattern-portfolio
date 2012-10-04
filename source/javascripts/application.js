@@ -45,7 +45,8 @@
         itemTemplate: function(item) {
           return '<li><a href="'+ item.href +'">'+ item.name +'</a></li>';
         },
-        sortFunction: this.defaultSortFunction
+        sortFunction: this.defaultSortFunction,
+        inlined: false
       }, options || {});
 
       this.setup();
@@ -56,17 +57,6 @@
     };
 
     Suggest.prototype.setup = function() {
-      this.container = $('<div id="suggestions-'+ this._id +'" class="suggestions" style="display:none;position:absolute;"></div>');
-      this.container.css({
-        width: this.element.outerWidth() + 'px'
-      });
-
-      var $body = $('body');
-      this.offsets = {
-        x: parseInt($body.css('paddingLeft'), 10),
-        y: parseInt($body.css('paddingTop'), 10) + this.element.outerHeight()
-      };
-
       if (typeof this.options.source === 'function') {
         var self = this;
         setTimeout(function() {
@@ -76,7 +66,23 @@
         this.source = this.options.source;
       }
 
-      $body.append(this.container);
+      this.container = $('<div id="suggestions-'+ this._id +'" class="suggestions" style="display:none;position:absolute;"></div>');
+
+      if (!this.options.inlined) {
+        this.container.css({
+          width: this.element.outerWidth() + 'px'
+        });
+
+        var $body = $('body');
+        this.offsets = {
+          x: parseInt($body.css('paddingLeft'), 10),
+          y: parseInt($body.css('paddingTop'), 10) + this.element.outerHeight()
+        };
+        $body.append(this.container);
+      } else {
+        this.offsets = { x: 0, y: 0 };
+        this.element.parent('form').append(this.container);
+      }
 
       this.setupListeners();
       this.options.onSetup.call(this);
@@ -114,9 +120,11 @@
         self.focusSuggestion(-1);
       });
 
-      $(window).bind(namespaced('resize'), function() {
-        self.position();
-      });
+      if (!this.options.inlined) {
+        $(window).bind(namespaced('resize'), function() {
+          self.position();
+        });
+      }
     };
 
     Suggest.prototype.query = function() {
@@ -256,6 +264,9 @@
     };
 
     Suggest.prototype.position = function() {
+      if (this.options.inlined) {
+        return;
+      }
       var position = this.element.offset();
       this.container.css({
         'top': Math.round(position.top + this.offsets.y) + 'px',

@@ -59,6 +59,7 @@
 
     Mp.searchAsYouType('#main-search', {
       limit: 25,
+      inlined: true,
       source: function() {
         var self = this,
             source_url = this.element.data('source');

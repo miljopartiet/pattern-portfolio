@@ -484,6 +484,42 @@ blockquote {
   li {
     font-size: (14em/16);
   }
+  form {
+    input {
+      z-index: 50;
+      position: relative;
+    }
+
+    button {
+      z-index: 60;
+    }
+
+    .suggestions {
+      @include clearfix;
+      display: block;
+      position: absolute;
+      top: 22px;
+      left: 0;
+      right: 0;
+      z-index: 30;
+      border-radius: 4px 0 4px 4px;
+      text-align: left;
+
+      ul,
+      li {
+        display: block;
+      }
+
+      a {
+        font-size: (16em/16);
+        color: $green;
+        font-family: $font-family;
+        .category {
+          font-size: (13em/16);
+        }
+      }
+    }
+  }
 }
 // Breadcrumbs
 // Can be found both in the top of the page
@@ -711,6 +747,7 @@ form.speech-bubble {
   }
 
   .name {
+    white-space: normal;
     text-decoration: underline;
   }
 
