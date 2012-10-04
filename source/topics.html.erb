@@ -82,10 +82,10 @@ current_nav: topics
   </header>
   <form class="speech-bubble" action="/search/topics" method="get">
     <div class="search">
-      <input type="search" placeholder="Sök fråga" id="topics-search">
+      <input type="search" placeholder="Sök fråga" id="list-search" data-target-list="#topics">
     </div>
   </form>
-  <div id="topics">
+  <div class="labeled-list-container" id="topics">
     <ol class="labeled-list">
     <% Topics.in_groups.each do |group, topics| %>
       <li class="group">

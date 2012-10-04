@@ -18,9 +18,9 @@
 
   Mp.searchAsYouType = (function() {
     var $element, $suggest_list,
-    positionOffsetX, positionOffsetY,
-    options,
-    focused = -1, current_suggestions = [];
+        positionOffsetX, positionOffsetY,
+        options,
+        focused = -1, current_suggestions = [];
 
     var movementKeys = {
       '16': null, // Shift

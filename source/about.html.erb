@@ -142,11 +142,11 @@ current_nav: about
     <h1>Miljöpartiet runt om i Sverige</h1>
     <form class="speech-bubble" action="/search/topics" method="get">
       <div class="search">
-        <input type="search" placeholder="Sök kommun" id="topics-search">
+        <input type="search" placeholder="Sök kommun" id="list-search" data-target-list="#localities">
       </div>
     </form>
   </header>
-  <div id="topics">
+  <div class="labeled-list-container" id="localities">
     <ol class="labeled-list text-labels">
     <% Localities.all.each do |group, localities| %>
       <li class="group">
