@@ -1337,11 +1337,11 @@ header.intro + .conversations {
   font-size: (13em/16);
   line-height: (17/13);
   color: #fff;
-  padding: 0 20px;
+  padding: 5px 20px 17px 20px;
 
   p {
     display: inline-block;
-    margin: 10px .5em 10px 0;
+    margin: 10px .5em 0 0;
   }
 
   a {
@@ -1352,7 +1352,7 @@ header.intro + .conversations {
       background: $warm-grey;
       color: #000;
       font-size: 1em;
-      margin: 10px 0;
+      margin: 10px 0 0 0;
 
       &:hover {
         background: darken($warm-grey, 2%);
