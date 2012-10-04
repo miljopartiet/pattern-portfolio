@@ -174,7 +174,23 @@ current_nav: about
     </div></div>
   </section>
 
-  <div id="topics">
+  <h2>Frågor i Jämtland A-Ö</h2>
+  <div class="labeled-list-container">
+    <ol class="labeled-list">
+    <% Topics.in_groups(17, true).each do |group, topics| %>
+      <li class="group">
+        <span class="label"><%= group %></span>
+        <ol class="list">
+        <% topics.each do |topic| %><li>
+          <a href="#"><%= topic %></a>
+        </li><% end %>
+        </ol>
+      </li>
+    <% end %>
+    </ol>
+  </div>
+
+  <div class="labeled-list-container">
     <ol class="labeled-list text-labels">
       <li class="group">
       <span class="label">Kommuner i Jämtlands län</span>

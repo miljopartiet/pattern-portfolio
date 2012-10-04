@@ -1,8 +1,11 @@
 # encoding: UTF-8
 class Topics
 
-  def self.in_groups
-    self.all.group_by { |topic| topic[0].upcase }
+  def self.in_groups limit = self.all.size, sample = false
+    topics = self.all
+    topics = topics.sample limit if sample
+
+    topics[0...limit].sort.group_by { |topic| topic[0].upcase }
   end
 
   def self.all

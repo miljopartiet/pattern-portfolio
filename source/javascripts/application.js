@@ -423,24 +423,26 @@
 
     if ($html.hasClass('lte9')) {
       Mp.placeholderFallback();
-      Mp.columnsFallback('#topics ol.labeled-list ol', 3);
+      Mp.columnsFallback('ol.labeled-list ol', 3);
     }
 
     Mp.CookieChecker();
 
     Mp.SideNavigationToggler();
 
-    Mp.searchAsYouType('#topics-search', {
-      source: function() {
-        var items = $.map($('#topics a'), function(link) {
-          return {
-            name: $(link).text(),
-            href: link.href
-          };
-        });
+    Mp.searchAsYouType('#list-search', {
+      source: function(element) {
+        var target   = element.data('target-list'),
+            selector = (target ? (target + ' a') : 'div.labeled-list-container a'),
+            items    = $.map($(selector), function(link) {
+              return {
+                name: $(link).text(),
+                href: link.href
+              };
+            });
 
         return items.sort(function(self, other) {
-          return naturalSort(self.name, other.name);
+          return self.name.localeCompare(other.name);
         });
       },
       onShow: function($element) {
