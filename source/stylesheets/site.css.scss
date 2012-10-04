@@ -722,6 +722,10 @@ form.speech-bubble {
     line-height: (16/13);
   }
 
+  em {
+    font-style: normal;
+  }
+
   .focused {
     background: darken($beige, 5%);
 

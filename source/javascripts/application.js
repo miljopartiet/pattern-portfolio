@@ -176,8 +176,20 @@
 
     Suggest.prototype.searchSources = function(value) {
       var self = this,
-          pattern = value.replace(/\s+/, '|'),
-          test = new RegExp(pattern, 'gi');
+          pattern = [],
+          values, test;
+
+      values = value.replace(/\s+/, ' ').split(' ');
+      if (values.length > 1) {
+        for (var i = 0, j = values.length; i < j; i++) {
+          pattern.push('(?=.*'+values[i]+')');
+        }
+      } else {
+        pattern.push(value);
+      }
+
+      test = new RegExp(pattern.join(''), 'gi');
+
       return $.grep(this.source, function(match) {
         return test.exec(match.name) !== null;
       }).sort(function(one, other) {
@@ -192,7 +204,7 @@
       var self = this,
           html = ['<ul>'];
       $.each(this.current_suggestions, function(i, item) {
-        html.push(self.options.itemTemplate.call(this, item));
+        html.push(self.options.itemTemplate.call(self, item, self.query()));
       });
       html.push('</ul>');
 
@@ -472,10 +484,27 @@
           self.source = data;
         });
       },
-      itemTemplate: function(item) {
-        var html = ['<li><a href="'+item.href+'">'];
+      itemTemplate: function(item, query) {
+        var html = ['<li><a href="'+item.href+'">'],
+            name = item.name,
+            matches = [],
+            words = query.split(' ');
+
+        for (var i = 0, j = words.length; i < j; i++) {
+          var word_matches = name.match(new RegExp(words[i], 'gi'));
+          if (word_matches) {
+            matches = matches.concat(word_matches);
+          }
+        }
+
+        if (matches.length > 0) {
+          for (var i = 0, j = matches.length; i < j; i++) {
+            name = name.replace(matches[i], '<em>'+ matches[i] +'</em>');
+          }
+        }
+
         html.push('<span class="name">');
-        html.push(item.name);
+        html.push(name);
         html.push('</span>');
         html.push('<span class="category">');
         html.push(item.category);
