@@ -219,6 +219,20 @@ button {
   }
 }
 
+.labeled-list .grid {
+  .container {
+    margin-top: 0;
+  }
+  .column {
+    margin: 0;
+    width: 100%;
+  }
+}
+.text-labels .grid {
+  .container {
+  }
+}
+
 //
 // General purpose content types
 //

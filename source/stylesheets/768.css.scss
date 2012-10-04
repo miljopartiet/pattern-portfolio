@@ -439,6 +439,23 @@ nav.main-navigation {
   }
 }
 
+// This is used for IE9 and below
+.labeled-list .grid {
+  width: 100%;
+  .container {
+    margin: 0;
+    width: percentage(600/580);
+    .c3 {
+      width: percentage(280/600);
+    }
+    ul {
+      margin-left: 1.2em;
+      font-size: (16em/18);
+    }
+  }
+}
+
+
 .people .grid {
   a h2 {
     font-size: (20em/16);

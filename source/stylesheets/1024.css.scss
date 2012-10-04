@@ -130,7 +130,6 @@ h1 {
 
 // This is used for IE9 and below
 .labeled-list .grid {
-  margin: 0;
   width: percentage(620/970);
   .container {
     margin: 0;
@@ -140,8 +139,7 @@ h1 {
       margin: 0 percentage(20/640) 0 0;
     }
     ul {
-      margin-left: 1.2em;
-      font-size: (16em/18);
+      margin-top: 0;
     }
   }
 }
