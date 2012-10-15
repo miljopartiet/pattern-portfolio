@@ -1,1 +1,93 @@
-#wrap{background:#fff;margin:0 3.90625% 0 0;padding:1.875em 0 3.125em 3.90625%}#site-banner,#main,#wrap > footer{width:36.25em;margin-left:auto;margin-right:auto}#logo{width:6.4375em;margin-right:1.25em;margin-left:-2.8125em}#logo a{height:5.625em;width:6.4375em;background-size:100%}#logo a:hover{background-position:0 -11.25em}#secondary-navigation{position:relative;border-bottom:1px solid#ddd;float:right;padding-bottom:.5em;width:29.94792%}#secondary-navigation a{white-space:nowrap;margin-left:.2em}#secondary-navigation a:hover{color:#2b912c}#secondary-navigation .more a{position:absolute;right:0;bottom:-1.8em;margin-right:0}#secondary-navigation > div{margin-top:.625em}#secondary-navigation form .suggestions{border-top:1px solid#ddd}article .body{position:relative}article .body > p,article .body > ul,article .body > ol,article .article-section > p,article .article-section > ul,article .article-section > ol,article .article-subsection > p,article .article-subsection > ul,article .article-subsection > ol{margin-right:1.11111em}article .lead p{font-size:1.375em;line-height:1.18182;margin-top:.36364em}article .illustration{margin-top:1.25em}.topics .topic{margin-right:1.25em}.labeled-list .label{width:1em;text-align:right;margin:0 0 0 -2.25em}.labeled-list .list{width:100%}.labeled-list.text-labels .label{text-align:left;margin-left:0;width:100%}
+/* line 7, 768-1023.css.scss */
+#wrap {
+  background: #fff;
+  margin: 0 3.90625% 0 0;
+  padding: 1.875em 0 3.125em 3.90625%; }
+
+/* line 15, 768-1023.css.scss */
+#site-banner,
+#main,
+#wrap > footer {
+  width: 36.25em;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* line 21, 768-1023.css.scss */
+#logo {
+  width: 6.4375em;
+  margin-right: 1.25em;
+  margin-left: -2.8125em; }
+  /* line 26, 768-1023.css.scss */
+  #logo a {
+    height: 5.625em;
+    width: 6.4375em;
+    background-size: 100%; }
+    /* line 31, 768-1023.css.scss */
+    #logo a:hover {
+      background-position: 0 -11.25em; }
+
+/* line 37, 768-1023.css.scss */
+#secondary-navigation {
+  position: relative;
+  border-bottom: 1px solid #dddddd;
+  float: right;
+  padding-bottom: 0.5em;
+  width: 29.94792%; }
+  /* line 44, 768-1023.css.scss */
+  #secondary-navigation a {
+    white-space: nowrap;
+    margin-left: .2em; }
+    /* line 48, 768-1023.css.scss */
+    #secondary-navigation a:hover {
+      color: #2b912c; }
+  /* line 53, 768-1023.css.scss */
+  #secondary-navigation .more a {
+    position: absolute;
+    right: 0;
+    bottom: -1.8em;
+    margin-right: 0; }
+  /* line 60, 768-1023.css.scss */
+  #secondary-navigation > div {
+    margin-top: 0.625em; }
+  /* line 65, 768-1023.css.scss */
+  #secondary-navigation form .suggestions {
+    border-top: 1px solid #dddddd; }
+
+/* line 72, 768-1023.css.scss */
+article .body {
+  position: relative; }
+/* line 81, 768-1023.css.scss */
+article .body > p, article .body > ul, article .body > ol,
+article .article-section > p,
+article .article-section > ul,
+article .article-section > ol,
+article .article-subsection > p,
+article .article-subsection > ul,
+article .article-subsection > ol {
+  margin-right: 1.11111em; }
+/* line 86, 768-1023.css.scss */
+article .lead p {
+  font-size: 1.375em;
+  line-height: 1.18182;
+  margin-top: 0.36364em; }
+/* line 92, 768-1023.css.scss */
+article .illustration {
+  margin-top: 1.25em; }
+
+/* line 97, 768-1023.css.scss */
+.topics .topic {
+  margin-right: 1.25em; }
+
+/* line 102, 768-1023.css.scss */
+.labeled-list .label {
+  width: 1em;
+  text-align: right;
+  margin: 0 0 0 -2.25em; }
+/* line 108, 768-1023.css.scss */
+.labeled-list .list {
+  width: 100%; }
+/* line 112, 768-1023.css.scss */
+.labeled-list.text-labels .label {
+  text-align: left;
+  margin-left: 0;
+  width: 100%; }

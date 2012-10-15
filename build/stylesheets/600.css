@@ -1,1 +1,48 @@
-input,.search input,form.speech-bubble .search input{width:70%}h1{font-size:2.0625em;line-height:1.06061}ul li{margin-left:0}article .lead p{font-size:1.25em;line-height:1.2}.body figure{margin-top:1.25em}.body figure.right{float:right;width:40%;margin:.625em 0 .625em 1.25em}blockquote > div p{margin-right:3.05556em}blockquote footer{margin-top:-40px}.suggestions ul{margin-left:20px}.main-search ul{margin-left:0}.labeled-list .grid .c3{margin:10px 0 0 0;width:46.15385%}
+/* line 6, 600.css.scss */
+input,
+.search input,
+form.speech-bubble .search input {
+  width: 70%; }
+
+/* line 9, 600.css.scss */
+h1 {
+  font-size: 2.0625em;
+  line-height: 1.06061; }
+
+/* line 15, 600.css.scss */
+ul li {
+  margin-left: 0; }
+
+/* line 20, 600.css.scss */
+article .lead p {
+  font-size: 1.25em;
+  line-height: 1.2; }
+
+/* line 26, 600.css.scss */
+.body figure {
+  margin-top: 1.25em; }
+  /* line 29, 600.css.scss */
+  .body figure.right {
+    float: right;
+    width: 40%;
+    margin: 0.625em 0 0.625em 1.25em; }
+
+/* line 38, 600.css.scss */
+blockquote > div p {
+  margin-right: 3.05556em; }
+/* line 41, 600.css.scss */
+blockquote footer {
+  margin-top: -40px; }
+
+/* line 47, 600.css.scss */
+.suggestions ul {
+  margin-left: 20px; }
+
+/* line 52, 600.css.scss */
+.main-search ul {
+  margin-left: 0; }
+
+/* line 59, 600.css.scss */
+.labeled-list .grid .c3 {
+  margin: 10px 0 0 0;
+  width: 46.15385%; }

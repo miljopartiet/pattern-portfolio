@@ -2,4 +2,642 @@
   Script by @scottjehl, rebound by @wilto.
   MIT / GPLv2 License.
   */
-function naturalSort(e,t){var n=/(^-?[0-9]+(\.?[0-9]*)[df]?e?[0-9]?$|^0x[0-9a-f]+$|[0-9]+)/gi,r=/(^[ ]*|[ ]*$)/g,i=/(^([\w ]+,?[\w ]+)?[\w ]+,?[\w ]+\d+:\d+(:\d+)?[\w ]?|^\d{1,4}[\/\-]\d{1,4}[\/\-]\d{1,4}|^\w+, \w+ \d+, \d{4})/,s=/^0x[0-9a-f]+$/i,o=/^0/,u=e.toString().replace(r,"")||"",a=t.toString().replace(r,"")||"",f=u.replace(n,"\0$1\0").replace(/\0$/,"").replace(/^\0/,"").split("\0"),l=a.replace(n,"\0$1\0").replace(/\0$/,"").replace(/^\0/,"").split("\0"),c=parseInt(u.match(s))||f.length!=1&&u.match(i)&&Date.parse(u),h=parseInt(a.match(s))||c&&a.match(i)&&Date.parse(a)||null;if(h){if(c<h)return-1;if(c>h)return 1}for(var p=0,d=Math.max(f.length,l.length);p<d;p++){oFxNcL=!(f[p]||"").match(o)&&parseFloat(f[p])||f[p]||0,oFyNcL=!(l[p]||"").match(o)&&parseFloat(l[p])||l[p]||0;if(isNaN(oFxNcL)!==isNaN(oFyNcL))return isNaN(oFxNcL)?1:-1;typeof oFxNcL!=typeof oFyNcL&&(oFxNcL+="",oFyNcL+="");if(oFxNcL<oFyNcL)return-1;if(oFxNcL>oFyNcL)return 1}return 0}(function(e){function h(){r.setAttribute("content",o),u=!0}function p(){r.setAttribute("content",s),u=!1}function d(t){c=t.accelerationIncludingGravity,a=Math.abs(c.x),f=Math.abs(c.y),l=Math.abs(c.z),(!e.orientation||e.orientation===180)&&(a>7||(l>6&&f<8||l<8&&f>6)&&a>5)?u&&p():u||h()}var t=navigator.userAgent;if(!(/iPhone|iPad|iPod/.test(navigator.platform)&&/OS [1-5]_[0-9_]* like Mac OS X/i.test(t)&&t.indexOf("AppleWebKit")>-1))return;var n=e.document;if(!n.querySelector)return;var r=n.querySelector("meta[name=viewport]"),i=r&&r.getAttribute("content"),s=i+",maximum-scale=1",o=i+",maximum-scale=10",u=!0,a,f,l,c;if(!r)return;e.addEventListener("orientationchange",h,!1),e.addEventListener("devicemotion",d,!1)})(this),function(e){"use strict";var t={};t.suggestion_instances=-1,t.CookieChecker=function(){var t=e.cookie("allow-cookies"),n;t||(n=e("#cookies"),n.bind("click","a.confirm",function(t){t.preventDefault(),n.hide(),e.cookie("allow-cookies",!0,{expires:365,path:"/"})}),e("body").prepend(n.show()))},t.searchAsYouType=function(){var n=function(n,r){var i=this;this.element=e(n);if(this.element.size()==0)return;!1 in t&&(t.suggestion_instances=-1),t.suggestion_instances+=1,this._id=t.suggestion_instances,this.focused=-1,this.current_suggestions=[],this.options=e.extend({limit:!1,source:[],onShow:e.noop,onHide:e.noop,onNoResults:i.hide,onSetup:e.noop,itemTemplate:function(e){return'<li><a href="'+e.href+'">'+e.name+"</a></li>"},sortFunction:this.defaultSortFunction,inlined:!1},r||{}),this.setup()};return n.prototype.defaultSortFunction=function(e,t){return e.name.search(this.query())>t.name.search(this.query())?1:-1},n.prototype.setup=function(){if(typeof this.options.source=="function"){var t=this;setTimeout(function(){t.options.source.call(t)},20)}else this.source=this.options.source;this.container=e('<div id="suggestions-'+this._id+'" class="suggestions" style="display:none;position:absolute;"></div>');if(!this.options.inlined){this.container.css({width:this.element.outerWidth()+"px"});var n=e("body");this.offsets={x:parseInt(n.css("paddingLeft"),10),y:parseInt(n.css("paddingTop"),10)+this.element.outerHeight()},n.append(this.container)}else this.offsets={x:0,y:0},this.element.parent("form").append(this.container);this.setupListeners(),this.options.onSetup.call(this)},n.prototype.setupListeners=function(){var t=this,n=function(e){return e+".autocomplete"+t._id};this.element.bind(n("keydown"),function(e){var n=t.movementKeys[e.keyCode.toString()];typeof n=="function"&&n.call(t,e)}),this.element.bind(n("keyup"),function(e){if(typeof t.movementKeys[e.keyCode.toString()]!="undefined"){e.preventDefault();return}t._query=null,t.search(t.query())}),this.element.bind(n("focus"),function(){t.query()!==""&&t.search(t.query())}),this.element.bind(n("blur"),function(){t.focusSuggestion(-1)}),this.options.inlined||e(window).bind(n("resize"),function(){t.position()})},n.prototype.query=function(){return this._query||(this._query=e.trim(this.element.val())),this._query},n.prototype.movementKeys={16:null,27:function(){this.hide(),this.element.blur()},37:null,38:function(e){this.focusPrevious(),e.preventDefault(e)},39:null,40:function(e){this.focusNext(),e.preventDefault()},9:function(e){e.shiftKey?this.focusPrevious():this.focusNext(),e.preventDefault()},13:function(e){e.preventDefault(),this.container.find("a.focused").trigger("click")}},n.prototype.search=function(e){var e=this.query();if(e==="")this.update([]),this.hide();else{var t=this.searchSources(e);t.length!==0?(this.options.limit!==!1&&(t=t.splice(0,this.options.limit)),this.update(t),this.container.is(":hidden")&&this.show()):this.options.onNoResults.call(this)}},n.prototype.searchSources=function(t){var n=this,r=[],i,s;i=t.replace(/\s+/," ").split(" ");if(i.length>1)for(var o=0,u=i.length;o<u;o++)r.push("(?=.*"+i[o]+")");else r.push(t);return s=new RegExp(r.join(""),"gi"),e.grep(this.source,function(e){return s.exec(e.name)!==null}).sort(function(e,t){return n.options.sortFunction.call(n,e,t)})},n.prototype.update=function(t){this.current_suggestions=t,this.focused=-1;var n=this,r=["<ul>"];e.each(this.current_suggestions,function(e,t){r.push(n.options.itemTemplate.call(n,t,n.query()))}),r.push("</ul>"),this.container.html(r.join(""))},n.prototype.show=function(){this.position(),this.container.show();var t=this;e(document).bind("click.autocomplete"+this._id,function(n){var r=t.container.get(0);n.target!==t.element.get(0)&&n.target!==r&&!e.contains(r,n.target)&&(t.hide(),t.element.blur())}),this.options.onShow.call(this)},n.prototype.hide=function(){this.container.hide(),e(document).unbind("click.autocomplete-"+this._id),this.options.onHide.call(this)},n.prototype.focusNext=function(){var e=this.current_suggestions.length;e>0&&this.focused<e-1?this.focusSuggestion(this.focused+1):this.focused===e-1&&this.focusSuggestion(0)},n.prototype.focusPrevious=function(){this.focused!==-1?this.focusSuggestion(this.focused-1):this.focusSuggestion(this.current_suggestions.length-1)},n.prototype.focusSuggestion=function(e){this.container.find("li").removeClass("focused").filter(":nth-child("+(e+1)+")").addClass("focused"),this.focused=e},n.prototype.position=function(){if(this.options.inlined)return;var e=this.element.offset();this.container.css({top:Math.round(e.top+this.offsets.y)+"px",left:Math.round(e.left+this.offsets.x)+"px"})},function(e,t){new n(e,t)}}(),t.NavigationToggler=function(t){var n=e(t),r=!1,i,s=function(e){var t=e.outerHeight(),n="#site-top-navigation { margin-top: -"+t+"px; }";return n+="#site-top-navigation.inactive { margin-top: -"+t+"px; }",n},o=function(){if(!r){f();return}var e=document.getElementById("navigation-styles");e.innerHTML=s(e)},u=function(e){e.preventDefault(),i.addClass("inactive").removeClass("active")},a=function(e){e.preventDefault(),i.css("visibility","visible"),i.addClass("active").removeClass("inactive")},f=function(){if(r)return;var t=e("#site-navigation");i=t.clone(),i.attr("id","site-top-navigation").css({visibility:"hidden"}),i.append('<a href="#" class="close"><span>Stäng meny</span></a>'),i.find("a.close").bind("click",u),e("body").append(i);var n=document.createElement("style");n.id="navigation-styles",n.type="text/css",n.innerHTML=s(i),document.getElementsByTagName("head")[0].appendChild(n),r=!0};n.bind("click",a),e(document).bind("resize",function(){setTimeout(o,200)}),f()},t.focusAndCopy=function(t){var n=function(){var e=this;window.setTimeout(function(){e.select()},5)};e(t).bind("focus",n).bind("click",n)},t.placeholderFallback=function(){var t=function(t){var n=e(t),r=e.trim(n.val()),i=n.attr("placeholder");if(r!=="")return;n.addClass("placeholder").val(i)},n=function(t){var n=e(t),r=e.trim(n.val()),i=n.attr("placeholder");r===i&&n.val("").removeClass("placeholder")};e("input[placeholder], textarea[placeholder]").filter(function(){return e.trim(e(this).val())===""}).bind("focus.placeholder",function(){n(this)}).bind("blur.placeholder",function(){t(this)}).each(function(){t(this)})},t.columnsFallback=function(t,n){var r=e(t);if(r.size()===0)return;r.each(function(){var t=e(this),r=t.find("li"),i=r.size(),s=Math.ceil(i/n)-1,o=[],u=[];for(var a=0;a<n;a++)u.push(['<div class="column c'+n+'"><ul>']);var f=0,l=0;for(var a=0;a<i;a++)u[l].push(r[a].outerHTML),f!==s?f++:(f=0,l++);for(var a=0;a<n;a++)u[a].push("</ul></div>"),u[a]=u[a].join("");o.push('<div class="grid"><div class="container">'),o.push(u.join("")),o.push("</div></div>"),t.replaceWith(o.join(""))})},t.SideNavigationToggler=function(){var t=e("#secondary-navigation"),n=(t.data("limit")||3)-1,r=t.data("show-more-copy"),i=t.data("show-less-copy"),s=!1,o=function(){return t.find("li:gt("+n+"):not(.more)")},u=function(){o().show(),t.find("li.more a").text(i),s=!1},a=function(){o().hide(),t.find("li.more a").text(r),s=!0};t.find("ul.menu").append('<li class="leaf more"><a href="#site-navigation">'+r+"</a></li>"),t.delegate("li.more a","click",function(e){e.preventDefault(),s?u():a()}),a()},e(document).ready(function(){var n=e("html");n.hasClass("lte8")||t.NavigationToggler("#skip-to-navigation"),n.hasClass("lte9")&&(t.placeholderFallback(),t.columnsFallback("ol.labeled-list ol",3)),t.CookieChecker(),t.SideNavigationToggler(),t.searchAsYouType("#list-search",{source:function(){var t=this.element.data("target-list"),n=t?t+" a":"div.labeled-list-container a",r=e.map(e(n),function(t){return{name:e(t).text(),href:t.href}});this.source=r.sort(function(e,t){return e.name.localeCompare(t.name)})},onShow:function(){this.element.parent().addClass("active-suggestions")},onHide:function(){this.element.parent().removeClass("active-suggestions")}}),e("section.tabbed").tabs(),e("#conversation-form").hide(),e("#go-to-form").bind("click",function(t){t.preventDefault();var n=e("#conversation-form");n.is(":visible")?e("#conversation-form").slideUp():e("#conversation-form").slideDown()}),t.focusAndCopy("input.share")}),"Mp"in window||(window.Mp=t)}(jQuery);
+
+(function(w){
+
+  // This fix addresses an iOS bug, so return early if the UA claims it's something else.
+  var ua = navigator.userAgent;
+  if( !( /iPhone|iPad|iPod/.test( navigator.platform ) && /OS [1-5]_[0-9_]* like Mac OS X/i.test(ua) && ua.indexOf( "AppleWebKit" ) > -1 ) ){
+    return;
+  }
+
+  var doc = w.document;
+
+  if( !doc.querySelector ){ return; }
+
+  var meta = doc.querySelector( "meta[name=viewport]" ),
+  initialContent = meta && meta.getAttribute( "content" ),
+  disabledZoom = initialContent + ",maximum-scale=1",
+  enabledZoom = initialContent + ",maximum-scale=10",
+  enabled = true,
+  x, y, z, aig;
+
+  if( !meta ){ return; }
+
+  function restoreZoom(){
+    meta.setAttribute( "content", enabledZoom );
+    enabled = true;
+  }
+
+  function disableZoom(){
+    meta.setAttribute( "content", disabledZoom );
+    enabled = false;
+  }
+
+  function checkTilt( e ){
+    aig = e.accelerationIncludingGravity;
+    x = Math.abs( aig.x );
+    y = Math.abs( aig.y );
+    z = Math.abs( aig.z );
+
+    // If portrait orientation and in one of the danger zones
+    if ( (!w.orientation || w.orientation === 180) && ( x > 7 || ( ( z > 6 && y < 8 || z < 8 && y > 6 ) && x > 5 ) ) ){
+      if ( enabled ) {
+        disableZoom();
+      }
+    }
+    else if( !enabled ){
+      restoreZoom();
+    }
+  }
+
+  w.addEventListener( "orientationchange", restoreZoom, false );
+  w.addEventListener( "devicemotion", checkTilt, false );
+
+})(this);
+/*
+ * Natural Sort algorithm for Javascript - Version 0.6 - Released under MIT license
+ * Author: Jim Palmer (based on chunking idea from Dave Koelle)
+ * Contributors: Mike Grier (mgrier.com), Clint Priest, Kyle Adams, guillermo
+ */
+
+function naturalSort(a, b) {
+  var re = /(^-?[0-9]+(\.?[0-9]*)[df]?e?[0-9]?$|^0x[0-9a-f]+$|[0-9]+)/gi,
+    sre = /(^[ ]*|[ ]*$)/g,
+    dre = /(^([\w ]+,?[\w ]+)?[\w ]+,?[\w ]+\d+:\d+(:\d+)?[\w ]?|^\d{1,4}[\/\-]\d{1,4}[\/\-]\d{1,4}|^\w+, \w+ \d+, \d{4})/,
+    hre = /^0x[0-9a-f]+$/i,
+    ore = /^0/,
+    // convert all to strings and trim()
+    x = a.toString().replace(sre, '') || '',
+    y = b.toString().replace(sre, '') || '',
+    // chunk/tokenize
+    xN = x.replace(re, '\0$1\0').replace(/\0$/,'').replace(/^\0/,'').split('\0'),
+    yN = y.replace(re, '\0$1\0').replace(/\0$/,'').replace(/^\0/,'').split('\0'),
+    // numeric, hex or date detection
+    xD = parseInt(x.match(hre)) || (xN.length != 1 && x.match(dre) && Date.parse(x)),
+    yD = parseInt(y.match(hre)) || xD && y.match(dre) && Date.parse(y) || null;
+  // first try and sort Hex codes or Dates
+  if (yD) {
+    if ( xD < yD ) {
+      return -1;
+    } else if ( xD > yD ) {
+      return 1;
+    }
+  }
+  // natural sorting through split numeric strings and default strings
+  for (var cLoc=0, numS=Math.max(xN.length, yN.length); cLoc < numS; cLoc++) {
+    // find floats not starting with '0', string or 0 if not defined (Clint Priest)
+    oFxNcL = !(xN[cLoc] || '').match(ore) && parseFloat(xN[cLoc]) || xN[cLoc] || 0;
+    oFyNcL = !(yN[cLoc] || '').match(ore) && parseFloat(yN[cLoc]) || yN[cLoc] || 0;
+    // handle numeric vs string comparison - number < string - (Kyle Adams)
+    if (isNaN(oFxNcL) !== isNaN(oFyNcL)) {
+      return (isNaN(oFxNcL)) ? 1 : -1;
+    // rely on string comparison if different types - i.e. '02' < 2 != '02' < '2'
+    } else if (typeof oFxNcL !== typeof oFyNcL) {
+      oFxNcL += '';
+      oFyNcL += '';
+    }
+    if (oFxNcL < oFyNcL) {
+      return -1;
+    }
+    if (oFxNcL > oFyNcL) {
+      return 1;
+    }
+  }
+  return 0;
+}
+;
+(function($) {
+  "use strict";
+  var Mp = {};
+
+  Mp.suggestion_instances = -1;
+
+  Mp.CookieChecker = function() {
+    var cookie = $.cookie('allow-cookies'),
+        $message;
+    if (! cookie) {
+      $message = $('#cookies');
+      $message.bind('click', 'a.confirm', function(e) {
+        e.preventDefault();
+        $message.hide();
+        $.cookie('allow-cookies', true, { expires: 365, path: '/' });
+      });
+      $('body').prepend($message.show());
+    }
+  };
+
+  Mp.searchAsYouType = (function() {
+    var Suggest = function(element, options) {
+      var self = this;
+      this.element = $(element);
+      if (this.element.size() == 0) {
+        return;
+      }
+
+      if (! 'suggestion_instances' in Mp) {
+        Mp.suggestion_instances = -1;
+      };
+      Mp.suggestion_instances += 1;
+      this._id = Mp.suggestion_instances;
+
+      this.focused = -1;
+      this.current_suggestions = [];
+
+      this.options = $.extend({
+        limit: false,
+        source: [],
+        onShow: $.noop,
+        onHide: $.noop,
+        onNoResults: self.hide,
+        onSetup: $.noop,
+        itemTemplate: function(item) {
+          return '<li><a href="'+ item.href +'">'+ item.name +'</a></li>';
+        },
+        sortFunction: this.defaultSortFunction,
+        inlined: false
+      }, options || {});
+
+      this.setup();
+    }
+
+    Suggest.prototype.defaultSortFunction = function(one, other) {
+      return one.name.search(this.query()) > other.name.search(this.query()) ? 1 : -1;
+    };
+
+    Suggest.prototype.setup = function() {
+      if (typeof this.options.source === 'function') {
+        var self = this;
+        setTimeout(function() {
+          self.options.source.call(self);
+        }, 20);
+      } else {
+        this.source = this.options.source;
+      }
+
+      this.container = $('<div id="suggestions-'+ this._id +'" class="suggestions" style="display:none;position:absolute;"></div>');
+
+      if (!this.options.inlined) {
+        this.container.css({
+          width: this.element.outerWidth() + 'px'
+        });
+
+        var $body = $('body');
+        this.offsets = {
+          x: parseInt($body.css('paddingLeft'), 10),
+          y: parseInt($body.css('paddingTop'), 10) + this.element.outerHeight()
+        };
+        $body.append(this.container);
+      } else {
+        this.offsets = { x: 0, y: 0 };
+        this.element.parent('form').append(this.container);
+      }
+
+      this.setupListeners();
+      this.options.onSetup.call(this);
+    };
+
+    Suggest.prototype.setupListeners = function() {
+      var self = this,
+          namespaced = function(event) {
+            return event +'.autocomplete'+ self._id;
+          };
+      this.element.bind(namespaced('keydown'), function(e) {
+        var func = self.movementKeys[e.keyCode.toString()];
+
+        if (typeof func === 'function') {
+          func.call(self, e);
+        }
+      });
+
+      this.element.bind(namespaced('keyup'), function(e) {
+        if (typeof self.movementKeys[e.keyCode.toString()] !== 'undefined') {
+          e.preventDefault();
+          return;
+        }
+        self._query = null;
+        self.search(self.query());
+      });
+
+      this.element.bind(namespaced('focus'), function() {
+        if (self.query() !== '') {
+          self.search(self.query());
+        }
+      });
+
+      this.element.bind(namespaced('blur'), function() {
+        self.focusSuggestion(-1);
+      });
+
+      if (!this.options.inlined) {
+        $(window).bind(namespaced('resize'), function() {
+          self.position();
+        });
+      }
+    };
+
+    Suggest.prototype.query = function() {
+      if (!this._query) {
+        this._query = $.trim(this.element.val());
+      }
+
+      return this._query;
+    };
+
+    Suggest.prototype.movementKeys = {
+      '16': null, // Shift
+      '27': function() { // esc
+        this.hide();
+        this.element.blur();
+      },
+      '37': null, // Arrow left
+      '38': function(e) { // Arrow up
+        this.focusPrevious();
+        e.preventDefault(e);
+      },
+      '39': null, // Arrow right
+      '40': function(e) { // Arrow down
+        this.focusNext();
+        e.preventDefault();
+      },
+      '9': function(e) { // tab
+        !e.shiftKey ? this.focusNext() : this.focusPrevious();
+        e.preventDefault();
+      },
+      '13': function(e) { // enter
+        e.preventDefault();
+        this.container.find("a.focused").trigger("click");
+      }
+    };
+
+    Suggest.prototype.search = function(value) {
+      var value = this.query();
+      if (value === '') {
+        this.update([]);
+        this.hide();
+      } else {
+        var matches = this.searchSources(value);
+        if (matches.length !== 0) {
+          if (this.options.limit !== false) {
+            matches = matches.splice(0, this.options.limit);
+          }
+          this.update(matches);
+          if (this.container.is(':hidden')) {
+            this.show();
+          }
+        } else {
+          this.options.onNoResults.call(this);
+        }
+      }
+    };
+
+    Suggest.prototype.searchSources = function(value) {
+      var self = this,
+          pattern = [],
+          values, test;
+
+      values = value.replace(/\s+/, ' ').split(' ');
+      if (values.length > 1) {
+        for (var i = 0, j = values.length; i < j; i++) {
+          pattern.push('(?=.*'+values[i]+')');
+        }
+      } else {
+        pattern.push(value);
+      }
+
+      test = new RegExp(pattern.join(''), 'gi');
+
+      return $.grep(this.source, function(match) {
+        return test.exec(match.name) !== null;
+      }).sort(function(one, other) {
+        return self.options.sortFunction.call(self, one, other);
+      });
+    };
+
+    Suggest.prototype.update = function(matches) {
+      this.current_suggestions = matches;
+      this.focused = -1;
+
+      var self = this,
+          html = ['<ul>'];
+      $.each(this.current_suggestions, function(i, item) {
+        html.push(self.options.itemTemplate.call(self, item, self.query()));
+      });
+      html.push('</ul>');
+
+      this.container.html(html.join(''));
+    };
+
+    Suggest.prototype.show = function() {
+      this.position();
+      this.container.show();
+      var self = this;
+      $(document).bind(('click.autocomplete'+ this._id), function(e) {
+        var el = self.container.get(0);
+        if (e.target !== self.element.get(0) && e.target !== el && !$.contains(el, e.target)) {
+          self.hide();
+          self.element.blur();
+        }
+      });
+      this.options.onShow.call(this);
+    };
+
+    Suggest.prototype.hide = function() {
+      this.container.hide();
+      $(document).unbind('click.autocomplete-'+ this._id);
+      this.options.onHide.call(this);
+    };
+
+    Suggest.prototype.focusNext = function() {
+      var num = this.current_suggestions.length;
+      if (num > 0 && this.focused < (num - 1)) {
+        this.focusSuggestion(this.focused + 1);
+      } else if (this.focused === (num - 1)) {
+        this.focusSuggestion(0);
+      }
+    };
+
+    Suggest.prototype.focusPrevious = function() {
+      if (this.focused !== -1) {
+        this.focusSuggestion(this.focused - 1);
+      } else {
+        this.focusSuggestion(this.current_suggestions.length - 1);
+      }
+    };
+
+    Suggest.prototype.focusSuggestion = function(num) {
+      this.container.find('li').removeClass('focused')
+        .filter(':nth-child('+ (num + 1) +')')
+        .addClass('focused');
+      this.focused = num;
+    };
+
+    Suggest.prototype.position = function() {
+      if (this.options.inlined) {
+        return;
+      }
+      var position = this.element.offset();
+      this.container.css({
+        'top': Math.round(position.top + this.offsets.y) + 'px',
+        'left': Math.round(position.left + this.offsets.x) + 'px'
+      });
+    };
+
+    return function(selector, options) {
+      new Suggest(selector, options);
+    };
+  }());
+
+  Mp.NavigationToggler = function(element) {
+    var $toggler = $(element),
+        setup_run = false,
+        $nav;
+
+    var calculateRules = function(element) {
+      var offset = element.outerHeight(),
+          rules = "#site-top-navigation { margin-top: -"+ offset +"px; }";
+
+      rules += "#site-top-navigation.inactive { margin-top: -"+ offset +"px; }";
+
+      return rules;
+    };
+
+    var reset = function() {
+      if (!setup_run) {
+        setup();
+        return;
+      }
+
+      var style_element = document.getElementById('navigation-styles');
+      style_element.innerHTML = calculateRules(style_element);
+    }
+
+    var hide = function(e) {
+      e.preventDefault();
+      $nav.addClass('inactive').removeClass('active');
+    };
+
+    var show = function(e) {
+      e.preventDefault();
+      $nav.css('visibility', 'visible');
+      $nav.addClass('active').removeClass('inactive');
+    };
+
+    var setup = function() {
+      if (setup_run) {
+        return;
+      }
+      var $original_nav = $('#site-navigation');
+      $nav = $original_nav.clone();
+      $nav.attr('id', 'site-top-navigation').css({
+        visibility: 'hidden'
+      });
+
+      $nav.append('<a href="#" class="close"><span>Stäng meny</span></a>');
+      $nav.find('a.close').bind('click', hide);
+
+      $('body').append($nav);
+      var style = document.createElement('style');
+
+      style.id = 'navigation-styles';
+      style.type = 'text/css';
+      style.innerHTML = calculateRules($nav);
+
+      document.getElementsByTagName("head")[0].appendChild(style);
+      setup_run = true;
+    };
+
+    $toggler.bind('click', show);
+    $(document).bind('resize', function() {
+      setTimeout(reset, 200);
+    });
+    setup();
+  };
+
+  Mp.focusAndCopy = function(selector) {
+    var selectIt = function() {
+      var input = this;
+      window.setTimeout(function(){
+        input.select();
+      }, 5);
+    };
+    $(selector).bind('focus', selectIt).bind('click', selectIt);
+  };
+
+  Mp.placeholderFallback = function() {
+    var setPlaceholder = function(element) {
+      var $element = $(element),
+          value    = $.trim($element.val()),
+          placeholder = $element.attr('placeholder');
+      if (value !== '') {
+        return;
+      }
+      $element.addClass('placeholder').val(placeholder);
+    };
+
+    var removePlaceholder = function(element) {
+      var $element = $(element),
+          value    = $.trim($element.val()),
+          placeholder = $element.attr('placeholder');
+
+      if (value === placeholder) {
+        $element.val('').removeClass('placeholder');
+      }
+    };
+
+    $('input[placeholder], textarea[placeholder]').filter(function() {
+      return $.trim($(this).val()) === '';
+    }).bind('focus.placeholder', function() {
+      removePlaceholder(this);
+    }).bind('blur.placeholder', function() {
+      setPlaceholder(this);
+    }).each(function() {
+      setPlaceholder(this);
+    });
+  };
+
+  // Fallback for browsers not supporting css columns
+  // This is only targeted towards lists for now
+  Mp.columnsFallback = function(element, column_count) {
+    var $container = $(element);
+    if ($container.size() === 0) {
+      return;
+    }
+
+    $container.each(function() {
+      var $element    = $(this),
+          $items      = $element.find('li'),
+          size        = $items.size(),
+          break_point = Math.ceil(size / column_count) - 1,
+          html        = [],
+          columns     = [];
+
+      for (var i = 0; i < column_count; i++) {
+        columns.push(['<div class="column c'+column_count+'"><ul>']);
+      }
+
+      var index = 0,
+          column = 0;
+      for (var i = 0; i < size; i++) {
+        columns[column].push($items[i].outerHTML);
+
+        if (index !== break_point) {
+          index++;
+        } else {
+          index = 0;
+          column++;
+        }
+      }
+
+      for (var i = 0; i < column_count; i++) {
+        columns[i].push('</ul></div>');
+        columns[i] = columns[i].join("");
+      }
+
+      html.push('<div class="grid"><div class="container">');
+      html.push(columns.join(""));
+      html.push('</div></div>');
+
+      $element.replaceWith(html.join(""));
+    });
+  };
+
+  Mp.SideNavigationToggler = function() {
+    var $nav      = $('#secondary-navigation'),
+        limit     = ($nav.data('limit') || 3) - 1,
+        show_more = $nav.data('show-more-copy'),
+        show_less = $nav.data('show-less-copy'),
+        hidden = false;
+
+    var targets = function() {
+      return $nav.find('li:gt('+ limit +'):not(.more)');
+    }
+
+    var show = function() {
+      targets().show();
+      $nav.find('li.more a').text(show_less);
+      hidden = false;
+    };
+
+    var hide = function() {
+      targets().hide();
+      $nav.find('li.more a').text(show_more);
+      hidden = true;
+    }
+
+    $nav.find('ul.menu')
+      .append('<li class="leaf more"><a href="#site-navigation">'+ show_more +'</a></li>');
+    $nav.delegate('li.more a', 'click', function(e) {
+      e.preventDefault();
+      if (hidden) {
+        show();
+      } else {
+        hide();
+      }
+    });
+    hide();
+  };
+
+  $(document).ready(function() {
+    var $html = $('html');
+
+    if (! $html.hasClass('lte8')) {
+      Mp.NavigationToggler('#skip-to-navigation');
+    }
+
+    if ($html.hasClass('lte9')) {
+      Mp.placeholderFallback();
+      Mp.columnsFallback('ol.labeled-list ol', 3);
+    }
+
+    Mp.CookieChecker();
+
+    Mp.SideNavigationToggler();
+
+    // Suggestions for lists (topics and localities)
+    Mp.searchAsYouType('#list-search', {
+      source: function() {
+        var target   = this.element.data('target-list'),
+            selector = (target ? (target + ' a') : 'div.labeled-list-container a'),
+            items    = $.map($(selector), function(link) {
+              return {
+                name: $(link).text(),
+                href: link.href
+              };
+            });
+
+        this.source = items.sort(function(self, other) {
+          return self.name.localeCompare(other.name);
+        });
+      },
+      onShow: function() {
+        this.element.parent().addClass('active-suggestions');
+      },
+      onHide: function() {
+        this.element.parent().removeClass('active-suggestions');
+      }
+    });
+
+    $('section.tabbed').tabs();
+    $('#conversation-form').hide();
+    $('#go-to-form').bind('click', function(e) {
+      e.preventDefault();
+      var $form = $('#conversation-form');
+      if ($form.is(':visible')) {
+        $('#conversation-form').slideUp();
+      } else {
+        $('#conversation-form').slideDown();
+      }
+    });
+
+    Mp.focusAndCopy('input.share');
+  });
+
+
+  if (! ('Mp' in window)) {
+    window.Mp = Mp;
+  }
+}(jQuery));
+
+
+
