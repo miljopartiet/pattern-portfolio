@@ -97,7 +97,7 @@
     /* line 117, 300-767.css.scss */
     #site-top-navigation a.close {
       font-family: arial, sans-serif;
-      color: #999999;
+      color: #888888;
       font-size: 0.8125em;
       line-height: 1.07692;
       display: block;
@@ -136,7 +136,7 @@
   /* line 162, 300-767.css.scss */
   #skip-to-navigation {
     font-family: arial, sans-serif;
-    color: #999999;
+    color: #888888;
     font-size: 0.8125em;
     line-height: 1.30769;
     line-height: 1.92308em;
@@ -559,7 +559,7 @@
     /* line 263, 768.css.scss */
     #secondary-navigation a {
       font-family: arial, sans-serif;
-      color: #999999;
+      color: #888888;
       font-size: 0.875em;
       line-height: 1.28571;
       white-space: nowrap;
@@ -626,7 +626,7 @@
     nav.main-navigation ul {
       margin: 0;
       font-family: arial, sans-serif;
-      color: #999999;
+      color: #888888;
       font-size: 0.875em;
       line-height: 1.28571;
       list-style: none; }
@@ -1262,7 +1262,7 @@
   /* line 503, 1024.css.scss */
   #site-navigation ul {
     font-family: arial, sans-serif;
-    color: #999999;
+    color: #888888;
     font-size: 0.875em;
     line-height: 1.28571em; }
   /* line 509, 1024.css.scss */

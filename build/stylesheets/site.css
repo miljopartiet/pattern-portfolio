@@ -238,15 +238,15 @@ textarea.placeholder {
 
 /* line 174, site.css.scss */
 :focus::-webkit-input-placeholder {
-  color: #999999; }
+  color: #888888; }
 
 /* line 177, site.css.scss */
 :focus:-moz-placeholder {
-  color: #999999; }
+  color: #888888; }
 
 /* line 180, site.css.scss */
 :focus:-ms-input-placeholder {
-  color: #999999; }
+  color: #888888; }
 
 /* line 184, site.css.scss */
 textarea {
@@ -326,7 +326,7 @@ figure {
 /* line 270, site.css.scss */
 figcaption {
   font-family: arial, sans-serif;
-  color: #999999;
+  color: #888888;
   font-size: 0.8125em;
   line-height: 1.23077;
   margin-top: 0.3125em; }
@@ -420,7 +420,7 @@ button.action {
 /* line 373, site.css.scss */
 p.copy {
   font: normal 0.77647em arial, sans-serif;
-  color: #999999; }
+  color: #888888; }
 
 /* line 378, site.css.scss */
 blockquote {
@@ -455,7 +455,7 @@ blockquote {
   blockquote footer {
     *zoom: 1;
     font-family: arial, sans-serif;
-    color: #999999;
+    color: #888888;
     font-size: 0.8125em;
     line-height: 1.30769;
     margin-top: 0.61538em;
@@ -482,7 +482,7 @@ blockquote {
       margin: 0 1.875% 0 4.0625%; }
     /* line 435, site.css.scss */
     blockquote footer .title {
-      color: #999999; }
+      color: #888888; }
 
 /* line 444, site.css.scss */
 #wrap {
@@ -591,14 +591,14 @@ nav.breadcrumbs {
   /* line 544, site.css.scss */
   nav.breadcrumbs p {
     font-family: arial, sans-serif;
-    color: #999999;
+    color: #888888;
     font-size: 0.8125em;
     line-height: 1.30769;
     margin: 0; }
   /* line 552, site.css.scss */
   nav.breadcrumbs a,
   nav.breadcrumbs span {
-    color: #999999;
+    color: #888888;
     position: relative; }
     /* line 556, site.css.scss */
     nav.breadcrumbs a:first-child,
@@ -797,7 +797,7 @@ form.speech-bubble {
     display: block;
     margin-top: 2px;
     font-family: arial, sans-serif;
-    color: #999999;
+    color: #888888;
     font-size: 0.72222em;
     line-height: 1.23077; }
   /* line 776, site.css.scss */
@@ -875,7 +875,7 @@ article + article {
   .article-section .section-lead,
   .article-section .subsection-lead {
     font-family: arial, sans-serif;
-    color: #999999;
+    color: #888888;
     font-size: 0.8125em;
     line-height: 1.30769;
     margin-top: .5em; }
@@ -951,7 +951,7 @@ header.intro .article-section {
 /* line 963, site.css.scss */
 .conversations .details {
   font-family: arial, sans-serif;
-  color: #999999;
+  color: #888888;
   font-size: 0.8125em;
   line-height: 1.07143;
   padding-top: 0.61538em;
@@ -994,7 +994,7 @@ header.intro .article-section {
   /* line 1016, site.css.scss */
   .conversations .details .toggler {
     display: block;
-    color: #999999;
+    color: #888888;
     text-decoration: underline; }
     /* line 1021, site.css.scss */
     .conversations .details .toggler:hover {
@@ -1042,7 +1042,7 @@ header.intro .article-section {
     position: absolute;
     margin: 0;
     font-family: arial, sans-serif;
-    color: #999999;
+    color: #888888;
     font-size: 0.8125em;
     line-height: 1.30769; }
   /* line 1087, site.css.scss */
@@ -1279,7 +1279,7 @@ div.comments {
   width: 100%;
   background: #000;
   font-family: arial, sans-serif;
-  color: #999999;
+  color: #888888;
   font-size: 0.8125em;
   line-height: 1.30769;
   color: #fff;

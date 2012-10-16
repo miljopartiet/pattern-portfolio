@@ -216,7 +216,7 @@ figure figcaption {
   /* line 263, 768.css.scss */
   #secondary-navigation a {
     font-family: arial, sans-serif;
-    color: #999999;
+    color: #888888;
     font-size: 0.875em;
     line-height: 1.28571;
     white-space: nowrap;
@@ -283,7 +283,7 @@ nav.main-navigation {
   nav.main-navigation ul {
     margin: 0;
     font-family: arial, sans-serif;
-    color: #999999;
+    color: #888888;
     font-size: 0.875em;
     line-height: 1.28571;
     list-style: none; }
