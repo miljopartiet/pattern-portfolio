@@ -313,6 +313,10 @@ article {
           margin: 0;
         }
       }
+
+      &.left {
+        width: percentage(235/640);
+      }
     }
   }
 

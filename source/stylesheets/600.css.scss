@@ -26,10 +26,20 @@ article .lead p {
   figure {
     margin-top: (20em/16);
 
+    &.right,
+    &.left {
+      width: percentage(240/600);
+      margin: (10em/16) 0;
+    }
+
     &.right {
       float: right;
-      width: percentage(240/600);
-      margin: (10em/16) 0 (10em/16) (20em/16);
+      margin-left: (20em/16);
+    }
+
+    &.left {
+      float: left;
+      margin-right: (20em/16);
     }
   }
 }

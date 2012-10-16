@@ -21,28 +21,35 @@ article .lead p {
 /* line 26, 600.css.scss */
 .body figure {
   margin-top: 1.25em; }
-  /* line 29, 600.css.scss */
+  /* line 30, 600.css.scss */
+  .body figure.right, .body figure.left {
+    width: 40%;
+    margin: 0.625em 0; }
+  /* line 35, 600.css.scss */
   .body figure.right {
     float: right;
-    width: 40%;
-    margin: 0.625em 0 0.625em 1.25em; }
+    margin-left: 1.25em; }
+  /* line 40, 600.css.scss */
+  .body figure.left {
+    float: left;
+    margin-right: 1.25em; }
 
-/* line 38, 600.css.scss */
+/* line 48, 600.css.scss */
 blockquote > div p {
   margin-right: 3.05556em; }
-/* line 41, 600.css.scss */
+/* line 51, 600.css.scss */
 blockquote footer {
   margin-top: -40px; }
 
-/* line 47, 600.css.scss */
+/* line 57, 600.css.scss */
 .suggestions ul {
   margin-left: 20px; }
 
-/* line 52, 600.css.scss */
+/* line 62, 600.css.scss */
 .main-search ul {
   margin-left: 0; }
 
-/* line 59, 600.css.scss */
+/* line 69, 600.css.scss */
 .labeled-list .grid .c3 {
   margin: 10px 0 0 0;
   width: 46.15385%; }

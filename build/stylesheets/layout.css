@@ -252,28 +252,35 @@
   /* line 26, 600.css.scss */
   .body figure {
     margin-top: 1.25em; }
-    /* line 29, 600.css.scss */
+    /* line 30, 600.css.scss */
+    .body figure.right, .body figure.left {
+      width: 40%;
+      margin: 0.625em 0; }
+    /* line 35, 600.css.scss */
     .body figure.right {
       float: right;
-      width: 40%;
-      margin: 0.625em 0 0.625em 1.25em; }
+      margin-left: 1.25em; }
+    /* line 40, 600.css.scss */
+    .body figure.left {
+      float: left;
+      margin-right: 1.25em; }
 
-  /* line 38, 600.css.scss */
+  /* line 48, 600.css.scss */
   blockquote > div p {
     margin-right: 3.05556em; }
-  /* line 41, 600.css.scss */
+  /* line 51, 600.css.scss */
   blockquote footer {
     margin-top: -40px; }
 
-  /* line 47, 600.css.scss */
+  /* line 57, 600.css.scss */
   .suggestions ul {
     margin-left: 20px; }
 
-  /* line 52, 600.css.scss */
+  /* line 62, 600.css.scss */
   .main-search ul {
     margin-left: 0; }
 
-  /* line 59, 600.css.scss */
+  /* line 69, 600.css.scss */
   .labeled-list .grid .c3 {
     margin: 10px 0 0 0;
     width: 46.15385%; } }
@@ -1100,7 +1107,10 @@
         top: 10px;
         right: -110px;
         margin: 0; }
-  /* line 324, 1024.css.scss */
+    /* line 317, 1024.css.scss */
+    article .body figure.left {
+      width: 36.71875%; }
+  /* line 328, 1024.css.scss */
   article .body > p, article .body > ul, article .body > ol,
   article .article-section > p,
   article .article-section > ul,
@@ -1109,25 +1119,25 @@
   article .article-subsection > ul,
   article .article-subsection > ol {
     margin-right: 3.33333em; }
-  /* line 330, 1024.css.scss */
+  /* line 334, 1024.css.scss */
   article .lead p {
     font-size: 1.625em;
     line-height: 1.23077;
     margin-top: 0.30769em; }
-  /* line 337, 1024.css.scss */
+  /* line 341, 1024.css.scss */
   article .illustration {
     margin-top: 1.875em; }
-    /* line 341, 1024.css.scss */
+    /* line 345, 1024.css.scss */
     article .illustration figure > div {
       float: left;
       width: 79.50311%; }
-    /* line 346, 1024.css.scss */
+    /* line 350, 1024.css.scss */
     article .illustration figure figcaption {
       float: right;
       width: 18.01242%;
       margin: 0 0 0 2.48447%;
       border: none; }
-  /* line 355, 1024.css.scss */
+  /* line 359, 1024.css.scss */
   article blockquote {
     *zoom: 1;
     padding-bottom: 0;
@@ -1140,13 +1150,13 @@
     /* line 57, includes.css.scss */
     article blockquote:after {
       clear: both; }
-    /* line 361, 1024.css.scss */
+    /* line 365, 1024.css.scss */
     article blockquote > div {
       width: 60.24845%;
       margin-bottom: .5em;
       padding-left: 0;
       float: left; }
-    /* line 368, 1024.css.scss */
+    /* line 372, 1024.css.scss */
     article blockquote footer {
       position: absolute;
       right: 0;
@@ -1155,41 +1165,41 @@
       padding-bottom: 1em;
       width: 39.75155%;
       text-align: left; }
-      /* line 377, 1024.css.scss */
+      /* line 381, 1024.css.scss */
       article blockquote footer img {
         position: absolute;
         left: 0;
         bottom: 0;
         width: 135px;
         margin: 0 0 0 0; }
-      /* line 385, 1024.css.scss */
+      /* line 389, 1024.css.scss */
       article blockquote footer p {
         float: left;
         padding: 0;
         width: 45.3125%;
         position: static;
         margin: 0 0 0 175px; }
-      /* line 393, 1024.css.scss */
+      /* line 397, 1024.css.scss */
       article blockquote footer .name {
         text-decoration: underline; }
-        /* line 396, 1024.css.scss */
+        /* line 400, 1024.css.scss */
         article blockquote footer .name:hover {
           text-decoration: none; }
 
-  /* line 405, 1024.css.scss */
+  /* line 409, 1024.css.scss */
   article + article h1 {
     margin-right: 2.7381em; }
 
-  /* line 410, 1024.css.scss */
+  /* line 414, 1024.css.scss */
   .article-section {
     width: 79.50311%; }
-    /* line 413, 1024.css.scss */
+    /* line 417, 1024.css.scss */
     .article-section header {
       width: 108.59375%;
       border-top: 1px solid #dddddd;
       border-bottom: none;
       padding: 0; }
-      /* line 419, 1024.css.scss */
+      /* line 423, 1024.css.scss */
       .article-section header.vignetted {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -1197,85 +1207,85 @@
         width: 134.375%;
         margin-left: -165px;
         padding-left: 165px; }
-        /* line 425, 1024.css.scss */
+        /* line 429, 1024.css.scss */
         .article-section header.vignetted .vignette {
           display: block;
           font-size: 1.4375em;
           position: absolute;
           top: -0.5em;
           left: 0; }
-    /* line 435, 1024.css.scss */
+    /* line 439, 1024.css.scss */
     .article-section .article-subsection {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       width: 108.59375%;
       padding-right: 8.59375%; }
-    /* line 441, 1024.css.scss */
+    /* line 445, 1024.css.scss */
     .article-section .subsection-header {
       width: 108.59375%; }
-    /* line 445, 1024.css.scss */
+    /* line 449, 1024.css.scss */
     .article-section .section-lead {
       margin-top: 1.42857em;
       float: right;
       width: 20.86331%;
       margin-right: -16.54676%; }
-    /* line 454, 1024.css.scss */
+    /* line 458, 1024.css.scss */
     .article-section .section-lead a,
     .article-section .subsection-lead a {
       text-decoration: underline; }
-      /* line 457, 1024.css.scss */
+      /* line 461, 1024.css.scss */
       .article-section .section-lead a:hover,
       .article-section .subsection-lead a:hover {
         text-decoration: none; }
 
-  /* line 465, 1024.css.scss */
+  /* line 469, 1024.css.scss */
   .related-topics img {
     margin-right: 20px; }
 
-  /* line 468, 1024.css.scss */
+  /* line 472, 1024.css.scss */
   .topics .topic {
     margin-right: 3.75em; }
 
-  /* line 472, 1024.css.scss */
+  /* line 476, 1024.css.scss */
   .labeled-list-container {
     width: 120.49689%;
     margin-left: -20.49689%; }
 
-  /* line 478, 1024.css.scss */
+  /* line 482, 1024.css.scss */
   .tabbed header {
     padding: 0; }
-  /* line 482, 1024.css.scss */
+  /* line 486, 1024.css.scss */
   .tabbed .tabs {
     margin-top: -17px; }
-    /* line 485, 1024.css.scss */
+    /* line 489, 1024.css.scss */
     .tabbed .tabs li {
       margin: 0; }
-    /* line 489, 1024.css.scss */
+    /* line 493, 1024.css.scss */
     .tabbed .tabs a.action {
       font-size: 0.77778em; }
 
-  /* line 498, 1024.css.scss */
+  /* line 502, 1024.css.scss */
   footer nav.breadcrumbs {
     margin-right: 115px; }
 
-  /* line 503, 1024.css.scss */
+  /* line 507, 1024.css.scss */
   #site-navigation ul {
     font-family: arial, sans-serif;
     color: #888888;
     font-size: 0.875em;
     line-height: 1.28571em; }
-  /* line 509, 1024.css.scss */
+  /* line 513, 1024.css.scss */
   #site-navigation form {
     margin-right: 185px; }
-    /* line 512, 1024.css.scss */
+    /* line 516, 1024.css.scss */
     #site-navigation form input {
       width: 15.71429em; }
 
-  /* line 518, 1024.css.scss */
+  /* line 522, 1024.css.scss */
   #logo-full a {
     margin-right: 10.27778em; }
 
-  /* line 522, 1024.css.scss */
+  /* line 526, 1024.css.scss */
   #copyright {
     margin-right: 15.41667em; } }
