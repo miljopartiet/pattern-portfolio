@@ -16,7 +16,6 @@
 
       $voting.delegate('input[type="submit"], a.show-results', 'click', function(e) {
         e.preventDefault();
-        console.log($results);
         $votable.hide();
         $results.show();
       });

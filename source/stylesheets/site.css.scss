@@ -156,6 +156,11 @@ textarea {
     outline: none;
   }
 }
+input[type="submit"],
+input.form-submit {
+  margin: 15px 0 0 0;
+}
+
 input.placeholder,
 textarea.placeholder {
   @include placeholder-styles;
@@ -320,7 +325,8 @@ figcaption {
 }
 
 // Button like action links
-.action {
+.action,
+.form-submit {
   font: (14em/16) $arial;
   line-height: (30/14);
   background: $green;
@@ -344,7 +350,8 @@ a.action,
 }
 
 button.action,
-input.action {
+input.action,
+input.form-submit {
   color: #fff;
   border: none;
 
@@ -642,10 +649,6 @@ footer nav.breadcrumbs {
 
   form {
     margin-right: (20em/16);
-  }
-
-  input {
-    background: #fff;
   }
 
   li {
