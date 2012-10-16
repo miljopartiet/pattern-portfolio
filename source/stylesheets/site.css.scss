@@ -1341,28 +1341,35 @@ div.comments {
   width: 100%;
   background: #000;
   @include small-text;
-  font-size: (13em/16);
-  line-height: (17/13);
   color: #fff;
-  padding: 5px 20px 17px 20px;
+  padding: 0 20px 8px 20px;
 
   p {
+    font-size: 13px;
+    line-height: (17/13);
+
     display: inline-block;
-    margin: 10px .5em 0 0;
+    margin: 8px .5em 0 0;
   }
 
   a {
     color: #fff;
+    text-decoration: underline;
 
     &.action {
       display: inline-block;
-      background: $warm-grey;
-      color: #000;
-      font-size: 1em;
-      margin: 10px 0 0 0;
+      background: rgb(102, 102, 102);
+      color: #fff;
+      font-size: 13px;
+      margin: 8px 0 0 0;
+      text-decoration: none;
 
       &:hover {
-        background: darken($warm-grey, 2%);
+        background: darken(rgb(102, 102, 102), 2%);
+      }
+
+      &:active {
+        background: lighten(rgb(102, 102, 102), 5%);
       }
     }
   }

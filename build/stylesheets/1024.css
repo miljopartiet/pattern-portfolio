@@ -455,3 +455,8 @@ footer nav.breadcrumbs {
 /* line 526, 1024.css.scss */
 #copyright {
   margin-right: 15.41667em; }
+
+/* line 530, 1024.css.scss */
+#cookies div {
+  max-width: 970px;
+  margin: 0 auto; }

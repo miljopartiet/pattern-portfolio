@@ -1289,37 +1289,42 @@ div.comments {
   background: #000;
   font-family: arial, sans-serif;
   color: #888888;
-  font-size: 0.8125em;
-  line-height: 1.30769;
   color: #fff;
-  padding: 5px 20px 17px 20px; }
-  /* line 1349, site.css.scss */
+  padding: 0 20px 8px 20px; }
+  /* line 1347, site.css.scss */
   #cookies p {
+    font-size: 13px;
+    line-height: 1.30769;
     display: inline-block;
-    margin: 10px .5em 0 0; }
-  /* line 1354, site.css.scss */
+    margin: 8px .5em 0 0; }
+  /* line 1355, site.css.scss */
   #cookies a {
-    color: #fff; }
-    /* line 1357, site.css.scss */
+    color: #fff;
+    text-decoration: underline; }
+    /* line 1359, site.css.scss */
     #cookies a.action {
       display: inline-block;
-      background: #dddddd;
-      color: #000;
-      font-size: 1em;
-      margin: 10px 0 0 0; }
-      /* line 1364, site.css.scss */
+      background: #666666;
+      color: #fff;
+      font-size: 13px;
+      margin: 8px 0 0 0;
+      text-decoration: none; }
+      /* line 1367, site.css.scss */
       #cookies a.action:hover {
-        background: #d8d8d8; }
+        background: #616161; }
+      /* line 1371, site.css.scss */
+      #cookies a.action:active {
+        background: #737373; }
 
-/* line 1371, site.css.scss */
+/* line 1378, site.css.scss */
 .front .article-section.news-posts {
   margin-top: 30px; }
 
-/* line 1376, site.css.scss */
+/* line 1383, site.css.scss */
 .ui-tabs-hide {
   display: none; }
 
-/* line 1379, site.css.scss */
+/* line 1386, site.css.scss */
 .ui-tabs-nav .ui-state-active a {
   background: #00730a; }
 @media only screen and (min-width: 300px) and (max-width: 767px) {
@@ -2625,7 +2630,12 @@ div.comments {
 
   /* line 526, 1024.css.scss */
   #copyright {
-    margin-right: 15.41667em; } }
+    margin-right: 15.41667em; }
+
+  /* line 530, 1024.css.scss */
+  #cookies div {
+    max-width: 970px;
+    margin: 0 auto; } }
 /*
 
 

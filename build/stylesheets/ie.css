@@ -915,6 +915,11 @@ footer nav.breadcrumbs {
 #copyright {
   margin-right: 15.41667em; }
 
+/* line 530, 1024.css.scss */
+#cookies div {
+  max-width: 970px;
+  margin: 0 auto; }
+
 /* line 9, ie.css.scss */
 body {
   background-image: url(../images/bg-1x.png);
