@@ -1029,7 +1029,8 @@ header.intro .article-section {
     }
   }
 
-  .fetch-more {
+  .fetch-more,
+  div.comments {
     clear: both;
     padding-top: (40em/16);
   }
@@ -1270,6 +1271,10 @@ header.intro + .conversations {
       word-wrap: break-word;
     }
   }
+}
+
+div.comments {
+  margin-top: 20px;
 }
 
 .tabbed {
