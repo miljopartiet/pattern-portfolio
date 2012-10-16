@@ -36,7 +36,17 @@
 
     if ($local_info.size() !== 0) {
       $bubble.hide();
-      $local_info.show();
+      var html = [],
+          $temp;
+      html.push('<section class="article-section loading">');
+      html.push('<header></header>');
+      html.push('<h2><a href="/jamtland.html" class="topic">Östersund</a></h2>');
+      html.push('</section>');
+      $temp = $(html.join(''));
+      $bubble.after($temp);
+      setTimeout(function() {
+        $temp.replaceWith($local_info.show());
+      }, Math.floor(Math.random()*1901) + 100);
     }
   }
   $(document).ready(function() {
@@ -55,6 +65,17 @@
 
         $local_info.hide();
       });
+
+    var loader = new Image();
+    loader.src = '/images/ajax-loader.gif';
+    $('div.fetch-more a.action').click(function(e) {
+      e.preventDefault();
+      var $link = $(this);
+      $link.addClass('loading');
+      setTimeout(function() {
+        $link.removeClass('loading');
+      }, 1000);
+    });
 
 
     Mp.searchAsYouType('#main-search', {

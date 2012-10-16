@@ -339,6 +339,12 @@ figcaption {
   border: 0;
   white-space: nowrap;
   display: inline-block;
+
+  &.loading,
+  &.loading:hover {
+    background: $green url(../images/ajax-loader.gif) 8px 50% no-repeat;
+    padding-left: (30em/14);
+  }
 }
 
 .action a,
@@ -899,6 +905,15 @@ article + article {
     h3,
     .subsection-lead {
       display: inline;
+    }
+  }
+
+  &.loading {
+    h2 {
+      background: transparent url(../images/ajax-loader_grey.gif) 0 0 no-repeat;
+      margin-left: -52px;
+      padding-left: 52px;
+      min-height: 32px;
     }
   }
 }
