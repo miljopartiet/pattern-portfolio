@@ -39,16 +39,26 @@
   border-bottom: 1px solid $warm-grey;
   float: right;
   padding-bottom: (8em/16);
-  width: percentage(230/768);
+  width: percentage(300/768);
 
   a {
     white-space: nowrap;
     margin-left: .2em;
+    padding-left: 10px;
+    background: transparent url(../images/bullet.svg) 0 50% no-repeat;
 
     &:hover {
       color: $green;
     }
   }
+
+  li:first-child a,
+  .more a {
+    background-image: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
 
   .more a {
     position: absolute;

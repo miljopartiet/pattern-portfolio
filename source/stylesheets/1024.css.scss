@@ -266,6 +266,13 @@ div.comments {
       line-height: (20/14);
       display: block;
     }
+
+    .more a {
+      right: 5px;
+      &.show-less {
+        right: -5px;
+      }
+    }
   }
 }
 
