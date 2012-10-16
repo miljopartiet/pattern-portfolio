@@ -322,68 +322,70 @@ nav.main-navigation {
   height: 2.55556em;
   background-size: 16.11111em 2.55556em; }
 
-/* line 390, 768.css.scss */
-.news-posts .icon-list {
+/* line 392, 768.css.scss */
+.news-posts .icon-list li {
+  font-size: 1.44444em;
+  padding: 0.57692em 0;
+  border-bottom: 1px solid #dddddd; }
+  /* line 397, 768.css.scss */
+  .news-posts .icon-list li:first-child {
+    padding-top: 0; }
+  /* line 401, 768.css.scss */
+  .news-posts .icon-list li:last-child {
+    border: none;
+    padding-bottom: 0; }
+/* line 407, 768.css.scss */
+.news-posts .icon-list a {
   margin: 0; }
-  /* line 393, 768.css.scss */
-  .news-posts .icon-list li {
-    font-size: 1.44444em;
-    padding: 0.57692em 0;
-    border-bottom: 1px solid #dddddd; }
-    /* line 398, 768.css.scss */
-    .news-posts .icon-list li:first-child {
-      padding-top: 0; }
-    /* line 402, 768.css.scss */
-    .news-posts .icon-list li:last-child {
-      border: none;
-      padding-bottom: 0; }
-  /* line 408, 768.css.scss */
-  .news-posts .icon-list a {
-    margin: 0; }
-  /* line 412, 768.css.scss */
-  .news-posts .icon-list .title {
-    line-height: 1.15385; }
-  /* line 416, 768.css.scss */
-  .news-posts .icon-list .meta {
-    font-size: 0.53846em;
-    line-height: 1.28571;
-    margin-top: 0.14286em; }
+/* line 411, 768.css.scss */
+.news-posts .icon-list .title {
+  line-height: 1.15385; }
+/* line 415, 768.css.scss */
+.news-posts .icon-list .meta {
+  font-size: 0.53846em;
+  line-height: 1.28571;
+  margin-top: 0.14286em; }
+/* line 421, 768.css.scss */
+.news-posts .icon-list + .icon-list {
+  padding-top: 0.9375em;
+  margin-top: 0.9375em;
+  border-top: 1px solid #dddddd; }
 
-/* line 423, 768.css.scss */
+/* line 428, 768.css.scss */
 .topics .topic .number {
   display: block; }
 
-/* line 428, 768.css.scss */
+/* line 433, 768.css.scss */
 .grid .container {
   width: 103.44828%; }
-/* line 432, 768.css.scss */
+/* line 437, 768.css.scss */
 .grid .column {
   margin: 0 1.5625em 1.25em 0 0; }
-  /* line 435, 768.css.scss */
+  /* line 440, 768.css.scss */
   .grid .column.c2 {
     width: 46.66667%; }
-  /* line 439, 768.css.scss */
+  /* line 444, 768.css.scss */
   .grid .column.c3 {
     width: 30%; }
 
-/* line 446, 768.css.scss */
+/* line 451, 768.css.scss */
 .labeled-list .grid {
   width: 100%; }
-  /* line 448, 768.css.scss */
+  /* line 453, 768.css.scss */
   .labeled-list .grid .container {
     margin: 0;
     width: 103.44828%; }
-    /* line 451, 768.css.scss */
+    /* line 456, 768.css.scss */
     .labeled-list .grid .container .c3 {
       width: 46.66667%; }
-    /* line 454, 768.css.scss */
+    /* line 459, 768.css.scss */
     .labeled-list .grid .container ul {
       margin-left: 1.2em;
       font-size: 0.88889em; }
 
-/* line 463, 768.css.scss */
+/* line 468, 768.css.scss */
 .people .grid a h2 {
   font-size: 1.25em; }
-/* line 467, 768.css.scss */
+/* line 472, 768.css.scss */
 .people .grid a p {
   font-size: 1em; }

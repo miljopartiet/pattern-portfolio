@@ -956,12 +956,12 @@ header.intro .article-section {
   text-align: center;
   text-indent: -0.3em;
   color: #fff;
-  font-size: 0.81818em;
+  font-size: 18px;
   background: transparent url(../images/calendar.svg) 0 50% no-repeat;
-  background-size: 2.16667em 2.55556em;
-  line-height: 2.83333em;
-  width: 2.16667em;
-  height: 2.55556em; }
+  background-size: 39px 46px;
+  line-height: 2.83333;
+  width: 39px;
+  height: 46px; }
 
 /* line 973, site.css.scss */
 .conversations .details {
