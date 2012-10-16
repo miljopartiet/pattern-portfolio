@@ -740,17 +740,18 @@ form.speech-bubble {
     form.speech-bubble .search input {
       width: 100%;
       padding: 7px 20px 7px 10px;
-      border-radius: 6px; }
-    /* line 699, site.css.scss */
+      border-radius: 6px;
+      background: #fff; }
+    /* line 700, site.css.scss */
     form.speech-bubble .search.active-suggestions {
       background: #ffe900;
       border-radius: 6px 6px 0 0; }
-      /* line 704, site.css.scss */
+      /* line 705, site.css.scss */
       form.speech-bubble .search.active-suggestions input,
       form.speech-bubble .search.active-suggestions input:focus {
         border: 1px solid transparent; }
 
-/* line 711, site.css.scss */
+/* line 712, site.css.scss */
 .suggestions {
   background: #ffe900;
   border-radius: 0 0 4px 4px;
@@ -758,21 +759,21 @@ form.speech-bubble {
   padding-right: 25px;
   padding-bottom: 10px;
   margin-left: -25px; }
-  /* line 719, site.css.scss */
+  /* line 720, site.css.scss */
   .suggestions ul {
     margin-left: 0; }
-  /* line 723, site.css.scss */
+  /* line 724, site.css.scss */
   .suggestions a {
     text-decoration: underline; }
-    /* line 725, site.css.scss */
+    /* line 726, site.css.scss */
     .suggestions a:hover {
       text-decoration: none; }
-  /* line 730, site.css.scss */
+  /* line 731, site.css.scss */
   .suggestions .focused a {
     color: #00730a;
     text-decoration: none; }
 
-/* line 736, site.css.scss */
+/* line 737, site.css.scss */
 .main-search {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -782,26 +783,26 @@ form.speech-bubble {
   margin: 0;
   border: 1px solid #dddddd;
   border-top: none; }
-  /* line 745, site.css.scss */
+  /* line 746, site.css.scss */
   .main-search ul,
   .main-search li {
     list-style: none;
     margin: 0; }
-  /* line 750, site.css.scss */
+  /* line 751, site.css.scss */
   .main-search a {
     padding: 0.25em 0.625em;
     display: block;
     font-size: 0.88889em;
     line-height: 1.125;
     text-decoration: none; }
-    /* line 758, site.css.scss */
+    /* line 759, site.css.scss */
     .main-search a:hover .name {
       text-decoration: none; }
-  /* line 764, site.css.scss */
+  /* line 765, site.css.scss */
   .main-search .name {
     white-space: normal;
     text-decoration: underline; }
-  /* line 769, site.css.scss */
+  /* line 770, site.css.scss */
   .main-search .category {
     display: block;
     margin-top: 2px;
@@ -809,55 +810,55 @@ form.speech-bubble {
     color: #888888;
     font-size: 0.72222em;
     line-height: 1.23077; }
-  /* line 777, site.css.scss */
+  /* line 778, site.css.scss */
   .main-search em {
     font-style: normal; }
-  /* line 781, site.css.scss */
+  /* line 782, site.css.scss */
   .main-search .focused {
     background: #ece8de; }
-    /* line 784, site.css.scss */
+    /* line 785, site.css.scss */
     .main-search .focused .name {
       text-decoration: none; }
 
-/* line 794, site.css.scss */
+/* line 795, site.css.scss */
 article h1 {
   color: #2b912c; }
-/* line 799, site.css.scss */
+/* line 800, site.css.scss */
 article p a,
 article li > a {
   text-decoration: underline; }
-  /* line 802, site.css.scss */
+  /* line 803, site.css.scss */
   article p a:hover,
   article li > a:hover {
     text-decoration: none; }
-/* line 808, site.css.scss */
+/* line 809, site.css.scss */
 article .illustration {
   margin-top: 1.25em; }
-/* line 813, site.css.scss */
+/* line 814, site.css.scss */
 article .lead p {
   font-size: 1.125em;
   line-height: 1.22222;
   margin-top: 0.44444em; }
 
-/* line 820, site.css.scss */
+/* line 821, site.css.scss */
 article + article {
   margin-top: 40px; }
-  /* line 823, site.css.scss */
+  /* line 824, site.css.scss */
   article + article h1 {
     padding-top: 20px;
     border-top: 1px solid #dddddd;
     color: #000; }
 
-/* line 831, site.css.scss */
+/* line 832, site.css.scss */
 .article-section {
   margin-top: 3.75em; }
-  /* line 834, site.css.scss */
+  /* line 835, site.css.scss */
   .article-section header {
     border-bottom: 1px solid #dddddd;
     margin-bottom: -1px;
     position: relative;
     padding: 0 0 0.2em 0; }
-  /* line 842, site.css.scss */
+  /* line 843, site.css.scss */
   .article-section h2 a.topic {
     display: block;
     font-size: 0.75em;
@@ -865,11 +866,11 @@ article + article {
     text-transform: uppercase;
     text-rendering: optimizeLegibility;
     letter-spacing: 0.06em; }
-  /* line 852, site.css.scss */
+  /* line 853, site.css.scss */
   .article-section h3 {
     font-weight: normal;
     font-family: "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif; }
-  /* line 857, site.css.scss */
+  /* line 858, site.css.scss */
   .article-section .vignette {
     width: 3em;
     height: 2.69565em;
@@ -880,7 +881,7 @@ article + article {
     line-height: 1em;
     color: #fff;
     text-transform: none; }
-  /* line 870, site.css.scss */
+  /* line 871, site.css.scss */
   .article-section .section-lead,
   .article-section .subsection-lead {
     font-family: arial, sans-serif;
@@ -888,70 +889,70 @@ article + article {
     font-size: 0.8125em;
     line-height: 1.30769;
     margin-top: .5em; }
-    /* line 877, site.css.scss */
+    /* line 878, site.css.scss */
     .article-section .section-lead b,
     .article-section .section-lead strong,
     .article-section .subsection-lead b,
     .article-section .subsection-lead strong {
       color: #666666; }
-    /* line 881, site.css.scss */
+    /* line 882, site.css.scss */
     .article-section .section-lead a,
     .article-section .subsection-lead a {
       text-decoration: none; }
-  /* line 887, site.css.scss */
+  /* line 888, site.css.scss */
   .article-section .article-subsection {
     margin-top: 1.25em;
     border-top: 1px solid #dddddd; }
-    /* line 891, site.css.scss */
+    /* line 892, site.css.scss */
     .article-section .article-subsection:first-child {
       margin-top: 0; }
-  /* line 896, site.css.scss */
+  /* line 897, site.css.scss */
   .article-section header + .article-subsection {
     border-top: none;
     margin-top: 0; }
-  /* line 901, site.css.scss */
+  /* line 902, site.css.scss */
   .article-section .subsection-header {
     padding: 0 0 0.4em 0;
     border-bottom: 1px solid #dddddd; }
-    /* line 906, site.css.scss */
+    /* line 907, site.css.scss */
     .article-section .subsection-header h3,
     .article-section .subsection-header .subsection-lead {
       display: inline; }
-  /* line 912, site.css.scss */
+  /* line 913, site.css.scss */
   .article-section.loading h2 {
     background: transparent url(../images/ajax-loader_grey.gif) 0 0 no-repeat;
     margin-left: -52px;
     padding-left: 52px;
     min-height: 32px; }
 
-/* line 921, site.css.scss */
+/* line 922, site.css.scss */
 header.intro .article-section {
   margin-top: 2.5em; }
 
-/* line 925, site.css.scss */
+/* line 926, site.css.scss */
 .illustration + .article-section {
   margin-top: 1.875em; }
 
-/* line 930, site.css.scss */
+/* line 931, site.css.scss */
 .people .grid img {
   margin: 0; }
-/* line 934, site.css.scss */
+/* line 935, site.css.scss */
 .people .grid a {
   color: #000; }
-  /* line 937, site.css.scss */
+  /* line 938, site.css.scss */
   .people .grid a h2 {
     font-size: 1em;
     color: #2b912c;
     margin-top: 10px; }
-  /* line 943, site.css.scss */
+  /* line 944, site.css.scss */
   .people .grid a p {
     margin: 0;
     font-size: 0.875em; }
-  /* line 949, site.css.scss */
+  /* line 950, site.css.scss */
   .people .grid a:hover h2 {
     color: #00730a; }
 
-/* line 959, site.css.scss */
+/* line 960, site.css.scss */
 .icon-list.calendar .icon {
   text-align: center;
   text-indent: -0.3em;
@@ -963,7 +964,7 @@ header.intro .article-section {
   width: 39px;
   height: 46px; }
 
-/* line 973, site.css.scss */
+/* line 974, site.css.scss */
 .conversations .details {
   font-family: arial, sans-serif;
   color: #888888;
@@ -972,84 +973,84 @@ header.intro .article-section {
   padding-top: 0.61538em;
   border-top: 1px solid #dddddd;
   margin: 0.75em 12.09677% 0 11.29032%; }
-  /* line 981, site.css.scss */
+  /* line 982, site.css.scss */
   .conversations .details .topic {
     display: block; }
-  /* line 987, site.css.scss */
+  /* line 988, site.css.scss */
   .conversations .details .voting,
   .conversations .details .poll-results,
   .conversations .details .toggler {
     margin-top: 0.92308em; }
-  /* line 993, site.css.scss */
+  /* line 994, site.css.scss */
   .conversations .details .poll-results .answer,
   .conversations .details .poll-results .summary {
     display: block;
     margin-top: 0.85714em; }
-  /* line 998, site.css.scss */
+  /* line 999, site.css.scss */
   .conversations .details .poll-results .answer .summary {
     margin-top: 0.28571em; }
-  /* line 1002, site.css.scss */
+  /* line 1003, site.css.scss */
   .conversations .details .poll-results b {
     display: inline-block;
     width: 24.13793%; }
-  /* line 1007, site.css.scss */
+  /* line 1008, site.css.scss */
   .conversations .details .poll-results .meter {
     display: inline-block;
     width: 75.86207%; }
-    /* line 1011, site.css.scss */
+    /* line 1012, site.css.scss */
     .conversations .details .poll-results .meter span {
       display: inline-block;
       text-indent: -9999px; }
-  /* line 1017, site.css.scss */
+  /* line 1018, site.css.scss */
   .conversations .details .poll-results .meter span {
     background: #2b912c; }
-  /* line 1022, site.css.scss */
+  /* line 1023, site.css.scss */
   .conversations .details .toggler {
     display: block;
     color: #888888;
     text-decoration: underline; }
-    /* line 1027, site.css.scss */
+    /* line 1028, site.css.scss */
     .conversations .details .toggler:hover {
       text-decoration: none; }
-  /* line 1032, site.css.scss */
+  /* line 1033, site.css.scss */
   .conversations .details .related {
     display: block;
     margin-top: 0.92308em; }
-/* line 1039, site.css.scss */
+/* line 1040, site.css.scss */
 .conversations .fetch-more,
 .conversations div.comments {
   clear: both;
   padding-top: 2.5em; }
 
-/* line 1046, site.css.scss */
+/* line 1047, site.css.scss */
 .body .conversations .fetch-more {
   margin-left: 11.29032%; }
 
-/* line 1051, site.css.scss */
+/* line 1052, site.css.scss */
 .conversation {
   list-style: none;
   margin: 1.25em 0 0 0;
   padding: 1.4375em 0; }
-  /* line 1057, site.css.scss */
+  /* line 1058, site.css.scss */
   .conversation a .read-more {
     color: #2b912c;
     text-decoration: underline; }
-  /* line 1063, site.css.scss */
+  /* line 1064, site.css.scss */
   .conversation a:hover .read-more {
     color: #00730a;
     text-decoration: none; }
-  /* line 1070, site.css.scss */
+  /* line 1071, site.css.scss */
   .conversation .content {
     position: relative;
     z-index: 1;
     padding: 20px 25px; }
-    /* line 1075, site.css.scss */
+    /* line 1076, site.css.scss */
     .conversation .content p:first-child {
       margin: 0; }
-    /* line 1079, site.css.scss */
+    /* line 1080, site.css.scss */
     .conversation .content p {
       color: #2A2A2A; }
-  /* line 1085, site.css.scss */
+  /* line 1086, site.css.scss */
   .conversation .byline p {
     position: absolute;
     margin: 0;
@@ -1057,11 +1058,11 @@ header.intro .article-section {
     color: #888888;
     font-size: 0.8125em;
     line-height: 1.30769; }
-  /* line 1093, site.css.scss */
+  /* line 1094, site.css.scss */
   .conversation .byline img {
     position: absolute;
     bottom: -1.4375em; }
-  /* line 1098, site.css.scss */
+  /* line 1099, site.css.scss */
   .conversation .byline .arrow {
     position: absolute;
     width: 0;
@@ -1070,18 +1071,18 @@ header.intro .article-section {
     bottom: 0;
     color: #ffe900;
     border-top: 25px solid transparent; }
-  /* line 1109, site.css.scss */
+  /* line 1110, site.css.scss */
   .conversation .question {
     position: relative;
     z-index: 2;
     margin-bottom: -0.75em;
     margin-right: 17.74194%; }
-    /* line 1115, site.css.scss */
+    /* line 1116, site.css.scss */
     .conversation .question .content {
       padding-bottom: 25px;
       background: #ffe900;
       border-radius: 3px 3px 3px 0; }
-      /* line 1120, site.css.scss */
+      /* line 1121, site.css.scss */
       .conversation .question .content:after {
         position: absolute;
         right: 0;
@@ -1092,77 +1093,77 @@ header.intro .article-section {
         content: "";
         background: rgba(0, 0, 0, 0.04);
         border-radius: 3px 0 3px 0; }
-      /* line 1132, site.css.scss */
+      /* line 1133, site.css.scss */
       .conversation .question .content p {
         font-family: "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif; }
-    /* line 1138, site.css.scss */
+    /* line 1139, site.css.scss */
     .conversation .question .byline p {
       top: -1.76923em; }
-    /* line 1142, site.css.scss */
+    /* line 1143, site.css.scss */
     .conversation .question .byline img {
       left: -14.70588%; }
-    /* line 1146, site.css.scss */
+    /* line 1147, site.css.scss */
     .conversation .question .byline .arrow {
       left: -3.87097%;
       border-top: 25px solid transparent;
       border-right: 25px solid #ffe900; }
-  /* line 1154, site.css.scss */
+  /* line 1155, site.css.scss */
   .conversation .answer {
     position: relative;
     margin-left: 11.29032%;
     margin-right: 12.09677%; }
-    /* line 1159, site.css.scss */
+    /* line 1160, site.css.scss */
     .conversation .answer .content {
       padding-top: 25px;
       background: #f5f3ee;
       border-radius: 3px 3px 0 3px; }
-      /* line 1164, site.css.scss */
+      /* line 1165, site.css.scss */
       .conversation .answer .content p {
         line-height: 1.25; }
-    /* line 1170, site.css.scss */
+    /* line 1171, site.css.scss */
     .conversation .answer .byline img {
       right: -15.68627%; }
-    /* line 1174, site.css.scss */
+    /* line 1175, site.css.scss */
     .conversation .answer .byline p {
       padding-top: 0.76923em; }
-    /* line 1178, site.css.scss */
+    /* line 1179, site.css.scss */
     .conversation .answer .byline .arrow {
       right: -3.87097%;
       border-left: 25px solid #f5f3ee; }
 
-/* line 1187, site.css.scss */
+/* line 1188, site.css.scss */
 .body .conversation .question .content p {
   font-size: 1.5em;
   line-height: 1.08333; }
 
-/* line 1195, site.css.scss */
+/* line 1196, site.css.scss */
 header.intro + .conversations .article-section:first-child {
   margin-top: 2.5em;
   border-top: none; }
-  /* line 1200, site.css.scss */
+  /* line 1201, site.css.scss */
   header.intro + .conversations .article-section:first-child .conversation,
   header.intro + .conversations .article-section:first-child .details {
     margin-top: 0; }
 
-/* line 1207, site.css.scss */
+/* line 1208, site.css.scss */
 .related-topics ul {
   list-style: none; }
-/* line 1211, site.css.scss */
+/* line 1212, site.css.scss */
 .related-topics li {
   margin-left: 0; }
-/* line 1215, site.css.scss */
+/* line 1216, site.css.scss */
 .related-topics img {
   float: right;
   margin: 0.5em 0 5px 20px; }
-/* line 1220, site.css.scss */
+/* line 1221, site.css.scss */
 .related-topics img + p {
   margin-top: 0.22222em; }
 
-/* line 1225, site.css.scss */
+/* line 1226, site.css.scss */
 .labeled-list {
   list-style: none;
   margin: 0; }
-  /* line 1229, site.css.scss */
+  /* line 1230, site.css.scss */
   .labeled-list .group {
     *zoom: 1;
     border-top: 1px solid #dddddd;
@@ -1175,7 +1176,7 @@ header.intro + .conversations .article-section:first-child {
     /* line 57, includes.css.scss */
     .labeled-list .group:after {
       clear: both; }
-  /* line 1236, site.css.scss */
+  /* line 1237, site.css.scss */
   .labeled-list .label {
     font: bold 1.50893em "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif;
     color: #000;
@@ -1183,21 +1184,21 @@ header.intro + .conversations .article-section:first-child {
     float: left;
     width: 10.56338%;
     margin-right: 5.28169%; }
-  /* line 1246, site.css.scss */
+  /* line 1247, site.css.scss */
   .labeled-list.text-labels .label {
     display: block;
     font-size: 1.25em;
     line-height: 1.1; }
-  /* line 1252, site.css.scss */
+  /* line 1253, site.css.scss */
   .labeled-list.text-labels .list {
     margin-top: 0.625em; }
-  /* line 1257, site.css.scss */
+  /* line 1258, site.css.scss */
   .labeled-list .list {
     margin: 0;
     list-style: disc;
     float: left;
     width: 68.30986%; }
-    /* line 1263, site.css.scss */
+    /* line 1264, site.css.scss */
     .labeled-list .list li {
       -webkit-column-break-inside: avoid;
       -moz-column-break-inside: avoid;
@@ -1206,44 +1207,44 @@ header.intro + .conversations .article-section:first-child {
       column-break-inside: avoid;
       vertical-align: top;
       word-wrap: break-word; }
-    /* line 1274, site.css.scss */
+    /* line 1275, site.css.scss */
     .labeled-list .list a {
       display: inline-block;
       vertical-align: top;
       word-wrap: break-word; }
 
-/* line 1282, site.css.scss */
+/* line 1283, site.css.scss */
 div.comments {
   margin-top: 20px; }
 
-/* line 1287, site.css.scss */
+/* line 1288, site.css.scss */
 .tabbed header {
   padding: 0;
   margin-top: 56px;
   margin-bottom: 56px; }
-/* line 1293, site.css.scss */
+/* line 1294, site.css.scss */
 .tabbed .article-subsection {
   border: none; }
-/* line 1297, site.css.scss */
+/* line 1298, site.css.scss */
 .tabbed .tabs {
   margin: 0 0 -14px 0;
   list-style: none; }
-  /* line 1301, site.css.scss */
+  /* line 1302, site.css.scss */
   .tabbed .tabs li {
     display: inline;
     margin: 0; }
-  /* line 1306, site.css.scss */
+  /* line 1307, site.css.scss */
   .tabbed .tabs a.action {
     font-size: 0.75em;
     margin-right: 1.66667em; }
 
-/* line 1313, site.css.scss */
+/* line 1314, site.css.scss */
 #copyright {
   padding-left: 2.91667em;
   background: transparent url(../images/cc.svg) 0 2px no-repeat;
   background-size: 1.66667em 1.66667em; }
 
-/* line 1319, site.css.scss */
+/* line 1320, site.css.scss */
 .topics {
   *zoom: 1;
   list-style: none; }
@@ -1254,15 +1255,15 @@ div.comments {
   /* line 57, includes.css.scss */
   .topics:after {
     clear: both; }
-  /* line 1323, site.css.scss */
+  /* line 1324, site.css.scss */
   .topics .topic {
     margin: 1.25em 0 0 0; }
-  /* line 1328, site.css.scss */
+  /* line 1329, site.css.scss */
   .topics h2,
   .topics h3 {
     margin: 0;
     position: relative; }
-    /* line 1332, site.css.scss */
+    /* line 1333, site.css.scss */
     .topics h2 .number,
     .topics h3 .number {
       display: none;
@@ -1278,14 +1279,14 @@ div.comments {
       background-size: 35px 32px;
       color: #fff;
       text-align: center; }
-  /* line 1351, site.css.scss */
+  /* line 1352, site.css.scss */
   .topics h2,
   .topics h3,
   .topics p {
     margin-right: 0;
     display: inline; }
 
-/* line 1357, site.css.scss */
+/* line 1358, site.css.scss */
 #cookies {
   display: none;
   width: 100%;
@@ -1294,17 +1295,17 @@ div.comments {
   color: #888888;
   color: #fff;
   padding: 0 20px 8px 20px; }
-  /* line 1365, site.css.scss */
+  /* line 1366, site.css.scss */
   #cookies p {
     font-size: 13px;
     line-height: 1.30769;
     display: inline-block;
     margin: 8px .5em 0 0; }
-  /* line 1373, site.css.scss */
+  /* line 1374, site.css.scss */
   #cookies a {
     color: #fff;
     text-decoration: underline; }
-    /* line 1377, site.css.scss */
+    /* line 1378, site.css.scss */
     #cookies a.action {
       display: inline-block;
       background: #666666;
@@ -1312,21 +1313,21 @@ div.comments {
       font-size: 13px;
       margin: 8px 0 0 0;
       text-decoration: none; }
-      /* line 1385, site.css.scss */
+      /* line 1386, site.css.scss */
       #cookies a.action:hover {
         background: #616161; }
-      /* line 1389, site.css.scss */
+      /* line 1390, site.css.scss */
       #cookies a.action:active {
         background: #737373; }
 
-/* line 1396, site.css.scss */
+/* line 1397, site.css.scss */
 .front .article-section.news-posts {
   margin-top: 30px; }
 
-/* line 1401, site.css.scss */
+/* line 1402, site.css.scss */
 .ui-tabs-hide {
   display: none; }
 
-/* line 1404, site.css.scss */
+/* line 1405, site.css.scss */
 .ui-tabs-nav .ui-state-active a {
   background: #00730a; }
