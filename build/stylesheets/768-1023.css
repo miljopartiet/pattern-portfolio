@@ -32,31 +32,39 @@
   border-bottom: 1px solid #dddddd;
   float: right;
   padding-bottom: 0.5em;
-  width: 29.94792%; }
+  width: 39.0625%; }
   /* line 44, 768-1023.css.scss */
   #secondary-navigation a {
     white-space: nowrap;
-    margin-left: .2em; }
-    /* line 48, 768-1023.css.scss */
+    margin-left: .2em;
+    padding-left: 10px;
+    background: transparent url(../images/bullet.svg) 0 50% no-repeat; }
+    /* line 50, 768-1023.css.scss */
     #secondary-navigation a:hover {
       color: #2b912c; }
-  /* line 53, 768-1023.css.scss */
+  /* line 56, 768-1023.css.scss */
+  #secondary-navigation li:first-child a,
+  #secondary-navigation .more a {
+    background-image: none;
+    margin-left: 0;
+    padding-left: 0; }
+  /* line 63, 768-1023.css.scss */
   #secondary-navigation .more a {
     position: absolute;
     right: 0;
     bottom: -1.8em;
     margin-right: 0; }
-  /* line 60, 768-1023.css.scss */
+  /* line 70, 768-1023.css.scss */
   #secondary-navigation > div {
     margin-top: 0.625em; }
-  /* line 65, 768-1023.css.scss */
+  /* line 75, 768-1023.css.scss */
   #secondary-navigation form .suggestions {
     border-top: 1px solid #dddddd; }
 
-/* line 72, 768-1023.css.scss */
+/* line 82, 768-1023.css.scss */
 article .body {
   position: relative; }
-/* line 81, 768-1023.css.scss */
+/* line 91, 768-1023.css.scss */
 article .body > p, article .body > ul, article .body > ol,
 article .article-section > p,
 article .article-section > ul,
@@ -65,28 +73,28 @@ article .article-subsection > p,
 article .article-subsection > ul,
 article .article-subsection > ol {
   margin-right: 1.11111em; }
-/* line 86, 768-1023.css.scss */
+/* line 96, 768-1023.css.scss */
 article .lead p {
   font-size: 1.375em;
   line-height: 1.18182;
   margin-top: 0.36364em; }
-/* line 92, 768-1023.css.scss */
+/* line 102, 768-1023.css.scss */
 article .illustration {
   margin-top: 1.25em; }
 
-/* line 97, 768-1023.css.scss */
+/* line 107, 768-1023.css.scss */
 .topics .topic {
   margin-right: 1.25em; }
 
-/* line 102, 768-1023.css.scss */
+/* line 112, 768-1023.css.scss */
 .labeled-list .label {
   width: 1em;
   text-align: right;
   margin: 0 0 0 -2.25em; }
-/* line 108, 768-1023.css.scss */
+/* line 118, 768-1023.css.scss */
 .labeled-list .list {
   width: 100%; }
-/* line 112, 768-1023.css.scss */
+/* line 122, 768-1023.css.scss */
 .labeled-list.text-labels .label {
   text-align: left;
   margin-left: 0;

@@ -555,13 +555,13 @@ function naturalSort(a, b) {
 
     var show = function() {
       targets().show();
-      $nav.find('li.more a').text(show_less);
+      $nav.find('li.more a').text(show_less).addClass('show-less');
       hidden = false;
     };
 
     var hide = function() {
       targets().hide();
-      $nav.find('li.more a').text(show_more);
+      $nav.find('li.more a').text(show_more).removeClass('show-less');
       hidden = true;
     }
 
