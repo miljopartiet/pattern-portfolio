@@ -573,6 +573,11 @@ nav.breadcrumbs {
       text-decoration: underline;
       color: $green;
     }
+    
+    &:last-child {
+      padding-right:0;
+      background:none;
+    }
   }
 }
 
