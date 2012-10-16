@@ -1,3 +1,5 @@
+@import "includes.css.scss";
+
 ul.menu li {
   margin-left: 0;
   &.leaf {
@@ -8,4 +10,26 @@ ul.menu li {
 }
 .calendar {
   width: auto;
+}
+
+body.logged-in #wrap {
+  .tabs.primary a,
+  a.edit-link-simple {
+    font-family: $arial;
+    font-size: 14px;
+    font-weight: normal;
+    background: #f5f5f5;
+    padding: 5px 15px;
+    border-radius: 4px 4px 0 0;
+  }
+  a.edit-link-simple {
+    clear: both;
+    border-radius: 6px;
+    border: 1px solid #f5f5f5;
+    display: inline-block;
+    margin: 10px 0 5px 0;
+    &:hover {
+      border-color: #ddd;
+    }
+  }
 }

@@ -10,6 +10,9 @@
         <%= post.time %>, <%= post.source_title %>, <%= post.source %>
       </span>
     </a>
+    <% if locals[:edit] %>
+      <a href="#" class="edit-link-simple">Redigera</a>
+    <% end %>
   </li>
 <% end %>
 </ul>
