@@ -1,55 +1,68 @@
-/* line 6, 600.css.scss */
-input,
+/* line 19, 600.css.scss */
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
 .search input,
 form.speech-bubble .search input {
   width: 70%; }
 
-/* line 9, 600.css.scss */
+/* line 22, 600.css.scss */
 h1 {
   font-size: 2.0625em;
   line-height: 1.06061; }
 
-/* line 15, 600.css.scss */
+/* line 28, 600.css.scss */
 ul li {
   margin-left: 0; }
 
-/* line 20, 600.css.scss */
+/* line 33, 600.css.scss */
 article .lead p {
   font-size: 1.25em;
   line-height: 1.2; }
 
-/* line 26, 600.css.scss */
+/* line 39, 600.css.scss */
 .body figure {
   margin-top: 1.25em; }
-  /* line 30, 600.css.scss */
+  /* line 43, 600.css.scss */
   .body figure.right, .body figure.left {
     width: 40%;
     margin: 0.625em 0; }
-  /* line 35, 600.css.scss */
+  /* line 48, 600.css.scss */
   .body figure.right {
     float: right;
     margin-left: 1.25em; }
-  /* line 40, 600.css.scss */
+  /* line 53, 600.css.scss */
   .body figure.left {
     float: left;
     margin-right: 1.25em; }
 
-/* line 48, 600.css.scss */
+/* line 61, 600.css.scss */
 blockquote > div p {
   margin-right: 3.05556em; }
-/* line 51, 600.css.scss */
+/* line 64, 600.css.scss */
 blockquote footer {
   margin-top: -40px; }
 
-/* line 57, 600.css.scss */
+/* line 70, 600.css.scss */
 .suggestions ul {
   margin-left: 20px; }
 
-/* line 62, 600.css.scss */
+/* line 75, 600.css.scss */
 .main-search ul {
   margin-left: 0; }
 
-/* line 69, 600.css.scss */
+/* line 82, 600.css.scss */
 .labeled-list .grid .c3 {
   margin: 10px 0 0 0;
   width: 46.15385%; }

@@ -379,50 +379,44 @@ figcaption {
   color: #fff;
   padding: 0 1.28571em;
   border-radius: 1.07143em;
+  border: 0;
   white-space: nowrap;
   display: inline-block; }
 
-/* line 336, site.css.scss */
+/* line 337, site.css.scss */
 .action a,
 a.action,
 .ui-tabs-nav a {
   text-decoration: none; }
-  /* line 339, site.css.scss */
+  /* line 340, site.css.scss */
   .action a:hover,
   a.action:hover,
   .ui-tabs-nav a:hover {
     background: #00730a;
     color: #fff; }
 
-/* line 345, site.css.scss */
-button.action {
+/* line 347, site.css.scss */
+button.action,
+input.action {
   color: #fff;
   border: none; }
-  /* line 349, site.css.scss */
-  button.action:hover {
+  /* line 351, site.css.scss */
+  button.action:hover,
+  input.action:hover {
     background: #00730a;
     cursor: pointer; }
-  /* line 354, site.css.scss */
-  button.action:active {
+  /* line 356, site.css.scss */
+  button.action:active,
+  input.action:active {
     background: #fff;
     color: #2b912c; }
-  /* line 359, site.css.scss */
-  button.action.negative {
-    background: #c41230; }
-    /* line 362, site.css.scss */
-    button.action.negative:hover {
-      background: #950e25; }
-    /* line 366, site.css.scss */
-    button.action.negative:active {
-      color: #c41230;
-      background: #fff; }
 
-/* line 373, site.css.scss */
+/* line 362, site.css.scss */
 p.copy {
   font: normal 0.77647em arial, sans-serif;
   color: #888888; }
 
-/* line 378, site.css.scss */
+/* line 367, site.css.scss */
 blockquote {
   overflow: hidden;
   margin-top: 1.25em;
@@ -430,18 +424,18 @@ blockquote {
   padding-bottom: 0.3125em;
   border-bottom: 1px solid #dddddd;
   color: #bcb8b2; }
-  /* line 387, site.css.scss */
+  /* line 376, site.css.scss */
   blockquote > div p {
     font-family: "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif;
     font-size: 1.125em;
     line-height: 1.22222;
     margin-top: 0.66667em;
     margin-left: 1em; }
-    /* line 394, site.css.scss */
+    /* line 383, site.css.scss */
     blockquote > div p:first-child {
       position: relative;
       margin-top: 0; }
-      /* line 398, site.css.scss */
+      /* line 387, site.css.scss */
       blockquote > div p:first-child:before {
         content: "”";
         font-family: "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif;
@@ -451,7 +445,7 @@ blockquote {
         top: .05em;
         left: -0.59em;
         text-rendering: optimizeLegibility; }
-  /* line 412, site.css.scss */
+  /* line 401, site.css.scss */
   blockquote footer {
     *zoom: 1;
     font-family: arial, sans-serif;
@@ -469,32 +463,32 @@ blockquote {
     /* line 57, includes.css.scss */
     blockquote footer:after {
       clear: both; }
-    /* line 422, site.css.scss */
+    /* line 411, site.css.scss */
     blockquote footer p {
       position: absolute;
       bottom: .5em;
       left: 0;
       width: 76.875%; }
-    /* line 429, site.css.scss */
+    /* line 418, site.css.scss */
     blockquote footer img {
       float: right;
       width: 14.0625%;
       margin: 0 1.875% 0 4.0625%; }
-    /* line 435, site.css.scss */
+    /* line 424, site.css.scss */
     blockquote footer .title {
       color: #888888; }
 
-/* line 444, site.css.scss */
+/* line 433, site.css.scss */
 #wrap {
   position: relative;
   margin: 1.5em auto 0 auto;
   padding-bottom: 2.5em; }
 
-/* line 450, site.css.scss */
+/* line 439, site.css.scss */
 #wrap > footer {
   margin-top: 5em; }
 
-/* line 454, site.css.scss */
+/* line 443, site.css.scss */
 #site-banner {
   *zoom: 1;
   position: relative;
@@ -507,10 +501,10 @@ blockquote {
   #site-banner:after {
     clear: both; }
 
-/* line 460, site.css.scss */
+/* line 449, site.css.scss */
 #logo {
   width: 57px; }
-  /* line 463, site.css.scss */
+  /* line 452, site.css.scss */
   #logo a {
     display: block;
     text-indent: -9999px;
@@ -518,18 +512,18 @@ blockquote {
     height: 57px;
     background: transparent url(../images/logo.svg) 0 0 no-repeat;
     background-size: 100%; }
-    /* line 471, site.css.scss */
+    /* line 460, site.css.scss */
     #logo a:hover {
       background-position: 0 -114px; }
 
-/* line 478, site.css.scss */
+/* line 467, site.css.scss */
 #logo-full a {
   background: transparent url(../images/logo-full.svg) 100% 0 no-repeat;
   text-indent: -9999em;
   margin: 1.25em 0 2.5em 0;
   display: block; }
 
-/* line 488, site.css.scss */
+/* line 477, site.css.scss */
 #site-navigation {
   *zoom: 1; }
   /* line 52, includes.css.scss */
@@ -540,21 +534,21 @@ blockquote {
   #site-navigation:after {
     clear: both; }
 
-/* line 494, site.css.scss */
+/* line 483, site.css.scss */
 #secondary-navigation ul,
 #secondary-navigation li {
   display: inline; }
-/* line 498, site.css.scss */
+/* line 487, site.css.scss */
 #secondary-navigation li {
   font-size: 0.875em; }
-/* line 502, site.css.scss */
+/* line 491, site.css.scss */
 #secondary-navigation form input {
   z-index: 50;
   position: relative; }
-/* line 507, site.css.scss */
+/* line 496, site.css.scss */
 #secondary-navigation form button {
   z-index: 60; }
-/* line 511, site.css.scss */
+/* line 500, site.css.scss */
 #secondary-navigation form .suggestions {
   *zoom: 1;
   display: block;
@@ -572,59 +566,59 @@ blockquote {
   /* line 57, includes.css.scss */
   #secondary-navigation form .suggestions:after {
     clear: both; }
-  /* line 523, site.css.scss */
+  /* line 512, site.css.scss */
   #secondary-navigation form .suggestions ul,
   #secondary-navigation form .suggestions li {
     display: block; }
-  /* line 527, site.css.scss */
+  /* line 516, site.css.scss */
   #secondary-navigation form .suggestions a {
     font-size: 1em;
     color: #2b912c;
     font-family: georgia, "Times New Roman", times, serif; }
-    /* line 531, site.css.scss */
+    /* line 520, site.css.scss */
     #secondary-navigation form .suggestions a .category {
       font-size: 0.8125em; }
 
-/* line 541, site.css.scss */
+/* line 530, site.css.scss */
 nav.breadcrumbs {
   display: block; }
-  /* line 544, site.css.scss */
+  /* line 533, site.css.scss */
   nav.breadcrumbs p {
     font-family: arial, sans-serif;
     color: #888888;
     font-size: 0.8125em;
     line-height: 1.30769;
     margin: 0; }
-  /* line 552, site.css.scss */
+  /* line 541, site.css.scss */
   nav.breadcrumbs a,
   nav.breadcrumbs span {
     color: #888888;
     position: relative; }
-    /* line 556, site.css.scss */
+    /* line 545, site.css.scss */
     nav.breadcrumbs a:first-child,
     nav.breadcrumbs span:first-child {
       padding-left: 0; }
-  /* line 561, site.css.scss */
+  /* line 550, site.css.scss */
   nav.breadcrumbs a {
     padding-right: 1.53846em;
     margin-right: 0.38462em;
     background: url(../images/breadcrumb-slash.svg) 100% 50% no-repeat;
     background-size: 0.84615em 1.38462em; }
-    /* line 567, site.css.scss */
+    /* line 556, site.css.scss */
     nav.breadcrumbs a:hover {
       text-decoration: underline;
       color: #2b912c; }
 
-/* line 574, site.css.scss */
+/* line 563, site.css.scss */
 footer nav.breadcrumbs {
   border-top: 1px solid #dddddd;
   padding-top: 10px;
   margin-bottom: 15px; }
 
-/* line 580, site.css.scss */
+/* line 569, site.css.scss */
 .search {
   position: relative; }
-  /* line 583, site.css.scss */
+  /* line 572, site.css.scss */
   .search input {
     width: 100%;
     background: #f5f3ee;
@@ -632,15 +626,15 @@ footer nav.breadcrumbs {
     padding: 3px 20px 3px 10px;
     margin: 0;
     border-radius: 4px; }
-    /* line 591, site.css.scss */
+    /* line 580, site.css.scss */
     .search input:focus {
       border: 1px solid #dddddd; }
-    /* line 595, site.css.scss */
+    /* line 584, site.css.scss */
     .search input.has-suggestions {
       border: 1px solid #dddddd;
       border-bottom: 1px solid #f5f3ee;
       border-radius: 4px 4px 0 0; }
-  /* line 602, site.css.scss */
+  /* line 591, site.css.scss */
   .search button {
     text-indent: -9999em;
     border: none;
@@ -654,12 +648,12 @@ footer nav.breadcrumbs {
     position: absolute;
     top: 5px;
     right: 5px; }
-    /* line 616, site.css.scss */
+    /* line 605, site.css.scss */
     .search button:hover {
       cursor: pointer;
       background-position: 0 -3.125em; }
 
-/* line 623, site.css.scss */
+/* line 612, site.css.scss */
 .speech-bubble {
   position: relative;
   background: #ffe900;
@@ -669,7 +663,7 @@ footer nav.breadcrumbs {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-  /* line 631, site.css.scss */
+  /* line 620, site.css.scss */
   .speech-bubble:after {
     content: "";
     position: absolute;
@@ -678,7 +672,7 @@ footer nav.breadcrumbs {
     border-width: 0 0 20px 21px;
     border-style: solid;
     border-color: #ffe900 transparent; }
-  /* line 641, site.css.scss */
+  /* line 630, site.css.scss */
   .speech-bubble .inner {
     *zoom: 1; }
     /* line 52, includes.css.scss */
@@ -688,60 +682,60 @@ footer nav.breadcrumbs {
     /* line 57, includes.css.scss */
     .speech-bubble .inner:after {
       clear: both; }
-  /* line 645, site.css.scss */
+  /* line 634, site.css.scss */
   .speech-bubble h2 {
     margin-top: 0; }
-  /* line 650, site.css.scss */
+  /* line 639, site.css.scss */
   .speech-bubble p,
   .speech-bubble ul {
     margin-top: 0.11111em; }
-  /* line 654, site.css.scss */
+  /* line 643, site.css.scss */
   .speech-bubble form {
     margin-right: 1.25em; }
-  /* line 658, site.css.scss */
+  /* line 647, site.css.scss */
   .speech-bubble input {
     background: #fff; }
-  /* line 662, site.css.scss */
+  /* line 651, site.css.scss */
   .speech-bubble li {
     margin-left: 1em; }
-  /* line 666, site.css.scss */
+  /* line 655, site.css.scss */
   .speech-bubble .aside {
     margin-top: 1em; }
-  /* line 670, site.css.scss */
+  /* line 659, site.css.scss */
   .speech-bubble .position-me {
     margin-top: 15px;
     text-align: center; }
-    /* line 674, site.css.scss */
+    /* line 663, site.css.scss */
     .speech-bubble .position-me .choose {
       margin-top: 0.57143em;
       display: block;
       font-family: arial, sans-serif;
       font-size: 0.875em; }
 
-/* line 683, site.css.scss */
+/* line 672, site.css.scss */
 form.speech-bubble {
   margin-top: 40px;
   margin-bottom: 0; }
-  /* line 687, site.css.scss */
+  /* line 676, site.css.scss */
   form.speech-bubble .search {
     padding: 10px 10px 0 10px;
     margin-top: -10px;
     margin-left: -10px; }
-    /* line 692, site.css.scss */
+    /* line 681, site.css.scss */
     form.speech-bubble .search input {
       width: 100%;
       padding: 7px 20px 7px 10px;
       border-radius: 6px; }
-    /* line 698, site.css.scss */
+    /* line 687, site.css.scss */
     form.speech-bubble .search.active-suggestions {
       background: #ffe900;
       border-radius: 6px 6px 0 0; }
-      /* line 703, site.css.scss */
+      /* line 692, site.css.scss */
       form.speech-bubble .search.active-suggestions input,
       form.speech-bubble .search.active-suggestions input:focus {
         border: 1px solid transparent; }
 
-/* line 710, site.css.scss */
+/* line 699, site.css.scss */
 .suggestions {
   background: #ffe900;
   border-radius: 0 0 4px 4px;
@@ -749,21 +743,21 @@ form.speech-bubble {
   padding-right: 25px;
   padding-bottom: 10px;
   margin-left: -25px; }
-  /* line 718, site.css.scss */
+  /* line 707, site.css.scss */
   .suggestions ul {
     margin-left: 0; }
-  /* line 722, site.css.scss */
+  /* line 711, site.css.scss */
   .suggestions a {
     text-decoration: underline; }
-    /* line 724, site.css.scss */
+    /* line 713, site.css.scss */
     .suggestions a:hover {
       text-decoration: none; }
-  /* line 729, site.css.scss */
+  /* line 718, site.css.scss */
   .suggestions .focused a {
     color: #00730a;
     text-decoration: none; }
 
-/* line 735, site.css.scss */
+/* line 724, site.css.scss */
 .main-search {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -773,26 +767,26 @@ form.speech-bubble {
   margin: 0;
   border: 1px solid #dddddd;
   border-top: none; }
-  /* line 744, site.css.scss */
+  /* line 733, site.css.scss */
   .main-search ul,
   .main-search li {
     list-style: none;
     margin: 0; }
-  /* line 749, site.css.scss */
+  /* line 738, site.css.scss */
   .main-search a {
     padding: 0.25em 0.625em;
     display: block;
     font-size: 0.88889em;
     line-height: 1.125;
     text-decoration: none; }
-    /* line 757, site.css.scss */
+    /* line 746, site.css.scss */
     .main-search a:hover .name {
       text-decoration: none; }
-  /* line 763, site.css.scss */
+  /* line 752, site.css.scss */
   .main-search .name {
     white-space: normal;
     text-decoration: underline; }
-  /* line 768, site.css.scss */
+  /* line 757, site.css.scss */
   .main-search .category {
     display: block;
     margin-top: 2px;
@@ -800,55 +794,55 @@ form.speech-bubble {
     color: #888888;
     font-size: 0.72222em;
     line-height: 1.23077; }
-  /* line 776, site.css.scss */
+  /* line 765, site.css.scss */
   .main-search em {
     font-style: normal; }
-  /* line 780, site.css.scss */
+  /* line 769, site.css.scss */
   .main-search .focused {
     background: #ece8de; }
-    /* line 783, site.css.scss */
+    /* line 772, site.css.scss */
     .main-search .focused .name {
       text-decoration: none; }
 
-/* line 793, site.css.scss */
+/* line 782, site.css.scss */
 article h1 {
   color: #2b912c; }
-/* line 798, site.css.scss */
+/* line 787, site.css.scss */
 article p a,
 article li > a {
   text-decoration: underline; }
-  /* line 801, site.css.scss */
+  /* line 790, site.css.scss */
   article p a:hover,
   article li > a:hover {
     text-decoration: none; }
-/* line 807, site.css.scss */
+/* line 796, site.css.scss */
 article .illustration {
   margin-top: 1.25em; }
-/* line 812, site.css.scss */
+/* line 801, site.css.scss */
 article .lead p {
   font-size: 1.125em;
   line-height: 1.22222;
   margin-top: 0.44444em; }
 
-/* line 819, site.css.scss */
+/* line 808, site.css.scss */
 article + article {
   margin-top: 40px; }
-  /* line 822, site.css.scss */
+  /* line 811, site.css.scss */
   article + article h1 {
     padding-top: 20px;
     border-top: 1px solid #dddddd;
     color: #000; }
 
-/* line 830, site.css.scss */
+/* line 819, site.css.scss */
 .article-section {
   margin-top: 3.75em; }
-  /* line 833, site.css.scss */
+  /* line 822, site.css.scss */
   .article-section header {
     border-bottom: 1px solid #dddddd;
     margin-bottom: -1px;
     position: relative;
     padding: 0 0 0.2em 0; }
-  /* line 841, site.css.scss */
+  /* line 830, site.css.scss */
   .article-section h2 a.topic {
     display: block;
     font-size: 0.75em;
@@ -856,11 +850,11 @@ article + article {
     text-transform: uppercase;
     text-rendering: optimizeLegibility;
     letter-spacing: 0.06em; }
-  /* line 851, site.css.scss */
+  /* line 840, site.css.scss */
   .article-section h3 {
     font-weight: normal;
     font-family: "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif; }
-  /* line 856, site.css.scss */
+  /* line 845, site.css.scss */
   .article-section .vignette {
     width: 3em;
     height: 2.69565em;
@@ -871,7 +865,7 @@ article + article {
     line-height: 1em;
     color: #fff;
     text-transform: none; }
-  /* line 869, site.css.scss */
+  /* line 858, site.css.scss */
   .article-section .section-lead,
   .article-section .subsection-lead {
     font-family: arial, sans-serif;
@@ -879,64 +873,64 @@ article + article {
     font-size: 0.8125em;
     line-height: 1.30769;
     margin-top: .5em; }
-    /* line 876, site.css.scss */
+    /* line 865, site.css.scss */
     .article-section .section-lead b,
     .article-section .section-lead strong,
     .article-section .subsection-lead b,
     .article-section .subsection-lead strong {
       color: #666666; }
-    /* line 880, site.css.scss */
+    /* line 869, site.css.scss */
     .article-section .section-lead a,
     .article-section .subsection-lead a {
       text-decoration: none; }
-  /* line 886, site.css.scss */
+  /* line 875, site.css.scss */
   .article-section .article-subsection {
     margin-top: 1.25em;
     border-top: 1px solid #dddddd; }
-    /* line 890, site.css.scss */
+    /* line 879, site.css.scss */
     .article-section .article-subsection:first-child {
       margin-top: 0; }
-  /* line 895, site.css.scss */
+  /* line 884, site.css.scss */
   .article-section header + .article-subsection {
     border-top: none;
     margin-top: 0; }
-  /* line 900, site.css.scss */
+  /* line 889, site.css.scss */
   .article-section .subsection-header {
     padding: 0 0 0.4em 0;
     border-bottom: 1px solid #dddddd; }
-    /* line 905, site.css.scss */
+    /* line 894, site.css.scss */
     .article-section .subsection-header h3,
     .article-section .subsection-header .subsection-lead {
       display: inline; }
 
-/* line 911, site.css.scss */
+/* line 900, site.css.scss */
 header.intro .article-section {
   margin-top: 2.5em; }
 
-/* line 915, site.css.scss */
+/* line 904, site.css.scss */
 .illustration + .article-section {
   margin-top: 1.875em; }
 
-/* line 920, site.css.scss */
+/* line 909, site.css.scss */
 .people .grid img {
   margin: 0; }
-/* line 924, site.css.scss */
+/* line 913, site.css.scss */
 .people .grid a {
   color: #000; }
-  /* line 927, site.css.scss */
+  /* line 916, site.css.scss */
   .people .grid a h2 {
     font-size: 1em;
     color: #2b912c;
     margin-top: 10px; }
-  /* line 933, site.css.scss */
+  /* line 922, site.css.scss */
   .people .grid a p {
     margin: 0;
     font-size: 0.875em; }
-  /* line 939, site.css.scss */
+  /* line 928, site.css.scss */
   .people .grid a:hover h2 {
     color: #00730a; }
 
-/* line 949, site.css.scss */
+/* line 938, site.css.scss */
 .icon-list.calendar .icon {
   text-align: center;
   text-indent: -0.3em;
@@ -948,7 +942,7 @@ header.intro .article-section {
   width: 2.16667em;
   height: 2.55556em; }
 
-/* line 963, site.css.scss */
+/* line 952, site.css.scss */
 .conversations .details {
   font-family: arial, sans-serif;
   color: #888888;
@@ -957,87 +951,84 @@ header.intro .article-section {
   padding-top: 0.61538em;
   border-top: 1px solid #dddddd;
   margin: 0.75em 12.09677% 0 11.29032%; }
-  /* line 971, site.css.scss */
+  /* line 960, site.css.scss */
   .conversations .details .topic {
     display: block; }
-  /* line 977, site.css.scss */
+  /* line 966, site.css.scss */
   .conversations .details .voting,
   .conversations .details .poll-results,
   .conversations .details .toggler {
     margin-top: 0.92308em; }
-  /* line 983, site.css.scss */
+  /* line 972, site.css.scss */
   .conversations .details .poll-results .answer,
   .conversations .details .poll-results .summary {
     display: block;
     margin-top: 0.85714em; }
-  /* line 988, site.css.scss */
+  /* line 977, site.css.scss */
   .conversations .details .poll-results .answer .summary {
     margin-top: 0.28571em; }
-  /* line 992, site.css.scss */
+  /* line 981, site.css.scss */
   .conversations .details .poll-results b {
     display: inline-block;
     width: 24.13793%; }
-  /* line 997, site.css.scss */
+  /* line 986, site.css.scss */
   .conversations .details .poll-results .meter {
     display: inline-block;
     width: 75.86207%; }
-    /* line 1001, site.css.scss */
+    /* line 990, site.css.scss */
     .conversations .details .poll-results .meter span {
       display: inline-block;
       text-indent: -9999px; }
-  /* line 1007, site.css.scss */
-  .conversations .details .poll-results .positive .meter span {
+  /* line 996, site.css.scss */
+  .conversations .details .poll-results .meter span {
     background: #2b912c; }
-  /* line 1011, site.css.scss */
-  .conversations .details .poll-results .negative .meter span {
-    background: #c41230; }
-  /* line 1016, site.css.scss */
+  /* line 1001, site.css.scss */
   .conversations .details .toggler {
     display: block;
     color: #888888;
     text-decoration: underline; }
-    /* line 1021, site.css.scss */
+    /* line 1006, site.css.scss */
     .conversations .details .toggler:hover {
       text-decoration: none; }
-  /* line 1026, site.css.scss */
+  /* line 1011, site.css.scss */
   .conversations .details .related {
     display: block;
     margin-top: 0.92308em; }
-/* line 1033, site.css.scss */
+/* line 1018, site.css.scss */
 .conversations .fetch-more,
 .conversations div.comments {
   clear: both;
   padding-top: 2.5em; }
 
-/* line 1040, site.css.scss */
+/* line 1025, site.css.scss */
 .body .conversations .fetch-more {
   margin-left: 11.29032%; }
 
-/* line 1045, site.css.scss */
+/* line 1030, site.css.scss */
 .conversation {
   list-style: none;
   margin: 1.25em 0 0 0;
   padding: 1.4375em 0; }
-  /* line 1051, site.css.scss */
+  /* line 1036, site.css.scss */
   .conversation a .read-more {
     color: #2b912c;
     text-decoration: underline; }
-  /* line 1057, site.css.scss */
+  /* line 1042, site.css.scss */
   .conversation a:hover .read-more {
     color: #00730a;
     text-decoration: none; }
-  /* line 1064, site.css.scss */
+  /* line 1049, site.css.scss */
   .conversation .content {
     position: relative;
     z-index: 1;
     padding: 20px 25px; }
-    /* line 1069, site.css.scss */
+    /* line 1054, site.css.scss */
     .conversation .content p:first-child {
       margin: 0; }
-    /* line 1073, site.css.scss */
+    /* line 1058, site.css.scss */
     .conversation .content p {
       color: #2A2A2A; }
-  /* line 1079, site.css.scss */
+  /* line 1064, site.css.scss */
   .conversation .byline p {
     position: absolute;
     margin: 0;
@@ -1045,11 +1036,11 @@ header.intro .article-section {
     color: #888888;
     font-size: 0.8125em;
     line-height: 1.30769; }
-  /* line 1087, site.css.scss */
+  /* line 1072, site.css.scss */
   .conversation .byline img {
     position: absolute;
     bottom: -1.4375em; }
-  /* line 1092, site.css.scss */
+  /* line 1077, site.css.scss */
   .conversation .byline .arrow {
     position: absolute;
     width: 0;
@@ -1058,18 +1049,18 @@ header.intro .article-section {
     bottom: 0;
     color: #ffe900;
     border-top: 25px solid transparent; }
-  /* line 1103, site.css.scss */
+  /* line 1088, site.css.scss */
   .conversation .question {
     position: relative;
     z-index: 2;
     margin-bottom: -0.75em;
     margin-right: 17.74194%; }
-    /* line 1109, site.css.scss */
+    /* line 1094, site.css.scss */
     .conversation .question .content {
       padding-bottom: 25px;
       background: #ffe900;
       border-radius: 3px 3px 3px 0; }
-      /* line 1114, site.css.scss */
+      /* line 1099, site.css.scss */
       .conversation .question .content:after {
         position: absolute;
         right: 0;
@@ -1080,77 +1071,77 @@ header.intro .article-section {
         content: "";
         background: rgba(0, 0, 0, 0.04);
         border-radius: 3px 0 3px 0; }
-      /* line 1126, site.css.scss */
+      /* line 1111, site.css.scss */
       .conversation .question .content p {
         font-family: "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif; }
-    /* line 1132, site.css.scss */
+    /* line 1117, site.css.scss */
     .conversation .question .byline p {
       top: -1.76923em; }
-    /* line 1136, site.css.scss */
+    /* line 1121, site.css.scss */
     .conversation .question .byline img {
       left: -14.70588%; }
-    /* line 1140, site.css.scss */
+    /* line 1125, site.css.scss */
     .conversation .question .byline .arrow {
       left: -3.87097%;
       border-top: 25px solid transparent;
       border-right: 25px solid #ffe900; }
-  /* line 1148, site.css.scss */
+  /* line 1133, site.css.scss */
   .conversation .answer {
     position: relative;
     margin-left: 11.29032%;
     margin-right: 12.09677%; }
-    /* line 1153, site.css.scss */
+    /* line 1138, site.css.scss */
     .conversation .answer .content {
       padding-top: 25px;
       background: #f5f3ee;
       border-radius: 3px 3px 0 3px; }
-      /* line 1158, site.css.scss */
+      /* line 1143, site.css.scss */
       .conversation .answer .content p {
         line-height: 1.25; }
-    /* line 1164, site.css.scss */
+    /* line 1149, site.css.scss */
     .conversation .answer .byline img {
       right: -15.68627%; }
-    /* line 1168, site.css.scss */
+    /* line 1153, site.css.scss */
     .conversation .answer .byline p {
       padding-top: 0.76923em; }
-    /* line 1172, site.css.scss */
+    /* line 1157, site.css.scss */
     .conversation .answer .byline .arrow {
       right: -3.87097%;
       border-left: 25px solid #f5f3ee; }
 
-/* line 1181, site.css.scss */
+/* line 1166, site.css.scss */
 .body .conversation .question .content p {
   font-size: 1.5em;
   line-height: 1.08333; }
 
-/* line 1189, site.css.scss */
+/* line 1174, site.css.scss */
 header.intro + .conversations .article-section:first-child {
   margin-top: 2.5em;
   border-top: none; }
-  /* line 1194, site.css.scss */
+  /* line 1179, site.css.scss */
   header.intro + .conversations .article-section:first-child .conversation,
   header.intro + .conversations .article-section:first-child .details {
     margin-top: 0; }
 
-/* line 1201, site.css.scss */
+/* line 1186, site.css.scss */
 .related-topics ul {
   list-style: none; }
-/* line 1205, site.css.scss */
+/* line 1190, site.css.scss */
 .related-topics li {
   margin-left: 0; }
-/* line 1209, site.css.scss */
+/* line 1194, site.css.scss */
 .related-topics img {
   float: right;
   margin: 0.5em 0 5px 20px; }
-/* line 1214, site.css.scss */
+/* line 1199, site.css.scss */
 .related-topics img + p {
   margin-top: 0.22222em; }
 
-/* line 1219, site.css.scss */
+/* line 1204, site.css.scss */
 .labeled-list {
   list-style: none;
   margin: 0; }
-  /* line 1223, site.css.scss */
+  /* line 1208, site.css.scss */
   .labeled-list .group {
     *zoom: 1;
     border-top: 1px solid #dddddd;
@@ -1163,7 +1154,7 @@ header.intro + .conversations .article-section:first-child {
     /* line 57, includes.css.scss */
     .labeled-list .group:after {
       clear: both; }
-  /* line 1230, site.css.scss */
+  /* line 1215, site.css.scss */
   .labeled-list .label {
     font: bold 1.50893em "SwiftNeueLTW01-BlackCon 776385", georgia, "Times New Roman", times, serif;
     color: #000;
@@ -1171,21 +1162,21 @@ header.intro + .conversations .article-section:first-child {
     float: left;
     width: 10.56338%;
     margin-right: 5.28169%; }
-  /* line 1240, site.css.scss */
+  /* line 1225, site.css.scss */
   .labeled-list.text-labels .label {
     display: block;
     font-size: 1.25em;
     line-height: 1.1; }
-  /* line 1246, site.css.scss */
+  /* line 1231, site.css.scss */
   .labeled-list.text-labels .list {
     margin-top: 0.625em; }
-  /* line 1251, site.css.scss */
+  /* line 1236, site.css.scss */
   .labeled-list .list {
     margin: 0;
     list-style: disc;
     float: left;
     width: 68.30986%; }
-    /* line 1257, site.css.scss */
+    /* line 1242, site.css.scss */
     .labeled-list .list li {
       -webkit-column-break-inside: avoid;
       -moz-column-break-inside: avoid;
@@ -1194,44 +1185,44 @@ header.intro + .conversations .article-section:first-child {
       column-break-inside: avoid;
       vertical-align: top;
       word-wrap: break-word; }
-    /* line 1268, site.css.scss */
+    /* line 1253, site.css.scss */
     .labeled-list .list a {
       display: inline-block;
       vertical-align: top;
       word-wrap: break-word; }
 
-/* line 1276, site.css.scss */
+/* line 1261, site.css.scss */
 div.comments {
   margin-top: 20px; }
 
-/* line 1281, site.css.scss */
+/* line 1266, site.css.scss */
 .tabbed header {
   padding: 0;
   margin-top: 56px;
   margin-bottom: 56px; }
-/* line 1287, site.css.scss */
+/* line 1272, site.css.scss */
 .tabbed .article-subsection {
   border: none; }
-/* line 1291, site.css.scss */
+/* line 1276, site.css.scss */
 .tabbed .tabs {
   margin: 0 0 -14px 0;
   list-style: none; }
-  /* line 1295, site.css.scss */
+  /* line 1280, site.css.scss */
   .tabbed .tabs li {
     display: inline;
     margin: 0; }
-  /* line 1300, site.css.scss */
+  /* line 1285, site.css.scss */
   .tabbed .tabs a.action {
     font-size: 0.75em;
     margin-right: 1.66667em; }
 
-/* line 1307, site.css.scss */
+/* line 1292, site.css.scss */
 #copyright {
   padding-left: 2.91667em;
   background: transparent url(../images/cc.svg) 0 2px no-repeat;
   background-size: 1.66667em 1.66667em; }
 
-/* line 1313, site.css.scss */
+/* line 1298, site.css.scss */
 .topics {
   *zoom: 1;
   list-style: none; }
@@ -1242,15 +1233,15 @@ div.comments {
   /* line 57, includes.css.scss */
   .topics:after {
     clear: both; }
-  /* line 1317, site.css.scss */
+  /* line 1302, site.css.scss */
   .topics .topic {
     margin: 1.25em 0 0 0; }
-  /* line 1322, site.css.scss */
+  /* line 1307, site.css.scss */
   .topics h2,
   .topics h3 {
     margin: 0;
     position: relative; }
-    /* line 1326, site.css.scss */
+    /* line 1311, site.css.scss */
     .topics h2 .number,
     .topics h3 .number {
       display: none;
@@ -1266,14 +1257,14 @@ div.comments {
       background-size: 35px 32px;
       color: #fff;
       text-align: center; }
-  /* line 1345, site.css.scss */
+  /* line 1330, site.css.scss */
   .topics h2,
   .topics h3,
   .topics p {
     margin-right: 0;
     display: inline; }
 
-/* line 1351, site.css.scss */
+/* line 1336, site.css.scss */
 #cookies {
   display: none;
   width: 100%;
@@ -1284,32 +1275,32 @@ div.comments {
   line-height: 1.30769;
   color: #fff;
   padding: 5px 20px 17px 20px; }
-  /* line 1361, site.css.scss */
+  /* line 1346, site.css.scss */
   #cookies p {
     display: inline-block;
     margin: 10px .5em 0 0; }
-  /* line 1366, site.css.scss */
+  /* line 1351, site.css.scss */
   #cookies a {
     color: #fff; }
-    /* line 1369, site.css.scss */
+    /* line 1354, site.css.scss */
     #cookies a.action {
       display: inline-block;
       background: #dddddd;
       color: #000;
       font-size: 1em;
       margin: 10px 0 0 0; }
-      /* line 1376, site.css.scss */
+      /* line 1361, site.css.scss */
       #cookies a.action:hover {
         background: #d8d8d8; }
 
-/* line 1383, site.css.scss */
+/* line 1368, site.css.scss */
 .front .article-section.news-posts {
   margin-top: 30px; }
 
-/* line 1388, site.css.scss */
+/* line 1373, site.css.scss */
 .ui-tabs-hide {
   display: none; }
 
-/* line 1391, site.css.scss */
+/* line 1376, site.css.scss */
 .ui-tabs-nav .ui-state-active a {
   background: #00730a; }

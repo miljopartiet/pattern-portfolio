@@ -327,6 +327,7 @@ figcaption {
   color: #fff;
   padding: 0 (18em/14);
   border-radius: (15em/14);
+  border: 0;
   white-space: nowrap;
   display: inline-block;
 }
@@ -342,7 +343,8 @@ a.action,
   }
 }
 
-button.action {
+button.action,
+input.action {
   color: #fff;
   border: none;
 
@@ -354,19 +356,6 @@ button.action {
   &:active {
     background: #fff;
     color: $green;
-  }
-
-  &.negative {
-    background: $red;
-
-    &:hover {
-      background: darken($red, 10%);
-    }
-
-    &:active {
-      color: $red;
-      background: #fff;
-    }
   }
 }
 
@@ -1004,12 +993,8 @@ header.intro .article-section {
         }
       }
 
-      .positive .meter span {
+      .meter span {
         background: $green;
-      }
-
-      .negative .meter span {
-        background: $red;
       }
     }
 
