@@ -1,4 +1,4 @@
-(function() {
+(function($) {
   var disqus_shortname = 'mp-dev';
 
   $(document).ready(function() {
@@ -21,10 +21,9 @@
       $disqus_link.trigger('click');
     }
 
-
     var s = document.createElement('script'); s.async = true;
     s.type = 'text/javascript';
     s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
     element.appendChild(s);
   });
-})();
+})(jQuery);
