@@ -39,25 +39,25 @@
       nav.main-navigation .sections a:hover {
         background-position: 100% -100px; }
     /* line 60, 300-767.css.scss */
-    nav.main-navigation .first,
-    nav.main-navigation .second {
+    nav.main-navigation div.first,
+    nav.main-navigation div.second {
       margin-top: 15px;
       margin-bottom: 15px;
       float: left;
       width: 45%; }
       /* line 66, 300-767.css.scss */
-      nav.main-navigation .first li,
-      nav.main-navigation .second li {
+      nav.main-navigation div.first li,
+      nav.main-navigation div.second li {
         list-style: disc;
         list-style-position: inside;
         margin-left: 15px;
         white-space: nowrap; }
       /* line 73, 300-767.css.scss */
-      nav.main-navigation .first a,
-      nav.main-navigation .second a {
+      nav.main-navigation div.first a,
+      nav.main-navigation div.second a {
         background-image: none; }
     /* line 78, 300-767.css.scss */
-    nav.main-navigation .second {
+    nav.main-navigation div.second {
       border-left: 1px solid #fff; }
     /* line 82, 300-767.css.scss */
     nav.main-navigation form {
