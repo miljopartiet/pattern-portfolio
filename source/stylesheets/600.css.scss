@@ -24,7 +24,8 @@ h1 {
   line-height: (35/33);
 }
 
-ul {
+ul,
+ol {
   li {
     margin-left: 0;
   }
@@ -75,6 +76,10 @@ blockquote {
   ul {
     margin-left: 0;
   }
+}
+
+.labeled-list .list li {
+  margin-left:1.5em;
 }
 
 // IE
