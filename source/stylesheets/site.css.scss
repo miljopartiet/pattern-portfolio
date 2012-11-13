@@ -1380,13 +1380,10 @@ div.comments {
 }
 
 #cookies {
-  display: none;
-  width: 100%;
   background: #000;
   @include small-text;
   color: #fff;
-  padding: 0 20px 8px 20px;
-
+  padding: 8px 20px 16px 20px;
   p {
     font-size: 13px;
     line-height: (17/13);
@@ -1401,7 +1398,7 @@ div.comments {
 
     &.action {
       display: inline-block;
-      background: rgb(102, 102, 102);
+      background: $green;
       color: #fff;
       font-size: 13px;
       margin: 8px 0 0 0;
