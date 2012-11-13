@@ -502,6 +502,9 @@ blockquote {
 
 #site-navigation {
   @include clearfix;
+  li a.active {
+    color: $green;
+  }
 }
 
 #secondary-navigation {
