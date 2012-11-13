@@ -12,7 +12,9 @@
 #site-banner,
 #main,
 nav.breadcrumbs,
-nav.main-navigation .inner {
+nav.main-navigation .inner,
+#logo-full,
+#copyright {
   width: (520em/16);
   margin-right: auto;
   margin-left: auto;
@@ -53,9 +55,12 @@ nav.main-navigation .inner {
 }
 
 #logo-full {
-  width: (520em/16);
   height: (46em/18);
   background-size: (284em/18) (46em/18);
+}
+#copyright {
+  width: 520px;
+  @include box-sizing(border-box);
 }
 
 .grid {
