@@ -282,8 +282,13 @@ function naturalSort(a, b) {
         e.preventDefault();
       },
       '13': function(e) { // enter
-        e.preventDefault();
-        this.container.find("a.focused").trigger("click");
+        var link = this.container.find("li.focused a").get(0);
+        if (link) {
+          e.preventDefault();
+          window.location = link.href;
+        } else if (!this.options.remote) {
+          e.preventDefault();
+        }
       }
     };
 
