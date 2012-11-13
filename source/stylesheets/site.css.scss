@@ -1272,9 +1272,10 @@ header.intro + .conversations {
       -o-column-break-inside: avoid;
       -ms-column-break-inside: avoid;
       column-break-inside: avoid;
+      margin-bottom:(10em/16);
       vertical-align: top;
       word-wrap: break-word;
-
+      line-height:(18em/16);
     }
     // Fix missing column-break-inside support
     a {
