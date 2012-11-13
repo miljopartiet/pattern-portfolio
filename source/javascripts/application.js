@@ -452,6 +452,31 @@
     hide();
   };
 
+  Mp.conversationWidths = function() {
+    var getRandom = function(samples, ignore) {
+          var sample = samples[Math.floor(Math.random()*steps.length)];
+          return sample !== ignore ? sample : getRandom(samples, ignore);
+        },
+        conversations = $("div.conversations div.question"),
+        max_width = $(conversations[0]).width(),
+        min_width = max_width * 0.8,
+        last_step,
+        steps = [];
+
+    for (var i = min_width; i <= max_width; i += 20) {
+      steps.push(i);
+    }
+    steps.push(max_width);
+
+    conversations.each(function() {
+      var step = getRandom(steps, last_step);
+      last_step = step;
+      $(this).css({
+        width: step + 'px'
+      });
+    });
+  };
+
   $(document).ready(function() {
     var $html = $('html');
 
@@ -503,6 +528,8 @@
         $('#conversation-form').slideDown();
       }
     });
+
+    Mp.conversationWidths();
 
     Mp.focusAndCopy('input.share');
   });
