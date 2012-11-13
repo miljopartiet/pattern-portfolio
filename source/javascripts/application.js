@@ -1,6 +1,6 @@
 (function($) {
   "use strict";
-  var Mp = {};
+  namespace('Mp');
 
   Mp.suggestion_instances = -1;
 
