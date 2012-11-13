@@ -281,37 +281,22 @@
 
   Mp.NavigationToggler = function(element) {
     var $toggler = $(element),
+        $body = $('body'),
         setup_run = false,
         $nav;
 
-    var calculateRules = function(element) {
-      var offset = element.outerHeight(),
-          rules = "#site-top-navigation { margin-top: -"+ offset +"px; }";
-
-      rules += "#site-top-navigation.inactive { margin-top: -"+ offset +"px; }";
-
-      return rules;
-    };
-
-    var reset = function() {
-      if (!setup_run) {
-        setup();
-        return;
-      }
-
-      var style_element = document.getElementById('navigation-styles');
-      style_element.innerHTML = calculateRules(style_element);
-    }
-
     var hide = function(e) {
       e.preventDefault();
-      $nav.addClass('inactive').removeClass('active');
+      $nav.slideUp(150, 'easeInOutSine', function() {
+        $nav.addClass('hidden');
+      });
     };
 
     var show = function(e) {
       e.preventDefault();
-      $nav.css('visibility', 'visible');
-      $nav.addClass('active').removeClass('inactive');
+      $nav.slideDown(250, 'easeInOutSine', function() {
+        $nav.removeClass('hidden');
+      });
     };
 
     var setup = function() {
@@ -320,29 +305,27 @@
       }
       var $original_nav = $('#site-navigation');
       $nav = $original_nav.clone();
-      $nav.attr('id', 'site-top-navigation').css({
-        visibility: 'hidden'
-      });
+      $nav.attr('id', 'site-top-navigation')
+        .addClass('hidden')
+        .css('display', 'none');
 
       $nav.append('<a href="#" class="close"><span>Stäng meny</span></a>');
       $nav.find('a.close').bind('click', hide);
 
-      $('body').append($nav);
-      var style = document.createElement('style');
-
-      style.id = 'navigation-styles';
-      style.type = 'text/css';
-      style.innerHTML = calculateRules($nav);
-
-      document.getElementsByTagName("head")[0].appendChild(style);
+      $body.append($nav);
       setup_run = true;
     };
 
     $toggler.bind('click', show);
-    $(document).bind('resize', function() {
-      setTimeout(reset, 200);
-    });
     setup();
+
+    $(window).smartresize(function() {
+      if ($body.width() >= 768) {
+        $nav.hide();
+      } else if (!$nav.hasClass('hidden')) {
+        $nav.show();
+      }
+    });
   };
 
   Mp.focusAndCopy = function(selector) {

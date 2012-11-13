@@ -21,6 +21,7 @@ nav.main-navigation {
 
   .inner {
     padding: 0 18px;
+    @include clearfix;
   }
 
   ul {
@@ -105,13 +106,8 @@ nav.main-navigation {
   left: 0;
   z-index: 999;
 
-  &.active {
-    @include transition(margin-top 0.35s ease-in-out);
-    margin-top: 0px;
-  }
-
-  &.inactive {
-    @include transition(margin-top 0.2s ease-out);
+  &.hidden {
+    display:none;
   }
 
   a.close {
