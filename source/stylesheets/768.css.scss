@@ -125,6 +125,11 @@ figure {
     float: left;
     width: percentage(179/570);
   }
+  .vcard + .vcard {
+    p {
+      margin-right:20px;
+    }
+  }
 }
 
 .vcard {

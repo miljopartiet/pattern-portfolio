@@ -696,6 +696,21 @@ footer nav.breadcrumbs {
     margin-top: 1em;
   }
 
+  .vcard {
+    @include clearfix;
+    & + .vcard {
+      margin-top:1em;
+      padding-top:1em;
+      .organization-name {
+        display:none;
+      }
+      p {
+        padding-top:10px;
+        border-top: 1px solid #d7c82f;
+      }
+    }
+  }
+
   .position-me {
     margin-top: 15px;
     text-align: center;
