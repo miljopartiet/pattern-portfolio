@@ -127,6 +127,11 @@ div.comments {
     margin-left: 0;
   }
 
+  &.text-labels .label {
+    float: none;
+    width: 100%;
+  }
+
   &.labeled-list .list,
   .list {
     @include columns(3, 20px);
