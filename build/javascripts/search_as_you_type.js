@@ -1,7 +1,29 @@
 (function($) {
   "use strict";
   namespace('Mp');
-  Mp.suggestion_instances = -1;
+  namespace('Mp.Ajax');
+
+  Mp.AjaxQueuer = (function() {
+    function Queuer(element) {
+      this.element = $(element);
+    }
+
+    Queuer.prototype.enqueue = function(options) {
+      var success = options.success;
+      this.element.queue(function(next) {
+        options.success = function() {
+          if (success) {
+            success.apply(this, arguments);
+          }
+          next();
+        };
+
+        $.ajax(options);
+      });
+    };
+
+    return Queuer;
+  }());
 
   Mp.searchAsYouType = (function() {
     var Suggest = function(element, options) {
@@ -15,14 +37,15 @@
         Mp.suggestion_instances = -1;
       };
       Mp.suggestion_instances += 1;
-      this._id = Mp.suggestion_instances;
 
+      this._id = Mp.suggestion_instances;
       this.focused = -1;
       this.current_suggestions = [];
 
       this.options = $.extend({
         limit: false,
-        source: [],
+        source: this.element.data('source') || [],
+        remote: false,
         onShow: $.noop,
         onHide: $.noop,
         onNoResults: self.hide,
@@ -35,7 +58,7 @@
       }, options || {});
 
       this.setup();
-    }
+    };
 
     Suggest.prototype.defaultSortFunction = function(one, other) {
       return one.name.search(this.query()) > other.name.search(this.query()) ? 1 : -1;
@@ -164,6 +187,29 @@
       }
     };
 
+    Suggest.prototype.remoteSearch = function(value) {
+      if (!this.queuer) {
+        this.queuer = new Mp.AjaxQueuer(this.element);
+      }
+
+      if (value.length >= 2) {
+        var self = this,
+            params = {}
+
+        params[this.element.attr('name')] = value;
+
+        this.queuer.enqueue({
+          url: this.options.source,
+          data: $.param(params),
+          method: "GET",
+          dataType: "json",
+          success: function(data) {
+            self.update(data);
+          }
+        });
+      }
+    };
+
     Suggest.prototype.localSearch = function(value) {
       var self = this,
           pattern = [],
@@ -177,20 +223,16 @@
       } else {
         pattern.push(value);
       }
-      console.log(pattern);
 
       test = new RegExp(pattern.join(''), 'gi');
 
       results = $.grep(this.source, function(match) {
-        console.log(match.name);
-        var res = test.exec(match.name) !== null;
-        console.log(res);
-        return res;
+        var result = test.exec(match.name) !== null;
+        test.lastIndex = 0;
+        return result;
       }).sort(function(one, other) {
         return self.options.sortFunction.call(self, one, other);
       });
-
-      console.log(results);
 
       this.update(results);
     };

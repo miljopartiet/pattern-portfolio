@@ -116,52 +116,32 @@ function naturalSort(a, b) {
   return 0;
 }
 ;
-(function($,sr){
-  "use strict";
-  var debounce = function (func, threshold, execAsap) {
-    var timeout;
-
-    return function debounced () {
-      var obj = this, args = arguments;
-      function delayed () {
-        if (!execAsap) {
-          func.apply(obj, args);
-        }
-        timeout = null;
-      };
-
-      if (timeout)
-        clearTimeout(timeout);
-      else if (execAsap)
-        func.apply(obj, args);
-
-      timeout = setTimeout(delayed, threshold || 100);
-    };
-  }
-  // smartresize
-  jQuery.fn[sr] = function(fn) {
-    return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr);
-  };
-})(jQuery,'smartresize');
 (function($) {
   "use strict";
   namespace('Mp');
+  namespace('Mp.Ajax');
 
-  Mp.suggestion_instances = -1;
-
-  Mp.CookieChecker = function() {
-    var cookie = $.cookie('allow-cookies'),
-        $message;
-    if (! cookie) {
-      $message = $('#cookies');
-      $message.bind('click', 'a.confirm', function(e) {
-        e.preventDefault();
-        $message.hide();
-        $.cookie('allow-cookies', true, { expires: 365, path: '/' });
-      });
-      $('body').prepend($message.show());
+  Mp.AjaxQueuer = (function() {
+    function Queuer(element) {
+      this.element = $(element);
     }
-  };
+
+    Queuer.prototype.enqueue = function(options) {
+      var success = options.success;
+      this.element.queue(function(next) {
+        options.success = function() {
+          if (success) {
+            success.apply(this, arguments);
+          }
+          next();
+        };
+
+        $.ajax(options);
+      });
+    };
+
+    return Queuer;
+  }());
 
   Mp.searchAsYouType = (function() {
     var Suggest = function(element, options) {
@@ -175,14 +155,15 @@ function naturalSort(a, b) {
         Mp.suggestion_instances = -1;
       };
       Mp.suggestion_instances += 1;
-      this._id = Mp.suggestion_instances;
 
+      this._id = Mp.suggestion_instances;
       this.focused = -1;
       this.current_suggestions = [];
 
       this.options = $.extend({
         limit: false,
-        source: [],
+        source: this.element.data('source') || [],
+        remote: false,
         onShow: $.noop,
         onHide: $.noop,
         onNoResults: self.hide,
@@ -195,7 +176,7 @@ function naturalSort(a, b) {
       }, options || {});
 
       this.setup();
-    }
+    };
 
     Suggest.prototype.defaultSortFunction = function(one, other) {
       return one.name.search(this.query()) > other.name.search(this.query()) ? 1 : -1;
@@ -309,28 +290,48 @@ function naturalSort(a, b) {
     Suggest.prototype.search = function(value) {
       var value = this.query();
       if (value === '') {
-        this.update([]);
+        this.render([]);
         this.hide();
       } else {
-        var matches = this.searchSources(value);
-        if (matches.length !== 0) {
-          if (this.options.limit !== false) {
-            matches = matches.splice(0, this.options.limit);
-          }
-          this.update(matches);
-          if (this.container.is(':hidden')) {
-            this.show();
-          }
-        } else {
-          this.options.onNoResults.call(this);
-        }
+        this.searchSources(value);
       }
     };
 
     Suggest.prototype.searchSources = function(value) {
+      if (this.options.remote) {
+        this.remoteSearch(value);
+      } else {
+        this.localSearch(value);
+      }
+    };
+
+    Suggest.prototype.remoteSearch = function(value) {
+      if (!this.queuer) {
+        this.queuer = new Mp.AjaxQueuer(this.element);
+      }
+
+      if (value.length >= 2) {
+        var self = this,
+            params = {}
+
+        params[this.element.attr('name')] = value;
+
+        this.queuer.enqueue({
+          url: this.options.source,
+          data: $.param(params),
+          method: "GET",
+          dataType: "json",
+          success: function(data) {
+            self.update(data);
+          }
+        });
+      }
+    };
+
+    Suggest.prototype.localSearch = function(value) {
       var self = this,
           pattern = [],
-          values, test;
+          values, test, results;
 
       values = value.replace(/\s+/, ' ').split(' ');
       if (values.length > 1) {
@@ -343,14 +344,32 @@ function naturalSort(a, b) {
 
       test = new RegExp(pattern.join(''), 'gi');
 
-      return $.grep(this.source, function(match) {
-        return test.exec(match.name) !== null;
+      results = $.grep(this.source, function(match) {
+        var result = test.exec(match.name) !== null;
+        test.lastIndex = 0;
+        return result;
       }).sort(function(one, other) {
         return self.options.sortFunction.call(self, one, other);
       });
+
+      this.update(results);
     };
 
     Suggest.prototype.update = function(matches) {
+      if (matches.length !== 0) {
+        if (this.options.limit !== false) {
+          matches = matches.splice(0, this.options.limit);
+        }
+        this.render(matches);
+        if (this.container.is(':hidden')) {
+          this.show();
+        }
+      } else {
+        this.options.onNoResults.call(this);
+      }
+    };
+
+    Suggest.prototype.render = function(matches) {
       this.current_suggestions = matches;
       this.focused = -1;
 
@@ -423,6 +442,54 @@ function naturalSort(a, b) {
       new Suggest(selector, options);
     };
   }());
+}(jQuery));
+(function($,sr){
+  "use strict";
+  var debounce = function (func, threshold, execAsap) {
+    var timeout;
+
+    return function debounced () {
+      var obj = this, args = arguments;
+      function delayed () {
+        if (!execAsap) {
+          func.apply(obj, args);
+        }
+        timeout = null;
+      };
+
+      if (timeout)
+        clearTimeout(timeout);
+      else if (execAsap)
+        func.apply(obj, args);
+
+      timeout = setTimeout(delayed, threshold || 100);
+    };
+  }
+  // smartresize
+  jQuery.fn[sr] = function(fn) {
+    return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr);
+  };
+})(jQuery,'smartresize');
+(function($) {
+  "use strict";
+  namespace('Mp');
+
+  Mp.suggestion_instances = -1;
+
+  Mp.CookieChecker = function() {
+    var cookie = $.cookie('allow-cookies'),
+        $message;
+    if (! cookie) {
+      $message = $('#cookies');
+      $message.bind('click', 'a.confirm', function(e) {
+        e.preventDefault();
+        $message.hide();
+        $.cookie('allow-cookies', true, { expires: 365, path: '/' });
+      });
+      $('body').prepend($message.show());
+    }
+  };
+
 
   Mp.NavigationToggler = function(element) {
     var $toggler = $(element),
@@ -662,6 +729,51 @@ function naturalSort(a, b) {
       }
     });
 
+    Mp.searchAsYouType('#main-search', {
+      limit: 25,
+      remote: true,
+      inlined: true,
+      itemTemplate: function(item, query) {
+        var html = ['<li><a href="'+item.href+'">'],
+        name = item.name,
+        matches = [],
+        words = query.split(' ');
+
+        for (var i = 0, j = words.length; i < j; i++) {
+          var word_matches = name.match(new RegExp(words[i], 'gi'));
+          if (word_matches) {
+            matches = matches.concat(word_matches);
+          }
+        }
+
+        if (matches.length > 0) {
+          for (var i = 0, j = matches.length; i < j; i++) {
+            name = name.replace(matches[i], '<em>'+ matches[i] +'</em>');
+          }
+        }
+
+        html.push('<span class="name">');
+        html.push(name);
+        html.push('</span>');
+        html.push('<span class="category">');
+        html.push(item.category);
+        html.push('</span>');
+        html.push('</a></li>');
+
+        return html.join('');
+      },
+      onSetup: function() {
+        this.container.addClass('main-search');
+      },
+      onShow: function() {
+        this.element.addClass('has-suggestions');
+      },
+      onHide: function() {
+        this.element.removeClass('has-suggestions');
+      }
+    });
+
+
     $('section.tabbed').tabs();
     $('#conversation-form').hide();
     $('#go-to-form').bind('click', function(e) {
@@ -684,6 +796,7 @@ function naturalSort(a, b) {
     window.Mp = Mp;
   }
 }(jQuery));
+
 
 
 
