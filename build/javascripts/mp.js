@@ -1,3 +1,12 @@
+(function() {
+  "use strict";
+  var namespace = function(name) {
+    if (! (name in window)) {
+      return window[name] = {};
+    }
+  }
+  window['namespace'] = namespace;
+}(this));
 /*! A fix for the iOS orientationchange zoom bug.
   Script by @scottjehl, rebound by @wilto.
   MIT / GPLv2 License.
@@ -107,9 +116,36 @@ function naturalSort(a, b) {
   return 0;
 }
 ;
+(function($,sr){
+  "use strict";
+  var debounce = function (func, threshold, execAsap) {
+    var timeout;
+
+    return function debounced () {
+      var obj = this, args = arguments;
+      function delayed () {
+        if (!execAsap) {
+          func.apply(obj, args);
+        }
+        timeout = null;
+      };
+
+      if (timeout)
+        clearTimeout(timeout);
+      else if (execAsap)
+        func.apply(obj, args);
+
+      timeout = setTimeout(delayed, threshold || 100);
+    };
+  }
+  // smartresize
+  jQuery.fn[sr] = function(fn) {
+    return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr);
+  };
+})(jQuery,'smartresize');
 (function($) {
   "use strict";
-  var Mp = {};
+  namespace('Mp');
 
   Mp.suggestion_instances = -1;
 
@@ -390,37 +426,22 @@ function naturalSort(a, b) {
 
   Mp.NavigationToggler = function(element) {
     var $toggler = $(element),
+        $body = $('body'),
         setup_run = false,
         $nav;
 
-    var calculateRules = function(element) {
-      var offset = element.outerHeight(),
-          rules = "#site-top-navigation { margin-top: -"+ offset +"px; }";
-
-      rules += "#site-top-navigation.inactive { margin-top: -"+ offset +"px; }";
-
-      return rules;
-    };
-
-    var reset = function() {
-      if (!setup_run) {
-        setup();
-        return;
-      }
-
-      var style_element = document.getElementById('navigation-styles');
-      style_element.innerHTML = calculateRules(style_element);
-    }
-
     var hide = function(e) {
       e.preventDefault();
-      $nav.addClass('inactive').removeClass('active');
+      $nav.slideUp(150, 'easeInOutSine', function() {
+        $nav.addClass('hidden');
+      });
     };
 
     var show = function(e) {
       e.preventDefault();
-      $nav.css('visibility', 'visible');
-      $nav.addClass('active').removeClass('inactive');
+      $nav.slideDown(250, 'easeInOutSine', function() {
+        $nav.removeClass('hidden');
+      });
     };
 
     var setup = function() {
@@ -429,29 +450,27 @@ function naturalSort(a, b) {
       }
       var $original_nav = $('#site-navigation');
       $nav = $original_nav.clone();
-      $nav.attr('id', 'site-top-navigation').css({
-        visibility: 'hidden'
-      });
+      $nav.attr('id', 'site-top-navigation')
+        .addClass('hidden')
+        .css('display', 'none');
 
       $nav.append('<a href="#" class="close"><span>Stäng meny</span></a>');
       $nav.find('a.close').bind('click', hide);
 
-      $('body').append($nav);
-      var style = document.createElement('style');
-
-      style.id = 'navigation-styles';
-      style.type = 'text/css';
-      style.innerHTML = calculateRules($nav);
-
-      document.getElementsByTagName("head")[0].appendChild(style);
+      $body.append($nav);
       setup_run = true;
     };
 
     $toggler.bind('click', show);
-    $(document).bind('resize', function() {
-      setTimeout(reset, 200);
-    });
     setup();
+
+    $(window).smartresize(function() {
+      if ($body.width() >= 768) {
+        $nav.hide();
+      } else if (!$nav.hasClass('hidden')) {
+        $nav.show();
+      }
+    });
   };
 
   Mp.focusAndCopy = function(selector) {
@@ -578,6 +597,31 @@ function naturalSort(a, b) {
     hide();
   };
 
+  Mp.conversationWidths = function() {
+    var getRandom = function(samples, ignore) {
+          var sample = samples[Math.floor(Math.random()*steps.length)];
+          return sample !== ignore ? sample : getRandom(samples, ignore);
+        },
+        conversations = $("div.conversations div.question"),
+        max_width = $(conversations[0]).width(),
+        min_width = max_width * 0.8,
+        last_step,
+        steps = [];
+
+    for (var i = min_width; i <= max_width; i += 20) {
+      steps.push(i);
+    }
+    steps.push(max_width);
+
+    conversations.each(function() {
+      var step = getRandom(steps, last_step);
+      last_step = step;
+      $(this).css({
+        width: step + 'px'
+      });
+    });
+  };
+
   $(document).ready(function() {
     var $html = $('html');
 
@@ -630,6 +674,8 @@ function naturalSort(a, b) {
       }
     });
 
+    Mp.conversationWidths();
+
     Mp.focusAndCopy('input.share');
   });
 
@@ -638,6 +684,8 @@ function naturalSort(a, b) {
     window.Mp = Mp;
   }
 }(jQuery));
+
+
 
 
 

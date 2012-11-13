@@ -22,47 +22,52 @@ h1 {
   font-size: 2.0625em;
   line-height: 1.06061; }
 
-/* line 28, 600.css.scss */
-ul li {
+/* line 29, 600.css.scss */
+ul li,
+ol li {
   margin-left: 0; }
 
-/* line 33, 600.css.scss */
+/* line 34, 600.css.scss */
 article .lead p {
   font-size: 1.25em;
   line-height: 1.2; }
 
-/* line 39, 600.css.scss */
+/* line 40, 600.css.scss */
 .body figure {
   margin-top: 1.25em; }
-  /* line 43, 600.css.scss */
+  /* line 44, 600.css.scss */
   .body figure.right, .body figure.left {
     width: 40%;
     margin: 0.625em 0; }
-  /* line 48, 600.css.scss */
+  /* line 49, 600.css.scss */
   .body figure.right {
     float: right;
     margin-left: 1.25em; }
-  /* line 53, 600.css.scss */
+  /* line 54, 600.css.scss */
   .body figure.left {
     float: left;
     margin-right: 1.25em; }
 
-/* line 61, 600.css.scss */
+/* line 62, 600.css.scss */
 blockquote > div p {
   margin-right: 3.05556em; }
-/* line 64, 600.css.scss */
+/* line 65, 600.css.scss */
 blockquote footer {
   margin-top: -40px; }
 
-/* line 70, 600.css.scss */
+/* line 71, 600.css.scss */
 .suggestions ul {
   margin-left: 20px; }
 
-/* line 75, 600.css.scss */
+/* line 76, 600.css.scss */
 .main-search ul {
   margin-left: 0; }
 
-/* line 82, 600.css.scss */
+/* line 81, 600.css.scss */
+.labeled-list .list li {
+  margin-left: 1.5em; }
+
+/* line 87, 600.css.scss */
 .labeled-list .grid .c3 {
   margin: 10px 0 0 0;
   width: 46.15385%; }

@@ -5,38 +5,40 @@
   padding-top: 1.25em;
   padding-left: 1.25em; }
 
-/* line 15, 600-767.css.scss */
+/* line 17, 600-767.css.scss */
 #site-banner,
 #main,
 nav.breadcrumbs,
-nav.main-navigation .inner {
+nav.main-navigation .inner,
+#logo-full,
+#copyright {
   width: 32.5em;
   margin-right: auto;
   margin-left: auto; }
 
-/* line 22, 600-767.css.scss */
+/* line 24, 600-767.css.scss */
 #site-banner,
 #secondary-navigation {
   padding-top: 0; }
 
-/* line 26, 600-767.css.scss */
+/* line 28, 600-767.css.scss */
 nav.main-navigation .inner {
   padding: 0; }
 
-/* line 31, 600-767.css.scss */
+/* line 33, 600-767.css.scss */
 #wrap > nav.breadcrumbs {
   border: none;
   display: block;
   margin-bottom: 0.625em; }
 
-/* line 38, 600-767.css.scss */
+/* line 40, 600-767.css.scss */
 .labeled-list .group {
   padding-top: 0.625em; }
-/* line 42, 600-767.css.scss */
+/* line 44, 600-767.css.scss */
 .labeled-list .label {
   float: none;
   width: 100%; }
-/* line 47, 600-767.css.scss */
+/* line 49, 600-767.css.scss */
 .labeled-list .list {
   margin-top: 0.625em;
   float: none;
@@ -48,15 +50,21 @@ nav.main-navigation .inner {
   column-count: 2;
   column-gap: 20px; }
 
-/* line 55, 600-767.css.scss */
+/* line 57, 600-767.css.scss */
 #logo-full {
-  width: 32.5em;
   height: 2.55556em;
   background-size: 15.77778em 2.55556em; }
 
-/* line 62, 600-767.css.scss */
+/* line 61, 600-767.css.scss */
+#copyright {
+  width: 520px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 67, 600-767.css.scss */
 .grid .container {
   width: 103.84615%; }
-/* line 68, 600-767.css.scss */
+/* line 73, 600-767.css.scss */
 .grid .column.c2, .grid .column.c3 {
   width: 46.2963%; }
