@@ -13,6 +13,22 @@ ul {
   }
 }
 
+h2 {
+  & + p,
+  & + ul,
+  & + ol {
+    margin-top: (4em/18);
+  }
+}
+
+h3 {
+  & + p,
+  & + ul,
+  & + ol {
+    margin-top: (4em/18);
+  }
+}
+
 #wrap {
   p,
   li {
