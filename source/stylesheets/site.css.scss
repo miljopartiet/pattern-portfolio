@@ -361,7 +361,8 @@ figcaption {
 
   &.loading,
   &.loading:hover {
-    background: $green url(../images/ajax-loader.gif) 8px 50% no-repeat;
+    background: $green url(../images/load-green-32.gif) 8px 50% no-repeat;
+    background-size: 16px 16px;
     padding-left: (30em/14);
   }
 }
@@ -933,7 +934,8 @@ article + article {
 
   &.loading {
     h2 {
-      background: transparent url(../images/ajax-loader_grey.gif) 0 0 no-repeat;
+      background: transparent url(../images/load-grey-64.gif) 0 0 no-repeat;
+      background-size: 32px 32px;
       margin-left: -52px;
       padding-left: 52px;
       min-height: 32px;

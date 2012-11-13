@@ -27,8 +27,15 @@ nav.breadcrumbs a {
   background-image: url(../images/search-1x.png);
 }
 
-.article-section .vignette {
-  background-image: url(../images/bg-vignette-1x.png);
+.article-section {
+  .vignette {
+    background-image: url(../images/bg-vignette-1x.png);
+  }
+
+  &.loading {
+    h2 {
+      background-image: url(../images/load-grey-32.gif);
+    }
 }
 
 #wrap ul.calendar .icon {
@@ -86,6 +93,15 @@ nav.breadcrumbs a {
 #top-navigation a {
   @extend .inline-block-fix;
 }
+
+.action,
+.form-submit {
+  &.loading,
+  &.loading:hover {
+    background-image: url(../images/load-green-16.gif);
+  }
+}
+
 
 // Box-sizing border-box fixes
 .lte7 {
