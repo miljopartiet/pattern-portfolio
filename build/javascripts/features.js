@@ -50,6 +50,12 @@
     }
   }
   $(document).ready(function() {
+    // Preload load indicators
+    var green_loader = new Image(),
+        grey_loader = new Image();
+    green_loader.src = '/images/load-green-32.gif';
+    grey_loader.src = '/images/load-grey-64.gif';
+
     Voting();
 
     $('div.position-me').delegate('span.choose', 'click', function(e) {
@@ -66,8 +72,6 @@
         $local_info.hide();
       });
 
-    var loader = new Image();
-    loader.src = '/images/ajax-loader.gif';
     $('div.fetch-more a.action').click(function(e) {
       e.preventDefault();
       var $link = $(this);
