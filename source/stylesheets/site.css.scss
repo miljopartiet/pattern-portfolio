@@ -19,20 +19,26 @@ h2 {
   margin: 0;
   font-family: $swift;
   font-weight: normal;
-  font-size: (24em/16);
-  line-height: (26/24);
   text-rendering: optimizeLegibility;
 }
 
+h1 {
+  font-size: (24em/16);
+  line-height: (26/24);
+}
+
 h2 {
-  margin-top: (24em/24);
+  margin-top: (24em/20);
+  font-size: (20em/16);
+  line-height: (22/20);
 }
 
 h3 {
   font-size: (18em/16);
   line-height: (20/18);
   margin-top: (18em/18);
-  font-weight: bold;
+  font-weight: normal;
+  font-family: $swift;
 }
 
 h4 {
@@ -55,7 +61,7 @@ h3 {
   & + p,
   & + ul,
   & + ol {
-    margin-top: 0;
+    margin-top: (4em/16);
   }
 }
 
@@ -644,7 +650,7 @@ footer nav.breadcrumbs {
 }
 
 .speech-bubble {
-	position: relative;
+  position: relative;
   background: $yellow;
   padding: 20px 20px 20px 25px;
   margin: (60em/16) 0;
@@ -866,11 +872,6 @@ article + article {
       text-rendering: optimizeLegibility;
       letter-spacing: 0.06em;
     }
-  }
-
-  h3 {
-    font-weight: normal;
-    font-family: $swift;
   }
 
   .vignette {
@@ -1150,6 +1151,8 @@ header.intro .article-section {
 
       p {
         font-family: $swift;
+        font-size:(18em/16);
+        line-height:(20/18);
       }
     }
 
