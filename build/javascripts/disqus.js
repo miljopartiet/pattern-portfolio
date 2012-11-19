@@ -1,5 +1,5 @@
 (function($) {
-  var disqus_shortname = 'mp-dev';
+  var disqus_shortname = 'miljopartiet';
 
   $(document).ready(function() {
     var element = (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0])
