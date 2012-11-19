@@ -36,6 +36,7 @@ nav.breadcrumbs a {
     h2 {
       background-image: url(../images/load-grey-32.gif);
     }
+  }
 }
 
 #wrap ul.calendar .icon {
@@ -156,7 +157,6 @@ nav.breadcrumbs a {
   width: 970px;
 }
 
-img {
-	width: auto\9; /* ie8 */
+.ie8 img {
+	width: auto;
 }
-
