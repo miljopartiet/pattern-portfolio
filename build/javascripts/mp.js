@@ -504,14 +504,14 @@ function naturalSort(a, b) {
 
     var hide = function(e) {
       e.preventDefault();
-      $nav.slideUp(150, 'easeInOutSine', function() {
+      $nav.slideUp(150, function() {
         $nav.addClass('hidden');
       });
     };
 
     var show = function(e) {
       e.preventDefault();
-      $nav.slideDown(250, 'easeInOutSine', function() {
+      $nav.slideDown(250, function() {
         $nav.removeClass('hidden');
       });
     };
