@@ -20,10 +20,5 @@
     if (window.location.hash == '#disqus_thread') {
       $disqus_link.trigger('click');
     }
-
-    var s = document.createElement('script'); s.async = true;
-    s.type = 'text/javascript';
-    s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-    element.appendChild(s);
   });
 })(jQuery);
