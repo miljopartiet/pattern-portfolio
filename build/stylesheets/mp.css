@@ -2193,35 +2193,32 @@ div.comments {
   /* line 464, 768.css.scss */
   .grid .container {
     width: 103.44828%; }
-  /* line 468, 768.css.scss */
-  .grid .column {
-    margin: 0 1.5625em 1.25em 0 0; }
-    /* line 471, 768.css.scss */
-    .grid .column.c2 {
-      width: 46.66667%; }
-    /* line 475, 768.css.scss */
-    .grid .column.c3 {
-      width: 30%; }
+  /* line 469, 768.css.scss */
+  .grid .column.c2 {
+    width: 46.66667%; }
+  /* line 473, 768.css.scss */
+  .grid .column.c3 {
+    width: 30%; }
 
-  /* line 482, 768.css.scss */
+  /* line 480, 768.css.scss */
   .labeled-list .grid {
     width: 100%; }
-    /* line 484, 768.css.scss */
+    /* line 482, 768.css.scss */
     .labeled-list .grid .container {
       margin: 0;
       width: 103.44828%; }
-      /* line 487, 768.css.scss */
+      /* line 485, 768.css.scss */
       .labeled-list .grid .container .c3 {
         width: 46.66667%; }
-      /* line 490, 768.css.scss */
+      /* line 488, 768.css.scss */
       .labeled-list .grid .container ul {
         margin-left: 1.2em;
         font-size: 0.88889em; }
 
-  /* line 499, 768.css.scss */
+  /* line 497, 768.css.scss */
   .people .grid a h2 {
     font-size: 1.25em; }
-  /* line 503, 768.css.scss */
+  /* line 501, 768.css.scss */
   .people .grid a p {
     font-size: 1em; } }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
