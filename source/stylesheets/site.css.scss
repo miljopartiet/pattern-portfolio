@@ -269,7 +269,7 @@ input + div.description {
   overflow: hidden;
 
   &.widescreen {
-    padding-bottom: 56.25%;
+    padding-bottom: percentage(360/640);
   }
 
   &.vimeo {

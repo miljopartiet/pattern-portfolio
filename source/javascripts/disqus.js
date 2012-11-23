@@ -1,5 +1,8 @@
 (function($) {
   var disqus_shortname = 'miljopartiet';
+  if (! ("disqus_shortname" in window)) {
+    window.disqus_shortname = disqus_shortname;
+  }
 
   $(document).ready(function() {
     var element = (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0])
@@ -21,4 +24,12 @@
       $disqus_link.trigger('click');
     }
   });
+
+  (function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+  }());
+
 })(jQuery);
