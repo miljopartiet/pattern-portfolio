@@ -486,7 +486,7 @@ function naturalSort(a, b) {
         $message;
     if (! cookie) {
       $message = $('#cookies');
-      $message.bind('click', 'a.confirm', function(e) {
+      $message.find('a.confirm').bind('click', function(e) {
         e.preventDefault();
         $message.hide();
         $.cookie('allow-cookies', true, { expires: 365, path: '/' });
