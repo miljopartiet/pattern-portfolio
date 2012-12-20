@@ -39,12 +39,12 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
 
-    <%= javascript_include_tag 'html5shiv' %>
     <%= stylesheet_link_tag "drupal.css" %>
     <%= stylesheet_link_tag "mp.css" %>
     <!--[if lt IE 9]>
       <%= stylesheet_link_tag "ie.css" %>
     <![endif]-->
+    <%= javascript_include_tag "modernizr" %>
     <%= yield_content :head %>
 
     <script src="http://fast.fonts.com/jsapi/f5cda253-a403-4beb-bb36-e9d98c5ccae2.js"></script>

@@ -245,7 +245,7 @@ figure {
     display: block;
     margin-right: 7px;
     padding-right: (18em/16);
-    background: transparent url(../images/arrows-right.svg) 100% 6px no-repeat;
+    background: transparent url(../images/arrows-right.png) 100% 6px no-repeat;
     background-size: 9px 128px;
   }
 
@@ -264,6 +264,16 @@ figure {
       padding: 0;
       background: transparent;
     }
+  }
+}
+
+html.svg #top-navigation {
+  span {
+    background-image: url(../images/arrows-right.svg);
+  }
+
+  li.active-trail span {
+    background-image: none;
   }
 }
 

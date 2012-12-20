@@ -41,57 +41,62 @@ nav.main-navigation {
     margin: 0;
     display: block;
     line-height: 2.5;
-    background: transparent url(../images/arrows-right.svg) 100% -36px no-repeat; }
-    /* line 54, 300-767.css.scss */
+    background: transparent url(../images/arrows-right.png) 100% -36px no-repeat;
+    background-size: 9px 128px; }
+    /* line 55, 300-767.css.scss */
     nav.main-navigation .sections a:hover {
       background-position: 100% -100px; }
-  /* line 61, 300-767.css.scss */
+  /* line 62, 300-767.css.scss */
   nav.main-navigation div.first,
   nav.main-navigation div.second {
     margin-top: 15px;
     margin-bottom: 15px;
     float: left;
     width: 45%; }
-    /* line 67, 300-767.css.scss */
+    /* line 68, 300-767.css.scss */
     nav.main-navigation div.first li,
     nav.main-navigation div.second li {
       list-style: disc;
       list-style-position: inside;
       margin-left: 15px;
       white-space: nowrap; }
-    /* line 74, 300-767.css.scss */
+    /* line 75, 300-767.css.scss */
     nav.main-navigation div.first a,
     nav.main-navigation div.second a {
       background-image: none; }
-  /* line 79, 300-767.css.scss */
+  /* line 80, 300-767.css.scss */
   nav.main-navigation div.second {
     border-left: 1px solid #fff; }
-  /* line 83, 300-767.css.scss */
+  /* line 84, 300-767.css.scss */
   nav.main-navigation form {
     display: none; }
 
 /* line 89, 300-767.css.scss */
+html.svg nav.main-navigation .sections a {
+  background-image: url(../images/arrows-right.svg); }
+
+/* line 95, 300-767.css.scss */
 #site-navigation {
   position: relative;
   margin-left: -18px;
   margin-right: -18px; }
 
-/* line 98, 300-767.css.scss */
+/* line 104, 300-767.css.scss */
 #top-navigation,
 #wrap > nav.breadcrumbs {
   display: none; }
 
-/* line 102, 300-767.css.scss */
+/* line 108, 300-767.css.scss */
 #site-top-navigation {
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 999; }
-  /* line 109, 300-767.css.scss */
+  /* line 115, 300-767.css.scss */
   #site-top-navigation.hidden {
     display: none; }
-  /* line 113, 300-767.css.scss */
+  /* line 119, 300-767.css.scss */
   #site-top-navigation a.close {
     font-family: arial, sans-serif;
     color: #888888;
@@ -101,7 +106,7 @@ nav.main-navigation {
     text-align: right;
     clear: both;
     border-top: 1px solid #fff; }
-    /* line 122, 300-767.css.scss */
+    /* line 128, 300-767.css.scss */
     #site-top-navigation a.close span {
       display: block;
       padding: 16px 0;
@@ -110,117 +115,125 @@ nav.main-navigation {
       background: #f5f3ee url(../images/close.svg) 100% 50% no-repeat;
       background-size: 14px 14px; }
 
-/* line 133, 300-767.css.scss */
+/* line 139, 300-767.css.scss */
+html.svg #site-top-navigation a.close span {
+  background-image: url(../images/close.svg); }
+
+/* line 143, 300-767.css.scss */
 #logo {
   float: left; }
 
-/* line 137, 300-767.css.scss */
+/* line 147, 300-767.css.scss */
 #secondary-navigation {
   padding-top: 12px;
   text-align: right; }
-  /* line 141, 300-767.css.scss */
+  /* line 151, 300-767.css.scss */
   #secondary-navigation form {
     display: inline-block;
     vertical-align: top;
     margin-right: 0.375em; }
-  /* line 148, 300-767.css.scss */
+  /* line 158, 300-767.css.scss */
   #secondary-navigation .search input {
     width: 8.57143em; }
-  /* line 153, 300-767.css.scss */
+  /* line 163, 300-767.css.scss */
   #secondary-navigation div {
     display: none; }
 
-/* line 158, 300-767.css.scss */
+/* line 168, 300-767.css.scss */
 #skip-to-navigation {
   font-family: arial, sans-serif;
   color: #888888;
   font-size: 0.8125em;
   line-height: 1.30769;
   line-height: 1.92308em;
-  background: #f5f3ee url(../images/arrow-down.svg) 89% 50% no-repeat;
-  background-size: 1.07692em 0.69231em;
+  background: #f5f3ee url(../images/arrow-down.png) 89% 50% no-repeat;
+  background-size: 14px 9px;
   display: inline-block;
   border-radius: 4px;
   padding: 0 25px 0 10px; }
 
-/* line 171, 300-767.css.scss */
+/* line 180, 300-767.css.scss */
+html.svg #skip-to-navigation {
+  background-image: url(../images/arrow-down.svg); }
+
+/* line 185, 300-767.css.scss */
 article .vignette {
   display: none; }
-/* line 175, 300-767.css.scss */
+/* line 189, 300-767.css.scss */
 article .lead p {
   margin-top: 0.125em; }
 
-/* line 180, 300-767.css.scss */
+/* line 194, 300-767.css.scss */
 .body figure {
   margin-top: 0.75em; }
 
-/* line 186, 300-767.css.scss */
+/* line 200, 300-767.css.scss */
 article + article,
 .article-section,
 .speech-bubble {
   margin-top: 1.875em;
   margin-bottom: 1.875em; }
 
-/* line 191, 300-767.css.scss */
+/* line 205, 300-767.css.scss */
 .speech-bubble {
   padding: 15px; }
-  /* line 194, 300-767.css.scss */
+  /* line 208, 300-767.css.scss */
   .speech-bubble h2 {
     font-size: 1.125em; }
-  /* line 199, 300-767.css.scss */
+  /* line 213, 300-767.css.scss */
   .speech-bubble ul,
   .speech-bubble p {
     margin-top: 0.125em; }
-  /* line 204, 300-767.css.scss */
+  /* line 218, 300-767.css.scss */
   .speech-bubble.vcard .main,
   .speech-bubble .aside {
     margin-top: 0.625em; }
-  /* line 209, 300-767.css.scss */
+  /* line 223, 300-767.css.scss */
   .speech-bubble .aside li, .speech-bubble.vcard li {
     display: inline-block;
     margin-left: 0;
     margin-right: .3em; }
 
-/* line 217, 300-767.css.scss */
+/* line 231, 300-767.css.scss */
 .topics .topic h2 {
   font-size: 1.25em;
   padding-right: 0; }
 
-/* line 225, 300-767.css.scss */
+/* line 239, 300-767.css.scss */
 .icon-list li a {
   margin-left: 45px; }
-/* line 229, 300-767.css.scss */
+/* line 243, 300-767.css.scss */
 .icon-list li .icon {
   width: 25px;
   margin-left: -45px; }
 
-/* line 237, 300-767.css.scss */
+/* line 251, 300-767.css.scss */
 .conversations .details {
   margin-right: 0; }
 
-/* line 243, 300-767.css.scss */
+/* line 257, 300-767.css.scss */
 .conversation img {
   display: none; }
-/* line 247, 300-767.css.scss */
+/* line 261, 300-767.css.scss */
 .conversation .content {
   padding: 15px 20px; }
-/* line 251, 300-767.css.scss */
+/* line 265, 300-767.css.scss */
 .conversation .question {
   margin-right: 13.72549%; }
-  /* line 255, 300-767.css.scss */
+  /* line 269, 300-767.css.scss */
   .conversation .question .content:after {
     width: 87.2549%; }
-/* line 261, 300-767.css.scss */
+/* line 275, 300-767.css.scss */
 .conversation .answer {
   margin-right: 0; }
 
-/* line 266, 300-767.css.scss */
+/* line 280, 300-767.css.scss */
 #logo-full a {
   height: 2.37896em;
   background-size: 14.6875em 2.37896em;
   background-position: 0 0; }
 
-/* line 273, 300-767.css.scss */
+/* line 287, 300-767.css.scss */
 .labeled-list.text-labels .label {
   float: none;
   width: 100%;

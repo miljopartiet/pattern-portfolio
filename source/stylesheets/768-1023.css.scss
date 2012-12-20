@@ -45,7 +45,8 @@
     white-space: nowrap;
     margin-left: .2em;
     padding-left: 10px;
-    background: transparent url(../images/bullet.svg) 0 50% no-repeat;
+    background: transparent url(../images/bullet.png) 0 50% no-repeat;
+    background-size: 4px 4px;
 
     &:hover {
       color: $green;
@@ -76,6 +77,18 @@
       border-top: 1px solid $warm-grey;
     }
   }
+}
+
+html.svg #secondary-navigation {
+  a {
+    background-image: url(../images/bullet.svg);
+  }
+
+  li:first-child a,
+  .more a {
+    background-image: none;
+  }
+
 }
 
 article {

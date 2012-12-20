@@ -498,7 +498,7 @@ blockquote {
     text-indent: -9999px;
     width: 65px;
     height: 57px;
-    background: transparent url(../images/logo.svg) 0 0 no-repeat;
+    background: transparent url(../images/logo.png) 0 0 no-repeat;
     background-size: 100%;
 
     &:hover {
@@ -507,13 +507,21 @@ blockquote {
   }
 }
 
+html.svg #logo a {
+  background-image: url(../images/logo.svg);
+}
+
 #logo-full {
   a {
-    background: transparent url(../images/logo-full.svg) 100% 0 no-repeat;
+    background: transparent url(../images/logo-full.png) 100% 0 no-repeat;
     text-indent: -9999em;
     margin: (20em/16) 0 (40em/16) 0;
     display: block;
   }
+}
+
+html.svg #logo-full a {
+  background-image: url(../images/logo-full.svg);
 }
 
 // Navigation elements
@@ -597,8 +605,8 @@ nav.breadcrumbs {
   a {
     padding-right: (20em/13);
     margin-right: (5em/13);
-    background: url(../images/breadcrumb-slash.svg) 100% 50% no-repeat;
-    background-size: (11em/13) (18em/13);
+    background: url(../images/breadcrumb-slash.png) 100% 50% no-repeat;
+    background-size: 11px 18px;
 
     &:hover {
       text-decoration: underline;
@@ -610,6 +618,10 @@ nav.breadcrumbs {
       background:none;
     }
   }
+}
+
+html.svg nav.breadcrumbs a {
+  background-image: url(../images/breadcrumb-slash.svg);
 }
 
 footer nav.breadcrumbs {
@@ -648,7 +660,7 @@ footer nav.breadcrumbs {
     font-size: 1em;
     width: (15em/16);
     height: (15em/16);
-    background: transparent url(../images/search.svg) 0 0 no-repeat;
+    background: transparent url(../images/search.png) 0 0 no-repeat;
     background-size: 100%;
     position: absolute;
     top: 5px;
@@ -659,6 +671,10 @@ footer nav.breadcrumbs {
       background-position: 0 ((50em/16) * -1);
     }
   }
+}
+
+html.svg .search button {
+  background-image: url(../images/search.svg);
 }
 
 .speech-bubble {
@@ -905,7 +921,7 @@ article + article {
     width: (69em/23);
     height: (62em/23);
     padding: (18em/23) 0 0 (22em/23);
-    background: transparent url(../images/bg-vignette.svg) 0 0 no-repeat;
+    background: transparent url(../images/bg-vignette.png) 0 0 no-repeat;
     background-size: 100%;
     font-family: $swift;
     line-height: 1em;
@@ -966,6 +982,10 @@ article + article {
   }
 }
 
+html.svg .article-section .vignette {
+  background-image: url(../images/bg-vignette.svg);
+}
+
 header.intro .article-section {
   margin-top: (40em/16);
 }
@@ -1009,12 +1029,16 @@ header.intro .article-section {
     text-indent: -.3em;
     color: #fff;
     font-size: 18px;
-    background: transparent url(../images/calendar.svg) 0 50% no-repeat;
+    background: transparent url(../images/calendar.png) 0 50% no-repeat;
     background-size: 39px 46px;
     line-height:(51/18);
     width: 39px;
     height: 46px;
   }
+}
+
+html.svg .icon-list.calendar .icon {
+  background-image: url(../images/calendar.svg);
 }
 
 .conversations {
@@ -1362,8 +1386,12 @@ div.comments {
 
 #copyright {
   padding-left: (35em/12);
-  background: transparent url(../images/cc.svg) 0 2px no-repeat;
-  background-size: (20em/12) (20em/12);
+  background: transparent url(../images/cc.png) 0 2px no-repeat;
+  background-size: 20px 20px;
+}
+
+html.svg #copyright {
+  background-image: url(../images/cc.svg);
 }
 
 .topics {
@@ -1386,11 +1414,11 @@ div.comments {
       padding-top: 7px;
       position: absolute;
       top: 3px;
-      left: -55px;
-      width: 35px;
+      left: -56px;
+      width: 36px;
       height: 32px;
-      background: transparent url(../images/bg-vignette.svg) 0 0 no-repeat;
-      background-size: 35px 32px;
+      background: transparent url(../images/bg-vignette.png) 0 0 no-repeat;
+      background-size: 36px 32px;
       color: #fff;
       text-align: center;
     }
@@ -1401,6 +1429,15 @@ div.comments {
   p {
     margin-right: 0;
     display: inline;
+  }
+}
+
+html.svg .topics {
+  h2,
+  h3 {
+    .number {
+      background-image: url(../images/bg-vignette.svg);
+    }
   }
 }
 

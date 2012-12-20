@@ -38,33 +38,42 @@
     white-space: nowrap;
     margin-left: .2em;
     padding-left: 10px;
-    background: transparent url(../images/bullet.svg) 0 50% no-repeat; }
-    /* line 50, 768-1023.css.scss */
+    background: transparent url(../images/bullet.png) 0 50% no-repeat;
+    background-size: 4px 4px; }
+    /* line 51, 768-1023.css.scss */
     #secondary-navigation a:hover {
       color: #2b912c; }
-  /* line 56, 768-1023.css.scss */
+  /* line 57, 768-1023.css.scss */
   #secondary-navigation li:first-child a,
   #secondary-navigation .more a {
     background-image: none;
     margin-left: 0;
     padding-left: 0; }
-  /* line 63, 768-1023.css.scss */
+  /* line 64, 768-1023.css.scss */
   #secondary-navigation .more a {
     position: absolute;
     right: 0;
     bottom: -1.8em;
     margin-right: 0; }
-  /* line 70, 768-1023.css.scss */
+  /* line 71, 768-1023.css.scss */
   #secondary-navigation > div {
     margin-top: 0.625em; }
-  /* line 75, 768-1023.css.scss */
+  /* line 76, 768-1023.css.scss */
   #secondary-navigation form .suggestions {
     border-top: 1px solid #dddddd; }
 
-/* line 82, 768-1023.css.scss */
+/* line 83, 768-1023.css.scss */
+html.svg #secondary-navigation a {
+  background-image: url(../images/bullet.svg); }
+/* line 88, 768-1023.css.scss */
+html.svg #secondary-navigation li:first-child a,
+html.svg #secondary-navigation .more a {
+  background-image: none; }
+
+/* line 95, 768-1023.css.scss */
 article .body {
   position: relative; }
-/* line 91, 768-1023.css.scss */
+/* line 104, 768-1023.css.scss */
 article .body > p, article .body > ul, article .body > ol,
 article .article-section > p,
 article .article-section > ul,
@@ -73,28 +82,28 @@ article .article-subsection > p,
 article .article-subsection > ul,
 article .article-subsection > ol {
   margin-right: 1.11111em; }
-/* line 96, 768-1023.css.scss */
+/* line 109, 768-1023.css.scss */
 article .lead p {
   font-size: 1.375em;
   line-height: 1.18182;
   margin-top: 0.36364em; }
-/* line 102, 768-1023.css.scss */
+/* line 115, 768-1023.css.scss */
 article .illustration {
   margin-top: 1.25em; }
 
-/* line 107, 768-1023.css.scss */
+/* line 120, 768-1023.css.scss */
 .topics .topic {
   margin-right: 1.25em; }
 
-/* line 112, 768-1023.css.scss */
+/* line 125, 768-1023.css.scss */
 .labeled-list .label {
   width: 1em;
   text-align: right;
   margin: 0 0 0 -2.25em; }
-/* line 118, 768-1023.css.scss */
+/* line 131, 768-1023.css.scss */
 .labeled-list .list {
   width: 100%; }
-/* line 122, 768-1023.css.scss */
+/* line 135, 768-1023.css.scss */
 .labeled-list.text-labels .label {
   text-align: left;
   margin-left: 0;
