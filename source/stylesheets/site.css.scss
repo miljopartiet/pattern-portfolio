@@ -1349,6 +1349,10 @@ header.intro + .conversations {
       display: inline-block;
       vertical-align: top;
       word-wrap: break-word;
+
+      &.active {
+        text-decoration: none;
+      }
     }
   }
 }
