@@ -391,10 +391,14 @@ article {
     width: percentage(805/640);
 
     > div {
-      width: percentage(485/805);
       margin-bottom: .5em;
       padding-left: 0;
       float: left;
+      width: percentage(640/805);
+    }
+
+    &.image > div {
+      width: percentage(485/805);
     }
 
     footer {
