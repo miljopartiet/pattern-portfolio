@@ -113,7 +113,14 @@ div.comments {
 }
 
 .labeled-list {
-  width: 100%;
+  width: percentage(855/970);
+  margin: 0 0 0 0;
+
+  &.text-labels {
+    .group {
+      padding-left: percentage(165/855);
+    }
+  }
 
   .group {
     @include clearfix;
@@ -122,7 +129,7 @@ div.comments {
   .label {
     float: left;
     text-align: left;
-    width: percentage(165/970);
+    width: percentage(165/855);
     margin-right: 0;
     margin-left: 0;
   }
@@ -136,13 +143,18 @@ div.comments {
   .list {
     @include columns(3, 20px);
     margin-top: 0;
-    width: percentage(620/970);
+    width: percentage(640/855);
+  }
+
+  &.text-labels .list {
+    width: percentage(640/690);
   }
 }
 
 // This is used for IE9 and below
 .labeled-list .grid {
-  width: percentage(620/970);
+  width: percentage(620/855);
+
   .container {
     margin: 0;
     width: percentage(640/620);
@@ -156,6 +168,9 @@ div.comments {
   }
 }
 
+.text-labels .grid {
+  width: percentage(620/690);
+}
 // News list
 .news-posts ul.icon-list {
   width: auto;
