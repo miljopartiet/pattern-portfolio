@@ -1245,7 +1245,8 @@
     *zoom: 1;
     padding-bottom: 0;
     position: relative;
-    width: 125.78125%; }
+    width: 125.78125%;
+    min-height: 120px; }
     /* line 52, includes.css.scss */
     article blockquote:before, article blockquote:after {
       content: " ";
