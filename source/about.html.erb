@@ -157,7 +157,7 @@ url: http://www.mp.se/om
     <ol class="labeled-list text-labels">
     <% Localities.all.each do |group, localities| %>
       <li class="group">
-        <span class="label"><%= group %></span>
+        <h2 class="label"><%= group %></h2>
         <ol class="list">
         <% localities.each do |locality| %><li>
           <a href="#"><%= locality %></a>
