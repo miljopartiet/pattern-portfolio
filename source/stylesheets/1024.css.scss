@@ -389,7 +389,7 @@ article {
     padding-bottom: 0;
     position: relative;
     width: percentage(805/640);
-
+    min-height:120px;
     > div {
       margin-bottom: .5em;
       padding-left: 0;
