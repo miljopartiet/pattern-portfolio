@@ -1393,7 +1393,8 @@ html.svg #copyright {
 /* line 1400, site.css.scss */
 .topics {
   *zoom: 1;
-  list-style: none; }
+  list-style: none;
+  margin-top: 1.25em; }
   /* line 52, includes.css.scss */
   .topics:before, .topics:after {
     content: " ";
@@ -1401,15 +1402,18 @@ html.svg #copyright {
   /* line 57, includes.css.scss */
   .topics:after {
     clear: both; }
-  /* line 1404, site.css.scss */
+  /* line 1405, site.css.scss */
   .topics .topic {
     margin: 1.25em 0 0 0; }
-  /* line 1409, site.css.scss */
+    /* line 1407, site.css.scss */
+    .topics .topic:first-child {
+      margin-top: 0; }
+  /* line 1413, site.css.scss */
   .topics h2,
   .topics h3 {
     margin: 0;
     position: relative; }
-    /* line 1413, site.css.scss */
+    /* line 1417, site.css.scss */
     .topics h2 .number,
     .topics h3 .number {
       display: none;
@@ -1425,19 +1429,19 @@ html.svg #copyright {
       background-size: 36px 32px;
       color: #fff;
       text-align: center; }
-  /* line 1432, site.css.scss */
+  /* line 1436, site.css.scss */
   .topics h2,
   .topics h3,
   .topics p {
     margin-right: 0;
     display: inline; }
 
-/* line 1441, site.css.scss */
+/* line 1445, site.css.scss */
 html.svg .topics h2 .number,
 html.svg .topics h3 .number {
   background-image: url(../images/bg-vignette.svg); }
 
-/* line 1447, site.css.scss */
+/* line 1451, site.css.scss */
 #cookies {
   display: none;
   background: #000;
@@ -1445,17 +1449,17 @@ html.svg .topics h3 .number {
   color: #888888;
   color: #fff;
   padding: 8px 20px 16px 20px; }
-  /* line 1453, site.css.scss */
+  /* line 1457, site.css.scss */
   #cookies p {
     font-size: 13px;
     line-height: 1.30769;
     display: inline-block;
     margin: 8px .5em 0 0; }
-  /* line 1461, site.css.scss */
+  /* line 1465, site.css.scss */
   #cookies a {
     color: #fff;
     text-decoration: underline; }
-    /* line 1465, site.css.scss */
+    /* line 1469, site.css.scss */
     #cookies a.action {
       display: inline-block;
       background: #2b912c;
@@ -1463,22 +1467,22 @@ html.svg .topics h3 .number {
       font-size: 13px;
       margin: 8px 0 0 0;
       text-decoration: none; }
-      /* line 1473, site.css.scss */
+      /* line 1477, site.css.scss */
       #cookies a.action:hover {
         background: #616161; }
-      /* line 1477, site.css.scss */
+      /* line 1481, site.css.scss */
       #cookies a.action:active {
         background: #737373; }
 
-/* line 1484, site.css.scss */
+/* line 1488, site.css.scss */
 .front .article-section.news-posts {
   margin-top: 30px; }
 
-/* line 1489, site.css.scss */
+/* line 1493, site.css.scss */
 .ui-tabs-hide {
   display: none; }
 
-/* line 1492, site.css.scss */
+/* line 1496, site.css.scss */
 .ui-tabs-nav .ui-state-active a {
   background: #00730a; }
 @media only screen and (min-width: 300px) and (max-width: 767px) {
