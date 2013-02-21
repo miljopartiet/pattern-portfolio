@@ -237,26 +237,10 @@
       remote: true,
       inlined: true,
       itemTemplate: function(item, query) {
-        var html = ['<li><a href="'+item.href+'">'],
-        name = item.name,
-        matches = [],
-        words = query.split(' ');
-
-        for (var i = 0, j = words.length; i < j; i++) {
-          var word_matches = name.match(new RegExp(words[i], 'gi'));
-          if (word_matches) {
-            matches = matches.concat(word_matches);
-          }
-        }
-
-        if (matches.length > 0) {
-          for (var i = 0, j = matches.length; i < j; i++) {
-            name = name.replace(matches[i], '<em>'+ matches[i] +'</em>');
-          }
-        }
+        var html = ['<li><a href="'+item.href+'">'];
 
         html.push('<span class="name">');
-        html.push(name);
+        html.push(item.name);
         html.push('</span>');
         html.push('<span class="category">');
         html.push(item.category);
