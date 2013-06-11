@@ -41,31 +41,40 @@
   padding-bottom: (8em/16);
   width: percentage(300/768);
 
-  a {
-    white-space: nowrap;
-    margin-left: .2em;
-    padding-left: 10px;
-    background: transparent url(../images/bullet.png) 0 50% no-repeat;
-    background-size: 4px 4px;
+  ul.menu {
+    a {
+      white-space: nowrap;
+      margin-left: .2em;
+      padding-left: 10px;
+      background: transparent url(../images/bullet.png) 0 50% no-repeat;
+      background-size: 4px 4px;
 
-    &:hover {
-      color: $green;
+      html.svg & {
+        background-image: url(../images/bullet.svg);
+      }
+
+      &:hover {
+        color: $green;
+      }
     }
-  }
 
-  li:first-child a,
-  .more a {
-    background-image: none;
-    margin-left: 0;
-    padding-left: 0;
-  }
+    li:first-child a,
+    .more a {
+      background-image: none;
+      margin-left: 0;
+      padding-left: 0;
 
+      html.svg & {
+        background-image: none;
+      }
+    }
 
-  .more a {
-    position: absolute;
-    right: 0;
-    bottom: -1.8em;
-    margin-right: 0;
+    .more a {
+      position: absolute;
+      right: 0;
+      bottom: -1.8em;
+      margin-right: 0;
+    }
   }
 
   & > div {
@@ -77,18 +86,6 @@
       border-top: 1px solid $warm-grey;
     }
   }
-}
-
-html.svg #secondary-navigation {
-  a {
-    background-image: url(../images/bullet.svg);
-  }
-
-  li:first-child a,
-  .more a {
-    background-image: none;
-  }
-
 }
 
 article {
