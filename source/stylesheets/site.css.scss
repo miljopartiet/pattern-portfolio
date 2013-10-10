@@ -271,7 +271,6 @@ input + div.description {
 // Media files
 .embedded-video {
   position: relative;
-  padding-top: 25px;
   padding-bottom: 67.5%;
   height: 0;
   overflow: hidden;
@@ -280,10 +279,7 @@ input + div.description {
     padding-bottom: percentage(360/640);
   }
 
-  &.vimeo {
-    padding-top: 0;
-  }
-
+  video,
   iframe,
   object,
   embed {
@@ -1315,7 +1311,7 @@ header.intro + .conversations {
   }
 
   &.text-labels {
-    
+
     span.label {
       display: block;
       font-size: (20em/16);
