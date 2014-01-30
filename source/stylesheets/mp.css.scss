@@ -1,5 +1,5 @@
-/*
-*= require drupal_reset
-*= require site
-*= require layout
-*/
+$supportsMediaQueries: true;
+
+@import "drupal_reset";
+@import "site";
+@import "layout";
