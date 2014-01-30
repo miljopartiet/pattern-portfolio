@@ -60,3 +60,23 @@ $base-line-height: 1.5;
 
   *zoom: 1;
 }
+
+@mixin respond-to($point, $fallback: true, $query1: min, $query2: width) {
+  @if $supportsMediaQueries == true {
+    @media screen and (#{$query1}-#{$query2}: $point) {
+      @content;
+    }
+  } @else if $fallback {
+    @content;
+  }
+}
+
+@mixin respond-between($from, $to, $fallback: true) {
+  @if $supportsMediaQueries == true {
+    @media screen and (min-width: $from) and (max-width: $to) {
+      @content;
+    }
+  } @else if $fallback {
+    @content;
+  }
+}
