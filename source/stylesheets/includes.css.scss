@@ -81,9 +81,15 @@ $base-line-height: 1.5;
   }
 }
 
+// Typography
+%body-text {
+  @include respond-to(768px) {
+    font-size: (18em/16);
+    line-height: (25/18);
+  }
+}
 
 // Placeholders for positioned section elements
-
 %centered-section {
   @include respond-between(600px, 767px) {
     width: (520em/16);

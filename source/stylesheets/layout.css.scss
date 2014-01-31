@@ -2,9 +2,6 @@
 @import "includes.css.scss";
 
 // Tablets
-@media only screen and (min-width: 768px) {
-  @import "768.css.scss";
-}
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   @import "768-1023.css.scss";
