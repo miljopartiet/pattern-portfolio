@@ -96,4 +96,10 @@ $base-line-height: 1.5;
     margin-right: auto;
     margin-left: auto;
   }
+
+  @include respond-between(768px, 1023px) {
+    width: (580em/16);
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

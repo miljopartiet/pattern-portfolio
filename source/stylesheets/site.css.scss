@@ -619,8 +619,20 @@ blockquote {
     padding-left: (20em/16);
   }
 
+  @include respond-between(768px, 1023px) {
+    background: #fff;
+    margin: 0 percentage(30/768) 0 0;
+    padding: (30em/16) 0 (50em/16) percentage(30/768);
+  }
+
   > footer {
     margin-top: (80em/16);
+
+    @include respond-between(768px, 1023px) {
+      width: (580em/16);
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   p,
@@ -665,6 +677,12 @@ blockquote {
     margin-top: -7px;
   }
 
+  @include respond-between(768px, 1023px) {
+    width: (103em/16);
+    margin-right: (20em/16);
+    margin-left: -(45em/16);
+  }
+
   a {
     display: block;
     text-indent: -9999px;
@@ -673,8 +691,18 @@ blockquote {
     background: transparent url(../images/logo.png) 0 0 no-repeat;
     background-size: 100%;
 
+    @include respond-between(768px, 1023px) {
+      height: (90em/16);
+      width: (103em/16);
+      background-size: 100%;
+    }
+
     &:hover {
       background-position: 0 -114px;
+
+      @include respond-between(768px, 1023px) {
+        background-position: 0 ((180em/16) * -1);
+      }
     }
 
     html.svg & {
@@ -1027,6 +1055,14 @@ nav.main-navigation {
     width: percentage(220/768);
   }
 
+  @include respond-between(768px, 1023px) {
+    position: relative;
+    border-bottom: 1px solid $warm-grey;
+    float: right;
+    padding-bottom: (8em/16);
+    width: percentage(300/768);
+  }
+
   ul,
   li {
     display: inline;
@@ -1043,9 +1079,24 @@ nav.main-navigation {
       line-height: (18/14);
       white-space: nowrap;
       margin-right: 0;
+    }
 
-      &:hover {
+    @include respond-to(768px, 1023px) {
+      margin-left: .2em;
+      padding-left: 10px;
+      background: transparent url(../images/bullet.png) 0 50% no-repeat;
+      background-size: 4px 4px;
+    }
+
+    &:hover {
+      @include respond-to(768px) {
         color: $green;
+      }
+    }
+
+    html.svg & {
+      @include respond-to(768px, 1023px) {
+        background-image: url(../images/bullet.svg);
       }
     }
   }
@@ -1056,6 +1107,21 @@ nav.main-navigation {
       right: 0;
       bottom: -1.8em;
       margin-right: 0;
+    }
+  }
+
+  .more a,
+  li:first-child a {
+    @include respond-between(768px, 1023px) {
+      background-image: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    html.svg & {
+      @include respond-between(768px, 1023px) {
+        background-image: none;
+      }
     }
   }
 
@@ -1096,6 +1162,10 @@ nav.main-navigation {
       z-index: 30;
       border-radius: 4px 0 4px 4px;
       text-align: left;
+
+      @include respond-between(768px, 1023px) {
+        border-top: 1px solid $warm-grey;
+      }
 
       ul,
       li {
@@ -1612,6 +1682,10 @@ article {
   // Main image
   .illustration {
     margin-top: (20em/16);
+
+    @include respond-between(768px, 1023px) {
+      margin-top: (20em/16);
+    }
   }
 
   .vignette {
@@ -1633,6 +1707,12 @@ article {
     @include respond-to(600px) {
       font-size: (20em/16);
       line-height: (24/20);
+    }
+
+    @include respond-between(768px, 1023px) {
+      font-size: (22em/16);
+      line-height: (26/22);
+      margin-top: (8em/22);
     }
   }
 
@@ -1686,6 +1766,14 @@ article {
     }
   }
 
+  > p,
+  > ul,
+  > ol {
+    @include respond-between(768px, 1023px) {
+      margin-right: (20em/18);
+    }
+  }
+
   .vignette {
     width: (69em/23);
     height: (62em/23);
@@ -1731,6 +1819,14 @@ article {
 
     &:first-child {
       margin-top: 0;
+    }
+
+    > p,
+    > ul,
+    > ol {
+      @include respond-between(768px, 1023px) {
+        margin-right: (20em/18);
+      }
     }
   }
 
@@ -1909,6 +2005,18 @@ html.svg .icon-list.calendar .icon {
 }
 
 .body {
+  @include respond-between(768px, 1023px) {
+    position: relative;
+  }
+
+  > p,
+  > ul,
+  > ol {
+    @include respond-between(768px, 1023px) {
+      margin-right: (20em/18);
+    }
+  }
+
   figure {
     @include respond-between(300px, 767px) {
       margin-top: (12em/16);
@@ -2197,6 +2305,12 @@ header.intro + .conversations {
       float: none;
       width: 100%;
     }
+
+    @include respond-between(768px, 1023px) {
+      width: 1em;
+      text-align: right;
+      margin: 0 0 0 ((1em + (20em/16)) * -1);
+    }
   }
 
   &.text-labels {
@@ -2209,6 +2323,12 @@ header.intro + .conversations {
         float: none;
         width: 100%;
         margin-right: 0;
+      }
+
+      @include respond-between(768px, 1023px) {
+        text-align: left;
+        margin-left: 0;
+        width: 100%;
       }
     }
 
@@ -2241,6 +2361,10 @@ header.intro + .conversations {
     @include respond-to(768px) {
       @include columns(2, 20px);
       margin-top: 0;
+    }
+
+    @include respond-between(768px, 1023px) {
+      width: 100%;
     }
 
     li {
@@ -2330,6 +2454,10 @@ div.comments {
 
   .topic {
     margin: (20em/16) 0 0 0;
+
+    @include respond-between(768px, 1023px) {
+      margin-right: (20em/16);
+    }
 
     &:first-child {
       margin-top: 0;

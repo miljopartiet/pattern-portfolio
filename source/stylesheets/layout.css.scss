@@ -1,12 +1,6 @@
 @import "compass";
 @import "includes.css.scss";
 
-// Tablets
-
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  @import "768-1023.css.scss";
-}
-
 // Desktop
 @media only screen and (min-width: 1024px) {
   @import "1024.css.scss";
