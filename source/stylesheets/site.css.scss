@@ -25,6 +25,11 @@ h2 {
 h1 {
   font-size: (24em/16);
   line-height: (26/24);
+
+  @include respond-to(600px) {
+    font-size: (33em/16);
+    line-height: (35/33);
+  }
 }
 
 h2 {
@@ -98,6 +103,10 @@ ul ol {
 
 li {
   margin: 0 0 0 1.5em;
+
+  @include respond-to(600px) {
+    margin-left: 0;
+  }
 }
 
 ul.horizontal {
@@ -143,21 +152,7 @@ input[type="search"] {
   -webkit-appearance: textfield;
 }
 
-input[type="email"],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="url"],
-input[type="color"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-textarea {
+%input {
   font-family: $arial;
   font-size: (14em/16);
   line-height: 1;
@@ -172,6 +167,7 @@ textarea {
     border: 1px solid $warm-grey;
     outline: none;
   }
+
   .speech-bubble & {
     border: 1px solid #fff;
     &:focus {
@@ -179,6 +175,32 @@ textarea {
     }
   }
 }
+
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"] {
+  @extend %input;
+
+  @include respond-to(600px) {
+    width: 70%;
+  }
+}
+
+textarea {
+  @extend %input;
+}
+
 input[type="submit"],
 input.form-submit {
   margin: 15px 0 0 0;
@@ -255,11 +277,20 @@ input + div.description {
   .container {
     margin-top: 0;
   }
+
   .column {
     margin: 0;
     width: 100%;
   }
+
+  .c3 {
+    @include respond-to(600px) {
+      margin: 10px 0 0 0;
+      width: percentage(240/520);
+    }
+  }
 }
+
 .text-labels .grid {
   .container {
   }
@@ -322,6 +353,10 @@ figcaption {
       line-height: (22em/20);
       margin: 0 0 (10em/20) 55px;
 
+      @include respond-between(300px, 767px) {
+        margin-left: 45px;
+      }
+
       .meta {
         font-family: $arial;
         font-size: (13em/20);
@@ -339,7 +374,13 @@ figcaption {
       float: left;
       background: transparent url(../images/sources/bg.png) 0 0 no-repeat;
       background-size: 35px 35px;
+
+      @include respond-between(300px, 767px) {
+        width: 25px;
+        margin-left: -45px;
+      }
     }
+
     .mp {
       background-image: none;
     }
@@ -420,6 +461,10 @@ blockquote {
       margin-top: (12em/18);
       margin-left: 1em;
 
+      @include respond-to(600px) {
+        margin-right: (55em/18);
+      }
+
       &:first-child {
         position: relative;
         margin-top: 0;
@@ -447,6 +492,10 @@ blockquote {
     bottom: (-5em/13);
     text-align: right;
     position: relative;
+
+    @include respond-to(600px) {
+      margin-top: -40px;
+    }
 
     p {
       position: absolute;
@@ -496,10 +545,10 @@ blockquote {
 
 #logo {
   width: 57px;
+
   @include respond-between(300px, 767px) {
     float: left;
   }
-
 
   a {
     display: block;
@@ -512,11 +561,11 @@ blockquote {
     &:hover {
       background-position: 0 -114px;
     }
-  }
-}
 
-html.svg #logo a {
-  background-image: url(../images/logo.svg);
+    html.svg & {
+      background-image: url(../images/logo.svg);
+    }
+  }
 }
 
 #logo-full {
@@ -525,11 +574,17 @@ html.svg #logo a {
     text-indent: -9999em;
     margin: (20em/16) 0 (40em/16) 0;
     display: block;
-  }
-}
 
-html.svg #logo-full a {
-  background-image: url(../images/logo-full.svg);
+    @include respond-between(300px, 767px) {
+      height: ((46em*(235/284))) / 16;
+      background-size: (235em/16) ((46em*(235/284)) / 16);
+      background-position: 0 0;
+    }
+
+    html.svg & {
+      background-image: url(../images/logo-full.svg);
+    }
+  }
 }
 
 // Navigation elements
@@ -764,9 +819,34 @@ nav.main-navigation {
       @include respond-between(300px, 767px) {
         width: (120em/14);
       }
+
+      @include respond-to(600px) {
+        width: 70%;
+      }
     }
   }
 }
+
+#skip-to-navigation {
+  @include respond-between(300px, 767px) {
+    @include small-text;
+    font-size: (13em/16);
+    line-height: (17/13);
+    line-height: (25em/13);
+    background: $beige url(../images/arrow-down.png) 89% 50% no-repeat;
+    background-size: 14px 9px;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 0 25px 0 10px;
+  }
+
+  html.svg & {
+    @include respond-between(300px, 767px) {
+      background-image: url(../images/arrow-down.svg);
+    }
+  }
+}
+
 // Breadcrumbs
 // Can be found both in the top of the page
 // and in the page footer
@@ -835,6 +915,10 @@ footer nav.breadcrumbs {
     margin: 0;
     border-radius: 4px;
 
+    @include respond-to(600px) {
+      width: 70%;
+    }
+
     &:focus {
       border: 1px solid $warm-grey;
     }
@@ -879,6 +963,12 @@ html.svg .search button {
   border-radius: 4px 4px 4px 0;
   @include box-sizing(border-box);
 
+  @include respond-between(300px, 767px) {
+    margin-top: (30em/16);
+    margin-bottom: (30em/16);
+    padding: 15px;
+  }
+
   &:after {
     content:"";
     position:absolute;
@@ -895,33 +985,73 @@ html.svg .search button {
 
   h2 {
     margin-top: 0;
+
+    @include respond-between(300px, 767px) {
+      font-size: (18em/16);
+    }
   }
 
   p,
   ul {
     margin-top: (2em/18);
-  }
 
-  form {
-    margin-right: (20em/16);
+    @include respond-between(300px, 767px) {
+      margin-top: (2em/16);
+    }
   }
 
   li {
     margin-left: 1em;
   }
 
-  .aside {
-    margin-top: 1em;
+  form {
+    margin-right: (20em/16);
   }
 
+  .aside {
+    margin-top: 1em;
+
+    @include respond-between(300px, 767px) {
+      margin-top: (10em/16);
+    }
+
+    li {
+      @include respond-between(300px, 767px) {
+        display: inline-block;
+        margin-left: 0;
+        margin-right: .3em;
+      }
+    }
+  }
+
+  &.vcard {
+    .main {
+      @include respond-between(300px, 767px) {
+        margin-top: (10em/16);
+      }
+    }
+
+    li {
+      @include respond-between(300px, 767px) {
+        display: inline-block;
+        margin-left: 0;
+        margin-right: .3em;
+      }
+    }
+  }
+
+  // FIXME what is this I don't even…
   .vcard {
     @include clearfix;
+
     & + .vcard {
       margin-top:1em;
       padding-top:1em;
+
       .organization-name {
         display:none;
       }
+
       p {
         padding-top:10px;
         border-top: 1px solid #d7c82f;
@@ -956,6 +1086,10 @@ form.speech-bubble {
       padding: 7px 20px 7px 10px;
       border-radius: 6px;
       background: #fff;
+
+      @include respond-to(600px) {
+        width: 70%;
+      }
     }
 
     &.active-suggestions {
@@ -980,6 +1114,10 @@ form.speech-bubble {
 
   ul {
     margin-left: 0;
+
+    @include respond-to(600px) {
+      margin-left: 20px;
+    }
   }
 
   a {
@@ -1071,27 +1209,52 @@ article {
     margin-top: (20em/16);
   }
 
+  .vignette {
+    @include respond-between(300px, 767px) {
+      display: none;
+    }
+  }
+
   // Page lead
   .lead p {
     font-size: (18em/16);
     line-height: (22/18);
     margin-top: (8em/18);
+
+    @include respond-between(300px, 767px) {
+      margin-top: (2em/16);
+    }
+
+    @include respond-to(600px) {
+      font-size: (20em/16);
+      line-height: (24/20);
+    }
   }
-}
 
-article + article {
-  margin-top: 40px;
+  + article {
+    margin-top: 40px;
 
-  h1 {
-    padding-top: 20px;
-    border-top: 1px solid $warm-grey;
-    color: #000;
+    @include respond-between(300px, 767px) {
+      margin-top: (30em/16);
+      margin-bottom: (30em/16);
+    }
+
+    h1 {
+      padding-top: 20px;
+      border-top: 1px solid $warm-grey;
+      color: #000;
+    }
   }
 }
 
 // Article sections after the main content
 .article-section {
   margin-top: (60em/16);
+
+  @include respond-between(300px, 767px) {
+    margin-top: (30em/16);
+    margin-bottom: (30em/16);
+  }
 
   header {
     border-bottom: 1px solid $warm-grey;
@@ -1243,6 +1406,10 @@ html.svg .icon-list.calendar .icon {
     padding-top: (8em/13);
     margin: 0 percentage(75/620) 0 percentage(70/620);
 
+    @include respond-between(300px, 767px) {
+      margin-right: 0;
+    }
+
     .topic {
       display: block;
     }
@@ -1307,9 +1474,43 @@ html.svg .icon-list.calendar .icon {
   }
 }
 
-.body .conversations {
-  .fetch-more {
-    margin-left: percentage(70/620);
+.body {
+  figure {
+    @include respond-between(300px, 767px) {
+      margin-top: (12em/16);
+    }
+
+    @include respond-to(600px) {
+      margin-top: (20em/16);
+    }
+
+    &.right,
+    &.left {
+      @include respond-to(600px) {
+        width: percentage(240/600);
+        margin: (10em/16) 0;
+      }
+    }
+
+    &.right {
+      @include respond-to(600px) {
+        float: right;
+        margin-left: (20em/16);
+      }
+    }
+
+    &.left {
+      @include respond-to(600px) {
+        float: left;
+        margin-right: (20em/16);
+      }
+    }
+  }
+
+  .conversations {
+    .fetch-more {
+      margin-left: percentage(70/620);
+    }
   }
 }
 
@@ -1337,12 +1538,16 @@ html.svg .icon-list.calendar .icon {
     z-index: 1;
     padding: 20px 25px;
 
-    p:first-child {
-      margin: 0;
+    @include respond-between(300px, 767px) {
+      padding: 15px 20px;
     }
 
     p {
       color: #2A2A2A;
+
+      &:first-child {
+        margin: 0;
+      }
     }
   }
 
@@ -1377,6 +1582,10 @@ html.svg .icon-list.calendar .icon {
     margin-bottom: -.75em;
     margin-right: percentage(110/620);
 
+    @include respond-between(300px, 767px) {
+      margin-right: percentage(70/510);
+    }
+
     .content {
       padding-bottom: 25px;
       background: $yellow;
@@ -1392,6 +1601,10 @@ html.svg .icon-list.calendar .icon {
         content: "";
         background: rgba(0, 0, 0, .04);
         border-radius: 3px 0 3px 0;
+
+        @include respond-between(300px, 767px) {
+          width: percentage(445/510);
+        }
       }
 
       p {
@@ -1423,6 +1636,10 @@ html.svg .icon-list.calendar .icon {
     margin-left: percentage(70/620);
     margin-right: percentage(75/620);
 
+    @include respond-between(300px, 767px) {
+      margin-right: 0;
+    }
+
     .content {
       padding-top: 25px;
       background: $beige;
@@ -1446,6 +1663,12 @@ html.svg .icon-list.calendar .icon {
         right: percentage(-24/620);
         border-left: 25px solid $beige;
       }
+    }
+  }
+
+  img {
+    @include respond-between(300px, 767px) {
+      display: none;
     }
   }
 }
@@ -1509,11 +1732,16 @@ header.intro + .conversations {
   }
 
   &.text-labels {
-
-    span.label {
+    .label {
       display: block;
       font-size: (20em/16);
       line-height: (22/20);
+
+      @include respond-between(300px, 767px) {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+      }
     }
 
     h2.label {
@@ -1541,7 +1769,12 @@ header.intro + .conversations {
       vertical-align: top;
       word-wrap: break-word;
       line-height:(18em/16);
+
+      @include respond-to(600px) {
+        margin-left:1.5em;
+      }
     }
+
     // Fix missing column-break-inside support
     a {
       display: inline-block;
@@ -1603,6 +1836,7 @@ html.svg #copyright {
 
   .topic {
     margin: (20em/16) 0 0 0;
+
     &:first-child {
       margin-top: 0;
     }
@@ -1635,6 +1869,13 @@ html.svg #copyright {
   p {
     margin-right: 0;
     display: inline;
+  }
+
+  h2 {
+    @include respond-between(300px, 767px) {
+      font-size: (20em/16);
+      padding-right: 0;
+    }
   }
 }
 
