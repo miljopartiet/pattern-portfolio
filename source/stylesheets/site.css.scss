@@ -259,6 +259,10 @@ input + div.description {
   .container {
     margin-top: (20em/16);
     width: percentage(304/284);
+
+    @include respond-between(600px, 767px) {
+      width: percentage(540/520);
+    }
   }
 
   .column {
@@ -269,6 +273,10 @@ input + div.description {
     &.c2,
     &.c3 {
       width: percentage(132/304);
+
+      @include respond-between(600px, 767px) {
+        width: percentage(250/540);
+      }
     }
   }
 }
@@ -527,19 +535,31 @@ blockquote {
   @include respond-between(300px, 767px) {
     margin: 0 18px;
   }
-}
 
-#wrap > footer {
-  margin-top: (80em/16);
+  @include respond-between(600px, 767px) {
+    background: #fff;
+    margin: 0 (20em/16) 0 0;
+    padding-top: (20em/16);
+    padding-left: (20em/16);
+  }
+
+  > footer {
+    margin-top: (80em/16);
+  }
 }
 
 #site-banner {
   @include clearfix;
   position: relative;
   margin-bottom: (20em/16);
+  @extend %centered-section;
 
   @include respond-between(300px, 767px) {
     padding-top: 18px;
+  }
+
+  @include respond-between(600px, 767px) {
+    padding-top: 0;
   }
 }
 
@@ -569,6 +589,13 @@ blockquote {
 }
 
 #logo-full {
+  @extend %centered-section;
+
+  @include respond-between(600px, 767px) {
+    height: (46em/18);
+    background-size: (284em/18) (46em/18);
+  }
+
   a {
     background: transparent url(../images/logo-full.png) 100% 0 no-repeat;
     text-indent: -9999em;
@@ -654,9 +681,15 @@ nav.main-navigation {
   }
 
   .inner {
+    @extend %centered-section;
+
     @include respond-between(300px, 767px) {
       padding: 0 18px;
       @include clearfix;
+    }
+
+    @include respond-between(600px, 767px) {
+      padding: 0;
     }
   }
 
@@ -756,6 +789,10 @@ nav.main-navigation {
     text-align: right;
   }
 
+  @include respond-between(600px, 767px) {
+    padding-top: 0;
+  }
+
   ul,
   li {
     display: inline;
@@ -847,16 +884,27 @@ nav.main-navigation {
   }
 }
 
+#main {
+  @extend %centered-section;
+}
+
 // Breadcrumbs
 // Can be found both in the top of the page
 // and in the page footer
 nav.breadcrumbs {
   display: block;
+  @extend %centered-section;
 
   // The breadcrumbs is not used in the mobile view
   // instead we point users to the more complete site navigation
   #wrap > & {
     display: none;
+
+    @include respond-between(600px, 767px) {
+      border: none;
+      display: block;
+      margin-bottom: (10em/16);
+    }
   }
 
   p {
@@ -1720,6 +1768,10 @@ header.intro + .conversations {
     border-top: 1px solid $warm-grey;
     padding: (20em/16) 0 0 0;
     margin: (20em/16) 0 0 0;
+
+    @include respond-between(600px, 767px) {
+      padding-top: (10em/16);
+    }
   }
 
   .label {
@@ -1729,6 +1781,11 @@ header.intro + .conversations {
     float: left;
     width: percentage(30/284);
     margin-right: percentage(15/284);
+
+    @include respond-between(600px, 767px) {
+      float: none;
+      width: 100%;
+    }
   }
 
   &.text-labels {
@@ -1758,6 +1815,13 @@ header.intro + .conversations {
     list-style: disc;
     float: left;
     width: percentage(194/284);
+
+    @include respond-between(600px, 767px) {
+      margin-top: (10em/16);
+      float: none;
+      width: 100%;
+      @include columns(2, 20px);
+    }
 
     li {
       -webkit-column-break-inside: avoid;
@@ -1823,10 +1887,16 @@ div.comments {
   padding-left: (35em/12);
   background: transparent url(../images/cc.png) 0 2px no-repeat;
   background-size: 20px 20px;
-}
+  @extend %centered-section;
 
-html.svg #copyright {
-  background-image: url(../images/cc.svg);
+  @include respond-between(600px, 767px) {
+    width: 520px;
+    @include box-sizing(border-box);
+  }
+
+  html.svg & {
+    background-image: url(../images/cc.svg);
+  }
 }
 
 .topics {

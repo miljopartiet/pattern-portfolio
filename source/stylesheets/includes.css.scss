@@ -80,3 +80,14 @@ $base-line-height: 1.5;
     @content;
   }
 }
+
+
+// Placeholders for positioned section elements
+
+%centered-section {
+  @include respond-between(600px, 767px) {
+    width: (520em/16);
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
