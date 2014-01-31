@@ -35,6 +35,11 @@ h1 {
     font-size: (37em/16);
     line-height: (37em/37);
   }
+
+  @include respond-to(1024px) {
+    font-size: (42em/16);
+    line-height: 1.1;
+  }
 }
 
 h2 {
@@ -287,6 +292,10 @@ input + div.description {
     @include respond-to(768px) {
       width: percentage(600/580);
     }
+
+    @include respond-to(1024px) {
+      width: percentage(660/640);
+    }
   }
 
   .column {
@@ -307,11 +316,19 @@ input + div.description {
       @include respond-to(768px) {
         width: percentage(280/600);
       }
+
+      @include respond-to(1024px) {
+        width: percentage(310/660);
+      }
     }
 
     &.c3 {
       @include respond-to(768px) {
         width: percentage(180/600);
+      }
+
+      @include respond-to(1024px) {
+        width: percentage(200/660);
       }
     }
   }
@@ -322,12 +339,21 @@ input + div.description {
     width: 100%;
   }
 
+  @include respond-to(1024px) {
+    width: percentage(620/855);
+  }
+
   .container {
     margin-top: 0;
 
     @include respond-to(768px) {
       margin: 0;
       width: percentage(600/580);
+    }
+
+    @include respond-to(1024px) {
+      margin: 0;
+      width: percentage(640/620);
     }
   }
 
@@ -345,6 +371,11 @@ input + div.description {
     @include respond-to(768px) {
       width: percentage(280/600);
     }
+
+    @include respond-to(1024px) {
+      width: percentage(193/640);
+      margin: 0 percentage(20/640) 0 0;
+    }
   }
 
   ul {
@@ -352,11 +383,18 @@ input + div.description {
       margin-left: 1.2em;
       font-size: (16em/18);
     }
+
+    @include respond-to(1024px) {
+      margin-top: 0;
+    }
   }
 }
 
 .text-labels .grid {
   .container {
+    @include respond-to(1024px) {
+      width: percentage(620/690);
+    }
   }
 }
 
@@ -526,7 +564,22 @@ blockquote {
     overflow: visible;
   }
 
+  @include respond-to(1024px) {
+    @include clearfix;
+    padding-bottom: 0;
+    position: relative;
+    width: percentage(805/640);
+    min-height:120px;
+  }
+
   & > div {
+    @include respond-to(1024px) {
+      margin-bottom: .5em;
+      padding-left: 0;
+      float: left;
+      width: percentage(640/805);
+    }
+
     p {
       font-family: $swift;
       font-size: (18em/16);
@@ -562,6 +615,12 @@ blockquote {
     }
   }
 
+  &.image > div {
+    @include respond-to(1024px) {
+      width: percentage(485/805);
+    }
+  }
+
   footer {
     @include clearfix;
     @include small-text;
@@ -576,6 +635,16 @@ blockquote {
       margin-top: -40px;
     }
 
+    @include respond-to(1024px) {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 1em;
+      width: percentage(320/805);
+      text-align: left;
+    }
+
     p {
       position: absolute;
       bottom: .5em;
@@ -586,16 +655,44 @@ blockquote {
         font-size: (14em/13);
         line-height: (18/14);
       }
+
+      @include respond-to(1024px) {
+        float: left;
+        padding: 0;
+        width: percentage(145/320);
+        position: static;
+        margin: 0 0 0 175px;
+      }
     }
 
     img {
       float: right;
       width: percentage(45/320);
       margin: 0 percentage(6/320) 0 percentage(13/320);
+
+      @include respond-to(1024px) {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 145px;
+        margin: 0 0 0 0;
+      }
     }
 
     .title {
       color: $text-light-grey;
+    }
+
+    .name {
+      @include respond-to(1024px) {
+        text-decoration: underline;
+      }
+
+      &:hover {
+        @include respond-to(1024px) {
+          text-decoration: none;
+        }
+      }
     }
   }
 }
@@ -623,6 +720,13 @@ blockquote {
     background: #fff;
     margin: 0 percentage(30/768) 0 0;
     padding: (30em/16) 0 (50em/16) percentage(30/768);
+  }
+
+  @include respond-to(1024px) {
+    margin-top:0;
+    padding-top: (40em/16);
+    padding-bottom: (40em/16);
+    max-width: (970em/16);
   }
 
   > footer {
@@ -683,6 +787,11 @@ blockquote {
     margin-left: -(45em/16);
   }
 
+  @include respond-to(1024px) {
+    width: (165em/16);
+    margin: 0;
+  }
+
   a {
     display: block;
     text-indent: -9999px;
@@ -697,11 +806,20 @@ blockquote {
       background-size: 100%;
     }
 
+    @include respond-to(1024px) {
+      width: (130em/16);
+      height: (114em/16);
+    }
+
     &:hover {
       background-position: 0 -114px;
 
       @include respond-between(768px, 1023px) {
         background-position: 0 ((180em/16) * -1);
+      }
+
+      @include respond-to(1024px) {
+        background-position: 0 ((228em/16) * -1);
       }
     }
 
@@ -736,6 +854,10 @@ blockquote {
       background-size: (290em/18) (46em/18);
     }
 
+    @include respond-to(1024px) {
+      margin-right: (185em/18);
+    }
+
     html.svg & {
       background-image: url(../images/logo-full.svg);
     }
@@ -762,6 +884,11 @@ blockquote {
     margin: 0;
     font-size: (13em/18);
     line-height: (25.1/13);
+
+    @include respond-to(1024px) {
+      font-size: (16em/18);
+      line-height: (30/16);
+    }
   }
 
   a {
@@ -774,6 +901,11 @@ blockquote {
     color: #fff;
     border-radius: 3px;
 
+    @include respond-to(1024px) {
+      margin-top: (2em/16);
+      padding: 0 0 0 (15em/16);
+    }
+
     &:hover {
       background-color: $green-dark;
     }
@@ -785,6 +917,11 @@ blockquote {
     padding-right: (18em/16);
     background: transparent url(../images/arrows-right.png) 100% 6px no-repeat;
     background-size: 9px 128px;
+
+    @include respond-to(1024px) {
+      padding-right: (23em/16);
+      background-position: 100% 8px;
+    }
 
     html.svg & {
       background-image: url(../images/arrows-right.svg);
@@ -800,6 +937,10 @@ blockquote {
     font-size: (16em/18);
     line-height: (36/16);
 
+    @include respond-to(1024px) {
+      font-size: (20em/18);
+    }
+
     a {
       color: #fff;
       margin-left: -20px;
@@ -813,10 +954,34 @@ blockquote {
   }
 
   li.active-trail {
+    a {
+      @include respond-to(1024px) {
+        padding-right: (25em/20);
+      }
+    }
+
     span {
       background-color: $green-dark;
       background: transparent;
       padding: 0;
+    }
+  }
+
+  li:first-child {
+    .front & {
+      a {
+        @include respond-to(1024px) {
+          padding-right: 0;
+        }
+      }
+
+      span {
+        @include respond-to(1024px) {
+          margin-right:14px;
+          background-position: 100% 15px;
+          padding-right: (15em/16);
+        }
+      }
     }
   }
 }
@@ -830,8 +995,28 @@ blockquote {
     margin-right: -18px;
   }
 
-  li a.active {
-    color: $green;
+  li {
+    @include respond-to(1024px) {
+      @include small-text;
+      font-size: (14em/16);
+      line-height: (18em/14);
+    }
+
+    a.active {
+      color: $green;
+    }
+  }
+
+  form {
+    @include respond-to(1024px) {
+      margin-right: 185px;
+    }
+
+    input {
+      @include respond-to(1024px) {
+        width: (220em/14);
+      }
+    }
   }
 }
 
@@ -1063,6 +1248,12 @@ nav.main-navigation {
     width: percentage(300/768);
   }
 
+  @include respond-to(1024px) {
+    width: percentage(275/970);
+    margin-top: (23em/16);
+    margin-right: percentage(115/970);
+  }
+
   ul,
   li {
     display: inline;
@@ -1108,6 +1299,14 @@ nav.main-navigation {
       bottom: -1.8em;
       margin-right: 0;
     }
+
+    @include respond-to(1024px) {
+      right: 5px;
+
+      &.show-less {
+        right: -5px;
+      }
+    }
   }
 
   .more a,
@@ -1130,6 +1329,20 @@ nav.main-navigation {
       text-align: right;
       margin-top: (10em/16);
     }
+
+    @include respond-to(1024px) {
+      text-align: left;
+      margin: - (25em/14) percentage((115/275) * -1) 0 0;
+      float: right;
+      width: percentage(145/275);
+    }
+
+    a {
+      @include respond-to(1024px) {
+        line-height: (20/14);
+        display: block;
+      }
+    }
   }
 
   form {
@@ -1141,6 +1354,11 @@ nav.main-navigation {
 
     @include respond-to(768px) {
       text-align: right;
+    }
+
+    @include respond-to(1024px) {
+      float: left;
+      text-align: left;
     }
 
     input {
@@ -1194,6 +1412,10 @@ nav.main-navigation {
       text-align: right;
     }
 
+    @include respond-to(1024px) {
+      width: (200em/16);
+    }
+
     input {
       @include respond-between(300px, 767px) {
         width: (120em/14);
@@ -1205,6 +1427,10 @@ nav.main-navigation {
 
       @include respond-to(768px) {
         width: (140em/16);
+      }
+
+      @include respond-to(1024px) {
+        width: 100%;
       }
     }
   }
@@ -1236,6 +1462,10 @@ nav.main-navigation {
 
 #main {
   @extend %centered-section;
+
+  @include respond-to(1024px) {
+    margin-left: 165px;
+  }
 }
 
 // Breadcrumbs
@@ -1261,6 +1491,11 @@ nav.breadcrumbs {
       margin: 0 auto;
       margin-bottom: (15em/16);
     }
+
+    @include respond-to(1024px) {
+      width: auto;
+      margin-left: (165em/16);
+    }
   }
 
   footer & {
@@ -1270,6 +1505,10 @@ nav.breadcrumbs {
 
     @include respond-to(768px) {
       border: none;
+    }
+
+    @include respond-to(1024px) {
+      margin-right: 115px;
     }
   }
 
@@ -1385,6 +1624,13 @@ html.svg .search button {
     width: percentage(620/580);
   }
 
+  @include respond-to(1024px) {
+    background: $yellow url(../images/yellow-grain.png) 100% 0 repeat-y;
+    background-size: 20px 50px;
+    margin-right: (145em/16);
+    width: auto;
+  }
+
   &:after {
     content:"";
     position:absolute;
@@ -1447,8 +1693,14 @@ html.svg .search button {
       border-right: 1px solid #d7c82f;
       padding-right: 20px;
       width: percentage(390/570);
+    }
 
-      ul:first-child {
+    @include respond-to(1024px) {
+      width: percentage(390/610);
+    }
+
+    ul:first-child {
+      @include respond-to(768px) {
         margin-top: 0;
       }
     }
@@ -1473,6 +1725,10 @@ html.svg .search button {
       ul:first-child {
         margin-top: 0;
       }
+    }
+
+    @include respond-to(1024px) {
+      width: percentage(200/610);
     }
 
     li {
@@ -1538,11 +1794,33 @@ html.svg .search button {
 }
 
 .vcard {
+  .inner {
+    @include respond-to(1024px) {
+      padding-right: 20px;
+    }
+  }
+
   .main,
   .aside {
     @include respond-to(768px) {
       margin-top: (2em/16);
       width: 50%;
+    }
+
+    @include respond-to(1024px) {
+      margin-top: (10em/16);
+    }
+  }
+
+  .main {
+    @include respond-to(1024px) {
+      width: percentage(320/620);
+    }
+  }
+
+  .aside {
+    @include respond-to(1024px) {
+      width: percentage(300/620);
     }
   }
 }
@@ -1686,6 +1964,28 @@ article {
     @include respond-between(768px, 1023px) {
       margin-top: (20em/16);
     }
+
+    @include respond-to(1024px) {
+      margin-top: (30em/16);
+    }
+
+    figure {
+      > div {
+        @include respond-to(1024px) {
+          float: left;
+          width: percentage(640/805);
+        }
+      }
+
+      figcaption {
+        @include respond-to(1024px) {
+          float: right;
+          width: percentage(145/805);
+          margin: 0 0 0 percentage(20/805);
+          border:none;
+        }
+      }
+    }
   }
 
   .vignette {
@@ -1714,6 +2014,12 @@ article {
       line-height: (26/22);
       margin-top: (8em/22);
     }
+
+    @include respond-to(1024px) {
+      font-size: (26em/16);
+      line-height: (32/26);
+      margin-top: (8em/26);
+    }
   }
 
   + article {
@@ -1728,6 +2034,10 @@ article {
       padding-top: 20px;
       border-top: 1px solid $warm-grey;
       color: #000;
+
+      @include respond-to(1024px) {
+        margin-right: (115em/42);
+      }
     }
   }
 }
@@ -1741,11 +2051,41 @@ article {
     margin-bottom: (30em/16);
   }
 
+  @include respond-to(1024px) {
+    width: percentage(640/805);
+  }
+
   header {
     border-bottom: 1px solid $warm-grey;
     margin-bottom: -1px;
     position: relative;
     padding: 0 0 0.2em 0;
+
+    @include respond-to(1024px) {
+      width: percentage(695/640);
+      border-top: 1px solid $warm-grey;
+      border-bottom: none;
+      padding: 0;
+    }
+
+    &.vignetted {
+      @include respond-to(1024px) {
+        @include box-sizing(border-box);
+        width: percentage(860/640);
+        margin-left: -165px;
+        padding-left: 165px;
+      }
+
+      .vignette {
+        @include respond-to(1024px) {
+          display: block;
+          font-size: (23em/16);
+          position: absolute;
+          top: -.5em;
+          left: 0;
+        }
+      }
+    }
   }
 
   h2 {
@@ -1771,6 +2111,10 @@ article {
   > ol {
     @include respond-between(768px, 1023px) {
       margin-right: (20em/18);
+    }
+
+    @include respond-to(1024px) {
+      margin-right: (60em/18);
     }
   }
 
@@ -1809,6 +2153,25 @@ article {
 
     a {
       text-decoration: none;
+
+      @include respond-to(1024px) {
+        text-decoration: underline;
+      }
+
+      &:hover {
+        @include respond-to(1024px) {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .section-lead {
+    @include respond-to(1024px) {
+      margin-top: (20em/14);
+      float: right;
+      width: percentage(145/695);
+      margin-right: - percentage(115/695);
     }
   }
 
@@ -1816,6 +2179,12 @@ article {
   .article-subsection {
     margin-top: (20em/16);
     border-top: 1px solid $warm-grey;
+
+    @include respond-to(1024px) {
+      @include box-sizing(border-box);
+      width: percentage(695/640);
+      padding-right: percentage(55/640);
+    }
 
     &:first-child {
       margin-top: 0;
@@ -1826,6 +2195,10 @@ article {
     > ol {
       @include respond-between(768px, 1023px) {
         margin-right: (20em/18);
+      }
+
+      @include respond-to(1024px) {
+        margin-right: (60em/18);
       }
     }
   }
@@ -1838,6 +2211,10 @@ article {
   .subsection-header {
     padding: 0 0 0.4em 0;
     border-bottom: 1px solid $warm-grey;
+
+    @include respond-to(1024px) {
+      width: percentage(695/640);
+    }
 
     h3,
     .subsection-lead {
@@ -1924,6 +2301,16 @@ html.svg .icon-list.calendar .icon {
 }
 
 .conversations {
+  @include clearfix;
+
+  .article-section {
+    @include respond-to(1024px) {
+      @include clearfix;
+      width: percentage(695/805);
+      border-top: 1px solid $warm-grey;
+    }
+  }
+
   .details {
     @include small-text;
     font-size: (13em/16);
@@ -1940,6 +2327,16 @@ html.svg .icon-list.calendar .icon {
       line-height: (18/14);
     }
 
+    @include respond-to(1024px) {
+      float: left;
+      border: none;
+      padding-top: 0;
+      margin-top: (20em/14);
+      margin-left: 0;
+      margin-right: percentage(-145/695);
+      width: percentage(145/695);
+    }
+
     .topic {
       display: block;
     }
@@ -1948,6 +2345,25 @@ html.svg .icon-list.calendar .icon {
     .poll-results,
     .toggler {
       margin-top: (12em/13);
+    }
+
+    .voting {
+      .topic {
+        @include respond-to(1024px) {
+          margin-top: (12em/14);
+        }
+      }
+    }
+
+    .meta + .voting {
+      @include respond-to(1024px) {
+        border-top: 1px solid $warm-grey;
+      }
+    }
+
+    .time { @include respond-to(1024px) {
+        display: block;
+      }
     }
 
     .poll-results {
@@ -2002,6 +2418,13 @@ html.svg .icon-list.calendar .icon {
     clear: both;
     padding-top: (40em/16);
   }
+
+  .comments {
+    @include respond-to(1024px) {
+      display: block;
+      margin-top: (12em/14);
+    }
+  }
 }
 
 .body {
@@ -2009,11 +2432,19 @@ html.svg .icon-list.calendar .icon {
     position: relative;
   }
 
+  @include respond-to(1024px) {
+    width: percentage(640/805);
+  }
+
   > p,
   > ul,
   > ol {
     @include respond-between(768px, 1023px) {
       margin-right: (20em/18);
+    }
+
+    @include respond-to(1024px) {
+      margin-right: (60em/18);
     }
   }
 
@@ -2024,6 +2455,12 @@ html.svg .icon-list.calendar .icon {
 
     @include respond-to(600px) {
       margin-top: (20em/16);
+    }
+
+    &.full {
+      @include respond-to(1024px) {
+        margin-right: (60em/16);
+      }
     }
 
     &.right,
@@ -2039,12 +2476,43 @@ html.svg .icon-list.calendar .icon {
         float: right;
         margin-left: (20em/16);
       }
+
+      @include respond-to(1024px) {
+        position: relative;
+        width: percentage(310/640);
+        margin-right: -55px;
+        padding-top: 10px;
+        border-top: 1px solid $warm-grey;
+      }
+
+      div {
+        @include respond-to(1024px) {
+          width: 235px;
+          float: left;
+          margin-right: 40px;
+        }
+      }
+
+      figcaption {
+        @include respond-to(1024px) {
+          border: none;
+          width: 145px;
+          position: absolute;
+          top: 10px;
+          right: -110px;
+          margin: 0;
+        }
+      }
     }
 
     &.left {
       @include respond-to(600px) {
         float: left;
         margin-right: (20em/16);
+      }
+
+      @include respond-to(1024px) {
+        width: percentage(235/640);
       }
     }
   }
@@ -2060,6 +2528,13 @@ html.svg .icon-list.calendar .icon {
   list-style: none;
   margin: (20em/16) 0 0 0;
   padding: (23em/16) 0;
+
+  @include respond-to(1024px) {
+    float: left;
+    margin-top: (20em/14);
+    margin-right: percentage(40/695);
+    width: percentage(620/695);
+  }
 
   a {
     .read-more {
@@ -2230,14 +2705,27 @@ html.svg .icon-list.calendar .icon {
   }
 }
 
-.body .conversation {
-  .question .content p {
-    font-size: (24em/16);
-    line-height: (26/24);
+.body {
+  .conversation {
+    @include respond-to(1024px) {
+      width: percentage(620/640);
+    }
 
-    @include respond-to(768px) {
-      font-size: (26em/16);
-      line-height: (30/26);
+    .question .content p {
+      font-size: (24em/16);
+      line-height: (26/24);
+
+      @include respond-to(768px) {
+        font-size: (26em/16);
+        line-height: (30/26);
+      }
+    }
+  }
+
+  .details {
+    @include respond-to(1024px) {
+      width: percentage(145/640);
+      margin-right: percentage(-165/640);
     }
   }
 }
@@ -2266,6 +2754,10 @@ header.intro + .conversations {
   img {
     float: right;
     margin: 0.5em 0 5px 20px;
+
+    @include respond-to(1024px) {
+      margin-right: 20px
+    }
   }
 
   img + p {
@@ -2280,6 +2772,11 @@ header.intro + .conversations {
   @include respond-to(768px) {
     width: 580px;
     margin: auto;
+  }
+
+  @include respond-to(1024px) {
+    width: percentage(855/970);
+    margin: 0;
   }
 
   .group {
@@ -2311,6 +2808,14 @@ header.intro + .conversations {
       text-align: right;
       margin: 0 0 0 ((1em + (20em/16)) * -1);
     }
+
+    @include respond-to(1024px) {
+      float: left;
+      text-align: left;
+      width: percentage(165/855);
+      margin-right: 0;
+      margin-left: 0;
+    }
   }
 
   &.text-labels {
@@ -2330,10 +2835,21 @@ header.intro + .conversations {
         margin-left: 0;
         width: 100%;
       }
+
+      @include respond-to(1024px) {
+        float: none;
+        width: 100%;
+      }
     }
 
     h2.label {
       margin-top:0;
+    }
+
+    .group {
+      @include respond-to(1024px) {
+        padding-left: percentage(165/855);
+      }
     }
 
     .list {
@@ -2341,6 +2857,12 @@ header.intro + .conversations {
 
       @include respond-to(768px) {
         margin-top: (10em/16);
+      }
+
+      @include respond-to(1024px) {
+        @include columns(3, 20px);
+        margin-top: 0;
+        width: percentage(640/690);
       }
     }
   }
@@ -2365,6 +2887,12 @@ header.intro + .conversations {
 
     @include respond-between(768px, 1023px) {
       width: 100%;
+    }
+
+    @include respond-to(1024px) {
+      @include columns(3, 20px);
+      margin-top: 0;
+      width: percentage(640/855);
     }
 
     li {
@@ -2400,8 +2928,19 @@ header.intro + .conversations {
   }
 }
 
+.labeled-list-container {
+  @include respond-to(1024px) {
+    width: percentage(970/805);
+    margin-left: - percentage(165/805);
+  }
+}
+
 div.comments {
   margin-top: 20px;
+
+  @include respond-to(1024px) {
+    margin-right: 20px;
+  }
 }
 
 .tabbed {
@@ -2409,6 +2948,10 @@ div.comments {
     padding: 0;
     margin-top: 56px;
     margin-bottom: 56px;
+
+    @include respond-to(1024px) {
+      padding: 0;
+    }
   }
 
   .article-subsection {
@@ -2419,14 +2962,26 @@ div.comments {
     margin: 0 0 -14px 0;
     list-style: none;
 
+    @include respond-to(1024px) {
+      margin-top: -17px;
+    }
+
     li {
       display: inline;
       margin: 0;
+
+      @include respond-to(1024px) {
+        margin: 0;
+      }
     }
 
     a.action {
       font-size: (12em/16);
       margin-right: (20em/12);
+
+      @include respond-to(1024px) {
+        font-size: (14em/18);
+      }
     }
   }
 }
@@ -2440,6 +2995,10 @@ div.comments {
   @include respond-between(600px, 767px) {
     width: 520px;
     @include box-sizing(border-box);
+  }
+
+  @include respond-to(1024px) {
+    margin-right: (185em/12);
   }
 
   html.svg & {
@@ -2457,6 +3016,10 @@ div.comments {
 
     @include respond-between(768px, 1023px) {
       margin-right: (20em/16);
+    }
+
+    @include respond-to(1024px) {
+      margin-right: (60em/16);
     }
 
     &:first-child {
@@ -2561,6 +3124,11 @@ html.svg .topics {
 }
 
 .news-posts .icon-list {
+  @include respond-to(1024px) {
+    width: auto;
+    margin-right: (20em/18);
+  }
+
   li {
     @include respond-to(768px) {
       font-size: (26em/18);
@@ -2585,6 +3153,10 @@ html.svg .topics {
   a {
     @include respond-to(768px) {
       margin: 0;
+    }
+
+    @include respond-to(1024px) {
+      margin-right: (35em/22);
     }
   }
 
