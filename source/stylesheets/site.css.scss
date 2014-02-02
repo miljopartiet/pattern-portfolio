@@ -25,12 +25,33 @@ h2 {
 h1 {
   font-size: (24em/16);
   line-height: (26/24);
+
+  @include respond-to(600px) {
+    font-size: (33em/16);
+    line-height: (35/33);
+  }
+
+  @include respond-to(768px) {
+    font-size: (37em/16);
+    line-height: (37em/37);
+  }
+
+  @include respond-to(1024px) {
+    font-size: (42em/16);
+    line-height: 1.1;
+  }
 }
 
 h2 {
   margin-top: (24em/20);
   font-size: (20em/16);
   line-height: (22/20);
+
+  @include respond-to(768px) {
+    font-size: (26em/16);
+    line-height: (30/26);
+    margin-top: 1em;
+  }
 }
 
 h3 {
@@ -39,6 +60,11 @@ h3 {
   margin-top: (18em/18);
   font-weight: normal;
   font-family: $swift;
+
+  @include respond-to(768px) {
+    font-size: (20em/16);
+    line-height: (22/20);
+  }
 }
 
 h4 {
@@ -46,25 +72,24 @@ h4 {
   font-weight:bold;
   font-size:1em;
   line-height:(18/16);
+  @extend %body-text;
 }
 
 p {
   margin-top: (12em/16);
+  @extend %body-text;
 }
 
-h2 {
-  & + p,
-  & + ul,
-  & + ol {
-    margin-top: (6em/16);
-  }
-}
-
+h2,
 h3 {
-  & + p,
-  & + ul,
-  & + ol {
+  + p,
+  + ul,
+  + ol {
     margin-top: (6em/16);
+
+    @include respond-to(768px) {
+      margin-top: (4em/18);
+    }
   }
 }
 
@@ -98,6 +123,15 @@ ul ol {
 
 li {
   margin: 0 0 0 1.5em;
+  @extend %body-text;
+
+  @include respond-to(600px) {
+    margin-left: 0;
+  }
+
+  li {
+    font-size: 1em;
+  }
 }
 
 ul.horizontal {
@@ -143,21 +177,7 @@ input[type="search"] {
   -webkit-appearance: textfield;
 }
 
-input[type="email"],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="url"],
-input[type="color"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-textarea {
+%input {
   font-family: $arial;
   font-size: (14em/16);
   line-height: 1;
@@ -172,6 +192,7 @@ textarea {
     border: 1px solid $warm-grey;
     outline: none;
   }
+
   .speech-bubble & {
     border: 1px solid #fff;
     &:focus {
@@ -179,6 +200,32 @@ textarea {
     }
   }
 }
+
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"] {
+  @extend %input;
+
+  @include respond-to(600px) {
+    width: 70%;
+  }
+}
+
+textarea {
+  @extend %input;
+}
+
 input[type="submit"],
 input.form-submit {
   margin: 15px 0 0 0;
@@ -237,6 +284,18 @@ input + div.description {
   .container {
     margin-top: (20em/16);
     width: percentage(304/284);
+
+    @include respond-between(600px, 767px) {
+      width: percentage(540/520);
+    }
+
+    @include respond-to(768px) {
+      width: percentage(600/580);
+    }
+
+    @include respond-to(1024px) {
+      width: percentage(660/640);
+    }
   }
 
   .column {
@@ -247,21 +306,95 @@ input + div.description {
     &.c2,
     &.c3 {
       width: percentage(132/304);
+
+      @include respond-between(600px, 767px) {
+        width: percentage(250/540);
+      }
+    }
+
+    &.c2 {
+      @include respond-to(768px) {
+        width: percentage(280/600);
+      }
+
+      @include respond-to(1024px) {
+        width: percentage(310/660);
+      }
+    }
+
+    &.c3 {
+      @include respond-to(768px) {
+        width: percentage(180/600);
+      }
+
+      @include respond-to(1024px) {
+        width: percentage(200/660);
+      }
     }
   }
 }
 
 .labeled-list .grid {
+  @include respond-to(768px) {
+    width: 100%;
+  }
+
+  @include respond-to(1024px) {
+    width: percentage(620/855);
+  }
+
   .container {
     margin-top: 0;
+
+    @include respond-to(768px) {
+      margin: 0;
+      width: percentage(600/580);
+    }
+
+    @include respond-to(1024px) {
+      margin: 0;
+      width: percentage(640/620);
+    }
   }
+
   .column {
     margin: 0;
     width: 100%;
   }
+
+  .c3 {
+    @include respond-to(600px) {
+      margin: 10px 0 0 0;
+      width: percentage(240/520);
+    }
+
+    @include respond-to(768px) {
+      width: percentage(280/600);
+    }
+
+    @include respond-to(1024px) {
+      width: percentage(193/640);
+      margin: 0 percentage(20/640) 0 0;
+    }
+  }
+
+  ul {
+    @include respond-to(768px) {
+      margin-left: 1.2em;
+      font-size: (16em/18);
+    }
+
+    @include respond-to(1024px) {
+      margin-top: 0;
+    }
+  }
 }
+
 .text-labels .grid {
   .container {
+    @include respond-to(1024px) {
+      width: percentage(620/690);
+    }
   }
 }
 
@@ -301,6 +434,11 @@ figcaption {
   line-height: (16/13);
   margin-top: (5em/16);
 
+  @include respond-to(768px) {
+    font-size: (14em/16);
+    line-height: (18/14);
+  }
+
   strong,
   b {
     color: $text-grey;
@@ -322,6 +460,10 @@ figcaption {
       line-height: (22em/20);
       margin: 0 0 (10em/20) 55px;
 
+      @include respond-between(300px, 767px) {
+        margin-left: 45px;
+      }
+
       .meta {
         font-family: $arial;
         font-size: (13em/20);
@@ -339,7 +481,13 @@ figcaption {
       float: left;
       background: transparent url(../images/sources/bg.png) 0 0 no-repeat;
       background-size: 35px 35px;
+
+      @include respond-between(300px, 767px) {
+        width: 25px;
+        margin-left: -45px;
+      }
     }
+
     .mp {
       background-image: none;
     }
@@ -412,13 +560,42 @@ blockquote {
   border-bottom: 1px solid $warm-grey;
   color: $text-warm-grey;
 
+  @include respond-to(768px) {
+    overflow: visible;
+  }
+
+  @include respond-to(1024px) {
+    @include clearfix;
+    padding-bottom: 0;
+    position: relative;
+    width: percentage(805/640);
+    min-height:120px;
+  }
+
   & > div {
+    @include respond-to(1024px) {
+      margin-bottom: .5em;
+      padding-left: 0;
+      float: left;
+      width: percentage(640/805);
+    }
+
     p {
       font-family: $swift;
       font-size: (18em/16);
       line-height: (22/18);
       margin-top: (12em/18);
       margin-left: 1em;
+
+      @include respond-to(600px) {
+        margin-right: (55em/18);
+      }
+
+      @include respond-to(768px) {
+        margin-left: 0;
+        font-size: (24em/16);
+        line-height: (28/24);
+      }
 
       &:first-child {
         position: relative;
@@ -438,6 +615,12 @@ blockquote {
     }
   }
 
+  &.image > div {
+    @include respond-to(1024px) {
+      width: percentage(485/805);
+    }
+  }
+
   footer {
     @include clearfix;
     @include small-text;
@@ -448,21 +631,68 @@ blockquote {
     text-align: right;
     position: relative;
 
+    @include respond-to(600px) {
+      margin-top: -40px;
+    }
+
+    @include respond-to(1024px) {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 1em;
+      width: percentage(320/805);
+      text-align: left;
+    }
+
     p {
       position: absolute;
       bottom: .5em;
       left: 0;
       width: percentage(246/320);
+
+      @include respond-to(768px) {
+        font-size: (14em/13);
+        line-height: (18/14);
+      }
+
+      @include respond-to(1024px) {
+        float: left;
+        padding: 0;
+        width: percentage(145/320);
+        position: static;
+        margin: 0 0 0 175px;
+      }
     }
 
     img {
       float: right;
       width: percentage(45/320);
       margin: 0 percentage(6/320) 0 percentage(13/320);
+
+      @include respond-to(1024px) {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 145px;
+        margin: 0 0 0 0;
+      }
     }
 
     .title {
       color: $text-light-grey;
+    }
+
+    .name {
+      @include respond-to(1024px) {
+        text-decoration: underline;
+      }
+
+      &:hover {
+        @include respond-to(1024px) {
+          text-decoration: none;
+        }
+      }
     }
   }
 }
@@ -474,20 +704,93 @@ blockquote {
   position: relative;
   margin: 1.5em auto 0 auto;
   padding-bottom: (40em/16);
-}
 
-#wrap > footer {
-  margin-top: (80em/16);
+  @include respond-between(300px, 767px) {
+    margin: 0 18px;
+  }
+
+  @include respond-between(600px, 767px) {
+    background: #fff;
+    margin: 0 (20em/16) 0 0;
+    padding-top: (20em/16);
+    padding-left: (20em/16);
+  }
+
+  @include respond-between(768px, 1023px) {
+    background: #fff;
+    margin: 0 percentage(30/768) 0 0;
+    padding: (30em/16) 0 (50em/16) percentage(30/768);
+  }
+
+  @include respond-to(1024px) {
+    margin-top:0;
+    padding-top: (40em/16);
+    padding-bottom: (40em/16);
+    max-width: (970em/16);
+  }
+
+  > footer {
+    margin-top: (80em/16);
+
+    @include respond-between(768px, 1023px) {
+      width: (580em/16);
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  p,
+  li {
+    input,
+    textarea {
+      @include respond-to(768px) {
+        font-size: (14em/18);
+      }
+    }
+  }
 }
 
 #site-banner {
   @include clearfix;
   position: relative;
   margin-bottom: (20em/16);
+  @extend %centered-section;
+
+  @include respond-between(300px, 767px) {
+    padding-top: 18px;
+  }
+
+  @include respond-between(600px, 767px) {
+    padding-top: 0;
+  }
+
+  @include respond-to(768px) {
+    margin-bottom: (40em/16);
+  }
 }
 
 #logo {
   width: 57px;
+
+  @include respond-between(300px, 767px) {
+    float: left;
+  }
+
+  @include respond-to(768px) {
+    float: left;
+    margin-top: -7px;
+  }
+
+  @include respond-between(768px, 1023px) {
+    width: (103em/16);
+    margin-right: (20em/16);
+    margin-left: -(45em/16);
+  }
+
+  @include respond-to(1024px) {
+    width: (165em/16);
+    margin: 0;
+  }
 
   a {
     display: block;
@@ -497,39 +800,460 @@ blockquote {
     background: transparent url(../images/logo.png) 0 0 no-repeat;
     background-size: 100%;
 
+    @include respond-between(768px, 1023px) {
+      height: (90em/16);
+      width: (103em/16);
+      background-size: 100%;
+    }
+
+    @include respond-to(1024px) {
+      width: (130em/16);
+      height: (114em/16);
+    }
+
     &:hover {
       background-position: 0 -114px;
+
+      @include respond-between(768px, 1023px) {
+        background-position: 0 ((180em/16) * -1);
+      }
+
+      @include respond-to(1024px) {
+        background-position: 0 ((228em/16) * -1);
+      }
+    }
+
+    html.svg & {
+      background-image: url(../images/logo.svg);
     }
   }
 }
 
-html.svg #logo a {
-  background-image: url(../images/logo.svg);
-}
-
 #logo-full {
+  @extend %centered-section;
+
+  @include respond-between(600px, 767px) {
+    height: (46em/18);
+    background-size: (284em/18) (46em/18);
+  }
+
   a {
     background: transparent url(../images/logo-full.png) 100% 0 no-repeat;
     text-indent: -9999em;
     margin: (20em/16) 0 (40em/16) 0;
     display: block;
+
+    @include respond-between(300px, 767px) {
+      height: ((46em*(235/284))) / 16;
+      background-size: (235em/16) ((46em*(235/284)) / 16);
+      background-position: 0 0;
+    }
+
+    @include respond-to(768px) {
+      height: (46em/18);
+      background-size: (290em/18) (46em/18);
+    }
+
+    @include respond-to(1024px) {
+      margin-right: (185em/18);
+    }
+
+    html.svg & {
+      background-image: url(../images/logo-full.svg);
+    }
   }
 }
 
-html.svg #logo-full a {
-  background-image: url(../images/logo-full.svg);
-}
-
 // Navigation elements
+#top-navigation {
+  float: left;
+  // The top navigation is not used in the mobile view
+  // instead we point users to the more complete site navigation
+  display: none;
+
+  @include respond-to(768px) {
+    display: block;
+  }
+
+  ul {
+    margin: 0 0 0 (20em/18);
+    list-style: none;
+  }
+
+  li {
+    margin: 0;
+    font-size: (13em/18);
+    line-height: (25.1/13);
+
+    @include respond-to(1024px) {
+      font-size: (16em/18);
+      line-height: (30/16);
+    }
+  }
+
+  a {
+    display: inline-block;
+    margin-top: (2em/13);
+    padding: 0 0 0 (12em/13);
+    background: $green;
+    text-decoration: none;
+    font-family: $swift;
+    color: #fff;
+    border-radius: 3px;
+
+    @include respond-to(1024px) {
+      margin-top: (2em/16);
+      padding: 0 0 0 (15em/16);
+    }
+
+    &:hover {
+      background-color: $green-dark;
+    }
+  }
+
+  span {
+    display: block;
+    margin-right: 7px;
+    padding-right: (18em/16);
+    background: transparent url(../images/arrows-right.png) 100% 6px no-repeat;
+    background-size: 9px 128px;
+
+    @include respond-to(1024px) {
+      padding-right: (23em/16);
+      background-position: 100% 8px;
+    }
+
+    html.svg & {
+      background-image: url(../images/arrows-right.svg);
+    }
+  }
+
+  li:first-child a {
+    margin-top: 0;
+  }
+
+  li.active-trail,
+  .front & li:first-child {
+    font-size: (16em/18);
+    line-height: (36/16);
+
+    @include respond-to(1024px) {
+      font-size: (20em/18);
+    }
+
+    a {
+      color: #fff;
+      margin-left: -20px;
+      padding: 0 20px 0 20px;
+    }
+
+    span {
+      margin: 0;
+      background-position: 100% 10px;
+    }
+  }
+
+  li.active-trail {
+    a {
+      @include respond-to(1024px) {
+        padding-right: (25em/20);
+      }
+    }
+
+    span {
+      background-color: $green-dark;
+      background: transparent;
+      padding: 0;
+    }
+  }
+
+  li:first-child {
+    .front & {
+      a {
+        @include respond-to(1024px) {
+          padding-right: 0;
+        }
+      }
+
+      span {
+        @include respond-to(1024px) {
+          margin-right:14px;
+          background-position: 100% 15px;
+          padding-right: (15em/16);
+        }
+      }
+    }
+  }
+}
 
 #site-navigation {
   @include clearfix;
-  li a.active {
-    color: $green;
+  @include respond-between(300px, 767px) {
+    // Expand the navigation to the window border when viewed in the footer
+    position: relative;
+    margin-left: -18px;
+    margin-right: -18px;
+  }
+
+  li {
+    @include respond-to(1024px) {
+      @include small-text;
+      font-size: (14em/16);
+      line-height: (18em/14);
+    }
+
+    a.active {
+      color: $green;
+    }
+  }
+
+  form {
+    @include respond-to(1024px) {
+      margin-right: 185px;
+    }
+
+    input {
+      @include respond-to(1024px) {
+        width: (220em/14);
+      }
+    }
+  }
+}
+
+// This is the site navigation when activated in a mobile view
+#site-top-navigation {
+  @include respond-between(300px, 767px) {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+
+  &.hidden {
+    @include respond-between(300px, 767px) {
+      display: none;
+    }
+  }
+
+  a.close {
+    @include respond-between(300px, 767px) {
+      @include small-text;
+      font-size: (13em/16);
+      line-height: (14/13);
+      display: block;
+      text-align: right;
+      clear: both;
+      border-top: 1px solid #fff;
+    }
+
+    span {
+      @include respond-between(300px, 767px) {
+        display: block;
+        padding: 16px 0;
+        padding-right: 24px;
+        margin-right: 15px;
+        background: $beige url(../images/close.svg) 100% 50% no-repeat;
+        background-size: 14px 14px;
+      }
+    }
+  }
+}
+// Site navigation is found in the bottom of the page
+nav.main-navigation {
+  @include respond-between(300px, 767px) {
+    background: $beige;
+  }
+
+  @include respond-to(768px) {
+    border-top: 1px solid $warm-grey;
+    border-bottom: 1px solid $warm-grey;
+    padding: 15px 0;
+  }
+
+  .inner {
+    @extend %centered-section;
+
+    @include respond-between(300px, 767px) {
+      padding: 0 18px;
+      @include clearfix;
+    }
+
+    @include respond-between(600px, 767px) {
+      padding: 0;
+    }
+
+    > div {
+      @include respond-to(768px) {
+        float: left;
+        width: (170em/16);
+        margin: 0 20px 0 0;
+      }
+    }
+  }
+
+  ul {
+    @include respond-between(300px, 767px) {
+      margin:0;
+      list-style: square;
+      color: $green;
+    }
+
+    @include respond-to(768px) {
+      margin: 0;
+      list-style: none;
+    }
+  }
+
+  li {
+    @include respond-to(768px) {
+      margin: 0;
+      @include small-text;
+      font-size: (14em/16);
+      line-height: (18/14);
+    }
+  }
+
+  a {
+    @include respond-between(300px, 767px) {
+      line-height: 1.5;
+    }
+  }
+
+  .sections {
+    ul {
+      @include respond-between(300px, 767px) {
+        list-style: none;
+      }
+    }
+
+    li {
+      @include respond-between(300px, 767px) {
+        font: normal (18em/16) $swift;
+        margin: 0;
+        border-bottom:1px solid #fff;
+      }
+    }
+
+    a {
+      @include respond-between(300px, 767px) {
+        margin: 0;
+        display: block;
+        line-height: 2.5;
+        background: transparent url(../images/arrows-right.png) 100% -36px no-repeat;
+        background-size: 9px 128px;
+      }
+
+      &:hover {
+        @include respond-between(300px, 767px) {
+          background-position: 100% -100px;
+        }
+      }
+
+      html.svg & {
+        @include respond-between(300px, 767px) {
+          background-image: url(../images/arrows-right.svg);
+        }
+      }
+    }
+  }
+
+  div.first,
+  div.second {
+    @include respond-between(300px, 767px) {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      float: left;
+      width: percentage(144/320);
+    }
+
+    li {
+      @include respond-between(300px, 767px) {
+        list-style: disc;
+        list-style-position: inside;
+        margin-left: 15px;
+        white-space: nowrap;
+      }
+
+      @include respond-to(768px) {
+        border-left: 1px solid $warm-grey;
+        padding-left: 10px;
+      }
+    }
+
+    a {
+      @include respond-between(300px, 767px) {
+        background-image: none;
+      }
+    }
+  }
+
+  div.first {
+    @include respond-to(768px) {
+      width: (100em/16);
+    }
+  }
+
+  div.second {
+    @include respond-between(300px, 767px) {
+      border-left: 1px solid #fff;
+    }
+
+    @include respond-to(768px) {
+      width: (120em/16);
+    }
+  }
+
+  form {
+    @include respond-between(300px, 767px) {
+      display: none;
+    }
+
+    @include respond-to(768px) {
+      text-align:right;
+      float: right;
+    }
+
+    input {
+      @include respond-to(768px) {
+        width: (140em/16);
+      }
+    }
   }
 }
 
 #secondary-navigation {
+  @include respond-between(300px, 767px) {
+    padding-top: 12px;
+    text-align: right;
+  }
+
+  @include respond-between(600px, 767px) {
+    padding-top: 0;
+  }
+
+  @include respond-to(768px) {
+    position: relative;
+    border-bottom: 1px solid $warm-grey;
+    float: right;
+    padding-bottom: (6em/16);
+    width: percentage(220/768);
+  }
+
+  @include respond-between(768px, 1023px) {
+    position: relative;
+    border-bottom: 1px solid $warm-grey;
+    float: right;
+    padding-bottom: (8em/16);
+    width: percentage(300/768);
+  }
+
+  @include respond-to(1024px) {
+    width: percentage(275/970);
+    margin-top: (23em/16);
+    margin-right: percentage(115/970);
+  }
+
   ul,
   li {
     display: inline;
@@ -538,7 +1262,105 @@ html.svg #logo-full a {
   li {
     font-size: (14em/16);
   }
+
+  a {
+    @include respond-to(768px) {
+      @include small-text;
+      font-size: (14em/16);
+      line-height: (18/14);
+      white-space: nowrap;
+      margin-right: 0;
+    }
+
+    @include respond-to(768px, 1023px) {
+      margin-left: .2em;
+      padding-left: 10px;
+      background: transparent url(../images/bullet.png) 0 50% no-repeat;
+      background-size: 4px 4px;
+    }
+
+    &:hover {
+      @include respond-to(768px) {
+        color: $green;
+      }
+    }
+
+    html.svg & {
+      @include respond-to(768px, 1023px) {
+        background-image: url(../images/bullet.svg);
+      }
+    }
+  }
+
+  .more a {
+    @include respond-to(768px) {
+      position: absolute;
+      right: 0;
+      bottom: -1.8em;
+      margin-right: 0;
+    }
+
+    @include respond-to(1024px) {
+      right: 5px;
+
+      &.show-less {
+        right: -5px;
+      }
+    }
+  }
+
+  .more a,
+  li:first-child a {
+    @include respond-between(768px, 1023px) {
+      background-image: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    html.svg & {
+      @include respond-between(768px, 1023px) {
+        background-image: none;
+      }
+    }
+  }
+
+  > div {
+    @include respond-to(768px) {
+      text-align: right;
+      margin-top: (10em/16);
+    }
+
+    @include respond-to(1024px) {
+      text-align: left;
+      margin: - (25em/14) percentage((115/275) * -1) 0 0;
+      float: right;
+      width: percentage(145/275);
+    }
+
+    a {
+      @include respond-to(1024px) {
+        line-height: (20/14);
+        display: block;
+      }
+    }
+  }
+
   form {
+    @include respond-between(300px, 767px) {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: (6em/16);
+    }
+
+    @include respond-to(768px) {
+      text-align: right;
+    }
+
+    @include respond-to(1024px) {
+      float: left;
+      text-align: left;
+    }
+
     input {
       z-index: 50;
       position: relative;
@@ -559,6 +1381,10 @@ html.svg #logo-full a {
       border-radius: 4px 0 4px 4px;
       text-align: left;
 
+      @include respond-between(768px, 1023px) {
+        border-top: 1px solid $warm-grey;
+      }
+
       ul,
       li {
         display: block;
@@ -574,18 +1400,127 @@ html.svg #logo-full a {
       }
     }
   }
+
+  div {
+    @include respond-between(300px, 767px) {
+      display: none;
+    }
+  }
+
+  .search {
+    @include respond-to(768px) {
+      text-align: right;
+    }
+
+    @include respond-to(1024px) {
+      width: (200em/16);
+    }
+
+    input {
+      @include respond-between(300px, 767px) {
+        width: (120em/14);
+      }
+
+      @include respond-to(600px) {
+        width: 70%;
+      }
+
+      @include respond-to(768px) {
+        width: (140em/16);
+      }
+
+      @include respond-to(1024px) {
+        width: 100%;
+      }
+    }
+  }
 }
+
+#skip-to-navigation {
+  @include respond-between(300px, 767px) {
+    @include small-text;
+    font-size: (13em/16);
+    line-height: (17/13);
+    line-height: (25em/13);
+    background: $beige url(../images/arrow-down.png) 89% 50% no-repeat;
+    background-size: 14px 9px;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 0 25px 0 10px;
+  }
+
+  @include respond-to(768px) {
+    display: none;
+  }
+
+  html.svg & {
+    @include respond-between(300px, 767px) {
+      background-image: url(../images/arrow-down.svg);
+    }
+  }
+}
+
+#main {
+  @extend %centered-section;
+
+  @include respond-to(1024px) {
+    margin-left: 165px;
+  }
+}
+
 // Breadcrumbs
 // Can be found both in the top of the page
 // and in the page footer
 nav.breadcrumbs {
   display: block;
+  @extend %centered-section;
+
+  // The breadcrumbs is not used in the mobile view
+  // instead we point users to the more complete site navigation
+  #wrap > & {
+    display: none;
+
+    @include respond-between(600px, 767px) {
+      border: none;
+      display: block;
+      margin-bottom: (10em/16);
+    }
+
+    @include respond-to(768px) {
+      width: (580em/16);
+      margin: 0 auto;
+      margin-bottom: (15em/16);
+    }
+
+    @include respond-to(1024px) {
+      width: auto;
+      margin-left: (165em/16);
+    }
+  }
+
+  footer & {
+    border-top: 1px solid $warm-grey;
+    padding-top: 10px;
+    margin-bottom: 15px;
+
+    @include respond-to(768px) {
+      border: none;
+    }
+
+    @include respond-to(1024px) {
+      margin-right: 115px;
+    }
+  }
 
   p {
     @include small-text;
     font-size: (13em/16);
     line-height: (17/13);
     margin: 0;
+
+    @include respond-to(768px) {
+      font-size: (14em/16);
+    }
   }
 
   a,
@@ -613,17 +1548,11 @@ nav.breadcrumbs {
       padding-right:0;
       background:none;
     }
+
+    html.svg & {
+      background-image: url(../images/breadcrumb-slash.svg);
+    }
   }
-}
-
-html.svg nav.breadcrumbs a {
-  background-image: url(../images/breadcrumb-slash.svg);
-}
-
-footer nav.breadcrumbs {
-  border-top: 1px solid $warm-grey;
-  padding-top: 10px;
-  margin-bottom: 15px;
 }
 
 .search {
@@ -636,6 +1565,10 @@ footer nav.breadcrumbs {
     padding: 3px 20px 3px 10px;
     margin: 0;
     border-radius: 4px;
+
+    @include respond-to(600px) {
+      width: 70%;
+    }
 
     &:focus {
       border: 1px solid $warm-grey;
@@ -681,6 +1614,23 @@ html.svg .search button {
   border-radius: 4px 4px 4px 0;
   @include box-sizing(border-box);
 
+  @include respond-between(300px, 767px) {
+    margin-top: (30em/16);
+    margin-bottom: (30em/16);
+    padding: 15px;
+  }
+
+  @include respond-to(768px) {
+    width: percentage(620/580);
+  }
+
+  @include respond-to(1024px) {
+    background: $yellow url(../images/yellow-grain.png) 100% 0 repeat-y;
+    background-size: 20px 50px;
+    margin-right: (145em/16);
+    width: auto;
+  }
+
   &:after {
     content:"";
     position:absolute;
@@ -697,36 +1647,135 @@ html.svg .search button {
 
   h2 {
     margin-top: 0;
+
+    @include respond-between(300px, 767px) {
+      font-size: (18em/16);
+    }
+
+    @include respond-to(768px) {
+      font-size: (24em/16);
+      line-height: (26/20);
+    }
   }
 
   p,
   ul {
     margin-top: (2em/18);
+
+    @include respond-between(300px, 767px) {
+      margin-top: (2em/16);
+    }
+  }
+
+  li {
+    margin-left: 1em;
+
+    @include respond-to(768px) {
+      line-height: (24/18);
+    }
+  }
+
+  p {
+    @include respond-to(768px) {
+      line-height: (24/18);
+    }
   }
 
   form {
     margin-right: (20em/16);
   }
 
-  li {
-    margin-left: 1em;
+  .main {
+    @include respond-to(768px) {
+      @include box-sizing(border-box);
+      float: left;
+      margin-top: 0;
+      border-right: 1px solid #d7c82f;
+      padding-right: 20px;
+      width: percentage(390/570);
+    }
+
+    @include respond-to(1024px) {
+      width: percentage(390/610);
+    }
+
+    ul:first-child {
+      @include respond-to(768px) {
+        margin-top: 0;
+      }
+    }
   }
 
   .aside {
     margin-top: 1em;
+
+    @include respond-between(300px, 767px) {
+      margin-top: (10em/16);
+    }
+
+    @include respond-to(768px) {
+      @include box-sizing(border-box);
+      float: left;
+      margin-top: 0;
+      margin-left: -1px;
+      padding-left: 20px;
+      border-left: 1px solid #d7c82f;
+      width: percentage(179/570);
+
+      ul:first-child {
+        margin-top: 0;
+      }
+    }
+
+    @include respond-to(1024px) {
+      width: percentage(200/610);
+    }
+
+    li {
+      @include respond-between(300px, 767px) {
+        display: inline-block;
+        margin-left: 0;
+        margin-right: .3em;
+      }
+    }
   }
 
+  &.vcard {
+    .main {
+      @include respond-between(300px, 767px) {
+        margin-top: (10em/16);
+      }
+    }
+
+    li {
+      @include respond-between(300px, 767px) {
+        display: inline-block;
+        margin-left: 0;
+        margin-right: .3em;
+      }
+    }
+  }
+
+  // FIXME what is this I don't even…
   .vcard {
     @include clearfix;
+
     & + .vcard {
       margin-top:1em;
       padding-top:1em;
+
       .organization-name {
         display:none;
       }
+
       p {
         padding-top:10px;
         border-top: 1px solid #d7c82f;
+
+        @include respond-to(768px) {
+          margin-right: 20px;
+        }
+
       }
     }
   }
@@ -740,6 +1789,38 @@ html.svg .search button {
       display: block;
       font-family: $arial;
       font-size: (14em/16);
+    }
+  }
+}
+
+.vcard {
+  .inner {
+    @include respond-to(1024px) {
+      padding-right: 20px;
+    }
+  }
+
+  .main,
+  .aside {
+    @include respond-to(768px) {
+      margin-top: (2em/16);
+      width: 50%;
+    }
+
+    @include respond-to(1024px) {
+      margin-top: (10em/16);
+    }
+  }
+
+  .main {
+    @include respond-to(1024px) {
+      width: percentage(320/620);
+    }
+  }
+
+  .aside {
+    @include respond-to(1024px) {
+      width: percentage(300/620);
     }
   }
 }
@@ -758,6 +1839,10 @@ form.speech-bubble {
       padding: 7px 20px 7px 10px;
       border-radius: 6px;
       background: #fff;
+
+      @include respond-to(600px) {
+        width: 70%;
+      }
     }
 
     &.active-suggestions {
@@ -782,6 +1867,10 @@ form.speech-bubble {
 
   ul {
     margin-left: 0;
+
+    @include respond-to(600px) {
+      margin-left: 20px;
+    }
   }
 
   a {
@@ -871,6 +1960,38 @@ article {
   // Main image
   .illustration {
     margin-top: (20em/16);
+
+    @include respond-between(768px, 1023px) {
+      margin-top: (20em/16);
+    }
+
+    @include respond-to(1024px) {
+      margin-top: (30em/16);
+    }
+
+    figure {
+      > div {
+        @include respond-to(1024px) {
+          float: left;
+          width: percentage(640/805);
+        }
+      }
+
+      figcaption {
+        @include respond-to(1024px) {
+          float: right;
+          width: percentage(145/805);
+          margin: 0 0 0 percentage(20/805);
+          border:none;
+        }
+      }
+    }
+  }
+
+  .vignette {
+    @include respond-between(300px, 767px) {
+      display: none;
+    }
   }
 
   // Page lead
@@ -878,16 +1999,46 @@ article {
     font-size: (18em/16);
     line-height: (22/18);
     margin-top: (8em/18);
+
+    @include respond-between(300px, 767px) {
+      margin-top: (2em/16);
+    }
+
+    @include respond-to(600px) {
+      font-size: (20em/16);
+      line-height: (24/20);
+    }
+
+    @include respond-between(768px, 1023px) {
+      font-size: (22em/16);
+      line-height: (26/22);
+      margin-top: (8em/22);
+    }
+
+    @include respond-to(1024px) {
+      font-size: (26em/16);
+      line-height: (32/26);
+      margin-top: (8em/26);
+    }
   }
-}
 
-article + article {
-  margin-top: 40px;
+  + article {
+    margin-top: 40px;
 
-  h1 {
-    padding-top: 20px;
-    border-top: 1px solid $warm-grey;
-    color: #000;
+    @include respond-between(300px, 767px) {
+      margin-top: (30em/16);
+      margin-bottom: (30em/16);
+    }
+
+    h1 {
+      padding-top: 20px;
+      border-top: 1px solid $warm-grey;
+      color: #000;
+
+      @include respond-to(1024px) {
+        margin-right: (115em/42);
+      }
+    }
   }
 }
 
@@ -895,11 +2046,46 @@ article + article {
 .article-section {
   margin-top: (60em/16);
 
+  @include respond-between(300px, 767px) {
+    margin-top: (30em/16);
+    margin-bottom: (30em/16);
+  }
+
+  @include respond-to(1024px) {
+    width: percentage(640/805);
+  }
+
   header {
     border-bottom: 1px solid $warm-grey;
     margin-bottom: -1px;
     position: relative;
     padding: 0 0 0.2em 0;
+
+    @include respond-to(1024px) {
+      width: percentage(695/640);
+      border-top: 1px solid $warm-grey;
+      border-bottom: none;
+      padding: 0;
+    }
+
+    &.vignetted {
+      @include respond-to(1024px) {
+        @include box-sizing(border-box);
+        width: percentage(860/640);
+        margin-left: -165px;
+        padding-left: 165px;
+      }
+
+      .vignette {
+        @include respond-to(1024px) {
+          display: block;
+          font-size: (23em/16);
+          position: absolute;
+          top: -.5em;
+          left: 0;
+        }
+      }
+    }
   }
 
   h2 {
@@ -913,6 +2099,25 @@ article + article {
     }
   }
 
+  h3 {
+    @include respond-to(768px) {
+      font-size: (20em/16);
+      line-height: (22/20);
+    }
+  }
+
+  > p,
+  > ul,
+  > ol {
+    @include respond-between(768px, 1023px) {
+      margin-right: (20em/18);
+    }
+
+    @include respond-to(1024px) {
+      margin-right: (60em/18);
+    }
+  }
+
   .vignette {
     width: (69em/23);
     height: (62em/23);
@@ -923,6 +2128,10 @@ article + article {
     line-height: 1em;
     color: #fff;
     text-transform: none;
+
+    @include respond-to(768px) {
+      display: none;
+    }
   }
 
   .section-lead,
@@ -932,6 +2141,11 @@ article + article {
     line-height: (17/13);
     margin-top: .5em;
 
+    @include respond-to(768px) {
+      font-size: (14em/16);
+      line-height: (18/14);
+    }
+
     b,
     strong {
       color: $text-grey;
@@ -939,6 +2153,25 @@ article + article {
 
     a {
       text-decoration: none;
+
+      @include respond-to(1024px) {
+        text-decoration: underline;
+      }
+
+      &:hover {
+        @include respond-to(1024px) {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .section-lead {
+    @include respond-to(1024px) {
+      margin-top: (20em/14);
+      float: right;
+      width: percentage(145/695);
+      margin-right: - percentage(115/695);
     }
   }
 
@@ -947,8 +2180,26 @@ article + article {
     margin-top: (20em/16);
     border-top: 1px solid $warm-grey;
 
+    @include respond-to(1024px) {
+      @include box-sizing(border-box);
+      width: percentage(695/640);
+      padding-right: percentage(55/640);
+    }
+
     &:first-child {
       margin-top: 0;
+    }
+
+    > p,
+    > ul,
+    > ol {
+      @include respond-between(768px, 1023px) {
+        margin-right: (20em/18);
+      }
+
+      @include respond-to(1024px) {
+        margin-right: (60em/18);
+      }
     }
   }
 
@@ -960,6 +2211,10 @@ article + article {
   .subsection-header {
     padding: 0 0 0.4em 0;
     border-bottom: 1px solid $warm-grey;
+
+    @include respond-to(1024px) {
+      width: percentage(695/640);
+    }
 
     h3,
     .subsection-lead {
@@ -1002,11 +2257,19 @@ header.intro .article-section {
       font-size: 1em;
       color: $green;
       margin-top: 10px;
+
+      @include respond-to(768px) {
+        font-size: (20em/16);
+      }
     }
 
     p {
       margin: 0;
       font-size: (14em/16);
+
+      @include respond-to(768px) {
+        font-size: (16em/16);
+      }
     }
 
     &:hover {
@@ -1038,12 +2301,41 @@ html.svg .icon-list.calendar .icon {
 }
 
 .conversations {
+  @include clearfix;
+
+  .article-section {
+    @include respond-to(1024px) {
+      @include clearfix;
+      width: percentage(695/805);
+      border-top: 1px solid $warm-grey;
+    }
+  }
+
   .details {
     @include small-text;
     font-size: (13em/16);
     line-height: (15/14);
     padding-top: (8em/13);
     margin: 0 percentage(75/620) 0 percentage(70/620);
+
+    @include respond-between(300px, 767px) {
+      margin-right: 0;
+    }
+
+    @include respond-to(768px) {
+      font-size: (14em/16);
+      line-height: (18/14);
+    }
+
+    @include respond-to(1024px) {
+      float: left;
+      border: none;
+      padding-top: 0;
+      margin-top: (20em/14);
+      margin-left: 0;
+      margin-right: percentage(-145/695);
+      width: percentage(145/695);
+    }
 
     .topic {
       display: block;
@@ -1053,6 +2345,25 @@ html.svg .icon-list.calendar .icon {
     .poll-results,
     .toggler {
       margin-top: (12em/13);
+    }
+
+    .voting {
+      .topic {
+        @include respond-to(1024px) {
+          margin-top: (12em/14);
+        }
+      }
+    }
+
+    .meta + .voting {
+      @include respond-to(1024px) {
+        border-top: 1px solid $warm-grey;
+      }
+    }
+
+    .time { @include respond-to(1024px) {
+        display: block;
+      }
     }
 
     .poll-results {
@@ -1107,11 +2418,109 @@ html.svg .icon-list.calendar .icon {
     clear: both;
     padding-top: (40em/16);
   }
+
+  .comments {
+    @include respond-to(1024px) {
+      display: block;
+      margin-top: (12em/14);
+    }
+  }
 }
 
-.body .conversations {
-  .fetch-more {
-    margin-left: percentage(70/620);
+.body {
+  @include respond-between(768px, 1023px) {
+    position: relative;
+  }
+
+  @include respond-to(1024px) {
+    width: percentage(640/805);
+  }
+
+  > p,
+  > ul,
+  > ol {
+    @include respond-between(768px, 1023px) {
+      margin-right: (20em/18);
+    }
+
+    @include respond-to(1024px) {
+      margin-right: (60em/18);
+    }
+  }
+
+  figure {
+    @include respond-between(300px, 767px) {
+      margin-top: (12em/16);
+    }
+
+    @include respond-to(600px) {
+      margin-top: (20em/16);
+    }
+
+    &.full {
+      @include respond-to(1024px) {
+        margin-right: (60em/16);
+      }
+    }
+
+    &.right,
+    &.left {
+      @include respond-to(600px) {
+        width: percentage(240/600);
+        margin: (10em/16) 0;
+      }
+    }
+
+    &.right {
+      @include respond-to(600px) {
+        float: right;
+        margin-left: (20em/16);
+      }
+
+      @include respond-to(1024px) {
+        position: relative;
+        width: percentage(310/640);
+        margin-right: -55px;
+        padding-top: 10px;
+        border-top: 1px solid $warm-grey;
+      }
+
+      div {
+        @include respond-to(1024px) {
+          width: 235px;
+          float: left;
+          margin-right: 40px;
+        }
+      }
+
+      figcaption {
+        @include respond-to(1024px) {
+          border: none;
+          width: 145px;
+          position: absolute;
+          top: 10px;
+          right: -110px;
+          margin: 0;
+        }
+      }
+    }
+
+    &.left {
+      @include respond-to(600px) {
+        float: left;
+        margin-right: (20em/16);
+      }
+
+      @include respond-to(1024px) {
+        width: percentage(235/640);
+      }
+    }
+  }
+
+  .conversations {
+    .fetch-more {
+      margin-left: percentage(70/620);
+    }
   }
 }
 
@@ -1119,6 +2528,13 @@ html.svg .icon-list.calendar .icon {
   list-style: none;
   margin: (20em/16) 0 0 0;
   padding: (23em/16) 0;
+
+  @include respond-to(1024px) {
+    float: left;
+    margin-top: (20em/14);
+    margin-right: percentage(40/695);
+    width: percentage(620/695);
+  }
 
   a {
     .read-more {
@@ -1139,12 +2555,16 @@ html.svg .icon-list.calendar .icon {
     z-index: 1;
     padding: 20px 25px;
 
-    p:first-child {
-      margin: 0;
+    @include respond-between(300px, 767px) {
+      padding: 15px 20px;
     }
 
     p {
       color: #2A2A2A;
+
+      &:first-child {
+        margin: 0;
+      }
     }
   }
 
@@ -1155,6 +2575,11 @@ html.svg .icon-list.calendar .icon {
       @include small-text;
       font-size: (13em/16);
       line-height: (17/13);
+
+      @include respond-to(768px) {
+        font-size: (14em/16);
+        line-height: (18/14);
+      }
     }
 
     img {
@@ -1179,6 +2604,10 @@ html.svg .icon-list.calendar .icon {
     margin-bottom: -.75em;
     margin-right: percentage(110/620);
 
+    @include respond-between(300px, 767px) {
+      margin-right: percentage(70/510);
+    }
+
     .content {
       padding-bottom: 25px;
       background: $yellow;
@@ -1194,12 +2623,21 @@ html.svg .icon-list.calendar .icon {
         content: "";
         background: rgba(0, 0, 0, .04);
         border-radius: 3px 0 3px 0;
+
+        @include respond-between(300px, 767px) {
+          width: percentage(445/510);
+        }
       }
 
       p {
         font-family: $swift;
         font-size:(18em/16);
         line-height:(20/18);
+
+        @include respond-to(768px) {
+          font-size: (20em/16);
+          line-height: (22/20);
+        }
       }
     }
 
@@ -1225,6 +2663,10 @@ html.svg .icon-list.calendar .icon {
     margin-left: percentage(70/620);
     margin-right: percentage(75/620);
 
+    @include respond-between(300px, 767px) {
+      margin-right: 0;
+    }
+
     .content {
       padding-top: 25px;
       background: $beige;
@@ -1232,6 +2674,11 @@ html.svg .icon-list.calendar .icon {
 
       p {
         line-height: (20/16);
+
+        @include respond-to(768px) {
+          font-size: (16em/16);
+          line-height: (20/16);
+        }
       }
     }
 
@@ -1250,12 +2697,36 @@ html.svg .icon-list.calendar .icon {
       }
     }
   }
+
+  img {
+    @include respond-between(300px, 767px) {
+      display: none;
+    }
+  }
 }
 
-.body .conversation {
-  .question .content p {
-    font-size: (24em/16);
-    line-height: (26/24);
+.body {
+  .conversation {
+    @include respond-to(1024px) {
+      width: percentage(620/640);
+    }
+
+    .question .content p {
+      font-size: (24em/16);
+      line-height: (26/24);
+
+      @include respond-to(768px) {
+        font-size: (26em/16);
+        line-height: (30/26);
+      }
+    }
+  }
+
+  .details {
+    @include respond-to(1024px) {
+      width: percentage(145/640);
+      margin-right: percentage(-165/640);
+    }
   }
 }
 
@@ -1283,6 +2754,10 @@ header.intro + .conversations {
   img {
     float: right;
     margin: 0.5em 0 5px 20px;
+
+    @include respond-to(1024px) {
+      margin-right: 20px
+    }
   }
 
   img + p {
@@ -1294,11 +2769,25 @@ header.intro + .conversations {
   list-style: none;
   margin: 0;
 
+  @include respond-to(768px) {
+    width: 580px;
+    margin: auto;
+  }
+
+  @include respond-to(1024px) {
+    width: percentage(855/970);
+    margin: 0;
+  }
+
   .group {
     @include clearfix;
     border-top: 1px solid $warm-grey;
     padding: (20em/16) 0 0 0;
     margin: (20em/16) 0 0 0;
+
+    @include respond-between(600px, 767px) {
+      padding-top: (10em/16);
+    }
   }
 
   .label {
@@ -1308,22 +2797,73 @@ header.intro + .conversations {
     float: left;
     width: percentage(30/284);
     margin-right: percentage(15/284);
+
+    @include respond-between(600px, 767px) {
+      float: none;
+      width: 100%;
+    }
+
+    @include respond-between(768px, 1023px) {
+      width: 1em;
+      text-align: right;
+      margin: 0 0 0 ((1em + (20em/16)) * -1);
+    }
+
+    @include respond-to(1024px) {
+      float: left;
+      text-align: left;
+      width: percentage(165/855);
+      margin-right: 0;
+      margin-left: 0;
+    }
   }
 
   &.text-labels {
-
-    span.label {
+    .label {
       display: block;
       font-size: (20em/16);
       line-height: (22/20);
+
+      @include respond-between(300px, 767px) {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+      }
+
+      @include respond-between(768px, 1023px) {
+        text-align: left;
+        margin-left: 0;
+        width: 100%;
+      }
+
+      @include respond-to(1024px) {
+        float: none;
+        width: 100%;
+      }
     }
 
     h2.label {
       margin-top:0;
     }
 
+    .group {
+      @include respond-to(1024px) {
+        padding-left: percentage(165/855);
+      }
+    }
+
     .list {
       margin-top: (10em/16);
+
+      @include respond-to(768px) {
+        margin-top: (10em/16);
+      }
+
+      @include respond-to(1024px) {
+        @include columns(3, 20px);
+        margin-top: 0;
+        width: percentage(640/690);
+      }
     }
   }
 
@@ -1332,6 +2872,28 @@ header.intro + .conversations {
     list-style: disc;
     float: left;
     width: percentage(194/284);
+
+    @include respond-between(600px, 767px) {
+      margin-top: (10em/16);
+      float: none;
+      width: 100%;
+      @include columns(2, 20px);
+    }
+
+    @include respond-to(768px) {
+      @include columns(2, 20px);
+      margin-top: 0;
+    }
+
+    @include respond-between(768px, 1023px) {
+      width: 100%;
+    }
+
+    @include respond-to(1024px) {
+      @include columns(3, 20px);
+      margin-top: 0;
+      width: percentage(640/855);
+    }
 
     li {
       -webkit-column-break-inside: avoid;
@@ -1343,7 +2905,16 @@ header.intro + .conversations {
       vertical-align: top;
       word-wrap: break-word;
       line-height:(18em/16);
+
+      @include respond-to(600px) {
+        margin-left:1.5em;
+      }
+
+      @include respond-to(768px) {
+        font-size: (16em/20);
+      }
     }
+
     // Fix missing column-break-inside support
     a {
       display: inline-block;
@@ -1357,8 +2928,19 @@ header.intro + .conversations {
   }
 }
 
+.labeled-list-container {
+  @include respond-to(1024px) {
+    width: percentage(970/805);
+    margin-left: - percentage(165/805);
+  }
+}
+
 div.comments {
   margin-top: 20px;
+
+  @include respond-to(1024px) {
+    margin-right: 20px;
+  }
 }
 
 .tabbed {
@@ -1366,6 +2948,10 @@ div.comments {
     padding: 0;
     margin-top: 56px;
     margin-bottom: 56px;
+
+    @include respond-to(1024px) {
+      padding: 0;
+    }
   }
 
   .article-subsection {
@@ -1376,14 +2962,26 @@ div.comments {
     margin: 0 0 -14px 0;
     list-style: none;
 
+    @include respond-to(1024px) {
+      margin-top: -17px;
+    }
+
     li {
       display: inline;
       margin: 0;
+
+      @include respond-to(1024px) {
+        margin: 0;
+      }
     }
 
     a.action {
       font-size: (12em/16);
       margin-right: (20em/12);
+
+      @include respond-to(1024px) {
+        font-size: (14em/18);
+      }
     }
   }
 }
@@ -1392,10 +2990,20 @@ div.comments {
   padding-left: (35em/12);
   background: transparent url(../images/cc.png) 0 2px no-repeat;
   background-size: 20px 20px;
-}
+  @extend %centered-section;
 
-html.svg #copyright {
-  background-image: url(../images/cc.svg);
+  @include respond-between(600px, 767px) {
+    width: 520px;
+    @include box-sizing(border-box);
+  }
+
+  @include respond-to(1024px) {
+    margin-right: (185em/12);
+  }
+
+  html.svg & {
+    background-image: url(../images/cc.svg);
+  }
 }
 
 .topics {
@@ -1405,6 +3013,15 @@ html.svg #copyright {
 
   .topic {
     margin: (20em/16) 0 0 0;
+
+    @include respond-between(768px, 1023px) {
+      margin-right: (20em/16);
+    }
+
+    @include respond-to(1024px) {
+      margin-right: (60em/16);
+    }
+
     &:first-child {
       margin-top: 0;
     }
@@ -1429,6 +3046,10 @@ html.svg #copyright {
       background-size: 36px 32px;
       color: #fff;
       text-align: center;
+
+      @include respond-to(768px) {
+        display: block;
+      }
     }
   }
 
@@ -1437,6 +3058,13 @@ html.svg #copyright {
   p {
     margin-right: 0;
     display: inline;
+  }
+
+  h2 {
+    @include respond-between(300px, 767px) {
+      font-size: (20em/16);
+      padding-right: 0;
+    }
   }
 }
 
@@ -1455,6 +3083,11 @@ html.svg .topics {
   @include small-text;
   color: #fff;
   padding: 8px 20px 16px 20px;
+
+  @include respond-to(768px) {
+    text-align:center;
+  }
+
   p {
     font-size: 13px;
     line-height: (17/13);
@@ -1488,6 +3121,66 @@ html.svg .topics {
 
 .front .article-section.news-posts {
   margin-top: 30px;
+}
+
+.news-posts .icon-list {
+  @include respond-to(1024px) {
+    width: auto;
+    margin-right: (20em/18);
+  }
+
+  li {
+    @include respond-to(768px) {
+      font-size: (26em/18);
+      padding: (15em/26) 0;
+      border-bottom: 1px solid $warm-grey;
+    }
+
+    &:first-child {
+      @include respond-to(768px) {
+        padding-top: 0;
+      }
+    }
+
+    &:last-child {
+      @include respond-to(768px) {
+        border: none;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  a {
+    @include respond-to(768px) {
+      margin: 0;
+    }
+
+    @include respond-to(1024px) {
+      margin-right: (35em/22);
+    }
+  }
+
+  .title {
+    @include respond-to(768px) {
+      line-height: (30/26);
+    }
+  }
+
+  .meta {
+    @include respond-to(768px) {
+      font-size: (14em/26);
+      line-height: (18/14);
+      margin-top: (2em/14);
+    }
+  }
+
+  & + .icon-list {
+    @include respond-to(768px) {
+      padding-top: (15em/16);
+      margin-top: (15em/16);
+      border-top: 1px solid $warm-grey;
+    }
+  }
 }
 
 // jQuery UI

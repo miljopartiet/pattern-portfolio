@@ -1,9 +1,7 @@
-@import "compass";
-@import "includes.css.scss";
+$supportsMediaQueries: false;
 
-@import "600";
-@import "768";
-@import "1024";
+@import "drupal_reset";
+@import "site";
 
 // PNG replacements
 body {
