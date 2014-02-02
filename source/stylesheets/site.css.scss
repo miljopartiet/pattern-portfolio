@@ -43,7 +43,7 @@ h1 {
 }
 
 h2 {
-  font-family: $mp-serif;
+  font-family: $mp-sans;
   margin-top: (24em/20);
   font-size: (20em/16);
   line-height: (22/20);
@@ -60,7 +60,7 @@ h3 {
   line-height: (20/18);
   margin-top: (18em/18);
   font-weight: normal;
-  font-family: $swift;
+  font-family: $mp-serif;
 
   @include respond-to(768px) {
     font-size: (20em/16);
@@ -452,7 +452,7 @@ figcaption {
 
   li {
     margin:0;
-    font-family: $swift;
+    font-family: $mp-serif;
     font-size: (20em/16);
 
     a {
@@ -582,7 +582,7 @@ blockquote {
     }
 
     p {
-      font-family: $swift;
+      font-family: $mp-serif;
       font-size: (18em/16);
       line-height: (22/18);
       margin-top: (12em/18);
@@ -604,7 +604,7 @@ blockquote {
 
         &:before {
           content: "”";
-          font-family: $swift;
+          font-family: $mp-serif;
           font-size: (24em/18);
           line-height: 1;
           position: absolute;
@@ -898,7 +898,7 @@ blockquote {
     padding: 0 0 0 (12em/13);
     background: $green;
     text-decoration: none;
-    font-family: $swift;
+    font-family: $mp-serif;
     color: #fff;
     border-radius: 3px;
 
@@ -1130,7 +1130,7 @@ nav.main-navigation {
 
     li {
       @include respond-between(300px, 767px) {
-        font: normal (18em/16) $swift;
+        font: normal (18em/16) $mp-serif;
         margin: 0;
         border-bottom:1px solid #fff;
       }
@@ -2126,7 +2126,7 @@ article {
     padding: (18em/23) 0 0 (22em/23);
     background: transparent url(../images/bg-vignette.png) 0 0 no-repeat;
     background-size: 100%;
-    font-family: $swift;
+    font-family: $mp-serif;
     line-height: 1em;
     color: #fff;
     text-transform: none;
@@ -2632,7 +2632,7 @@ html.svg .icon-list.calendar .icon {
       }
 
       p {
-        font-family: $swift;
+        font-family: $mp-serif;
         font-size:(18em/16);
         line-height:(20/18);
 
@@ -2793,7 +2793,7 @@ header.intro + .conversations {
   }
 
   .label {
-    font: normal (26em/16)/(28/26) $swift;
+    font: normal (26em/16)/(28/26) $mp-serif;
     color: #000;
     margin-bottom: (10em/26);
     float: left;
