@@ -17,12 +17,12 @@ body {
 h1,
 h2 {
   margin: 0;
-  font-family: $swift;
   font-weight: normal;
   text-rendering: optimizeLegibility;
 }
 
 h1 {
+  font-family: $mp-sans;
   font-size: (24em/16);
   line-height: (26/24);
 
@@ -43,6 +43,7 @@ h1 {
 }
 
 h2 {
+  font-family: $mp-serif;
   margin-top: (24em/20);
   font-size: (20em/16);
   line-height: (22/20);
@@ -1996,6 +1997,7 @@ article {
 
   // Page lead
   .lead p {
+    font-family: $mp-serif;
     font-size: (18em/16);
     line-height: (22/18);
     margin-top: (8em/18);
