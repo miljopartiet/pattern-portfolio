@@ -1,0 +1,120 @@
+#cookies {
+  display:none;
+  background: #000;
+  @include small-text;
+  color: #fff;
+  padding: 8px 20px 16px 20px;
+
+  @include respond-to(768px) {
+    text-align:center;
+  }
+
+  p {
+    font-size: 13px;
+    line-height: (17/13);
+
+    display: inline-block;
+    margin: 8px .5em 0 0;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+
+    &.action {
+      display: inline-block;
+      background: $green;
+      color: #fff;
+      font-size: 13px;
+      margin: 8px 0 0 0;
+      text-decoration: none;
+
+      &:hover {
+        background: darken(rgb(102, 102, 102), 2%);
+      }
+
+      &:active {
+        background: lighten(rgb(102, 102, 102), 5%);
+      }
+    }
+  }
+}
+
+#site-banner {
+  @include clearfix;
+  position: relative;
+  margin-bottom: (20em/16);
+  @extend %centered-section;
+
+  @include respond-between(300px, 767px) {
+    padding-top: 18px;
+  }
+
+  @include respond-between(600px, 767px) {
+    padding-top: 0;
+  }
+
+  @include respond-to(768px) {
+    margin-bottom: (40em/16);
+  }
+}
+
+#logo {
+  width: 57px;
+
+  @include respond-between(300px, 767px) {
+    float: left;
+  }
+
+  @include respond-to(768px) {
+    float: left;
+    margin-top: -7px;
+  }
+
+  @include respond-between(768px, 1023px) {
+    width: (103em/16);
+    margin-right: (20em/16);
+    margin-left: -(45em/16);
+  }
+
+  @include respond-to(1024px) {
+    width: (165em/16);
+    margin: 0;
+  }
+
+  a {
+    display: block;
+    text-indent: -9999px;
+    width: 65px;
+    height: 57px;
+    background: transparent url(../images/logo.png) 0 0 no-repeat;
+    background-size: 100%;
+
+    @include respond-between(768px, 1023px) {
+      height: (90em/16);
+      width: (103em/16);
+      background-size: 100%;
+    }
+
+    @include respond-to(1024px) {
+      width: (130em/16);
+      height: (114em/16);
+    }
+
+    &:hover {
+      background-position: 0 -114px;
+
+      @include respond-between(768px, 1023px) {
+        background-position: 0 ((180em/16) * -1);
+      }
+
+      @include respond-to(1024px) {
+        background-position: 0 ((228em/16) * -1);
+      }
+    }
+
+    html.svg & {
+      background-image: url(../images/logo.svg);
+    }
+  }
+}
