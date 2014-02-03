@@ -63,3 +63,27 @@
     }
   }
 }
+
+.related-topics {
+  ul {
+    list-style: none;
+  }
+
+  li {
+    margin-left: 0;
+  }
+
+  img {
+    float: right;
+    margin: 0.5em 0 5px 20px;
+
+    @include respond-to(1024px) {
+      margin-right: 20px
+    }
+  }
+
+  img + p {
+    margin-top: (4em/18);
+  }
+}
+
