@@ -219,6 +219,8 @@ input[type="week"] {
 
 textarea {
   @extend %input;
+  width: 100%;
+  line-height: (18/14);
 }
 
 input[type="submit"],
@@ -249,11 +251,6 @@ textarea.placeholder {
 }
 :focus:-ms-input-placeholder {
   color: $text-light-grey;
-}
-
-textarea {
-  width: 100%;
-  line-height: (18/14);
 }
 
 button {
