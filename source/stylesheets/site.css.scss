@@ -23,22 +23,20 @@ h2 {
 
 h1 {
   font-family: $mp-sans;
-  font-size: (24em/16);
-  line-height: (26/24);
+  font-size: (33em/16);
+  line-height: 1;
 
   @include respond-to(600px) {
-    font-size: (33em/16);
-    line-height: (35/33);
+    font-size: (37em/16);
   }
 
   @include respond-to(768px) {
-    font-size: (37em/16);
-    line-height: (37em/37);
+    font-size: (48em/16);
   }
 
   @include respond-to(1024px) {
-    font-size: (42em/16);
-    line-height: 1.1;
+    font-size: (80em/16);
+    line-height: .7;
   }
 }
 
@@ -49,8 +47,8 @@ h2 {
   line-height: (22/20);
 
   @include respond-to(768px) {
-    font-size: (26em/16);
-    line-height: (30/26);
+    font-size: (44em/16);
+    line-height: (30/40);
     margin-top: 1em;
   }
 }
@@ -1648,15 +1646,6 @@ html.svg .search button {
 
   h2 {
     margin-top: 0;
-
-    @include respond-between(300px, 767px) {
-      font-size: (18em/16);
-    }
-
-    @include respond-to(768px) {
-      font-size: (24em/16);
-      line-height: (26/20);
-    }
   }
 
   p,
@@ -2018,8 +2007,8 @@ article {
     }
 
     @include respond-to(1024px) {
-      font-size: (26em/16);
-      line-height: (32/26);
+      font-size: (32em/16);
+      line-height: (35/32);
       margin-top: (8em/26);
     }
   }
