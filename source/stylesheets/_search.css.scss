@@ -1,0 +1,134 @@
+.search {
+  position: relative;
+
+  input {
+    width: 100%;
+    background: $beige;
+    border: 1px solid $beige;
+    padding: 3px 20px 3px 10px;
+    margin: 0;
+    border-radius: 4px;
+
+    @include respond-to(600px) {
+      width: 70%;
+    }
+
+    &:focus {
+      border: 1px solid $warm-grey;
+    }
+
+    &.has-suggestions {
+      border: 1px solid $warm-grey;
+      border-bottom: 1px solid $beige;
+      border-radius: 4px 4px 0 0;
+    }
+  }
+
+  button {
+    text-indent: -9999em;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    width: (15em/16);
+    height: (15em/16);
+    background: transparent url(../images/search.png) 0 0 no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    &:hover {
+      cursor: pointer;
+      background-position: 0 ((50em/16) * -1);
+    }
+
+    html.svg & {
+      background-image: url(../images/search.svg);
+    }
+  }
+}
+
+.suggestions {
+  background: $yellow;
+  border-radius: 0 0 4px 4px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  margin-left: -25px;
+
+  ul {
+    margin-left: 0;
+
+    @include respond-to(600px) {
+      margin-left: 20px;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .focused a {
+    color: $green-dark;
+    text-decoration: none;
+  }
+}
+
+.main-search {
+  @include box-sizing(border-box);
+  background: $beige;
+  padding: (10em/16) 0 (10em/16) 0;
+  margin: 0;
+  border: 1px solid $warm-grey;
+  border-top: none;
+
+  ul,
+  li {
+    list-style: none;
+    margin: 0;
+  }
+
+  a {
+    padding: (4em/16) (10em/16);
+    display: block;
+    font-size: (16em/18);
+    line-height: (18/16);
+    text-decoration: none;
+
+    &:hover {
+      .name {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .name {
+    white-space: normal;
+    text-decoration: underline;
+  }
+
+  .category {
+    display: block;
+    margin-top: 2px;
+    @include small-text;
+    font-size: (13em/18);
+    line-height: (16/13);
+  }
+
+  em {
+    font-style: normal;
+  }
+
+  .focused {
+    background: darken($beige, 5%);
+
+    .name {
+      text-decoration: none;
+    }
+  }
+}
+

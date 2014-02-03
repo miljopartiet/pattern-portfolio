@@ -255,6 +255,199 @@ textarea {
   width: 100%;
   line-height: (18/14);
 }
+
 button {
   margin: (15em/16) 0 0 0;
+}
+
+//
+// General purpose content types
+//
+// Media files
+.embedded-video {
+  position: relative;
+  padding-bottom: 67.5%;
+  height: 0;
+  overflow: hidden;
+
+  &.widescreen {
+    padding-bottom: percentage(360/640);
+  }
+
+  video,
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+// Captions for media files
+figure {
+  @include clearfix;
+}
+
+figcaption {
+  @include small-text;
+  font-size: (13em/16);
+  line-height: (16/13);
+  margin-top: (5em/16);
+
+  @include respond-to(768px) {
+    font-size: (14em/16);
+    line-height: (18/14);
+  }
+
+  strong,
+  b {
+    color: $text-grey;
+  }
+}
+
+blockquote {
+  overflow: hidden;
+  margin-top: (20em/16);
+  margin-bottom: (20em/16);
+  padding-bottom: (5em/16);
+  border-bottom: 1px solid $warm-grey;
+  color: $text-warm-grey;
+
+  @include respond-to(768px) {
+    overflow: visible;
+  }
+
+  @include respond-to(1024px) {
+    @include clearfix;
+    padding-bottom: 0;
+    position: relative;
+    width: percentage(805/640);
+    min-height:120px;
+  }
+
+  & > div {
+    @include respond-to(1024px) {
+      margin-bottom: .5em;
+      padding-left: 0;
+      float: left;
+      width: percentage(640/805);
+    }
+
+    p {
+      font-family: $swift;
+      font-size: (18em/16);
+      line-height: (22/18);
+      margin-top: (12em/18);
+      margin-left: 1em;
+
+      @include respond-to(600px) {
+        margin-right: (55em/18);
+      }
+
+      @include respond-to(768px) {
+        margin-left: 0;
+        font-size: (24em/16);
+        line-height: (28/24);
+      }
+
+      &:first-child {
+        position: relative;
+        margin-top: 0;
+
+        &:before {
+          content: "”";
+          font-family: $swift;
+          font-size: (24em/18);
+          line-height: 1;
+          position: absolute;
+          top: .05em;
+          left: -.59em;
+          text-rendering: optimizeLegibility;
+        }
+      }
+    }
+  }
+
+  &.image > div {
+    @include respond-to(1024px) {
+      width: percentage(485/805);
+    }
+  }
+
+  footer {
+    @include clearfix;
+    @include small-text;
+    font-size: (13em/16);
+    line-height: (17/13);
+    margin-top: (8em/13);
+    bottom: (-5em/13);
+    text-align: right;
+    position: relative;
+
+    @include respond-to(600px) {
+      margin-top: -40px;
+    }
+
+    @include respond-to(1024px) {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 1em;
+      width: percentage(320/805);
+      text-align: left;
+    }
+
+    p {
+      position: absolute;
+      bottom: .5em;
+      left: 0;
+      width: percentage(246/320);
+
+      @include respond-to(768px) {
+        font-size: (14em/13);
+        line-height: (18/14);
+      }
+
+      @include respond-to(1024px) {
+        float: left;
+        padding: 0;
+        width: percentage(145/320);
+        position: static;
+        margin: 0 0 0 175px;
+      }
+    }
+
+    img {
+      float: right;
+      width: percentage(45/320);
+      margin: 0 percentage(6/320) 0 percentage(13/320);
+
+      @include respond-to(1024px) {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 145px;
+        margin: 0 0 0 0;
+      }
+    }
+
+    .title {
+      color: $text-light-grey;
+    }
+
+    .name {
+      @include respond-to(1024px) {
+        text-decoration: underline;
+      }
+
+      &:hover {
+        @include respond-to(1024px) {
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }

@@ -1,0 +1,128 @@
+@import "conversation";
+
+.conversations {
+  @include clearfix;
+
+  .article-section {
+    @include respond-to(1024px) {
+      @include clearfix;
+      width: percentage(695/805);
+      border-top: 1px solid $warm-grey;
+    }
+  }
+
+  .details {
+    @include small-text;
+    font-size: (13em/16);
+    line-height: (15/14);
+    padding-top: (8em/13);
+    margin: 0 percentage(75/620) 0 percentage(70/620);
+
+    @include respond-between(300px, 767px) {
+      margin-right: 0;
+    }
+
+    @include respond-to(768px) {
+      font-size: (14em/16);
+      line-height: (18/14);
+    }
+
+    @include respond-to(1024px) {
+      float: left;
+      border: none;
+      padding-top: 0;
+      margin-top: (20em/14);
+      margin-left: 0;
+      margin-right: percentage(-145/695);
+      width: percentage(145/695);
+    }
+
+    .topic {
+      display: block;
+    }
+
+    .voting,
+    .poll-results,
+    .toggler {
+      margin-top: (12em/13);
+    }
+
+    .voting {
+      .topic {
+        @include respond-to(1024px) {
+          margin-top: (12em/14);
+        }
+      }
+    }
+
+    .meta + .voting {
+      @include respond-to(1024px) {
+        border-top: 1px solid $warm-grey;
+      }
+    }
+
+    .time { @include respond-to(1024px) {
+        display: block;
+      }
+    }
+
+    .poll-results {
+      .answer,
+      .summary {
+        display: block;
+        margin-top: (12em/14);
+      }
+
+      .answer .summary {
+        margin-top: (4em/14);
+      }
+
+      b {
+        display: inline-block;
+        width: percentage(35/145);
+      }
+
+      .meter {
+        display: inline-block;
+        width: percentage(110/145);
+
+        span {
+          display: inline-block;
+          text-indent: -9999px;
+        }
+      }
+
+      .meter span {
+        background: $green;
+      }
+    }
+
+    .toggler {
+      display: block;
+      color: $text-light-grey;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .related {
+      display: block;
+      margin-top: (12em/13);
+    }
+  }
+
+  .fetch-more,
+  div.comments {
+    clear: both;
+    padding-top: (40em/16);
+  }
+
+  .comments {
+    @include respond-to(1024px) {
+      display: block;
+      margin-top: (12em/14);
+    }
+  }
+}

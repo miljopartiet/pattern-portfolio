@@ -1,0 +1,304 @@
+//
+// Article contents
+//
+article {
+  h1 {
+    color: $green;
+  }
+
+  p a,
+  li > a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  // Main image
+  .illustration {
+    margin-top: (20em/16);
+
+    @include respond-between(768px, 1023px) {
+      margin-top: (20em/16);
+    }
+
+    @include respond-to(1024px) {
+      margin-top: (30em/16);
+    }
+
+    figure {
+      > div {
+        @include respond-to(1024px) {
+          float: left;
+          width: percentage(640/805);
+        }
+      }
+
+      figcaption {
+        @include respond-to(1024px) {
+          float: right;
+          width: percentage(145/805);
+          margin: 0 0 0 percentage(20/805);
+          border:none;
+        }
+      }
+    }
+  }
+
+  .vignette {
+    @include respond-between(300px, 767px) {
+      display: none;
+    }
+  }
+
+  // Page lead
+  .lead p {
+    font-size: (18em/16);
+    line-height: (22/18);
+    margin-top: (8em/18);
+
+    @include respond-between(300px, 767px) {
+      margin-top: (2em/16);
+    }
+
+    @include respond-to(600px) {
+      font-size: (20em/16);
+      line-height: (24/20);
+    }
+
+    @include respond-between(768px, 1023px) {
+      font-size: (22em/16);
+      line-height: (26/22);
+      margin-top: (8em/22);
+    }
+
+    @include respond-to(1024px) {
+      font-size: (26em/16);
+      line-height: (32/26);
+      margin-top: (8em/26);
+    }
+  }
+
+  + article {
+    margin-top: 40px;
+
+    @include respond-between(300px, 767px) {
+      margin-top: (30em/16);
+      margin-bottom: (30em/16);
+    }
+
+    h1 {
+      padding-top: 20px;
+      border-top: 1px solid $warm-grey;
+      color: #000;
+
+      @include respond-to(1024px) {
+        margin-right: (115em/42);
+      }
+    }
+  }
+}
+
+// Article sections after the main content
+.article-section {
+  margin-top: (60em/16);
+
+  @include respond-between(300px, 767px) {
+    margin-top: (30em/16);
+    margin-bottom: (30em/16);
+  }
+
+  @include respond-to(1024px) {
+    width: percentage(640/805);
+  }
+
+  header {
+    border-bottom: 1px solid $warm-grey;
+    margin-bottom: -1px;
+    position: relative;
+    padding: 0 0 0.2em 0;
+
+    @include respond-to(1024px) {
+      width: percentage(695/640);
+      border-top: 1px solid $warm-grey;
+      border-bottom: none;
+      padding: 0;
+    }
+
+    &.vignetted {
+      @include respond-to(1024px) {
+        @include box-sizing(border-box);
+        width: percentage(860/640);
+        margin-left: -165px;
+        padding-left: 165px;
+      }
+
+      .vignette {
+        @include respond-to(1024px) {
+          display: block;
+          font-size: (23em/16);
+          position: absolute;
+          top: -.5em;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  h2 {
+    a.topic {
+      display: block;
+      font-size: (18em/24);
+      line-height: (25/18);
+      text-transform: uppercase;
+      text-rendering: optimizeLegibility;
+      letter-spacing: 0.06em;
+    }
+  }
+
+  h3 {
+    @include respond-to(768px) {
+      font-size: (20em/16);
+      line-height: (22/20);
+    }
+  }
+
+  > p,
+  > ul,
+  > ol {
+    @include respond-between(768px, 1023px) {
+      margin-right: (20em/18);
+    }
+
+    @include respond-to(1024px) {
+      margin-right: (60em/18);
+    }
+  }
+
+  .vignette {
+    width: (69em/23);
+    height: (62em/23);
+    padding: (18em/23) 0 0 (22em/23);
+    background: transparent url(../images/bg-vignette.png) 0 0 no-repeat;
+    background-size: 100%;
+    font-family: $swift;
+    line-height: 1em;
+    color: #fff;
+    text-transform: none;
+
+    @include respond-to(768px) {
+      display: none;
+    }
+  }
+
+  .section-lead,
+  .subsection-lead {
+    @include small-text;
+    font-size: (13em/16);
+    line-height: (17/13);
+    margin-top: .5em;
+
+    @include respond-to(768px) {
+      font-size: (14em/16);
+      line-height: (18/14);
+    }
+
+    b,
+    strong {
+      color: $text-grey;
+    }
+
+    a {
+      text-decoration: none;
+
+      @include respond-to(1024px) {
+        text-decoration: underline;
+      }
+
+      &:hover {
+        @include respond-to(1024px) {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .section-lead {
+    @include respond-to(1024px) {
+      margin-top: (20em/14);
+      float: right;
+      width: percentage(145/695);
+      margin-right: - percentage(115/695);
+    }
+  }
+
+   // Subsections
+  .article-subsection {
+    margin-top: (20em/16);
+    border-top: 1px solid $warm-grey;
+
+    @include respond-to(1024px) {
+      @include box-sizing(border-box);
+      width: percentage(695/640);
+      padding-right: percentage(55/640);
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    > p,
+    > ul,
+    > ol {
+      @include respond-between(768px, 1023px) {
+        margin-right: (20em/18);
+      }
+
+      @include respond-to(1024px) {
+        margin-right: (60em/18);
+      }
+    }
+  }
+
+  header + .article-subsection {
+    border-top: none;
+    margin-top: 0;
+  }
+
+  .subsection-header {
+    padding: 0 0 0.4em 0;
+    border-bottom: 1px solid $warm-grey;
+
+    @include respond-to(1024px) {
+      width: percentage(695/640);
+    }
+
+    h3,
+    .subsection-lead {
+      display: inline;
+    }
+  }
+
+  &.loading {
+    h2 {
+      background: transparent url(../images/load-grey-64.gif) 0 0 no-repeat;
+      background-size: 32px 32px;
+      margin-left: -52px;
+      padding-left: 52px;
+      min-height: 32px;
+    }
+  }
+}
+
+html.svg .article-section .vignette {
+  background-image: url(../images/bg-vignette.svg);
+}
+
+header.intro .article-section {
+  margin-top: (40em/16);
+}
+
+.illustration + .article-section {
+  margin-top: (30em/16);
+}

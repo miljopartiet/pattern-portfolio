@@ -1,0 +1,70 @@
+// Lists with icons or images
+.icon-list {
+  margin-top: (20em/16);
+  list-style: none;
+
+  li {
+    margin:0;
+    font-family: $swift;
+    font-size: (20em/16);
+
+    a {
+      text-decoration: none;
+      display: block;
+      line-height: (22em/20);
+      margin: 0 0 (10em/20) 55px;
+
+      @include respond-between(300px, 767px) {
+        margin-left: 45px;
+      }
+
+      .meta {
+        font-family: $arial;
+        font-size: (13em/20);
+        line-height: (16/13);
+        color: $text-grey;
+        display: block;
+        margin-top: (2em/13);
+      }
+    }
+
+    .icon {
+      display: block;
+      width: 35px;
+      margin-left: -55px;
+      float: left;
+      background: transparent url(../images/sources/bg.png) 0 0 no-repeat;
+      background-size: 35px 35px;
+
+      @include respond-between(300px, 767px) {
+        width: 25px;
+        margin-left: -45px;
+      }
+    }
+
+    .mp {
+      background-image: none;
+    }
+  }
+
+  // Add calendar style icons to the icon list
+  // in the calendar subsection
+  &.calendar {
+    .icon {
+      text-align:center;
+      text-indent: -.3em;
+      color: #fff;
+      font-size: 18px;
+      background: transparent url(../images/calendar.png) 0 50% no-repeat;
+      background-size: 39px 46px;
+      line-height:(51/18);
+      width: 39px;
+      height: 46px;
+
+      html.svg & {
+        background-image: url(../images/calendar.svg);
+      }
+    }
+  }
+}
+

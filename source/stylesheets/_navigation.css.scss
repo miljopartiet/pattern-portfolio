@@ -1,0 +1,595 @@
+// Navigation elements
+#top-navigation {
+  float: left;
+  // The top navigation is not used in the mobile view
+  // instead we point users to the more complete site navigation
+  display: none;
+
+  @include respond-to(768px) {
+    display: block;
+  }
+
+  ul {
+    margin: 0 0 0 (20em/18);
+    list-style: none;
+  }
+
+  li {
+    margin: 0;
+    font-size: (13em/18);
+    line-height: (25.1/13);
+
+    @include respond-to(1024px) {
+      font-size: (16em/18);
+      line-height: (30/16);
+    }
+  }
+
+  a {
+    display: inline-block;
+    margin-top: (2em/13);
+    padding: 0 0 0 (12em/13);
+    background: $green;
+    text-decoration: none;
+    font-family: $swift;
+    color: #fff;
+    border-radius: 3px;
+
+    @include respond-to(1024px) {
+      margin-top: (2em/16);
+      padding: 0 0 0 (15em/16);
+    }
+
+    &:hover {
+      background-color: $green-dark;
+    }
+  }
+
+  span {
+    display: block;
+    margin-right: 7px;
+    padding-right: (18em/16);
+    background: transparent url(../images/arrows-right.png) 100% 6px no-repeat;
+    background-size: 9px 128px;
+
+    @include respond-to(1024px) {
+      padding-right: (23em/16);
+      background-position: 100% 8px;
+    }
+
+    html.svg & {
+      background-image: url(../images/arrows-right.svg);
+    }
+  }
+
+  li:first-child a {
+    margin-top: 0;
+  }
+
+  li.active-trail,
+  .front & li:first-child {
+    font-size: (16em/18);
+    line-height: (36/16);
+
+    @include respond-to(1024px) {
+      font-size: (20em/18);
+    }
+
+    a {
+      color: #fff;
+      margin-left: -20px;
+      padding: 0 20px 0 20px;
+    }
+
+    span {
+      margin: 0;
+      background-position: 100% 10px;
+    }
+  }
+
+  li.active-trail {
+    a {
+      @include respond-to(1024px) {
+        padding-right: (25em/20);
+      }
+    }
+
+    span {
+      background-color: $green-dark;
+      background: transparent;
+      padding: 0;
+    }
+  }
+
+  li:first-child {
+    .front & {
+      a {
+        @include respond-to(1024px) {
+          padding-right: 0;
+        }
+      }
+
+      span {
+        @include respond-to(1024px) {
+          margin-right:14px;
+          background-position: 100% 15px;
+          padding-right: (15em/16);
+        }
+      }
+    }
+  }
+}
+
+#site-navigation {
+  @include clearfix;
+  @include respond-between(300px, 767px) {
+    // Expand the navigation to the window border when viewed in the footer
+    position: relative;
+    margin-left: -18px;
+    margin-right: -18px;
+  }
+
+  li {
+    @include respond-to(1024px) {
+      @include small-text;
+      font-size: (14em/16);
+      line-height: (18em/14);
+    }
+
+    a.active {
+      color: $green;
+    }
+  }
+
+  form {
+    @include respond-to(1024px) {
+      margin-right: 185px;
+    }
+
+    input {
+      @include respond-to(1024px) {
+        width: (220em/14);
+      }
+    }
+  }
+}
+
+// This is the site navigation when activated in a mobile view
+#site-top-navigation {
+  @include respond-between(300px, 767px) {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+
+  &.hidden {
+    @include respond-between(300px, 767px) {
+      display: none;
+    }
+  }
+
+  a.close {
+    @include respond-between(300px, 767px) {
+      @include small-text;
+      font-size: (13em/16);
+      line-height: (14/13);
+      display: block;
+      text-align: right;
+      clear: both;
+      border-top: 1px solid #fff;
+    }
+
+    span {
+      @include respond-between(300px, 767px) {
+        display: block;
+        padding: 16px 0;
+        padding-right: 24px;
+        margin-right: 15px;
+        background: $beige url(../images/close.svg) 100% 50% no-repeat;
+        background-size: 14px 14px;
+      }
+    }
+  }
+}
+// Site navigation is found in the bottom of the page
+nav.main-navigation {
+  @include respond-between(300px, 767px) {
+    background: $beige;
+  }
+
+  @include respond-to(768px) {
+    border-top: 1px solid $warm-grey;
+    border-bottom: 1px solid $warm-grey;
+    padding: 15px 0;
+  }
+
+  .inner {
+    @extend %centered-section;
+
+    @include respond-between(300px, 767px) {
+      padding: 0 18px;
+      @include clearfix;
+    }
+
+    @include respond-between(600px, 767px) {
+      padding: 0;
+    }
+
+    > div {
+      @include respond-to(768px) {
+        float: left;
+        width: (170em/16);
+        margin: 0 20px 0 0;
+      }
+    }
+  }
+
+  ul {
+    @include respond-between(300px, 767px) {
+      margin:0;
+      list-style: square;
+      color: $green;
+    }
+
+    @include respond-to(768px) {
+      margin: 0;
+      list-style: none;
+    }
+  }
+
+  li {
+    @include respond-to(768px) {
+      margin: 0;
+      @include small-text;
+      font-size: (14em/16);
+      line-height: (18/14);
+    }
+  }
+
+  a {
+    @include respond-between(300px, 767px) {
+      line-height: 1.5;
+    }
+  }
+
+  .sections {
+    ul {
+      @include respond-between(300px, 767px) {
+        list-style: none;
+      }
+    }
+
+    li {
+      @include respond-between(300px, 767px) {
+        font: normal (18em/16) $swift;
+        margin: 0;
+        border-bottom:1px solid #fff;
+      }
+    }
+
+    a {
+      @include respond-between(300px, 767px) {
+        margin: 0;
+        display: block;
+        line-height: 2.5;
+        background: transparent url(../images/arrows-right.png) 100% -36px no-repeat;
+        background-size: 9px 128px;
+      }
+
+      &:hover {
+        @include respond-between(300px, 767px) {
+          background-position: 100% -100px;
+        }
+      }
+
+      html.svg & {
+        @include respond-between(300px, 767px) {
+          background-image: url(../images/arrows-right.svg);
+        }
+      }
+    }
+  }
+
+  div.first,
+  div.second {
+    @include respond-between(300px, 767px) {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      float: left;
+      width: percentage(144/320);
+    }
+
+    li {
+      @include respond-between(300px, 767px) {
+        list-style: disc;
+        list-style-position: inside;
+        margin-left: 15px;
+        white-space: nowrap;
+      }
+
+      @include respond-to(768px) {
+        border-left: 1px solid $warm-grey;
+        padding-left: 10px;
+      }
+    }
+
+    a {
+      @include respond-between(300px, 767px) {
+        background-image: none;
+      }
+    }
+  }
+
+  div.first {
+    @include respond-to(768px) {
+      width: (100em/16);
+    }
+  }
+
+  div.second {
+    @include respond-between(300px, 767px) {
+      border-left: 1px solid #fff;
+    }
+
+    @include respond-to(768px) {
+      width: (120em/16);
+    }
+  }
+
+  form {
+    @include respond-between(300px, 767px) {
+      display: none;
+    }
+
+    @include respond-to(768px) {
+      text-align:right;
+      float: right;
+    }
+
+    input {
+      @include respond-to(768px) {
+        width: (140em/16);
+      }
+    }
+  }
+}
+
+#secondary-navigation {
+  @include respond-between(300px, 767px) {
+    padding-top: 12px;
+    text-align: right;
+  }
+
+  @include respond-between(600px, 767px) {
+    padding-top: 0;
+  }
+
+  @include respond-to(768px) {
+    position: relative;
+    border-bottom: 1px solid $warm-grey;
+    float: right;
+    padding-bottom: (6em/16);
+    width: percentage(220/768);
+  }
+
+  @include respond-between(768px, 1023px) {
+    position: relative;
+    border-bottom: 1px solid $warm-grey;
+    float: right;
+    padding-bottom: (8em/16);
+    width: percentage(300/768);
+  }
+
+  @include respond-to(1024px) {
+    width: percentage(275/970);
+    margin-top: (23em/16);
+    margin-right: percentage(115/970);
+  }
+
+  ul,
+  li {
+    display: inline;
+  }
+
+  li {
+    font-size: (14em/16);
+  }
+
+  a {
+    @include respond-to(768px) {
+      @include small-text;
+      font-size: (14em/16);
+      line-height: (18/14);
+      white-space: nowrap;
+      margin-right: 0;
+    }
+
+    @include respond-to(768px, 1023px) {
+      margin-left: .2em;
+      padding-left: 10px;
+      background: transparent url(../images/bullet.png) 0 50% no-repeat;
+      background-size: 4px 4px;
+    }
+
+    &:hover {
+      @include respond-to(768px) {
+        color: $green;
+      }
+    }
+
+    html.svg & {
+      @include respond-to(768px, 1023px) {
+        background-image: url(../images/bullet.svg);
+      }
+    }
+  }
+
+  .more a {
+    @include respond-to(768px) {
+      position: absolute;
+      right: 0;
+      bottom: -1.8em;
+      margin-right: 0;
+    }
+
+    @include respond-to(1024px) {
+      right: 5px;
+
+      &.show-less {
+        right: -5px;
+      }
+    }
+  }
+
+  .more a,
+  li:first-child a {
+    @include respond-between(768px, 1023px) {
+      background-image: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    html.svg & {
+      @include respond-between(768px, 1023px) {
+        background-image: none;
+      }
+    }
+  }
+
+  > div {
+    @include respond-to(768px) {
+      text-align: right;
+      margin-top: (10em/16);
+    }
+
+    @include respond-to(1024px) {
+      text-align: left;
+      margin: - (25em/14) percentage((115/275) * -1) 0 0;
+      float: right;
+      width: percentage(145/275);
+    }
+
+    a {
+      @include respond-to(1024px) {
+        line-height: (20/14);
+        display: block;
+      }
+    }
+  }
+
+  form {
+    @include respond-between(300px, 767px) {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: (6em/16);
+    }
+
+    @include respond-to(768px) {
+      text-align: right;
+    }
+
+    @include respond-to(1024px) {
+      float: left;
+      text-align: left;
+    }
+
+    input {
+      z-index: 50;
+      position: relative;
+    }
+
+    button {
+      z-index: 60;
+    }
+
+    .suggestions {
+      @include clearfix;
+      display: block;
+      position: absolute;
+      top: 22px;
+      left: 0;
+      right: 0;
+      z-index: 30;
+      border-radius: 4px 0 4px 4px;
+      text-align: left;
+
+      @include respond-between(768px, 1023px) {
+        border-top: 1px solid $warm-grey;
+      }
+
+      ul,
+      li {
+        display: block;
+      }
+
+      a {
+        font-size: (16em/16);
+        color: $green;
+        font-family: $font-family;
+        .category {
+          font-size: (13em/16);
+        }
+      }
+    }
+  }
+
+  div {
+    @include respond-between(300px, 767px) {
+      display: none;
+    }
+  }
+
+  .search {
+    @include respond-to(768px) {
+      text-align: right;
+    }
+
+    @include respond-to(1024px) {
+      width: (200em/16);
+    }
+
+    input {
+      @include respond-between(300px, 767px) {
+        width: (120em/14);
+      }
+
+      @include respond-to(600px) {
+        width: 70%;
+      }
+
+      @include respond-to(768px) {
+        width: (140em/16);
+      }
+
+      @include respond-to(1024px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+#skip-to-navigation {
+  @include respond-between(300px, 767px) {
+    @include small-text;
+    font-size: (13em/16);
+    line-height: (17/13);
+    line-height: (25em/13);
+    background: $beige url(../images/arrow-down.png) 89% 50% no-repeat;
+    background-size: 14px 9px;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 0 25px 0 10px;
+  }
+
+  @include respond-to(768px) {
+    display: none;
+  }
+
+  html.svg & {
+    @include respond-between(300px, 767px) {
+      background-image: url(../images/arrow-down.svg);
+    }
+  }
+}

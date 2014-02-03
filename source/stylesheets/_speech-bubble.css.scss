@@ -1,0 +1,251 @@
+.speech-bubble {
+  position: relative;
+  background: $yellow;
+  padding: 20px 20px 20px 25px;
+  margin: (60em/16) 0;
+  border-radius: 4px 4px 4px 0;
+  @include box-sizing(border-box);
+
+  @include respond-between(300px, 767px) {
+    margin-top: (30em/16);
+    margin-bottom: (30em/16);
+    padding: 15px;
+  }
+
+  @include respond-to(768px) {
+    width: percentage(620/580);
+  }
+
+  @include respond-to(1024px) {
+    background: $yellow url(../images/yellow-grain.png) 100% 0 repeat-y;
+    background-size: 20px 50px;
+    margin-right: (145em/16);
+    width: auto;
+  }
+
+  &:after {
+    content:"";
+    position:absolute;
+    bottom: 0;
+    left: -20px;
+    border-width: 0 0 20px 21px;
+    border-style: solid;
+    border-color: $yellow transparent;
+  }
+
+  .inner {
+    @include clearfix;
+  }
+
+  h2 {
+    margin-top: 0;
+
+    @include respond-between(300px, 767px) {
+      font-size: (18em/16);
+    }
+
+    @include respond-to(768px) {
+      font-size: (24em/16);
+      line-height: (26/20);
+    }
+  }
+
+  p,
+  ul {
+    margin-top: (2em/18);
+
+    @include respond-between(300px, 767px) {
+      margin-top: (2em/16);
+    }
+  }
+
+  li {
+    margin-left: 1em;
+
+    @include respond-to(768px) {
+      line-height: (24/18);
+    }
+  }
+
+  p {
+    @include respond-to(768px) {
+      line-height: (24/18);
+    }
+  }
+
+  form {
+    margin-right: (20em/16);
+  }
+
+  .main {
+    @include respond-to(768px) {
+      @include box-sizing(border-box);
+      float: left;
+      margin-top: 0;
+      border-right: 1px solid #d7c82f;
+      padding-right: 20px;
+      width: percentage(390/570);
+    }
+
+    @include respond-to(1024px) {
+      width: percentage(390/610);
+    }
+
+    ul:first-child {
+      @include respond-to(768px) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .aside {
+    margin-top: 1em;
+
+    @include respond-between(300px, 767px) {
+      margin-top: (10em/16);
+    }
+
+    @include respond-to(768px) {
+      @include box-sizing(border-box);
+      float: left;
+      margin-top: 0;
+      margin-left: -1px;
+      padding-left: 20px;
+      border-left: 1px solid #d7c82f;
+      width: percentage(179/570);
+
+      ul:first-child {
+        margin-top: 0;
+      }
+    }
+
+    @include respond-to(1024px) {
+      width: percentage(200/610);
+    }
+
+    li {
+      @include respond-between(300px, 767px) {
+        display: inline-block;
+        margin-left: 0;
+        margin-right: .3em;
+      }
+    }
+  }
+
+  &.vcard {
+    .main {
+      @include respond-between(300px, 767px) {
+        margin-top: (10em/16);
+      }
+    }
+
+    li {
+      @include respond-between(300px, 767px) {
+        display: inline-block;
+        margin-left: 0;
+        margin-right: .3em;
+      }
+    }
+  }
+
+  // FIXME what is this I don't even…
+  .vcard {
+    @include clearfix;
+
+    & + .vcard {
+      margin-top:1em;
+      padding-top:1em;
+
+      .organization-name {
+        display:none;
+      }
+
+      p {
+        padding-top:10px;
+        border-top: 1px solid #d7c82f;
+
+        @include respond-to(768px) {
+          margin-right: 20px;
+        }
+
+      }
+    }
+  }
+
+  .position-me {
+    margin-top: 15px;
+    text-align: center;
+
+    .choose {
+      margin-top: (8em/14);
+      display: block;
+      font-family: $arial;
+      font-size: (14em/16);
+    }
+  }
+}
+
+.vcard {
+  .inner {
+    @include respond-to(1024px) {
+      padding-right: 20px;
+    }
+  }
+
+  .main,
+  .aside {
+    @include respond-to(768px) {
+      margin-top: (2em/16);
+      width: 50%;
+    }
+
+    @include respond-to(1024px) {
+      margin-top: (10em/16);
+    }
+  }
+
+  .main {
+    @include respond-to(1024px) {
+      width: percentage(320/620);
+    }
+  }
+
+  .aside {
+    @include respond-to(1024px) {
+      width: percentage(300/620);
+    }
+  }
+}
+
+form.speech-bubble {
+  margin-top: 40px;
+  margin-bottom: 0;
+
+  .search {
+    padding: 10px 10px 0 10px;
+    margin-top: -10px;
+    margin-left: -10px;
+
+    input {
+      width: 100%;
+      padding: 7px 20px 7px 10px;
+      border-radius: 6px;
+      background: #fff;
+
+      @include respond-to(600px) {
+        width: 70%;
+      }
+    }
+
+    &.active-suggestions {
+      background: $yellow;
+      border-radius: 6px 6px 0 0;
+
+      input,
+      input:focus {
+        border: 1px solid transparent;
+      }
+    }
+  }
+}
+
