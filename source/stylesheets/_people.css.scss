@@ -1,0 +1,35 @@
+.people .grid {
+  img {
+    margin: 0;
+  }
+
+  a {
+    color: #000;
+
+    h2 {
+      font-size: 1em;
+      color: $green;
+      margin-top: 10px;
+
+      @include respond-to(768px) {
+        font-size: (20em/16);
+      }
+    }
+
+    p {
+      margin: 0;
+      font-size: (14em/16);
+
+      @include respond-to(768px) {
+        font-size: (16em/16);
+      }
+    }
+
+    &:hover {
+      h2 {
+        color: $green-dark;
+      }
+    }
+  }
+}
+
