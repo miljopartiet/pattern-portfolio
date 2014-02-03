@@ -3,12 +3,6 @@
 //
 article {
   @extend %centered-section;
-  margin: 0 18px;
-
-  @include respond-to(600px) {
-    margin-right: auto;
-    margin-left: auto;
-  }
 
   @include respond-to(1024px) {
     max-width: 805px;

@@ -91,14 +91,26 @@ $base-line-height: 1.5;
 
 // Placeholders for positioned section elements
 %centered-section {
-  @include respond-between(600px, 767px) {
-    width: (520em/16);
+  margin-right: 18px;
+  margin-left: 18px;
+
+  @include respond-to(600px) {
     margin-right: auto;
     margin-left: auto;
   }
 
+  @include respond-between(600px, 767px) {
+    width: (520em/16);
+  }
+
   @include respond-between(768px, 1023px) {
     width: (580em/16);
+  }
+}
+
+%centered-page-part {
+  @include respond-to(1024px) {
+    max-width: 970px;
     margin-left: auto;
     margin-right: auto;
   }

@@ -45,6 +45,7 @@
   position: relative;
   margin-bottom: (20em/16);
   @extend %centered-section;
+  @extend %centered-page-part;
 
   @include respond-between(300px, 767px) {
     padding-top: 18px;

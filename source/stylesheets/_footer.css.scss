@@ -1,6 +1,10 @@
+#site-footer {
+  margin-top: (80em/16);
+}
+
 #logo-full {
   @extend %centered-section;
-
+  @extend %centered-page-part;
   @include respond-between(600px, 767px) {
     height: (46em/18);
     background-size: (284em/18) (46em/18);
@@ -38,6 +42,7 @@
   background: transparent url(../images/cc.png) 0 2px no-repeat;
   background-size: 20px 20px;
   @extend %centered-section;
+  @extend %centered-page-part;
 
   @include respond-between(600px, 767px) {
     width: 520px;
@@ -45,7 +50,7 @@
   }
 
   @include respond-to(1024px) {
-    margin-right: (185em/12);
+    padding-right: (185em/12);
   }
 
   html.svg & {

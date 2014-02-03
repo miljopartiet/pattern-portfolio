@@ -111,16 +111,6 @@ p.copy {
     padding-bottom: (40em/16);
   }
 
-  > footer {
-    margin-top: (80em/16);
-
-    @include respond-between(768px, 1023px) {
-      width: (580em/16);
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
   p,
   li {
     input,
@@ -140,6 +130,12 @@ p.copy {
   }
 }
 
+%page-section-colored {
+  a {
+    @include link-colors(#fff, #fff, #fff, #fff, #fff);
+  }
+}
+
 .page-section {
   padding-bottom: 3em;
 }
@@ -151,6 +147,7 @@ p.copy {
 
 .page-section-green {
   @extend %page-section-solid;
+  @extend %page-section-colored;
   color: #fff;
   @include background-image(radial-gradient(false, color-stops(#339933, #00730a)));
 }

@@ -123,10 +123,7 @@
 #site-navigation {
   @include clearfix;
   @include respond-between(300px, 767px) {
-    // Expand the navigation to the window border when viewed in the footer
     position: relative;
-    margin-left: -18px;
-    margin-right: -18px;
   }
 
   li {
@@ -195,8 +192,13 @@
 }
 // Site navigation is found in the bottom of the page
 nav.main-navigation {
+  @extend %centered-section;
+  @extend %centered-page-part;
+
   @include respond-between(300px, 767px) {
     background: $beige;
+    width: auto;
+    margin: 0;
   }
 
   @include respond-to(768px) {
@@ -206,15 +208,13 @@ nav.main-navigation {
   }
 
   .inner {
-    @extend %centered-section;
+    @include clearfix;
 
     @include respond-between(300px, 767px) {
       padding: 0 18px;
-      @include clearfix;
     }
 
     @include respond-between(600px, 767px) {
-      padding: 0;
     }
 
     > div {
