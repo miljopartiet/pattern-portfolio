@@ -1,8 +1,5 @@
 body {
-  font-family: $font-family;
-  color: $font-color;
-  font-size: 1em;
-  line-height: (20/16);
+  @extend %base-text;
   padding: 0;
   margin: 0;
   background: #fff;
