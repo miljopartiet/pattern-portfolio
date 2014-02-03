@@ -133,11 +133,20 @@ p.copy {
 %page-section-colored {
   a {
     @include link-colors(#fff, #fff, #fff, #fff, #fff);
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
 .page-section {
   padding-bottom: 3em;
+
+  h1 {
+    color: $green;
+  }
 }
 
 .page-section-cream {
@@ -150,6 +159,21 @@ p.copy {
   @extend %page-section-colored;
   color: #fff;
   @include background-image(radial-gradient(false, color-stops(#339933, #00730a)));
+
+  h1 {
+    color: $yellow;
+  }
+}
+
+.page-section-magenta {
+  @extend %page-section-solid;
+  @extend %page-section-colored;
+  color: #fff;
+  @include background-image(radial-gradient(false, color-stops(#BD0076, #6C1847)));
+
+  h1 {
+    color: $yellow;
+  }
 }
 
 // Related conversations on a conversation permalink
