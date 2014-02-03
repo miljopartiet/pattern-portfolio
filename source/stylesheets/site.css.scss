@@ -95,28 +95,20 @@ p.copy {
   margin: 1.5em auto 0 auto;
   padding-bottom: (40em/16);
 
-  @include respond-between(300px, 767px) {
-    margin: 0 18px;
-  }
-
   @include respond-between(600px, 767px) {
     background: #fff;
-    margin: 0 (20em/16) 0 0;
     padding-top: (20em/16);
-    padding-left: (20em/16);
   }
 
   @include respond-between(768px, 1023px) {
     background: #fff;
-    margin: 0 percentage(30/768) 0 0;
-    padding: (30em/16) 0 (50em/16) percentage(30/768);
+    padding: (30em/16) 0 (50em/16) 0;
   }
 
   @include respond-to(1024px) {
     margin-top:0;
     padding-top: (40em/16);
     padding-bottom: (40em/16);
-    max-width: (970em/16);
   }
 
   > footer {
@@ -140,13 +132,27 @@ p.copy {
   }
 }
 
+%page-section-solid {
+  padding-top: 3em;
 
-#main {
-  @extend %centered-section;
-
-  @include respond-to(1024px) {
-    margin-left: 165px;
+  & + .page-section {
+    padding-top: 3em;
   }
+}
+
+.page-section {
+  padding-bottom: 3em;
+}
+
+.page-section-cream {
+  @extend %page-section-solid;
+  background: #f6f4e5;
+}
+
+.page-section-green {
+  @extend %page-section-solid;
+  color: #fff;
+  @include background-image(radial-gradient(false, color-stops(#339933, #00730a)));
 }
 
 // Related conversations on a conversation permalink
