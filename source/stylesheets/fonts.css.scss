@@ -1,0 +1,26 @@
+@font-face{
+  font-family:"MP Sans";
+  src: font-url("mp-sans.eot?#iefix");
+  src: font-url("mp-sans.eot?#iefix") format("embedded-opentype"),
+       font-url("mp-sans.woff") format("woff"),
+       font-url("mp-sans.ttf") format("truetype"),
+       font-url("mp-sans.svg#univers-light") format("svg");
+}
+
+@font-face{
+  font-family:"MP Serif";
+  src: font-url("mp-serif.eot?#iefix");
+  src: font-url("mp-serif.eot?#iefix") format("embedded-opentype"),
+       font-url("mp-serif.woff") format("woff"),
+       font-url("mp-serif.ttf") format("truetype"),
+       font-url("mp-serif.svg#univers") format("svg");
+}
+
+@font-face{
+  font-family:"MP Dingbats";
+  src: font-url("mp-dingbats.eot?#iefix");
+  src: font-url("mp-dingbats.eot?#iefix") format("embedded-opentype"),
+       font-url("mp-dingbats.woff") format("woff"),
+       font-url("mp-dingbats.ttf") format("truetype"),
+       font-url("mp-dingbats.svg#univers-bold") format("svg");
+}
