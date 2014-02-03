@@ -98,6 +98,126 @@ article {
       }
     }
   }
+
+  .body {
+    @include respond-between(768px, 1023px) {
+      position: relative;
+    }
+
+    @include respond-to(1024px) {
+      width: percentage(640/805);
+    }
+
+    > p,
+    > ul,
+    > ol {
+      @include respond-between(768px, 1023px) {
+        margin-right: (20em/18);
+      }
+
+      @include respond-to(1024px) {
+        margin-right: (60em/18);
+      }
+    }
+
+    figure {
+      @include respond-between(300px, 767px) {
+        margin-top: (12em/16);
+      }
+
+      @include respond-to(600px) {
+        margin-top: (20em/16);
+      }
+
+      &.full {
+        @include respond-to(1024px) {
+          margin-right: (60em/16);
+        }
+      }
+
+      &.right,
+      &.left {
+        @include respond-to(600px) {
+          width: percentage(240/600);
+          margin: (10em/16) 0;
+        }
+      }
+
+      &.right {
+        @include respond-to(600px) {
+          float: right;
+          margin-left: (20em/16);
+        }
+
+        @include respond-to(1024px) {
+          position: relative;
+          width: percentage(310/640);
+          margin-right: -55px;
+          padding-top: 10px;
+          border-top: 1px solid $warm-grey;
+        }
+
+        div {
+          @include respond-to(1024px) {
+            width: 235px;
+            float: left;
+            margin-right: 40px;
+          }
+        }
+
+        figcaption {
+          @include respond-to(1024px) {
+            border: none;
+            width: 145px;
+            position: absolute;
+            top: 10px;
+            right: -110px;
+            margin: 0;
+          }
+        }
+      }
+
+      &.left {
+        @include respond-to(600px) {
+          float: left;
+          margin-right: (20em/16);
+        }
+
+        @include respond-to(1024px) {
+          width: percentage(235/640);
+        }
+      }
+    }
+
+    .conversations {
+      .fetch-more {
+        margin-left: percentage(70/620);
+      }
+    }
+
+    .conversation {
+      @include respond-to(1024px) {
+        width: percentage(620/640);
+      }
+
+      .question .content p {
+        font-size: (24em/16);
+        line-height: (26/24);
+
+        @include respond-to(768px) {
+          font-size: (26em/16);
+          line-height: (30/26);
+        }
+      }
+    }
+
+    .details {
+      @include respond-to(1024px) {
+        width: percentage(145/640);
+        margin-right: percentage(-165/640);
+      }
+    }
+  }
 }
 
 // Article sections after the main content
@@ -233,7 +353,7 @@ article {
     }
   }
 
-   // Subsections
+  // Subsections
   .article-subsection {
     margin-top: (20em/16);
     border-top: 1px solid $warm-grey;
