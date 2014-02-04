@@ -2,12 +2,16 @@
   @include clearfix;
   list-style: none;
   margin-top: (20em/16);
+  @include respond-to(1024px) {
+    margin-top: (40em/16);
+  }
 
   .topic {
     margin: (20em/16) 0 0 0;
 
     @include respond-to(1024px) {
       margin-right: (20em/16);
+      margin-top: (40em/16);
     }
 
     &:first-child {

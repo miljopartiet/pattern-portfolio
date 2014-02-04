@@ -32,7 +32,6 @@ $base-line-height: 1.5;
 
 @mixin small-text($color: $text-light-grey) {
   font-family: $arial;
-  color: $text-light-grey;
 }
 
 @mixin placeholder-styles {
