@@ -1,0 +1,35 @@
+@mixin heading-base {
+  font-family: $mp-sans;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+%heading-main {
+  @include heading-base;
+  font-size: (33em/16);
+  line-height: 1;
+
+  @include respond-to(600px) {
+    font-size: (37em/16);
+  }
+
+  @include respond-to(768px) {
+    font-size: (48em/16);
+  }
+
+  @include respond-to(1024px) {
+    font-size: (84em/16);
+    line-height: (64/84);
+  }
+}
+
+%heading-smaller {
+  @include heading-base;
+  font-size: (20em/16);
+  line-height: (22/20);
+
+  @include respond-to(768px) {
+    font-size: (44em/16);
+    line-height: (30/40);
+  }
+}

@@ -306,8 +306,7 @@ article {
     padding: (18em/23) 0 0 (22em/23);
     background: transparent url(../images/bg-vignette.png) 0 0 no-repeat;
     background-size: 100%;
-    font-family: $mp-sans;
-    line-height: 1em;
+    @extend %heading-smaller;
     color: #fff;
     text-transform: none;
 

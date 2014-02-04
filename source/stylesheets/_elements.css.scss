@@ -9,38 +9,17 @@ body {
 h1,
 h2 {
   margin: 0;
-  font-weight: normal;
-  text-rendering: optimizeLegibility;
 }
 
 h1 {
-  font-family: $mp-sans;
-  font-size: (33em/16);
-  line-height: 1;
-
-  @include respond-to(600px) {
-    font-size: (37em/16);
-  }
-
-  @include respond-to(768px) {
-    font-size: (48em/16);
-  }
-
-  @include respond-to(1024px) {
-    font-size: (80em/16);
-    line-height: .7;
-  }
+  @extend %heading-main;
 }
 
 h2 {
+  @extend %heading-smaller;
   margin-top: (24em/20);
-  font-family: $mp-sans;
-  font-size: (20em/16);
-  line-height: (22/20);
 
   @include respond-to(768px) {
-    font-size: (44em/16);
-    line-height: (30/40);
     margin-top: 1em;
   }
 }
