@@ -112,11 +112,9 @@
   }
 
   .category {
+    @extend %help-text;
     display: block;
     margin-top: 2px;
-    @include small-text;
-    font-size: (13em/18);
-    line-height: (16/13);
   }
 
   em {

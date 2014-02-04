@@ -43,14 +43,8 @@ nav.breadcrumbs {
   }
 
   p {
-    @include small-text;
-    font-size: (13em/16);
-    line-height: (17/13);
+    @extend %help-text;
     margin: 0;
-
-    @include respond-to(768px) {
-      font-size: (14em/16);
-    }
   }
 
   a,

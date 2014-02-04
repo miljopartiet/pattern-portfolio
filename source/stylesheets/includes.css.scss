@@ -30,10 +30,6 @@ $arial: arial, sans-serif;
 $base-font-size: 16px;
 $base-line-height: 1.5;
 
-@mixin small-text($color: $text-light-grey) {
-  font-family: $arial;
-}
-
 @mixin placeholder-styles {
   color: $text-warm-grey;
 }

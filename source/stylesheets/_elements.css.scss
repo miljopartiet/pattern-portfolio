@@ -47,7 +47,6 @@ h4 {
 
 p {
   margin-top: (12em/16);
-  @extend %body-text;
 }
 
 h2,
@@ -93,7 +92,6 @@ ul ol {
 
 li {
   margin: 0 0 0 1.5em;
-  @extend %body-text;
 
   @include respond-to(600px) {
     margin-left: 0;
@@ -263,20 +261,8 @@ figure {
 }
 
 figcaption {
-  @include small-text;
-  font-size: (13em/16);
-  line-height: (16/13);
+  @extend %help-text;
   margin-top: (5em/16);
-
-  @include respond-to(768px) {
-    font-size: (14em/16);
-    line-height: (18/14);
-  }
-
-  strong,
-  b {
-    color: $text-grey;
-  }
 }
 
 blockquote {
@@ -350,9 +336,7 @@ blockquote {
 
   footer {
     @include clearfix;
-    @include small-text;
-    font-size: (13em/16);
-    line-height: (17/13);
+    @extend %help-text;
     margin-top: (8em/13);
     bottom: (-5em/13);
     text-align: right;

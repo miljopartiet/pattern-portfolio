@@ -9,6 +9,10 @@ article {
     padding-left: 165px;
   }
 
+  li {
+    @extend %body-text;
+  }
+
   p a,
   li > a {
     text-decoration: underline;
@@ -317,20 +321,8 @@ article {
 
   .section-lead,
   .subsection-lead {
-    @include small-text;
-    font-size: (13em/16);
-    line-height: (17/13);
+    @extend %help-text;
     margin-top: .5em;
-
-    @include respond-to(768px) {
-      font-size: (14em/16);
-      line-height: (18/14);
-    }
-
-    b,
-    strong {
-      color: $text-grey;
-    }
 
     a {
       text-decoration: none;

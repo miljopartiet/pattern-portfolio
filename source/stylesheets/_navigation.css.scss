@@ -10,17 +10,17 @@
   }
 
   ul {
-    margin: 0 0 0 (20em/18);
+    margin: 0 0 0 (20em/16);
     list-style: none;
   }
 
   li {
     margin: 0;
-    font-size: (13em/18);
+    font-size: (13em/16);
     line-height: (25.1/13);
 
     @include respond-to(1024px) {
-      font-size: (16em/18);
+      font-size: (16em/16);
       line-height: (30/16);
     }
   }
@@ -127,11 +127,7 @@
   }
 
   li {
-    @include respond-to(1024px) {
-      @include small-text;
-      font-size: (14em/16);
-      line-height: (18em/14);
-    }
+    @extend %help-text;
 
     a.active {
       color: $green;
@@ -168,10 +164,9 @@
   }
 
   a.close {
+    @extend %help-text;
+
     @include respond-between(300px, 767px) {
-      @include small-text;
-      font-size: (13em/16);
-      line-height: (14/13);
       display: block;
       text-align: right;
       clear: both;
@@ -240,11 +235,10 @@ nav.main-navigation {
   }
 
   li {
+    @extend %help-text;
+
     @include respond-to(768px) {
       margin: 0;
-      @include small-text;
-      font-size: (14em/16);
-      line-height: (18/14);
     }
   }
 
@@ -393,20 +387,16 @@ nav.main-navigation {
     display: inline;
   }
 
-  li {
-    font-size: (14em/16);
-  }
-
   a {
+    @extend %help-text;
+    color: $text-light-grey;
+
     @include respond-to(768px) {
-      @include small-text;
-      font-size: (14em/16);
-      line-height: (18/14);
       white-space: nowrap;
       margin-right: 0;
     }
 
-    @include respond-to(768px, 1023px) {
+    @include respond-between(768px, 1023px) {
       margin-left: .2em;
       padding-left: 10px;
       background: transparent url(../images/bullet.png) 0 50% no-repeat;
@@ -420,7 +410,7 @@ nav.main-navigation {
     }
 
     html.svg & {
-      @include respond-to(768px, 1023px) {
+      @include respond-between(768px, 1023px) {
         background-image: url(../images/bullet.svg);
       }
     }
@@ -466,7 +456,7 @@ nav.main-navigation {
 
     @include respond-to(1024px) {
       text-align: left;
-      margin: - (25em/14) percentage((115/275) * -1) 0 0;
+      margin: -(25em/14) percentage((115/275) * -1) 0 0;
       float: right;
       width: percentage(145/275);
     }
@@ -571,25 +561,19 @@ nav.main-navigation {
 }
 
 #skip-to-navigation {
-  @include respond-between(300px, 767px) {
-    @include small-text;
-    font-size: (13em/16);
-    line-height: (17/13);
-    line-height: (25em/13);
-    background: $beige url(../images/arrow-down.png) 89% 50% no-repeat;
-    background-size: 14px 9px;
-    display: inline-block;
-    border-radius: 4px;
-    padding: 0 25px 0 10px;
-  }
+  @extend %help-text;
+  line-height: 25px !important;
+  background: $beige url(../images/arrow-down.png) 89% 50% no-repeat;
+  background-size: 14px 9px;
+  display: inline-block;
+  border-radius: 4px;
+  padding: 0 25px 0 10px;
 
   @include respond-to(768px) {
     display: none;
   }
 
   html.svg & {
-    @include respond-between(300px, 767px) {
-      background-image: url(../images/arrow-down.svg);
-    }
+    background-image: url(../images/arrow-down.svg);
   }
 }

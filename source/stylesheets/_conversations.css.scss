@@ -12,19 +12,12 @@
   }
 
   .details {
-    @include small-text;
-    font-size: (13em/16);
-    line-height: (15/14);
+    @extend %help-text;
     padding-top: (8em/13);
     margin: 0 percentage(75/620) 0 percentage(70/620);
 
     @include respond-between(300px, 767px) {
       margin-right: 0;
-    }
-
-    @include respond-to(768px) {
-      font-size: (14em/16);
-      line-height: (18/14);
     }
 
     @include respond-to(1024px) {

@@ -33,3 +33,14 @@
     line-height: (30/40);
   }
 }
+
+%help-text {
+  font-family: $arial;
+  font-size: (13em/16);
+  line-height: (17/13);
+
+  @include respond-to(768px) {
+    font-size: (14em/16);
+    line-height: (18/14);
+  }
+}
