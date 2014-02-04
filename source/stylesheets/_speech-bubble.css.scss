@@ -20,6 +20,14 @@
     width: auto;
   }
 
+  .page-section > & {
+    @extend %centered-section;
+
+    &:last-child {
+      margin-bottom: -5em;
+    }
+  }
+
   &:after {
     content:"";
     position:absolute;

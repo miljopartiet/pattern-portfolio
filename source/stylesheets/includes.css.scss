@@ -114,6 +114,10 @@ $base-line-height: 1.5;
   @include respond-between(768px, 1023px) {
     width: (580em/16);
   }
+
+  @include respond-to(1024px) {
+    max-width: 640px;
+  }
 }
 
 %centered-page-part {
