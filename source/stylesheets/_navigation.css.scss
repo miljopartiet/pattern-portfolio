@@ -31,7 +31,7 @@
     padding: 0 0 0 (12em/13);
     background: $green;
     text-decoration: none;
-    font-family: $swift;
+    font-family: $mp-serif;
     color: #fff;
     border-radius: 3px;
 
@@ -263,7 +263,7 @@ nav.main-navigation {
 
     li {
       @include respond-between(300px, 767px) {
-        font: normal (18em/16) $swift;
+        font: normal (18em/16) $mp-serif;
         margin: 0;
         border-bottom:1px solid #fff;
       }

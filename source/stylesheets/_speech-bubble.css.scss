@@ -37,15 +37,6 @@
 
   h2 {
     margin-top: 0;
-
-    @include respond-between(300px, 767px) {
-      font-size: (18em/16);
-    }
-
-    @include respond-to(768px) {
-      font-size: (24em/16);
-      line-height: (26/20);
-    }
   }
 
   p,

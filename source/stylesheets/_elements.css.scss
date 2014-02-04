@@ -9,39 +9,38 @@ body {
 h1,
 h2 {
   margin: 0;
-  font-family: $swift;
   font-weight: normal;
   text-rendering: optimizeLegibility;
 }
 
 h1 {
-  font-size: (24em/16);
-  line-height: (26/24);
+  font-family: $mp-sans;
+  font-size: (33em/16);
+  line-height: 1;
 
   @include respond-to(600px) {
-    font-size: (33em/16);
-    line-height: (35/33);
+    font-size: (37em/16);
   }
 
   @include respond-to(768px) {
-    font-size: (37em/16);
-    line-height: (37em/37);
+    font-size: (48em/16);
   }
 
   @include respond-to(1024px) {
-    font-size: (42em/16);
-    line-height: 1.1;
+    font-size: (80em/16);
+    line-height: .7;
   }
 }
 
 h2 {
   margin-top: (24em/20);
+  font-family: $mp-sans;
   font-size: (20em/16);
   line-height: (22/20);
 
   @include respond-to(768px) {
-    font-size: (26em/16);
-    line-height: (30/26);
+    font-size: (44em/16);
+    line-height: (30/40);
     margin-top: 1em;
   }
 }
@@ -51,7 +50,7 @@ h3 {
   line-height: (20/18);
   margin-top: (18em/18);
   font-weight: normal;
-  font-family: $swift;
+  font-family: $mp-serif;
 
   @include respond-to(768px) {
     font-size: (20em/16);
@@ -330,7 +329,7 @@ blockquote {
     }
 
     p {
-      font-family: $swift;
+      font-family: $mp-serif;
       font-size: (18em/16);
       line-height: (22/18);
       margin-top: (12em/18);
@@ -352,7 +351,7 @@ blockquote {
 
         &:before {
           content: "”";
-          font-family: $swift;
+          font-family: $mp-serif;
           font-size: (24em/18);
           line-height: 1;
           position: absolute;
