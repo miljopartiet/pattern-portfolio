@@ -6,12 +6,8 @@
   .topic {
     margin: (20em/16) 0 0 0;
 
-    @include respond-between(768px, 1023px) {
-      margin-right: (20em/16);
-    }
-
     @include respond-to(1024px) {
-      margin-right: (60em/16);
+      margin-right: (20em/16);
     }
 
     &:first-child {
@@ -23,29 +19,8 @@
   h3 {
     margin: 0;
     position: relative;
-
-    .number {
-      display: none;
-      font-size: (20em/26);
-      line-height: 1;
-      padding-top: 7px;
-      position: absolute;
-      top: 3px;
-      left: -56px;
-      width: 36px;
-      height: 32px;
-      background: transparent url(../images/bg-vignette.png) 0 0 no-repeat;
-      background-size: 36px 32px;
-      color: #fff;
-      text-align: center;
-
-      @include respond-to(768px) {
-        display: block;
-      }
-
-      html.svg & {
-        background-image: url(../images/bg-vignette.svg);
-      }
+    @include respond-to(600px) {
+      margin-left: -20px;
     }
   }
 
@@ -56,10 +31,9 @@
     display: inline;
   }
 
-  h2 {
-    @include respond-between(300px, 767px) {
+  p {
+    @include respond-to(600px) {
       font-size: (20em/16);
-      padding-right: 0;
     }
   }
 }
