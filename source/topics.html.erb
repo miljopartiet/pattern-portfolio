@@ -6,77 +6,83 @@ url: http://www.mp.se/politik
 <div class="page-section page-section-magenta">
   <article>
     <%= partial "main_topics" %>
-    <%= partial 'bubbles/localize' %>
-    <section class="article-section local">
-      <header>
-        <p class="section-lead">Här visar vi lokal politik från <a href="/jamtland.html">Östersund</a> och <a href="/jamtland.html">Jämtland</a>. Du kan enkelt <a href="">ändra kommun</a> om du vill.</p>
-      </header>
-
-      <h2><a href="#" class="topic">Östersund</a> En ekologisk kommun mitt i sameland</h2>
-      <div class="topics">
-        <div class="topic">
-          <h3><a href="#">En skola för livet.</a></h3>
-          <p>Miljöpartiet i Östersund vill ge de kommunala skolorna större pedagogisk frihet och satsa på matkvalitén i skolan. Vi vill anpassa barnomsorgen efter familjers behov och ha mindre barngrupper i förskolan.</p>
-        </div>
-        <div class="topic">
-          <h3><a href="#">Ungdomarnas situation.</a></h3>
-          <p>Kommunens satsning på ”Mötesplatser unga” ska utvecklas vidare. Vi vill också bygga boende för ungdomar/studenter, stärka arbetet mot droger och skapa satsa på praktikplatser och jobb för unga.</p>
-        </div>
-        <div class="topic">
-          <h3><a href="#">Ungdomarnas situation.</a></h3>
-          <p>Kommunens satsning på ”Mötesplatser unga” ska utvecklas vidare. Vi vill också bygga boende för ungdomar/studenter, stärka arbetet mot droger och skapa satsa på praktikplatser och jobb för unga.</p>
-        </div>
-      </div>
-
-      <h2><a href="/jamtland.html" class="topic">Jämtland</a> Ett livskraftigt Jämtland</h2>
-      <div class="topics">
-        <div class="topic">
-          <h3><a href="#">Stoppa klimatkatastrofen med förnybar energi.</a></h3>
-          <p>Klimathotet är globalt, men alla utsläpp är lokala. Miljöpartiet i Jämtland vill bygga ett center för miljöteknik i Sveg, utveckla järnvägstrafiken och bryt olje- och fossilbränsleberoendet. Jämtland, med sin potential för förnybar energi, ska vara drivande i klimatomställningen.</p>
-        </div>
-        <div class="topic">
-          <h3><a href="#">Matriket Jämtland.</a></h3>
-          <p>Mat ska hänga samman med livskvalitet och god miljö. Vi vill ha mer ekologisk mat, kortare djurtransporter och småskaliga slakterier.</p>
-        </div>
-        <div class="topic">
-          <h3><a href="#">Grönare närmiljö.</a></h3>
-          <p>Vi vill skapa ett friluftsområde på Storsjö strand, återställa Storsjön vid Sölvbacka strömmar och värna om en miljö fri från giftiga kemikalier.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="article-section current-topics">
-      <header class="vignetted">
-        <span class="vignette">Just nu</span>
-        <p class="section-lead">Aktuellt i den politiska debaten</p>
-      </header>
-
-      <h2><a href="#">Sverige kan stoppa barnfattigdomen</a></h2>
-      <p>Mer än vart tionde barn är fattigt i Sverige. Miljöpartiet föreslår en nationell handlingsplan för att minska barnfattigdom.</p>
-
-      <h2><a href="#">Sverige ska inte beväpna diktaturer</a></h2>
-      <p>Vi vill stoppa svensk vapenexport, i första hand till odemokratiska länder. Sverige ska inte beväpna diktaturer.</p>
-
-      <h2><a href="#">Mångfald och kvalitet i skolan</a></h2>
-      <p>Miljöpartiet vill ha en skola som präglas av hög kvalitet och pedagogisk mångfald. Vi tycker att det är viktigt att skapa goda förutsättningar för olika profiler och inriktningar.</p>
-    </section>
-
-    <section class="article-section">
-      <header class="vignetted">
-        <span class="vignette">Läs mer</span>
-        <p class="section-lead">Miljöpartiets historia och grundvärderingar</p>
-      </header>
-
-      <h2>Framtidstro sedan 1981</h2>
-      <p>Sedan Miljöpartiet bildades har vi arbetat för ett hållbart samhälle. Vår politik vilar på solidaritet med djur, natur och det ekologiska systemet, kommande generation och världens alla människor. Välkommen du också.</p>
-      <ul class="horizontal">
-        <li><a href="#">Bli medlem</a></li>
-        <li><a href="#">Partiprogram</a></li>
-        <li><a href="#">Historia</a></li>
-      </ul>
-    </section>
   </article>
 </div>
+
+<%= partial 'bubbles/localize' %>
+
+<div class="page-section">
+  <article class="local">
+    <header>
+      <p class="section-lead">Här visar vi lokal politik från <a href="/jamtland.html">Östersund</a> och <a href="/jamtland.html">Jämtland</a>. Du kan enkelt <a href="">ändra kommun</a> om du vill.</p>
+    </header>
+
+    <h2><a href="#" class="topic">Östersund</a> En ekologisk kommun mitt i sameland</h2>
+    <div class="topics">
+      <div class="topic">
+        <h3><a href="#">En skola för livet.</a></h3>
+        <p>Miljöpartiet i Östersund vill ge de kommunala skolorna större pedagogisk frihet och satsa på matkvalitén i skolan. Vi vill anpassa barnomsorgen efter familjers behov och ha mindre barngrupper i förskolan.</p>
+      </div>
+      <div class="topic">
+        <h3><a href="#">Ungdomarnas situation.</a></h3>
+        <p>Kommunens satsning på ”Mötesplatser unga” ska utvecklas vidare. Vi vill också bygga boende för ungdomar/studenter, stärka arbetet mot droger och skapa satsa på praktikplatser och jobb för unga.</p>
+      </div>
+      <div class="topic">
+        <h3><a href="#">Ungdomarnas situation.</a></h3>
+        <p>Kommunens satsning på ”Mötesplatser unga” ska utvecklas vidare. Vi vill också bygga boende för ungdomar/studenter, stärka arbetet mot droger och skapa satsa på praktikplatser och jobb för unga.</p>
+      </div>
+    </div>
+
+    <h2><a href="/jamtland.html" class="topic">Jämtland</a> Ett livskraftigt Jämtland</h2>
+    <div class="topics">
+      <div class="topic">
+        <h3><a href="#">Stoppa klimatkatastrofen med förnybar energi.</a></h3>
+        <p>Klimathotet är globalt, men alla utsläpp är lokala. Miljöpartiet i Jämtland vill bygga ett center för miljöteknik i Sveg, utveckla järnvägstrafiken och bryt olje- och fossilbränsleberoendet. Jämtland, med sin potential för förnybar energi, ska vara drivande i klimatomställningen.</p>
+      </div>
+      <div class="topic">
+        <h3><a href="#">Matriket Jämtland.</a></h3>
+        <p>Mat ska hänga samman med livskvalitet och god miljö. Vi vill ha mer ekologisk mat, kortare djurtransporter och småskaliga slakterier.</p>
+      </div>
+      <div class="topic">
+        <h3><a href="#">Grönare närmiljö.</a></h3>
+        <p>Vi vill skapa ett friluftsområde på Storsjö strand, återställa Storsjön vid Sölvbacka strömmar och värna om en miljö fri från giftiga kemikalier.</p>
+      </div>
+    </div>
+  </article>
+</div>
+<div class="page-section">
+  <article class="local">
+    <header class="vignetted">
+      <span class="vignette">Just nu</span>
+      <p class="section-lead">Aktuellt i den politiska debaten</p>
+    </header>
+
+    <h2><a href="#">Sverige kan stoppa barnfattigdomen</a></h2>
+    <p>Mer än vart tionde barn är fattigt i Sverige. Miljöpartiet föreslår en nationell handlingsplan för att minska barnfattigdom.</p>
+
+    <h2><a href="#">Sverige ska inte beväpna diktaturer</a></h2>
+    <p>Vi vill stoppa svensk vapenexport, i första hand till odemokratiska länder. Sverige ska inte beväpna diktaturer.</p>
+
+    <h2><a href="#">Mångfald och kvalitet i skolan</a></h2>
+    <p>Miljöpartiet vill ha en skola som präglas av hög kvalitet och pedagogisk mångfald. Vi tycker att det är viktigt att skapa goda förutsättningar för olika profiler och inriktningar.</p>
+  </article>
+
+  <article>
+    <header class="vignetted">
+      <span class="vignette">Läs mer</span>
+      <p class="section-lead">Miljöpartiets historia och grundvärderingar</p>
+    </header>
+
+    <h2>Framtidstro sedan 1981</h2>
+    <p>Sedan Miljöpartiet bildades har vi arbetat för ett hållbart samhälle. Vår politik vilar på solidaritet med djur, natur och det ekologiska systemet, kommande generation och världens alla människor. Välkommen du också.</p>
+    <ul class="horizontal">
+      <li><a href="#">Bli medlem</a></li>
+      <li><a href="#">Partiprogram</a></li>
+      <li><a href="#">Historia</a></li>
+    </ul>
+  </article>
+</div>
+
 <div class="page-section">
   <article id="all-topics">
     <header class="intro">

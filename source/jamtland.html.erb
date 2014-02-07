@@ -7,58 +7,61 @@ url: http://www.mp.se/jamtland
   <a href="/">Hem</a>
   <a href="/about.html">Om Miljöpartiet de gröna</a>
 <% end %>
-<article>
-  <header class="intro">
-    <h1>Jämtland ska vara en modern, mänsklig och miljövänlig region</h1>
-    <div class="lead">
-      <p>En grön omställning i Jämtland skapar fler jobb och företag, säkrar vår välfärd och visar ledarskap i miljöfrågorna. Levande demokrati, mångfald och lika rättigheter skapar en modern, pulserande storstad där alla människor får livskvalitet och nya livschanser.</p>
+<div class=page-section">
+  <article>
+    <header class="intro">
+      <h1>Jämtland ska vara en modern, mänsklig och miljövänlig region</h1>
+      <div class="lead">
+        <p>En grön omställning i Jämtland skapar fler jobb och företag, säkrar vår välfärd och visar ledarskap i miljöfrågorna. Levande demokrati, mångfald och lika rättigheter skapar en modern, pulserande storstad där alla människor får livskvalitet och nya livschanser.</p>
+      </div>
+    </header>
+    <div class="illustration">
+      <figure>
+        <div>
+          <img src="images/banners/living.jpg" alt="Torgmöte i samband med kongressen i Sundsvall 1982. Ulla Dahl håller tal. Foto: Åke Askensten">
+        </div>
+        <figcaption>
+          <b>Nya bostäder på Frösön</b>
+          Volupta tempero idercipsam aciendias qui totatec estint volorem alicatus.
+        </figcaption>
+      </figure>
     </div>
-  </header>
-  <div class="illustration">
-    <figure>
-      <div>
-        <img src="images/banners/living.jpg" alt="Torgmöte i samband med kongressen i Sundsvall 1982. Ulla Dahl håller tal. Foto: Åke Askensten">
-      </div>
-      <figcaption>
-        <b>Nya bostäder på Frösön</b>
-        Volupta tempero idercipsam aciendias qui totatec estint volorem alicatus.
-      </figcaption>
-    </figure>
-  </div>
-  <div class="body">
-    <div class="topics">
-      <div class="topic">
-        <h2>
-          <span class="number">1</span>
-          <a href="/topic.html">Stoppa klimatkatastrofen med förnybar energi.</a>
-        </h2>
-        <p>Klimathotet är globalt, men alla utsläpp är lokala. Miljöpartiet i Jämtland vill bygga ett center för miljöteknik i Sveg, utveckla järnvägstrafiken och bryt olje- och fossilbränsleberoendet.</p>
-        <p>Jämtland, med sin potential för förnybar energi, ska vara drivande i klimatomställningen.</p>
-      </div>
-      <div class="topic">
-        <h2>
-          <span class="number">2</span>
-          <a href="/topic.html">Matriket Jämtland.</a>
-        </h2>
-        <p>Mat ska hänga samman med livskvalitet och god miljö. Vi vill ha mer ekologisk mat, kortare djurtransporter och småskaliga slakterier.</p>
-      </div>
-      <div class="topic">
-        <h2>
-          <span class="number">3</span>
-          <a href="/topic.html">Grönare närmiljö.</a>
-        </h2>
-        <p>Vi vill skapa ett friluftsområde på Storsjö strand, återställa Storsjön vid Sölvbacka strömmar och värna om en miljö fri från giftiga kemikalier.</p>
+    <div class="body">
+      <div class="topics">
+        <div class="topic">
+          <h2>
+            <span class="number">1</span>
+            <a href="/topic.html">Stoppa klimatkatastrofen med förnybar energi.</a>
+          </h2>
+          <p>Klimathotet är globalt, men alla utsläpp är lokala. Miljöpartiet i Jämtland vill bygga ett center för miljöteknik i Sveg, utveckla järnvägstrafiken och bryt olje- och fossilbränsleberoendet.</p>
+          <p>Jämtland, med sin potential för förnybar energi, ska vara drivande i klimatomställningen.</p>
+        </div>
+        <div class="topic">
+          <h2>
+            <span class="number">2</span>
+            <a href="/topic.html">Matriket Jämtland.</a>
+          </h2>
+          <p>Mat ska hänga samman med livskvalitet och god miljö. Vi vill ha mer ekologisk mat, kortare djurtransporter och småskaliga slakterier.</p>
+        </div>
+        <div class="topic">
+          <h2>
+            <span class="number">3</span>
+            <a href="/topic.html">Grönare närmiljö.</a>
+          </h2>
+          <p>Vi vill skapa ett friluftsområde på Storsjö strand, återställa Storsjön vid Sölvbacka strömmar och värna om en miljö fri från giftiga kemikalier.</p>
+        </div>
       </div>
     </div>
-  </div>
-
-  <section class="article-section current-topics">
+  </article>
+</div>
+<div class=page-section">
+  <article class="current-topics">
     <header class="vignetted">
       <span class="vignette">Just nu</span>
       <p class="section-lead">Aktuellt i regionen Jämtland</p>
     </header>
     <%= partial 'news' %>
-  </section>
+  </article>
 
   <div class="speech-bubble">
     <div class="inner">
@@ -116,8 +119,10 @@ url: http://www.mp.se/jamtland
       </div>
     </div>
   </div>
+</div>
 
-  <section class="article-section people">
+<div class=page-section">
+  <article class="people">
     <header>
       <p class="section-lead">Nyckelpersoner i Jämtland</p>
     </header>
@@ -174,50 +179,52 @@ url: http://www.mp.se/jamtland
         </a>
       </div>
     </div></div>
-  </section>
+  </article>
+</div>
 
-  <h2>Frågor i Jämtland A-Ö</h2>
-  <div class="labeled-list-container">
-    <ol class="labeled-list">
-    <% Topics.in_groups(17, true).each do |group, topics| %>
-      <li class="group">
-        <span class="label"><%= group %></span>
-        <ol class="list">
-        <% topics.each do |topic| %><li>
-          <a href="#"><%= topic %></a>
-        </li><% end %>
-        </ol>
-      </li>
-    <% end %>
-    </ol>
-  </div>
+<div class=page-section">
+  <article>
+    <h2>Frågor i Jämtland A-Ö</h2>
+    <div class="labeled-list-container">
+      <ol class="labeled-list">
+      <% Topics.in_groups(17, true).each do |group, topics| %>
+        <li class="group">
+          <span class="label"><%= group %></span>
+          <ol class="list">
+          <% topics.each do |topic| %><li>
+            <a href="#"><%= topic %></a>
+          </li><% end %>
+          </ol>
+        </li>
+      <% end %>
+      </ol>
+    </div>
 
-  <div class="labeled-list-container">
-    <ol class="labeled-list text-labels">
-      <li class="group">
-      <h2 class="label">Kommuner i Jämtlands län</h2>
-        <ol class="list">
-          <li>
-            <a href="#" class="active">Berg</a>
-          </li><li>
-            <a href="#">Bräcke</a>
-          </li><li>
-            <a href="#">Härjedalen</a>
-          </li><li>
-            <a href="#">Krokom</a>
-          </li><li>
-            <a href="#">Ragunda</a>
-          </li><li>
-            <a href="#">Strömsund</a>
-          </li><li>
-            <a href="#">Åre</a>
-          </li><li>
-            <a href="#">Östersund</a>
-          </li>
-        </ol>
-      </li>
-    </ol>
-  </div>
-</article>
-
-
+    <div class="labeled-list-container">
+      <ol class="labeled-list text-labels">
+        <li class="group">
+        <h2 class="label">Kommuner i Jämtlands län</h2>
+          <ol class="list">
+            <li>
+              <a href="#" class="active">Berg</a>
+            </li><li>
+              <a href="#">Bräcke</a>
+            </li><li>
+              <a href="#">Härjedalen</a>
+            </li><li>
+              <a href="#">Krokom</a>
+            </li><li>
+              <a href="#">Ragunda</a>
+            </li><li>
+              <a href="#">Strömsund</a>
+            </li><li>
+              <a href="#">Åre</a>
+            </li><li>
+              <a href="#">Östersund</a>
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </article>
+</div>
