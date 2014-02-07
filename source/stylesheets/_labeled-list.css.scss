@@ -31,7 +31,7 @@
   }
 
   .label {
-    font: normal (26em/16)/(28/26) $mp-serif;
+    @extend %typography-heading;
     color: #000;
     margin-bottom: (10em/26);
     float: left;

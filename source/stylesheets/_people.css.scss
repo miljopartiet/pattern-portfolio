@@ -4,12 +4,14 @@
   }
 
   a {
-    color: #000;
     text-decoration: none;
+    color: #000;
 
     h2 {
       margin-top: 10px;
       text-decoration: underline;
+      @extend %typography-heading-small;
+      color: $green;
 
       &:hover {
         text-decoration: none;

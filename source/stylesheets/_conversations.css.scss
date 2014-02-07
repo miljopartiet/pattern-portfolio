@@ -12,7 +12,7 @@
   }
 
   .details {
-    @extend %help-text;
+    @extend %typography-text-small;
     padding-top: (8em/13);
     margin: 0 percentage(75/620) 0 percentage(70/620);
 

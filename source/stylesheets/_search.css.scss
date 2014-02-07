@@ -112,7 +112,7 @@
   }
 
   .category {
-    @extend %help-text;
+    @extend %typography-text-small;
     display: block;
     margin-top: 2px;
   }

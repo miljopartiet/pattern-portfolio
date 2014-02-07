@@ -1,11 +1,14 @@
-@mixin heading-base {
+%typography-base-text {
+  font-family: $font-family;
+  color: $font-color;
+  font-size: 1em;
+  line-height: (20/16);
+}
+
+%typography-heading-main {
   font-family: $mp-sans;
   font-weight: normal;
   text-rendering: optimizeLegibility;
-}
-
-%heading-main {
-  @include heading-base;
   font-size: (33em/16);
   line-height: 1;
 
@@ -23,8 +26,10 @@
   }
 }
 
-%heading-smaller {
-  @include heading-base;
+%typography-heading {
+  font-family: $mp-sans;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
   font-size: (20em/16);
   line-height: (22/20);
 
@@ -34,7 +39,38 @@
   }
 }
 
-%help-text {
+%typography-heading-small {
+  font-family: $mp-sans;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+  font-size: (20em/16);
+  line-height: (22/20);
+
+  @include respond-to(768px) {
+    font-size: (30em/16);
+    line-height: (30/40);
+  }
+}
+
+
+// news lists and h3?
+%typography-heading-news {
+}
+
+
+%typography-text-lead {
+}
+
+%typography-text-body {
+  font-size: (16em/16);
+  line-height: (20/16);
+  @include respond-to(768px) {
+    font-size: (18em/16);
+    line-height: (25/18);
+  }
+}
+
+%typography-text-small {
   font-family: $arial;
   font-size: (13em/16);
   line-height: (17/13);
@@ -43,4 +79,11 @@
     font-size: (14em/16);
     line-height: (18/14);
   }
+}
+
+
+%typography-text-quote {
+  font-family: $mp-serif;
+  font-size: (18em/16);
+  line-height: (22/18);
 }

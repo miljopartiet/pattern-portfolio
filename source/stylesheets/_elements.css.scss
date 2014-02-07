@@ -1,5 +1,5 @@
 body {
-  @extend %base-text;
+  @extend %typography-base-text;
   padding: 0;
   margin: 0;
   background: #fff;
@@ -12,11 +12,11 @@ h2 {
 }
 
 h1 {
-  @extend %heading-main;
+  @extend %typography-heading-main;
 }
 
 h2 {
-  @extend %heading-smaller;
+  @extend %typography-heading;
   margin-top: (24em/20);
 
   @include respond-to(768px) {
@@ -42,7 +42,7 @@ h4 {
   font-weight:bold;
   font-size:1em;
   line-height:(18/16);
-  @extend %body-text;
+  @extend %typography-text-body;
 }
 
 p {
@@ -261,7 +261,7 @@ figure {
 }
 
 figcaption {
-  @extend %help-text;
+  @extend %typography-text-small;
   margin-top: (5em/16);
 }
 
@@ -294,9 +294,7 @@ blockquote {
     }
 
     p {
-      font-family: $mp-serif;
-      font-size: (18em/16);
-      line-height: (22/18);
+      @extend %typography-text-quote;
       margin-top: (12em/18);
       margin-left: 1em;
 
@@ -336,7 +334,7 @@ blockquote {
 
   footer {
     @include clearfix;
-    @extend %help-text;
+    @extend %typography-text-small;
     margin-top: (8em/13);
     bottom: (-5em/13);
     text-align: right;

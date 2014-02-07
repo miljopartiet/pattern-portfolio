@@ -127,7 +127,7 @@
   }
 
   li {
-    @extend %help-text;
+    @extend %typography-text-small;
 
     a.active {
       color: $green;
@@ -164,7 +164,7 @@
   }
 
   a.close {
-    @extend %help-text;
+    @extend %typography-text-small;
 
     @include respond-between(300px, 767px) {
       display: block;
@@ -235,7 +235,7 @@ nav.main-navigation {
   }
 
   li {
-    @extend %help-text;
+    @extend %typography-text-small;
 
     @include respond-to(768px) {
       margin: 0;
@@ -388,7 +388,7 @@ nav.main-navigation {
   }
 
   a {
-    @extend %help-text;
+    @extend %typography-text-small;
     color: $text-light-grey;
 
     @include respond-to(768px) {
@@ -561,7 +561,7 @@ nav.main-navigation {
 }
 
 #skip-to-navigation {
-  @extend %help-text;
+  @extend %typography-text-small;
   line-height: 25px !important;
   background: $beige url(../images/arrow-down.png) 89% 50% no-repeat;
   background-size: 14px 9px;

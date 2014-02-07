@@ -35,6 +35,10 @@
     display: inline;
   }
 
+  h3 {
+    @extend %typography-heading;
+  }
+
   p {
     @include respond-to(600px) {
       font-size: (20em/16);

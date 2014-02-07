@@ -46,7 +46,7 @@
     p {
       position: absolute;
       margin: 0;
-      @extend %help-text;
+      @extend %typography-text-small;
     }
 
     img {

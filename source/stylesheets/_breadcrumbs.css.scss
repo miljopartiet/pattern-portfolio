@@ -43,7 +43,7 @@ nav.breadcrumbs {
   }
 
   p {
-    @extend %help-text;
+    @extend %typography-text-small;
     margin: 0;
   }
 

@@ -9,8 +9,9 @@ article {
     padding-left: 165px;
   }
 
-  li {
-    @extend %body-text;
+  li,
+  p {
+    @extend %typography-text-body;
   }
 
   p a,
@@ -310,7 +311,7 @@ article {
     padding: (18em/23) 0 0 (22em/23);
     background: transparent url(../images/bg-vignette.png) 0 0 no-repeat;
     background-size: 100%;
-    @extend %heading-smaller;
+    @extend %typography-heading;
     color: #fff;
     text-transform: none;
 
@@ -321,7 +322,7 @@ article {
 
   .section-lead,
   .subsection-lead {
-    @extend %help-text;
+    @extend %typography-text-small;
     margin-top: .5em;
 
     a {

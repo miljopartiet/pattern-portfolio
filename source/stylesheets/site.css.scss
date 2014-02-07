@@ -1,6 +1,14 @@
+@import "compass";
+@import "compass/reset";
+@import "includes";
+
+@import "drupal_reset";
+
 @import "fonts";
 @import "typography";
+
 @import "elements";
+
 @import "grid";
 @import "icon-list";
 @import "labeled-list";
@@ -146,11 +154,10 @@ p.copy {
 .page-section {
   padding-bottom: 3em;
 
-  h1 {
-    a {
-      color: $green;
-      display: block;
-    }
+  h1,
+  h1 a {
+    color: $green;
+    display: block;
   }
 }
 

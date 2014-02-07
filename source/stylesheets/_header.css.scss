@@ -1,7 +1,7 @@
 #cookies {
   display:none;
   background: #000;
-  @extend %help-text;
+  @extend %typography-text-small;
   color: #fff;
   padding: 8px 20px 16px 20px;
 
