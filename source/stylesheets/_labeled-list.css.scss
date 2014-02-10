@@ -105,7 +105,6 @@
     ul {
       @include respond-to(768px) {
         margin-left: 1.2em;
-        font-size: (16em/18);
       }
 
       @include respond-to(1024px) {
@@ -156,10 +155,6 @@
       @include respond-to(600px) {
         margin-left:1.5em;
       }
-
-      @include respond-to(768px) {
-        font-size: (16em/20);
-      }
     }
 
     // Fix missing column-break-inside support
@@ -178,8 +173,6 @@
 .text-labels {
   .label {
     display: block;
-    font-size: (20em/16);
-    line-height: (22/20);
 
     @include respond-between(300px, 767px) {
       float: none;
