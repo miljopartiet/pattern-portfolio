@@ -5,27 +5,26 @@
 
   li {
     margin:0;
-    font-family: $mp-serif;
-    font-size: (20em/16);
 
     a {
       text-decoration: none;
       display: block;
-      line-height: (22em/20);
       margin: 0 0 (10em/20) 55px;
 
       @include respond-between(300px, 767px) {
         margin-left: 45px;
       }
+    }
 
-      .meta {
-        font-family: $arial;
-        font-size: (13em/20);
-        line-height: (16/13);
-        color: $text-grey;
-        display: block;
-        margin-top: (2em/13);
-      }
+    .title {
+      @extend %typography-heading-news;
+    }
+
+    .meta {
+      @extend %typography-text-small;
+      color: $text-grey;
+      display: block;
+      margin-top: (2em/13);
     }
 
     .icon {

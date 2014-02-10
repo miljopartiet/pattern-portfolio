@@ -10,24 +10,16 @@
     padding: 15px;
   }
 
-  @include respond-to(768px) {
-    width: percentage(620/580);
-  }
-
-  @include respond-to(1024px) {
-    width: auto;
-  }
-
-  .page-section > & {
+  #main > & {
     @extend %centered-section;
-
-    &:last-child {
-      margin-bottom: -5em;
-    }
   }
 
-  & + .page-section {
+  & + .section {
     padding-top: 3em;
+  }
+
+  article > & {
+    @extend %content-area;
   }
 
   &:after {

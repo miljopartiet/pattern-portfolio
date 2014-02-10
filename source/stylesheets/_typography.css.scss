@@ -59,6 +59,26 @@
 
 
 %typography-text-lead {
+  font-family: $mp-serif;
+  font-size: (18em/16);
+  line-height: (22/18);
+
+  @include respond-to(600px) {
+    font-size: (20em/16);
+    line-height: (24/20);
+  }
+
+  @include respond-between(768px, 1023px) {
+    font-size: (22em/16);
+    line-height: (26/22);
+    margin-top: (8em/22);
+  }
+
+  @include respond-to(1024px) {
+    font-size: (32em/16);
+    line-height: (35/32);
+    margin-top: (8em/32);
+  }
 }
 
 %typography-text-body {

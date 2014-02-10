@@ -107,3 +107,37 @@ $base-line-height: 1.5;
     margin-right: auto;
   }
 }
+
+%content-area {
+  @include respond-to(1024px) {
+    width: percentage(640/805);
+  }
+}
+
+
+
+// Section intro that have a pull out behaviour in 1024
+
+%section-intro {
+  border-bottom: 1px solid $warm-grey;
+  margin-bottom: -1px;
+  position: relative;
+  padding: 0 0 0.2em 0;
+
+  @include respond-to(1024px) {
+    width: percentage(695/805);
+    border-top: 1px solid $warm-grey;
+    border-bottom: none;
+    padding: 0;
+  }
+}
+
+%section-intro-pull-out {
+  @include respond-to(1024px) {
+    margin-top: 20px;
+    float: right;
+    width: percentage(145/695);
+    margin-right: - percentage(115/695);
+  }
+}
+

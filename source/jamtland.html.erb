@@ -7,7 +7,7 @@ url: http://www.mp.se/jamtland
   <a href="/">Hem</a>
   <a href="/about.html">Om Miljöpartiet de gröna</a>
 <% end %>
-<div class=page-section">
+<div class="section">
   <article>
     <header class="intro">
       <h1>Jämtland ska vara en modern, mänsklig och miljövänlig region</h1>
@@ -15,6 +15,7 @@ url: http://www.mp.se/jamtland
         <p>En grön omställning i Jämtland skapar fler jobb och företag, säkrar vår välfärd och visar ledarskap i miljöfrågorna. Levande demokrati, mångfald och lika rättigheter skapar en modern, pulserande storstad där alla människor får livskvalitet och nya livschanser.</p>
       </div>
     </header>
+
     <div class="illustration">
       <figure>
         <div>
@@ -26,6 +27,7 @@ url: http://www.mp.se/jamtland
         </figcaption>
       </figure>
     </div>
+
     <div class="body">
       <div class="topics">
         <div class="topic">
@@ -54,176 +56,183 @@ url: http://www.mp.se/jamtland
     </div>
   </article>
 </div>
-<div class=page-section">
-  <article class="current-topics">
-    <header class="vignetted">
-      <span class="vignette">Just nu</span>
-      <p class="section-lead">Aktuellt i regionen Jämtland</p>
-    </header>
-    <%= partial 'news' %>
-  </article>
 
-  <div class="speech-bubble">
-    <div class="inner">
-      <div class="vcard">
-        <div class="org">
-          <h2 class="fn organization-name">Miljöpartiet de Gröna Jämtlands län</h2>
-          <p><em class="organization-unit">Medlems-, region- och partikansli</em></p>
-        </div>
-        <div class="main adr">
-          <ul class="">
-            <li class="street-address">Artillerigatan 8</li>
-            <li>
-              <span class="postal-code">831 35</span>
-              <span class="locality">Östersund</span>
-            </li>
-            <li><a href="#" class="map">Visa på karta</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-          </ul>
-        </div>
-        <div class="aside">
-          <ul>
-            <li class="tel"><span class="type">Telefon:</span> <span class="value">063-124501</span></span></li>
-            <li class="tel"><span class="type">Fax:</span> <span class="value">063-124502</span></span></li>
-            <li>E-post <a href="mailto:jamtland@mp.se" class="email">jamtland@mp.se</a></li>
-            <li>Plusgiro 1 57 01-6 (valfonden & gåvor)</li>
-          </ul>
-        </div>
+<div class="section">
+  <article class="current-topics">
+    <header class="vignette">
+      <span class="vignette-header">Just nu</span>
+      <span class="vignette-intro">Aktuellt i regionen Jämtland</span>
+    </header>
+    <div class="body">
+      <%= partial 'news' %>
+    </div>
+  </article>
+</div>
+
+<div class="speech-bubble">
+  <div class="inner">
+    <div class="vcard">
+      <div class="org">
+        <h2 class="fn organization-name">Miljöpartiet de Gröna Jämtlands län</h2>
+        <p><em class="organization-unit">Medlems-, region- och partikansli</em></p>
       </div>
-      <div class="vcard">
-        <div class="org">
-          <h2 class="fn organization-name">Miljöpartiet de Gröna Jämtlands län</h2>
-          <p><em class="organization-unit">Landstingskansli</em></p>
-        </div>
-        <div class="main adr">
-          <ul class="">
-            <li class="street-address">Artillerigatan 8</li>
-            <li>
-              <span class="postal-code">831 35</span>
-              <span class="locality">Östersund</span>
-            </li>
-            <li><a href="#" class="map">Visa på karta</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-          </ul>
-        </div>
-        <div class="aside">
-          <ul>
-            <li class="tel"><span class="type">Telefon:</span> <span class="value">063-124501</span></span></li>
-            <li class="tel"><span class="type">Fax:</span> <span class="value">063-124502</span></span></li>
-            <li>E-post <a href="mailto:jamtland@mp.se" class="email">jamtland@mp.se</a></li>
-            <li>Plusgiro 1 57 01-6 (valfonden & gåvor)</li>
-          </ul>
+      <div class="main adr">
+        <ul class="">
+          <li class="street-address">Artillerigatan 8</li>
+          <li>
+          <span class="postal-code">831 35</span>
+          <span class="locality">Östersund</span>
+          </li>
+          <li><a href="#" class="map">Visa på karta</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+      <div class="aside">
+        <ul>
+          <li class="tel"><span class="type">Telefon:</span> <span class="value">063-124501</span></span></li>
+        <li class="tel"><span class="type">Fax:</span> <span class="value">063-124502</span></span></li>
+      <li>E-post <a href="mailto:jamtland@mp.se" class="email">jamtland@mp.se</a></li>
+      <li>Plusgiro 1 57 01-6 (valfonden & gåvor)</li>
+    </ul>
+  </div>
+</div>
+<div class="vcard">
+  <div class="org">
+    <h2 class="fn organization-name">Miljöpartiet de Gröna Jämtlands län</h2>
+    <p><em class="organization-unit">Landstingskansli</em></p>
+  </div>
+  <div class="main adr">
+    <ul class="">
+      <li class="street-address">Artillerigatan 8</li>
+      <li>
+      <span class="postal-code">831 35</span>
+      <span class="locality">Östersund</span>
+      </li>
+      <li><a href="#" class="map">Visa på karta</a></li>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">Twitter</a></li>
+    </ul>
+  </div>
+  <div class="aside">
+    <ul>
+      <li class="tel"><span class="type">Telefon:</span> <span class="value">063-124501</span></span></li>
+    <li class="tel"><span class="type">Fax:</span> <span class="value">063-124502</span></span></li>
+  <li>E-post <a href="mailto:jamtland@mp.se" class="email">jamtland@mp.se</a></li>
+  <li>Plusgiro 1 57 01-6 (valfonden & gåvor)</li>
+</ul>
         </div>
       </div>
     </div>
   </div>
-</div>
-
-<div class=page-section">
-  <article class="people">
-    <header>
-      <p class="section-lead">Nyckelpersoner i Jämtland</p>
-    </header>
-    <div class="grid"><div class="container">
-      <div class="column c3">
-        <a href="/person.html">
-          <img src="images/sketch/people/karin-thomasson.jpg" alt="">
-          <h2>Karin Thomasson</h2>
-          <p>Kommunalråd</p>
-        </a>
-      </div><div class="column c3">
-        <a href="/person.html">
-          <img src="images/sketch/people/bosse-sall.jpg" alt="">
-          <h2>Bosse Säll</h2>
-          <p>Ordförande</p>
-        </a>
-      </div><div class="column c3">
-        <a href="/person.html">
-          <img src="images/sketch/people/owen-laws.jpg" alt="">
-          <h2>Owen Laws</h2>
-          <p>Gruppledare (Jämtland)</p>
-        </a>
-      </div><div class="column c3">
-        <a href="/person.html">
-          <img src="images/sketch/people/anna-hildebrand.jpg" alt="">
-          <h2>Anna Hildebrand</h2>
-          <p>Landstingsråd (Jämtland)</p>
-        </a>
-      </div>
-    </div></div>
-
-    <header>
-      <p class="section-lead">Landstingsfullmäktige i Jämtland</p>
+<div class="section">
+  <article>
+    <header class="section-vignette">
+      <span class="section-vignette-intro">Nyckelpersoner i Jämtland</span>
     </header>
 
-    <div class="grid"><div class="container">
-      <div class="column c3">
-        <a href="/person.html">
-          <img src="images/sketch/people/karin-thomasson.jpg" alt="">
-          <h2>Karin Thomasson</h2>
-          <p>Kommunalråd</p>
-        </a>
-      </div><div class="column c3">
-        <a href="/person.html">
-          <img src="images/sketch/people/bosse-sall.jpg" alt="">
-          <h2>Bosse Säll</h2>
-          <p>Ordförande</p>
-        </a>
-      </div><div class="column c3">
-        <a href="/person.html">
-          <img src="images/sketch/people/owen-laws.jpg" alt="">
-          <h2>Owen Laws</h2>
-          <p>Gruppledare (Jämtland)</p>
-        </a>
-      </div>
-    </div></div>
+    <div class="body people">
+      <div class="grid"><div class="container">
+  <div class="column c3">
+    <a href="/person.html">
+      <img src="images/sketch/people/karin-thomasson.jpg" alt="">
+      <h2>Karin Thomasson</h2>
+      <p>Kommunalråd</p>
+    </a>
+  </div><div class="column c3">
+    <a href="/person.html">
+      <img src="images/sketch/people/bosse-sall.jpg" alt="">
+      <h2>Bosse Säll</h2>
+      <p>Ordförande</p>
+    </a>
+  </div><div class="column c3">
+    <a href="/person.html">
+      <img src="images/sketch/people/owen-laws.jpg" alt="">
+      <h2>Owen Laws</h2>
+      <p>Gruppledare (Jämtland)</p>
+    </a>
+  </div><div class="column c3">
+    <a href="/person.html">
+      <img src="images/sketch/people/anna-hildebrand.jpg" alt="">
+      <h2>Anna Hildebrand</h2>
+      <p>Landstingsråd (Jämtland)</p>
+    </a>
+  </div>
+      </div></div>
+    </div>
+
+    <header class="section-vignette">
+      <span class="section-vignette-intro">Landstingsfullmäktige i Jämtland</span>
+    </header>
+
+    <div class="body">
+      <div class="grid"><div class="container">
+  <div class="column c3">
+    <a href="/person.html">
+      <img src="images/sketch/people/karin-thomasson.jpg" alt="">
+      <h2>Karin Thomasson</h2>
+      <p>Kommunalråd</p>
+    </a>
+  </div><div class="column c3">
+    <a href="/person.html">
+      <img src="images/sketch/people/bosse-sall.jpg" alt="">
+      <h2>Bosse Säll</h2>
+      <p>Ordförande</p>
+    </a>
+  </div><div class="column c3">
+    <a href="/person.html">
+      <img src="images/sketch/people/owen-laws.jpg" alt="">
+      <h2>Owen Laws</h2>
+      <p>Gruppledare (Jämtland)</p>
+    </a>
+  </div>
+      </div></div>
+    </div>
   </article>
 </div>
 
-<div class=page-section">
+<div class="section">
   <article>
-    <h2>Frågor i Jämtland A-Ö</h2>
+    <h1>Frågor i Jämtland A-Ö</h1>
     <div class="labeled-list-container">
       <ol class="labeled-list">
-      <% Topics.in_groups(17, true).each do |group, topics| %>
-        <li class="group">
-          <span class="label"><%= group %></span>
-          <ol class="list">
-          <% topics.each do |topic| %><li>
-            <a href="#"><%= topic %></a>
-          </li><% end %>
+<% Topics.in_groups(17, true).each do |group, topics| %>
+  <li class="group">
+<span class="label"><%= group %></span>
+<ol class="list">
+  <% topics.each do |topic| %><li>
+    <a href="#"><%= topic %></a>
+  </li><% end %>
           </ol>
-        </li>
+</li>
       <% end %>
       </ol>
     </div>
 
     <div class="labeled-list-container">
       <ol class="labeled-list text-labels">
-        <li class="group">
-        <h2 class="label">Kommuner i Jämtlands län</h2>
-          <ol class="list">
-            <li>
-              <a href="#" class="active">Berg</a>
-            </li><li>
-              <a href="#">Bräcke</a>
-            </li><li>
-              <a href="#">Härjedalen</a>
-            </li><li>
-              <a href="#">Krokom</a>
-            </li><li>
-              <a href="#">Ragunda</a>
-            </li><li>
-              <a href="#">Strömsund</a>
-            </li><li>
-              <a href="#">Åre</a>
-            </li><li>
-              <a href="#">Östersund</a>
-            </li>
-          </ol>
-        </li>
+<li class="group">
+<h2 class="label">Kommuner i Jämtlands län</h2>
+<ol class="list">
+  <li>
+  <a href="#" class="active">Berg</a>
+  </li><li>
+  <a href="#">Bräcke</a>
+  </li><li>
+  <a href="#">Härjedalen</a>
+  </li><li>
+  <a href="#">Krokom</a>
+  </li><li>
+  <a href="#">Ragunda</a>
+  </li><li>
+  <a href="#">Strömsund</a>
+  </li><li>
+  <a href="#">Åre</a>
+  </li><li>
+  <a href="#">Östersund</a>
+  </li>
+</ol>
+</li>
       </ol>
     </div>
   </article>
