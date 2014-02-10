@@ -132,15 +132,17 @@ p.copy {
   }
 }
 
-%page-section-solid {
-  padding-top: 3em;
+.section {
+  padding-bottom: 3em;
 
-  & + .page-section {
-    padding-top: 3em;
+  h1,
+  h1 a {
+    color: $green;
+    display: block;
   }
 }
 
-%page-section-colored {
+%dark-section {
   a {
     @include link-colors(#fff, #fff, #fff, #fff, #fff);
     text-decoration: underline;
@@ -151,24 +153,20 @@ p.copy {
   }
 }
 
-.page-section {
-  padding-bottom: 3em;
+.section-colored {
+  padding-top: 3em;
 
-  h1,
-  h1 a {
-    color: $green;
-    display: block;
+  & + .section {
+    padding-top: 3em;
   }
 }
 
-.page-section-cream {
-  @extend %page-section-solid;
+.cream {
   background: #f6f4e5;
 }
 
-.page-section-green {
-  @extend %page-section-solid;
-  @extend %page-section-colored;
+.green {
+  @extend %dark-section;
   color: #fff;
   @include background-image(radial-gradient(false, color-stops(#339933, #00730a)));
 
@@ -177,9 +175,8 @@ p.copy {
   }
 }
 
-.page-section-magenta {
-  @extend %page-section-solid;
-  @extend %page-section-colored;
+.magenta {
+  @extend %dark-section;
   color: #fff;
   @include background-image(radial-gradient(false, color-stops(#BD0076, #6C1847)));
 

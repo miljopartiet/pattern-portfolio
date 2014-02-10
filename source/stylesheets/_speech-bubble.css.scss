@@ -2,7 +2,6 @@
   position: relative;
   background: $yellow;
   padding: 20px 20px 20px 25px;
-  margin: (60em/16) 0 0 0;
   border-radius: 4px 4px 4px 0;
   @include box-sizing(border-box);
 
@@ -16,7 +15,6 @@
   }
 
   @include respond-to(1024px) {
-    margin-right: (165em/16);
     width: auto;
   }
 
@@ -26,6 +24,10 @@
     &:last-child {
       margin-bottom: -5em;
     }
+  }
+
+  & + .page-section {
+    padding-top: 3em;
   }
 
   &:after {

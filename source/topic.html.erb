@@ -10,7 +10,7 @@ url: http://www.mp.se/politik/bostader
   <span>Bostad</span>
 <% end %>
 
-<div class="page-section">
+<div class="section">
   <article>
     <header class="intro">
       <h1>Trettitusen nya bostäder för tretusen i månaden till våra unga</h1>
@@ -66,7 +66,7 @@ url: http://www.mp.se/politik/bostader
 
 <%= partial 'bubbles/localize' %>
 
-<div class="page-section">
+<div class="section">
   <article class="local">
     <header>
       <p class="section-lead">Här visar vi lokal politik från <a href="/jamtland.html">Östersund</a> och <a href="/jamtland.html">Jämtland</a>. Du kan enkelt <a href="">ändra kommun</a> om du vill.</p>
@@ -103,22 +103,23 @@ url: http://www.mp.se/politik/bostader
 </div>
 
 <%= partial 'bubbles/share', locals: { url: "http://www.mp.se/vill/bostad" } %>
-<div class="page-section">
+<div class="section section-colored cream">
   <article class="current-topics">
-    <header class="vignetted">
-      <span class="vignette">Just nu</span>
-      <p class="section-lead">Aktuellt inom ämnet bostad. Visa <a href="/topics.html#all-topics">andra ämnen</a></p>
+    <header class="vignette">
+      <span class="vignette-header">Just nu</span>
+      <span class="vignette-intro">Aktuellt inom ämnet bostad. Visa <a href="/topics.html#all-topics">andra ämnen</a></span>
     </header>
-    <%= partial 'news' %>
+    <%= partial "news" %>
   </article>
-
+</div>
+<div class="section">
   <article class="conversations">
-    <header>
-      <p class="section-lead">
+    <header class="vignette">
+      <span class="vignette-header">Prata politik</span>
+      <span class="vignette-intro">
         <a href="#">Ställ din egen fråga</a> eller <a href="#">läs andra politiska samtal</a>.
-      </p>
+      </span>
     </header>
-
     <div class="conversation">
       <div class="question">
         <div class="content">
@@ -146,11 +147,12 @@ url: http://www.mp.se/politik/bostader
       </div>
     </div>
   </article>
-
+</div>
+<div class="section section-colored green">
   <article class="related-topics">
-    <header class="vignetted">
-      <span class="vignette">Läs mer</span>
-      <p class="section-lead">Andra ämnen som relaterar till bostad</p>
+    <header class="vignette">
+      <span class="vignette-header">Läs mer</span>
+      <span class="vignette-intro">Andra ämnen som relaterar till bostad</span>
     </header>
     <h2><a href="">100 kvadratmeter för 100 kr åt alla hundraåringar!</a></h2>
     <img src="http://placehold.it/90x90" alt="">

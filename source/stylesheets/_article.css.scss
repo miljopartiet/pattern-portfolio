@@ -11,7 +11,11 @@ article {
 
   li,
   p {
-    @extend %typography-text-body;
+    @extend %body-text;
+
+    li {
+      font-size: 1em;
+    }
   }
 
   p a,
@@ -51,12 +55,6 @@ article {
           border:none;
         }
       }
-    }
-  }
-
-  .vignette {
-    @include respond-between(300px, 767px) {
-      display: none;
     }
   }
 
@@ -229,6 +227,19 @@ article {
   }
 }
 
+.vignette {
+  margin: (25em/16) 0 (20em/16) 0;
+}
+
+.vignette-header {
+  @extend %typography-text-small;
+  font-weight: bold;
+}
+
+.vignette-intro {
+  @extend %typography-text-small;
+}
+
 // Article sections after the main content
 .article-section {
   margin-top: (60em/16);
@@ -255,24 +266,6 @@ article {
       padding: 0;
     }
 
-    &.vignetted {
-      @include respond-to(1024px) {
-        @include box-sizing(border-box);
-        width: percentage(860/640);
-        margin-left: -165px;
-        padding-left: 165px;
-      }
-
-      .vignette {
-        @include respond-to(1024px) {
-          display: block;
-          font-size: (23em/16);
-          position: absolute;
-          top: -.5em;
-          left: 0;
-        }
-      }
-    }
   }
 
   h2 {
@@ -311,7 +304,7 @@ article {
     padding: (18em/23) 0 0 (22em/23);
     background: transparent url(../images/bg-vignette.png) 0 0 no-repeat;
     background-size: 100%;
-    @extend %typography-heading;
+    @extend %heading-smaller;
     color: #fff;
     text-transform: none;
 

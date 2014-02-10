@@ -16,6 +16,10 @@
       &:hover {
         text-decoration: none;
       }
+
+      .page-section-green & {
+        color: #fff;
+      }
     }
 
     p {
