@@ -1,5 +1,5 @@
 #site-footer {
-  margin-top: (80em/16);
+  @extend %page-section;
 }
 
 #logo-full {

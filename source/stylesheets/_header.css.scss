@@ -40,7 +40,14 @@
   @extend %page-section-content-wide;
   @include clearfix;
   position: relative;
+  padding-right: 18px;
+  padding-left: 18px;
   margin-bottom: (20em/16);
+
+  @include respond-to(768px) {
+    padding-right: auto;
+    padding-left: auto;
+  }
 
   @include respond-between(300px, 767px) {
     padding-top: 18px;

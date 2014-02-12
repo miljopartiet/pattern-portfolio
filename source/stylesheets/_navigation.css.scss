@@ -122,13 +122,17 @@
 
 #site-navigation {
   @include clearfix;
-  @include respond-between(300px, 767px) {
-    position: relative;
+  position: relative;
+  // Expand to full width
+  margin-right: -18px;
+  margin-left: -18px;
+
+  @include respond-to(768px) {
+    margin-right: auto;
+    margin-left: auto;
   }
 
   li {
-    @extend %typography-text-small;
-
     a.active {
       color: $green;
     }
@@ -203,12 +207,15 @@ nav.main-navigation {
 
   .inner {
     @include clearfix;
+    padding: 0 18px;
+    @extend %page-section-content;
 
-    @include respond-between(300px, 767px) {
-      padding: 0 18px;
+    @include respond-to(768px) {
+      padding: 0;
     }
 
-    @include respond-between(600px, 767px) {
+    @include respond-to(1024px) {
+      width: auto;
     }
 
     > div {
