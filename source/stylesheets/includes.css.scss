@@ -77,47 +77,14 @@ $base-line-height: 1.5;
   }
 }
 
-// Placeholders for positioned section elements
-%centered-section {
-  margin-right: 18px;
-  margin-left: 18px;
-
-  @include respond-to(600px) {
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  @include respond-between(600px, 767px) {
-    width: (520em/16);
-  }
-
-  @include respond-between(768px, 1023px) {
-    width: (580em/16);
-  }
-
-  @include respond-to(1024px) {
-    max-width: 640px;
+@mixin with-dark-sections {
+  .main-section-green &,
+  .main-section-magenta & {
+    @content;
   }
 }
-
-%centered-page-part {
-  @include respond-to(1024px) {
-    max-width: 970px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-%content-area {
-  @include respond-to(1024px) {
-    width: percentage(640/805);
-  }
-}
-
-
 
 // Section intro that have a pull out behaviour in 1024
-
 %section-intro {
   border-bottom: 1px solid $warm-grey;
   margin-bottom: -1px;
@@ -125,7 +92,6 @@ $base-line-height: 1.5;
   padding: 0 0 0.2em 0;
 
   @include respond-to(1024px) {
-    width: percentage(695/805);
     border-top: 1px solid $warm-grey;
     border-bottom: none;
     padding: 0;
@@ -136,8 +102,8 @@ $base-line-height: 1.5;
   @include respond-to(1024px) {
     margin-top: 20px;
     float: right;
-    width: percentage(145/695);
-    margin-right: - percentage(115/695);
+    width: 145px;
+    margin-right: -110px;
   }
 }
 

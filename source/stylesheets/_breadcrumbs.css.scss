@@ -3,7 +3,7 @@
 // and in the page footer
 nav.breadcrumbs {
   display: block;
-  @extend %centered-section;
+  @extend %page-section-content-wide;
 
   // The breadcrumbs is not used in the mobile view
   // instead we point users to the more complete site navigation
@@ -24,7 +24,6 @@ nav.breadcrumbs {
 
     @include respond-to(1024px) {
       width: auto;
-      margin-left: (165em/16);
     }
   }
 
@@ -35,10 +34,6 @@ nav.breadcrumbs {
 
     @include respond-to(768px) {
       border: none;
-    }
-
-    @include respond-to(1024px) {
-      margin-right: 115px;
     }
   }
 

@@ -13,6 +13,12 @@ h2 {
 
 h1 {
   @extend %typography-heading-main;
+  color: $green;
+
+  a {
+    color: $green;
+    display: block;
+  }
 }
 
 h2 {
@@ -70,6 +76,15 @@ img {
 a {
   @include link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color);
   text-decoration: none;
+
+  @include with-dark-sections {
+    color: #fff;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 ul {

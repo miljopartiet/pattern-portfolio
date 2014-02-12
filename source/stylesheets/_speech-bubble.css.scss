@@ -11,15 +11,7 @@
   }
 
   #main > & {
-    @extend %centered-section;
-  }
-
-  & + .section {
-    padding-top: 3em;
-  }
-
-  article > & {
-    @extend %content-area;
+    @extend %page-section-content;
   }
 
   &:after {

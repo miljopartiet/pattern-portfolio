@@ -1,0 +1,86 @@
+.vignette {
+  @extend %section-intro;
+
+  article & {
+    @extend %content-column-expanded-small;
+  }
+
+  @include respond-to(1024px) {
+    margin-left: -165px;
+    padding-left: 165px;
+  }
+}
+
+.vignette-header {
+  @extend %typography-heading-small;
+  width: (69em/23);
+  height: (62em/23);
+  padding: (18em/23) 0 0 (22em/23);
+  background: transparent url(../images/bg-vignette.png) 0 0 no-repeat;
+  background-size: 100%;
+  line-height: 1;
+  color: #fff;
+  text-transform: none;
+  display: none;
+
+  @include respond-to(1024px) {
+    display: block;
+    position: absolute;
+    top: -.5em;
+    left: 0;
+  }
+}
+
+.vignette-intro {
+  @extend %section-intro-pull-out;
+  @extend %typography-text-small;
+  color: $text-light-grey;
+
+  @include with-dark-sections {
+    color: #fff;
+  }
+
+  strong,
+  b {
+    color: $text-grey;
+
+    @include respond-to(1024px) {
+      display: block;
+    }
+
+    @include with-dark-sections {
+      color: #fff;
+    }
+  }
+}
+
+.section-vignette {
+  @extend %section-intro;
+
+  article & {
+    @extend %content-column-expanded-small;
+  }
+}
+
+.section-vignette-intro {
+  @extend %section-intro-pull-out;
+  @extend %typography-text-small;
+  color: $text-light-grey;
+
+  @include with-dark-sections {
+    color: #fff;
+  }
+
+  b {
+    color: $text-grey;
+
+    @include respond-to(1024px) {
+      display: block;
+    }
+
+    @include with-dark-sections {
+      color: #fff;
+    }
+  }
+}
+

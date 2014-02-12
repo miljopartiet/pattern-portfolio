@@ -7,7 +7,7 @@ url: http://www.mp.se/jamtland
   <a href="/">Hem</a>
   <a href="/about.html">Om Miljöpartiet de gröna</a>
 <% end %>
-<div class="section">
+<div class="main-section">
   <article>
     <header class="intro">
       <h1>Jämtland ska vara en modern, mänsklig och miljövänlig region</h1>
@@ -28,44 +28,41 @@ url: http://www.mp.se/jamtland
       </figure>
     </div>
 
-    <div class="body">
-      <div class="topics">
-        <div class="topic">
-          <h2>
-            <span class="number">1</span>
-            <a href="/topic.html">Stoppa klimatkatastrofen med förnybar energi.</a>
-          </h2>
-          <p>Klimathotet är globalt, men alla utsläpp är lokala. Miljöpartiet i Jämtland vill bygga ett center för miljöteknik i Sveg, utveckla järnvägstrafiken och bryt olje- och fossilbränsleberoendet.</p>
-          <p>Jämtland, med sin potential för förnybar energi, ska vara drivande i klimatomställningen.</p>
-        </div>
-        <div class="topic">
-          <h2>
-            <span class="number">2</span>
-            <a href="/topic.html">Matriket Jämtland.</a>
-          </h2>
-          <p>Mat ska hänga samman med livskvalitet och god miljö. Vi vill ha mer ekologisk mat, kortare djurtransporter och småskaliga slakterier.</p>
-        </div>
-        <div class="topic">
-          <h2>
-            <span class="number">3</span>
-            <a href="/topic.html">Grönare närmiljö.</a>
-          </h2>
-          <p>Vi vill skapa ett friluftsområde på Storsjö strand, återställa Storsjön vid Sölvbacka strömmar och värna om en miljö fri från giftiga kemikalier.</p>
-        </div>
+    <div class="topics">
+      <div class="topic">
+        <h2>
+          <span class="number">1</span>
+          <a href="/topic.html">Stoppa klimatkatastrofen med förnybar energi.</a>
+        </h2>
+        <p>Klimathotet är globalt, men alla utsläpp är lokala. Miljöpartiet i Jämtland vill bygga ett center för miljöteknik i Sveg, utveckla järnvägstrafiken och bryt olje- och fossilbränsleberoendet.</p>
+        <p>Jämtland, med sin potential för förnybar energi, ska vara drivande i klimatomställningen.</p>
+      </div>
+      <div class="topic">
+        <h2>
+          <span class="number">2</span>
+          <a href="/topic.html">Matriket Jämtland.</a>
+        </h2>
+        <p>Mat ska hänga samman med livskvalitet och god miljö. Vi vill ha mer ekologisk mat, kortare djurtransporter och småskaliga slakterier.</p>
+      </div>
+      <div class="topic">
+        <h2>
+          <span class="number">3</span>
+          <a href="/topic.html">Grönare närmiljö.</a>
+        </h2>
+        <p>Vi vill skapa ett friluftsområde på Storsjö strand, återställa Storsjön vid Sölvbacka strömmar och värna om en miljö fri från giftiga kemikalier.</p>
       </div>
     </div>
   </article>
 </div>
 
-<div class="section">
+<div class="main-section">
   <article class="current-topics">
     <header class="vignette">
       <span class="vignette-header">Just nu</span>
       <span class="vignette-intro">Aktuellt i regionen Jämtland</span>
     </header>
-    <div class="body">
-      <%= partial 'news' %>
-    </div>
+
+    <%= partial 'news' %>
   </article>
 </div>
 
@@ -125,73 +122,69 @@ url: http://www.mp.se/jamtland
       </div>
     </div>
   </div>
-<div class="section">
+<div class="main-section">
   <article>
     <header class="section-vignette">
       <span class="section-vignette-intro">Nyckelpersoner i Jämtland</span>
     </header>
 
-    <div class="body people">
-      <div class="grid"><div class="container">
-  <div class="column c3">
-    <a href="/person.html">
-      <img src="images/sketch/people/karin-thomasson.jpg" alt="">
-      <h2>Karin Thomasson</h2>
-      <p>Kommunalråd</p>
-    </a>
-  </div><div class="column c3">
-    <a href="/person.html">
-      <img src="images/sketch/people/bosse-sall.jpg" alt="">
-      <h2>Bosse Säll</h2>
-      <p>Ordförande</p>
-    </a>
-  </div><div class="column c3">
-    <a href="/person.html">
-      <img src="images/sketch/people/owen-laws.jpg" alt="">
-      <h2>Owen Laws</h2>
-      <p>Gruppledare (Jämtland)</p>
-    </a>
-  </div><div class="column c3">
-    <a href="/person.html">
-      <img src="images/sketch/people/anna-hildebrand.jpg" alt="">
-      <h2>Anna Hildebrand</h2>
-      <p>Landstingsråd (Jämtland)</p>
-    </a>
-  </div>
-      </div></div>
-    </div>
+    <div class="people grid"><div class="container">
+      <div class="column c3">
+        <a href="/person.html">
+          <img src="images/sketch/people/karin-thomasson.jpg" alt="">
+          <h2>Karin Thomasson</h2>
+          <p>Kommunalråd</p>
+        </a>
+      </div><div class="column c3">
+        <a href="/person.html">
+          <img src="images/sketch/people/bosse-sall.jpg" alt="">
+          <h2>Bosse Säll</h2>
+          <p>Ordförande</p>
+        </a>
+      </div><div class="column c3">
+        <a href="/person.html">
+          <img src="images/sketch/people/owen-laws.jpg" alt="">
+          <h2>Owen Laws</h2>
+          <p>Gruppledare (Jämtland)</p>
+        </a>
+      </div><div class="column c3">
+        <a href="/person.html">
+          <img src="images/sketch/people/anna-hildebrand.jpg" alt="">
+          <h2>Anna Hildebrand</h2>
+          <p>Landstingsråd (Jämtland)</p>
+        </a>
+      </div>
+    </div></div>
 
     <header class="section-vignette">
       <span class="section-vignette-intro">Landstingsfullmäktige i Jämtland</span>
     </header>
 
-    <div class="body">
-      <div class="grid"><div class="container">
-  <div class="column c3">
-    <a href="/person.html">
-      <img src="images/sketch/people/karin-thomasson.jpg" alt="">
-      <h2>Karin Thomasson</h2>
-      <p>Kommunalråd</p>
-    </a>
-  </div><div class="column c3">
-    <a href="/person.html">
-      <img src="images/sketch/people/bosse-sall.jpg" alt="">
-      <h2>Bosse Säll</h2>
-      <p>Ordförande</p>
-    </a>
-  </div><div class="column c3">
-    <a href="/person.html">
-      <img src="images/sketch/people/owen-laws.jpg" alt="">
-      <h2>Owen Laws</h2>
-      <p>Gruppledare (Jämtland)</p>
-    </a>
-  </div>
-      </div></div>
-    </div>
+    <div class="people grid"><div class="container">
+      <div class="column c3">
+        <a href="/person.html">
+          <img src="images/sketch/people/karin-thomasson.jpg" alt="">
+          <h2>Karin Thomasson</h2>
+          <p>Kommunalråd</p>
+        </a>
+      </div><div class="column c3">
+        <a href="/person.html">
+          <img src="images/sketch/people/bosse-sall.jpg" alt="">
+          <h2>Bosse Säll</h2>
+          <p>Ordförande</p>
+        </a>
+      </div><div class="column c3">
+        <a href="/person.html">
+          <img src="images/sketch/people/owen-laws.jpg" alt="">
+          <h2>Owen Laws</h2>
+          <p>Gruppledare (Jämtland)</p>
+        </a>
+      </div>
+    </div></div>
   </article>
 </div>
 
-<div class="section">
+<div class="main-section">
   <article>
     <h1>Frågor i Jämtland A-Ö</h1>
     <div class="labeled-list-container">

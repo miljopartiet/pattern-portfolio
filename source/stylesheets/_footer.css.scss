@@ -3,8 +3,8 @@
 }
 
 #logo-full {
-  @extend %centered-section;
-  @extend %centered-page-part;
+  @extend %page-section-content-wide;
+
   @include respond-between(600px, 767px) {
     height: (46em/18);
     background-size: (284em/18) (46em/18);
@@ -38,16 +38,12 @@
 }
 
 #copyright {
+  @extend %page-section-content-wide;
+  @include box-sizing(border-box);
+
   padding-left: (35em/12);
   background: transparent url(../images/cc.png) 0 2px no-repeat;
   background-size: 20px 20px;
-  @extend %centered-section;
-  @extend %centered-page-part;
-
-  @include respond-between(600px, 767px) {
-    width: 520px;
-    @include box-sizing(border-box);
-  }
 
   @include respond-to(1024px) {
     padding-right: (185em/12);

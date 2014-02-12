@@ -1,5 +1,6 @@
 // Main image
 .illustration {
+  @extend %content-column-expanded;
   margin-top: (20em/16);
 
   @include respond-between(768px, 1023px) {
@@ -21,6 +22,10 @@
     figcaption {
       color: $text-light-grey;
 
+      @include with-dark-sections {
+        color: #fff;
+      }
+
       @include respond-to(1024px) {
         float: right;
         width: percentage(145/805);
@@ -31,6 +36,10 @@
       strong,
       b {
         color: $text-grey;
+
+        @include with-dark-sections {
+          color: #fff;
+        }
       }
     }
   }

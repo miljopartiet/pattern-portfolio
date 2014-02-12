@@ -1,0 +1,28 @@
+.main-section {
+  @extend %page-section;
+}
+
+.main-section-cream {
+  @extend %page-section-solid;
+  background: #f6f4e5;
+}
+
+.main-section-green {
+  @extend %page-section-solid;
+  color: #fff;
+  @include background-image(radial-gradient(false, color-stops(#339933, #00730a)));
+
+  h1 {
+    color: $yellow;
+  }
+}
+
+.main-section-magenta {
+  @extend %page-section-solid;
+  color: #fff;
+  @include background-image(radial-gradient(false, color-stops(#BD0076, #6C1847)));
+
+  h1 {
+    color: $yellow;
+  }
+}

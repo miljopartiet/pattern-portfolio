@@ -10,7 +10,7 @@ url: http://www.mp.se/politik/bostader
   <span>Bostad</span>
 <% end %>
 
-<div class="section">
+<div class="main-section">
   <article>
     <header class="intro">
       <h1>Trettitusen nya bostäder för tretusen i månaden till våra unga</h1>
@@ -66,7 +66,7 @@ url: http://www.mp.se/politik/bostader
 
 <%= partial 'bubbles/localize' %>
 
-<div class="section local-x">
+<div class="main-section local-x">
   <article>
     <header class="section-vignette">
       <span class="section-vignette-intro">Här visar vi lokal politik från <a href="/jamtland.html">Östersund</a> och <a href="/jamtland.html">Jämtland</a>. Du kan enkelt <a href="">ändra kommun</a> om du vill.</span>
@@ -76,7 +76,7 @@ url: http://www.mp.se/politik/bostader
       <a href="/jamtland.html" class="topic">Östersund</a>
       Bostäder för unga och studenter
     </h1>
-    <div class=="body">
+    <div class="body">
       <p>Östersund behöver nya bostäder för unga och studenter. Vi vill bygga nya billiga lägenheter och satsa på hållbara stadsdelar/byar i Storsjö strand, Remonthagen och Norderön.</p>
       <h2>Miljöpartiet i Östersund vill</h2>
       <ul>
@@ -103,7 +103,7 @@ url: http://www.mp.se/politik/bostader
   </article>
 </div>
 
-<div class="section">
+<div class="main-section">
   <article>
     <h1>Fördjupning i ämnet bostad</h1>
     <div class="body">
@@ -118,19 +118,18 @@ url: http://www.mp.se/politik/bostader
 
 <%= partial 'bubbles/share', locals: { url: "http://www.mp.se/vill/bostad" } %>
 
-<div class="section section-colored cream">
+<div class="main-section main-section-cream">
   <article class="current-topics">
     <header class="vignette">
       <span class="vignette-header">Just nu</span>
       <span class="vignette-intro">Aktuellt inom ämnet bostad. Visa <a href="/topics.html#all-topics">andra ämnen</a></span>
     </header>
-    <div class="body">
-      <%= partial "news" %>
-    </div>
+
+    <%= partial "news" %>
   </article>
 </div>
 
-<div class="section">
+<div class="main-section">
   <article class="conversations">
     <header class="vignette">
       <span class="vignette-header">Prata politik</span>
@@ -166,7 +165,7 @@ url: http://www.mp.se/politik/bostader
     </div>
   </article>
 </div>
-<div class="section section-colored green">
+<div class="main-section main-section-green">
   <article class="related-topics">
     <header class="vignette">
       <span class="vignette-header">Läs mer</span>

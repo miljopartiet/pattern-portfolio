@@ -1,4 +1,176 @@
-@import "conversation";
+.conversation {
+  list-style: none;
+  margin: (20em/16) 0 0 0;
+  padding: (23em/16) 0;
+
+  @include respond-to(1024px) {
+    float: left;
+    margin-top: (20em/16);
+    margin-right: percentage(40/640);
+    width: percentage(620/640);
+  }
+
+  a {
+    .read-more {
+      color: $green;
+      text-decoration: underline;
+    }
+
+    &:hover {
+      .read-more {
+        color: $green-dark;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    padding: 20px 25px;
+
+    @include respond-between(300px, 767px) {
+      padding: 15px 20px;
+    }
+
+    p {
+      color: #2A2A2A;
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
+
+  .byline {
+    p {
+      position: absolute;
+      margin: 0;
+      @extend %typography-text-small;
+    }
+
+    img {
+      position: absolute;
+      bottom: (-23em/16);
+    }
+
+    .arrow {
+      position: absolute;
+      width: 0;
+      font-size: 0;
+      line-height: 0;
+      bottom: 0;
+      color: $yellow;
+      border-top: 25px solid transparent;
+    }
+  }
+
+  .question {
+    position: relative;
+    z-index: 2;
+    margin-bottom: -.75em;
+    margin-right: percentage(110/620);
+
+    @include respond-between(300px, 767px) {
+      margin-right: percentage(70/510);
+    }
+
+    .content {
+      padding-bottom: 25px;
+      background: $yellow;
+      border-radius: 3px 3px 3px 0;
+
+      &:after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: block;
+        width: percentage(441/510);
+        height: .75em;
+        content: "";
+        background: rgba(0, 0, 0, .04);
+        border-radius: 3px 0 3px 0;
+
+        @include respond-between(300px, 767px) {
+          width: percentage(445/510);
+        }
+      }
+
+      p {
+        font-family: $mp-serif;
+        font-size: (24em/16);
+        line-height: (26/24);
+
+        @include respond-to(768px) {
+          font-size: (26em/16);
+          line-height: (30/26);
+        }
+      }
+    }
+
+    .byline {
+      p {
+        top: (-23em/13);
+      }
+
+      img {
+        left: percentage(-75/510);
+      }
+
+      .arrow {
+        left: percentage(-24/620);
+        border-top: 25px solid transparent;
+        border-right: 25px solid $yellow;
+      }
+    }
+  }
+
+  .answer {
+    position: relative;
+    margin-left: percentage(70/620);
+    margin-right: percentage(75/620);
+
+    @include respond-between(300px, 767px) {
+      margin-right: 0;
+    }
+
+    .content {
+      padding-top: 25px;
+      background: $beige;
+      border-radius: 3px 3px 0 3px;
+
+      p {
+        line-height: (20/16);
+
+        @include respond-to(768px) {
+          font-size: (16em/16);
+          line-height: (20/16);
+        }
+      }
+    }
+
+    .byline {
+      img {
+        right: percentage(-80/510);
+      }
+
+      p {
+        padding-top: (10em/13);
+      }
+
+      .arrow {
+        right: percentage(-24/620);
+        border-left: 25px solid $beige;
+      }
+    }
+  }
+
+  img {
+    @include respond-between(300px, 767px) {
+      display: none;
+    }
+  }
+}
 
 .conversations {
   @include clearfix;
@@ -6,13 +178,21 @@
   .article-section {
     @include respond-to(1024px) {
       @include clearfix;
-      width: percentage(695/805);
+      width: percentage(695/640);
       border-top: 1px solid $warm-grey;
+    }
+
+    .conversation {
+      @include respond-to(1024px) {
+        width: percentage(620/695);
+        margin-right: percentage(40/695);
+      }
     }
   }
 
   .details {
     @extend %typography-text-small;
+    color: $text-light-grey;
     padding-top: (8em/13);
     margin: 0 percentage(75/620) 0 percentage(70/620);
 
@@ -26,8 +206,8 @@
       padding-top: 0;
       margin-top: (20em/14);
       margin-left: 0;
-      margin-right: percentage(-145/695);
-      width: percentage(145/695);
+      width: percentage(145/640);
+      margin-right: percentage(-165/640);
     }
 
     .topic {
@@ -110,6 +290,10 @@
   div.comments {
     clear: both;
     padding-top: (40em/16);
+  }
+
+  .fetch-more {
+    margin-left: percentage(70/620);
   }
 
   .comments {

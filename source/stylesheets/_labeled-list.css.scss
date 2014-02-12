@@ -1,7 +1,8 @@
 .labeled-list-container {
+  @extend %content-column-expanded-full;
+
   @include respond-to(1024px) {
-    width: percentage(970/805);
-    margin-left: - percentage(165/805);
+    margin-left: - percentage(165/640);
   }
 }
 

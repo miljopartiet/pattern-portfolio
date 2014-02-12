@@ -187,8 +187,7 @@
 }
 // Site navigation is found in the bottom of the page
 nav.main-navigation {
-  @extend %centered-section;
-  @extend %centered-page-part;
+  @extend %page-section-content-wide;
 
   @include respond-between(300px, 767px) {
     background: $beige;
