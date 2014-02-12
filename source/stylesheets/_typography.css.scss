@@ -55,8 +55,14 @@
 
 // news lists and h3?
 %typography-heading-news {
-  font-family: $font-family;
-  font-weight: bold;
+  font-family: $mp-serif;
+  font-size: (20em/16);
+  line-height: (25/20);
+
+  @include respond-to(768px) {
+    font-size: (26em/16);
+    line-height: (36/26);
+  }
 }
 
 

@@ -9,10 +9,10 @@
     a {
       text-decoration: none;
       display: block;
-      margin: 0 0 (10em/20) 55px;
+      margin: 0 0 (10em/20) 45px;
 
-      @include respond-between(300px, 767px) {
-        margin-left: 45px;
+      @include respond-to(768px) {
+        margin-left: 0;
       }
     }
 
@@ -29,15 +29,15 @@
 
     .icon {
       display: block;
-      width: 35px;
-      margin-left: -55px;
       float: left;
       background: transparent url(../images/sources/bg.png) 0 0 no-repeat;
       background-size: 35px 35px;
+      width: 25px;
+      margin-left: -45px;
 
-      @include respond-between(300px, 767px) {
-        width: 25px;
-        margin-left: -45px;
+      @include respond-to(768px) {
+        width: 35px;
+        margin-left: -55px;
       }
     }
 

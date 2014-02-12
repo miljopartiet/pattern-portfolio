@@ -1,13 +1,12 @@
-.news-posts .icon-list {
+.news-posts {
   @include respond-to(1024px) {
     width: auto;
-    margin-right: (20em/18);
+    margin-right: (20em/16);
   }
 
   li {
     @include respond-to(768px) {
-      font-size: (26em/18);
-      padding: (15em/26) 0;
+      padding: (15em/16) 0;
       border-bottom: 1px solid $warm-grey;
     }
 
@@ -36,17 +35,7 @@
   }
 
   .title {
-    @include respond-to(768px) {
-      line-height: (30/26);
-    }
-  }
-
-  .meta {
-    @include respond-to(768px) {
-      font-size: (14em/26);
-      line-height: (18/14);
-      margin-top: (2em/14);
-    }
+    font-size: (26em/18);
   }
 
   & + .icon-list {
