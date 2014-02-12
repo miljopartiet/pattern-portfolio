@@ -1,0 +1,39 @@
+// Main image
+.illustration {
+  margin-top: (20em/16);
+
+  @include respond-between(768px, 1023px) {
+    margin-top: (20em/16);
+  }
+
+  @include respond-to(1024px) {
+    margin-top: (30em/16);
+  }
+
+  figure {
+    > div {
+      @include respond-to(1024px) {
+        float: left;
+        width: percentage(640/805);
+      }
+    }
+
+    figcaption {
+      color: $text-light-grey;
+
+      @include respond-to(1024px) {
+        float: right;
+        width: percentage(145/805);
+        margin: 0 0 0 percentage(20/805);
+        border:none;
+      }
+
+      strong,
+      b {
+        color: $text-grey;
+      }
+    }
+  }
+}
+
+
