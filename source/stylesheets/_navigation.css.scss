@@ -16,13 +16,6 @@
 
   li {
     margin: 0;
-    font-size: (13em/16);
-    line-height: (25.1/13);
-
-    @include respond-to(1024px) {
-      font-size: (16em/16);
-      line-height: (30/16);
-    }
   }
 
   a {
@@ -31,11 +24,15 @@
     padding: 0 0 0 (12em/13);
     background: $green;
     text-decoration: none;
-    font-family: $mp-serif;
     color: #fff;
     border-radius: 3px;
+    font-size: (13em/16);
+    font-family: $mp-serif;
+    line-height: (25.1/13);
 
     @include respond-to(1024px) {
+      font-size: (16em/16);
+      line-height: (30/16);
       margin-top: (2em/16);
       padding: 0 0 0 (15em/16);
     }
@@ -68,17 +65,17 @@
 
   li.active-trail,
   .front & li:first-child {
-    font-size: (16em/18);
-    line-height: (36/16);
-
-    @include respond-to(1024px) {
-      font-size: (20em/18);
-    }
 
     a {
       color: #fff;
       margin-left: -20px;
       padding: 0 20px 0 20px;
+      font-size: (16em/18);
+      line-height: (36/16);
+
+      @include respond-to(1024px) {
+        font-size: (20em/18);
+      }
     }
 
     span {
