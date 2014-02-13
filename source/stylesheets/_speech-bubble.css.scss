@@ -13,12 +13,16 @@
   .main-section > & {
     @extend %page-section-content;
     margin-top: 30px;
-    //margin-bottom: 30px;
   }
 
   .main-section + & {
     @extend %page-section-content;
     margin-bottom: 30px;
+  }
+
+  .main-section-green + &,
+  .main-section-magenta + & {
+    margin-top: 30px;
   }
 
   &:after {
