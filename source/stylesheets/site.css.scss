@@ -12,6 +12,7 @@
 
 @import "components/sections";
 @import "components/vignettes";
+@import "components/buttons";
 
 @import "grid";
 @import "icon-list";
@@ -42,58 +43,8 @@ input + div.description {
   background: rgba(255, 255, 255, 0.6);
 }
 
-
 .fetch-more {
   margin-top: (20em/16);
-}
-
-// Button like action links
-.action,
-.form-submit {
-  font: (14em/16) $arial;
-  line-height: (30/14);
-  background: $green;
-  color: #fff;
-  padding: 0 (18em/14);
-  border-radius: (15em/14);
-  border: 0;
-  white-space: nowrap;
-  display: inline-block;
-
-  &.loading,
-  &.loading:hover {
-    background: $green url(../images/load-green-32.gif) 8px 50% no-repeat;
-    background-size: 16px 16px;
-    padding-left: (30em/14);
-  }
-}
-
-.action a,
-a.action,
-.ui-tabs-nav a {
-  text-decoration: none;
-
-  &:hover {
-    background: $green-dark;
-    color: #fff;
-  }
-}
-
-button.action,
-input.action,
-input.form-submit {
-  color: #fff;
-  border: none;
-
-  &:hover {
-    background: $green-dark;
-    cursor: pointer;
-  }
-
-  &:active {
-    background: #fff;
-    color: $green;
-  }
 }
 
 p.copy {

@@ -96,6 +96,10 @@ $base-line-height: 1.5;
     border-bottom: none;
     padding: 0;
   }
+
+  .illustration + & {
+    margin-top: 30px;
+  }
 }
 
 %section-intro-pull-out {

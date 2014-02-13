@@ -10,7 +10,7 @@
   font-weight: normal;
   text-rendering: optimizeLegibility;
   font-size: (33em/16);
-  line-height: 1;
+  line-height: (40/33);
 
   @include respond-to(600px) {
     font-size: (37em/16);

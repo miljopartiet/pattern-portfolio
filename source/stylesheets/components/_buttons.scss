@@ -1,0 +1,58 @@
+// Button like action links
+%action {
+  @extend %typography-text-small;
+  line-height: (30/14);
+  padding: 0 (18em/14);
+  border-radius: (15em/14);
+  border: 0;
+  white-space: nowrap;
+  display: inline-block;
+  text-decoration: none;
+}
+
+%action-green {
+  @extend %action;
+  background: $green;
+  color: #fff;
+
+  &:hover {
+    background: $green-dark;
+    color: #fff;
+  }
+
+  &:active {
+    background: #fff;
+    color: $green;
+  }
+}
+
+%action-yellow {
+  background: $yellow;
+  color: #000;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    background: darken($yellow, 5%);
+  }
+}
+
+.action,
+.form-submit,
+.action a {
+  @extend %action-green;
+
+  &.loading,
+  &.loading:hover {
+    background-image: url(../images/load-green-32.gif);
+    background-position: 8px 50%;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    padding-left: (30em/14);
+  }
+
+  .main-section-green &,
+  .main-section-magenta & {
+    @extend %action-yellow;
+  }
+}

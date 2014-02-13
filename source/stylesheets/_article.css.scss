@@ -6,6 +6,10 @@ article {
 
   header {
     @extend %content-column-expanded;
+
+    + h1 {
+      margin-top: 30px;
+    }
   }
 
   p a,

@@ -10,8 +10,15 @@
     padding: 15px;
   }
 
-  #main > & {
+  .main-section > & {
     @extend %page-section-content;
+    margin-top: 30px;
+    //margin-bottom: 30px;
+  }
+
+  .main-section + & {
+    @extend %page-section-content;
+    margin-bottom: 30px;
   }
 
   &:after {
@@ -22,6 +29,19 @@
     border-width: 0 0 20px 21px;
     border-style: solid;
     border-color: $yellow transparent;
+  }
+
+  // Force green links and action buttons
+  .main-section & {
+    a {
+      color: $green;
+    }
+
+    .action,
+    .action a,
+    .form-submit {
+      @extend %action-green;
+    }
   }
 
   .inner {
