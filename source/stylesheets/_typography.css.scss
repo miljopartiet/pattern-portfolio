@@ -9,33 +9,33 @@
   font-family: $mp-sans;
   font-weight: normal;
   text-rendering: optimizeLegibility;
-  font-size: (33em/16);
-  line-height: (40/33);
+  font-size: (40em/16);
+  line-height: (32/40);
 
   @include respond-to(600px) {
-    font-size: (37em/16);
+    font-size: (54em/16);
   }
 
   @include respond-to(768px) {
-    font-size: (48em/16);
+    font-size: (64em/16);
   }
 
   @include respond-to(1024px) {
     font-size: (84em/16);
     line-height: (64/84);
-  }
+    }
 }
 
 %typography-heading {
   font-family: $mp-sans;
   font-weight: normal;
   text-rendering: optimizeLegibility;
-  font-size: (20em/16);
-  line-height: (22/20);
+  font-size: (28em/16);
+  line-height: (24/28);
 
   @include respond-to(768px) {
-    font-size: (44em/16);
-    line-height: (30/40);
+    font-size: (38em/16);
+    line-height: (30/38);
   }
 }
 
@@ -56,20 +56,20 @@
 // news lists and h3?
 %typography-heading-news {
   font-family: $mp-serif;
-  font-size: (20em/16);
-  line-height: (25/20);
+  font-size: (21em/16);
+  line-height: (21/21);
 
   @include respond-to(768px) {
-    font-size: (26em/16);
-    line-height: (36/26);
+    font-size: (30em/16);
+    line-height: (32/30);
   }
 }
 
 
 %typography-text-lead {
   font-family: $mp-serif;
-  font-size: (18em/16);
-  line-height: (22/18);
+  font-size: (20em/16);
+  line-height: (21/20);
 
   @include respond-to(600px) {
     font-size: (20em/16);
