@@ -27,13 +27,9 @@
     }
 
     p {
-      margin: 4px 0 0 0;
-      font-size: (14em/16);
+      @extend %typography-text;
+      margin-top: 4px;
       text-decoration: none;
-
-      @include respond-to(768px) {
-        font-size: (16em/16);
-      }
     }
   }
 }

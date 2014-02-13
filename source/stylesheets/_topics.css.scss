@@ -38,6 +38,10 @@
   h3 {
     @extend %typography-heading;
   }
+
+  p {
+    @extend %typography-text-body;
+  }
 }
 
 .related-topics {

@@ -23,7 +23,7 @@
   @include respond-to(1024px) {
     font-size: (84em/16);
     line-height: (64/84);
-    }
+  }
 }
 
 %typography-heading {
@@ -73,19 +73,16 @@
 
   @include respond-to(600px) {
     font-size: (20em/16);
-    line-height: (24/20);
+    line-height: (22/20);
   }
 
-  @include respond-between(768px, 1023px) {
+  @include respond-to(768px) {
     font-size: (22em/16);
-    line-height: (26/22);
-    margin-top: (8em/22);
+    line-height: (24/22);
   }
 
   @include respond-to(1024px) {
-    font-size: (32em/16);
-    line-height: (35/32);
-    margin-top: (8em/32);
+    font-size: (28em/16);
   }
 }
 
@@ -95,6 +92,16 @@
   @include respond-to(768px) {
     font-size: (18em/16);
     line-height: (25/18);
+  }
+}
+
+%typography-text {
+  font-size: (14em/16);
+  line-height: (17/14);
+
+  @include respond-to(768px) {
+    font-size: (16em/16);
+    line-height: (22/16);
   }
 }
 

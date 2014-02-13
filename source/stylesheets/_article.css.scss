@@ -24,10 +24,10 @@ article {
   // Page lead
   .lead p {
     @extend %typography-text-lead;
-    margin-top: (8em/18);
+    margin-top: 2px;
 
-    @include respond-between(300px, 767px) {
-      margin-top: (2em/16);
+    & + p {
+      margin-top: 8px;
     }
   }
 

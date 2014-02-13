@@ -14,6 +14,11 @@
     padding-right: 0;
     padding-left: 0;
   }
+
+  @include respond-to(768px) {
+    padding-top: (70em/16);
+    padding-bottom: (80em/16);
+  }
 }
 
 %page-section-solid {
@@ -23,6 +28,11 @@
   @include respond-to(480px) {
     padding-top: (40em/16);
     padding-bottom: (50em/16);
+  }
+
+  @include respond-to(768px) {
+    padding-top: (60em/16);
+    padding-bottom: (70em/16);
   }
 }
 

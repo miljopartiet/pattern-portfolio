@@ -82,9 +82,7 @@
   }
 
   p {
-    @include respond-to(768px) {
-      line-height: (24/18);
-    }
+    @extend %typography-text-body;
   }
 
   form {

@@ -151,15 +151,15 @@
       margin-bottom:(10em/16);
       vertical-align: top;
       word-wrap: break-word;
-      line-height:(18em/16);
 
       @include respond-to(600px) {
         margin-left:1.5em;
       }
     }
 
-    // Fix missing column-break-inside support
     a {
+      @extend %typography-text;
+      // Fix missing column-break-inside support
       display: inline-block;
       vertical-align: top;
       word-wrap: break-word;

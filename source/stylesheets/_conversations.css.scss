@@ -97,14 +97,7 @@
       }
 
       p {
-        font-family: $mp-serif;
-        font-size: (24em/16);
-        line-height: (26/24);
-
-        @include respond-to(768px) {
-          font-size: (26em/16);
-          line-height: (30/26);
-        }
+        @extend %typography-text-lead;
       }
     }
 
@@ -140,12 +133,7 @@
       border-radius: 3px 3px 0 3px;
 
       p {
-        line-height: (20/16);
-
-        @include respond-to(768px) {
-          font-size: (16em/16);
-          line-height: (20/16);
-        }
+        @extend %typography-text;
       }
     }
 
