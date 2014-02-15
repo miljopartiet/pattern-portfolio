@@ -35,24 +35,14 @@ h2 {
 }
 
 h3 {
-  font-size: (18em/16);
-  line-height: (20/18);
+  @extend %typography-text-small;
   margin-top: (18em/18);
-  font-weight: normal;
-  font-family: $mp-serif;
-
-  @include respond-to(768px) {
-    font-size: (20em/16);
-    line-height: (22/20);
-  }
 }
 
 h4 {
   margin: 1em 0 -.75em 0;
-  font-weight:bold;
-  font-size:1em;
-  line-height:(18/16);
   @extend %typography-text-body;
+  font-weight: bold;
 }
 
 p {
@@ -130,13 +120,12 @@ ul.horizontal {
 }
 
 small {
-  font-size: (14em/16);
-  line-height: (18/14);
+  @extend %typography-text-small;
 }
 
 sup {
   vertical-align: super;
-  font-size: .7em;
+  @extend %typography-text-small;
 }
 
 b,
@@ -323,8 +312,6 @@ blockquote {
 
       @include respond-to(768px) {
         margin-left: 0;
-        font-size: (24em/16);
-        line-height: (28/24);
       }
 
       &:first-child {
@@ -332,9 +319,8 @@ blockquote {
         margin-top: 0;
 
         &:before {
+          @extend %typography-text-quote;
           content: "”";
-          font-family: $mp-serif;
-          font-size: (24em/18);
           line-height: 1;
           position: absolute;
           top: .05em;
@@ -378,11 +364,7 @@ blockquote {
       bottom: .5em;
       left: 0;
       width: percentage(246/320);
-
-      @include respond-to(768px) {
-        font-size: (14em/13);
-        line-height: (18/14);
-      }
+      @extend %typography-text-small;
 
       @include respond-to(1024px) {
         float: left;

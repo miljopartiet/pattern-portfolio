@@ -76,16 +76,6 @@ p.copy {
     padding-top: (40em/16);
     padding-bottom: (40em/16);
   }
-
-  p,
-  li {
-    input,
-    textarea {
-      @include respond-to(768px) {
-        font-size: (14em/18);
-      }
-    }
-  }
 }
 
 // Related conversations on a conversation permalink

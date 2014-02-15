@@ -155,18 +155,9 @@ article {
   h2 {
     a.topic {
       display: block;
-      font-size: (18em/24);
-      line-height: (25/18);
       text-transform: uppercase;
       text-rendering: optimizeLegibility;
       letter-spacing: 0.06em;
-    }
-  }
-
-  h3 {
-    @include respond-to(768px) {
-      font-size: (20em/16);
-      line-height: (22/20);
     }
   }
 
