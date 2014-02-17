@@ -189,10 +189,9 @@
     text-align: center;
 
     .choose {
+      @extend %typography-text-small;
       margin-top: (8em/14);
       display: block;
-      font-family: $arial;
-      font-size: (14em/16);
     }
   }
 }

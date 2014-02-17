@@ -34,10 +34,6 @@
     }
   }
 
-  .title {
-    font-size: (26em/18);
-  }
-
   & + .icon-list {
     @include respond-to(768px) {
       padding-top: (15em/16);

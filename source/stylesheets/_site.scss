@@ -1,35 +1,31 @@
 @import "compass";
 @import "compass/reset";
-@import "includes";
 
-@import "drupal_reset";
-
-@import "fonts";
-@import "typography";
-
-@import "elements";
+@import "globals/includes";
+@import "globals/drupal_reset";
+@import "globals/typography";
 @import "globals/framework";
+@import "globals/elements";
 
+@import "components/grid";
 @import "components/sections";
 @import "components/vignettes";
 @import "components/buttons";
-
-@import "grid";
-@import "icon-list";
-@import "labeled-list";
-@import "navigation";
-@import "breadcrumbs";
-@import "search";
-@import "speech-bubble";
-@import "illustration";
-@import "article";
-@import "news-posts";
-@import "tabs";
-@import "topics";
-@import "conversations";
-@import "people";
-@import "header";
-@import "footer";
+@import "components/icon-list";
+@import "components/labeled-list";
+@import "components/navigation";
+@import "components/breadcrumbs";
+@import "components/search";
+@import "components/speech-bubble";
+@import "components/illustration";
+@import "components/article";
+@import "components/news-posts";
+@import "components/tabs";
+@import "components/topics";
+@import "components/conversations";
+@import "components/people";
+@import "components/header";
+@import "components/footer";
 
 input + div.description {
   margin-top: .3em;

@@ -31,12 +31,8 @@
     }
 
     a.action {
-      font-size: (12em/16);
+      @extend %typography-text-small;
       margin-right: (20em/12);
-
-      @include respond-to(1024px) {
-        font-size: (14em/18);
-      }
     }
   }
 }

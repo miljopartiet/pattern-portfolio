@@ -95,8 +95,7 @@
   a {
     padding: (4em/16) (10em/16);
     display: block;
-    font-size: (16em/18);
-    line-height: (18/16);
+    @extend %typography-text;
     text-decoration: none;
 
     &:hover {
