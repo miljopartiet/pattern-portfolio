@@ -60,16 +60,26 @@ url: http://www.mp.se/politik/bostader
 
       <p>Det är viktigt med bostadsområden som präglas av hög grad av självförvaltning och god tillgång till såväl naturmiljöer och fritidsaktiviteter.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adip*isicing elit, sed do eiusmod *tempor incididunt ut labore et dolore magna aliqua.</p>
+
+      <h2>Fördjupning i ämnet bostad</h2>
+      <ul>
+        <li>PM: <a href="#">30 000 bostäder för unga</a> (PDF)</li>
+        <li><a href="#">Om förslaget ”30 000 bostäder för unga”</a> i SvD</li>
+        <li>Debatt: <a href="#">Friare kapitalregler ger fler bostäder</a></li>
+      </ul>
     </div>
   </article>
 </div>
 
-<%= partial 'bubbles/localize' %>
+<%= partial 'bubbles/share', locals: { url: "http://www.mp.se/vill/bostad" } %>
 
-<div class="main-section local-x">
+<div class="main-section main-section-cream local-x">
+  <%= partial 'bubbles/localize' %>
+
   <article>
-    <header class="section-vignette">
-      <span class="section-vignette-intro">Här visar vi lokal politik från <a href="/jamtland.html">Östersund</a> och <a href="/jamtland.html">Jämtland</a>. Du kan enkelt <a href="">ändra kommun</a> om du vill.</span>
+    <header class="vignette">
+      <span class="vignette-header">Nära dig</span>
+      <span class="vignette-intro">Här visar vi lokal politik från <a href="/jamtland.html">Östersund</a> och <a href="/jamtland.html">Jämtland</a>. Du kan enkelt <a href="">ändra kommun</a> om du vill.</span>
     </header>
 
     <h1>
@@ -103,22 +113,7 @@ url: http://www.mp.se/politik/bostader
   </article>
 </div>
 
-<div class="main-section main-section-cream">
-  <article>
-    <h1>Fördjupning i ämnet bostad</h1>
-    <div class="body">
-      <ul>
-        <li>PM: <a href="#">30 000 bostäder för unga</a> (PDF)</li>
-        <li><a href="#">Om förslaget ”30 000 bostäder för unga”</a> i SvD</li>
-        <li>Debatt: <a href="#">Friare kapitalregler ger fler bostäder</a></li>
-      </ul>
-    </div>
-  </article>
-</div>
-
-<%= partial 'bubbles/share', locals: { url: "http://www.mp.se/vill/bostad" } %>
-
-<div class="main-section main-section-cream">
+<div class="main-section">
   <article class="current-topics">
     <header class="vignette">
       <span class="vignette-header">Just nu</span>
@@ -127,9 +122,7 @@ url: http://www.mp.se/politik/bostader
 
     <%= partial "news" %>
   </article>
-</div>
 
-<div class="main-section">
   <article class="conversations">
     <header class="vignette">
       <span class="vignette-header">Prata politik</span>
@@ -164,8 +157,7 @@ url: http://www.mp.se/politik/bostader
       </div>
     </div>
   </article>
-</div>
-<div class="main-section main-section-green">
+
   <article class="related-topics">
     <header class="vignette">
       <span class="vignette-header">Läs mer</span>
