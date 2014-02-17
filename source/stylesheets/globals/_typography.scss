@@ -69,22 +69,23 @@
 
 
 %typography-text-lead {
-  font-family: $mp-serif;
-  font-size: (20em/16);
-  line-height: (21/20);
+  font-family: Georgia;
+  font-size: (18em/16);
+  line-height: (22/18);
 
   @include respond-to(600px) {
     font-size: (20em/16);
-    line-height: (22/20);
+    line-height: (24/20);
   }
 
   @include respond-to(768px) {
     font-size: (22em/16);
-    line-height: (24/22);
+    line-height: (26/22);
   }
 
   @include respond-to(1024px) {
-    font-size: (28em/16);
+    font-size: (26em/16);
+    line-height: (32/26);
   }
 }
 
