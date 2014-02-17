@@ -87,9 +87,7 @@
         <p><%= yield_content :breadcrumbs %></p>
       </nav>
       <% end %>
-      <div id="main" role="main">
-        <%= yield %>
-      </div>
+      <%= yield %>
       <footer id="site-footer">
         <% if content_for? :breadcrumbs %>
         <nav class="breadcrumbs">
