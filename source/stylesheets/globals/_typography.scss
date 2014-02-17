@@ -42,15 +42,15 @@
 }
 
 %typography-heading-small {
-  font-family: $mp-sans;
+  font-family: $mp-serif;
   font-weight: normal;
   text-rendering: optimizeLegibility;
-  font-size: (20em/16);
-  line-height: (22/20);
+  font-size: (18em/16);
+  line-height: (20/20);
 
   @include respond-to(768px) {
-    font-size: (30em/16);
-    line-height: (30/40);
+    font-size: (24em/16);
+    line-height: (26/24);
   }
 }
 
