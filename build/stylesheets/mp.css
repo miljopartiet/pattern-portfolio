@@ -142,16 +142,16 @@ h2, .labeled-list .label, .topics h3 {
       font-size: 2.375em;
       line-height: 0.78947; } }
 
-.vignette-header, .people a h2 {
-  font-family: "MP Sans", arial, sans-serif;
+h3, .vignette-header, .conversation .question .content p, .people a h2 {
+  font-family: "MP Serif", georgia, serif;
   font-weight: normal;
   text-rendering: optimizeLegibility;
-  font-size: 1.25em;
-  line-height: 1.1; }
+  font-size: 1.125em;
+  line-height: 1; }
   @media screen and (min-width: 768px) {
-    .vignette-header, .people a h2 {
-      font-size: 1.875em;
-      line-height: 0.75; } }
+    h3, .vignette-header, .conversation .question .content p, .people a h2 {
+      font-size: 1.5em;
+      line-height: 1.08333; } }
 
 .icon-list li .title {
   font-family: "MP Serif", georgia, serif;
@@ -162,21 +162,22 @@ h2, .labeled-list .label, .topics h3 {
       font-size: 1.875em;
       line-height: 1.06667; } }
 
-article .lead p, .conversation .question .content p {
-  font-family: "MP Serif", georgia, serif;
-  font-size: 1.25em;
-  line-height: 1.05; }
+article .lead p {
+  font-family: Georgia;
+  font-size: 1.125em;
+  line-height: 1.22222; }
   @media screen and (min-width: 600px) {
-    article .lead p, .conversation .question .content p {
+    article .lead p {
       font-size: 1.25em;
-      line-height: 1.1; } }
+      line-height: 1.2; } }
   @media screen and (min-width: 768px) {
-    article .lead p, .conversation .question .content p {
+    article .lead p {
       font-size: 1.375em;
-      line-height: 1.09091; } }
+      line-height: 1.18182; } }
   @media screen and (min-width: 1024px) {
-    article .lead p, .conversation .question .content p {
-      font-size: 1.75em; } }
+    article .lead p {
+      font-size: 1.625em;
+      line-height: 1.23077; } }
 
 h4, .speech-bubble p, article .body li,
 article .body p, .topics p {
@@ -196,16 +197,16 @@ article .body p, .topics p {
       font-size: 1em;
       line-height: 1.375; } }
 
-h3, small, sup, figcaption, blockquote footer, blockquote footer p, .vignette-intro, .section-vignette-intro, .action,
+small, sup, figcaption, blockquote footer, blockquote footer p, .vignette-intro, .section-vignette-intro, .action,
 .form-submit,
 .action a, .main-section .speech-bubble .action,
 .main-section .speech-bubble .action a,
 .main-section .speech-bubble .form-submit, .icon-list li .meta, #site-top-navigation a.close, nav.main-navigation li, #secondary-navigation a, #skip-to-navigation, nav.breadcrumbs p, .main-search .category, .speech-bubble .position-me .choose, .conversation .byline p, .conversations .details, #cookies {
   font-family: arial, sans-serif;
   font-size: 0.8125em;
-  line-height: 1.30769; }
+  line-height: 1.23077; }
   @media screen and (min-width: 768px) {
-    h3, small, sup, figcaption, blockquote footer, blockquote footer p, .vignette-intro, .section-vignette-intro, .action,
+    small, sup, figcaption, blockquote footer, blockquote footer p, .vignette-intro, .section-vignette-intro, .action,
     .form-submit,
     .action a, .main-section .speech-bubble .action,
     .main-section .speech-bubble .action a,
@@ -916,6 +917,8 @@ blockquote {
         width: 19.29825%;
         margin-right: 0;
         margin-left: 0; } }
+    .main-section-green .labeled-list .label, .main-section-magenta .labeled-list .label {
+      color: #fff; }
   @media screen and (min-width: 768px) {
     .labeled-list .grid {
       width: 100%; } }
