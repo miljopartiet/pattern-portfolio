@@ -34,17 +34,17 @@ body_class: front
 <div class="main-section main-section-magenta">
   <article>
     <%= partial "main_topics", locals: { title: "Vår politik" } %>
-    <p><a href="/topics.html" class="action">Läs mer om hur vi vill modernisera Sverige</a>
+    <p class="fetch-more">
+      <a href="/topics.html" class="action">Läs mer om hur vi vill modernisera Sverige</a>
+    </p>
   </article>
-
-  <%= partial 'bubbles/localize' %>
 </div>
 
-<div class="main-section local-x">
+<div class="main-section main-section-cream local-x">
+  <%= partial 'bubbles/localize' %>
   <article>
-    <header class="vignette">
-      <span class="vignette-header">Nära dig</span>
-      <span class="vignette-intro">Här visar vi lokal politik från <a href="/jamtland.html">Östersund</a> och <a href="/jamtland.html">Jämtland</a>. Du kan enkelt <a href="">ändra kommun</a> om du vill.</span>
+    <header class="section-vignette">
+      <span class="section-vignette-intro">Här visar vi lokal politik från <a href="/jamtland.html">Östersund</a> och <a href="/jamtland.html">Jämtland</a>. Du kan enkelt <a href="">ändra kommun</a> om du vill.</span>
     </header>
 
     <h1>
@@ -66,9 +66,6 @@ body_class: front
       </div>
     </div>
   </article>
-</div>
-
-<div class="main-section main-section-cream local-x">
   <article>
     <h1>
       <a href="/jamtland.html" class="topic">Jämtland</a>
