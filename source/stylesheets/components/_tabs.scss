@@ -11,27 +11,33 @@
 
   .article-subsection {
     border: none;
+    margin-top: 2em;
   }
 
   .tabs {
-    margin: 0 0 -14px 0;
+    @extend %content-column-expanded-full;
+    @include clearfix;
     list-style: none;
+    border-top: 1px solid $warm-grey;
 
     @include respond-to(1024px) {
-      margin-top: -17px;
+      margin-left: - percentage(165/640);
     }
 
     li {
       display: inline;
       margin: 0;
+      position: relative;
+      top: -16px;
 
-      @include respond-to(1024px) {
-        margin: 0;
+      &:first-child {
+        @include respond-to(1024px) {
+          margin-left: percentage(165/970);
+        }
       }
     }
 
-    a.action {
-      @extend %typography-text-small;
+    a {
       margin-right: (20em/12);
     }
   }

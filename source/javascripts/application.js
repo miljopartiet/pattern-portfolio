@@ -261,7 +261,7 @@
     });
 
 
-    $('section.tabbed').tabs();
+    $('.tabbed').tabs();
     $('#conversation-form').hide();
     $('#go-to-form').bind('click', function(e) {
       e.preventDefault();
