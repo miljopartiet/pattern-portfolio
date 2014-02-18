@@ -69,7 +69,7 @@
     .content {
       padding-bottom: 25px;
       background: $yellow;
-      border-radius: 3px 3px 3px 0;
+      border-radius: 7px;
 
       &:after {
         position: absolute;
@@ -80,7 +80,7 @@
         height: .75em;
         content: "";
         background: rgba(0, 0, 0, .04);
-        border-radius: 3px 0 3px 0;
+        border-radius: 7px 0 7px 0;
 
         @include respond-between(300px, 767px) {
           width: percentage(445/510);
@@ -120,7 +120,7 @@
     .content {
       padding-top: 25px;
       background: $cream;
-      border-radius: 3px 3px 0 3px;
+      border-radius: 7px;
 
       p {
         @extend %typography-text;
