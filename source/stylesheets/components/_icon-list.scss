@@ -16,7 +16,8 @@
       }
     }
 
-    .title {
+    .title,
+    .summary {
       @extend %typography-heading-news;
     }
 
