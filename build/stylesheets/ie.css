@@ -63,6 +63,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 145px;
   margin-right: -110px; }
 
+.conversation .answer:after, .speech-bubble:after, .conversation .question:after {
+  content: "";
+  position: absolute;
+  left: -11px;
+  bottom: -5px;
+  width: 29px;
+  height: 28px;
+  background: transparent url(../images/speech-bubble-corner.svg) 0 0 no-repeat;
+  background-size: 100%;
+  z-index: 40;
+  width: 39px;
+  height: 38px;
+  left: -14px;
+  bottom: -8px;
+  left: -17px;
+  bottom: -9px;
+  width: 49px;
+  height: 48px; }
+
+.conversation .answer:after {
+  left: auto;
+  right: -9px;
+  background-image: url(../images/speech-bubble-corner-reversed.svg);
+  right: -15px;
+  right: -17px; }
+
 ul.menu li {
   margin-left: 0; }
   ul.menu li.leaf {
@@ -114,7 +140,6 @@ body {
 h1 {
   font-family: "MP Sans", arial, sans-serif;
   font-weight: normal;
-  text-rendering: optimizeLegibility;
   font-size: 2.5em;
   line-height: 0.8;
   font-size: 3.375em;
@@ -125,7 +150,6 @@ h1 {
 h2, .labeled-list .label, .topics h3 {
   font-family: "MP Sans", arial, sans-serif;
   font-weight: normal;
-  text-rendering: optimizeLegibility;
   font-size: 1.75em;
   line-height: 0.85714;
   font-size: 2.375em;
@@ -134,13 +158,13 @@ h2, .labeled-list .label, .topics h3 {
 h3, .vignette-header, .conversation .question .content p, .people a h2 {
   font-family: "MP Serif", georgia, serif;
   font-weight: normal;
-  text-rendering: optimizeLegibility;
   font-size: 1.125em;
   line-height: 1;
   font-size: 1.5em;
   line-height: 1.08333; }
 
-.icon-list li .title {
+.icon-list li .title,
+.icon-list li .summary {
   font-family: "MP Serif", georgia, serif;
   font-size: 1.3125em;
   line-height: 1;
@@ -171,7 +195,7 @@ article .body p, .topics p {
   font-size: 1em;
   line-height: 1.375; }
 
-small, sup, figcaption, blockquote footer, blockquote footer p, .vignette-intro, .section-vignette-intro, .action,
+small, sup, figcaption, blockquote footer p, .vignette-intro, .section-vignette-intro, .action,
 .form-submit,
 .action a, .main-section .speech-bubble .action,
 .main-section .speech-bubble .action a,
@@ -185,7 +209,9 @@ small, sup, figcaption, blockquote footer, blockquote footer p, .vignette-intro,
 blockquote > div p, blockquote > div p:first-child:before {
   font-family: "MP Serif", georgia, serif;
   font-size: 1.125em;
-  line-height: 1.22222; }
+  line-height: 1.22222;
+  font-size: 1.5em;
+  line-height: 1.16667; }
 
 .main-section, #site-footer {
   padding: 1.875em 1.125em 2.1875em 1.125em;
@@ -518,14 +544,13 @@ blockquote {
           line-height: 1;
           position: absolute;
           top: .05em;
-          left: -.59em;
-          text-rendering: optimizeLegibility; }
+          left: -.59em; }
   blockquote.image > div {
     width: 60.24845%; }
   blockquote footer {
     *zoom: 1;
-    margin-top: 0.61538em;
-    bottom: -0.38462em;
+    margin-top: 0.5em;
+    bottom: -0.3125em;
     text-align: right;
     position: relative;
     margin-top: -40px;
@@ -594,6 +619,7 @@ blockquote {
 
 .main-section-green {
   color: #fff;
+  background: #2b912c;
   background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, #339933), color-stop(100%, #00730a));
   background-image: -webkit-radial-gradient(#339933, #00730a);
   background-image: -moz-radial-gradient(#339933, #00730a);
@@ -903,8 +929,8 @@ blockquote {
     margin: 0; }
   #top-navigation a {
     display: inline-block;
-    margin-top: 0.15385em;
-    padding: 0 0 0 0.92308em;
+    margin-top: 2px;
+    padding: 0 0 0 12px;
     background: #2b912c;
     text-decoration: none;
     color: #fff;
@@ -914,17 +940,16 @@ blockquote {
     line-height: 1.93077;
     font-size: 1em;
     line-height: 1.875;
-    margin-top: 0.125em;
-    padding: 0 0 0 0.9375em; }
+    padding: 0 0 0 15px; }
     #top-navigation a:hover {
       background-color: #00730a; }
   #top-navigation span {
     display: block;
     margin-right: 7px;
-    padding-right: 1.125em;
+    padding-right: 18px;
     background: transparent url(../images/arrows-right.png) 100% 6px no-repeat;
     background-size: 9px 128px;
-    padding-right: 1.4375em;
+    padding-right: 23px;
     background-position: 100% 8px; }
     html.svg #top-navigation span {
       background-image: url(../images/arrows-right.svg); }
@@ -934,9 +959,9 @@ blockquote {
     color: #fff;
     margin-left: -20px;
     padding: 0 20px 0 20px;
-    font-size: 0.88889em;
+    font-size: 1em;
     line-height: 2.25;
-    font-size: 1.11111em; }
+    font-size: 1.25em; }
   #top-navigation li.active-trail span, .front #top-navigation li:first-child span {
     margin: 0;
     background-position: 100% 10px; }
@@ -1330,18 +1355,12 @@ nav.breadcrumbs {
     margin-left: auto; }
   .main-section-green + .speech-bubble, .main-section-magenta + .speech-bubble {
     margin-top: 30px; }
-  .speech-bubble:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: -20px;
-    border-width: 0 0 20px 21px;
-    border-style: solid;
-    border-color: #ffe900 transparent; }
   .main-section .speech-bubble a {
     color: #2b912c; }
   .speech-bubble .inner {
     *zoom: 1;
+    position: relative;
+    z-index: 60;
     color: #222; }
     .speech-bubble .inner:before, .speech-bubble .inner:after {
       content: " ";
@@ -1543,7 +1562,6 @@ article .body {
   .article-section h2 a.topic {
     display: block;
     text-transform: uppercase;
-    text-rendering: optimizeLegibility;
     letter-spacing: 0.06em; }
   .article-section .article-subsection {
     margin-top: 1.25em;
@@ -1687,7 +1705,7 @@ header.intro .article-section {
     text-decoration: none; }
   .conversation .content {
     position: relative;
-    z-index: 1;
+    z-index: 60;
     padding: 20px 25px;
     padding: 15px 20px; }
     .conversation .content p {
@@ -1700,17 +1718,9 @@ header.intro .article-section {
   .conversation .byline img {
     position: absolute;
     bottom: -1.4375em; }
-  .conversation .byline .arrow {
-    position: absolute;
-    width: 0;
-    font-size: 0;
-    line-height: 0;
-    bottom: 0;
-    color: #ffe900;
-    border-top: 25px solid transparent; }
   .conversation .question {
     position: relative;
-    z-index: 2;
+    z-index: 70;
     margin-bottom: -.75em;
     margin-right: 17.74194%;
     margin-right: 13.72549%; }
@@ -1733,26 +1743,21 @@ header.intro .article-section {
       top: -1.76923em; }
     .conversation .question .byline img {
       left: -14.70588%; }
-    .conversation .question .byline .arrow {
-      left: -3.87097%;
-      border-top: 25px solid transparent;
-      border-right: 25px solid #ffe900; }
   .conversation .answer {
     position: relative;
     margin-left: 11.29032%;
     margin-right: 12.09677%;
     margin-right: 0; }
+    .conversation .answer:after {
+      background-image: url(../images/speech-bubble-corner-reversed-cream.svg); }
     .conversation .answer .content {
       padding-top: 25px;
-      background: #f5f3ee;
+      background: #f6f4e5;
       border-radius: 3px 3px 0 3px; }
     .conversation .answer .byline img {
       right: -15.68627%; }
     .conversation .answer .byline p {
       padding-top: 0.76923em; }
-    .conversation .answer .byline .arrow {
-      right: -3.87097%;
-      border-left: 25px solid #f5f3ee; }
   .conversation img {
     display: none; }
 
