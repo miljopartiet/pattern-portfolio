@@ -10,7 +10,6 @@
 %typography-heading-main {
   font-family: $mp-sans;
   font-weight: normal;
-  text-rendering: optimizeLegibility;
   font-size: (40em/16);
   line-height: (32/40);
 
@@ -31,7 +30,6 @@
 %typography-heading {
   font-family: $mp-sans;
   font-weight: normal;
-  text-rendering: optimizeLegibility;
   font-size: (28em/16);
   line-height: (24/28);
 
@@ -44,7 +42,6 @@
 %typography-heading-small {
   font-family: $mp-serif;
   font-weight: normal;
-  text-rendering: optimizeLegibility;
   font-size: (18em/16);
   line-height: (20/20);
 
