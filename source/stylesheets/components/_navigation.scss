@@ -20,8 +20,8 @@
 
   a {
     display: inline-block;
-    margin-top: (2em/13);
-    padding: 0 0 0 (12em/13);
+    margin-top: 2px;
+    padding: 0 0 0 12px;
     background: $green;
     text-decoration: none;
     color: #fff;
@@ -33,8 +33,7 @@
     @include respond-to(1024px) {
       font-size: (16em/16);
       line-height: (30/16);
-      margin-top: (2em/16);
-      padding: 0 0 0 (15em/16);
+      padding: 0 0 0 15px;
     }
 
     &:hover {
@@ -45,12 +44,12 @@
   span {
     display: block;
     margin-right: 7px;
-    padding-right: (18em/16);
+    padding-right: 18px;
     background: transparent url(../images/arrows-right.png) 100% 6px no-repeat;
     background-size: 9px 128px;
 
     @include respond-to(1024px) {
-      padding-right: (23em/16);
+      padding-right: 23px;
       background-position: 100% 8px;
     }
 
@@ -70,11 +69,11 @@
       color: #fff;
       margin-left: -20px;
       padding: 0 20px 0 20px;
-      font-size: (16em/18);
+      font-size: (16em/16);
       line-height: (36/16);
 
       @include respond-to(1024px) {
-        font-size: (20em/18);
+        font-size: (20em/16);
       }
     }
 
