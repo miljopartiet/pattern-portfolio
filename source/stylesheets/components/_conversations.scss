@@ -26,7 +26,7 @@
 
   .content {
     position: relative;
-    z-index: 1;
+    z-index: 60;
     padding: 20px 25px;
 
     @include respond-between(300px, 767px) {
@@ -53,23 +53,14 @@
       position: absolute;
       bottom: (-23em/16);
     }
-
-    .arrow {
-      position: absolute;
-      width: 0;
-      font-size: 0;
-      line-height: 0;
-      bottom: 0;
-      color: $yellow;
-      border-top: 25px solid transparent;
-    }
   }
 
   .question {
     position: relative;
-    z-index: 2;
+    z-index: 70;
     margin-bottom: -.75em;
     margin-right: percentage(110/620);
+    @extend %speech-bubble-corner;
 
     @include respond-between(300px, 767px) {
       margin-right: percentage(70/510);
@@ -109,12 +100,6 @@
       img {
         left: percentage(-75/510);
       }
-
-      .arrow {
-        left: percentage(-24/620);
-        border-top: 25px solid transparent;
-        border-right: 25px solid $yellow;
-      }
     }
   }
 
@@ -127,9 +112,14 @@
       margin-right: 0;
     }
 
+    @extend %speech-bubble-corner-reversed;
+    &:after {
+      background-image: url(../images/speech-bubble-corner-reversed-cream.svg);
+    }
+
     .content {
       padding-top: 25px;
-      background: $beige;
+      background: $cream;
       border-radius: 3px 3px 0 3px;
 
       p {
@@ -144,11 +134,6 @@
 
       p {
         padding-top: (10em/13);
-      }
-
-      .arrow {
-        right: percentage(-24/620);
-        border-left: 25px solid $beige;
       }
     }
   }

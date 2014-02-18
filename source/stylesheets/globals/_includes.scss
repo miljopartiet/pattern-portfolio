@@ -5,6 +5,8 @@ $yellow: #ffe900;
 $green: #2b912c;
 $green-dark: #00730a;
 $beige: #f5f3ee;
+$cream: #f6f4e5;
+
 
 $text-grey: #666;
 $text-light-grey: #888;
@@ -110,4 +112,28 @@ $base-line-height: 1.5;
     margin-right: -110px;
   }
 }
+
+%speech-bubble-corner {
+  &:after {
+    content:"";
+    position:absolute;
+    left: -17px;
+    bottom: -9px;
+    width: 49px;
+    height: 48px;
+    background: transparent url(../images/speech-bubble-corner.svg) 0 0 no-repeat;
+    background-size: 49px 48px;
+    z-index: 40;
+  }
+}
+
+%speech-bubble-corner-reversed {
+  @extend %speech-bubble-corner;
+  &:after {
+    left: auto;
+    right: -17px;
+    background-image: url(../images/speech-bubble-corner-reversed.svg);
+  }
+}
+
 
