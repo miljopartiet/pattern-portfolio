@@ -10,6 +10,7 @@
 .main-section-green {
   @extend %page-section-solid;
   color: #fff;
+  background: $green;
   @include background-image(radial-gradient(false, color-stops(#339933, #00730a)));
 
   h1 {
