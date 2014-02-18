@@ -10,6 +10,8 @@
     padding: 15px;
   }
 
+  @extend %speech-bubble-corner;
+
   .main-section > & {
     @extend %page-section-content;
     margin-top: 30px;
@@ -30,18 +32,6 @@
   .main-section-green + &,
   .main-section-magenta + & {
     margin-top: 30px;
-  }
-
-  &:after {
-    content:"";
-    position:absolute;
-    left: -17px;
-    bottom: -9px;
-    width: 49px;
-    height: 48px;
-    background: transparent url(../images/speech-bubble-corner.svg) 0 0 no-repeat;
-    background-size: 49px 48px;
-    z-index: 40;
   }
 
   // Force green links and action buttons
