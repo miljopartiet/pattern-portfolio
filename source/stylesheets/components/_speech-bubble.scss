@@ -35,11 +35,13 @@
   &:after {
     content:"";
     position:absolute;
-    bottom: 0;
-    left: -20px;
-    border-width: 0 0 20px 21px;
-    border-style: solid;
-    border-color: $yellow transparent;
+    left: -17px;
+    bottom: -9px;
+    width: 49px;
+    height: 48px;
+    background: transparent url(../images/speech-bubble-corner.svg) 0 0 no-repeat;
+    background-size: 49px 48px;
+    z-index: 40;
   }
 
   // Force green links and action buttons
@@ -57,6 +59,8 @@
 
   .inner {
     @include clearfix;
+    position: relative;
+    z-index: 60;
     color: #222;
   }
 
