@@ -338,9 +338,8 @@ blockquote {
 
   footer {
     @include clearfix;
-    @extend %typography-text-small;
-    margin-top: (8em/13);
-    bottom: (-5em/13);
+    margin-top: (8em/16);
+    bottom: (-5em/16);
     text-align: right;
     position: relative;
 
