@@ -723,8 +723,13 @@ blockquote {
       .grid .column.c3 {
         width: 30.30303%; } }
 
+[class="main-section"] + [class="main-section"] {
+  padding-top: 0; }
+
 .main-section-cream {
   background: #f6f4e5; }
+  .main-section-cream + .main-section-cream {
+    padding-top: 0; }
 
 .main-section-green {
   color: #fff;
@@ -734,6 +739,8 @@ blockquote {
   background-image: -moz-radial-gradient(#339933, #00730a);
   background-image: -o-radial-gradient(#339933, #00730a);
   background-image: radial-gradient(#339933, #00730a); }
+  .main-section-green + .main-section-green {
+    padding-top: 0; }
   .main-section-green h1 {
     color: #ffe900; }
 
@@ -744,6 +751,8 @@ blockquote {
   background-image: -moz-radial-gradient(#bd0076, #6c1847);
   background-image: -o-radial-gradient(#bd0076, #6c1847);
   background-image: radial-gradient(#bd0076, #6c1847); }
+  .main-section-magenta + .main-section-magenta {
+    padding-top: 0; }
   .main-section-magenta h1 {
     color: #ffe900; }
 
