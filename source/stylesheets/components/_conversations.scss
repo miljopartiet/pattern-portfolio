@@ -153,6 +153,14 @@
       @include clearfix;
       width: percentage(695/640);
       border-top: 1px solid $warm-grey;
+
+      &:first-child {
+        border-top: none;
+
+        .conversation {
+          margin-top: 0;
+        }
+      }
     }
 
     .conversation {

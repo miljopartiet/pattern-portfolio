@@ -74,18 +74,6 @@ p.copy {
   }
 }
 
-// Related conversations on a conversation permalink
-header.intro + .conversations {
-  .article-section:first-child {
-    margin-top: (40em/16);
-    border-top: none;
-
-    .conversation {
-      margin-top: 0
-    }
-  }
-}
-
 div.comments {
   margin-top: 20px;
 
