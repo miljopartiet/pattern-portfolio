@@ -54,7 +54,7 @@ p.copy {
 //
 #wrap {
   position: relative;
-  margin: 1.5em auto 0 auto;
+  margin: 0 auto;
   padding-bottom: (40em/16);
 
   @include respond-between(600px, 767px) {

@@ -195,7 +195,7 @@ article .body p, .topics p {
   font-size: 1em;
   line-height: 1.375; }
 
-small, sup, figcaption, blockquote footer p, .vignette-intro, .section-vignette-intro, .action,
+small, sup, figcaption, #wrap blockquote footer p, .vignette-intro, .section-vignette-intro, .action,
 .form-submit,
 .action a, .main-section .speech-bubble .action,
 .main-section .speech-bubble .action a,
@@ -206,7 +206,7 @@ small, sup, figcaption, blockquote footer p, .vignette-intro, .section-vignette-
   font-size: 0.875em;
   line-height: 1.28571; }
 
-blockquote > div p, blockquote > div p:first-child:before {
+#wrap blockquote > div p, #wrap blockquote > div p:first-child:before {
   font-family: "MP Serif", georgia, serif;
   font-size: 1.125em;
   line-height: 1.22222;
@@ -531,15 +531,15 @@ blockquote {
     padding-left: 0;
     float: left;
     width: 79.50311%; }
-    blockquote > div p {
+    #wrap blockquote > div p {
       margin-top: 0.66667em;
       margin-left: 1em;
       margin-right: 3.05556em;
       margin-left: 0; }
-      blockquote > div p:first-child {
+      #wrap blockquote > div p:first-child {
         position: relative;
         margin-top: 0; }
-        blockquote > div p:first-child:before {
+        #wrap blockquote > div p:first-child:before {
           content: "”";
           line-height: 1;
           position: absolute;
@@ -566,7 +566,7 @@ blockquote {
       display: table; }
     blockquote footer:after {
       clear: both; }
-    blockquote footer p {
+    #wrap blockquote footer p {
       position: absolute;
       bottom: .5em;
       left: 0;
@@ -1777,6 +1777,10 @@ header.intro .article-section {
       display: table; }
     .conversations .article-section:after {
       clear: both; }
+    .conversations .article-section:first-child {
+      border-top: none; }
+      .conversations .article-section:first-child .conversation {
+        margin-top: 0; }
     .conversations .article-section .conversation {
       width: 89.20863%;
       margin-right: 5.7554%; }
@@ -1975,7 +1979,7 @@ p.copy {
 
 #wrap {
   position: relative;
-  margin: 1.5em auto 0 auto;
+  margin: 0 auto;
   padding-bottom: 2.5em;
   background: #fff;
   padding-top: 1.25em;
@@ -1984,12 +1988,6 @@ p.copy {
   margin-top: 0;
   padding-top: 2.5em;
   padding-bottom: 2.5em; }
-
-header.intro + .conversations .article-section:first-child {
-  margin-top: 2.5em;
-  border-top: none; }
-  header.intro + .conversations .article-section:first-child .conversation {
-    margin-top: 0; }
 
 div.comments {
   margin-top: 20px;

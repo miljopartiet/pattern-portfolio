@@ -230,7 +230,7 @@ article .body p, .topics p {
       font-size: 1em;
       line-height: 1.375; } }
 
-small, sup, figcaption, blockquote footer p, .vignette-intro, .section-vignette-intro, .action,
+small, sup, figcaption, #wrap blockquote footer p, .vignette-intro, .section-vignette-intro, .action,
 .form-submit,
 .action a, .main-section .speech-bubble .action,
 .main-section .speech-bubble .action a,
@@ -239,7 +239,7 @@ small, sup, figcaption, blockquote footer p, .vignette-intro, .section-vignette-
   font-size: 0.8125em;
   line-height: 1.23077; }
   @media screen and (min-width: 768px) {
-    small, sup, figcaption, blockquote footer p, .vignette-intro, .section-vignette-intro, .action,
+    small, sup, figcaption, #wrap blockquote footer p, .vignette-intro, .section-vignette-intro, .action,
     .form-submit,
     .action a, .main-section .speech-bubble .action,
     .main-section .speech-bubble .action a,
@@ -247,12 +247,12 @@ small, sup, figcaption, blockquote footer p, .vignette-intro, .section-vignette-
       font-size: 0.875em;
       line-height: 1.28571; } }
 
-blockquote > div p, blockquote > div p:first-child:before {
+#wrap blockquote > div p, #wrap blockquote > div p:first-child:before {
   font-family: "MP Serif", georgia, serif;
   font-size: 1.125em;
   line-height: 1.22222; }
   @media screen and (min-width: 768px) {
-    blockquote > div p, blockquote > div p:first-child:before {
+    #wrap blockquote > div p, #wrap blockquote > div p:first-child:before {
       font-size: 1.5em;
       line-height: 1.16667; } }
 
@@ -611,19 +611,19 @@ blockquote {
       padding-left: 0;
       float: left;
       width: 79.50311%; } }
-  blockquote > div p {
+  #wrap blockquote > div p {
     margin-top: 0.66667em;
     margin-left: 1em; }
     @media screen and (min-width: 600px) {
-      blockquote > div p {
+      #wrap blockquote > div p {
         margin-right: 3.05556em; } }
     @media screen and (min-width: 768px) {
-      blockquote > div p {
+      #wrap blockquote > div p {
         margin-left: 0; } }
-    blockquote > div p:first-child {
+    #wrap blockquote > div p:first-child {
       position: relative;
       margin-top: 0; }
-      blockquote > div p:first-child:before {
+      #wrap blockquote > div p:first-child:before {
         content: "”";
         line-height: 1;
         position: absolute;
@@ -655,13 +655,13 @@ blockquote {
         padding-bottom: 1em;
         width: 39.75155%;
         text-align: left; } }
-    blockquote footer p {
+    #wrap blockquote footer p {
       position: absolute;
       bottom: .5em;
       left: 0;
       width: 76.875%; }
       @media screen and (min-width: 1024px) {
-        blockquote footer p {
+        #wrap blockquote footer p {
           float: left;
           padding: 0;
           width: 45.3125%;
@@ -2160,7 +2160,11 @@ header.intro .article-section {
         content: " ";
         display: table; }
       .conversations .article-section:after {
-        clear: both; } }
+        clear: both; }
+      .conversations .article-section:first-child {
+        border-top: none; }
+        .conversations .article-section:first-child .conversation {
+          margin-top: 0; } }
   @media screen and (min-width: 1024px) {
     .conversations .article-section .conversation {
       width: 89.20863%;
@@ -2403,7 +2407,7 @@ p.copy {
 
 #wrap {
   position: relative;
-  margin: 1.5em auto 0 auto;
+  margin: 0 auto;
   padding-bottom: 2.5em; }
   @media screen and (min-width: 600px) and (max-width: 767px) {
     #wrap {
@@ -2418,12 +2422,6 @@ p.copy {
       margin-top: 0;
       padding-top: 2.5em;
       padding-bottom: 2.5em; } }
-
-header.intro + .conversations .article-section:first-child {
-  margin-top: 2.5em;
-  border-top: none; }
-  header.intro + .conversations .article-section:first-child .conversation {
-    margin-top: 0; }
 
 div.comments {
   margin-top: 20px; }
