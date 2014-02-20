@@ -301,7 +301,8 @@ blockquote {
       width: percentage(640/805);
     }
 
-    p {
+    // We need to be specific so article .body does not overwrite
+    #wrap & p {
       @extend %typography-text-quote;
       margin-top: (12em/18);
       margin-left: 1em;
@@ -357,7 +358,8 @@ blockquote {
       text-align: left;
     }
 
-    p {
+    // We need to be specific so article .body does not overwrite
+    #wrap & p {
       position: absolute;
       bottom: .5em;
       left: 0;
