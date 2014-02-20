@@ -152,7 +152,8 @@ h1 {
   font-family: "MP Sans", arial, sans-serif;
   font-weight: normal;
   font-size: 2.5em;
-  line-height: 0.8; }
+  line-height: 0.8;
+  -webkit-font-smoothing: antialiased; }
   @media screen and (min-width: 600px) {
     h1 {
       font-size: 3.375em; } }
@@ -168,7 +169,8 @@ h2, .labeled-list .label, .topics h3 {
   font-family: "MP Sans", arial, sans-serif;
   font-weight: normal;
   font-size: 1.75em;
-  line-height: 0.85714; }
+  line-height: 0.85714;
+  -webkit-font-smoothing: antialiased; }
   @media screen and (min-width: 768px) {
     h2, .labeled-list .label, .topics h3 {
       font-size: 2.375em;
@@ -196,21 +198,21 @@ h3, .vignette-header, .conversation .question .content p, .people a h2 {
       line-height: 1.06667; } }
 
 article .lead p {
-  font-family: Georgia;
-  font-size: 1.125em;
-  line-height: 1.22222; }
+  font-family: "MP Serif", georgia, serif;
+  font-size: 1.25em;
+  line-height: 1.2; }
   @media screen and (min-width: 600px) {
-    article .lead p {
-      font-size: 1.25em;
-      line-height: 1.2; } }
-  @media screen and (min-width: 768px) {
     article .lead p {
       font-size: 1.375em;
       line-height: 1.18182; } }
+  @media screen and (min-width: 768px) {
+    article .lead p {
+      font-size: 1.5em;
+      line-height: 1.16667; } }
   @media screen and (min-width: 1024px) {
     article .lead p {
-      font-size: 1.625em;
-      line-height: 1.23077; } }
+      font-size: 1.75em;
+      line-height: 1.21429; } }
 
 h4, .speech-bubble p, article .body li,
 article .body p, .topics p {
