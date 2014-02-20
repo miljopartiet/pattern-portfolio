@@ -12,6 +12,7 @@
   font-weight: normal;
   font-size: (40em/16);
   line-height: (32/40);
+  -webkit-font-smoothing: antialiased;
 
   @include respond-to(600px) {
     font-size: (54em/16);
@@ -32,6 +33,7 @@
   font-weight: normal;
   font-size: (28em/16);
   line-height: (24/28);
+  -webkit-font-smoothing: antialiased;
 
   @include respond-to(768px) {
     font-size: (38em/16);
