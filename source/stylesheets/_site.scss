@@ -41,6 +41,10 @@ input + div.description {
 
 .fetch-more {
   margin-top: (20em/16);
+
+  @include respond-to(768px) {
+    margin-top: (40em/16);
+  }
 }
 
 p.copy {

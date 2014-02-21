@@ -11,7 +11,6 @@
 
     @include respond-to(1024px) {
       margin-right: (20em/16);
-      margin-top: (40em/16);
     }
 
     &:first-child {
