@@ -162,7 +162,7 @@
     }
 
     a {
-      @extend %typography-text;
+      @extend %typography-text-body;
       // Fix missing column-break-inside support
       display: inline-block;
       vertical-align: top;
