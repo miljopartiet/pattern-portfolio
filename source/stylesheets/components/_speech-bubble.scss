@@ -85,7 +85,7 @@
       @include box-sizing(border-box);
       float: left;
       margin-top: 0;
-      border-right: 1px solid #d7c82f;
+      border-right: 1px solid $magenta;
       padding-right: 20px;
       width: percentage(390/570);
     }
@@ -114,7 +114,7 @@
       margin-top: 0;
       margin-left: -1px;
       padding-left: 20px;
-      border-left: 1px solid #d7c82f;
+      border-left: 1px solid $magenta;
       width: percentage(179/570);
 
       ul:first-child {
