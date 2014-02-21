@@ -59,13 +59,14 @@
   // in the calendar subsection
   &.calendar {
     .icon {
+      font-family: $mp-sans;
       text-align:center;
-      text-indent: -.3em;
+      text-indent: -4px;
       color: #fff;
-      font-size: 18px;
+      font-size: 30px;
+      line-height:(51/30);
       background: transparent url(../images/calendar.png) 0 50% no-repeat;
       background-size: 39px 46px;
-      line-height:(51/18);
       width: 39px;
       height: 46px;
 
