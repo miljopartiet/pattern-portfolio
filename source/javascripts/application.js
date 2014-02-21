@@ -156,42 +156,6 @@
     });
   };
 
-  Mp.SideNavigationToggler = function() {
-    var $nav      = $('#secondary-navigation'),
-        limit     = ($nav.data('limit') || 3) - 1,
-        show_more = $nav.data('show-more-copy'),
-        show_less = $nav.data('show-less-copy'),
-        hidden = false;
-
-    var targets = function() {
-      return $nav.find('li:gt('+ limit +'):not(.more)');
-    }
-
-    var show = function() {
-      targets().show();
-      $nav.find('li.more a').text(show_less).addClass('show-less');
-      hidden = false;
-    };
-
-    var hide = function() {
-      targets().hide();
-      $nav.find('li.more a').text(show_more).removeClass('show-less');
-      hidden = true;
-    }
-
-    $nav.find('ul.menu')
-      .append('<li class="leaf more"><a href="#site-navigation">'+ show_more +'</a></li>');
-    $nav.delegate('li.more a', 'click', function(e) {
-      e.preventDefault();
-      if (hidden) {
-        show();
-      } else {
-        hide();
-      }
-    });
-    hide();
-  };
-
   $(document).ready(function() {
     var $html = $('html');
 
@@ -205,8 +169,6 @@
     }
 
     Mp.CookieChecker();
-
-    Mp.SideNavigationToggler();
 
     // Suggestions for lists (topics and localities)
     Mp.searchAsYouType('#list-search', {

@@ -39,85 +39,29 @@
 #site-banner {
   @extend %page-section-content-wide;
   @include clearfix;
+  background: rgba(0,0,0,.6);
   position: relative;
+  @include box-sizing(border-box);
   padding-right: 18px;
   padding-left: 18px;
-  margin-bottom: (20em/16);
 
   @include respond-to(768px) {
-    padding-right: auto;
-    padding-left: auto;
-  }
-
-  @include respond-between(300px, 767px) {
-    padding-top: 18px;
-  }
-
-  @include respond-between(600px, 767px) {
-    padding-top: 0;
-  }
-
-  @include respond-to(768px) {
-    margin-bottom: (40em/16);
+    padding-right: 25px;
+    padding-left: 25px;
+    max-width: 950px;
   }
 }
 
 #logo {
-  width: 57px;
-
-  @include respond-between(300px, 767px) {
-    float: left;
-  }
-
-  @include respond-to(768px) {
-    float: left;
-    margin-top: -7px;
-  }
-
-  @include respond-between(768px, 1023px) {
-    width: (103em/16);
-    margin-right: (20em/16);
-    margin-left: -(45em/16);
-  }
-
-  @include respond-to(1024px) {
-    width: (165em/16);
-    margin: 0;
-  }
+  float: left;
+  margin: 15px 40px 0 0;
 
   a {
     display: block;
     text-indent: -9999px;
-    width: 65px;
-    height: 57px;
-    background: transparent url(../images/logo.png) 0 0 no-repeat;
+    width: 150px;
+    height: 43px;
+    background: transparent url(../images/logo-side.svg) 0 0 no-repeat;
     background-size: 100%;
-
-    @include respond-between(768px, 1023px) {
-      height: (90em/16);
-      width: (103em/16);
-      background-size: 100%;
-    }
-
-    @include respond-to(1024px) {
-      width: (130em/16);
-      height: (114em/16);
-    }
-
-    &:hover {
-      background-position: 0 -114px;
-
-      @include respond-between(768px, 1023px) {
-        background-position: 0 ((180em/16) * -1);
-      }
-
-      @include respond-to(1024px) {
-        background-position: 0 ((228em/16) * -1);
-      }
-    }
-
-    html.svg & {
-      background-image: url(../images/logo.svg);
-    }
   }
 }
