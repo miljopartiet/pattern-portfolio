@@ -48,6 +48,10 @@ article {
       position: relative;
     }
 
+    h2 {
+      @extend %typography-heading-serif;
+    }
+
     > p,
     > ul,
     > ol {
