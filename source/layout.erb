@@ -55,14 +55,16 @@
         <div id="logo">
           <a href="/">Miljöpartiet</a>
         </div>
-        <nav role="navigation" id="top-navigation">
-          <ul class="menu">
-            <li class="first leaf<%= ' active-trail' if data.page.current_nav == 'topics' %>"><a href="/topics.html"><span>Vår politik</span></a></li>
-            <li class="leaf<%= ' active-trail' if data.page.current_nav == 'about' %>"><a href="/about.html"><span>Om Miljöpartiet de gröna</span></a></li>
-            <li class="leaf<%= ' active-trail' if data.page.current_nav == 'conversations' %>"><a href="/conversations.html"><span>Prata politik</span></a></li>
-          </ul>
-        </nav>
-        <div id="secondary-navigation" data-limit="3" data-show-more-copy="+ Fler" data-show-less-copy="– Färre">
+        <ul id="go-to-navigation">
+          <li><a href="#main-search" id="skip-to-search">Sök</a></li>
+          <li><a href="#full-navigation" id="skip-to-navigation">Meny</a>
+        </ul>
+        <ul id="top-navigation">
+          <li class="first leaf<%= ' active-trail' if data.page.current_nav == 'topics' %>"><a href="/topics.html"><span>Vår politik</span></a></li>
+          <li class="leaf<%= ' active-trail' if data.page.current_nav == 'about' %>"><a href="/about.html"><span>Om oss</span></a></li>
+          <li class="leaf<%= ' active-trail' if data.page.current_nav == 'conversations' %>"><a href="/conversations.html"><span>Prata politik</span></a></li>
+        </ul>
+        <div id="full-navigation">
           <form action="/search" method="get" class="search">
             <input type="search" name="searchtext" id="main-search" data-source="/data/search.json" autocomplete="off">
             <button type="submit">Sök</button>
@@ -79,7 +81,6 @@
               <li class="leaf"><a href="#">Lediga jobb</a></li>
             </ul>
           </div>
-          <a href="#site-navigation" id="skip-to-navigation">Meny</a>
         </div>
       </header>
       <% if content_for? :breadcrumbs %>

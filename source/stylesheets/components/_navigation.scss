@@ -1,119 +1,62 @@
 // Navigation elements
-#top-navigation {
-  float: left;
-  // The top navigation is not used in the mobile view
-  // instead we point users to the more complete site navigation
-  display: none;
-
-  @include respond-to(768px) {
-    display: block;
-  }
-
-  ul {
-    margin: 0 0 0 (20em/16);
-    list-style: none;
-  }
+#go-to-navigation {
+  margin: 0;
+  width: 30%;
+  float: right;
+  text-align: right;
 
   li {
-    margin: 0;
+    display: inline;
+    padding-left: 25px;
+
+    &:first-child {
+      padding-left: 0;
+    }
   }
 
   a {
     display: inline-block;
-    margin-top: 2px;
-    padding: 0 0 0 12px;
-    background: $green;
+    letter-spacing: 1px;
+    font-family: $mp-sans;
+    font-size: (20em/16);
+    line-height: 75px;
+    color: #fff;
+  }
+}
+
+#top-navigation {
+  @include clearfix;
+  float: left;
+  margin: 0;
+
+  li {
+    margin: 0;
+    float: left;
+    margin: 0 0 0 35px;
+    padding: 0;
+    list-style: none;
+
+    &.aside {
+      float: right;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  a {
+    @extend %typography-heading;
+    line-height: 75px;
+    display: block;
     text-decoration: none;
     color: #fff;
-    border-radius: 3px;
-    font-size: (13em/16);
-    font-family: $mp-serif;
-    line-height: (25.1/13);
-
-    @include respond-to(1024px) {
-      font-size: (16em/16);
-      line-height: (30/16);
-      padding: 0 0 0 15px;
-    }
-
-    &:hover {
-      background-color: $green-dark;
-    }
   }
+}
 
-  span {
-    display: block;
-    margin-right: 7px;
-    padding-right: 18px;
-    background: transparent url(../images/arrows-right.png) 100% 6px no-repeat;
-    background-size: 9px 128px;
-
-    @include respond-to(1024px) {
-      padding-right: 23px;
-      background-position: 100% 8px;
-    }
-
-    html.svg & {
-      background-image: url(../images/arrows-right.svg);
-    }
-  }
-
-  li:first-child a {
-    margin-top: 0;
-  }
-
-  li.active-trail,
-  .front & li:first-child {
-
-    a {
-      color: #fff;
-      margin-left: -20px;
-      padding: 0 20px 0 20px;
-      font-size: (16em/16);
-      line-height: (36/16);
-
-      @include respond-to(1024px) {
-        font-size: (20em/16);
-      }
-    }
-
-    span {
-      margin: 0;
-      background-position: 100% 10px;
-    }
-  }
-
-  li.active-trail {
-    a {
-      @include respond-to(1024px) {
-        padding-right: (25em/20);
-      }
-    }
-
-    span {
-      background-color: $green-dark;
-      background: transparent;
-      padding: 0;
-    }
-  }
-
-  li:first-child {
-    .front & {
-      a {
-        @include respond-to(1024px) {
-          padding-right: 0;
-        }
-      }
-
-      span {
-        @include respond-to(1024px) {
-          margin-right:14px;
-          background-position: 100% 15px;
-          padding-right: (15em/16);
-        }
-      }
-    }
-  }
+#full-navigation {
+  clear: both;
+  display: none;
 }
 
 #site-navigation {
@@ -563,19 +506,4 @@ nav.main-navigation {
 }
 
 #skip-to-navigation {
-  @extend %typography-text-small;
-  line-height: 25px !important;
-  background: $beige url(../images/arrow-down.png) 89% 50% no-repeat;
-  background-size: 14px 9px;
-  display: inline-block;
-  border-radius: 4px;
-  padding: 0 25px 0 10px;
-
-  @include respond-to(768px) {
-    display: none;
-  }
-
-  html.svg & {
-    background-image: url(../images/arrow-down.svg);
-  }
 }
