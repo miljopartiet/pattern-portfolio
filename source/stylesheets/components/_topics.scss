@@ -1,0 +1,69 @@
+.topics {
+  @include clearfix;
+  list-style: none;
+  margin-top: (20em/16);
+  @include respond-to(1024px) {
+    margin-top: (40em/16);
+  }
+
+  .topic {
+    margin: (20em/16) 0 0 0;
+
+    @include respond-to(1024px) {
+      margin-right: (20em/16);
+      margin-top: (40em/16);
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  h2,
+  h3 {
+    margin: 0;
+    position: relative;
+    @include respond-to(600px) {
+      margin-left: -20px;
+    }
+  }
+
+  h2,
+  h3,
+  p {
+    margin-right: 0;
+    display: inline;
+  }
+
+  h3 {
+    @extend %typography-heading;
+  }
+
+  p {
+    @extend %typography-text-body;
+  }
+}
+
+.related-topics {
+  ul {
+    list-style: none;
+  }
+
+  li {
+    margin-left: 0;
+  }
+
+  img {
+    float: right;
+    margin: 0.5em 0 5px 20px;
+
+    @include respond-to(1024px) {
+      margin-right: 20px
+    }
+  }
+
+  img + p {
+    margin-top: (4em/18);
+  }
+}
+

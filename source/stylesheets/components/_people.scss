@@ -1,0 +1,36 @@
+.people {
+  img {
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+
+    @include with-dark-sections {
+      color: #fff;
+    }
+
+    h2 {
+      margin-top: 10px;
+      text-decoration: underline;
+      @extend %typography-heading-small;
+      color: $green;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      @include with-dark-sections {
+        color: #fff;
+      }
+    }
+
+    p {
+      @extend %typography-text;
+      margin-top: 4px;
+      text-decoration: none;
+    }
+  }
+}
+

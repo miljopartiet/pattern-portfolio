@@ -1,0 +1,131 @@
+@import "globals/fonts";
+
+%typography-base-text {
+  font-family: $font-family;
+  color: $font-color;
+  font-size: 1em;
+  line-height: (20/16);
+}
+
+%typography-heading-main {
+  font-family: $mp-sans;
+  font-weight: normal;
+  font-size: (40em/16);
+  line-height: (32/40);
+  -webkit-font-smoothing: antialiased;
+
+  @include respond-to(600px) {
+    font-size: (54em/16);
+  }
+
+  @include respond-to(768px) {
+    font-size: (64em/16);
+  }
+
+  @include respond-to(1024px) {
+    font-size: (84em/16);
+    line-height: (64/84);
+  }
+}
+
+%typography-heading {
+  font-family: $mp-sans;
+  font-weight: normal;
+  font-size: (28em/16);
+  line-height: (24/28);
+  -webkit-font-smoothing: antialiased;
+
+  @include respond-to(768px) {
+    font-size: (38em/16);
+    line-height: (30/38);
+  }
+}
+
+%typography-heading-small {
+  font-family: $mp-serif;
+  font-weight: normal;
+  font-size: (18em/16);
+  line-height: (20/20);
+
+  @include respond-to(768px) {
+    font-size: (24em/16);
+    line-height: (26/24);
+  }
+}
+
+
+// news lists and h3?
+%typography-heading-news {
+  font-family: $mp-serif;
+  font-size: (21em/16);
+  line-height: (21/21);
+
+  @include respond-to(768px) {
+    font-size: (30em/16);
+    line-height: (32/30);
+  }
+}
+
+
+%typography-text-lead {
+  font-family: $mp-serif;
+  font-size: (20em/16);
+  line-height: (24/20);
+
+  @include respond-to(600px) {
+    font-size: (22em/16);
+    line-height: (26/22);
+  }
+
+  @include respond-to(768px) {
+    font-size: (24em/16);
+    line-height: (28/24);
+  }
+
+  @include respond-to(1024px) {
+    font-size: (28em/16);
+    line-height: (34/28);
+  }
+}
+
+%typography-text-body {
+  font-size: (16em/16);
+  line-height: (20/16);
+  @include respond-to(768px) {
+    font-size: (18em/16);
+    line-height: (25/18);
+  }
+}
+
+%typography-text {
+  font-size: (14em/16);
+  line-height: (17/14);
+
+  @include respond-to(768px) {
+    font-size: (16em/16);
+    line-height: (22/16);
+  }
+}
+
+%typography-text-small {
+  font-family: $arial;
+  font-size: (13em/16);
+  line-height: (16/13);
+
+  @include respond-to(768px) {
+    font-size: (14em/16);
+    line-height: (18/14);
+  }
+}
+
+
+%typography-text-quote {
+  font-family: $mp-serif;
+  font-size: (18em/16);
+  line-height: (22/18);
+
+  @include respond-to(768px) {
+    font-size: (24em/16);
+    line-height: (28/24);
+  }
+}

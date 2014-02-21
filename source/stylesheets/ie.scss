@@ -1,0 +1,155 @@
+$supportsMediaQueries: false;
+
+@import "site";
+
+// PNG replacements
+body {
+  background-image: url(../images/bg-1x.png);
+  font-size: 16px;
+}
+
+#logo a {
+  background-image: url(../images/logo-1x.png);
+}
+
+#logo-full a {
+  background-image: url(../images/logo-full-1x.png);
+}
+
+nav.breadcrumbs a {
+  background-image: url(../images/breadcrumb-slash-1x.png);
+}
+
+.search button {
+  background-image: url(../images/search-1x.png);
+}
+
+.article-section {
+  .vignette {
+    background-image: url(../images/bg-vignette-1x.png);
+  }
+
+  &.loading {
+    h2 {
+      background-image: url(../images/load-grey-32.gif);
+    }
+  }
+}
+
+#wrap ul.calendar .icon {
+  background-image: url(../images/calendar-1x.png);
+  line-height: 1;
+  padding-top: 28px;
+}
+
+#copyright {
+  background-image: url(../images/cc-1x.png);
+}
+
+#wrap .topics {
+  h2,
+  h3 {
+    .number {
+      background-image: url(../images/bg-vignette-small-1x.png);
+      line-height: 1;
+      padding-top: 4px;
+    }
+  }
+}
+
+#top-navigation {
+  span {
+    background-image: url(../images/arrows-right-1x.png);
+  }
+}
+
+.icon-list li .icon {
+  background-image: url(../images/sources/bg-1x.png);
+}
+
+// Inline block fixes
+.inline-block-fix {
+  zoom: 1;
+  *display: inline;
+}
+.conversations .details .results {
+  b,
+  .meter,
+  .meter span {
+    @extend .inline-block-fix;
+  }
+}
+
+.labeled-list .list a,
+#cookies a.action,
+.grid .column,
+.action,
+#top-navigation a {
+  @extend .inline-block-fix;
+}
+
+.action,
+.form-submit {
+  &.loading,
+  &.loading:hover {
+    background-image: url(../images/load-green-16.gif);
+  }
+}
+
+
+// Box-sizing border-box fixes
+.lte7 {
+  textarea {
+    width: 90%;
+    display: block;
+  }
+
+  .speech-bubble {
+    // Remove padding (20) from width
+    .main {
+      width: percentage(370/610);
+    }
+
+    .aside {
+      width: percentage(180/610);
+    }
+  }
+
+  form.speech-bubble {
+    input {
+      width: 60%;
+    }
+
+    textarea {
+      width: 70%;
+    }
+  }
+
+  .article-section {
+    header.vignetted {
+      // Remove padding (165) from width
+      width: percentage(695/640);
+    }
+
+    .article-subsection {
+      // Remove padding (55) from width
+      width: percentage(640/640);
+    }
+
+    .section-lead {
+      position: absolute;
+      top: -3px;
+      right: 0;
+    }
+  }
+}
+
+// Layout
+
+#wrap {
+  width: 970px;
+}
+
+.ie8 img {
+	width: auto;
+}

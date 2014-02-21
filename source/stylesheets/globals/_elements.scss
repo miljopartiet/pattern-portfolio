@@ -1,0 +1,408 @@
+body {
+  @extend %typography-base-text;
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  background-size: 3000px 25px;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h1 {
+  @extend %typography-heading-main;
+  color: $green;
+
+  a {
+    color: $green;
+    display: block;
+  }
+
+  span {
+    color: #000;
+  }
+}
+
+h2 {
+  @extend %typography-heading;
+  margin-top: (24em/20);
+
+  @include respond-to(768px) {
+    margin-top: 1em;
+  }
+}
+
+h3 {
+  @extend %typography-heading-small;
+  margin-top: (18em/18);
+}
+
+h4 {
+  margin: 1em 0 -.75em 0;
+  @extend %typography-text-body;
+  font-weight: bold;
+}
+
+p {
+  margin-top: (12em/16);
+}
+
+h2,
+h3 {
+  + p,
+  + ul,
+  + ol {
+    margin-top: (6em/16);
+
+    @include respond-to(768px) {
+      margin-top: (4em/18);
+    }
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  @include link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color);
+  text-decoration: none;
+
+  @include with-dark-sections {
+    color: #fff;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+ul {
+  list-style: disc;
+  margin-top: (12em/16);
+}
+
+ol {
+  list-style: decimal;
+  margin-top: (12em/16);
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-top: 0;
+  margin-left: 1em;
+}
+
+li {
+  margin: 0 0 0 1.5em;
+
+  @include respond-to(600px) {
+    margin-left: 0;
+  }
+
+  li {
+    font-size: 1em;
+  }
+}
+
+ul.horizontal {
+  list-style:none;
+  li {
+    display:inline-block;
+    margin:0 1em 0 0;
+  }
+}
+
+small {
+  @extend %typography-text-small;
+}
+
+sup {
+  vertical-align: super;
+  @extend %typography-text-small;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+iframe {
+  border: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+%input {
+  font-family: $arial;
+  font-size: (14em/16);
+  line-height: 1;
+  color: #000;
+  border: 1px solid $warm-grey;
+  padding: 10px 15px 10px 15px;
+  margin: (15em/16) 0 0 0;
+  @include box-sizing(border-box);
+  resize: none;
+
+  &:focus {
+    border: 1px solid $warm-grey;
+    outline: none;
+  }
+
+  .speech-bubble & {
+    border: 1px solid #fff;
+    &:focus {
+      border: 1px solid $warm-grey;
+    }
+  }
+}
+
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"] {
+  @extend %input;
+
+  @include respond-to(600px) {
+    width: 70%;
+  }
+}
+
+textarea {
+  @extend %input;
+  width: 100%;
+  line-height: (18/14);
+}
+
+input[type="submit"],
+input.form-submit {
+  margin: 15px 0 0 0;
+}
+
+input.placeholder,
+textarea.placeholder {
+  @include placeholder-styles;
+}
+
+::-webkit-input-placeholder {
+  @include placeholder-styles;
+}
+:-moz-placeholder {
+  @include placeholder-styles;
+}
+:-ms-input-placeholder {
+  @include placeholder-styles;
+}
+
+:focus::-webkit-input-placeholder {
+  color: $text-light-grey;
+}
+:focus:-moz-placeholder {
+  color: $text-light-grey;
+}
+:focus:-ms-input-placeholder {
+  color: $text-light-grey;
+}
+
+button {
+  margin: (15em/16) 0 0 0;
+}
+
+//
+// General purpose content types
+//
+// Media files
+.embedded-video {
+  position: relative;
+  padding-bottom: 67.5%;
+  height: 0;
+  overflow: hidden;
+
+  &.widescreen {
+    padding-bottom: percentage(360/640);
+  }
+
+  video,
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+// Captions for media files
+figure {
+  @include clearfix;
+}
+
+figcaption {
+  @extend %typography-text-small;
+  margin-top: (5em/16);
+}
+
+blockquote {
+  overflow: hidden;
+  margin-top: (20em/16);
+  margin-bottom: (20em/16);
+  padding-bottom: (5em/16);
+  border-bottom: 1px solid $warm-grey;
+  color: $text-warm-grey;
+
+  @include respond-to(768px) {
+    overflow: visible;
+  }
+
+  @include respond-to(1024px) {
+    @include clearfix;
+    padding-bottom: 0;
+    position: relative;
+    width: percentage(805/640);
+    min-height:120px;
+  }
+
+  & > div {
+    @include respond-to(1024px) {
+      margin-bottom: .5em;
+      padding-left: 0;
+      float: left;
+      width: percentage(640/805);
+    }
+
+    // We need to be specific so article .body does not overwrite
+    #wrap & p {
+      @extend %typography-text-quote;
+      margin-top: (12em/18);
+      margin-left: 1em;
+
+      @include respond-to(600px) {
+        margin-right: (55em/18);
+      }
+
+      @include respond-to(768px) {
+        margin-left: 0;
+      }
+
+      &:first-child {
+        position: relative;
+        margin-top: 0;
+
+        &:before {
+          @extend %typography-text-quote;
+          content: "”";
+          line-height: 1;
+          position: absolute;
+          top: .05em;
+          left: -.59em;
+        }
+      }
+    }
+  }
+
+  &.image > div {
+    @include respond-to(1024px) {
+      width: percentage(485/805);
+    }
+  }
+
+  footer {
+    @include clearfix;
+    margin-top: (8em/16);
+    bottom: (-5em/16);
+    text-align: right;
+    position: relative;
+
+    @include respond-to(600px) {
+      margin-top: -40px;
+    }
+
+    @include respond-to(1024px) {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 1em;
+      width: percentage(320/805);
+      text-align: left;
+    }
+
+    // We need to be specific so article .body does not overwrite
+    #wrap & p {
+      position: absolute;
+      bottom: .5em;
+      left: 0;
+      width: percentage(246/320);
+      @extend %typography-text-small;
+
+      @include respond-to(1024px) {
+        float: left;
+        padding: 0;
+        width: percentage(145/320);
+        position: static;
+        margin: 0 0 0 175px;
+      }
+    }
+
+    img {
+      float: right;
+      width: percentage(45/320);
+      margin: 0 percentage(6/320) 0 percentage(13/320);
+
+      @include respond-to(1024px) {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 145px;
+        margin: 0 0 0 0;
+      }
+    }
+
+    .title {
+      color: $text-light-grey;
+    }
+
+    .name {
+      @include respond-to(1024px) {
+        text-decoration: underline;
+      }
+
+      &:hover {
+        @include respond-to(1024px) {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

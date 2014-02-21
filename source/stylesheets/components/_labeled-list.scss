@@ -1,0 +1,232 @@
+.labeled-list-container {
+  @extend %content-column-expanded-full;
+
+  @include respond-to(1024px) {
+    margin-left: - percentage(165/640);
+  }
+}
+
+.labeled-list {
+  list-style: none;
+  margin: 0;
+
+  @include respond-to(768px) {
+    width: 580px;
+    margin: auto;
+  }
+
+  @include respond-to(1024px) {
+    width: percentage(855/970);
+    margin: 0;
+  }
+
+  .group {
+    @include clearfix;
+    border-top: 1px solid $warm-grey;
+    padding: (20em/16) 0 0 0;
+    margin: (20em/16) 0 0 0;
+
+    @include respond-between(600px, 767px) {
+      padding-top: (10em/16);
+    }
+  }
+
+  .label {
+    @extend %typography-heading;
+    color: #000;
+    margin-bottom: (10em/26);
+    float: left;
+    width: percentage(30/284);
+    margin-right: percentage(15/284);
+
+    @include respond-between(600px, 767px) {
+      float: none;
+      width: 100%;
+    }
+
+    @include respond-between(768px, 1023px) {
+      width: 1em;
+      text-align: right;
+      margin: 0 0 0 ((1em + (20em/16)) * -1);
+    }
+
+    @include respond-to(1024px) {
+      float: left;
+      text-align: left;
+      width: percentage(165/855);
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    @include with-dark-sections {
+      color: #fff;
+    }
+  }
+
+  .grid {
+    @include respond-to(768px) {
+      width: 100%;
+    }
+
+    @include respond-to(1024px) {
+      width: percentage(620/855);
+    }
+
+    .container {
+      margin-top: 0;
+
+      @include respond-to(768px) {
+        margin: 0;
+        width: percentage(600/580);
+      }
+
+      @include respond-to(1024px) {
+        margin: 0;
+        width: percentage(640/620);
+      }
+    }
+
+    .column {
+      margin: 0;
+      width: 100%;
+    }
+
+    .c3 {
+      @include respond-to(600px) {
+        margin: 10px 0 0 0;
+        width: percentage(240/520);
+      }
+
+      @include respond-to(768px) {
+        width: percentage(280/600);
+      }
+
+      @include respond-to(1024px) {
+        width: percentage(193/640);
+        margin: 0 percentage(20/640) 0 0;
+      }
+    }
+
+    ul {
+      @include respond-to(768px) {
+        margin-left: 1.2em;
+      }
+
+      @include respond-to(1024px) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .list {
+    margin: 0;
+    list-style: disc;
+    float: left;
+    width: percentage(194/284);
+
+    @include respond-between(600px, 767px) {
+      margin-top: (10em/16);
+      float: none;
+      width: 100%;
+      @include columns(2, 20px);
+    }
+
+    @include respond-to(768px) {
+      @include columns(2, 20px);
+      margin-top: 0;
+    }
+
+    @include respond-between(768px, 1023px) {
+      width: 100%;
+    }
+
+    @include respond-to(1024px) {
+      @include columns(3, 20px);
+      margin-top: 0;
+      width: percentage(640/855);
+    }
+
+    li {
+      -webkit-column-break-inside: avoid;
+      -moz-column-break-inside: avoid;
+      -o-column-break-inside: avoid;
+      -ms-column-break-inside: avoid;
+      column-break-inside: avoid;
+      margin-bottom:(10em/16);
+      vertical-align: top;
+      word-wrap: break-word;
+
+      @include respond-to(600px) {
+        margin-left:1.5em;
+      }
+    }
+
+    a {
+      @extend %typography-text;
+      // Fix missing column-break-inside support
+      display: inline-block;
+      vertical-align: top;
+      word-wrap: break-word;
+
+      &.active {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.text-labels {
+  .label {
+    display: block;
+
+    @include respond-between(300px, 767px) {
+      float: none;
+      width: 100%;
+      margin-right: 0;
+    }
+
+    @include respond-between(768px, 1023px) {
+      text-align: left;
+      margin-left: 0;
+      width: 100%;
+    }
+
+    @include respond-to(1024px) {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  h2.label {
+    margin-top:0;
+  }
+
+  .group {
+    @include respond-to(1024px) {
+      padding-left: percentage(165/855);
+    }
+  }
+
+  .list {
+    margin-top: (10em/16);
+
+    @include respond-to(768px) {
+      margin-top: (10em/16);
+    }
+
+    @include respond-to(1024px) {
+      @include columns(3, 20px);
+      margin-top: 0;
+      width: percentage(640/690);
+    }
+  }
+
+  .grid {
+    .container {
+      @include respond-to(1024px) {
+        width: percentage(620/690);
+      }
+    }
+  }
+}
+

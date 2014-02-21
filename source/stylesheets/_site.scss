@@ -1,0 +1,95 @@
+@import "compass";
+@import "compass/reset";
+
+@import "globals/includes";
+@import "globals/drupal_reset";
+@import "globals/typography";
+@import "globals/framework";
+@import "globals/elements";
+
+@import "components/grid";
+@import "components/sections";
+@import "components/vignettes";
+@import "components/buttons";
+@import "components/icon-list";
+@import "components/labeled-list";
+@import "components/navigation";
+@import "components/breadcrumbs";
+@import "components/search";
+@import "components/speech-bubble";
+@import "components/illustration";
+@import "components/article";
+@import "components/news-posts";
+@import "components/tabs";
+@import "components/topics";
+@import "components/conversations";
+@import "components/people";
+@import "components/header";
+@import "components/footer";
+
+input + div.description {
+  margin-top: .3em;
+}
+
+#wrap input.share {
+  border: none;
+  margin-top: 0;
+  padding: 3px 7px;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.fetch-more {
+  margin-top: (20em/16);
+}
+
+p.copy {
+  font: normal (12em/10)/(17/11) $arial;
+  color: $text-light-grey;
+}
+
+
+//
+// Layout
+//
+#wrap {
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: (40em/16);
+
+  @include respond-between(600px, 767px) {
+    background: #fff;
+    padding-top: (20em/16);
+  }
+
+  @include respond-between(768px, 1023px) {
+    background: #fff;
+    padding: (30em/16) 0 (50em/16) 0;
+  }
+
+  @include respond-to(1024px) {
+    margin-top:0;
+    padding-top: (40em/16);
+    padding-bottom: (40em/16);
+  }
+}
+
+div.comments {
+  margin-top: 20px;
+
+  @include respond-to(1024px) {
+    margin-right: 20px;
+  }
+}
+
+.front .article-section.news-posts {
+  margin-top: 30px;
+}
+
+// jQuery UI
+.ui-tabs-hide {
+  display: none;
+}
+.ui-tabs-nav .ui-state-active a {
+  background: $green-dark;
+}

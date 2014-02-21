@@ -1,0 +1,45 @@
+.tabbed {
+  header {
+    padding: 0;
+    margin-top: 56px;
+    margin-bottom: 56px;
+
+    @include respond-to(1024px) {
+      padding: 0;
+    }
+  }
+
+  .article-subsection {
+    border: none;
+    margin-top: 2em;
+  }
+
+  .tabs {
+    @extend %content-column-expanded-full;
+    @include clearfix;
+    list-style: none;
+    border-top: 1px solid $warm-grey;
+
+    @include respond-to(1024px) {
+      margin-left: - percentage(165/640);
+    }
+
+    li {
+      display: inline;
+      margin: 0;
+      position: relative;
+      top: -16px;
+
+      &:first-child {
+        @include respond-to(1024px) {
+          margin-left: percentage(165/970);
+        }
+      }
+    }
+
+    a {
+      margin-right: (20em/12);
+    }
+  }
+}
+

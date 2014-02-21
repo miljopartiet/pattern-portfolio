@@ -1,0 +1,93 @@
+%page-section {
+  padding: (30em/16) (18em/16) (35em/16) (18em/16);
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  @include respond-to(480px) {
+    padding-top: (50em/16);
+    padding-bottom: (60em/16);
+  }
+
+  @include respond-to(600px) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  @include respond-to(768px) {
+    padding-top: (70em/16);
+    padding-bottom: (80em/16);
+  }
+}
+
+%page-section-solid {
+  padding-top: (25em/16);
+  padding-bottom: (30em/16);
+
+  @include respond-to(480px) {
+    padding-top: (40em/16);
+    padding-bottom: (50em/16);
+  }
+
+  @include respond-to(768px) {
+    padding-top: (60em/16);
+    padding-bottom: (70em/16);
+  }
+}
+
+%page-section-content {
+  margin-right: auto;
+  margin-left: auto;
+
+  @include respond-to(600px) {
+    width: 520px;
+  }
+
+  @include respond-to(768px) {
+    width: 580px
+  }
+
+  @include respond-to(1024px) {
+    width: 640px;
+  }
+}
+
+%page-section-content-wide {
+  @extend %page-section-content;
+
+  @include respond-to(1024px) {
+    width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+%content-column-expanded {
+  @include respond-to(1024px) {
+    width: percentage(805/640);
+  }
+}
+
+%content-column-expanded-full {
+  @include respond-to(1024px) {
+    width: percentage(970/640);
+  }
+}
+
+%content-column-expanded-small {
+  @include respond-to(1024px) {
+    width: percentage(695/640);
+  }
+}
+
+%page-section-content-dark {
+  a {
+    @include link-colors(#fff, #fff, #fff, #fff, #fff);
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

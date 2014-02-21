@@ -41,17 +41,10 @@
     <!--[if lt IE 9]>
       <link href="stylesheets/ie.css" media="screen" rel="stylesheet" type="text/css" />
     <![endif]-->
-    <script src="javascripts/modernizr.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      ;window.Modernizr=function(a,b,c){function v(a){j.cssText=a}function w(a,b){return v(prefixes.join(a+";")+(b||""))}function x(a,b){return typeof a===b}function y(a,b){return!!~(""+a).indexOf(b)}function z(a,b,d){for(var e in a){var f=b[a[e]];if(f!==c)return d===!1?a[e]:x(f,"function")?f.bind(d||b):f}return!1}var d="2.7.1",e={},f=!0,g=b.documentElement,h="modernizr",i=b.createElement(h),j=i.style,k,l={}.toString,m={svg:"http://www.w3.org/2000/svg"},n={},o={},p={},q=[],r=q.slice,s,t={}.hasOwnProperty,u;!x(t,"undefined")&&!x(t.call,"undefined")?u=function(a,b){return t.call(a,b)}:u=function(a,b){return b in a&&x(a.constructor.prototype[b],"undefined")},Function.prototype.bind||(Function.prototype.bind=function(b){var c=this;if(typeof c!="function")throw new TypeError;var d=r.call(arguments,1),e=function(){if(this instanceof e){var a=function(){};a.prototype=c.prototype;var f=new a,g=c.apply(f,d.concat(r.call(arguments)));return Object(g)===g?g:f}return c.apply(b,d.concat(r.call(arguments)))};return e}),n.svg=function(){return!!b.createElementNS&&!!b.createElementNS(m.svg,"svg").createSVGRect};for(var A in n)u(n,A)&&(s=A.toLowerCase(),e[s]=n[A](),q.push((e[s]?"":"no-")+s));return e.addTest=function(a,b){if(typeof a=="object")for(var d in a)u(a,d)&&e.addTest(d,a[d]);else{a=a.toLowerCase();if(e[a]!==c)return e;b=typeof b=="function"?b():b,typeof f!="undefined"&&f&&(g.className+=" "+(b?"":"no-")+a),e[a]=b}return e},v(""),i=k=null,function(a,b){function l(a,b){var c=a.createElement("p"),d=a.getElementsByTagName("head")[0]||a.documentElement;return c.innerHTML="x<style>"+b+"</style>",d.insertBefore(c.lastChild,d.firstChild)}function m(){var a=s.elements;return typeof a=="string"?a.split(" "):a}function n(a){var b=j[a[h]];return b||(b={},i++,a[h]=i,j[i]=b),b}function o(a,c,d){c||(c=b);if(k)return c.createElement(a);d||(d=n(c));var g;return d.cache[a]?g=d.cache[a].cloneNode():f.test(a)?g=(d.cache[a]=d.createElem(a)).cloneNode():g=d.createElem(a),g.canHaveChildren&&!e.test(a)&&!g.tagUrn?d.frag.appendChild(g):g}function p(a,c){a||(a=b);if(k)return a.createDocumentFragment();c=c||n(a);var d=c.frag.cloneNode(),e=0,f=m(),g=f.length;for(;e<g;e++)d.createElement(f[e]);return d}function q(a,b){b.cache||(b.cache={},b.createElem=a.createElement,b.createFrag=a.createDocumentFragment,b.frag=b.createFrag()),a.createElement=function(c){return s.shivMethods?o(c,a,b):b.createElem(c)},a.createDocumentFragment=Function("h,f","return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&("+m().join().replace(/[\w\-]+/g,function(a){return b.createElem(a),b.frag.createElement(a),'c("'+a+'")'})+");return n}")(s,b.frag)}function r(a){a||(a=b);var c=n(a);return s.shivCSS&&!g&&!c.hasCSS&&(c.hasCSS=!!l(a,"article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}mark{background:#FF0;color:#000}template{display:none}")),k||q(a,c),a}var c="3.7.0",d=a.html5||{},e=/^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i,f=/^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i,g,h="_html5shiv",i=0,j={},k;(function(){try{var a=b.createElement("a");a.innerHTML="<xyz></xyz>",g="hidden"in a,k=a.childNodes.length==1||function(){b.createElement("a");var a=b.createDocumentFragment();return typeof a.cloneNode=="undefined"||typeof a.createDocumentFragment=="undefined"||typeof a.createElement=="undefined"}()}catch(c){g=!0,k=!0}})();var s={elements:d.elements||"abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video",version:c,shivCSS:d.shivCSS!==!1,supportsUnknownElements:k,shivMethods:d.shivMethods!==!1,type:"default",shivDocument:r,createElement:o,createDocumentFragment:p};a.html5=s,r(b)}(this,b),e._version=d,g.className=g.className.replace(/(^|\s)no-js(\s|$)/,"$1$2")+(f?" js "+q.join(" "):""),e}(this,this.document),function(a,b,c){function d(a){return"[object Function]"==o.call(a)}function e(a){return"string"==typeof a}function f(){}function g(a){return!a||"loaded"==a||"complete"==a||"uninitialized"==a}function h(){var a=p.shift();q=1,a?a.t?m(function(){("c"==a.t?B.injectCss:B.injectJs)(a.s,0,a.a,a.x,a.e,1)},0):(a(),h()):q=0}function i(a,c,d,e,f,i,j){function k(b){if(!o&&g(l.readyState)&&(u.r=o=1,!q&&h(),l.onload=l.onreadystatechange=null,b)){"img"!=a&&m(function(){t.removeChild(l)},50);for(var d in y[c])y[c].hasOwnProperty(d)&&y[c][d].onload()}}var j=j||B.errorTimeout,l=b.createElement(a),o=0,r=0,u={t:d,s:c,e:f,a:i,x:j};1===y[c]&&(r=1,y[c]=[]),"object"==a?l.data=c:(l.src=c,l.type=a),l.width=l.height="0",l.onerror=l.onload=l.onreadystatechange=function(){k.call(this,r)},p.splice(e,0,u),"img"!=a&&(r||2===y[c]?(t.insertBefore(l,s?null:n),m(k,j)):y[c].push(l))}function j(a,b,c,d,f){return q=0,b=b||"j",e(a)?i("c"==b?v:u,a,b,this.i++,c,d,f):(p.splice(this.i++,0,a),1==p.length&&h()),this}function k(){var a=B;return a.loader={load:j,i:0},a}var l=b.documentElement,m=a.setTimeout,n=b.getElementsByTagName("script")[0],o={}.toString,p=[],q=0,r="MozAppearance"in l.style,s=r&&!!b.createRange().compareNode,t=s?l:n.parentNode,l=a.opera&&"[object Opera]"==o.call(a.opera),l=!!b.attachEvent&&!l,u=r?"object":l?"script":"img",v=l?"script":u,w=Array.isArray||function(a){return"[object Array]"==o.call(a)},x=[],y={},z={timeout:function(a,b){return b.length&&(a.timeout=b[0]),a}},A,B;B=function(a){function b(a){var a=a.split("!"),b=x.length,c=a.pop(),d=a.length,c={url:c,origUrl:c,prefixes:a},e,f,g;for(f=0;f<d;f++)g=a[f].split("="),(e=z[g.shift()])&&(c=e(c,g));for(f=0;f<b;f++)c=x[f](c);return c}function g(a,e,f,g,h){var i=b(a),j=i.autoCallback;i.url.split(".").pop().split("?").shift(),i.bypass||(e&&(e=d(e)?e:e[a]||e[g]||e[a.split("/").pop().split("?")[0]]),i.instead?i.instead(a,e,f,g,h):(y[i.url]?i.noexec=!0:y[i.url]=1,f.load(i.url,i.forceCSS||!i.forceJS&&"css"==i.url.split(".").pop().split("?").shift()?"c":c,i.noexec,i.attrs,i.timeout),(d(e)||d(j))&&f.load(function(){k(),e&&e(i.origUrl,h,g),j&&j(i.origUrl,h,g),y[i.url]=2})))}function h(a,b){function c(a,c){if(a){if(e(a))c||(j=function(){var a=[].slice.call(arguments);k.apply(this,a),l()}),g(a,j,b,0,h);else if(Object(a)===a)for(n in m=function(){var b=0,c;for(c in a)a.hasOwnProperty(c)&&b++;return b}(),a)a.hasOwnProperty(n)&&(!c&&!--m&&(d(j)?j=function(){var a=[].slice.call(arguments);k.apply(this,a),l()}:j[n]=function(a){return function(){var b=[].slice.call(arguments);a&&a.apply(this,b),l()}}(k[n])),g(a[n],j,b,n,h))}else!c&&l()}var h=!!a.test,i=a.load||a.both,j=a.callback||f,k=j,l=a.complete||f,m,n;c(h?a.yep:a.nope,!!i),i&&c(i)}var i,j,l=this.yepnope.loader;if(e(a))g(a,0,l,0);else if(w(a))for(i=0;i<a.length;i++)j=a[i],e(j)?g(j,0,l,0):w(j)?B(j):Object(j)===j&&h(j,l);else Object(a)===a&&h(a,l)},B.addPrefix=function(a,b){z[a]=b},B.addFilter=function(a){x.push(a)},B.errorTimeout=1e4,null==b.readyState&&b.addEventListener&&(b.readyState="loading",b.addEventListener("DOMContentLoaded",A=function(){b.removeEventListener("DOMContentLoaded",A,0),b.readyState="complete"},0)),a.yepnope=k(),a.yepnope.executeStack=h,a.yepnope.injectJs=function(a,c,d,e,i,j){var k=b.createElement("script"),l,o,e=e||B.errorTimeout;k.src=a;for(o in d)k.setAttribute(o,d[o]);c=j?h:c||f,k.onreadystatechange=k.onload=function(){!l&&g(k.readyState)&&(l=1,c(),k.onload=k.onreadystatechange=null)},m(function(){l||(l=1,c(1))},e),i?k.onload():n.parentNode.insertBefore(k,n)},a.yepnope.injectCss=function(a,c,d,e,g,i){var e=b.createElement("link"),j,c=i?h:c||f;e.href=a,e.rel="stylesheet",e.type="text/css";for(j in d)e.setAttribute(j,d[j]);g||(n.parentNode.insertBefore(e,n),m(c,0))}}(this,document),Modernizr.load=function(){yepnope.apply(window,[].slice.call(arguments,0))};
+    </script>
     
-
-    <script src="http://fast.fonts.com/jsapi/f5cda253-a403-4beb-bb36-e9d98c5ccae2.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script>
-    <!-- The cookies script is the one available in drupal -->
-    <script src="javascripts/cookies.js" type="text/javascript"></script>
-    <script src="javascripts/mp.js" type="text/javascript"></script>
-    <!-- This script is only to demonstrate features and should be implemented in drupal -->
-    <script src="javascripts/features.js" type="text/javascript"></script>
   </head>
   <body>
     <div id="wrap">
@@ -93,41 +86,47 @@
 </p>
       </nav>
       
-      <div id="main" role="main">
+      <div id="main">
         
-<article>
-  <header class="intro">
-    <h1>Åsa Romson</h1>
-    <div class="lead">
-      <p>Språkrör för Miljöpartiet de gröna, tillsammans med Gustav Fridolin. Ledamot av Sveriges Riksdag sedan 2010.</p>
-    </div>
-  </header>
-  <div class="illustration">
-    <figure>
-      <div>
-        <div class="embedded-video widescreen vimeo">
-          <iframe src="http://player.vimeo.com/video/28932766?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="281" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-        </div>
+<div class="main-section">
+  <article>
+    <header class="intro">
+      <h1>Åsa Romson</h1>
+      <div class="lead">
+        <p>Språkrör för Miljöpartiet de gröna, tillsammans med Gustav Fridolin. Ledamot av Sveriges Riksdag sedan 2010.</p>
       </div>
-      <figcaption>
-        <b>Åsa Romson</b>
-        på Almedalsveckan 2012 i Visby. Llitati aectus. Enimusc iditatio iur autem volupti nctecum alicidebissi. Dolorere ribus, verferum ape con ratio. Et reptatem unt doluptate delest.
-      </figcaption>
-    </figure>
-  </div>
-  <div class="body">
+    </header>
+    <div class="illustration">
+      <figure>
+        <div>
+          <div class="embedded-video widescreen vimeo">
+            <iframe src="http://player.vimeo.com/video/28932766?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="281" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+          </div>
+        </div>
+        <figcaption>
+          <b>Åsa Romson</b>
+          på Almedalsveckan 2012 i Visby. Llitati aectus. Enimusc iditatio iur autem volupti nctecum alicidebissi. Dolorere ribus, verferum ape con ratio. Et reptatem unt doluptate delest.
+        </figcaption>
+      </figure>
+    </div>
+
+    <header class="section-vignette">
+      <span class="section-vignette-intro">
+        Åsas hjärtefrågor
+      </span>
+    </header>
+
     <div class="topics">
-      <h2>Åsas hjärtefrågor</h2>
       <div class="topic">
-        <h3><a href="#">Jämställdhet.</a></h3>
+        <h2><a href="#">Jämställdhet.</a></h2>
         <p>Därför att jämställdhet är vår tids största utmaning. Vi vill investera i hållbara lösningar, som möter klimatutmaningen och skapar nya jobb.</p>
       </div>
       <div class="topic">
-        <h3><a href="#">Försurning.</a></h3>
+        <h2><a href="#">Försurning.</a></h2>
         <p>Många saknar jobb i Sverige, inte minst ungdomar. Vi behöver en politik som verkligen skapar nya jobb. Den utmaningen är vi beredda att ta tag i.</p>
       </div>
       <div class="topic">
-        <h3><a href="#">Skola och utbildning.</a></h3>
+        <h2><a href="#">Skola och utbildning.</a></h2>
         <p>Miljöpartiet vill ha en skola som präglas av hög kvalitet och pedagogisk mångfald. Vi vill skapa förutsättningar för olika profiler och inriktningar, där varje elev får möjlighet att utvecklas.</p>
       </div>
     </div>
@@ -147,45 +146,46 @@
       </footer>
     </blockquote>
 
-  </div>
-
-  <div class="speech-bubble vcard">
-    <div class="inner">
-      <h2 class="fn">Åsa Romson</h2>
-      <p><em class="title">Språkrör och riksdagsledamot</em></p>
-      <div class="main">
-        <ul>
-          <li><a mail="mailto:asa.romson@riksdagen.se" class="email">asa.romson@riksdagen.se</a></li>
-          <li>
-            <span class="tel">
-              <tel class="value">08-7865662</tel>
-              <span class="type">(växel)</span>
-            </span>
-          </li>
-          <li>
-            <span class="tel">
-              <tel class="value">08-7865662</tel>
-              <span class="type">(pressekreterare)</span>
-            </span>
-          </li>
-        </ul>
-      </div>
-      <div class="aside">
-        <ul>
-          <li><a href="http://www.asaromson.se/">Blogg</a></li>
-          <li><a href="http://www.facebook.com/asaromson">Facebook</a></li>
-          <li><a href="http://twitter.com/asaromson">Twitter</a></li>
-        </ul>
+    <div class="speech-bubble vcard">
+      <div class="inner">
+        <h2 class="fn">Åsa Romson</h2>
+        <p><em class="title">Språkrör och riksdagsledamot</em></p>
+        <div class="main">
+          <ul>
+            <li><a mail="mailto:asa.romson@riksdagen.se" class="email">asa.romson@riksdagen.se</a></li>
+            <li>
+              <span class="tel">
+                <tel class="value">08-7865662</tel>
+                <span class="type">(växel)</span>
+              </span>
+            </li>
+            <li>
+              <span class="tel">
+                <tel class="value">08-7865662</tel>
+                <span class="type">(pressekreterare)</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="aside">
+          <ul>
+            <li><a href="http://www.asaromson.se/">Blogg</a></li>
+            <li><a href="http://www.facebook.com/asaromson">Facebook</a></li>
+            <li><a href="http://twitter.com/asaromson">Twitter</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
+  </article>
+</div>
 
-  <section class="article-section current-topics">
-    <header class="vignetted">
-      <span class="vignette">Just nu</span>
-      <p class="section-lead">Aktuella frågor för Åsa Romson</p>
+<div class="main-section main-section-cream">
+  <article class="current-topics">
+    <header class="intro">
+      <h1>Aktuella frågor för Åsa Romson</h1>
     </header>
-    <ul class="icon-list">
+
+    <ul class="news-posts icon-list">
   <li>
     <a href="#">
       <span class="icon">
@@ -224,169 +224,112 @@
   </li>
 </ul>
 
-  </section>
+  </article>
+</div>
 
-  <section class="article-section tabbed">
-    <header class="vignetted">
-      <ul class="tabs">
-        <li>
-          <a href="#tab-politics" class="action">Om politik</a>
-        </li><li>
-          <a href="#tab-about" class="action">Personligt</a>
-        </li><li>
-          <a href="#tab-cv" class="action">CV</a>
-        </li>
-      </ul>
+<div class="main-section">
+  <article class="tabbed">
+    <header>
+      <h1>Mer om Åsa Romson</h1>
     </header>
+    <ul class="tabs">
+      <li>
+        <a href="#tab-politics" class="action">Om politik</a>
+      </li><li>
+        <a href="#tab-about" class="action">Personligt</a>
+      </li><li>
+        <a href="#tab-cv" class="action">CV</a>
+      </li>
+    </ul>
     <div id="tab-politics" class="article-subsection">
-      <h2>Åsa Romson om politik</h2>
-
-      <h3>Vem är du?</h3>
-      <p>Jag är en Stockholmstjej som inte kan slå mig till ro, när samhället lever över naturens tillgångar och tillåter globala orättvisor. Jag har tagit examen i både humaniora och juridik. Men med spännande studier blir man aldrig riktigt klar. Så sedan 2006 forskar jag i miljörätt som doktorand. Som lokalpolitiker i Stockholm de senaste åtta åren och ser jag stora möjligheter för mer hållbara storstadsregioner. </p><p>Det jag gillar bäst med storstaden är att personliga idéer sätter stark prägel på de lokala platser= ett fik med personlig stil, ett evenemang som är både kultur och ett samtal om samhället, och massor av småföretag som utvecklar framtidens tjänster.</p>
-
-      <h3>Varför ska man rösta på dig?</h3>
-      <p>För att alla kreativa människor som idag sliter med att skapa hållbara lösningar ska får bättre möjligheter att och bygga framtidens Sverige.</p><h3>Vilka tre politiska frågor är de viktigaste för dig att driva?</h3>
-      <ol>
-        <li>Smarta kretslopp</li>
-        <li>hög miljökvalitet</li>
-        <li>global rättvisa</li>
-      </ol>
-
-      <h3>Var någonstans skulle du placera dig själv på en politisk vänster – högerskala?</h3>
-      <p>Varken till vänster eller höger</p>
-
-      <h3>Vem är din politiska förebild?</h3>
-      <p>Elin Wägner</p>
-
-      <h3>Om du var aktiv i ett annat parti, vilket skulle det vara?</h3>
-      <p>något eget...</p>
-
-      <h3>Finns det en fråga där du ändrat ståndpunkt inom politiken?</h3>
-      <p>Att Sveriges medlemskap i EU skulle vara till fördel för miljön, det trodde jag inte 1995 vid folkomröstningen.</p>
-
-      <h3>Om du får en riksdagsplats kan du då tänka dig att rösta emot ditt parti, i en för dig mycket viktig fråga?</h3>
-      <p>det vet man ju inte nu</p>
-
-      <h3>Bedriver du en personvalskampanj?</h3>
-      <p>Ja</p>
+      <div class="body">
+        <h2>Åsa Romson om politik</h2>
+        <p>Jag heter Åsa Romson och är språkrör och riksdagsledamot för Miljöpartiet.</p>
+        <p>Jag kan inte slå mig till ro när människan lever över naturens tillgångar och tillåter globala orättvisor. Visst är det enklast att bara flyta med i vardagen och inte bry sig. Men vem för då min talan?&nbsp;Det finns stora och viktiga frågor att ta itu med: resursslöseriet måste stoppas och livskvaliteten genom frisk luft och rent vatten värnas. Jag har som politiker engagerat mig mycket i miljö- och klimatfrågor både i riksdagen och tidigare som politiker i Stockholm.</p>
+      </div>
     </div>
     <div id="tab-about" class="article-subsection">
-      <h2>Personligt</h2>
-      <h3>I vilket land är du född?</h3>
-      <p>Sverige</p>
-
-      <h3>Talar du andra språk förutom svenska?</h3>
-      <ul>
-        <li>Engelska</li>
-        <li>Spanska</li>
-      </ul>
-
-      <h3>Vad har du för sysselsättning:</h3>
-      <p>Offentligt anställd</p>
-
-      <h3>Vad har du för yrke?</h3>
-      <p>forskare/doktorand</p>
-
-      <h3>Vilken är din högsta fullgjorda utbildningsnivå?</h3>
-      <p>Examen från högskola eller universitet</p>
-
-      <h3>Vad har du för boendeform i första hand?</h3>
-      <p>Hyresrätt</p>
-
-      <h3>Var bor du?</h3>
-      <p>Stockholm</p>
-
-      <h3>Hur ser din familjesituation ut?</h3>
-      <p>Sambo</p>
-
-      <h3>Hur många barn har du?</h3>
-      <p>0</p>
-
-      <h3>Hur tar du dig till jobbet eller motsvarande?</h3>
-      <p>Cykel</p>
-
-      <h3>Vad gör du på Internet?</h3>
-      <ul>
-        <li>Tittar på TV</li>
-        <li>Använder facebook</li>
-        <li>Twittrar</li>
-        <li>Pratar i telefon</li>
-        <li>Lyssnar på radio</li>
-        <li>Betalar räkningar</li>
-        <li>Deklarerar</li>
-        <li>Köper / Säljer</li>
-        <li>Läser tidningar</li>
-        <li>googlar</li>
-      </ul>
-
-      <h3>Har du under de senaste två åren använt dig av "RUT-" eller "ROT-avdrag"?</h3>
-      <p>Varken RUT eller ROT</p>
+      <div class="body">
+        <h2>Personligt</h2>
+        <p>Jag är jurist och innan riksdagen forskade och undervisade jag på Stockholms universitet i internationell juridik och särskilt miljörätt. Jag arbetade tidigare inom olika frivilligorganisationer med miljöfrågor och för mer global rättvisa. Jag är född 1972 och uppväxt i Salem i Stockholms södra förorter.</p>
+        <p>Nu bor och trivs jag i stenstaden, nära vatten, grönska och trevliga kaféer. Och i staden föredrar jag cykeln, som är ett överlägset transportmedel, det går både snabbast och är hälsosamt! &nbsp;Det jag gillar bäst med storstaden är när roliga idéer från olika personer sätter sin prägel på lokala platser; ett fik med personlig stil, ett evenemang som är både kultur och samtal om samhället och småföretag som utvecklar framtidens tjänster.</p>
+      </div>
     </div>
     <div id="tab-cv" class="article-subsection">
-      <h2>CV</h2>
-      <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. </p>
+      <div class="body">
+        <h2>CV</h2>
+        <p>Doktor i juridik. Född 22 mars 1972, Uppväxt i Salem, söder om Stockholm.</p>
+        <h3>Tidigare arbeten och uppdrag</h3>
+        <p>1993 - 1995 Ledamot av Grön Ungdoms förbundsstyrelse, internationell kontaktperson<br>1998 - 2001 Ledamot av Miljöpartiets partistyrelse<br>2000 - 2001 Ledamot av Mediegrundlagsutredningen, SOU 2001:28<br>2001 Notarietjänstgöring Eskilstuna tingsrätt<br>2001 - 2004 Handläggare biståndsorganisationen Forum Syd<br>2002 - 2010&nbsp; Fullmäktige Stockholm stad, bl a talesperson trängselskatter och vice ordf Miljönämnden.<br>2005 - 2006 Gruppledare för Miljöpartiet, Stockholms stadshus<br>2006 - 2010 Doktorand och lärare miljörätt, Juridiska fakulteten, Stockholms universitet. Avhandlingsämnet är mellanstatliga investeringsavtal och dess påverkan på miljörätten i utvecklingsländer.<br>2010 - Ledamot av Sveriges riksdag</p>
+        <h3>Utbildning</h3>
+        <p>1988 - 1990 Södra Latins gymnasium, Stockholm, 2-årig estetisk praktisk (teater)<br>1990 - 1991 Komvux och eftergymnasiala studier inom Kulturama (radiolinje)<br>1991 - 1994 Studier till fil.kand. med svenska som huvudämne, Stockholms universitet<br>1996 - 2001 Juristlinjen, Stockholms universitet</p>
+      </div>
     </div>
-  </section>
-</article>
-<article>
-  <div class="labeled-list-container">
-    <ol class="labeled-list text-labels">
-      <li class="group">
-        <span class="label">Partistyrelsen</span>
-        <ol class="list">
-          <li><a href="#">Max Andersson</a></li>
-          <li><a href="#">Bodil Ceballos</a></li>
-          <li><a href="#">Jonas Eriksson</a></li>
-          <li><a href="#">Gustav Fridolin</a> </li>
-          <li><a href="#">Daniel Helldén</a></li>
-          <li><a href="#">Ann Merete Kapstad</a></li>
-          <li><a href="#">Jon Karlfeldt</a></li>
-          <li><a href="#">Akko Karlsson</a></li>
-          <li><a href="#">Anna Norrman</a></li>
-          <li><a href="#">Lennart Olsen</a></li>
-          <li><span>Åsa Romson</span></li>
-          <li><a href="#">Yvonne Ruwaida</a></li>
-          <li><a href="#">Karin Svensson Smith</a></li>
-          <li><a href="#">Karin Thomasson</a></li>
-          <li><a href="#">Helene Öberg</a></li>
-        </ol>
-      </li>
-      <li class="group">
-        <span class="label">Miljöpartister i Sveriges riksdag</span>
-        <ol class="list">
-          <li><a href="#">Agneta Börjesson</a></li>
-          <li><a href="#">Agneta Luttropp</a></li>
-          <li><a href="#">Annika Lillemets</a></li>
-          <li><a href="#">Bodil Ceballos</a></li>
-          <li><a href="#">Esabelle Dingizian</a></li>
-          <li><a href="#">Gunvor G Ericson</a></li>
-          <li><a href="#">Gustav Fridolin</a></li>
-          <li><a href="#">Helena Leander</a></li>
-          <li><a href="#">Jabar Amin</a></li>
-          <li><a href="#">Jan Lindholm</a></li>
-          <li><a href="#">Jonas Eriksson</a></li>
-          <li><a href="#">Kew Nordqvist</a></li>
-          <li><a href="#">Lise Nordi</a></li>
-          <li><a href="#">Magnus Ehrencrona</a></li>
-          <li><a href="#">Maria Ferm</a></li>
-          <li><a href="#">Mats Pertoft</a></li>
-          <li><a href="#">Mehmet Kaplan</a></li>
-          <li><a href="#">Per Bolund</a></li>
-          <li><a href="#">Peter Eriksson</a></li>
-          <li><a href="#">Peter Rådberg</a></li>
-          <li><a href="#">Stina Bergström</a></li>
-          <li><a href="#">Tina Ehn</a></li>
-          <li><a href="#">Ulf Holm</a></li>
-          <li><a href="#">Valter Mutt</a></li>
-          <li><span>Åsa Romson</span></li>
-        </ol>
-      </li>
-    </ol>
-  </div>
-</article>
+  </article>
+</div>
+
+<div class="main-section main-section-cream">
+  <article>
+    <h1>Uppdrag</h1>
+    <div class="labeled-list-container">
+      <ol class="labeled-list text-labels">
+        <li class="group">
+          <span class="label">Partistyrelsen</span>
+          <ol class="list">
+            <li><a href="#">Max Andersson</a></li>
+            <li><a href="#">Bodil Ceballos</a></li>
+            <li><a href="#">Jonas Eriksson</a></li>
+            <li><a href="#">Gustav Fridolin</a> </li>
+            <li><a href="#">Daniel Helldén</a></li>
+            <li><a href="#">Ann Merete Kapstad</a></li>
+            <li><a href="#">Jon Karlfeldt</a></li>
+            <li><a href="#">Akko Karlsson</a></li>
+            <li><a href="#">Anna Norrman</a></li>
+            <li><a href="#">Lennart Olsen</a></li>
+            <li><span>Åsa Romson</span></li>
+            <li><a href="#">Yvonne Ruwaida</a></li>
+            <li><a href="#">Karin Svensson Smith</a></li>
+            <li><a href="#">Karin Thomasson</a></li>
+            <li><a href="#">Helene Öberg</a></li>
+          </ol>
+        </li>
+        <li class="group">
+          <span class="label">Miljöpartister i Sveriges riksdag</span>
+          <ol class="list">
+            <li><a href="#">Agneta Börjesson</a></li>
+            <li><a href="#">Agneta Luttropp</a></li>
+            <li><a href="#">Annika Lillemets</a></li>
+            <li><a href="#">Bodil Ceballos</a></li>
+            <li><a href="#">Esabelle Dingizian</a></li>
+            <li><a href="#">Gunvor G Ericson</a></li>
+            <li><a href="#">Gustav Fridolin</a></li>
+            <li><a href="#">Helena Leander</a></li>
+            <li><a href="#">Jabar Amin</a></li>
+            <li><a href="#">Jan Lindholm</a></li>
+            <li><a href="#">Jonas Eriksson</a></li>
+            <li><a href="#">Kew Nordqvist</a></li>
+            <li><a href="#">Lise Nordi</a></li>
+            <li><a href="#">Magnus Ehrencrona</a></li>
+            <li><a href="#">Maria Ferm</a></li>
+            <li><a href="#">Mats Pertoft</a></li>
+            <li><a href="#">Mehmet Kaplan</a></li>
+            <li><a href="#">Per Bolund</a></li>
+            <li><a href="#">Peter Eriksson</a></li>
+            <li><a href="#">Peter Rådberg</a></li>
+            <li><a href="#">Stina Bergström</a></li>
+            <li><a href="#">Tina Ehn</a></li>
+            <li><a href="#">Ulf Holm</a></li>
+            <li><a href="#">Valter Mutt</a></li>
+            <li><span>Åsa Romson</span></li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </article>
+</div>
 
       </div>
-      <footer>
+      <footer id="site-footer">
         
         <nav class="breadcrumbs">
           <p>  <a href="/">Hem</a>
@@ -442,6 +385,13 @@
         <a href="#" class="confirm action">OK, stäng meddelandet</a>
       </div>
     </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script>
+    <!-- The cookies script is the one available in drupal -->
+    <script src="javascripts/cookies.js" type="text/javascript"></script>
+    <script src="javascripts/mp.js" type="text/javascript"></script>
+    <!-- This script is only to demonstrate features and should be implemented in drupal -->
+    <script src="javascripts/features.js" type="text/javascript"></script>
     <script src="javascripts/disqus.js" type="text/javascript"></script>
   </body>
 </html>
