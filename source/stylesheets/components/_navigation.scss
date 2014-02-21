@@ -245,6 +245,12 @@ nav.main-navigation {
   }
 
   a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
     @include respond-between(300px, 767px) {
       line-height: 1.5;
     }

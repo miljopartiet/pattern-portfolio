@@ -28,12 +28,23 @@
 
 %action-yellow {
   background: $yellow;
-  color: #000;
+  color: $magenta;
   text-decoration: none;
 
   &:hover,
   &:active {
     background: darken($yellow, 5%);
+  }
+}
+
+%action-magenta {
+  background: $magenta;
+  color: $yellow;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    background: darken($magenta, 5%);
   }
 }
 
@@ -51,7 +62,11 @@
     padding-left: (30em/14);
   }
 
-  .main-section-green &,
+  .main-section-green & {
+    @extend %action-yellow;
+    color: $green;
+  }
+
   .main-section-magenta & {
     @extend %action-yellow;
   }

@@ -1,7 +1,6 @@
 .tabbed {
   header {
     padding: 0;
-    margin-top: 56px;
     margin-bottom: 56px;
 
     @include respond-to(1024px) {

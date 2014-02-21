@@ -6,6 +6,7 @@ $green: #2b912c;
 $green-dark: #00730a;
 $beige: #f5f3ee;
 $cream: #f6f4e5;
+$magenta: #bd0076;
 
 
 $text-grey: #666;
@@ -93,10 +94,18 @@ $base-line-height: 1.5;
   position: relative;
   padding: 0 0 0.2em 0;
 
+  @include with-dark-sections {
+    border-color: rgba(255,255,255,0.3);
+  }
+
   @include respond-to(1024px) {
     border-top: 1px solid $warm-grey;
     border-bottom: none;
     padding: 0;
+
+    @include with-dark-sections {
+      border-color: rgba(255,255,255,0.3);
+    }
   }
 
   .illustration + & {

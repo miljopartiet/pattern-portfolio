@@ -1,49 +1,46 @@
 .speech-bubble {
   position: relative;
   background: $yellow;
-  padding: 20px 20px 20px 25px;
-  border-radius: 7px;
+  color: $magenta;
+  border-radius: 5px;
   @include box-sizing(border-box);
+  padding: 15px;
+  margin-top: (25em/16);
 
-  @include respond-between(300px, 767px) {
-    margin-top: (30em/16);
-    padding: 15px;
+  @include respond-to(480px) {
+    margin-top: (40em/16);
+  }
+
+  @include respond-to(768px) {
+    padding: 20px 20px 20px 25px;
+    margin-top: (60em/16);
   }
 
   @extend %speech-bubble-corner;
 
   .main-section > & {
     @extend %page-section-content;
-    margin-top: 30px;
-  }
 
-  .main-section + & {
-    @extend %page-section-content;
-    margin-bottom: 30px;
-    margin-right: 18px;
-    margin-left: 18px;
-
-    @include respond-to(600px) {
-      margin-right: auto;
-      margin-left: auto;
+    &:first-child {
+      margin-top: 0;
     }
-  }
-
-  .main-section-green + &,
-  .main-section-magenta + & {
-    margin-top: 30px;
   }
 
   // Force green links and action buttons
   .main-section & {
     a {
-      color: $green;
+      color: $magenta;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
 
     .action,
     .action a,
     .form-submit {
-      @extend %action-green;
+      @extend %action-magenta;
     }
   }
 
@@ -51,7 +48,6 @@
     @include clearfix;
     position: relative;
     z-index: 60;
-    color: #222;
   }
 
   h2 {
@@ -68,6 +64,7 @@
   }
 
   li {
+    @extend %typography-text-body;
     margin-left: 1em;
 
     @include respond-to(768px) {

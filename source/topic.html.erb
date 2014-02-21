@@ -69,9 +69,9 @@ url: http://www.mp.se/politik/bostader
       </ul>
     </div>
   </article>
-</div>
 
-<%= partial 'bubbles/share', locals: { url: "http://www.mp.se/vill/bostad" } %>
+  <%= partial 'bubbles/share', locals: { url: "http://www.mp.se/vill/bostad" } %>
+</div>
 
 <div class="main-section main-section-cream local-x">
   <%= partial 'bubbles/localize' %>
@@ -114,51 +114,53 @@ url: http://www.mp.se/politik/bostader
 
 <div class="main-section">
   <article class="current-topics">
-    <header class="vignette">
-      <span class="vignette-header">Just nu</span>
-      <span class="vignette-intro">Aktuellt inom ämnet bostad. Visa <a href="/topics.html#all-topics">andra ämnen</a></span>
+    <h2>Just nu</h2>
+    <header class="section-vignette">
+      <span class="section-vignette-intro">Aktuellt inom ämnet bostad. Visa <a href="/topics.html#all-topics">andra ämnen</a></span>
     </header>
 
     <%= partial "news" %>
   </article>
 
-  <article class="conversations">
-    <header class="vignette">
-      <span class="vignette-header">Prata politik</span>
-      <span class="vignette-intro">
+  <article>
+    <h2>Prata politik</h2>
+    <header class="section-vignette">
+      <span class="section-vignette-intro">
         <a href="#">Ställ din egen fråga</a> eller <a href="#">läs andra politiska samtal</a>.
       </span>
     </header>
-    <div class="conversation">
-      <div class="question">
-        <div class="content">
-          <p>
-            Hur ställer ni gröna partier er till landsbygdsinfrastruktur
-          </p>
+    <div class="conversations">
+      <div class="conversation">
+        <div class="question">
+          <div class="content">
+            <p>
+              Hur ställer ni gröna partier er till landsbygdsinfrastruktur
+            </p>
+          </div>
+          <div class="byline">
+            <img src="http://placehold.it/48x48" alt="">
+            <p>Fredrika Gullfor (@gullfot) på twitter</p>
+          </div>
         </div>
-        <div class="byline">
-          <img src="http://placehold.it/48x48" alt="">
-          <p>Fredrika Gullfor (@gullfot) på twitter</p>
-        </div>
-      </div>
-      <div class="answer">
-        <div class="content">
-          <p>
-            En grön stad ska klara av att spara energi och transporter, minska avfallshanteringen och ha ett Cabo. lenda velest vellamentum ressimos qui omnisi dolessum facerum.
-          </p>
-        </div>
-        <div class="byline">
-          <img src="http://placehold.it/48x48" alt="">
-          <p><a href="">Per Bolund</a>, ekonomisk talesman för Miljöpartiet</p>
+        <div class="answer">
+          <div class="content">
+            <p>
+              En grön stad ska klara av att spara energi och transporter, minska avfallshanteringen och ha ett Cabo. lenda velest vellamentum ressimos qui omnisi dolessum facerum.
+            </p>
+          </div>
+          <div class="byline">
+            <img src="http://placehold.it/48x48" alt="">
+            <p><a href="">Per Bolund</a>, ekonomisk talesman för Miljöpartiet</p>
+          </div>
         </div>
       </div>
     </div>
   </article>
 
   <article class="related-topics">
-    <header class="vignette">
-      <span class="vignette-header">Läs mer</span>
-      <span class="vignette-intro">Andra ämnen som relaterar till bostad</span>
+    <h2>Lär mer</h2>
+    <header class="section-vignette">
+      <span class="section-vignette-intro">Andra ämnen som relaterar till bostad</span>
     </header>
     <div class="body">
       <h2><a href="">100 kvadratmeter för 100 kr åt alla hundraåringar!</a></h2>

@@ -32,16 +32,17 @@ article {
   }
 
   + article {
-    margin-top: 40px;
+    margin-top: (30em/16);
 
-    @include respond-between(300px, 767px) {
-      margin-top: (30em/16);
-      margin-bottom: (30em/16);
+    @include respond-to(768px) {
+      margin-top: (40em/16);
+    }
+
+    @include respond-to(768px) {
+      margin-top: (60em/16);
     }
 
     h1 {
-      padding-top: 20px;
-      border-top: 1px solid $warm-grey;
       color: #000;
     }
   }

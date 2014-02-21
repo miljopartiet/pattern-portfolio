@@ -13,21 +13,42 @@
 
 .vignette-header {
   @extend %typography-heading-small;
-  width: (69em/23);
-  height: (62em/23);
-  padding: (18em/23) 0 0 (22em/23);
-  background: transparent url(../images/bg-vignette.png) 0 0 no-repeat;
-  background-size: 100%;
   line-height: 1;
   color: #fff;
-  text-transform: none;
   display: none;
 
   @include respond-to(1024px) {
     display: block;
     position: absolute;
-    top: -.5em;
+    top: -12px;
     left: 0;
+  }
+
+  span {
+    position: relative;
+    z-index: 210;
+    width: 70px;
+    display: block;
+    text-align: center;
+  }
+
+  &:after {
+    @include respond-to(1024px) {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 110;
+      top: -15px;
+      left: -15px;
+      width: 90px;
+      height: 79px;
+      background: transparent url(../images/bg-vignette-magenta.png) 0 0 no-repeat;
+      background-size: 100%;
+    }
+
+    html.svg & {
+      background-image: url(../images/bg-vignette-magenta.svg);
+    }
   }
 }
 
