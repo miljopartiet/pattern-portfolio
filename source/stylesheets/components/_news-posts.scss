@@ -4,31 +4,7 @@
     margin-right: (20em/16);
   }
 
-  li {
-    @include respond-to(768px) {
-      padding: (15em/16) 0;
-      border-bottom: 1px solid $warm-grey;
-    }
-
-    &:first-child {
-      @include respond-to(768px) {
-        padding-top: 0;
-      }
-    }
-
-    &:last-child {
-      @include respond-to(768px) {
-        border: none;
-        padding-bottom: 0;
-      }
-    }
-  }
-
   a {
-    @include respond-to(768px) {
-      margin: 0;
-    }
-
     @include respond-to(1024px) {
       margin-right: (35em/22);
     }
