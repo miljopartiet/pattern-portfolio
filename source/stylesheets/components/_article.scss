@@ -41,10 +41,6 @@ article {
     @include respond-to(768px) {
       margin-top: (60em/16);
     }
-
-    h1 {
-      color: #000;
-    }
   }
 
   .body {
