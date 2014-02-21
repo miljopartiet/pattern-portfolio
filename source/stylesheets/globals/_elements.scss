@@ -33,10 +33,6 @@ h2 {
   @include respond-to(768px) {
     margin-top: 1em;
   }
-
-  &:first-child {
-    margin-top: 0;
-  }
 }
 
 h3 {
