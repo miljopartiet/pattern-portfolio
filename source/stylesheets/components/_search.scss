@@ -3,8 +3,8 @@
 
   input {
     width: 100%;
-    background: $beige;
-    border: 1px solid $beige;
+    background: $cream;
+    border: 1px solid $cream;
     padding: 3px 20px 3px 10px;
     margin: 0;
     border-radius: 4px;
@@ -19,7 +19,7 @@
 
     &.has-suggestions {
       border: 1px solid $warm-grey;
-      border-bottom: 1px solid $beige;
+      border-bottom: 1px solid $cream;
       border-radius: 4px 4px 0 0;
     }
   }
@@ -80,7 +80,7 @@
 
 .main-search {
   @include box-sizing(border-box);
-  background: $beige;
+  background: $cream;
   padding: (10em/16) 0 (10em/16) 0;
   margin: 0;
   border: 1px solid $warm-grey;
@@ -121,7 +121,7 @@
   }
 
   .focused {
-    background: darken($beige, 5%);
+    background: darken($cream, 5%);
 
     .name {
       text-decoration: none;
