@@ -29,6 +29,10 @@
     @include respond-between(600px, 767px) {
       padding-top: (10em/16);
     }
+
+    @include with-dark-sections {
+      border-color: rgba(255,255,255, 0.3);
+    }
   }
 
   .label {
