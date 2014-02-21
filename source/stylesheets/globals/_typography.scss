@@ -71,7 +71,7 @@
 %typography-text-lead {
   font-family: $mp-serif;
   font-size: (20em/16);
-  line-height: (24/20);
+  line-height: (22/20);
   -webkit-font-smoothing: subpixel-antialiased;
 
   @include respond-to(600px) {
@@ -86,7 +86,7 @@
 
   @include respond-to(1024px) {
     font-size: (28em/16);
-    line-height: (34/28);
+    line-height: (32/28);
   }
 }
 
