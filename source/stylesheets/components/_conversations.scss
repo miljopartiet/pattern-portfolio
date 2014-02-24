@@ -11,12 +11,14 @@
   }
 
   a {
+    text-decoration: none;
+
     .read-more {
       color: $green;
       text-decoration: underline;
     }
 
-    &:hover {
+    &:hover {      
       .read-more {
         color: $green-dark;
         text-decoration: none;

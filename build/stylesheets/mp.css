@@ -2105,12 +2105,14 @@ header.intro .article-section {
       margin-top: 1.25em;
       margin-right: 6.25%;
       width: 96.875%; } }
-  .conversation a .read-more {
-    color: #2b912c;
-    text-decoration: underline; }
-  .conversation a:hover .read-more {
-    color: #00730a;
+  .conversation a {
     text-decoration: none; }
+    .conversation a .read-more {
+      color: #2b912c;
+      text-decoration: underline; }
+    .conversation a:hover .read-more {
+      color: #00730a;
+      text-decoration: none; }
   .conversation .content {
     position: relative;
     z-index: 60;
