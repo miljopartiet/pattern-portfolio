@@ -152,7 +152,7 @@ h1 {
   font-size: 5.25em;
   line-height: 0.7619; }
 
-h2, .labeled-list .label, .topics h3 {
+h2, .labeled-list .label {
   font-family: "MP Sans", arial, sans-serif;
   font-weight: normal;
   font-size: 1.75em;
@@ -162,12 +162,14 @@ h2, .labeled-list .label, .topics h3 {
   line-height: 0.78947; }
 
 .icon-list li .title,
-.icon-list li .summary, article .body h2 {
+.icon-list li .summary, article .body h2, .topics h2,
+.topics h3 {
   font-family: "MP Serif", georgia, serif;
   font-weight: normal;
   font-size: 1.3125em;
   line-height: 1;
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   font-size: 1.875em;
   line-height: 1.06667; }
 
@@ -176,7 +178,8 @@ h3, .vignette-header, .conversation .question .content p, .people a h2 {
   font-weight: normal;
   font-size: 1.125em;
   line-height: 1;
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   font-size: 1.5em;
   line-height: 1.08333; }
 
@@ -184,7 +187,8 @@ article .lead p {
   font-family: "MP Serif", georgia, serif;
   font-size: 1.25em;
   line-height: 1.1;
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   font-size: 1.375em;
   line-height: 1.18182;
   font-size: 1.5em;
@@ -218,7 +222,8 @@ small, sup, figcaption, #wrap blockquote footer p, .vignette-intro, .section-vig
   font-family: "MP Serif", georgia, serif;
   font-size: 1.125em;
   line-height: 1.22222;
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   font-size: 1.5em;
   line-height: 1.16667; }
 
@@ -937,6 +942,8 @@ blockquote {
       word-wrap: break-word; }
       .labeled-list .list a.active {
         text-decoration: none; }
+    .labeled-list .list span {
+      font-weight: bold; }
 
 .text-labels .label {
   display: block;
@@ -1040,10 +1047,8 @@ blockquote {
     clear: both; }
   #site-navigation li a.active {
     color: #2b912c; }
-  #site-navigation form {
-    margin-right: 185px; }
-    #site-navigation form input {
-      width: 15.71429em; }
+  #site-navigation form input {
+    width: 15.71429em; }
 
 #site-top-navigation {
   width: 100%;
@@ -1478,8 +1483,6 @@ nav.breadcrumbs {
       .speech-bubble .vcard + .vcard .organization-name {
         display: none; }
       .speech-bubble .vcard + .vcard p {
-        padding-top: 10px;
-        border-top: 1px solid #d7c82f;
         margin-right: 20px; }
   .speech-bubble .position-me {
     margin-top: 15px;
@@ -1981,8 +1984,7 @@ header.intro .article-section {
     background-size: 14.6875em 2.37896em;
     background-position: 0 0;
     height: 2.55556em;
-    background-size: 16.11111em 2.55556em;
-    margin-right: 10.27778em; }
+    background-size: 16.11111em 2.55556em; }
     html.svg #logo-full a {
       background-image: url(../images/logo-full.svg); }
 
