@@ -20,6 +20,7 @@
 
   h2,
   h3 {
+    @extend %typography-heading-serif;
     margin: 0;
     position: relative;
     @include respond-to(600px) {
@@ -32,10 +33,6 @@
   p {
     margin-right: 0;
     display: inline;
-  }
-
-  h3 {
-    @extend %typography-heading;
   }
 
   p {
