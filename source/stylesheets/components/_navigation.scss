@@ -135,9 +135,6 @@
   }
 
   form {
-    @include respond-to(1024px) {
-      margin-right: 185px;
-    }
 
     input {
       @include respond-to(1024px) {
@@ -414,7 +411,7 @@ nav.main-navigation {
 
     &:hover {
       text-decoration: none;
-      
+
       @include respond-to(768px) {
         color: $green;
       }

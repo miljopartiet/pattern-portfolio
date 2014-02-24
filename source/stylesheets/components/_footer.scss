@@ -27,10 +27,6 @@
       background-size: (290em/18) (46em/18);
     }
 
-    @include respond-to(1024px) {
-      margin-right: (185em/18);
-    }
-
     html.svg & {
       background-image: url(../images/logo-full.svg);
     }
