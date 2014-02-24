@@ -2,9 +2,9 @@
   position: relative;
   background: $yellow;
   color: $magenta;
-  border-radius: 5px;
+  border-radius: 10px;
   @include box-sizing(border-box);
-  padding: 15px;
+  padding: 18px 15px;
   margin-top: (25em/16);
 
   @include respond-to(480px) {
@@ -12,7 +12,7 @@
   }
 
   @include respond-to(768px) {
-    padding: 20px 20px 20px 25px;
+    padding: 25px 20px 25px 25px;
     margin-top: (60em/16);
   }
 
@@ -56,7 +56,7 @@
 
   p,
   ul {
-    margin-top: (2em/18);
+    margin-top: (4em/18);
 
     @include respond-between(300px, 767px) {
       margin-top: (2em/16);
