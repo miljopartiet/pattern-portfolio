@@ -1401,7 +1401,8 @@ nav.main-navigation a {
 #secondary-navigation li {
   display: inline; }
 #secondary-navigation a {
-  color: #888888; }
+  color: #888888;
+  text-decoration: none; }
   @media screen and (min-width: 768px) {
     #secondary-navigation a {
       white-space: nowrap;
@@ -1412,9 +1413,11 @@ nav.main-navigation a {
       padding-left: 10px;
       background: transparent url(../images/bullet.png) 0 50% no-repeat;
       background-size: 4px 4px; } }
-  @media screen and (min-width: 768px) {
-    #secondary-navigation a:hover {
-      color: #2b912c; } }
+  #secondary-navigation a:hover {
+    text-decoration: none; }
+    @media screen and (min-width: 768px) {
+      #secondary-navigation a:hover {
+        color: #2b912c; } }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     html.svg #secondary-navigation a {
       background-image: url(../images/bullet.svg); } }

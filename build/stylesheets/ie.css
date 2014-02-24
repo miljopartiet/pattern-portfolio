@@ -1167,6 +1167,7 @@ nav.main-navigation {
     display: inline; }
   #secondary-navigation a {
     color: #888888;
+    text-decoration: none;
     white-space: nowrap;
     margin-right: 0;
     margin-left: .2em;
@@ -1174,6 +1175,7 @@ nav.main-navigation {
     background: transparent url(../images/bullet.png) 0 50% no-repeat;
     background-size: 4px 4px; }
     #secondary-navigation a:hover {
+      text-decoration: none;
       color: #2b912c; }
     html.svg #secondary-navigation a {
       background-image: url(../images/bullet.svg); }

@@ -398,6 +398,7 @@ nav.main-navigation {
   a {
     @extend %typography-text-small;
     color: $text-light-grey;
+    text-decoration: none;
 
     @include respond-to(768px) {
       white-space: nowrap;
@@ -412,6 +413,8 @@ nav.main-navigation {
     }
 
     &:hover {
+      text-decoration: none;
+      
       @include respond-to(768px) {
         color: $green;
       }
