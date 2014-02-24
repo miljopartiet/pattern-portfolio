@@ -47,7 +47,8 @@
   font-weight: normal;
   font-size: (21em/16);
   line-height: (21/21);
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 
   @include respond-to(768px) {
     font-size: (30em/16);
@@ -60,7 +61,8 @@
   font-weight: normal;
   font-size: (18em/16);
   line-height: (20/20);
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 
   @include respond-to(768px) {
     font-size: (24em/16);
@@ -72,7 +74,8 @@
   font-family: $mp-serif;
   font-size: (20em/16);
   line-height: (22/20);
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 
   @include respond-to(600px) {
     font-size: (22em/16);
@@ -125,8 +128,8 @@
   font-family: $mp-serif;
   font-size: (18em/16);
   line-height: (22/18);
-  -webkit-font-smoothing: subpixel-antialiased;
-
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 
   @include respond-to(768px) {
     font-size: (24em/16);
