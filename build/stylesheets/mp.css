@@ -1680,19 +1680,21 @@ nav.breadcrumbs {
   position: relative;
   background: #ffe900;
   color: #bd0076;
-  border-radius: 5px;
+  border-radius: 10px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 15px;
-  margin-top: 1.5625em; }
-  @media screen and (min-width: 480px) {
-    .speech-bubble {
-      margin-top: 2.5em; } }
+  padding: 18px 15px;
+  margin-top: 1.25em; }
   @media screen and (min-width: 768px) {
     .speech-bubble {
-      padding: 20px 20px 20px 25px;
-      margin-top: 3.75em; } }
+      margin-top: 1.875em;
+      padding: 25px 20px 25px 25px; } }
+  .speech-bubble + .labeled-list-container {
+    margin-top: 30px; }
+    @media screen and (min-width: 768px) {
+      .speech-bubble + .labeled-list-container {
+        margin-top: 40px; } }
   .main-section > .speech-bubble:first-child {
     margin-top: 0; }
   .main-section .speech-bubble a {
@@ -1713,7 +1715,7 @@ nav.breadcrumbs {
     margin-top: 0; }
   .speech-bubble p,
   .speech-bubble ul {
-    margin-top: 0.11111em; }
+    margin-top: 0.22222em; }
     @media screen and (min-width: 300px) and (max-width: 767px) {
       .speech-bubble p,
       .speech-bubble ul {
@@ -1817,7 +1819,6 @@ nav.breadcrumbs {
     width: 48.3871%; } }
 
 form.speech-bubble {
-  margin-top: 40px;
   margin-bottom: 0; }
   form.speech-bubble .search {
     padding: 10px 10px 0 10px;
@@ -2438,9 +2439,6 @@ input + div.description {
 
 .fetch-more {
   margin-top: 1.25em; }
-  @media screen and (min-width: 768px) {
-    .fetch-more {
-      margin-top: 2.5em; } }
 
 p.copy {
   font: normal 0.77647em arial, sans-serif;
