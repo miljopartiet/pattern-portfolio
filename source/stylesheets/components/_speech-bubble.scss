@@ -5,18 +5,22 @@
   border-radius: 10px;
   @include box-sizing(border-box);
   padding: 18px 15px;
-  margin-top: (25em/16);
-
-  @include respond-to(480px) {
-    margin-top: (40em/16);
-  }
+  margin-top: (20em/16);
 
   @include respond-to(768px) {
+    margin-top: (30em/16);
     padding: 25px 20px 25px 25px;
-    margin-top: (60em/16);
   }
 
   @extend %speech-bubble-corner;
+
+  & + .labeled-list-container {
+    margin-top: 30px;
+
+    @include respond-to(768px) {
+      margin-top: 40px;
+    }
+  }
 
   .main-section > & {
     @extend %page-section-content;
@@ -217,7 +221,6 @@
 }
 
 form.speech-bubble {
-  margin-top: 40px;
   margin-bottom: 0;
 
   .search {
