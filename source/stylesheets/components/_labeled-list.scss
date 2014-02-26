@@ -29,11 +29,11 @@
   .group {
     @include clearfix;
     border-top: 1px solid $warm-grey;
-    padding: (20em/16) 0 0 0;
+    padding-top: (10em/16);
     margin: (20em/16) 0 0 0;
 
-    @include respond-between(600px, 767px) {
-      padding-top: (10em/16);
+    @include respond-to(769px) {
+      padding: (20em/16) 0 0 0;
     }
 
     @include with-dark-sections {
@@ -73,13 +73,16 @@
     }
   }
 
+  // Used for browsers that odes not support display column
   .grid {
+    overflow: hidden;
+
     @include respond-to(768px) {
       width: 100%;
     }
 
     @include respond-to(1024px) {
-      width: percentage(620/855);
+      width: percentage(640/855);
     }
 
     .container {
@@ -87,12 +90,7 @@
 
       @include respond-to(768px) {
         margin: 0;
-        width: percentage(600/580);
-      }
-
-      @include respond-to(1024px) {
-        margin: 0;
-        width: percentage(640/620);
+        width: percentage(660/640);
       }
     }
 
@@ -102,12 +100,14 @@
     }
 
     .c3 {
+      margin: 10px 0 0 0;
+
       @include respond-to(600px) {
-        margin: 10px 0 0 0;
         width: percentage(240/520);
       }
 
       @include respond-to(768px) {
+        margin-top: 0;
         width: percentage(280/600);
       }
 
@@ -118,12 +118,10 @@
     }
 
     ul {
-      @include respond-to(768px) {
-        margin-left: 1.2em;
-      }
+      margin-left: 1.2em;
 
-      @include respond-to(1024px) {
-        margin-top: 0;
+      li {
+        margin-bottom: (10em/16);
       }
     }
   }
@@ -132,9 +130,8 @@
     margin: 0;
     list-style: disc;
     float: left;
-    width: percentage(194/284);
 
-    @include respond-between(600px, 767px) {
+    @include respond-to(600px) {
       margin-top: (10em/16);
       float: none;
       width: 100%;
@@ -142,18 +139,12 @@
     }
 
     @include respond-to(768px) {
-      @include columns(2, 20px);
       margin-top: 0;
-    }
-
-    @include respond-between(768px, 1023px) {
-      width: 100%;
     }
 
     @include respond-to(1024px) {
       @include columns(3, 20px);
-      margin-top: 0;
-      width: percentage(640/855);
+      width: percentage(660/855);
     }
 
     li {
@@ -192,17 +183,13 @@
 .text-labels {
   .label {
     display: block;
+    float: none;
+    width: 100%;
+    margin-right: 0;
 
-    @include respond-between(300px, 767px) {
-      float: none;
-      width: 100%;
-      margin-right: 0;
-    }
-
-    @include respond-between(768px, 1023px) {
+    @include respond-to(768px) {
       text-align: left;
       margin-left: 0;
-      width: 100%;
     }
 
     @include respond-to(1024px) {
@@ -224,10 +211,6 @@
   .list {
     margin-top: (10em/16);
 
-    @include respond-to(768px) {
-      margin-top: (10em/16);
-    }
-
     @include respond-to(1024px) {
       @include columns(3, 20px);
       margin-top: 0;
@@ -236,9 +219,13 @@
   }
 
   .grid {
+    margin-top: (10em/16);
+    // 690 is the full width - the padding set
+    width: percentage(640/690);
+
     .container {
       @include respond-to(1024px) {
-        width: percentage(620/690);
+        width: percentage(660/640);
       }
     }
   }
