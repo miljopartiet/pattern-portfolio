@@ -3,31 +3,29 @@
 // and in the page footer
 nav.breadcrumbs {
   display: block;
-  @extend %page-section-content-wide;
 
   // The breadcrumbs is not used in the mobile view
   // instead we point users to the more complete site navigation
   #wrap > & {
     display: none;
+    @extend %page-section-content;
 
-    @include respond-between(600px, 767px) {
-      border: none;
+    @include respond-to(600px) {
       display: block;
-      margin-bottom: (10em/16);
+      border: none;
+      margin: 0 auto (10em/16) auto;
     }
 
     @include respond-to(768px) {
-      width: (580em/16);
-      margin: 0 auto;
       margin-bottom: (15em/16);
     }
 
     @include respond-to(1024px) {
-      width: auto;
     }
   }
 
   footer & {
+    @extend %page-section-content-wide;
     border-top: 1px solid $warm-grey;
     padding-top: 10px;
     margin-bottom: 15px;
