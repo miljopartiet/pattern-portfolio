@@ -126,20 +126,9 @@ nav.breadcrumbs a {
   }
 
   .article-section {
-    header.vignetted {
-      // Remove padding (165) from width
-      width: percentage(695/640);
-    }
-
     .article-subsection {
       // Remove padding (55) from width
       width: percentage(640/640);
-    }
-
-    .section-lead {
-      position: absolute;
-      top: -3px;
-      right: 0;
     }
   }
 }
