@@ -27,8 +27,14 @@
     color: #fff;
     border-radius: 3px;
     font-size: (13em/16);
-    font-family: $mp-serif;
+    font-family: georgia, serif;
     line-height: (25.1/13);
+
+    .wf-active & {
+      font-family: $mp-serif;
+      font-weight: normal;
+    }
+
 
     @include respond-to(1024px) {
       font-size: (16em/16);
