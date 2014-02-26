@@ -9,6 +9,11 @@
 
 %typography-heading-main {
   font-family: $mp-sans;
+
+  .wf-active & {
+    font-family: $mp-sans;
+  }
+
   font-weight: normal;
   font-size: (40em/16);
   line-height: (32/40);
@@ -30,6 +35,11 @@
 
 %typography-heading {
   font-family: $mp-sans;
+
+  .wf-active & {
+    font-family: $mp-sans;
+  }
+
   font-weight: normal;
   font-size: (28em/16);
   line-height: (24/28);
@@ -44,6 +54,11 @@
 // news lists and h2 in articles
 %typography-heading-serif {
   font-family: $mp-serif;
+
+  .wf-active & {
+    font-family: $mp-serif;
+  }
+
   font-weight: normal;
   font-size: (21em/16);
   line-height: (21/21);
@@ -58,6 +73,11 @@
 
 %typography-heading-small {
   font-family: $mp-serif;
+
+  .wf-active & {
+    font-family: $mp-serif;
+  }
+
   font-weight: normal;
   font-size: (18em/16);
   line-height: (20/20);
@@ -72,6 +92,11 @@
 
 %typography-text-lead {
   font-family: $mp-serif;
+
+  .wf-active & {
+    font-family: $mp-serif;
+  }
+
   font-size: (20em/16);
   line-height: (22/20);
   -webkit-font-smoothing: antialiased;
@@ -126,6 +151,11 @@
 
 %typography-text-quote {
   font-family: $mp-serif;
+
+  .wf-active & {
+    font-family: $mp-serif;
+  }
+
   font-size: (18em/16);
   line-height: (22/18);
   -webkit-font-smoothing: antialiased;
