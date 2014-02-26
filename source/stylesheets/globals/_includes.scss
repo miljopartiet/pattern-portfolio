@@ -69,7 +69,7 @@ $base-line-height: 1.5;
   }
 }
 
-@mixin respond-between($from, $to, $fallback: true) {
+@mixin respond-between($from, $to, $fallback: false) {
   @if $supportsMediaQueries == true {
     @media screen and (min-width: $from) and (max-width: $to) {
       @content;
