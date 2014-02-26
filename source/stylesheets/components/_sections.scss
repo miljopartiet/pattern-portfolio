@@ -36,6 +36,7 @@
 .main-section-magenta {
   @extend %page-section-solid;
   color: #fff;
+  background: $magenta;
   @include background-image(radial-gradient(false, color-stops(#BD0076, #6C1847)));
 
   + .main-section-magenta {
