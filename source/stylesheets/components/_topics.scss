@@ -26,6 +26,10 @@
     @include respond-to(600px) {
       margin-left: -20px;
     }
+
+    .ie7 & {
+      margin-left: 0;
+    }
   }
 
   h2,
