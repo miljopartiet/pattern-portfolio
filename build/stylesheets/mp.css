@@ -104,33 +104,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     .conversation .answer:after {
       right: -17px; } }
 
-ul.menu li {
-  margin-left: 0; }
-  ul.menu li.leaf {
-    padding: 0;
-    list-style-image: none;
-    list-style-type: none; }
-
-.calendar {
-  width: auto; }
-
-body.logged-in #wrap .tabs.primary a,
-body.logged-in #wrap a.edit-link-simple {
-  font-family: arial, sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  background: #f5f5f5;
-  padding: 5px 15px;
-  border-radius: 4px 4px 0 0; }
-body.logged-in #wrap a.edit-link-simple {
-  clear: both;
-  border-radius: 6px;
-  border: 1px solid #f5f5f5;
-  display: inline-block;
-  margin: 10px 0 5px 0; }
-  body.logged-in #wrap a.edit-link-simple:hover {
-    border-color: #ddd; }
-
 @font-face {
   font-family: "MP Sans";
   src: url("../fonts/mp-sans.eot?#iefix");
@@ -298,17 +271,17 @@ small, sup, figcaption, #wrap blockquote footer p, .vignette-intro, .section-vig
       padding-top: 3.75em;
       padding-bottom: 4.375em; } }
 
-nav.main-navigation, footer nav.breadcrumbs, #site-banner, #logo-full, #copyright, nav.main-navigation .inner, #wrap > nav.breadcrumbs, .main-section > .speech-bubble, article {
+nav.main-navigation, footer nav.breadcrumbs, #site-banner, #logo-full, #copyright, body.logged-in #wrap .main-section > .tabs.primary, nav.main-navigation .inner, #wrap > nav.breadcrumbs, .main-section > .speech-bubble, article {
   margin-right: auto;
   margin-left: auto; }
   @media screen and (min-width: 600px) {
-    nav.main-navigation, footer nav.breadcrumbs, #site-banner, #logo-full, #copyright, nav.main-navigation .inner, #wrap > nav.breadcrumbs, .main-section > .speech-bubble, article {
+    nav.main-navigation, footer nav.breadcrumbs, #site-banner, #logo-full, #copyright, body.logged-in #wrap .main-section > .tabs.primary, nav.main-navigation .inner, #wrap > nav.breadcrumbs, .main-section > .speech-bubble, article {
       width: 520px; } }
   @media screen and (min-width: 768px) {
-    nav.main-navigation, footer nav.breadcrumbs, #site-banner, #logo-full, #copyright, nav.main-navigation .inner, #wrap > nav.breadcrumbs, .main-section > .speech-bubble, article {
+    nav.main-navigation, footer nav.breadcrumbs, #site-banner, #logo-full, #copyright, body.logged-in #wrap .main-section > .tabs.primary, nav.main-navigation .inner, #wrap > nav.breadcrumbs, .main-section > .speech-bubble, article {
       width: 580px; } }
   @media screen and (min-width: 1024px) {
-    nav.main-navigation, footer nav.breadcrumbs, #site-banner, #logo-full, #copyright, nav.main-navigation .inner, #wrap > nav.breadcrumbs, .main-section > .speech-bubble, article {
+    nav.main-navigation, footer nav.breadcrumbs, #site-banner, #logo-full, #copyright, body.logged-in #wrap .main-section > .tabs.primary, nav.main-navigation .inner, #wrap > nav.breadcrumbs, .main-section > .speech-bubble, article {
       width: 640px; } }
 
 @media screen and (min-width: 1024px) {
@@ -699,6 +672,41 @@ blockquote {
     @media screen and (min-width: 1024px) {
       blockquote footer .name:hover {
         text-decoration: none; } }
+
+ul.menu li {
+  margin-left: 0; }
+  ul.menu li.leaf {
+    padding: 0;
+    list-style-image: none;
+    list-style-type: none; }
+
+.calendar {
+  width: auto; }
+
+body.logged-in #wrap .tabs.primary a,
+body.logged-in #wrap a.edit-link-simple {
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  background: #f5f5f5;
+  padding: 5px 15px;
+  border-radius: 4px 4px 0 0;
+  color: #2b912c; }
+  body.logged-in #wrap .tabs.primary a:hover,
+  body.logged-in #wrap a.edit-link-simple:hover {
+    text-decoration: underline; }
+body.logged-in #wrap a.edit-link-simple {
+  clear: both;
+  border-radius: 6px;
+  border: 1px solid #f5f5f5;
+  display: inline-block;
+  margin: 10px 0 5px 0;
+  text-decoration: none; }
+  body.logged-in #wrap a.edit-link-simple:hover {
+    border-color: #ddd; }
+body.logged-in #wrap .main-section > .tabs.primary {
+  margin-top: -25px;
+  margin-bottom: 25px; }
 
 .grid {
   overflow: hidden; }
