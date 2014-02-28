@@ -45,3 +45,10 @@ body.logged-in #wrap {
     margin-bottom: 25px;
   }
 }
+
+body.not-logged-in.page-user {
+  nav.tabs,
+  #user-login {
+    @extend %page-section-content;
+  }
+}

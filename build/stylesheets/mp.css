@@ -271,17 +271,21 @@ small, sup, figcaption, #wrap blockquote footer p, .vignette-intro, .section-vig
       padding-top: 3.75em;
       padding-bottom: 4.375em; } }
 
-nav.main-navigation, footer nav.breadcrumbs, #site-banner, #logo-full, #copyright, body.logged-in #wrap .main-section > .tabs.primary, nav.main-navigation .inner, #wrap > nav.breadcrumbs, .main-section > .speech-bubble, article {
+nav.main-navigation, footer nav.breadcrumbs, #site-banner, #logo-full, #copyright, body.logged-in #wrap .main-section > .tabs.primary, body.not-logged-in.page-user nav.tabs,
+body.not-logged-in.page-user #user-login, nav.main-navigation .inner, #wrap > nav.breadcrumbs, .main-section > .speech-bubble, article {
   margin-right: auto;
   margin-left: auto; }
   @media screen and (min-width: 600px) {
-    nav.main-navigation, footer nav.breadcrumbs, #site-banner, #logo-full, #copyright, body.logged-in #wrap .main-section > .tabs.primary, nav.main-navigation .inner, #wrap > nav.breadcrumbs, .main-section > .speech-bubble, article {
+    nav.main-navigation, footer nav.breadcrumbs, #site-banner, #logo-full, #copyright, body.logged-in #wrap .main-section > .tabs.primary, body.not-logged-in.page-user nav.tabs,
+    body.not-logged-in.page-user #user-login, nav.main-navigation .inner, #wrap > nav.breadcrumbs, .main-section > .speech-bubble, article {
       width: 520px; } }
   @media screen and (min-width: 768px) {
-    nav.main-navigation, footer nav.breadcrumbs, #site-banner, #logo-full, #copyright, body.logged-in #wrap .main-section > .tabs.primary, nav.main-navigation .inner, #wrap > nav.breadcrumbs, .main-section > .speech-bubble, article {
+    nav.main-navigation, footer nav.breadcrumbs, #site-banner, #logo-full, #copyright, body.logged-in #wrap .main-section > .tabs.primary, body.not-logged-in.page-user nav.tabs,
+    body.not-logged-in.page-user #user-login, nav.main-navigation .inner, #wrap > nav.breadcrumbs, .main-section > .speech-bubble, article {
       width: 580px; } }
   @media screen and (min-width: 1024px) {
-    nav.main-navigation, footer nav.breadcrumbs, #site-banner, #logo-full, #copyright, body.logged-in #wrap .main-section > .tabs.primary, nav.main-navigation .inner, #wrap > nav.breadcrumbs, .main-section > .speech-bubble, article {
+    nav.main-navigation, footer nav.breadcrumbs, #site-banner, #logo-full, #copyright, body.logged-in #wrap .main-section > .tabs.primary, body.not-logged-in.page-user nav.tabs,
+    body.not-logged-in.page-user #user-login, nav.main-navigation .inner, #wrap > nav.breadcrumbs, .main-section > .speech-bubble, article {
       width: 640px; } }
 
 @media screen and (min-width: 1024px) {
