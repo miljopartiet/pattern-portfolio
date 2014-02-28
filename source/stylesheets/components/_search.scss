@@ -9,10 +9,6 @@
     margin: 0;
     border-radius: 4px;
 
-    @include respond-to(600px) {
-      width: 70%;
-    }
-
     &:focus {
       border: 1px solid $warm-grey;
     }
