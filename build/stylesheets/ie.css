@@ -1245,7 +1245,8 @@ nav.breadcrumbs {
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 10px;
-  margin-left: -25px; }
+  margin-left: -25px;
+  z-index: 2000; }
   .suggestions ul {
     margin-left: 0;
     margin-left: 20px; }
@@ -1442,7 +1443,7 @@ article .lead p {
   margin-top: 2px; }
   article .lead p + p {
     margin-top: 8px; }
-article + article {
+article + article, .speech-bubble + article {
   margin-top: 1.875em;
   margin-top: 2.5em;
   margin-top: 3.75em; }
