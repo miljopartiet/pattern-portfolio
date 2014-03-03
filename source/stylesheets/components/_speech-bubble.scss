@@ -1,15 +1,9 @@
 .speech-bubble {
-  position: relative;
-  background: $yellow;
-  color: $magenta;
-  border-radius: 10px;
-  @include box-sizing(border-box);
-  padding: 18px 15px;
+  @extend %speech-bubble;
   margin-top: (20em/16);
 
   @include respond-to(768px) {
     margin-top: (30em/16);
-    padding: 25px 20px 25px 25px;
   }
 
   @extend %speech-bubble-corner;
