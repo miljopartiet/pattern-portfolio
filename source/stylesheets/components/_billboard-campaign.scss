@@ -20,11 +20,12 @@ body.has-billboard {
 
 .billboard-campaign-content {
   max-width: 660px;
-  margin: -140px auto 0 auto;
+  margin: -25px 10px 0 18px;
   @extend %speech-bubble;
   @extend %speech-bubble-corner;
 
   @include respond-to(768px) {
+    margin: -140px auto 0 auto;
     padding: 30px;
   }
 
