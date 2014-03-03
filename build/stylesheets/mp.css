@@ -1863,7 +1863,16 @@ form.speech-bubble {
         color: #fff; }
 
 .loading article.message {
-  position: relative; }
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 20px;
+  padding-left: 52px; }
+  @media screen and (min-width: 768px) {
+    .loading article.message {
+      margin-top: 40px;
+      padding-left: 0; } }
   .loading article.message:after {
     content: "";
     display: block;
@@ -1871,9 +1880,12 @@ form.speech-bubble {
     height: 32px;
     position: absolute;
     top: 0;
-    left: -52px;
+    left: 0;
     background: transparent url(../images/load-grey-64.gif) 0 0 no-repeat;
     background-size: 32px 32px; }
+    @media screen and (min-width: 768px) {
+      .loading article.message:after {
+        left: -52px; } }
 article header + h1 {
   margin-top: 30px; }
 article p a,
