@@ -6,7 +6,7 @@
   padding: 8px 20px 16px 20px;
 
   @include respond-to(768px) {
-    text-align:center;
+    text-align: center;
   }
 
   p {
@@ -84,6 +84,7 @@
     font-size: (24em/16);
     line-height: 1;
     -webkit-font-smoothing: antialiased;
+    text-decoration: none;
   }
 }
 
