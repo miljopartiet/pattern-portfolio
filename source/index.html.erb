@@ -1,26 +1,22 @@
 ---
-body_class: front
+body_class: "front has-billboard"
 ---
+<div class="billboard-campaign">
+  <a href="/topic.html" class="action-link">
+    <div class="image">
+      <img src="/dynamic/campaign-warm-cold.png" alt="">
+    </div>
+    <div class="billboard-campaign-content">
+      <div class="inner">
+        <h2>Politiken måste bli varmare.<br> Inte klimatet.</h2>
+        <p class="action-link">Läs mer om vår klimatterapi</p>
+      </div>
+    </div>
+  </a>
+</div>
+
 <div class="main-section">
   <article>
-    <div class="illustration">
-      <figure>
-        <div>
-          <div class="embedded-video widescreen">
-            <video autoplay="autoplay" height="360" loop="loop" width="640">
-              <source src="/dynamic/1_loop.mp4" type="video/mp4">
-              <source src="/dynamic/1_loop.webm" type="video/webm">
-              <img src="http://placehold.it/640x360" alt="">
-            </video>
-          </div>
-        </div>
-        <figcaption>
-        <b>Bostad</b>
-        Alla behöver en bostad. Men bristen på bostäder ökar. Därför vill Miljöpartiet bygga fler billiga och miljövänliga bostäder.
-        </figcaption>
-      </figure>
-    </div>
-
     <%= partial 'news_list' %>
 
     <div class="fetch-more">

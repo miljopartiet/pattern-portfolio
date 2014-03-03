@@ -1,0 +1,48 @@
+body.has-billboard {
+  #site-banner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0,0,0,.3);
+  }
+}
+
+.billboard-campaign {
+  max-width: 1100px;
+  margin: 0 auto 0 auto;
+
+  a {
+    display: block;
+    text-decoration: none;
+  }
+}
+
+.billboard-campaign-content {
+  max-width: 660px;
+  margin: -140px auto 0 auto;
+  @extend %speech-bubble;
+  @extend %speech-bubble-corner;
+
+  @include respond-to(768px) {
+    padding: 30px;
+  }
+
+  h2 {
+    margin: 0;
+    @extend %typography-heading-medium;
+  }
+
+  p {
+    margin: .25em 0 0 0;
+    @extend %typography-heading-serif;
+  }
+
+  .action-link {
+    text-decoration: underline;
+
+    a:hover & {
+      text-decoration: none;
+    }
+  }
+}

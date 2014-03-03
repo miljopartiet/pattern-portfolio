@@ -28,6 +28,19 @@
   }
 }
 
+%typography-heading-medium {
+  font-family: $mp-sans;
+  font-weight: normal;
+  font-size: (30em/16);
+  line-height: (24/30);
+  text-rendering: optimizeLegibility;
+
+  @include respond-to(768px) {
+    font-size: (48em/16);
+    line-height: (40/48);
+  }
+}
+
 %typography-heading {
   font-family: $mp-sans;
   font-weight: normal;
