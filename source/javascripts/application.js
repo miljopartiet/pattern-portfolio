@@ -1,3 +1,6 @@
+//= require lib/_fastclick
+//= require _navigation
+
 (function($) {
   "use strict";
   namespace('Mp');
@@ -19,54 +22,6 @@
   };
 
 
-  Mp.NavigationToggler = function(element) {
-    var $toggler = $(element),
-        $body = $('body'),
-        setup_run = false,
-        $nav;
-
-    var hide = function(e) {
-      e.preventDefault();
-      $nav.slideUp(150, function() {
-        $nav.addClass('hidden');
-      });
-    };
-
-    var show = function(e) {
-      e.preventDefault();
-      $nav.slideDown(250, function() {
-        $nav.removeClass('hidden');
-      });
-    };
-
-    var setup = function() {
-      if (setup_run) {
-        return;
-      }
-      var $original_nav = $('#site-navigation');
-      $nav = $original_nav.clone();
-      $nav.attr('id', 'site-top-navigation')
-        .addClass('hidden')
-        .css('display', 'none');
-
-      $nav.append('<a href="#" class="close"><span>Stäng meny</span></a>');
-      $nav.find('a.close').bind('click', hide);
-
-      $body.append($nav);
-      setup_run = true;
-    };
-
-    $toggler.bind('click', show);
-    setup();
-
-    $(window).smartresize(function() {
-      if ($body.width() >= 768) {
-        $nav.hide();
-      } else if (!$nav.hasClass('hidden')) {
-        $nav.show();
-      }
-    });
-  };
 
   Mp.focusAndCopy = function(selector) {
     var selectIt = function() {
@@ -159,9 +114,11 @@
   $(document).ready(function() {
     var $html = $('html');
 
-    if (! $html.hasClass('lte8')) {
-      Mp.NavigationToggler('#skip-to-navigation');
-    }
+    // Get rid of those pesky 300ms on mobile clicks
+    FastClick.attach(document.body);
+
+    Mp.NavigationToggler('#skip-to-navigation', '#nav');
+    Mp.NavigationToggler('#skip-to-search', '#search');
 
     if ($html.hasClass('lte9')) {
       Mp.placeholderFallback();
