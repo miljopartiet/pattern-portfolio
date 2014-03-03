@@ -132,6 +132,12 @@ $base-line-height: 1.5;
   @include respond-to(768px) {
     padding: 25px 20px 25px 25px;
   }
+
+  .inner {
+    @include clearfix;
+    position: relative;
+    z-index: 60;
+  }
 }
 
 %speech-bubble-corner {

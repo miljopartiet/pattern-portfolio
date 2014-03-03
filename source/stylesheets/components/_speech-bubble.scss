@@ -42,12 +42,6 @@
     }
   }
 
-  .inner {
-    @include clearfix;
-    position: relative;
-    z-index: 60;
-  }
-
   h2 {
     margin-top: 0;
   }
