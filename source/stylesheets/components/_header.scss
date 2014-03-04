@@ -40,7 +40,7 @@
   @include clearfix;
   background: $green;
   position: relative;
-  padding: 10px 0;
+  padding: 10px 0 10px 0;
 
   &.active {
     position: fixed;
@@ -51,7 +51,8 @@
   }
 
   .inner {
-    @extend %page-section-content-wide;
+    max-width: 970px;
+    margin: 0 auto;
   }
 }
 
@@ -62,11 +63,28 @@ body.site-banner-is-active {
   right: 0;
   bottom: 0;
   left: 0;
+  padding-top: 57px;
+}
+
+// Navigation elements
+
+#site-banner .navigation {
+  @include clearfix;
+  position: relative;
+  padding: 0 18px;
+
+  @include respond-to(768px) {
+    margin-right: 145px;
+    margin-left: 126px;
+  }
 }
 
 #logo {
   float: left;
-  margin: 0 0 0 18px;
+
+  @include respond-to(768px) {
+    margin: 0 0 0 -126px;
+  }
 
   a {
     display: block;
@@ -78,12 +96,14 @@ body.site-banner-is-active {
   }
 }
 
-// Navigation elements
-
 #go-to-navigation {
-  margin: 0 18px 0 0;
-  float: right;
   @include clearfix;
+  float: right;
+  margin: 0;
+
+  @include respond-to(768px) {
+    margin: 0 -145px 0 0;
+  }
 
   li {
     margin: 0;
@@ -143,6 +163,14 @@ body.site-banner-is-active {
     display: block;
   }
 
+  @include respond-to(768px) {
+    @include clearfix;
+    padding: 0;
+    display: block;
+    clear: none;
+    margin-left: 40px;
+  }
+
   ul {
     margin: 0;
   }
@@ -164,6 +192,14 @@ body.site-banner-is-active {
       line-height: 1;
       -webkit-font-smoothing: antialiased;
       border-top: 1px solid rgba(255, 255, 255, .2);
+
+      @include respond-to(768px) {
+        float: left;
+        border: none;
+        padding-top: 0;
+        padding-bottom: 0;
+        line-height: 37px;
+      }
     }
   }
 
@@ -178,7 +214,21 @@ body.site-banner-is-active {
       border-top: 1px solid rgba(255, 255, 255, .2);
     }
   }
+}
 
+#secondary-nav {
+  @include respond-to(768px) {
+    display: none;
+
+    .open & {
+      display: block;
+      position: absolute;
+      right: -145px;
+      top: 47px;
+      max-width: 400px;
+      background: $green;
+    }
+  }
 }
 
 #search {
