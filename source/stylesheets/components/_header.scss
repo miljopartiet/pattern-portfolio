@@ -57,15 +57,16 @@
 }
 
 body.site-banner-is-active {
-  position: fixed;
-  overflow: hidden;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding-top: 57px;
+  @include respond-to(768px, false, max) {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-top: 57px;
+  }
 }
-
 // Navigation elements
 
 #site-banner .navigation {
@@ -219,6 +220,7 @@ body.site-banner-is-active {
 #secondary-nav {
   @include respond-to(768px) {
     display: none;
+    background: $green;
 
     .open & {
       display: block;
@@ -226,14 +228,18 @@ body.site-banner-is-active {
       right: -145px;
       top: 47px;
       max-width: 400px;
-      background: $green;
     }
   }
 }
 
 #search {
+  float: left;
+  width: 100%;
+  @include box-sizing(border-box);
   clear: both;
   display: none;
+  margin: 10px 0 0 0;
+  position: relative;
   padding: 10px 18px 0 18px;
   border-top: 1px solid rgba(255, 255, 255, .2);
 

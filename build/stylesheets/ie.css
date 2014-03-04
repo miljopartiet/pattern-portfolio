@@ -237,8 +237,6 @@ small, sup, figcaption, #wrap blockquote footer p, .vignette-intro, .section-vig
   padding-left: 0;
   padding-top: 4.375em;
   padding-bottom: 5em; }
-  .main-section:first-child, #site-footer:first-child {
-    padding-top: 0; }
 
 .main-section-cream, .main-section-green, .main-section-magenta {
   padding-top: 1.5625em;
@@ -755,6 +753,14 @@ body.logged-in #wrap .main-section > .tabs.primary {
     display: block; }
     .main-section-green .section-vignette-intro b, .main-section-magenta .section-vignette-intro b {
       color: #fff; }
+
+body.has-billboard #site-banner {
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 0;
+  right: 0; }
+body.has-billboard #secondary-nav {
+  background: rgba(0, 0, 0, 0.3); }
 
 .billboard-campaign {
   max-width: 1100px;
@@ -1669,15 +1675,6 @@ header.intro .article-section {
     max-width: 970px;
     margin: 0 auto; }
 
-body.site-banner-is-active {
-  position: fixed;
-  overflow: hidden;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding-top: 57px; }
-
 #site-banner .navigation {
   *zoom: 1;
   position: relative;
@@ -1798,18 +1795,25 @@ body.site-banner-is-active {
       border-top: 1px solid rgba(255, 255, 255, 0.2); }
 
 #secondary-nav {
-  display: none; }
+  display: none;
+  background: #2b912c; }
   .open #secondary-nav {
     display: block;
     position: absolute;
     right: -145px;
     top: 47px;
-    max-width: 400px;
-    background: #2b912c; }
+    max-width: 400px; }
 
 #search {
+  float: left;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   clear: both;
   display: none;
+  margin: 10px 0 0 0;
+  position: relative;
   padding: 10px 18px 0 18px;
   border-top: 1px solid rgba(255, 255, 255, 0.2); }
   #search.open {

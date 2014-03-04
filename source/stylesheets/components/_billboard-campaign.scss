@@ -1,4 +1,16 @@
 body.has-billboard {
+  #site-banner {
+    @include respond-to(768px) {
+      background: rgba(0,0,0,.3);
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  #secondary-nav {
+    background: rgba(0,0,0,.3);
+  }
 }
 
 .billboard-campaign {
