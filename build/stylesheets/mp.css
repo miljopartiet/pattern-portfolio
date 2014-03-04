@@ -70,7 +70,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     width: 145px;
     margin-right: -110px; } }
 
-.conversation .answer:after, .speech-bubble:after, .conversation .question:after {
+.conversation .answer .content:after, .speech-bubble:after, .conversation .question:after {
   content: "";
   position: absolute;
   left: -11px;
@@ -81,27 +81,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background-size: 100%;
   z-index: 40; }
   @media screen and (min-width: 600px) {
-    .conversation .answer:after, .speech-bubble:after, .conversation .question:after {
+    .conversation .answer .content:after, .speech-bubble:after, .conversation .question:after {
       width: 39px;
       height: 38px;
       left: -14px;
       bottom: -8px; } }
   @media screen and (min-width: 768px) {
-    .conversation .answer:after, .speech-bubble:after, .conversation .question:after {
+    .conversation .answer .content:after, .speech-bubble:after, .conversation .question:after {
       left: -17px;
       bottom: -9px;
       width: 49px;
       height: 48px; } }
 
-.conversation .answer:after {
+.conversation .answer .content:after {
   left: auto;
   right: -9px;
   background-image: url(../images/speech-bubble-corner-reversed.svg); }
   @media screen and (min-width: 600px) {
-    .conversation .answer:after {
+    .conversation .answer .content:after {
       right: -15px; } }
   @media screen and (min-width: 768px) {
-    .conversation .answer:after {
+    .conversation .answer .content:after {
       right: -17px; } }
 
 @font-face {
@@ -2126,7 +2126,7 @@ header.intro .article-section {
 .conversation {
   list-style: none;
   margin: 1.25em 0 0 0;
-  padding: 1.4375em 0; }
+  padding: 1.4375em 0 0 0; }
   @media screen and (min-width: 1024px) {
     .conversation {
       float: left;
@@ -2153,7 +2153,6 @@ header.intro .article-section {
       .conversation .content p:first-child {
         margin: 0; }
   .conversation .byline p {
-    position: absolute;
     margin: 0; }
   .conversation .byline img {
     position: absolute;
@@ -2184,6 +2183,7 @@ header.intro .article-section {
           .conversation .question .content:after {
             width: 87.2549%; } }
     .conversation .question .byline p {
+      position: absolute;
       top: -1.76923em; }
     .conversation .question .byline img {
       left: -14.70588%; }
@@ -2194,15 +2194,16 @@ header.intro .article-section {
     @media screen and (min-width: 300px) and (max-width: 767px) {
       .conversation .answer {
         margin-right: 0; } }
-    .conversation .answer:after {
-      background-image: url(../images/speech-bubble-corner-reversed-cream.svg); }
     .conversation .answer .content {
       padding-top: 25px;
       background: #f6f4e5;
       border-radius: 7px; }
+      .conversation .answer .content:after {
+        background-image: url(../images/speech-bubble-corner-reversed-cream.svg); }
     .conversation .answer .byline img {
       right: -15.68627%; }
     .conversation .answer .byline p {
+      position: static;
       padding-top: 0.76923em; }
   @media screen and (min-width: 300px) and (max-width: 767px) {
     .conversation img {

@@ -1,7 +1,7 @@
 .conversation {
   list-style: none;
   margin: (20em/16) 0 0 0;
-  padding: (23em/16) 0;
+  padding: (23em/16) 0 0 0;
 
   @include respond-to(1024px) {
     float: left;
@@ -18,7 +18,7 @@
       text-decoration: underline;
     }
 
-    &:hover {      
+    &:hover {
       .read-more {
         color: $green-dark;
         text-decoration: none;
@@ -46,7 +46,6 @@
 
   .byline {
     p {
-      position: absolute;
       margin: 0;
       @extend %typography-text-small;
     }
@@ -96,6 +95,7 @@
 
     .byline {
       p {
+        position: absolute;
         top: (-23em/13);
       }
 
@@ -114,15 +114,15 @@
       margin-right: 0;
     }
 
-    @extend %speech-bubble-corner-reversed;
-    &:after {
-      background-image: url(../images/speech-bubble-corner-reversed-cream.svg);
-    }
-
     .content {
       padding-top: 25px;
       background: $cream;
       border-radius: 7px;
+      @extend %speech-bubble-corner-reversed;
+
+      &:after {
+        background-image: url(../images/speech-bubble-corner-reversed-cream.svg);
+      }
 
       p {
         @extend %typography-text;
@@ -135,6 +135,7 @@
       }
 
       p {
+        position: static;
         padding-top: (10em/13);
       }
     }
