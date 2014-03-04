@@ -1,10 +1,6 @@
 %page-section {
   padding: (30em/16) (18em/16) (35em/16) (18em/16);
 
-  &:first-child {
-    padding-top: 0;
-  }
-
   @include respond-to(480px) {
     padding-top: (50em/16);
     padding-bottom: (60em/16);
