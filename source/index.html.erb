@@ -39,52 +39,58 @@ body_class: "front has-billboard"
 <div class="main-section main-section-cream local-x">
   <%= partial 'bubbles/localize' %>
 
-  <article>
-    <header class="section-vignette">
-      <span class="section-vignette-intro">Här visar vi lokal politik från <a href="/jamtland.html">Östersund</a> och <a href="/jamtland.html">Jämtland</a>. Du kan enkelt <a href="">ändra kommun</a> om du vill.</span>
-    </header>
+  <div id="loader" class="loading">
+    <article class="message">
+      <h1>Hämtar kommun</h1>
+    </article>
 
-    <h1>
-      <a href="#" class="topic">Östersund</a>
-      <span>En ekologisk kommun mitt i sameland</span>
-    </h1>
+    <article>
+      <header class="section-vignette">
+        <span class="section-vignette-intro">Här visar vi lokal politik från <a href="/jamtland.html">Östersund</a> och <a href="/jamtland.html">Jämtland</a>. Du kan enkelt <a href="">ändra kommun</a> om du vill.</span>
+      </header>
 
-    <div class="topics">
-      <div class="topic">
-        <h2><a href="#">En skola för livet.</a></h2>
-        <p>Miljöpartiet i Östersund vill ge de kommunala skolorna större pedagogisk frihet och satsa på matkvalitén i skolan. Vi vill anpassa barnomsorgen efter familjers behov och ha mindre barngrupper i förskolan.</p>
-      </div>
-      <div class="topic">
-        <h2><a href="#">Ungdomarnas situation.</a></h2>
-        <p>Kommunens satsning på ”Mötesplatser unga” ska utvecklas vidare. Vi vill också bygga boende för ungdomar/studenter, stärka arbetet mot droger och skapa satsa på praktikplatser och jobb för unga.</p>
-      </div>
-      <div class="topic">
-        <h2><a href="#">Ungdomarnas situation.</a></h2>
-        <p>Kommunens satsning på ”Mötesplatser unga” ska utvecklas vidare. Vi vill också bygga boende för ungdomar/studenter, stärka arbetet mot droger och skapa satsa på praktikplatser och jobb för unga.</p>
-      </div>
-    </div>
-  </article>
-  <article>
-    <h1>
-      <a href="/jamtland.html" class="topic">Jämtland</a>
-      <span>Ett livskraftigt Jämtland</span>
-    </h1>
+      <h1>
+        <a href="#" class="topic">Östersund</a>
+        <span>En ekologisk kommun mitt i sameland</span>
+      </h1>
 
-    <div class="topics">
-      <div class="topic">
-        <h2><a href="#">Stoppa klimatkatastrofen med förnybar energi.</a></h2>
-        <p>Klimathotet är globalt, men alla utsläpp är lokala. Miljöpartiet i Jämtland vill bygga ett center för miljöteknik i Sveg, utveckla järnvägstrafiken och bryt olje- och fossilbränsleberoendet. Jämtland, med sin potential för förnybar energi, ska vara drivande i klimatomställningen.</p>
+      <div class="topics">
+        <div class="topic">
+          <h2><a href="#">En skola för livet.</a></h2>
+          <p>Miljöpartiet i Östersund vill ge de kommunala skolorna större pedagogisk frihet och satsa på matkvalitén i skolan. Vi vill anpassa barnomsorgen efter familjers behov och ha mindre barngrupper i förskolan.</p>
+        </div>
+        <div class="topic">
+          <h2><a href="#">Ungdomarnas situation.</a></h2>
+          <p>Kommunens satsning på ”Mötesplatser unga” ska utvecklas vidare. Vi vill också bygga boende för ungdomar/studenter, stärka arbetet mot droger och skapa satsa på praktikplatser och jobb för unga.</p>
+        </div>
+        <div class="topic">
+          <h2><a href="#">Ungdomarnas situation.</a></h2>
+          <p>Kommunens satsning på ”Mötesplatser unga” ska utvecklas vidare. Vi vill också bygga boende för ungdomar/studenter, stärka arbetet mot droger och skapa satsa på praktikplatser och jobb för unga.</p>
+        </div>
       </div>
-      <div class="topic">
-        <h2><a href="#">Matriket Jämtland.</a></h2>
-        <p>Mat ska hänga samman med livskvalitet och god miljö. Vi vill ha mer ekologisk mat, kortare djurtransporter och småskaliga slakterier.</p>
+    </article>
+    <article>
+      <h1>
+        <a href="/jamtland.html" class="topic">Jämtland</a>
+        <span>Ett livskraftigt Jämtland</span>
+      </h1>
+
+      <div class="topics">
+        <div class="topic">
+          <h2><a href="#">Stoppa klimatkatastrofen med förnybar energi.</a></h2>
+          <p>Klimathotet är globalt, men alla utsläpp är lokala. Miljöpartiet i Jämtland vill bygga ett center för miljöteknik i Sveg, utveckla järnvägstrafiken och bryt olje- och fossilbränsleberoendet. Jämtland, med sin potential för förnybar energi, ska vara drivande i klimatomställningen.</p>
+        </div>
+        <div class="topic">
+          <h2><a href="#">Matriket Jämtland.</a></h2>
+          <p>Mat ska hänga samman med livskvalitet och god miljö. Vi vill ha mer ekologisk mat, kortare djurtransporter och småskaliga slakterier.</p>
+        </div>
+        <div class="topic">
+          <h2><a href="#">Grönare närmiljö.</a></h2>
+          <p>Vi vill skapa ett friluftsområde på Storsjö strand, återställa Storsjön vid Sölvbacka strömmar och värna om en miljö fri från giftiga kemikalier.</p>
+        </div>
       </div>
-      <div class="topic">
-        <h2><a href="#">Grönare närmiljö.</a></h2>
-        <p>Vi vill skapa ett friluftsområde på Storsjö strand, återställa Storsjön vid Sölvbacka strömmar och värna om en miljö fri från giftiga kemikalier.</p>
-      </div>
-    </div>
-  </article>
+    </article>
+  </div>
 </div>
 
 <div class="main-section main-section-magenta">

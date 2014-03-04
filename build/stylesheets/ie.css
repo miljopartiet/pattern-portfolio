@@ -67,7 +67,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 145px;
   margin-right: -110px; }
 
-.conversation .answer:after, .speech-bubble:after, .conversation .question:after {
+.conversation .answer .content:after, .speech-bubble:after, .conversation .question:after {
   content: "";
   position: absolute;
   left: -11px;
@@ -86,7 +86,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 49px;
   height: 48px; }
 
-.conversation .answer:after {
+.conversation .answer .content:after {
   left: auto;
   right: -9px;
   background-image: url(../images/speech-bubble-corner-reversed.svg);
@@ -219,7 +219,9 @@ small, sup, figcaption, #wrap blockquote footer p, .vignette-intro, .section-vig
   padding-top: 3.75em;
   padding-bottom: 4.375em; }
 
-nav.main-navigation, footer nav.breadcrumbs, #site-banner, #logo-full, #copyright, body.logged-in #wrap .main-section > .tabs.primary, body.not-logged-in.page-user nav.tabs,
+nav.main-navigation, footer nav.breadcrumbs, #site-banner, #logo-full, #copyright, body.logged-in #wrap .main-section > .tabs.primary, body.logged-in #wrap #main > .tabs,
+body.logged-in #wrap #main > .action-links,
+body.logged-in #wrap #main > .drupal-messages, body.not-logged-in.page-user nav.tabs,
 body.not-logged-in.page-user #user-login, nav.main-navigation .inner, #wrap > nav.breadcrumbs, .main-section > .speech-bubble, article {
   margin-right: auto;
   margin-left: auto;
@@ -1440,6 +1442,26 @@ form.speech-bubble {
       .illustration figure figcaption b {
         color: #fff; }
 
+.loading article.message {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 20px;
+  padding-left: 52px;
+  margin-top: 40px;
+  padding-left: 0; }
+  .loading article.message:after {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent url(../images/load-grey-64.gif) 0 0 no-repeat;
+    background-size: 32px 32px;
+    left: -52px; }
 article header + h1 {
   margin-top: 30px; }
 article p a,
@@ -1524,12 +1546,6 @@ article .body figure {
     .article-section .subsection-header h3,
     .article-section .subsection-header .subsection-lead {
       display: inline; }
-  .article-section.loading h2 {
-    background: transparent url(../images/load-grey-64.gif) 0 0 no-repeat;
-    background-size: 32px 32px;
-    margin-left: -52px;
-    padding-left: 52px;
-    min-height: 32px; }
 
 html.svg .article-section .vignette {
   background-image: url(../images/bg-vignette.svg); }
@@ -1620,7 +1636,7 @@ header.intro .article-section {
 .conversation {
   list-style: none;
   margin: 1.25em 0 0 0;
-  padding: 1.4375em 0;
+  padding: 1.4375em 0 0 0;
   float: left;
   margin-top: 1.25em;
   margin-right: 6.25%;
@@ -1642,7 +1658,6 @@ header.intro .article-section {
       .conversation .content p:first-child {
         margin: 0; }
   .conversation .byline p {
-    position: absolute;
     margin: 0; }
   .conversation .byline img {
     position: absolute;
@@ -1667,6 +1682,7 @@ header.intro .article-section {
         background: rgba(0, 0, 0, 0.04);
         border-radius: 7px 0 7px 0; }
     .conversation .question .byline p {
+      position: absolute;
       top: -1.76923em; }
     .conversation .question .byline img {
       left: -14.70588%; }
@@ -1674,15 +1690,16 @@ header.intro .article-section {
     position: relative;
     margin-left: 11.29032%;
     margin-right: 12.09677%; }
-    .conversation .answer:after {
-      background-image: url(../images/speech-bubble-corner-reversed-cream.svg); }
     .conversation .answer .content {
       padding-top: 25px;
       background: #f6f4e5;
       border-radius: 7px; }
+      .conversation .answer .content:after {
+        background-image: url(../images/speech-bubble-corner-reversed-cream.svg); }
     .conversation .answer .byline img {
       right: -15.68627%; }
     .conversation .answer .byline p {
+      position: static;
       padding-top: 0.76923em; }
 
 .conversations {

@@ -44,6 +44,14 @@ body.logged-in #wrap {
     margin-top: -25px;
     margin-bottom: 25px;
   }
+
+  #main {
+    > .tabs,
+    > .action-links,
+    > .drupal-messages {
+      @extend %page-section-content;
+    }
+  }
 }
 
 body.not-logged-in.page-user {

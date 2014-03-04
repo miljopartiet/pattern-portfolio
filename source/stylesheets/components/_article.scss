@@ -4,6 +4,34 @@
 article {
   @extend %page-section-content;
 
+  .loading &.message {
+    @include box-sizing(border-box);
+    position: relative;
+    margin-top: 20px;
+    padding-left: 52px;
+
+    @include respond-to(768px) {
+      margin-top: 40px;
+      padding-left: 0;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: transparent url(../images/load-grey-64.gif) 0 0 no-repeat;
+      background-size: 32px 32px;
+
+      @include respond-to(768px) {
+        left: -52px;
+      }
+    }
+  }
+
   header {
     @extend %content-column-expanded;
 
@@ -209,15 +237,6 @@ article {
     }
   }
 
-  &.loading {
-    h2 {
-      background: transparent url(../images/load-grey-64.gif) 0 0 no-repeat;
-      background-size: 32px 32px;
-      margin-left: -52px;
-      padding-left: 52px;
-      min-height: 32px;
-    }
-  }
 }
 
 html.svg .article-section .vignette {
