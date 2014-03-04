@@ -49,34 +49,41 @@
   <body>
     <div id="wrap">
       <header role="banner" id="site-banner">
-        <div id="logo">
-          <a href="/">Miljöpartiet</a>
-        </div>
-        <nav role="navigation" id="top-navigation">
-          <ul class="menu">
-            <li class="first leaf"><a href="/topics.html"><span>Vår politik</span></a></li>
-            <li class="leaf active-trail"><a href="/about.html"><span>Om Miljöpartiet de gröna</span></a></li>
-            <li class="leaf"><a href="/conversations.html"><span>Prata politik</span></a></li>
-          </ul>
-        </nav>
-        <div id="secondary-navigation" data-limit="3" data-show-more-copy="+ Fler" data-show-less-copy="– Färre">
-          <form action="/search" method="get" class="search">
-            <input type="search" name="searchtext" id="main-search" data-source="/data/search.json" autocomplete="off">
-            <button type="submit">Sök</button>
-          </form>
-          <div>
-            <ul class="menu">
-              <li class="first leaf"><a href="#">Bli medlem</a>
-              <li class="leaf"><a href="#">Kontakt</a>
-              <li class="leaf"><a href="#">Press</a>
-              <li class="leaf"><a href="#">Skolarbeten</a></li>
-              <li class="leaf"><a href="#">Other languages</a></li>
-              <li class="leaf"><a href="#">Lättläst</a></li>
-              <li class="leaf"><a href="#">Ge en gåva</a></li>
-              <li class="leaf"><a href="#">Lediga jobb</a></li>
+        <div class="inner">
+          <div class="navigation">
+            <div id="logo">
+              <a href="/">Miljöpartiet</a>
+            </div>
+            <ul id="go-to-navigation">
+              <li><a href="#search" id="skip-to-search">
+                Sök</a></li><li><a href="#navigation" id="skip-to-navigation">
+                Meny
+              </a></li>
             </ul>
+            <nav id="nav" role="navigation">
+              <ul id="primary-nav">
+                <li class="nav-item-primary first leaf"><a href="/topics.html"><span>Vår politik</span></a></li>
+                <li class="nav-item-primary leaf active-trail"><a href="/about.html"><span>Om oss</span></a></li>
+                <li class="nav-item-primary leaf"><a href="/conversations.html"><span>Prata politik</span></a></li>
+              </ul>
+              <ul id="secondary-nav">
+                <li class="nav-item-secondary leaf"><a href="#">Bli medlem</a>
+                <li class="nav-item-secondary leaf"><a href="#">Kontakt</a>
+                <li class="nav-item-secondary leaf"><a href="#">Press</a>
+                <li class="nav-item-secondary leaf"><a href="#">Skolarbeten</a></li>
+                <li class="nav-item-secondary leaf"><a href="#">Other languages</a></li>
+                <li class="nav-item-secondary leaf"><a href="#">Lättläst</a></li>
+                <li class="nav-item-secondary leaf"><a href="#">Ge en gåva</a></li>
+                <li class="nav-item-secondary leaf"><a href="#">Lediga jobb</a></li>
+              </ul>
+            </nav>
+            <div id="search" role="search">
+              <form action="/search" method="get" class="search">
+                <input type="search" name="searchtext" id="main-search" data-source="/data/search.json" autocomplete="off">
+                <button type="submit">Sök</button>
+              </form>
+            </div>
           </div>
-          <a href="#site-navigation" id="skip-to-navigation">Meny</a>
         </div>
       </header>
       
@@ -163,38 +170,6 @@
 </p>
         </nav>
         
-        <nav role="navigation search" id="site-navigation" class="main-navigation">
-          <div class="inner">
-            <div class="sections">
-              <ul class="menu">
-                <li class="first leaf start"><a href="/">Hem</a></li>
-                <li class="leaf active-trail"><a href="/topics.html">Vår politik</a></li>
-                <li class="leaf"><a href="/about.html">Om Miljöpartiet de gröna</a></li>
-                <li class="leaf"><a href="/conversations.html">Prata politik</a></li>
-              </ul>
-            </div>
-            <div class="first">
-              <ul class="menu">
-                <li class="first leaf"><a href="#">Bli medlem</a></li>
-                <li class="leaf"><a href="#">Kontakt</a></li>
-                <li class="leaf"><a href="#">Press</a></li>
-                <li class="leaf"><a href="#">Skolarbeten</a></li>
-              </ul>
-            </div>
-            <div class="second">
-              <ul class="menu">
-                <li class="first leaf"><a href="#">Other languages</a></li>
-                <li class="leaf"><a href="#">Lättläst</a></li>
-                <li class="leaf"><a href="#">Ge en gåva</a></li>
-                <li class="leaf"><a href="#">Lediga jobb</a></li>
-              </ul>
-            </div>
-            <form action="/search" method="get" class="search">
-              <input type="search" name="query">
-              <button type="submit">Sök</button>
-            </form>
-          </div>
-        </nav>
         <p id="logo-full"><a href="/">Miljöpartiet de gröna</a></p>
         <p id="copyright" class="copy">
           Allt innehåll är licensierat under en Creative Commons Erkännande 3.0 Unported Licens om inte annat anges.
