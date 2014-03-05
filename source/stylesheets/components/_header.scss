@@ -56,6 +56,16 @@
     z-index: 77777;
   }
 
+  @include transition(transform, .3s);
+
+  &.hidden {
+    @include translate(0, -80px);
+  }
+
+  &.visible {
+    @include translate(0, 0);
+  }
+
   .inner {
     @include clearfix;
     max-width: 970px;
