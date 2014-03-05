@@ -48,3 +48,7 @@
     color: $yellow;
   }
 }
+
+.content-column {
+  @extend %page-section-content;
+}

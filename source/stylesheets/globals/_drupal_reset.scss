@@ -60,3 +60,11 @@ body.not-logged-in.page-user {
     @extend %page-section-content;
   }
 }
+
+#wrap .pager {
+  margin-top: 20px;
+
+  @include respond-to(768px) {
+    margin-top: 40px;
+  }
+}
