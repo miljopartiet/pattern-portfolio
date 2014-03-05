@@ -6,9 +6,9 @@
     var toggle = function(event) {
       event.preventDefault();
 
+      $(toggler).toggleClass("active");
       $(target).toggleClass("open");
-      $("body").toggleClass("site-banner-is-active");
-      $("#site-banner").toggleClass("active");
+      $("body").toggleClass("site-banner-is-detached");
     };
 
     $(toggler).bind("click", toggle);

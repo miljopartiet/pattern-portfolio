@@ -37,26 +37,55 @@
 }
 
 #site-banner {
-  @include clearfix;
   background: $green;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding: 10px 0 10px 0;
 
-  &.active {
+  @include respond-to(768px) {
+    padding: 18px 0;
+  }
+
+  &.detached {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 99999;
+    z-index: 77777;
+  }
+
+  // Add a gradient
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    @include background(linear-gradient(top, #00730a, #339933, #00730a));
+    z-index: 88888;
+
+    @include respond-to(768px) {
+      height: 60px;
+    }
   }
 
   .inner {
+    @include clearfix;
     max-width: 970px;
     margin: 0 auto;
+    position: relative;
+    z-index: 99999;
   }
 }
 
-body.site-banner-is-active {
+#main {
+  padding-top: 50px;
+}
+
+body.site-banner-is-detached {
   @include respond-to(768px, false, max) {
     position: fixed;
     overflow: hidden;
@@ -64,7 +93,10 @@ body.site-banner-is-active {
     right: 0;
     bottom: 0;
     left: 0;
-    padding-top: 57px;
+
+    #site-banner {
+      bottom: 0;
+    }
   }
 }
 // Navigation elements
@@ -73,10 +105,12 @@ body.site-banner-is-active {
   @include clearfix;
   position: relative;
   padding: 0 18px;
+  z-index: 4000;
 
   @include respond-to(768px) {
-    margin-right: 145px;
-    margin-left: 126px;
+    // Mirror the widths of logo and go to navigation
+    margin-right: 160px;
+    margin-left: 101px;
   }
 }
 
@@ -84,26 +118,32 @@ body.site-banner-is-active {
   float: left;
 
   @include respond-to(768px) {
-    margin: 0 0 0 -126px;
+    margin: 0 0 0 -101px;
   }
 
   a {
     display: block;
     text-indent: -9999px;
-    width: 126px;
-    height: 37px;
+    width: 101px;
+    height: 30px;
     background: transparent url(../images/logo-side.svg) 0 0 no-repeat;
     background-size: 100%;
+
+    @include respond-to(768px) {
+      width: 135px;
+      height: 40px;
+    }
   }
 }
 
 #go-to-navigation {
   @include clearfix;
   float: right;
-  margin: 0;
+  margin: 0 -10px 0 0;
 
   @include respond-to(768px) {
-    margin: 0 -145px 0 0;
+    width: 160px;
+    margin: 0 -160px 0 0;
   }
 
   li {
@@ -111,37 +151,52 @@ body.site-banner-is-active {
     padding: 0;
     list-style: none;
     display: inline;
+    text-align: right;
   }
 
   a {
-    display: inline-block;
+    float: right;
     color: #fff;
     font-family: $mp-sans;
     font-weight: normal;
     font-size: (22em/16);
-    line-height: 37px;
+    line-height: 30px;
     -webkit-font-smoothing: antialiased;
     text-decoration: none;
+    padding: 0 10px 0 10px;
 
-    padding: 0 24px 0 10px;
-    margin-left: 10px;
-    background-repeat: no-repeat;
+    @include respond-to(768px) {
+      line-height: 40px;
+    }
 
     li:first-child & {
       margin-left: 0;
     }
+
+    &.active {
+      background-color: $green-dark;
+      border-radius: 3px;
+    }
+
+    span {
+      display: block;
+      padding-right: 27px;
+      background-size: 17px 17px;
+      background-position: 100% 6px;
+      background-repeat: no-repeat;
+
+      @include respond-to(768px) {
+        background-position: 100% 11px;
+      }
+    }
   }
 
-  #skip-to-search {
+  #skip-to-search span {
     background-image: url(../images/search-white.svg);
-    background-size: 17px 17px;
-    background-position: 100% 9px;
   }
 
-  #skip-to-navigation {
+  #skip-to-navigation span {
     background-image: url(../images/burger-white.svg);
-    background-size: 17px 17px;
-    background-position: 100% 9px;
   }
 }
 
@@ -185,12 +240,12 @@ body.site-banner-is-active {
   .nav-item-primary {
     a {
       @extend %nav-item;
-      padding-top: .5em;
-      padding-bottom: .5em;
       font-family: $mp-sans;
       font-weight: normal;
       font-size: (28em/16);
       line-height: 1;
+      padding-top: (14em/28);
+      padding-bottom: (14em/28);
       -webkit-font-smoothing: antialiased;
       border-top: 1px solid rgba(255, 255, 255, .2);
 
@@ -199,9 +254,17 @@ body.site-banner-is-active {
         border: none;
         padding-top: 0;
         padding-bottom: 0;
-        line-height: 37px;
+        line-height: 30px;
+
+        font-size: (38em/16);
+        line-height: 40px;
       }
     }
+
+    &:first-child a {
+      border-top: none;
+    }
+
   }
 
   .nav-item-secondary {
@@ -210,8 +273,8 @@ body.site-banner-is-active {
 
     a {
       @extend %nav-item;
-      padding-top: .8em;
-      padding-bottom: .8em;
+      padding-top: (12em/16);
+      padding-bottom: (12em/16);
       border-top: 1px solid rgba(255, 255, 255, .2);
     }
   }
@@ -225,8 +288,8 @@ body.site-banner-is-active {
     .open & {
       display: block;
       position: absolute;
-      right: -145px;
-      top: 47px;
+      right: -160px;
+      top: 58px;
       max-width: 400px;
     }
   }

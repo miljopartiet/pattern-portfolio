@@ -21,8 +21,6 @@
     }
   };
 
-
-
   Mp.focusAndCopy = function(selector) {
     var selectIt = function() {
       var input = this;

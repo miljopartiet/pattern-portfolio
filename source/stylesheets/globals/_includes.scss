@@ -123,6 +123,7 @@ $base-line-height: 1.5;
 
 %speech-bubble {
   position: relative;
+  z-index: 50;
   background: $yellow;
   color: $magenta;
   border-radius: 10px;
