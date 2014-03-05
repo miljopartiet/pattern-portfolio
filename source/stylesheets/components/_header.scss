@@ -56,22 +56,6 @@
     z-index: 77777;
   }
 
-  // Add a gradient
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
-    @include background(linear-gradient(top, #00730a, #339933, #00730a));
-    z-index: 88888;
-
-    @include respond-to(768px) {
-      height: 60px;
-    }
-  }
-
   .inner {
     @include clearfix;
     max-width: 970px;
