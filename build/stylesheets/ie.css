@@ -182,7 +182,7 @@ article .body p, .article-list p {
   font-size: 1em;
   line-height: 1.375; }
 
-small, sup, figcaption, #wrap blockquote footer p, .vignette-intro, .section-vignette-intro, .action,
+small, sup, figcaption, #wrap blockquote footer p, .meta, .vignette-intro, .section-vignette-intro, .action,
 .form-submit,
 .action a, .icon-list li .meta, #site-top-navigation a.close, nav.main-navigation li, #secondary-navigation a, #skip-to-navigation, nav.breadcrumbs p, .main-search .category, .speech-bubble .position-me .choose, .conversation .byline p, .conversations .details, #cookies {
   font-family: arial, sans-serif;
@@ -581,6 +581,9 @@ blockquote {
       text-decoration: underline; }
       blockquote footer .name:hover {
         text-decoration: none; }
+
+.meta {
+  color: #666666; }
 
 ul.menu li {
   margin-left: 0; }

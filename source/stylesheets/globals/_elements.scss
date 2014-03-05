@@ -406,3 +406,8 @@ blockquote {
     }
   }
 }
+
+.meta {
+  @extend %typography-text-small;
+  color: $text-grey;
+}
