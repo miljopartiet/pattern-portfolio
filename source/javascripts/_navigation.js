@@ -10,7 +10,8 @@
     $.extend(Navigation.prototype, {
       attach: function() {
         if (this._detached) {
-          this.header.removeClass("detached");
+          this.header.removeClass("detached hidden");
+          this.header.addClass("visible");
           this._detached = false;
         }
       },
@@ -23,21 +24,17 @@
       },
 
       visible: function() {
-        if (!this._visible) {
-          this.header.removeClass("hidden");
+        if (!this.header.hasClass("visible")) {
           this.header.addClass("visible");
+          this.header.removeClass("hidden");
         }
-
-        this._visible = true;
       },
 
       hidden: function() {
-        if (this._visible) {
-          this.header.removeClass("visible");
+        if (!this.header.hasClass("hidden")) {
           this.header.addClass("hidden");
+          this.header.removeClass("visible");
         }
-
-        this._visible = false;
       }
     });
 
@@ -57,8 +54,9 @@
   };
 
   function detachNavigationOnScroll(navigation) {
-    var MIN_OFFSET = 80,
-        lastValue = 0;
+    var MIN_OFFSET_FOR_DETACH = 500,
+        MIN_SCROLL_OFFSET = 80,
+        lastValue = $(document).scrollTop();
 
     var scrollDirection = function(newValue, lastValue) {
       var direction = {};
@@ -74,30 +72,34 @@
       return direction;
     };
 
-    $(window).scroll(_.debounce(function() {
+    var setNavigationPlacement = function() {
       var newValue = $(document).scrollTop(),
           direction = scrollDirection(newValue, lastValue);
 
-
-      if (direction.offset > MIN_OFFSET) {
-        lastValue = newValue;
-      } else {
+      if (newValue <= 0) {
+        navigation.attach();
         return;
       }
 
-      if (newValue <= 0) {
-        navigation.attach();
-      } else {
-        navigation.detach();
+      if (direction.offset > MIN_SCROLL_OFFSET) {
+        lastValue = newValue;
       }
 
       if (direction.direction == "up") {
         navigation.visible();
       } else {
         navigation.hidden();
-      }
 
-    }), 150);
+        if (direction.offset > 0 && newValue >= MIN_OFFSET_FOR_DETACH) {
+          // Ensure we wait for hide transition before detaching
+          setTimeout(function() {
+            navigation.detach();
+          }, 200);
+        }
+      }
+    };
+
+    $(window).scroll(_.throttle(setNavigationPlacement, 320));
   }
 
   $(function() {

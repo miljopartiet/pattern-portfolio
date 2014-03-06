@@ -54,16 +54,19 @@
     left: 0;
     right: 0;
     z-index: 77777;
+    @include transition(transform .1s);
   }
 
-  @include transition(transform, .3s);
-
   &.hidden {
+    opacity: 0;
+    @include transition(transform .2s, opacity 0 .3s);
     @include translate(0, -80px);
   }
 
   &.visible {
+    opacity: 1;
     @include translate(0, 0);
+    @include transition(transform .2s);
   }
 
   .inner {
