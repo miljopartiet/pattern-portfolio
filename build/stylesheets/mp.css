@@ -889,7 +889,9 @@ body.logged-in #wrap .main-section > .tabs.primary {
 
 @media screen and (min-width: 768px) {
   body.has-billboard #site-banner {
-    background: rgba(0, 0, 0, 0.3); } }
+    background: rgba(0, 0, 0, 0.3); }
+    body.has-billboard #site-banner.detached.visible {
+      background: rgba(43, 145, 4, 0.95); } }
 @media screen and (min-width: 768px) {
   body.has-billboard #main {
     padding-top: 0; } }
@@ -2004,11 +2006,7 @@ header.intro .article-section {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 10px 0 10px 0;
-  -webkit-transition: -webkit-transform, 0.3s;
-  -moz-transition: -moz-transform, 0.3s;
-  -o-transition: -o-transform, 0.3s;
-  transition: transform, 0.3s; }
+  padding: 10px 0 10px 0; }
   @media screen and (min-width: 768px) {
     #site-banner {
       padding: 18px 0; } }
@@ -2017,19 +2015,35 @@ header.intro .article-section {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 77777; }
+    z-index: 77777;
+    -webkit-transition: -webkit-transform 0.1s;
+    -moz-transition: -moz-transform 0.1s;
+    -o-transition: -o-transform 0.1s;
+    transition: transform 0.1s; }
   #site-banner.hidden {
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.2s, opacity 0;
+    -webkit-transition-delay: 0s, 0.3s;
+    -moz-transition: -moz-transform 0.2s, opacity 0 0.3s;
+    -o-transition: -o-transform 0.2s, opacity 0 0.3s;
+    transition: transform 0.2s, opacity 0 0.3s;
     -webkit-transform: translate(0, -80px);
     -moz-transform: translate(0, -80px);
     -ms-transform: translate(0, -80px);
     -o-transform: translate(0, -80px);
     transform: translate(0, -80px); }
   #site-banner.visible {
+    opacity: 1;
+    background: rgba(43, 145, 4, 0.95);
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     -o-transform: translate(0, 0);
-    transform: translate(0, 0); }
+    transform: translate(0, 0);
+    -webkit-transition: -webkit-transform 0.25s, background-color 0.35s;
+    -moz-transition: -moz-transform 0.25s, background-color 0.35s;
+    -o-transition: -o-transform 0.25s, background-color 0.35s;
+    transition: transform 0.25s, background-color 0.35s; }
   #site-banner .inner {
     *zoom: 1;
     max-width: 970px;

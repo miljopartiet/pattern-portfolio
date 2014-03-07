@@ -65,8 +65,9 @@
 
   &.visible {
     opacity: 1;
+    background: rgba(43, 145, 4, .95);
     @include translate(0, 0);
-    @include transition(transform .2s);
+    @include transition(transform .25s, background-color .35s);
   }
 
   .inner {

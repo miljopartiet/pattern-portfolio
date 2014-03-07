@@ -2,6 +2,10 @@ body.has-billboard {
   #site-banner {
     @include respond-to(768px) {
       background: rgba(0,0,0,.3);
+
+      &.detached.visible {
+        background: rgba(43, 145, 4, .95);
+      }
     }
   }
 
