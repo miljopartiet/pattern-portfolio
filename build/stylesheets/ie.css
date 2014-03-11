@@ -762,7 +762,7 @@ body.has-billboard #site-banner {
 body.has-billboard #main {
   padding-top: 0; }
 body.has-billboard #secondary-nav {
-  background: rgba(0, 0, 0, 0.3); }
+  background: transparent; }
 
 .billboard-campaign {
   max-width: 1100px;
@@ -1663,8 +1663,9 @@ header.intro .article-section {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 10px 0 10px 0;
-  padding: 18px 0; }
+  padding: 10px 0 0 0;
+  z-index: 100;
+  padding: 18px 0 0 0; }
   #site-banner.detached {
     position: fixed;
     top: 0;
@@ -1720,7 +1721,8 @@ header.intro .article-section {
   padding: 0 18px;
   z-index: 4000;
   margin-right: 160px;
-  margin-left: 101px; }
+  margin-left: 135px;
+  padding: 0; }
   #site-banner .navigation:before, #site-banner .navigation:after {
     content: " ";
     display: table; }
@@ -1729,7 +1731,8 @@ header.intro .article-section {
 
 #logo {
   float: left;
-  margin: 0 0 0 -101px; }
+  margin-bottom: 10px;
+  margin: 0 0 18px -135px; }
   #logo a {
     display: block;
     text-indent: -9999px;
@@ -1743,9 +1746,10 @@ header.intro .article-section {
 #go-to-navigation {
   *zoom: 1;
   float: right;
-  margin: 0 -10px 0 0;
+  margin: 0 -10px 10px 0;
   width: 160px;
-  margin: 0 -160px 0 0; }
+  margin-right: -160px;
+  margin-bottom: 18px; }
   #go-to-navigation:before, #go-to-navigation:after {
     content: " ";
     display: table; }
@@ -1795,14 +1799,13 @@ header.intro .article-section {
 #nav {
   clear: both;
   margin: 0;
-  padding: 10px 0 0 0;
+  padding: 0;
   *zoom: 1;
   display: none;
   *zoom: 1;
   padding: 0;
   display: block;
-  clear: none;
-  margin-left: 40px; }
+  clear: none; }
   #nav:before, #nav:after {
     content: " ";
     display: table; }
@@ -1815,11 +1818,9 @@ header.intro .article-section {
     display: table; }
   #nav:after {
     clear: both; }
-  #nav ul {
-    margin: 0; }
   #nav li {
-    margin: 0;
     padding: 0;
+    margin: 0;
     list-style: none; }
   #nav .nav-item-primary a {
     font-family: "MP Sans", arial, sans-serif;
@@ -1841,21 +1842,40 @@ header.intro .article-section {
     border-top: none; }
   #nav .nav-item-secondary {
     float: left;
-    width: 50%; }
+    width: 50%;
+    width: 33.33333%;
+    width: 25%; }
     #nav .nav-item-secondary a {
-      padding-top: 0.75em;
-      padding-bottom: 0.75em;
-      border-top: 1px solid rgba(255, 255, 255, 0.2); }
+      font-family: "MP Sans", arial, sans-serif;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      font-weight: normal;
+      font-size: 1.75em;
+      padding-top: 0.5em;
+      padding-top: 0.64286em; }
+
+#primary-nav {
+  margin: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border: none;
+  margin-bottom: 18px; }
 
 #secondary-nav {
+  *zoom: 1;
+  clear: both;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 0 0 10px 0;
   display: none;
-  background: #2b912c; }
+  margin: 0 -160px 18px -135px;
+  padding-left: 0;
+  padding-right: 0; }
+  #secondary-nav:before, #secondary-nav:after {
+    content: " ";
+    display: table; }
+  #secondary-nav:after {
+    clear: both; }
   .open #secondary-nav {
-    display: block;
-    position: absolute;
-    right: -160px;
-    top: 58px;
-    max-width: 400px; }
+    display: block; }
 
 #search {
   float: left;

@@ -897,7 +897,7 @@ body.logged-in #wrap .main-section > .tabs.primary {
     padding-top: 0; } }
 @media screen and (min-width: 768px) {
   body.has-billboard #secondary-nav {
-    background: rgba(0, 0, 0, 0.3); } }
+    background: transparent; } }
 
 .billboard-campaign {
   max-width: 1100px;
@@ -2006,10 +2006,11 @@ header.intro .article-section {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 10px 0 10px 0; }
+  padding: 10px 0 0 0;
+  z-index: 100; }
   @media screen and (min-width: 768px) {
     #site-banner {
-      padding: 18px 0; } }
+      padding: 18px 0 0 0; } }
   #site-banner.detached {
     position: fixed;
     top: 0;
@@ -2083,13 +2084,17 @@ header.intro .article-section {
   @media screen and (min-width: 768px) {
     #site-banner .navigation {
       margin-right: 160px;
-      margin-left: 101px; } }
+      margin-left: 135px; } }
+  @media screen and (min-width: 1024px) {
+    #site-banner .navigation {
+      padding: 0; } }
 
 #logo {
-  float: left; }
+  float: left;
+  margin-bottom: 10px; }
   @media screen and (min-width: 768px) {
     #logo {
-      margin: 0 0 0 -101px; } }
+      margin: 0 0 18px -135px; } }
   #logo a {
     display: block;
     text-indent: -9999px;
@@ -2105,7 +2110,7 @@ header.intro .article-section {
 #go-to-navigation {
   *zoom: 1;
   float: right;
-  margin: 0 -10px 0 0; }
+  margin: 0 -10px 10px 0; }
   #go-to-navigation:before, #go-to-navigation:after {
     content: " ";
     display: table; }
@@ -2114,7 +2119,8 @@ header.intro .article-section {
   @media screen and (min-width: 768px) {
     #go-to-navigation {
       width: 160px;
-      margin: 0 -160px 0 0; } }
+      margin-right: -160px;
+      margin-bottom: 18px; } }
   #go-to-navigation li {
     margin: 0;
     padding: 0;
@@ -2163,7 +2169,7 @@ header.intro .article-section {
 #nav {
   clear: both;
   margin: 0;
-  padding: 10px 0 0 0;
+  padding: 0;
   *zoom: 1;
   display: none; }
   #nav:before, #nav:after {
@@ -2178,18 +2184,15 @@ header.intro .article-section {
       *zoom: 1;
       padding: 0;
       display: block;
-      clear: none;
-      margin-left: 40px; }
+      clear: none; }
       #nav:before, #nav:after {
         content: " ";
         display: table; }
       #nav:after {
         clear: both; } }
-  #nav ul {
-    margin: 0; }
   #nav li {
-    margin: 0;
     padding: 0;
+    margin: 0;
     list-style: none; }
   #nav .nav-item-primary a {
     font-family: "MP Sans", arial, sans-serif;
@@ -2214,21 +2217,49 @@ header.intro .article-section {
   #nav .nav-item-secondary {
     float: left;
     width: 50%; }
+    @media screen and (min-width: 600px) {
+      #nav .nav-item-secondary {
+        width: 33.33333%; } }
+    @media screen and (min-width: 768px) {
+      #nav .nav-item-secondary {
+        width: 25%; } }
     #nav .nav-item-secondary a {
-      padding-top: 0.75em;
-      padding-bottom: 0.75em;
-      border-top: 1px solid rgba(255, 255, 255, 0.2); }
+      font-family: "MP Sans", arial, sans-serif;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      font-weight: normal;
+      font-size: 1.75em;
+      padding-top: 0.5em; }
+      @media screen and (min-width: 768px) {
+        #nav .nav-item-secondary a {
+          padding-top: 0.64286em; } }
 
-@media screen and (min-width: 768px) {
-  #secondary-nav {
-    display: none;
-    background: #2b912c; }
-    .open #secondary-nav {
-      display: block;
-      position: absolute;
-      right: -160px;
-      top: 58px;
-      max-width: 400px; } }
+#primary-nav {
+  margin: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2); }
+  @media screen and (min-width: 768px) {
+    #primary-nav {
+      border: none;
+      margin-bottom: 18px; } }
+
+#secondary-nav {
+  *zoom: 1;
+  clear: both;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 0 0 10px 0; }
+  #secondary-nav:before, #secondary-nav:after {
+    content: " ";
+    display: table; }
+  #secondary-nav:after {
+    clear: both; }
+  @media screen and (min-width: 768px) {
+    #secondary-nav {
+      display: none;
+      margin: 0 -160px 18px -135px;
+      padding-left: 0;
+      padding-right: 0; }
+      .open #secondary-nav {
+        display: block; } }
 
 #search {
   float: left;
