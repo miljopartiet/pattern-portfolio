@@ -267,12 +267,15 @@ body.site-banner-is-detached {
     &:first-child a {
       border-top: none;
     }
-
   }
 
   .nav-item-secondary {
     float: left;
     width: 50%;
+
+    @include respond-to(600px) {
+      width: percentage(1/3);
+    }
 
     @include respond-to(768px) {
       width: 25%;
