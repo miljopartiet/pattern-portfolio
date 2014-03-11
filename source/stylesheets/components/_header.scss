@@ -42,10 +42,11 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 10px 0 10px 0;
+  padding: 10px 0 0 0;
+  z-index: 100;
 
   @include respond-to(768px) {
-    padding: 18px 0;
+    padding: 18px 0 0 0;
   }
 
   &.detached {
@@ -108,15 +109,20 @@ body.site-banner-is-detached {
   @include respond-to(768px) {
     // Mirror the widths of logo and go to navigation
     margin-right: 160px;
-    margin-left: 101px;
+    margin-left: 135px;
+  }
+
+  @include respond-to(1024px) {
+    padding: 0;
   }
 }
 
 #logo {
   float: left;
+  margin-bottom: 10px;
 
   @include respond-to(768px) {
-    margin: 0 0 0 -101px;
+    margin: 0 0 18px -135px;
   }
 
   a {
@@ -137,11 +143,12 @@ body.site-banner-is-detached {
 #go-to-navigation {
   @include clearfix;
   float: right;
-  margin: 0 -10px 0 0;
+  margin: 0 -10px 10px 0;
 
   @include respond-to(768px) {
     width: 160px;
-    margin: 0 -160px 0 0;
+    margin-right: -160px;
+    margin-bottom: 18px;
   }
 
   li {
@@ -209,7 +216,7 @@ body.site-banner-is-detached {
 #nav {
   clear: both;
   margin: 0;
-  padding: 10px 0 0 0;
+  padding: 0;
   @include clearfix;
   display: none;
 
@@ -222,16 +229,14 @@ body.site-banner-is-detached {
     padding: 0;
     display: block;
     clear: none;
-    margin-left: 40px;
   }
 
   ul {
-    margin: 0;
   }
 
   li {
-    margin: 0;
     padding: 0;
+    margin: 0;
     list-style: none;
   }
 
@@ -269,26 +274,51 @@ body.site-banner-is-detached {
     float: left;
     width: 50%;
 
+    @include respond-to(768px) {
+      width: 25%;
+    }
+
     a {
       @extend %nav-item;
-      padding-top: (12em/16);
-      padding-bottom: (12em/16);
-      border-top: 1px solid rgba(255, 255, 255, .2);
+      font-family: $mp-sans;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      font-weight: normal;
+      font-size: (28em/16);
+      padding-top: (14em/28);
+
+      @include respond-to(768px) {
+        padding-top: (18em/28);
+      }
     }
   }
 }
 
+#primary-nav {
+  margin: 0;
+  border-top: 1px solid rgba(255, 255, 255, .2);
+
+  @include respond-to(768px) {
+    border: none;
+    margin-bottom: 18px;
+  }
+}
+
 #secondary-nav {
+  @include clearfix;
+  clear: both;
+  border-top: 1px solid rgba(255, 255, 255, .2);
+  margin: 0 0 10px 0;
+
   @include respond-to(768px) {
     display: none;
-    background: $green;
+    // Mirror got nav and logo offsets
+    margin: 0 -160px 18px -135px;
+    padding-left: 0;
+    padding-right: 0;
 
     .open & {
       display: block;
-      position: absolute;
-      right: -160px;
-      top: 58px;
-      max-width: 400px;
     }
   }
 }

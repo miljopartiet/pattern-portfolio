@@ -17,7 +17,7 @@ body.has-billboard {
 
   #secondary-nav {
     @include respond-to(768px) {
-      background: rgba(0,0,0,.3);
+      background: transparent;
     }
   }
 }
