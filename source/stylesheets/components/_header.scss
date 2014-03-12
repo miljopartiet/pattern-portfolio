@@ -62,13 +62,22 @@
     opacity: 0;
     @include transition(transform .2s, opacity 0 .3s);
     @include translate(0, -80px);
+
+    .site-banner-is-detached & {
+      opacity: 1;
+      @include translate(0, 0);
+    }
   }
 
   &.visible {
     opacity: 1;
-    background: rgba(43, 145, 4, .95);
+    background: $green;
     @include translate(0, 0);
     @include transition(transform .25s, background-color .35s);
+
+    @include respond-to(768px) {
+      background: rgba(43, 145, 4, .95);
+    }
   }
 
   .inner {
@@ -85,7 +94,7 @@
 }
 
 body.site-banner-is-detached {
-  @include respond-to(768px, false, max) {
+  @include respond-to(767px, false, max) {
     position: fixed;
     overflow: hidden;
     top: 0;
@@ -209,8 +218,13 @@ body.site-banner-is-detached {
   display: block;
   color: #fff;
   text-decoration: none;
-  padding-left: 18px;
-  padding-right: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @include respond-to(820px) {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 }
 
 #nav {
@@ -287,22 +301,25 @@ body.site-banner-is-detached {
       line-height: 1;
       -webkit-font-smoothing: antialiased;
       font-weight: normal;
-      font-size: (28em/16);
-      padding-top: (14em/28);
+      font-size: (24em/16);
+      padding-top: (10em/22);
+      padding-right: 0;
 
       @include respond-to(768px) {
-        padding-top: (18em/28);
+        padding-top: (18em/22);
       }
     }
   }
 }
 
 #primary-nav {
-  margin: 0;
+  margin: 0 -18px;
   border-top: 1px solid rgba(255, 255, 255, .2);
 
   @include respond-to(768px) {
     border: none;
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 18px;
   }
 }
@@ -311,14 +328,14 @@ body.site-banner-is-detached {
   @include clearfix;
   clear: both;
   border-top: 1px solid rgba(255, 255, 255, .2);
-  margin: 0 0 10px 0;
+  padding-top: 7px;
+  margin: 0 -18px 10px -18px;
 
   @include respond-to(768px) {
     display: none;
     // Mirror got nav and logo offsets
     margin: 0 -160px 18px -135px;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
 
     .open & {
       display: block;

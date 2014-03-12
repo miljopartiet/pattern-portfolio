@@ -47,6 +47,9 @@
 
       $(toggler).toggleClass("active");
       $(target).toggleClass("open");
+      if ($(target).hasClass("open")) {
+        $("#site-banner").addClass("detached");
+      }
       $("body").toggleClass("site-banner-is-detached");
     };
 

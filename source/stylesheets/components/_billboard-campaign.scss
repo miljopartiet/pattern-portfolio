@@ -9,6 +9,14 @@ body.has-billboard {
     }
   }
 
+  &.site-banner-is-detached {
+    #site-banner {
+      @include respond-to(768px) {
+        background: $green;
+      }
+    }
+  }
+
   #main {
     @include respond-to(768px) {
       padding-top: 0;

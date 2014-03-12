@@ -759,6 +759,8 @@ body.has-billboard #site-banner {
   background: rgba(0, 0, 0, 0.3); }
   body.has-billboard #site-banner.detached.visible {
     background: rgba(43, 145, 4, 0.95); }
+body.has-billboard.site-banner-is-detached #site-banner {
+  background: #2b912c; }
 body.has-billboard #main {
   padding-top: 0; }
 body.has-billboard #secondary-nav {
@@ -1688,9 +1690,16 @@ header.intro .article-section {
     -ms-transform: translate(0, -80px);
     -o-transform: translate(0, -80px);
     transform: translate(0, -80px); }
+    .site-banner-is-detached #site-banner.hidden {
+      opacity: 1;
+      -webkit-transform: translate(0, 0);
+      -moz-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+      -o-transform: translate(0, 0);
+      transform: translate(0, 0); }
   #site-banner.visible {
     opacity: 1;
-    background: rgba(43, 145, 4, 0.95);
+    background: #2b912c;
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
@@ -1699,7 +1708,8 @@ header.intro .article-section {
     -webkit-transition: -webkit-transform 0.25s, background-color 0.35s;
     -moz-transition: -moz-transform 0.25s, background-color 0.35s;
     -o-transition: -o-transform 0.25s, background-color 0.35s;
-    transition: transform 0.25s, background-color 0.35s; }
+    transition: transform 0.25s, background-color 0.35s;
+    background: rgba(43, 145, 4, 0.95); }
   #site-banner .inner {
     *zoom: 1;
     max-width: 970px;
@@ -1793,6 +1803,8 @@ header.intro .article-section {
   display: block;
   color: #fff;
   text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-left: 18px;
   padding-right: 18px; }
 
@@ -1850,25 +1862,28 @@ header.intro .article-section {
       line-height: 1;
       -webkit-font-smoothing: antialiased;
       font-weight: normal;
-      font-size: 1.75em;
-      padding-top: 0.5em;
-      padding-top: 0.64286em; }
+      font-size: 1.5em;
+      padding-top: 0.45455em;
+      padding-right: 0;
+      padding-top: 0.81818em; }
 
 #primary-nav {
-  margin: 0;
+  margin: 0 -18px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border: none;
+  margin-left: 0;
+  margin-right: 0;
   margin-bottom: 18px; }
 
 #secondary-nav {
   *zoom: 1;
   clear: both;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  margin: 0 0 10px 0;
+  padding-top: 7px;
+  margin: 0 -18px 10px -18px;
   display: none;
   margin: 0 -160px 18px -135px;
-  padding-left: 0;
-  padding-right: 0; }
+  padding: 0; }
   #secondary-nav:before, #secondary-nav:after {
     content: " ";
     display: table; }
