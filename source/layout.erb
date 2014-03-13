@@ -99,16 +99,18 @@
         <%= yield %>
       </div>
       <footer id="site-footer">
-        <% if content_for? :breadcrumbs %>
-        <nav class="breadcrumbs">
-          <p><%= yield_content :breadcrumbs %></p>
-        </nav>
-        <% end %>
-        <p id="logo-full"><a href="/">Miljöpartiet de gröna</a></p>
-        <p id="copyright" class="copy">
-          Allt innehåll är licensierat under en Creative Commons Erkännande 3.0 Unported Licens om inte annat anges.
-          Vi vill gärna ha dina synpunkter på vår webb. Kan vi förbättra något? <a href="mailto:mp@exaple.com">Skriv till oss och berätta!</a>
-        </p>
+        <div class="inner">
+          <% if content_for? :breadcrumbs %>
+          <nav class="breadcrumbs">
+            <p><%= yield_content :breadcrumbs %></p>
+          </nav>
+          <% end %>
+          <p id="logo-full"><a href="/">Miljöpartiet de gröna</a></p>
+          <p id="copyright" class="copy">
+            Allt innehåll är licensierat under en Creative Commons Erkännande 3.0 Unported Licens om inte annat anges.
+            Vi vill gärna ha dina synpunkter på vår webb. Kan vi förbättra något? <a href="mailto:mp@exaple.com">Skriv till oss och berätta!</a>
+          </p>
+        </div>
       </footer>
     </div>
     <div id="cookies">
