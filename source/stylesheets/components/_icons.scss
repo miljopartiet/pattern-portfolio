@@ -1,10 +1,11 @@
 [class^="icon-"],
 [class*=" icon-"] {
-  margin-left: .2em;
+  margin-right: .2em;
   text-decoration: none;
+  display: inline-block;
 
   &:before {
-    font-family: "MP Dingbats";
+    font-family: "MP Icons";
     text-decoration: inherit;
     font-weight: normal;
     font-style: normal;
@@ -17,5 +18,13 @@
 }
 
 .icon-arrow:before {
-  content: "b";
+  content: "➡";
+}
+
+.icon-facebook:before {
+  content: "✌";
+}
+
+.icon-twitter:before {
+  content: "★";
 }
