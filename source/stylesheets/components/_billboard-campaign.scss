@@ -9,6 +9,10 @@ body.has-billboard {
     }
   }
 
+  #main .main-section:first-child {
+    padding-top: 0;
+  }
+
   &.navigation-is-open {
     #site-banner {
       @include respond-to(768px) {
