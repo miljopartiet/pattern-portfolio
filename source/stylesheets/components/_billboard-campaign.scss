@@ -9,10 +9,6 @@ body.has-billboard {
     }
   }
 
-  #main .main-section:first-child {
-    padding-top: 0;
-  }
-
   &.navigation-is-open {
     #site-banner {
       @include respond-to(768px) {
@@ -35,6 +31,10 @@ body.has-billboard {
 }
 
 .billboard-campaign {
+  background: $cream;
+}
+
+.billboard-campaign-inner {
   max-width: 1100px;
   margin: 0 auto 0 auto;
 
