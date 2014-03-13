@@ -1,5 +1,5 @@
 #cookies {
-  display:none;
+  display: none;
   background: #000;
   @extend %typography-text-small;
   color: #fff;
@@ -179,10 +179,10 @@ body.navigation-is-open {
     line-height: 30px;
     -webkit-font-smoothing: antialiased;
     text-decoration: none;
-    padding: 0 10px 0 10px;
+    padding: 0 12px;
 
     @include respond-to(768px) {
-      line-height: 40px;
+      margin-top: 5px;
     }
 
     li:first-child & {
@@ -191,7 +191,7 @@ body.navigation-is-open {
 
     &.active {
       background-color: $green-dark;
-      border-radius: 3px;
+      border-radius: 6px;
     }
 
     span {
@@ -200,10 +200,6 @@ body.navigation-is-open {
       background-size: 17px 17px;
       background-position: 100% 6px;
       background-repeat: no-repeat;
-
-      @include respond-to(768px) {
-        background-position: 100% 11px;
-      }
     }
   }
 
@@ -220,8 +216,12 @@ body.navigation-is-open {
   display: block;
   color: #fff;
   text-decoration: none;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 18px;
+  padding-right: 18px;
+
+  &:hover {
+    color: $yellow;
+  }
 
   @include respond-to(820px) {
     padding-left: 18px;
@@ -260,20 +260,24 @@ body.navigation-is-open {
       font-weight: normal;
       font-size: (28em/16);
       line-height: 1;
-      padding-top: (14em/28);
-      padding-bottom: (14em/28);
+      padding-top: (12em/28);
+      padding-bottom: (12em/28);
       -webkit-font-smoothing: antialiased;
       border-top: 1px solid rgba(255, 255, 255, .2);
 
       @include respond-to(768px) {
         float: left;
         border: none;
-        padding-top: 0;
-        padding-bottom: 0;
-        line-height: 30px;
+        padding: 0 14px 0 14px;
 
-        font-size: (38em/16);
+
+        font-size: (34em/16);
         line-height: 40px;
+      }
+
+      @include respond-to(1024px) {
+        font-size: (38em/16);
+        padding: 0 18px 0 18px;
       }
     }
 
@@ -305,7 +309,8 @@ body.navigation-is-open {
       padding-right: 0;
 
       @include respond-to(768px) {
-        padding-top: (18em/22);
+        font-size: (32em/16);
+        padding-top: (18em/32);
       }
     }
   }
@@ -321,6 +326,10 @@ body.navigation-is-open {
     margin-right: 0;
     margin-bottom: 18px;
   }
+
+  @include respond-to(868px) {
+    margin-left: 20px;
+  }
 }
 
 #secondary-nav {
@@ -329,11 +338,12 @@ body.navigation-is-open {
   border-top: 1px solid rgba(255, 255, 255, .2);
   padding-top: 7px;
   margin: 0 -18px 10px -18px;
+  padding-bottom: 30px;
 
   @include respond-to(768px) {
     display: none;
     // Mirror got nav and logo offsets
-    margin: 0 -160px 18px -135px;
+    margin: 0 -160px 30px -135px;
     padding: 0;
 
     .open & {
@@ -357,8 +367,20 @@ body.navigation-is-open {
     display: block;
   }
 
+  form {
+    margin-right: 70px;
+    @include clearfix;
+  }
+
   input {
-    background: #fff;
+    float: left;
+  }
+
+  .action {
+    float: right;
+    display: block;
+    margin: 0 -70px 0 0;
+    background: $green-dark;
   }
 }
 
@@ -378,14 +400,14 @@ body.navigation-is-open {
 
   a {
     @include clearfix;
-    padding: (20em/16) 18px;
+    padding: (9em/16) 18px;
     display: block;
     @extend %typography-text;
     text-decoration: none;
     color: $yellow;
 
     &:hover {
-      background: lighten($green, 10%);
+      background: $green-dark;
     }
 
     &.search-all {
@@ -420,7 +442,7 @@ body.navigation-is-open {
 
   .focused a {
     color: $yellow;
-    background: lighten($green, 10%);
+    background: $green-dark;
   }
 }
 

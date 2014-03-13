@@ -3,18 +3,10 @@
 
   input {
     width: 100%;
-    background: $cream;
-    border: 1px solid $cream;
-    padding: 3px 20px 3px 10px;
     margin: 0;
-    border-radius: 4px;
-
-    &:focus {
-      border: 1px solid $warm-grey;
-    }
   }
 
-  button {
+  .submit {
     text-indent: -9999em;
     border: none;
     padding: 0;

@@ -1,9 +1,10 @@
 // Button like action links
 %action {
-  @extend %typography-text-small;
+  font-family: $mp-serif;
+  font-size: 16px;
   line-height: (30/14);
-  padding: 0 (18em/14);
-  border-radius: (15em/14);
+  padding: 0 (12em/14);
+  border-radius: (6em/14);
   border: 0;
   white-space: nowrap;
   display: inline-block;
@@ -52,6 +53,7 @@
 .form-submit,
 .action a {
   @extend %action-green;
+  -webkit-appearance: none;
 
   &.loading,
   &.loading:hover {

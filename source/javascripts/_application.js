@@ -149,7 +149,7 @@
     });
 
     Mp.searchAsYouType('#main-search', {
-      limit: 25,
+      limit: 5,
       remote: true,
       inlined: true,
       itemTemplate: function(item, query) {
