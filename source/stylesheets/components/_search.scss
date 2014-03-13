@@ -12,12 +12,6 @@
     &:focus {
       border: 1px solid $warm-grey;
     }
-
-    &.has-suggestions {
-      border: 1px solid $warm-grey;
-      border-bottom: 1px solid $cream;
-      border-radius: 4px 4px 0 0;
-    }
   }
 
   button {
@@ -77,11 +71,12 @@
 
 .main-search {
   @include box-sizing(border-box);
-  background: $cream;
   padding: (10em/16) 0 (10em/16) 0;
-  margin: 0;
-  border: 1px solid $warm-grey;
-  border-top: none;
+  margin: 0 -18px;
+  border: none;
+  background: transparent;
+  position: relative;
+
 
   ul,
   li {
@@ -90,39 +85,42 @@
   }
 
   a {
-    padding: (4em/16) (10em/16);
+    @include clearfix;
+    padding: (20em/16) 18px;
     display: block;
     @extend %typography-text;
     text-decoration: none;
+    color: $yellow;
 
     &:hover {
-      .name {
-        text-decoration: none;
-      }
+      background: lighten($green, 10%);
     }
+  }
+
+  span {
+    float: left;
+    width: 50%;
   }
 
   .name {
     white-space: normal;
-    text-decoration: underline;
   }
 
   .category {
     @extend %typography-text-small;
     display: block;
     margin-top: 2px;
+    color: #fff;
+    text-align: right;
   }
 
   em {
     font-style: normal;
   }
 
-  .focused {
-    background: darken($cream, 5%);
-
-    .name {
-      text-decoration: none;
-    }
+  .focused a {
+    color: $yellow;
+    background: lighten($green, 10%);
   }
 }
 

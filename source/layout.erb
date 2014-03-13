@@ -58,9 +58,9 @@
             <a href="/">Miljöpartiet</a>
           </div>
           <ul id="go-to-navigation">
-            <li><a href="#navigation" id="skip-to-navigation">
+            <li><a href="#nav" id="skip-to-navigation" class="toggler">
               <span>Meny</span>
-            </a></li><li><a href="#search" id="skip-to-search">
+            </a></li><li><a href="#search" id="skip-to-search" class="toggler">
               <span>Sök</span>
             </a></li>
           </ul>
@@ -83,7 +83,7 @@
           </nav>
           <div id="search" role="search">
             <form action="/search" method="get" class="search">
-              <input type="search" name="searchtext" id="main-search" data-source="/data/search.json" autocomplete="off">
+              <input type="search" name="searchtext" id="main-search" data-suggestions-target="#search" data-source="/data/search.json" autocomplete="off">
               <button type="submit">Sök</button>
             </form>
           </div>

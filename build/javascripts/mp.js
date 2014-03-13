@@ -1536,10 +1536,11 @@ function naturalSort(a, b) {
         this.source = this.options.source;
       }
 
-      this.container = $('<div id="suggestions-'+ this._id +'" class="suggestions" style="display:none;position:absolute;"></div>');
+      this.container = $('<div id="suggestions-'+ this._id +'" class="suggestions" style="display:none;"></div>');
 
       if (!this.options.inlined) {
         this.container.css({
+          position: "absolute",
           width: this.element.outerWidth() + 'px'
         });
 
@@ -1551,7 +1552,8 @@ function naturalSort(a, b) {
         $body.append(this.container);
       } else {
         this.offsets = { x: 0, y: 0 };
-        this.element.parent('form').append(this.container);
+        var $target = $(this.element.data("suggestions-target") || this.element.parent("form"));
+        $target.append(this.container);
       }
 
       this.setupListeners();
@@ -1637,7 +1639,8 @@ function naturalSort(a, b) {
     };
 
     Suggest.prototype.search = function(value) {
-      var value = this.query();
+      console.log(value);
+      var value = value || this.query();
       if (value === '') {
         this.render([]);
         this.hide();
@@ -1788,7 +1791,7 @@ function naturalSort(a, b) {
     };
 
     return function(selector, options) {
-      new Suggest(selector, options);
+      return new Suggest(selector, options);
     };
   }());
 }(jQuery));
@@ -2572,36 +2575,40 @@ if (typeof define !== 'undefined' && define.amd) {
 
   Mp.Navigation = (function() {
     function Navigation() {
-      this.header = $("#site-banner");
+      this.$header = $("#site-banner");
+      this._visible = true;
+      this._detached = false;
     }
 
     $.extend(Navigation.prototype, {
       attach: function() {
         if (this._detached) {
-          this.header.removeClass("detached hidden");
-          this.header.addClass("visible");
+          this.$header.removeClass("detached hidden");
+          this.$header.addClass("visible");
           this._detached = false;
         }
       },
 
       detach: function() {
         if (!this._detached) {
-          this.header.addClass("detached");
+          this.$header.addClass("detached");
           this._detached = true;
         }
       },
 
       visible: function() {
-        if (!this.header.hasClass("visible")) {
-          this.header.addClass("visible");
-          this.header.removeClass("hidden");
+        if (!this._visible) {
+          this.$header.addClass("visible");
+          this.$header.removeClass("hidden");
+          this._visible = true;
         }
       },
 
       hidden: function() {
-        if (!this.header.hasClass("hidden")) {
-          this.header.addClass("hidden");
-          this.header.removeClass("visible");
+        if (this._visible) {
+          this.$header.addClass("hidden");
+          this.$header.removeClass("visible");
+          this._visible = false;
         }
       }
     });
@@ -2609,19 +2616,34 @@ if (typeof define !== 'undefined' && define.amd) {
     return Navigation;
   }());
 
-  Mp.NavigationToggler = function(toggler, target) {
+  Mp.NavigationToggler = function(element) {
+    var $element = $(element);
+    if ($element.size() === 0) {
+      return;
+    }
+
     var toggle = function(event) {
       event.preventDefault();
+      var $toggler = $(this),
+          $siblings = $element.find(".toggler").not($toggler),
+          $sibling_targets = $($siblings.map(function() {
+            return $(this).attr("href");
+          }).get().join(",")),
+          $target = $($toggler.attr("href"));
 
-      $(toggler).toggleClass("active");
-      $(target).toggleClass("open");
-      if ($(target).hasClass("open")) {
-        $("#site-banner").addClass("detached");
+      $sibling_targets.removeClass("open");
+      $siblings.removeClass("active");
+
+      $toggler.toggleClass("active");
+      $target.toggleClass("open");
+      if ($target.hasClass("open")) {
+        $("body").addClass("navigation-is-open");
+      } else {
+        $("body").removeClass("navigation-is-open");
       }
-      $("body").toggleClass("site-banner-is-detached");
     };
 
-    $(toggler).bind("click", toggle);
+    $element.delegate(".toggler", "click", toggle);
   };
 
   function detachNavigationOnScroll(navigation) {
@@ -2795,8 +2817,7 @@ if (typeof define !== 'undefined' && define.amd) {
     // Get rid of those pesky 300ms on mobile clicks
     FastClick.attach(document.body);
 
-    Mp.NavigationToggler('#skip-to-navigation', '#nav');
-    Mp.NavigationToggler('#skip-to-search', '#search');
+    Mp.NavigationToggler("#site-banner");
 
     if ($html.hasClass('lte9')) {
       Mp.placeholderFallback();
@@ -2856,7 +2877,6 @@ if (typeof define !== 'undefined' && define.amd) {
         this.element.removeClass('has-suggestions');
       }
     });
-
 
     $('.tabbed').tabs();
     $('#conversation-form').hide();

@@ -74,10 +74,11 @@
         this.source = this.options.source;
       }
 
-      this.container = $('<div id="suggestions-'+ this._id +'" class="suggestions" style="display:none;position:absolute;"></div>');
+      this.container = $('<div id="suggestions-'+ this._id +'" class="suggestions" style="display:none;"></div>');
 
       if (!this.options.inlined) {
         this.container.css({
+          position: "absolute",
           width: this.element.outerWidth() + 'px'
         });
 
@@ -89,7 +90,8 @@
         $body.append(this.container);
       } else {
         this.offsets = { x: 0, y: 0 };
-        this.element.parent('form').append(this.container);
+        var $target = $(this.element.data("suggestions-target") || this.element.parent("form"));
+        $target.append(this.container);
       }
 
       this.setupListeners();
@@ -175,7 +177,8 @@
     };
 
     Suggest.prototype.search = function(value) {
-      var value = this.query();
+      console.log(value);
+      var value = value || this.query();
       if (value === '') {
         this.render([]);
         this.hide();
@@ -326,7 +329,7 @@
     };
 
     return function(selector, options) {
-      new Suggest(selector, options);
+      return new Suggest(selector, options);
     };
   }());
 }(jQuery));

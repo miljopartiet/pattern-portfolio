@@ -115,8 +115,7 @@
     // Get rid of those pesky 300ms on mobile clicks
     FastClick.attach(document.body);
 
-    Mp.NavigationToggler('#skip-to-navigation', '#nav');
-    Mp.NavigationToggler('#skip-to-search', '#search');
+    Mp.NavigationToggler("#site-banner");
 
     if ($html.hasClass('lte9')) {
       Mp.placeholderFallback();
@@ -176,7 +175,6 @@
         this.element.removeClass('has-suggestions');
       }
     });
-
 
     $('.tabbed').tabs();
     $('#conversation-form').hide();
