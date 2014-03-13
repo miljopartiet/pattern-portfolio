@@ -1,11 +1,7 @@
 // Lists with icons or images
 .icon-list {
   list-style: none;
-  margin-top: (30em/16);
-
-  @include respond-to(768px) {
-    margin-top: (40em/16);
-  }
+  margin: 0;
 
   li {
     margin: 0;
@@ -13,7 +9,7 @@
     a {
       text-decoration: none;
       display: block;
-      margin: 0 0 (15em/16) 45px;
+      margin: (15em/16) 0 (15em/16) 45px;
 
       @include respond-to(768px) {
         margin-top: (20em/16);
@@ -76,4 +72,3 @@
     }
   }
 }
-
