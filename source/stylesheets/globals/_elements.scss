@@ -76,8 +76,12 @@ a {
     text-decoration: none;
   }
 
-  @include with-dark-sections {
-    color: #fff;
+  .main-section-magenta & {
+    color: $yellow;
+  }
+
+  .main-section-magenta & {
+    color: $cream;
   }
 }
 

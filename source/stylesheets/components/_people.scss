@@ -22,7 +22,7 @@
       }
 
       @include with-dark-sections {
-        color: #fff;
+        color: $yellow;
       }
     }
 
@@ -33,4 +33,3 @@
     }
   }
 }
-
