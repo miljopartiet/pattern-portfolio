@@ -1,0 +1,94 @@
+.take-action {
+  max-width: 970px;
+  margin: 0 auto;
+  color: $magenta;
+  @include clearfix;
+
+  a {
+    color: $magenta;
+  }
+
+  @include respond-to(768px) {
+    padding-top: 3em;
+  }
+}
+
+.take-action-inner {
+  @extend %page-section-content-wide;
+}
+
+.take-action-item {
+  margin-bottom: 1.5em;
+
+  h2 {
+    margin: 0 0 .25em 0;
+  }
+
+  @include respond-to(768px) {
+    float: left;
+    width: 33%;
+    margin: 0;
+  }
+}
+
+.take-action-newsletter {
+  label {
+    display: none;
+  }
+
+  input {
+    max-width: 150px;
+  }
+
+  input,
+  button {
+    margin: 0;
+  }
+
+  .action {
+    background: $magenta;
+  }
+}
+
+.take-action-social {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin: 0;
+    @extend %typography-heading;
+  }
+
+  li + li {
+    margin-top: .5em;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  [class*="icon-"] {
+    font-size: .7em;
+    margin-right: .25em;
+  }
+}
+
+.take-action-more {
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 1em 0 0;
+    @extend %typography-text-body;
+  }
+}
