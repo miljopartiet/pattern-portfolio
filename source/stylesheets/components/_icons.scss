@@ -1,0 +1,21 @@
+[class^="icon-"],
+[class*=" icon-"] {
+  margin-left: .2em;
+  text-decoration: none;
+
+  &:before {
+    font-family: "MP Dingbats";
+    text-decoration: inherit;
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    display: inline-block;
+    speak: none;
+  }
+}
+
+.icon-arrow:before {
+  content: "b";
+}

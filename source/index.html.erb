@@ -12,7 +12,10 @@ body_class: "front has-billboard"
         <div class="billboard-campaign-content">
           <div class="inner">
             <h2>Politiken måste bli varmare.<br> Inte klimatet.</h2>
-            <p class="action-link">Läs mer om vår klimatterapi</p>
+            <p class="action-link">
+              <span class="icon-arrow"></span>
+              Läs mer om vår klimatterapi
+            </p>
           </div>
         </div>
       </div>
@@ -21,16 +24,28 @@ body_class: "front has-billboard"
 </div>
 
 <div class="main-section main-section-cream">
+  <article>
+    <%= partial 'news_list' %>
+
+    <div class="fetch-more">
+      <a href="#" class="action">
+        <span class="icon-arrow"></span>
+        Visa fler nyheter
+      </a>
+    </div>
+  </article>
 
   <%= partial 'bubbles/follow' %>
-
 </div>
 
 <div class="main-section main-section-green">
   <article>
     <%= partial "main_topics", locals: { title: "Vår politik" } %>
     <p class="fetch-more">
-      <a href="/topics.html" class="action">Läs mer om hur vi vill modernisera Sverige</a>
+      <a href="/topics.html" class="action">
+        <span class="icon-arrow"></span>
+        Läs mer om hur vi vill modernisera Sverige
+      </a>
     </p>
   </article>
 </div>
@@ -150,7 +165,12 @@ body_class: "front has-billboard"
         </a>
       </div>
     </div></div>
-    <p><a href="/about.html" class="action">Fler personer i vårt parti och där du bor.</a></p>
+    <p>
+      <a href="/about.html" class="action">
+        <span class="icon-arrow"></span>
+        Fler personer i vårt parti och där du bor.
+      </a>
+    </p>
   </article>
 </div>
 
