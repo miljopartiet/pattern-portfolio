@@ -40,7 +40,7 @@ body.has-billboard {
   .billboard-campaign-content-wrap {
     @include respond-to(768px) {
       position: absolute;
-      bottom: -40px;
+      bottom: -60px;
       left: 0;
       right: 0;
     }
