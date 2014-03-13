@@ -55,12 +55,9 @@
       event.preventDefault();
       var $toggler = $(this),
           $siblings = $element.find(".toggler").not($toggler),
-          $sibling_targets = $($siblings.map(function() {
-            return $(this).attr("href");
-          }).get().join(",")),
           $target = $($toggler.attr("href"));
 
-      $sibling_targets.removeClass("open");
+      siblingTargets($siblings).removeClass("open");
       $siblings.removeClass("active");
 
       $toggler.toggleClass("active");
@@ -70,6 +67,12 @@
       } else {
         $("body").removeClass("navigation-is-open");
       }
+    };
+
+    var siblingTargets = function($siblings) {
+      return $($siblings.map(function() {
+        return $(this).attr("href");
+      }).get().join(","));
     };
 
     $element.delegate(".toggler", "click", toggle);

@@ -49,6 +49,7 @@
         onShow: $.noop,
         onHide: $.noop,
         onNoResults: self.hide,
+        onRender: $.noop,
         onSetup: $.noop,
         itemTemplate: function(item) {
           return '<li><a href="'+ item.href +'">'+ item.name +'</a></li>';
@@ -177,7 +178,6 @@
     };
 
     Suggest.prototype.search = function(value) {
-      console.log(value);
       var value = value || this.query();
       if (value === '') {
         this.render([]);
@@ -271,6 +271,7 @@
       html.push('</ul>');
 
       this.container.html(html.join(''));
+      this.options.onRender.call(this);
     };
 
     Suggest.prototype.show = function() {

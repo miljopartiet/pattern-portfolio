@@ -171,8 +171,25 @@
       onShow: function() {
         this.element.addClass('has-suggestions');
       },
+
       onHide: function() {
         this.element.removeClass('has-suggestions');
+      },
+
+      onRender: function() {
+        var searchAllHTML = ['<li>'];
+        searchAllHTML.push('<a href="#" class="search-all">');
+        searchAllHTML.push('<span class="name">Sök efter ”<span class="query">'+this.query()+'</span>”</span>');
+        searchAllHTML.push('<span class="category">Sök i allt</span>');
+        searchAllHTML.push('</a>');
+        searchAllHTML.push('</li>');
+
+        this.container.find("ul").append(searchAllHTML.join(""));
+
+        this.container.delegate(".search-all", "click", $.proxy(function(event) {
+          event.preventDefault();
+          this.element.parent("form").submit();
+        }, this));
       }
     });
 
