@@ -79,7 +79,7 @@
   };
 
   function detachNavigationOnScroll(navigation) {
-    var MIN_OFFSET_FOR_DETACH = 500,
+    var MIN_OFFSET_FOR_DETACH = 350,
         MIN_SCROLL_OFFSET = 80,
         lastValue = $(document).scrollTop();
 
@@ -89,9 +89,12 @@
       if (newValue < lastValue) {
         direction.direction = "up";
         direction.offset = lastValue - newValue;
-      } else {
+      } else if (newValue > lastValue){
         direction.direction = "down";
         direction.offset = newValue - lastValue;
+      } else {
+        direction.direction = "still";
+        direction.offset = 0;
       }
 
       return direction;
@@ -103,6 +106,7 @@
 
       if (newValue <= 0) {
         navigation.attach();
+        navigation.visible();
         return;
       }
 
@@ -112,7 +116,7 @@
 
       if (direction.direction == "up") {
         navigation.visible();
-      } else {
+      } else if (newValue >= MIN_SCROLL_OFFSET * 2) {
         navigation.hidden();
 
         if (direction.offset > 0 && newValue >= MIN_OFFSET_FOR_DETACH) {
