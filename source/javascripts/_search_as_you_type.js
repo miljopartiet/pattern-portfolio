@@ -170,7 +170,7 @@
         var link = this.container.find("li.focused a").get(0);
         if (link) {
           e.preventDefault();
-          window.location = link.href;
+          link.click();
         } else if (!this.options.remote) {
           e.preventDefault();
         }

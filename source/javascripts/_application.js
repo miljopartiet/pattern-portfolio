@@ -184,6 +184,9 @@
         searchAllHTML.push('</a>');
         searchAllHTML.push('</li>');
 
+        // We want an extra suggestion for focus to work
+        this.current_suggestions.push("Sök allt");
+
         this.container.find("ul").append(searchAllHTML.join(""));
 
         this.container.delegate(".search-all", "click", $.proxy(function(event) {
