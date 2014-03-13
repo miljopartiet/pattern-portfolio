@@ -17,7 +17,7 @@
         $message.hide();
         $.cookie('allow-cookies', true, { expires: 365, path: '/' });
       });
-      $('body').prepend($message.show());
+      $('#site-banner').prepend($message.show());
     }
   };
 

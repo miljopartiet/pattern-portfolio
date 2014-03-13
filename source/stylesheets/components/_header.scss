@@ -4,9 +4,13 @@
   @extend %typography-text-small;
   color: #fff;
   padding: 8px 20px 16px 20px;
+  margin-top: -10px;
+  margin-bottom: 10px;
 
   @include respond-to(768px) {
     text-align: center;
+    margin-top: -18px;
+    margin-bottom: 18px;
   }
 
   p {
