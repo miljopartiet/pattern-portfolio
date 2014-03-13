@@ -9,7 +9,7 @@ body.has-billboard {
     }
   }
 
-  &.site-banner-is-detached {
+  &.navigation-is-open {
     #site-banner {
       @include respond-to(768px) {
         background: $green;
