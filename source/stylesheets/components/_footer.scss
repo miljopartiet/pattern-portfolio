@@ -1,6 +1,6 @@
 #site-footer {
   @extend %page-section;
-  padding-top: 0;
+  padding-top: (20em/16);
   @extend %page-section-content-wide;
 
   .inner {
@@ -22,23 +22,21 @@
 
   @include respond-to(1024px) {
     float: right;
-    margin-top: -10px;
     margin-right: -310px;
   }
 
   a {
-    height: 46px;
-    width: 290px;
-    background: transparent url(../images/logo-full.png) 100% 0 no-repeat;
-    background-size: 290px 46px;
+    width: 200px;
+    height: 32px;
+    background: transparent url(../images/logo-full.png) 0 0 no-repeat;
+    background-size: 100%;
     text-indent: -9999em;
     display: block;
 
-    background-position: 100% 0;
-
-    @include respond-to(768px) {
-      height: (46em/18);
-      background-size: (290em/18) (46em/18);
+    @include respond-to(1024px) {
+      height: 46px;
+      width: 290px;
+      background-size: 290px 46px;
     }
 
     html.svg & {
@@ -52,7 +50,7 @@
   clear: right;
   @include box-sizing(border-box);
 
-  padding-left: (35em/12);
+  padding-left: (30em/12);
   background: transparent url(../images/cc.png) 0 2px no-repeat;
   background-size: 20px 20px;
 
@@ -60,6 +58,10 @@
     clear: none;
     float: left;
     width: 80%;
+  }
+
+  a {
+    white-space: nowrap;
   }
 
   html.svg & {
