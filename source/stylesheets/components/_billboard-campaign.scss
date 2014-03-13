@@ -48,7 +48,7 @@ body.has-billboard {
   max-width: 660px;
   margin: -25px 10px 0 18px;
   @extend %speech-bubble;
-  @extend %speech-bubble-corner;
+  @extend %speech-bubble-corner-up;
 
   @include respond-to(768px) {
     margin: -140px auto 0 auto;

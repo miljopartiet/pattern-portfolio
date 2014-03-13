@@ -185,3 +185,31 @@ $base-line-height: 1.5;
     }
   }
 }
+
+%speech-bubble-corner-up {
+  &:after {
+    content:"";
+    position:absolute;
+    left: -6px;
+    top: -10px;
+    width: 28px;
+    height: 29px;
+    background: transparent url(../images/speech-bubble-corner-up.svg) 0 0 no-repeat;
+    background-size: 100%;
+    z-index: 40;
+
+    @include respond-to(600px) {
+      width: 38px;
+      height: 39px;
+      left: -8px;
+      top: -14px;
+    }
+
+    @include respond-to(768px) {
+      top: -17px;
+      left: -10px;
+      width: 48px;
+      height: 49px;
+    }
+  }
+}
