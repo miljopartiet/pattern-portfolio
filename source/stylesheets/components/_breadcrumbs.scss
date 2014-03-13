@@ -6,18 +6,23 @@ nav.breadcrumbs {
 
   // The breadcrumbs is not used in the mobile view
   // instead we point users to the more complete site navigation
-  #wrap > & {
+  #main > & {
     display: none;
     @extend %page-section-content;
 
     @include respond-to(600px) {
       display: block;
       border: none;
-      margin: 0 auto (10em/16) auto;
+      margin-top: (50em/16);
+      margin-bottom: (25em/16);
+
+      & + .main-section {
+        padding-top: 0;
+      }
     }
 
     @include respond-to(768px) {
-      margin-bottom: (15em/16);
+      margin-top: (70em/16);
     }
 
     @include respond-to(1024px) {
@@ -56,18 +61,19 @@ nav.breadcrumbs {
     background: url(../images/breadcrumb-slash.png) 100% 50% no-repeat;
     background-size: 11px 18px;
 
+    html.svg & {
+      background-image: url(../images/breadcrumb-slash.svg);
+    }
+
     &:hover {
       text-decoration: underline;
       color: $green;
     }
 
-    &:last-child {
+    &.last,
+    html.svg &.last {
       padding-right: 0;
       background-image: none;
-    }
-
-    html.svg & {
-      background-image: url(../images/breadcrumb-slash.svg);
     }
   }
 }

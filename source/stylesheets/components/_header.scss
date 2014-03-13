@@ -96,6 +96,10 @@
 
 #main {
   padding-top: 50px;
+
+  @include respond-to(768px) {
+    padding-top: 76px;
+  }
 }
 
 body.navigation-is-open {

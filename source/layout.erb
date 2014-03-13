@@ -90,12 +90,12 @@
         </div>
       </div>
     </header>
-    <% if content_for? :breadcrumbs %>
-      <nav class="breadcrumbs">
-        <p><%= yield_content :breadcrumbs %></p>
-      </nav>
-      <% end %>
       <div id="main">
+        <% if content_for? :breadcrumbs %>
+          <nav class="breadcrumbs">
+            <p><%= yield_content :breadcrumbs %></p>
+          </nav>
+        <% end %>
         <%= yield %>
       </div>
       <footer id="site-footer">
