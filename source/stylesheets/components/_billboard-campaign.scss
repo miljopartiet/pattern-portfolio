@@ -57,12 +57,20 @@ body.has-billboard {
   }
 }
 
-.billboard-campaign-inner {
+.billboard-campaign-media-inner {
   max-width: 1100px;
   margin: 0 auto 0 auto;
+}
 
-  a {
-    display: block;
+.billboard-campaign-link {
+  display: block;
+  text-decoration: none;
+}
+
+.billboard-campaign-action-link {
+  text-decoration: underline;
+
+  .billboard-campaign-link:hover & {
     text-decoration: none;
   }
 }
@@ -85,13 +93,5 @@ body.has-billboard {
   p {
     margin: .25em 0 0 0;
     @extend %typography-heading-serif;
-  }
-
-  .action-link {
-    text-decoration: underline;
-
-    a:hover & {
-      text-decoration: none;
-    }
   }
 }
