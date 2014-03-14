@@ -68,33 +68,33 @@
               <li class="nav-item-primary leaf"><a href="/conversations.html"><span>Prata politik</span></a></li>
             </ul>
             <ul id="secondary-nav">
-              <li class="nav-item-secondary leaf"><a href="#">Bli medlem</a>
-              <li class="nav-item-secondary leaf"><a href="#">Kontakt</a>
-              <li class="nav-item-secondary leaf"><a href="#">Press</a>
-              <li class="nav-item-secondary leaf"><a href="#">Skolarbeten</a></li>
               <li class="nav-item-secondary leaf"><a href="#">Other languages</a></li>
               <li class="nav-item-secondary leaf"><a href="#">Lättläst</a></li>
-              <li class="nav-item-secondary leaf"><a href="#">Ge en gåva</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Kontakt</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Engagera dig</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Press</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Skolarbeten</a></li>
               <li class="nav-item-secondary leaf"><a href="#">Lediga jobb</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Medlem</a></li>
             </ul>
           </nav>
           <div id="search" role="search">
             <form action="/search" method="get" class="search">
-              <input type="search" name="searchtext" id="main-search" data-suggestions-target="#search" data-source="/data/search.json" autocomplete="off">
-              <button type="submit">Sök</button>
+              <input type="text" name="searchtext" id="main-search" data-suggestions-target="#search" data-source="/data/search.json" autocomplete="off">
+              <button type="submit" class="action">Sök</button>
             </form>
           </div>
         </div>
       </div>
     </header>
-    
-      <nav class="breadcrumbs">
-        <p>  <a href="/">Hem</a>
-  <a href="/about.html">Om Miljöpartiet de gröna</a>
-</p>
-      </nav>
-      
       <div id="main">
+        
+          <nav class="breadcrumbs">
+            <p>  <a href="/">Hem</a>
+  <a href="/about.html" class="last">Om Miljöpartiet de gröna</a>
+</p>
+          </nav>
+        
         
 <div class="main-section">
   <article>
@@ -338,18 +338,20 @@
 
       </div>
       <footer id="site-footer">
-        
-        <nav class="breadcrumbs">
-          <p>  <a href="/">Hem</a>
-  <a href="/about.html">Om Miljöpartiet de gröna</a>
+        <div class="inner">
+          
+          <nav class="breadcrumbs">
+            <p>  <a href="/">Hem</a>
+  <a href="/about.html" class="last">Om Miljöpartiet de gröna</a>
 </p>
-        </nav>
-        
-        <p id="logo-full"><a href="/">Miljöpartiet de gröna</a></p>
-        <p id="copyright" class="copy">
-          Allt innehåll är licensierat under en Creative Commons Erkännande 3.0 Unported Licens om inte annat anges.
-          Vi vill gärna ha dina synpunkter på vår webb. Kan vi förbättra något? <a href="mailto:mp@exaple.com">Skriv till oss och berätta!</a>
-        </p>
+          </nav>
+          
+          <p id="logo-full"><a href="/">Miljöpartiet de gröna</a></p>
+          <p id="copyright" class="copy">
+            Allt innehåll är licensierat under en Creative Commons Erkännande 3.0 Unported Licens om inte annat anges.
+            Vi vill gärna ha dina synpunkter på vår webb. Kan vi förbättra något? <a href="mailto:mp@exaple.com">Skriv till oss och berätta!</a>
+          </p>
+        </div>
       </footer>
     </div>
     <div id="cookies">
