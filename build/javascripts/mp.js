@@ -1511,6 +1511,7 @@ function naturalSort(a, b) {
         onShow: $.noop,
         onHide: $.noop,
         onNoResults: self.hide,
+        onRender: $.noop,
         onSetup: $.noop,
         itemTemplate: function(item) {
           return '<li><a href="'+ item.href +'">'+ item.name +'</a></li>';
@@ -1631,7 +1632,7 @@ function naturalSort(a, b) {
         var link = this.container.find("li.focused a").get(0);
         if (link) {
           e.preventDefault();
-          window.location = link.href;
+          link.click();
         } else if (!this.options.remote) {
           e.preventDefault();
         }
@@ -1639,7 +1640,6 @@ function naturalSort(a, b) {
     };
 
     Suggest.prototype.search = function(value) {
-      console.log(value);
       var value = value || this.query();
       if (value === '') {
         this.render([]);
@@ -1733,6 +1733,7 @@ function naturalSort(a, b) {
       html.push('</ul>');
 
       this.container.html(html.join(''));
+      this.options.onRender.call(this);
     };
 
     Suggest.prototype.show = function() {
@@ -2626,12 +2627,9 @@ if (typeof define !== 'undefined' && define.amd) {
       event.preventDefault();
       var $toggler = $(this),
           $siblings = $element.find(".toggler").not($toggler),
-          $sibling_targets = $($siblings.map(function() {
-            return $(this).attr("href");
-          }).get().join(",")),
           $target = $($toggler.attr("href"));
 
-      $sibling_targets.removeClass("open");
+      siblingTargets($siblings).removeClass("open");
       $siblings.removeClass("active");
 
       $toggler.toggleClass("active");
@@ -2643,11 +2641,17 @@ if (typeof define !== 'undefined' && define.amd) {
       }
     };
 
+    var siblingTargets = function($siblings) {
+      return $($siblings.map(function() {
+        return $(this).attr("href");
+      }).get().join(","));
+    };
+
     $element.delegate(".toggler", "click", toggle);
   };
 
   function detachNavigationOnScroll(navigation) {
-    var MIN_OFFSET_FOR_DETACH = 500,
+    var MIN_OFFSET_FOR_DETACH = 350,
         MIN_SCROLL_OFFSET = 80,
         lastValue = $(document).scrollTop();
 
@@ -2657,9 +2661,12 @@ if (typeof define !== 'undefined' && define.amd) {
       if (newValue < lastValue) {
         direction.direction = "up";
         direction.offset = lastValue - newValue;
-      } else {
+      } else if (newValue > lastValue){
         direction.direction = "down";
         direction.offset = newValue - lastValue;
+      } else {
+        direction.direction = "still";
+        direction.offset = 0;
       }
 
       return direction;
@@ -2671,6 +2678,7 @@ if (typeof define !== 'undefined' && define.amd) {
 
       if (newValue <= 0) {
         navigation.attach();
+        navigation.visible();
         return;
       }
 
@@ -2680,7 +2688,7 @@ if (typeof define !== 'undefined' && define.amd) {
 
       if (direction.direction == "up") {
         navigation.visible();
-      } else {
+      } else if (newValue >= MIN_SCROLL_OFFSET * 2) {
         navigation.hidden();
 
         if (direction.offset > 0 && newValue >= MIN_OFFSET_FOR_DETACH) {
@@ -2719,7 +2727,7 @@ if (typeof define !== 'undefined' && define.amd) {
         $message.hide();
         $.cookie('allow-cookies', true, { expires: 365, path: '/' });
       });
-      $('body').prepend($message.show());
+      $('#site-banner').prepend($message.show());
     }
   };
 
@@ -2851,7 +2859,7 @@ if (typeof define !== 'undefined' && define.amd) {
     });
 
     Mp.searchAsYouType('#main-search', {
-      limit: 25,
+      limit: 5,
       remote: true,
       inlined: true,
       itemTemplate: function(item, query) {
@@ -2873,8 +2881,28 @@ if (typeof define !== 'undefined' && define.amd) {
       onShow: function() {
         this.element.addClass('has-suggestions');
       },
+
       onHide: function() {
         this.element.removeClass('has-suggestions');
+      },
+
+      onRender: function() {
+        var searchAllHTML = ['<li>'];
+        searchAllHTML.push('<a href="#" class="search-all">');
+        searchAllHTML.push('<span class="name">Sök efter ”<span class="query">'+this.query()+'</span>”</span>');
+        searchAllHTML.push('<span class="category">Sök i allt</span>');
+        searchAllHTML.push('</a>');
+        searchAllHTML.push('</li>');
+
+        // We want an extra suggestion for focus to work
+        this.current_suggestions.push("Sök allt");
+
+        this.container.find("ul").append(searchAllHTML.join(""));
+
+        this.container.delegate(".search-all", "click", $.proxy(function(event) {
+          event.preventDefault();
+          this.element.parent("form").submit();
+        }, this));
       }
     });
 

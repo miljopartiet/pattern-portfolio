@@ -68,106 +68,51 @@
               <li class="nav-item-primary leaf"><a href="/conversations.html"><span>Prata politik</span></a></li>
             </ul>
             <ul id="secondary-nav">
-              <li class="nav-item-secondary leaf"><a href="#">Bli medlem</a>
-              <li class="nav-item-secondary leaf"><a href="#">Kontakt</a>
-              <li class="nav-item-secondary leaf"><a href="#">Press</a>
-              <li class="nav-item-secondary leaf"><a href="#">Skolarbeten</a></li>
               <li class="nav-item-secondary leaf"><a href="#">Other languages</a></li>
               <li class="nav-item-secondary leaf"><a href="#">Lättläst</a></li>
-              <li class="nav-item-secondary leaf"><a href="#">Ge en gåva</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Kontakt</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Engagera dig</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Press</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Skolarbeten</a></li>
               <li class="nav-item-secondary leaf"><a href="#">Lediga jobb</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Medlem</a></li>
             </ul>
           </nav>
           <div id="search" role="search">
             <form action="/search" method="get" class="search">
-              <input type="search" name="searchtext" id="main-search" data-suggestions-target="#search" data-source="/data/search.json" autocomplete="off">
-              <button type="submit">Sök</button>
+              <input type="text" name="searchtext" id="main-search" data-suggestions-target="#search" data-source="/data/search.json" autocomplete="off">
+              <button type="submit" class="action">Sök</button>
             </form>
           </div>
         </div>
       </div>
     </header>
-    
       <div id="main">
-        <div class="billboard-campaign">
-  <a href="/topic.html" class="action-link">
-    <div class="image">
-      <img src="/dynamic/campaign-warm-cold.png" alt="">
+        
+        <div class="billboard-campaign billboard-campaign-has-image">
+  <a href="/topic.html" class="billboard-campaign-link">
+    <div class="billboard-campaign-media-wrap" style="background: #000 url(dynamic/campaign-warm-cold-bg.png) 50% 0 repeat-y;">
+      <div class="billboard-campaign-media-inner">
+        <div class="billboard-campaign-media embedded-video widescreen">
+          <img src="/dynamic/campaign-warm-cold.png" alt="">
+        </div>
+      </div>
     </div>
-    <div class="billboard-campaign-content">
-      <div class="inner">
-        <h2>Politiken måste bli varmare.<br> Inte klimatet.</h2>
-        <p class="action-link">Läs mer om vår klimatterapi</p>
+    <div class="billboard-campaign-content-wrap">
+      <div class="billboard-campaign-content">
+        <div class="inner">
+          <h2>Politiken måste bli varmare.<br> Inte klimatet.</h2>
+          <p class="billboard-campaign-action-link">
+            <span class="icon-arrow"></span>
+            Läs mer om vår klimatterapi
+          </p>
+        </div>
       </div>
     </div>
   </a>
 </div>
 
-<div class="main-section">
-  <article>
-    <ul class="news-posts icon-list">
-  <li>
-    <a href="#">
-      <span class="icon">
-        <img src="images/sources/aftonbladet.png" alt="">
-      </span>
-      <span class="title">Vi vill att det byggs fler små, billiga hyresrätter.</span>
-      <span class="meta">
-        Idag, Bygg fler bostäder med hjälp av AP-fonderna., aftonbladet.se
-      </span>
-    </a>
-    
-  </li>
-  <li>
-    <a href="#">
-      <span class="icon">
-        <img src="images/sources/svt.png" alt="">
-      </span>
-      <span class="title">Vi driver på för en fungerande tågtrafik.</span>
-      <span class="meta">
-        Igår, Alliansen sviker om tågsamtal, svt.se
-      </span>
-    </a>
-    
-  </li>
-  <li>
-    <a href="#">
-      <span class="icon">
-        <img src="images/sources/tv4.png" alt="">
-      </span>
-      <span class="title">Gymnasieskolans yrkesprogram förtjänar bättre.</span>
-      <span class="meta">
-        Igår, Björklund bäddar för ett misslyckande, tv4.se
-      </span>
-    </a>
-    
-  </li>
-</ul>
-
-
-    <div class="fetch-more">
-      <a href="#" class="action">Visa fler nyheter</a>
-    </div>
-  </article>
-
-  <div class="speech-bubble">
-  <div class="inner">
-    <div class="main">
-      <h2>Följ oss som det passar dig</h2>
-      <p>Miljöpartiet finns självklart både på Facebook och Twitter. Dessutom har vi flera <a href="#">RSS-flöden</a> som kanske passar just dig.</p>
-    </div>
-    <div class="aside">
-      <ul>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Flickr</a></li>
-        <li><a href="#">Google+</a></li>
-        <li><a href="#">MP-bloggar</a></li>
-      </ul>
-    </div>
-  </div>
-  
-</div>
+<div class="main-section main-section-cream">
 
 </div>
 
@@ -222,8 +167,12 @@
   </div>
 </div>
 
-    <p class="fetch-more">
-      <a href="/topics.html" class="action">Läs mer om hur vi vill modernisera Sverige</a>
+
+    <p class="read-more">
+      <a href="/topics.html">
+        <span class="icon-arrow"></span>
+        Läs mer om hur vi vill modernisera Sverige
+      </a>
     </p>
   </article>
 </div>
@@ -421,6 +370,58 @@
   </div>
 </div>
 
+<div class="main-section">
+  <article>
+    <h1>Just nu</h1>
+    <ul class="news-posts icon-list">
+  <li>
+    <a href="#">
+      <span class="icon">
+        <img src="images/sources/aftonbladet.png" alt="">
+      </span>
+      <span class="title">Vi vill att det byggs fler små, billiga hyresrätter.</span>
+      <span class="meta">
+        Idag, Bygg fler bostäder med hjälp av AP-fonderna., aftonbladet.se
+      </span>
+    </a>
+    
+  </li>
+  <li>
+    <a href="#">
+      <span class="icon">
+        <img src="images/sources/svt.png" alt="">
+      </span>
+      <span class="title">Vi driver på för en fungerande tågtrafik.</span>
+      <span class="meta">
+        Igår, Alliansen sviker om tågsamtal, svt.se
+      </span>
+    </a>
+    
+  </li>
+  <li>
+    <a href="#">
+      <span class="icon">
+        <img src="images/sources/tv4.png" alt="">
+      </span>
+      <span class="title">Gymnasieskolans yrkesprogram förtjänar bättre.</span>
+      <span class="meta">
+        Igår, Björklund bäddar för ett misslyckande, tv4.se
+      </span>
+    </a>
+    
+  </li>
+</ul>
+
+
+    <div class="fetch-more">
+      <a href="#" class="action">
+        <span class="icon-arrow"></span>
+        Visa fler nyheter
+      </a>
+    </div>
+  </article>
+</div>
+
 <div class="main-section main-section-magenta">
   <article>
     <header class="intro">
@@ -468,7 +469,12 @@
         </a>
       </div>
     </div></div>
-    <p><a href="/about.html" class="action">Fler personer i vårt parti och där du bor.</a></p>
+    <p class="read-more">
+      <a href="/about.html">
+        <span class="icon-arrow"></span>
+        Fler personer i vårt parti och där du bor
+      </a>
+    </p>
   </article>
 </div>
 
@@ -513,12 +519,14 @@
 
       </div>
       <footer id="site-footer">
-        
-        <p id="logo-full"><a href="/">Miljöpartiet de gröna</a></p>
-        <p id="copyright" class="copy">
-          Allt innehåll är licensierat under en Creative Commons Erkännande 3.0 Unported Licens om inte annat anges.
-          Vi vill gärna ha dina synpunkter på vår webb. Kan vi förbättra något? <a href="mailto:mp@exaple.com">Skriv till oss och berätta!</a>
-        </p>
+        <div class="inner">
+          
+          <p id="logo-full"><a href="/">Miljöpartiet de gröna</a></p>
+          <p id="copyright" class="copy">
+            Allt innehåll är licensierat under en Creative Commons Erkännande 3.0 Unported Licens om inte annat anges.
+            Vi vill gärna ha dina synpunkter på vår webb. Kan vi förbättra något? <a href="mailto:mp@exaple.com">Skriv till oss och berätta!</a>
+          </p>
+        </div>
       </footer>
     </div>
     <div id="cookies">
