@@ -32,9 +32,6 @@ body.has-billboard {
 
 .billboard-campaign {
   background: $cream;
-}
-
-.billboard-campaign-has-image {
   position: relative;
 
   .billboard-campaign-content-wrap {
@@ -48,12 +45,6 @@ body.has-billboard {
 
   .billboard-campaign-content {
     margin-top: -25px;
-  }
-}
-
-.billboard-campaign-has-video {
-  .billboard-campaign-content {
-    margin-top: 20px;
   }
 }
 
