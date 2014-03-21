@@ -99,12 +99,12 @@
         <%= yield %>
       </div>
       <footer id="site-footer">
+        <% if content_for? :breadcrumbs %>
+        <nav class="breadcrumbs">
+          <p><%= yield_content :breadcrumbs %></p>
+        </nav>
+        <% end %>
         <div class="inner">
-          <% if content_for? :breadcrumbs %>
-          <nav class="breadcrumbs">
-            <p><%= yield_content :breadcrumbs %></p>
-          </nav>
-          <% end %>
           <p id="logo-full"><a href="/">Miljöpartiet de gröna</a></p>
           <p id="copyright" class="copy">
             Allt innehåll är licensierat under en Creative Commons Erkännande 3.0 Unported Licens om inte annat anges.
