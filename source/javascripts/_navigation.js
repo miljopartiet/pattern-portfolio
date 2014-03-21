@@ -95,6 +95,7 @@
 
       if ($target.hasClass("open")) {
         $body.addClass(targetClass.join(" "));
+        $target.find("input").trigger("focus");
       } else {
         $body.removeClass(targetClass.join(" "));
       }
