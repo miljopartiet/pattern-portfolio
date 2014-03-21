@@ -75,14 +75,17 @@ body.has-billboard {
   }
 }
 
+.billboard-campaign-content-wrap {
+  @extend %page-section-content;
+}
+
 .billboard-campaign-content {
-  max-width: 640px;
-  margin: 0 10px 0 18px;
+  margin: 0 18px;
   @extend %speech-bubble;
   @extend %speech-bubble-corner-up;
 
-  @include respond-to(768px) {
-    margin: 0 auto;
+  @include respond-to(600px) {
+    margin: 0;
   }
 
   h2 {
