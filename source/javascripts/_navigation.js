@@ -3,8 +3,8 @@
   namespace("Mp");
 
   Mp.Navigation = (function() {
-    function Navigation() {
-      this.$header = $("#site-banner");
+    function Navigation(selector) {
+      this.$header = $(selector);
       this._visible = true;
       this._detached = false;
     }
@@ -55,17 +55,26 @@
       event.preventDefault();
       var $toggler = $(this),
           $siblings = $element.find(".toggler").not($toggler),
-          $target = $($toggler.attr("href"));
+          $target = $($toggler.attr("href")),
+          $body = $("body"),
+          $siblingTargets = siblingTargets($siblings);
 
-      siblingTargets($siblings).removeClass("open");
+
+      var siblingClasses = openIndicationClasses(siblingTargetIds($siblingTargets)).join(" ");
+      $body.removeClass(siblingClasses);
+      $siblingTargets.removeClass("open");
       $siblings.removeClass("active");
 
       $toggler.toggleClass("active");
       $target.toggleClass("open");
+
+      var targetClass = openIndicationClasses([$target.attr("id")])
+      targetClass.push("navigation-is-open");
+
       if ($target.hasClass("open")) {
-        $("body").addClass("navigation-is-open");
+        $body.addClass(targetClass.join(" "));
       } else {
-        $("body").removeClass("navigation-is-open");
+        $body.removeClass(targetClass.join(" "));
       }
     };
 
@@ -74,6 +83,20 @@
         return $(this).attr("href");
       }).get().join(","));
     };
+
+    var siblingTargetIds = function($siblingTargets) {
+      var ids = [];
+      for (var i=0,j=$siblingTargets.length; i < j; i++) {
+        ids.push($siblingTargets.get(i).id)
+      }
+      return ids;
+    };
+
+    var openIndicationClasses = function(ids) {
+      return $.map(ids, function(id) {
+        return id + "-is-open";
+      });
+    }
 
     $element.delegate(".toggler", "click", toggle);
   };
@@ -116,14 +139,16 @@
 
       if (direction.direction == "up") {
         navigation.visible();
-      } else if (newValue >= MIN_SCROLL_OFFSET * 2) {
-        navigation.hidden();
+      } else {
+        if (newValue >= MIN_SCROLL_OFFSET * 2) {
+          navigation.hidden();
+        }
 
         if (direction.offset > 0 && newValue >= MIN_OFFSET_FOR_DETACH) {
           // Ensure we wait for hide transition before detaching
           setTimeout(function() {
             navigation.detach();
-          }, 200);
+          }, 250);
         }
       }
     };
@@ -132,7 +157,10 @@
   }
 
   $(function() {
-    var navigation = new Mp.Navigation();
+    var $siteBanner = $("#site-banner"),
+        navigation = new Mp.Navigation($siteBanner);
+
     detachNavigationOnScroll(navigation);
+    Mp.NavigationToggler($siteBanner);
   });
 }(jQuery));

@@ -102,21 +102,30 @@
   }
 }
 
-body.navigation-is-open {
-  @include respond-to(767px, false, max) {
-    position: fixed;
-    overflow: hidden;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+@mixin siteBannerTakeOver {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
-    #site-banner {
-      height: 100%;
-      overflow: scroll;
-    }
+  #site-banner {
+    height: 100%;
+    overflow: scroll;
   }
 }
+
+body.navigation-is-open {
+  @include respond-to(767px, false, max) {
+    @include siteBannerTakeOver;
+  }
+}
+
+.touch body.search-is-open {
+  @include siteBannerTakeOver;
+}
+
 // Navigation elements
 
 #site-banner .navigation {

@@ -115,8 +115,6 @@
     // Get rid of those pesky 300ms on mobile clicks
     FastClick.attach(document.body);
 
-    Mp.NavigationToggler("#site-banner");
-
     if ($html.hasClass('lte9')) {
       Mp.placeholderFallback();
       Mp.columnsFallback('ol.labeled-list ol', 3);
