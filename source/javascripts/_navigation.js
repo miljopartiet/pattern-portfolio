@@ -1,10 +1,12 @@
+//= require lib/underscore/_deferred
+
 (function($) {
   "use strict";
   namespace("Mp");
 
   Mp.Navigation = (function() {
-    function Navigation() {
-      this.$header = $("#site-banner");
+    function Navigation(selector) {
+      this.$header = $(selector);
       this._visible = true;
       this._detached = false;
     }
@@ -26,19 +28,39 @@
       },
 
       visible: function() {
+        var dfd = _.Deferred();
         if (!this._visible) {
           this.$header.addClass("visible");
           this.$header.removeClass("hidden");
           this._visible = true;
+
+          // Wait for visible transformation
+          setTimeout(function() {
+            dfd.resolve();
+          }, 250);
+        } else {
+          dfd.resolve();
         }
+
+        return dfd.promise();
       },
 
       hidden: function() {
+        var dfd = _.Deferred();
         if (this._visible) {
           this.$header.addClass("hidden");
           this.$header.removeClass("visible");
           this._visible = false;
+
+          // Wait for visible transformation
+          setTimeout(function() {
+            dfd.resolve();
+          }, 300);
+        } else {
+          dfd.resolve();
         }
+
+        return dfd.promise();
       }
     });
 
@@ -55,17 +77,27 @@
       event.preventDefault();
       var $toggler = $(this),
           $siblings = $element.find(".toggler").not($toggler),
-          $target = $($toggler.attr("href"));
+          $target = $($toggler.attr("href")),
+          $body = $("body"),
+          $siblingTargets = siblingTargets($siblings);
 
-      siblingTargets($siblings).removeClass("open");
+
+      var siblingClasses = openIndicationClasses(siblingTargetIds($siblingTargets)).join(" ");
+      $body.removeClass(siblingClasses);
+      $siblingTargets.removeClass("open");
       $siblings.removeClass("active");
 
       $toggler.toggleClass("active");
       $target.toggleClass("open");
+
+      var targetClass = openIndicationClasses([$target.attr("id")])
+      targetClass.push("navigation-is-open");
+
       if ($target.hasClass("open")) {
-        $("body").addClass("navigation-is-open");
+        $body.addClass(targetClass.join(" "));
+        $target.find("input").trigger("focus");
       } else {
-        $("body").removeClass("navigation-is-open");
+        $body.removeClass(targetClass.join(" "));
       }
     };
 
@@ -75,23 +107,39 @@
       }).get().join(","));
     };
 
+    var siblingTargetIds = function($siblingTargets) {
+      var ids = [];
+      for (var i=0,j=$siblingTargets.length; i < j; i++) {
+        ids.push($siblingTargets.get(i).id)
+      }
+      return ids;
+    };
+
+    var openIndicationClasses = function(ids) {
+      return $.map(ids, function(id) {
+        return id + "-is-open";
+      });
+    }
+
     $element.delegate(".toggler", "click", toggle);
   };
 
   function detachNavigationOnScroll(navigation) {
-    var MIN_OFFSET_FOR_DETACH = 350,
-        MIN_SCROLL_OFFSET = 80,
-        lastValue = $(document).scrollTop();
+    var MIN_OFFSET_FOR_DETACH = 550,
+        MIN_HIDE_SCROLL_TOP = 160,
+        MIN_SCROLL_OFFSET = 60,
+        lastScrollTop = $(document).scrollTop(),
+        busy = false;
 
-    var scrollDirection = function(newValue, lastValue) {
+    var scrollDirection = function(newScrollTop, lastScrollTop) {
       var direction = {};
 
-      if (newValue < lastValue) {
+      if (newScrollTop < lastScrollTop) {
         direction.direction = "up";
-        direction.offset = lastValue - newValue;
-      } else if (newValue > lastValue){
+        direction.offset = lastScrollTop - newScrollTop;
+      } else if (newScrollTop > lastScrollTop){
         direction.direction = "down";
-        direction.offset = newValue - lastValue;
+        direction.offset = newScrollTop - lastScrollTop;
       } else {
         direction.direction = "still";
         direction.offset = 0;
@@ -101,38 +149,51 @@
     };
 
     var setNavigationPlacement = function() {
-      var newValue = $(document).scrollTop(),
-          direction = scrollDirection(newValue, lastValue);
+      var newScrollTop = $(document).scrollTop(),
+          direction = scrollDirection(newScrollTop, lastScrollTop);
 
-      if (newValue <= 0) {
+      lastScrollTop = newScrollTop;
+
+      if (newScrollTop <= 0) {
         navigation.attach();
         navigation.visible();
         return;
+      } else if (busy || direction.offset < MIN_SCROLL_OFFSET) {
+        return;
       }
 
-      if (direction.offset > MIN_SCROLL_OFFSET) {
-        lastValue = newValue;
-      }
 
       if (direction.direction == "up") {
-        navigation.visible();
-      } else if (newValue >= MIN_SCROLL_OFFSET * 2) {
-        navigation.hidden();
+        busy = true;
+        navigation.visible().done(function() {
+          busy = false;
+        });
+      } else {
+        if (newScrollTop >= MIN_HIDE_SCROLL_TOP) {
+          busy = true;
+          navigation.hidden().done(function() {
+            busy = false;
+          });
+        }
 
-        if (direction.offset > 0 && newValue >= MIN_OFFSET_FOR_DETACH) {
+        if (newScrollTop >= MIN_OFFSET_FOR_DETACH) {
           // Ensure we wait for hide transition before detaching
           setTimeout(function() {
             navigation.detach();
-          }, 200);
+          }, 250);
         }
       }
+
     };
 
     $(window).scroll(_.throttle(setNavigationPlacement, 320));
   }
 
   $(function() {
-    var navigation = new Mp.Navigation();
+    var $siteBanner = $("#site-banner"),
+        navigation = new Mp.Navigation($siteBanner);
+
     detachNavigationOnScroll(navigation);
+    Mp.NavigationToggler($siteBanner);
   });
 }(jQuery));

@@ -218,7 +218,11 @@ article .lead p {
   font-size: 1.75em;
   line-height: 1.14286; }
 
+<<<<<<< HEAD
 h4, .labeled-list .list a, .speech-bubble li, .speech-bubble p, .read-more, .take-action-more li, article .body li,
+=======
+h4, .labeled-list .list a, .speech-bubble li, .speech-bubble p, .read-more, article .body li,
+>>>>>>> new-navigation
 article .body p, .topics p {
   font-size: 1em;
   line-height: 1.25;
@@ -264,7 +268,11 @@ small, sup, figcaption, #wrap blockquote footer p, .vignette-intro, .section-vig
   padding-top: 3.75em;
   padding-bottom: 4.375em; }
 
+<<<<<<< HEAD
 footer nav.breadcrumbs, .take-action-inner, #site-footer, body.logged-in #wrap .main-section > .tabs.primary, body.logged-in #wrap #main > .tabs,
+=======
+footer nav.breadcrumbs, #site-footer, body.logged-in #wrap .main-section > .tabs.primary, body.logged-in #wrap #main > .tabs,
+>>>>>>> new-navigation
 body.logged-in #wrap #main > .action-links,
 body.logged-in #wrap #main > .drupal-messages, body.not-logged-in.page-user nav.tabs,
 body.not-logged-in.page-user #user-login, #main > nav.breadcrumbs, .main-section > .speech-bubble, article {
@@ -274,7 +282,11 @@ body.not-logged-in.page-user #user-login, #main > nav.breadcrumbs, .main-section
   width: 580px;
   width: 640px; }
 
+<<<<<<< HEAD
 footer nav.breadcrumbs, .take-action-inner, #site-footer {
+=======
+footer nav.breadcrumbs, #site-footer {
+>>>>>>> new-navigation
   width: 970px;
   margin-left: auto;
   margin-right: auto; }
@@ -818,21 +830,33 @@ body.has-billboard #secondary-nav {
   background: transparent; }
 
 .billboard-campaign {
+<<<<<<< HEAD
   background: #f6f4e5; }
 
 .billboard-campaign-has-image {
   position: relative; }
   .billboard-campaign-has-image .billboard-campaign-content-wrap {
+=======
+  background: #f6f4e5;
+  position: relative; }
+  .billboard-campaign .billboard-campaign-content-wrap {
+>>>>>>> new-navigation
     position: absolute;
     bottom: -60px;
     left: 0;
     right: 0; }
+<<<<<<< HEAD
   .billboard-campaign-has-image .billboard-campaign-content {
     margin-top: -25px; }
 
 .billboard-campaign-has-video .billboard-campaign-content {
   margin-top: 20px; }
 
+=======
+  .billboard-campaign .billboard-campaign-content {
+    margin-top: -25px; }
+
+>>>>>>> new-navigation
 .billboard-campaign-media-inner {
   max-width: 1100px;
   margin: 0 auto 0 auto; }
@@ -1309,6 +1333,7 @@ form.speech-bubble {
 .read-more {
   margin-top: 1.5em; }
 
+<<<<<<< HEAD
 .take-action {
   max-width: 970px;
   margin: 0 auto;
@@ -1364,6 +1389,8 @@ form.speech-bubble {
   display: inline-block;
   margin: 0 1em 0 0; }
 
+=======
+>>>>>>> new-navigation
 .loading article.message {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
