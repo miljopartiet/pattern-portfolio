@@ -135,17 +135,3 @@
     line-height: (18/14);
   }
 }
-
-
-%typography-text-quote {
-  font-family: $mp-serif;
-  font-size: (18em/16);
-  line-height: (22/18);
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-
-  @include respond-to(768px) {
-    font-size: (24em/16);
-    line-height: (28/24);
-  }
-}

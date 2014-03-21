@@ -315,16 +315,14 @@ blockquote {
   & > div {
     @include respond-to(1024px) {
       margin-bottom: .5em;
-      padding-left: 0;
       float: left;
       width: percentage(640/805);
     }
 
     // We need to be specific so article .body does not overwrite
     #wrap & p {
-      @extend %typography-text-quote;
+      @extend %typography-text-lead;
       margin-top: (12em/18);
-      margin-left: 1em;
 
       @include respond-to(600px) {
         margin-right: (55em/18);
@@ -337,15 +335,6 @@ blockquote {
       &:first-child {
         position: relative;
         margin-top: 0;
-
-        &:before {
-          @extend %typography-text-quote;
-          content: "”";
-          line-height: 1;
-          position: absolute;
-          top: .05em;
-          left: -.59em;
-        }
       }
     }
   }
