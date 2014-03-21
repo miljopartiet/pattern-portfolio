@@ -35,6 +35,11 @@
   line-height: (24/30);
   text-rendering: optimizeLegibility;
 
+  @include respond-to(600px) {
+    font-size: (36em/16);
+    line-height: (30/36);
+  }
+
   @include respond-to(768px) {
     font-size: (48em/16);
     line-height: (40/48);
@@ -107,8 +112,10 @@
 }
 
 %typography-text-body {
+  font-family: georgia, serif;
   font-size: (16em/16);
   line-height: (20/16);
+
   @include respond-to(768px) {
     font-size: (18em/16);
     line-height: (25/18);
@@ -116,6 +123,7 @@
 }
 
 %typography-text {
+  font-family: georgia, serif;
   font-size: (14em/16);
   line-height: (17/14);
 
