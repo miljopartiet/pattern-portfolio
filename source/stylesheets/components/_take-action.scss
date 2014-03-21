@@ -1,0 +1,117 @@
+.take-action {
+  @extend %page-section-content-wide;
+  color: $magenta;
+
+  a {
+    color: $magenta;
+  }
+
+  @include respond-to(768px) {
+    padding-top: 3em;
+  }
+}
+
+.take-action-inner {
+  border: 1px solid $warm-grey;
+  @include clearfix;
+  padding: 18px 15px;
+  @include border-radius(10px);
+
+  @include respond-to(768px) {
+    padding: 25px 35px 25px 35px;
+  }
+}
+
+.take-action-item {
+  h2 {
+    margin: 0 0 .25em 0;
+  }
+
+  @include respond-to(1024px) {
+    float: left;
+    width: 33%;
+    margin: 0;
+  }
+}
+
+.take-action-newsletter {
+  margin-bottom: 1.5em;
+
+  @include respond-to(1024px) {
+    width: 60%;
+    margin-right: 7%;
+    margin-bottom: 0;
+  }
+
+  label {
+    display: none;
+  }
+
+  input[type="email"] {
+    margin-bottom: .3em;
+    padding: 0 .05em;
+    width: 100%;
+    @extend %typography-heading;
+    line-height: 1;
+    background: none;
+    border-bottom: 1px dashed $text-warm-grey;
+    border-radius: 0;
+
+    &:focus {
+      border-color: $text-light-grey;
+    }
+  }
+
+  input,
+  button {
+    margin: 0;
+  }
+
+  .action {
+    background: $magenta;
+  }
+}
+
+.take-action-list {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.take-action-list-item {
+  margin: .25em 0 0 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.take-action-social {
+  @extend %typography-heading;
+
+  @include respond-between(480px, 1024px) {
+    float: left;
+    width: 50%;
+    margin: 0 0 .35em 0;
+  }
+
+  [class*="icon-"] {
+    font-size: .7em;
+    margin-right: .25em;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.take-action-more {
+  margin-top: .5em;
+  @extend %typography-text-body;
+}

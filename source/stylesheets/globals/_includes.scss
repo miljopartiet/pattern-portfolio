@@ -13,7 +13,7 @@ $text-light-grey: #888;
 $text-medium-grey: #767676;
 $text-warm-grey: #bcb8b2;
 
-$warm-grey: #ddd;
+$warm-grey: #d9d3cd;
 
 $link-color: $green;
 $link-hover-color: #1c8437;
@@ -131,7 +131,7 @@ $base-line-height: 1.5;
   padding: 18px 15px;
 
   @include respond-to(768px) {
-    padding: 25px 20px 25px 25px;
+    padding: 25px;
   }
 
   .inner {
