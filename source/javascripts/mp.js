@@ -4,3 +4,4 @@
 //= require lib/_natural_sort
 //= require _search_as_you_type
 //= require _application
+//= require _facebook
