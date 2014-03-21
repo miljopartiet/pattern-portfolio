@@ -147,7 +147,7 @@ iframe {
 }
 
 label {
-  
+
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -167,7 +167,7 @@ input[type="search"] {
   font-size: (16em/16);
   line-height: 1;
   color: #000;
-  border: 1px solid #fff;
+  border: 0;
   border-radius: 6px;
   background: #fff;
   padding: 6px 10px 5px 10px;
@@ -177,20 +177,12 @@ input[type="search"] {
   -webkit-appearance: none;
 
   &:focus {
-    border: 1px solid $warm-grey;
     outline: none;
   }
 
   @include respond-to(569px) {
     font-size: (14em/16);
     padding: 8px 15px 8px 15px;
-  }
-
-  .speech-bubble & {
-    border: 1px solid #fff;
-    &:focus {
-      border: 1px solid $warm-grey;
-    }
   }
 }
 
