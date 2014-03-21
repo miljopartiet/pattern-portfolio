@@ -125,7 +125,8 @@
 
   function detachNavigationOnScroll(navigation) {
     var MIN_OFFSET_FOR_DETACH = 550,
-        MIN_SCROLL_OFFSET = 160,
+        MIN_HIDE_SCROLL_TOP = 160,
+        MIN_SCROLL_OFFSET = 60,
         lastScrollTop = $(document).scrollTop(),
         busy = false;
 
@@ -156,7 +157,7 @@
         navigation.attach();
         navigation.visible();
         return;
-      } else if (busy) {
+      } else if (busy || direction.offset < MIN_SCROLL_OFFSET) {
         return;
       }
 
@@ -167,7 +168,7 @@
           busy = false;
         });
       } else {
-        if (newScrollTop >= MIN_SCROLL_OFFSET) {
+        if (newScrollTop >= MIN_HIDE_SCROLL_TOP) {
           busy = true;
           navigation.hidden().done(function() {
             busy = false;
