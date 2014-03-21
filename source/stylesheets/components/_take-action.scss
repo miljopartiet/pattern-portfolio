@@ -68,7 +68,7 @@
   }
 
   .action {
-    background: $magenta;
+    @extend %action-magenta;
   }
 }
 
