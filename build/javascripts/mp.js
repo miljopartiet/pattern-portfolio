@@ -4047,7 +4047,6 @@ if (typeof define !== 'undefined' && define.amd) {
     }
 
     $.getJSON("https://graph.facebook.com/"+Mp.Facebook.username+"?callback=?", function(response) {
-      console.log(_.str);
       $counters.text(_.str.numberFormat(response.likes, 0, ".", " ")+ " gillar");
     });
   };
