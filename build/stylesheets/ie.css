@@ -860,15 +860,15 @@ body.has-billboard #secondary-nav {
 
 .main-section .speech-bubble .action,
 .main-section .speech-bubble .action a,
-.main-section .speech-bubble .form-submit {
+.main-section .speech-bubble .form-submit, .take-action-newsletter .action {
   background: #bd0076;
   color: #ffe900;
   text-decoration: none; }
   .main-section .speech-bubble .action:hover,
   .main-section .speech-bubble .action a:hover,
-  .main-section .speech-bubble .form-submit:hover, .main-section .speech-bubble .action:active,
+  .main-section .speech-bubble .form-submit:hover, .take-action-newsletter .action:hover, .main-section .speech-bubble .action:active,
   .main-section .speech-bubble .action a:active,
-  .main-section .speech-bubble .form-submit:active {
+  .main-section .speech-bubble .form-submit:active, .take-action-newsletter .action:active {
     background: #a40066; }
 
 .action,
@@ -1311,8 +1311,6 @@ form.speech-bubble {
   .take-action-newsletter input,
   .take-action-newsletter button {
     margin: 0; }
-  .take-action-newsletter .action {
-    background: #bd0076; }
 
 .take-action-list ul {
   list-style: none;
