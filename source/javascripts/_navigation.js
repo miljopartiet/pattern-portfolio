@@ -1,3 +1,5 @@
+//= require lib/underscore/_deferred
+
 (function($) {
   "use strict";
   namespace("Mp");
@@ -26,19 +28,39 @@
       },
 
       visible: function() {
+        var dfd = _.Deferred();
         if (!this._visible) {
           this.$header.addClass("visible");
           this.$header.removeClass("hidden");
           this._visible = true;
+
+          // Wait for visible transformation
+          setTimeout(function() {
+            dfd.resolve();
+          }, 250);
+        } else {
+          dfd.resolve();
         }
+
+        return dfd.promise();
       },
 
       hidden: function() {
+        var dfd = _.Deferred();
         if (this._visible) {
           this.$header.addClass("hidden");
           this.$header.removeClass("visible");
           this._visible = false;
+
+          // Wait for visible transformation
+          setTimeout(function() {
+            dfd.resolve();
+          }, 300);
+        } else {
+          dfd.resolve();
         }
+
+        return dfd.promise();
       }
     });
 
@@ -102,19 +124,20 @@
   };
 
   function detachNavigationOnScroll(navigation) {
-    var MIN_OFFSET_FOR_DETACH = 350,
-        MIN_SCROLL_OFFSET = 80,
-        lastValue = $(document).scrollTop();
+    var MIN_OFFSET_FOR_DETACH = 550,
+        MIN_SCROLL_OFFSET = 160,
+        lastScrollTop = $(document).scrollTop(),
+        busy = false;
 
-    var scrollDirection = function(newValue, lastValue) {
+    var scrollDirection = function(newScrollTop, lastScrollTop) {
       var direction = {};
 
-      if (newValue < lastValue) {
+      if (newScrollTop < lastScrollTop) {
         direction.direction = "up";
-        direction.offset = lastValue - newValue;
-      } else if (newValue > lastValue){
+        direction.offset = lastScrollTop - newScrollTop;
+      } else if (newScrollTop > lastScrollTop){
         direction.direction = "down";
-        direction.offset = newValue - lastValue;
+        direction.offset = newScrollTop - lastScrollTop;
       } else {
         direction.direction = "still";
         direction.offset = 0;
@@ -124,33 +147,41 @@
     };
 
     var setNavigationPlacement = function() {
-      var newValue = $(document).scrollTop(),
-          direction = scrollDirection(newValue, lastValue);
+      var newScrollTop = $(document).scrollTop(),
+          direction = scrollDirection(newScrollTop, lastScrollTop);
 
-      if (newValue <= 0) {
+      lastScrollTop = newScrollTop;
+
+      if (newScrollTop <= 0) {
         navigation.attach();
         navigation.visible();
         return;
+      } else if (busy) {
+        return;
       }
 
-      if (direction.offset > MIN_SCROLL_OFFSET) {
-        lastValue = newValue;
-      }
 
       if (direction.direction == "up") {
-        navigation.visible();
+        busy = true;
+        navigation.visible().done(function() {
+          busy = false;
+        });
       } else {
-        if (newValue >= MIN_SCROLL_OFFSET * 2) {
-          navigation.hidden();
+        if (newScrollTop >= MIN_SCROLL_OFFSET) {
+          busy = true;
+          navigation.hidden().done(function() {
+            busy = false;
+          });
         }
 
-        if (direction.offset > 0 && newValue >= MIN_OFFSET_FOR_DETACH) {
+        if (newScrollTop >= MIN_OFFSET_FOR_DETACH) {
           // Ensure we wait for hide transition before detaching
           setTimeout(function() {
             navigation.detach();
           }, 250);
         }
       }
+
     };
 
     $(window).scroll(_.throttle(setNavigationPlacement, 320));
