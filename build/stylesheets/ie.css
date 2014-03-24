@@ -235,7 +235,7 @@ article .body p, .topics p {
   font-size: 1em;
   line-height: 1.375; }
 
-small, sup, figcaption, #wrap blockquote footer p, .vignette-intro, .section-vignette-intro, .icon-list li .meta, nav.breadcrumbs p, .speech-bubble .position-me .choose, .conversation .byline p, .conversations .details, #cookies, .main-search .category {
+small, sup, figcaption, #wrap blockquote footer p, .vignette-intro, .section-vignette-intro, .billboard-campaign-caption, .icon-list li .meta, nav.breadcrumbs p, .speech-bubble .position-me .choose, .conversation .byline p, .conversations .details, #cookies, .main-search .category {
   font-family: arial, sans-serif;
   font-size: 0.8125em;
   line-height: 1.23077;
@@ -779,18 +779,22 @@ body.has-billboard #secondary-nav {
   background: transparent; }
 
 .billboard-campaign {
-  background: #f6f4e5;
+  background: #f6f4e5; }
+
+.billboard-campaign-has-content-over {
   position: relative; }
-  .billboard-campaign .billboard-campaign-content-wrap {
+  .billboard-campaign-has-content-over .billboard-campaign-content-wrap {
     position: absolute;
     bottom: -60px;
     left: 0;
     right: 0; }
-  .billboard-campaign .billboard-campaign-content {
+  .billboard-campaign-has-content-over .billboard-campaign-content {
     margin-top: -25px; }
+  .billboard-campaign-has-content-over + .main-section {
+    padding-top: 7.375em; }
 
 .billboard-campaign-media-inner {
-  max-width: 1100px;
+  max-width: 970px;
   margin: 0 auto 0 auto; }
 
 .billboard-campaign-link {
@@ -809,6 +813,15 @@ body.has-billboard #secondary-nav {
     margin: 0; }
   .billboard-campaign-content p {
     margin: .25em 0 0 0; }
+
+.billboard-campaign-caption {
+  max-width: 970px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 18px;
+  color: #888888; }
+  .billboard-campaign-caption a {
+    color: #888888; }
 
 .action,
 .form-submit,
@@ -1263,8 +1276,7 @@ form.speech-bubble {
   margin-top: 1.5em; }
 
 .take-action {
-  color: #bd0076;
-  padding-top: 3em; }
+  color: #bd0076; }
   .take-action a {
     color: #bd0076; }
 
