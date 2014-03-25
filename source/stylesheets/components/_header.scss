@@ -243,7 +243,6 @@ body.navigation-is-open {
   clear: both;
   margin: 0;
   padding: 0;
-  @include clearfix;
   display: none;
 
   &.open {
@@ -253,8 +252,10 @@ body.navigation-is-open {
   @include respond-to(768px) {
     @include clearfix;
     padding: 0;
-    display: block;
     clear: none;
+    .navigation & {
+      display: block;
+    }
   }
 
   li {
