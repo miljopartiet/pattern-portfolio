@@ -283,6 +283,8 @@ body.navigation-is-open {
 
 
 .nav-item-primary {
+  display: inline;
+
   a {
     @extend %nav-item;
     font-family: $mp-sans;
