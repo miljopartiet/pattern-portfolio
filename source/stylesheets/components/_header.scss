@@ -219,13 +219,23 @@ body.navigation-is-open {
       background-repeat: no-repeat;
     }
   }
+}
 
+#skip-to-search span {
+  background-image: url(../images/search-white.svg);
+}
+
+#skip-to-navigation span {
+  background-image: url(../images/burger-white.svg);
+}
+
+.no-svg {
   #skip-to-search span {
-    background-image: url(../images/search-white.svg);
+    background-image: url(../images/search-white-1x.png);
   }
 
   #skip-to-navigation span {
-    background-image: url(../images/burger-white.svg);
+    background-image: url(../images/burger-white-1x.png);
   }
 }
 
