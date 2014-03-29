@@ -1,0 +1,52 @@
+<% wrap_layout :layout do %>
+  <div id="wrap">
+    <header role="banner" id="site-banner">
+      <div class="inner">
+        <div class="navigation">
+          <div id="logo">
+            <a href="/">Miljöpartiet</a>
+          </div>
+          <nav id="nav" role="navigation">
+            <ul id="primary-nav">
+              <li class="nav-item-primary first leaf<%= ' active-trail' if data.page.current_nav == 'pages' %>"><a href="/pages/index.html"><span>Page templates</span></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div id="main">
+      <% if content_for? :breadcrumbs %>
+        <nav class="breadcrumbs">
+          <p><%= yield_content :breadcrumbs %></p>
+        </nav>
+      <% end %>
+
+      <%= yield %>
+    </div>
+
+    <footer id="site-footer">
+      <% if content_for? :breadcrumbs %>
+      <nav class="breadcrumbs">
+        <p><%= yield_content :breadcrumbs %></p>
+      </nav>
+      <% end %>
+      <div class="inner">
+        <p id="logo-full"><a href="/">Miljöpartiet de gröna</a></p>
+        <p id="copyright" class="copy">
+          Except where otherwise noted, content on this site is licensed under a Creative Commons Attribution 3.0 Unported license.
+          We would love your feedback. <a href="mailto:webb@mp.se">Write to us!</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+  <div id="cookies">
+    <div>
+      <p>
+        Vår webbplats <a href="#">använder cookies</a>.
+        Genom att surfa vidare accepterar du dessa cookies.
+      </p>
+      <a href="#" class="confirm action">OK, stäng meddelandet</a>
+    </div>
+  </div>
+<% end %>
