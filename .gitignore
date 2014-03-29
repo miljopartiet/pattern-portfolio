@@ -4,6 +4,7 @@
 .bundle
 .config
 .sass-cache
+.cache
 coverage
 InstalledFiles
 lib/bundler/man
