@@ -18,6 +18,7 @@
 @import "components/breadcrumbs";
 @import "components/search";
 @import "components/speech-bubble";
+@import "components/comments";
 @import "components/illustration";
 @import "components/read-more";
 @import "components/take-action";
@@ -68,14 +69,6 @@ p.copy {
   @include respond-to(1024px) {
     margin-top:0;
     padding-bottom: (40em/16);
-  }
-}
-
-div.comments {
-  margin-top: 20px;
-
-  @include respond-to(1024px) {
-    margin-right: 20px;
   }
 }
 
