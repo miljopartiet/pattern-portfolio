@@ -7,62 +7,7 @@
     </a>
   </div>
 
-  <ul class="icon-list news-posts calendar">
-    <!-- event, using hCalender microformat -->
-    <li class="vevent">
-      <a href="#">
-        <span class="icon">5</span>
-        <span class="summary">Ekonomiskt seminarium om bolånen</span>
-        <span class="meta">
-          <time datetime="2012-05-27T13:00" class="dtstart">
-          <span class="value-title" title="2012-05-27T13:00"> </span>
-          Söndag 27 maj 13.00
-          </time>
-          &ndash;
-          <time datetime="2012-05-27T15:00" class="dtend">
-          <span class="value-title" title="2012-05-27T15:00"> </span>
-          15.00
-          </time>
-          , <span class="location">Folkets Hus, Östersund</span>
-        </span>
-      </a>
-    </li>
-    <!-- /event -->
-    <li class="vevent">
-      <a href="#">
-        <span class="icon">6</span>
-        <span class="summary">Åsa Romson debatterar bostadsbristen i SVT Agenda, se det på Kanal 1 på söndag</span>
-        <span class="meta">
-        <time datetime="2012-06-23T21:15" class="dtstart">
-          <span class="value-title" title="2012-06-23T21:15"> </span>
-          Söndag 23 juni 21.15
-        </time>
-        &ndash;
-        <time datetime="2012-06-23T22:00" class="dtend">
-          <span class="value-title" title="2012-06-23T22:00"> </span>
-          22.00
-          </time>
-        </span>
-      </a>
-    </li>
-    <!-- whole day event -->
-    <li class="vevent">
-      <a href="#">
-        <span class="icon">22</span>
-        <span class="summary">Lansering av nya mp.se</span>
-        <span class="meta">
-          <span class="dstart date">Torsdag 22 maj
-          <time datetime="2012-05-22" class="dtstart dtend">
-            <span class="value-title" title="2012-05-22"> </span>
-            hela dagen
-          </time>
-          ,
-          <span class="location">Oktavilla, Stockholm</span>
-        </span>
-      </a>
-    </li>
-    <!-- /event -->
-  </ul>
+  <%= partial 'components/calendar-list' %>
   <div class="fetch-more">
     <a href="#" class="action">
       <span class="icon-plus"></span>
@@ -70,4 +15,3 @@
     </a>
   </div>
 </div>
-
