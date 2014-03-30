@@ -11,7 +11,7 @@ layout: mp
 
 <div class="main-section main-section-green">
   <article>
-    <%= partial "main_topics", locals: { title: "Vår politik" } %>
+    <%= partial "pages/main_topics", locals: { title: "Vår politik" } %>
 
     <p class="read-more">
       <a href="/pages/topics.html">
@@ -24,7 +24,7 @@ layout: mp
 <div class="main-section">
   <article>
     <h1>Just nu</h1>
-    <%= partial 'news_list' %>
+    <%= partial 'components/news-list' %>
 
     <div class="fetch-more">
       <a href="#" class="action">

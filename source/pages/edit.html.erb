@@ -38,7 +38,7 @@ layout: mp
     </div>
     <section class="news-posts article-section">
 
-      <%= partial 'news_list', locals: { edit: true } %>
+      <%= partial 'components/news-list', locals: { edit: true } %>
 
       <div class="fetch-more">
         <a href="#" class="action">
@@ -56,7 +56,7 @@ layout: mp
 <div class="main-section main-section-green">
   <ul class="tabs primary"><li><a href="#">Redigera</a></li></ul>
   <article>
-  <%= partial "main_topics", locals: { title: "Vår politik", edit: true } %>
+  <%= partial "pages/main_topics", locals: { title: "Vår politik", edit: true } %>
     <p><a href="/pages/topics.html">Läs mer om hur vi vill modernisera Sverige</a>
     <%= partial 'bubbles/localize' %>
   </article>
