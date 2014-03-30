@@ -8,6 +8,8 @@
           </div>
           <nav id="nav" role="navigation">
             <ul id="primary-nav">
+              <li class="nav-item-primary first leaf<%= ' active-trail' if data.page.current_nav == 'basics' %>"><a href="/basics.html"><span>Basics</span></a></li>
+              <li class="nav-item-primary first leaf<%= ' active-trail' if data.page.current_nav == 'components' %>"><a href="/components.html"><span>Components</span></a></li>
               <li class="nav-item-primary first leaf<%= ' active-trail' if data.page.current_nav == 'pages' %>"><a href="/pages/index.html"><span>Page templates</span></a></li>
             </ul>
           </nav>

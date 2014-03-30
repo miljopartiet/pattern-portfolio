@@ -1,0 +1,288 @@
+---
+current_nav: components
+title: Components
+layout: docs
+---
+<div class="main-section">
+  <article>
+    <header class="intro">
+      <h1>Components</h1>
+      <div class="lead">
+        <p>A pattern library of reusable components.</p>
+      </div>
+    </header>
+
+    <div class="body">
+      <h2 id="illustration">Figures</h2>
+      <p>Used for images and videos with a caption.</p>
+    </div>
+
+    <div class="illustration">
+      <figure>
+        <div>
+          <img src="/dynamic/video-placeholder.jpg" alt="">
+        </div>
+        <figcaption><b>Vår Politik</b> Åsa Romson och Gustav Fridolin berättar om Miljöpartiets politik.</figcaption>
+      </figure>
+    </div>
+
+    <div class="illustration">
+      <figure>
+        <div>
+          <div class="embedded-video widescreen vimeo">
+  				  <iframe width="500" height="281" frameborder="0" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" src="http://player.vimeo.com/video/53420994?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff"></iframe>
+  				</div>
+        </div>
+        <figcaption>
+    		  <b>Två minuter </b> om grön politik med partisekreterare Anders Wallner.
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="body">
+      <h2 id="speech-bubbles">Speech bubbles</h2>
+      <p>Used for images and videos with a caption.</p>
+    </div>
+
+    <%= partial 'bubbles/localize' %>
+
+    <%= partial 'bubbles/share' %>
+
+    <div class="speech-bubble">
+      <div class="inner">
+        <div class="main vcard">
+          <h2 class="fn">Helena Hellström Gefwert</h2>
+          <ul>
+            <li><a href="mailto:helena.gefwert@mp.se" class="email">helena.gefwert@mp.se</a></li>
+            <li class="tel"><span class="value">08-7865662</span> <span class="type">(växel)</span></li>
+            <li class="tel"><span class="value">08-7865661</span> <span class="type">(pressekreterare)</span></li>
+          </ul>
+        </div>
+        <div class="aside">
+          <ul>
+            <li><a href="#">Blogg</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Flickr</a></li>
+            <li><a href="#">Google+</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="speech-bubble vcard">
+      <div class="inner">
+        <h2>Miljöpartiet de Gröna Jämtlands län</h2>
+        <p><em>Medlems-, region- och partikansli</em></p>
+        <div class="main">
+          <ul>
+            <li class="address">Artillerigatan 8</li>
+            <li>
+            <span class="post_code">831 35</span>
+            <span class="locality">Östersund</span>
+            </li>
+            <li><a href="#" class="map">Visa på karta</a></li>
+          </ul>
+        </div>
+        <div class="aside">
+          <ul>
+            <li>Telefon: <span class="tel">063-124501</span></li>
+            <li>Fax: <span class="fax">063-124502</span></li>
+            <li>E-post <a href="mailto:jamtland@mp.se" class="email">jamtland@mp.se</a></li>
+            <li>Plusgiro 1 57 01-6 (valfonden & gåvor)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <%= partial 'bubbles/get_involved' %>
+
+    <%= partial 'start_conversation' %>
+
+    <div class="body">
+      <h2 id="conversations">Conversations</h2>
+      <p>A conversation.</p>
+    </div>
+
+    <div class="conversations">
+      <section class="article-section">
+        <div class="conversation">
+          <div class="question">
+            <div class="content">
+              <p>
+                Det behövs en bred uppgörelse om långsiktighet i energipolitiken! Vad säger Miljöpartiet?
+              </p>
+            </div>
+            <div class="byline">
+              <img src="http://placehold.it/48x48" alt="">
+              <p>E.ON Sverige (@EON_Nordic) på twitter</p>
+            </div>
+          </div>
+          <div class="answer">
+            <div class="content">
+              <p>
+                Vi håller med. Vi har föreslagit samtal över blockgränserna om energipolitiken. Det finns en riksdagsmajoritet för 100% förnybar energi, men regerings fastlåsning hindrar tydliga beslut.
+              </p>
+            </div>
+            <div class="byline">
+              <img src="http://placehold.it/48x48" alt="">
+              <p><a href="#">Lise Nordin</a>, energipolitisk talesperson för Miljöpartiet</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="body">
+      <h2 id="large-quote">Large Quote</h2>
+      <p>A quote with an image and byline.</p>
+    </div>
+
+    <blockquote class="image">
+      <div>
+        <p>Det finns starka skäl att prioritera barngrupperna på förskolorna.</p>
+      </div>
+      <footer>
+        <a href="/pages/person.html">
+          <img src="/dynamic/asa_145x145.png" alt="">
+          <p>
+            <span class="name">Åsa Romson</span>,
+            <span class="title">språkrör och riksdagsledamot sedan 2003</span>
+          </p>
+        </a>
+      </footer>
+    </blockquote>
+
+    <div class="body">
+      <h2 id="news-list">News list</h2>
+      <p>A list with latest news with heading, icon and information about when and where the article was published.</p>
+    </div>
+
+    <%= partial 'news_list' %>
+
+    <div class="body">
+      <h2 id="calendar-list">Calendar list</h2>
+      <p>A list with upcoming events with heading, icon and information about when and where.</p>
+    </div>
+
+    <%= partial 'components/calendar-list' %>
+
+    <div class="body">
+      <h2 id="topics">Important topics</h2>
+      <p>A list with the most important political topics for a given region.</p>
+    </div>
+
+    <%= partial "components/topics" %>
+
+    <div class="body">
+      <h2 id="grid">Grid</h2>
+      <p>A grid with three columns.</p>
+    </div>
+
+    <div class="people grid"><div class="container">
+      <div class="column c3">
+        <a href="/pages/person.html">
+          <img src="/dynamic/people/karin-thomasson.jpg" alt="">
+          <h2>Karin Thomasson</h2>
+          <p>Kommunalråd</p>
+        </a>
+      </div><div class="column c3">
+        <a href="/pages/person.html">
+          <img src="/dynamic/people/bosse-sall.jpg" alt="">
+          <h2>Bosse Säll</h2>
+          <p>Ordförande</p>
+        </a>
+      </div><div class="column c3">
+        <a href="/pages/person.html">
+          <img src="/dynamic/people/owen-laws.jpg" alt="">
+          <h2>Owen Laws</h2>
+          <p>Gruppledare (Jämtland)</p>
+        </a>
+      </div><div class="column c3">
+        <a href="/pages/person.html">
+          <img src="/dynamic/people/anna-hildebrand.jpg" alt="">
+          <h2>Anna Hildebrand</h2>
+          <p>Landstingsråd (Jämtland)</p>
+        </a>
+      </div>
+    </div></div>
+
+    <div class="body">
+      <h2 id="breadcrumbs">Breadcrumbs</h2>
+      <p>A list with the most important political topics for a given region.</p>
+    </div>
+
+    <nav class="breadcrumbs">
+      <p>
+        <a href="/pages/start.html">Hem</a>
+        <a href="/pages/about.html" class="last">Om Miljöpartiet de gröna</a>
+      </p>
+    </nav>
+
+    <div class="body">
+      <h2 id="horizontal-list">Horizontal list</h2>
+      <p>A list that puts the items next to each other with some spacing.</p>
+    </div>
+
+    <ul class="horizontal">
+      <li><a href="#">Partiprogram</a></li>
+      <li><a href="#">Historia</a></li>
+      <li><a href="#">Stadgar</a></li>
+      <li><a href="#">Kongress</a></li>
+    </ul>
+
+    <div class="body">
+      <h2 id="labeled-list">Labeled list</h2>
+      <p>A list with the most important political topics for a given region.</p>
+    </div>
+
+    <div class="labeled-list-container">
+      <ol class="labeled-list">
+        <% Topics.in_groups(17, true).each do |group, topics| %>
+          <li class="group">
+            <span class="label"><%= group %></span>
+            <ol class="list">
+              <% topics.each do |topic| %><li>
+                <a href="#"><%= topic %></a>
+              </li><% end %>
+            </ol>
+          </li>
+        <% end %>
+      </ol>
+    </div>
+
+    <div class="body">
+      <h2 id="labeled-list-text">Labeled list (with text labels)</h2>
+      <p>A list with the most important political topics for a given region.</p>
+    </div>
+
+    <div class="labeled-list-container">
+      <ol class="labeled-list text-labels">
+      <% Localities.all.each do |group, localities| %>
+        <li class="group">
+          <h2 class="label"><%= group %></h2>
+          <ol class="list">
+          <% localities.each do |locality| %><li>
+            <a href="#"><%= locality %></a>
+          </li><% end %>
+          </ol>
+        </li>
+      <% end %>
+      </ol>
+    </div>
+
+    <div class="body">
+      <h2 id="billboards">Billboards</h2>
+      <p>A list with the most important political topics for a given region.</p>
+    </div>
+
+  </article>
+</div>
+
+    <%= partial "components/billboard" %>
+
+    <%= partial "components/billboard-v1" %>
+
+    <%= partial "components/billboard-v2" %>
+
+    <%= partial "components/billboard-v3" %>
