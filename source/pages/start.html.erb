@@ -3,27 +3,7 @@ body_class: "front has-billboard"
 layout: mp
 ---
 
-<div class="billboard-campaign billboard-campaign-has-content-over">
-  <a href="/pages/topic.html" class="billboard-campaign-link">
-    <div class="billboard-campaign-media-wrap" style="background: #000 url(/dynamic/campaign-warm-cold-bg.png) 50% 0 repeat-y;">
-      <div class="billboard-campaign-media-inner">
-        <div class="billboard-campaign-media embedded-video widescreen">
-          <img src="/dynamic/campaign-warm-cold.png" alt="">
-        </div>
-      </div>
-    </div>
-    <div class="billboard-campaign-content-wrap">
-      <div class="billboard-campaign-content">
-        <div class="inner">
-          <h2>Politiken måste bli varmare.<br> Inte klimatet.</h2>
-          <p class="billboard-campaign-action-link">
-            <span class="icon-arrow"></span>Läs mer om vår klimatterapi
-          </p>
-        </div>
-      </div>
-    </div>
-  </a>
-</div>
+<%= partial "components/billboard" %>
 
 <div class="main-section main-section-cream">
   <%= partial 'bubbles/follow' %>
