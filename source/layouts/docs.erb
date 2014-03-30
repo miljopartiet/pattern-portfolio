@@ -16,12 +16,6 @@
     </header>
 
     <div id="main">
-      <% if content_for? :breadcrumbs %>
-        <nav class="breadcrumbs">
-          <p><%= yield_content :breadcrumbs %></p>
-        </nav>
-      <% end %>
-
       <%= yield %>
     </div>
 
