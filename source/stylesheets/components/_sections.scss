@@ -1,0 +1,57 @@
+.main-section {
+  @extend %page-section;
+}
+
+[class="main-section"] {
+  + [class="main-section"] {
+    padding-top: 0;
+  }
+}
+
+.main-section-cream {
+  @extend %page-section-solid;
+  background: $cream;
+
+  + .main-section-cream {
+    padding-top: 0;
+  }
+}
+
+.main-section-green {
+  @extend %page-section-solid;
+  color: #fff;
+  background: $green;
+  @include background-image(radial-gradient(false, color-stops(#339933, #00730a)));
+
+  + .main-section-green {
+    padding-top: 0;
+  }
+
+  h1 {
+    color: #fff;
+  }
+
+  a {
+    color: $yellow;
+  }
+}
+
+.main-section-magenta {
+  @extend %page-section-solid;
+  color: #fff;
+  background: $magenta;
+  @include background-image(radial-gradient(false, color-stops(#BD0076, #6C1847)));
+
+  + .main-section-magenta {
+    padding-top: 0;
+  }
+
+  h1,
+  a {
+    color: $yellow;
+  }
+}
+
+.content-column {
+  @extend %page-section-content;
+}

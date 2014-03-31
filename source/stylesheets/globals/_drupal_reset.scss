@@ -1,0 +1,71 @@
+ul.menu li {
+  margin-left: 0;
+  &.leaf {
+    padding: 0;
+    list-style-image: none;
+    list-style-type: none;
+  }
+}
+
+.calendar {
+  width: auto;
+}
+
+body.logged-in #wrap {
+  .tabs.primary a,
+  a.edit-link-simple {
+    font-family: $arial;
+    font-size: 14px;
+    font-weight: normal;
+    background: #f5f5f5;
+    padding: 5px 15px;
+    border-radius: 4px 4px 0 0;
+    color: $green;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  a.edit-link-simple {
+    clear: both;
+    border-radius: 6px;
+    border: 1px solid #f5f5f5;
+    display: inline-block;
+    margin: 10px 0 5px 0;
+    text-decoration: none;
+
+    &:hover {
+      border-color: #ddd;
+    }
+  }
+
+  .main-section > .tabs.primary {
+    @extend %page-section-content;
+    margin-top: -25px;
+    margin-bottom: 25px;
+  }
+
+}
+
+#main {
+  > .tabs,
+  > .action-links,
+  > .drupal-messages {
+    @extend %page-section-content;
+  }
+}
+
+body.not-logged-in.page-user {
+  nav.tabs,
+  #user-login {
+    @extend %page-section-content;
+  }
+}
+
+#wrap .pager {
+  margin-top: 20px;
+
+  @include respond-to(768px) {
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,34 @@
+[class^="icon-"],
+[class*=" icon-"] {
+  margin-right: .2em;
+  text-decoration: none;
+  display: inline-block;
+
+  &:before {
+    font-family: "MP Icons";
+    text-decoration: inherit;
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    display: inline-block;
+    speak: none;
+  }
+}
+
+.icon-arrow:before {
+  content: "➡";
+}
+
+.icon-plus:before {
+  content: "+";
+}
+
+.icon-facebook:before {
+  content: "✌";
+}
+
+.icon-twitter:before {
+  content: "★";
+}

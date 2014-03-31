@@ -1,0 +1,57 @@
+// Basic grid using inline block
+// The container's width must be equal to column widths + column margins
+.grid {
+  overflow: hidden;
+
+  .container {
+    width: percentage(304/284);
+
+    @include respond-between(600px, 767px) {
+      width: percentage(540/520);
+    }
+
+    @include respond-to(768px) {
+      width: percentage(600/580);
+    }
+
+    @include respond-to(1024px) {
+      width: percentage(660/640);
+    }
+  }
+
+  .column {
+    display: inline-block;
+    vertical-align: top;
+    margin: (20em/16) (20em/16) 0 0;
+
+    &.c2,
+    &.c3 {
+      width: percentage(132/304);
+
+      @include respond-between(600px, 767px) {
+        width: percentage(250/540);
+      }
+    }
+
+    &.c2 {
+      @include respond-to(768px) {
+        width: percentage(280/600);
+      }
+
+      @include respond-to(1024px) {
+        width: percentage(310/660);
+      }
+    }
+
+    &.c3 {
+      @include respond-to(768px) {
+        width: percentage(180/600);
+      }
+
+      @include respond-to(1024px) {
+        width: percentage(200/660);
+      }
+    }
+  }
+}
+

@@ -1,0 +1,7 @@
+div.comments {
+  margin-top: 20px;
+
+  @include respond-to(1024px) {
+    margin-right: 20px;
+  }
+}

@@ -1,0 +1,77 @@
+<% wrap_layout :layout do %>
+  <div id="wrap">
+    <header role="banner" id="site-banner">
+      <div class="inner">
+        <div class="navigation">
+          <div id="logo">
+            <a href="/pages/start.html">Miljöpartiet</a>
+          </div>
+          <ul id="go-to-navigation">
+            <li><a href="#nav" id="skip-to-navigation" class="toggler">
+              <span>Meny</span>
+            </a></li><li><a href="#search" id="skip-to-search" class="toggler">
+              <span>Sök</span>
+            </a></li>
+          </ul>
+          <nav id="nav" role="navigation">
+            <ul id="primary-nav">
+              <li class="nav-item-primary first leaf<%= ' active-trail' if data.page.current_nav == 'topics' %>"><a href="/pages/topics.html"><span>Vår politik</span></a></li>
+              <li class="nav-item-primary leaf<%= ' active-trail' if data.page.current_nav == 'about' %>"><a href="/pages/about.html"><span>Om oss</span></a></li>
+              <li class="nav-item-primary leaf<%= ' active-trail' if data.page.current_nav == 'conversations' %>"><a href="/pages/conversations.html"><span>Prata politik</span></a></li>
+            </ul>
+            <ul id="secondary-nav">
+              <li class="nav-item-secondary leaf"><a href="#">Other languages</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Lättläst</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Kontakt</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Engagera dig</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Press</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Skolarbeten</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Lediga jobb</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Medlem</a></li>
+            </ul>
+          </nav>
+          <div id="search" role="search">
+            <form action="/search" method="get" class="search">
+              <input type="text" name="searchtext" id="main-search" data-suggestions-target="#search" data-source="/data/search.json" autocomplete="off">
+              <button type="submit" class="action">Sök</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="main">
+      <% if content_for? :breadcrumbs %>
+        <nav class="breadcrumbs">
+          <p><%= yield_content :breadcrumbs %></p>
+        </nav>
+      <% end %>
+
+      <%= yield %>
+    </div>
+
+    <footer id="site-footer">
+      <% if content_for? :breadcrumbs %>
+      <nav class="breadcrumbs">
+        <p><%= yield_content :breadcrumbs %></p>
+      </nav>
+      <% end %>
+      <div class="inner">
+        <p id="logo-full"><a href="/pages/start.html">Miljöpartiet de gröna</a></p>
+        <p id="copyright" class="copy">
+          Allt innehåll är licensierat under en Creative Commons Erkännande 3.0 Unported Licens om inte annat anges.
+          Vi vill gärna ha dina synpunkter på vår webb. Kan vi förbättra något? <a href="mailto:mp@exaple.com">Skriv till oss och berätta!</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+  <div id="cookies">
+    <div>
+      <p>
+        Vår webbplats <a href="#">använder cookies</a>.
+        Genom att surfa vidare accepterar du dessa cookies.
+      </p>
+      <a href="#" class="confirm action">OK, stäng meddelandet</a>
+    </div>
+  </div>
+<% end %>

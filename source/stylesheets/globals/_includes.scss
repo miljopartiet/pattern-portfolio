@@ -1,0 +1,215 @@
+
+// COLOR PALETTE
+
+$yellow: #ffe900;
+$green: #2b912c;
+$green-dark: #00730a;
+$cream: #f6f4e5;
+$magenta: #bd0076;
+
+
+$text-grey: #666;
+$text-light-grey: #888;
+$text-medium-grey: #767676;
+$text-warm-grey: #bcb8b2;
+
+$warm-grey: #d9d3cd;
+
+$link-color: $green;
+$link-hover-color: #1c8437;
+$link-focus-color: false;
+$link-active-color: false;
+$link-visited-color: false;
+
+$red: rgb(196, 18, 48);
+
+$font-color: #2a2a2a;
+$font-family: georgia, "Times New Roman", times, serif;
+$mp-serif: "MP Serif", georgia, serif;
+$mp-sans: "MP Sans", arial, sans-serif;
+$helvetica: "Helvetica Neue", helvetica, arial;
+$arial: arial, sans-serif;
+$base-font-size: 16px;
+$base-line-height: 1.5;
+
+@mixin placeholder-styles {
+  color: $text-warm-grey;
+}
+
+@mixin columns($count, $gap) {
+  -moz-column-count: $count;
+  -moz-column-gap: $gap;
+  -webkit-column-count: $count;
+  -webkit-column-gap : $gap;
+  column-count: $count;
+  column-gap: $gap;
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  *zoom: 1;
+}
+
+@mixin respond-to($point, $fallback: true, $query1: min, $query2: width) {
+  @if $supportsMediaQueries == true {
+    @media screen and (#{$query1}-#{$query2}: $point) {
+      @content;
+    }
+  } @else if $fallback {
+    @content;
+  }
+}
+
+@mixin respond-between($from, $to, $fallback: false) {
+  @if $supportsMediaQueries == true {
+    @media screen and (min-width: $from) and (max-width: $to) {
+      @content;
+    }
+  } @else if $fallback {
+    @content;
+  }
+}
+
+@mixin with-dark-sections {
+  .main-section-green &,
+  .main-section-magenta & {
+    @content;
+  }
+}
+
+// Section intro that have a pull out behaviour in 1024
+%section-intro {
+  border-bottom: 1px solid $warm-grey;
+  margin-bottom: -1px;
+  position: relative;
+  padding: 0 0 0.2em 0;
+
+  @include with-dark-sections {
+    border-color: rgba(255,255,255,0.3);
+  }
+
+  @include respond-to(1024px) {
+    border-top: 1px solid $warm-grey;
+    border-bottom: none;
+    padding: 0;
+
+    @include with-dark-sections {
+      border-color: rgba(255,255,255,0.3);
+    }
+  }
+
+  .illustration + & {
+    margin-top: 30px;
+  }
+}
+
+%section-intro-pull-out {
+  @include respond-to(1024px) {
+    margin-top: 20px;
+    float: right;
+    width: 145px;
+    margin-right: -110px;
+  }
+}
+
+%speech-bubble {
+  position: relative;
+  z-index: 50;
+  background: $yellow;
+  color: $magenta;
+  border-radius: 10px;
+  @include box-sizing(border-box);
+  padding: 18px 15px;
+
+  @include respond-to(768px) {
+    padding: 25px;
+  }
+
+  .inner {
+    @include clearfix;
+    position: relative;
+    z-index: 60;
+  }
+}
+
+%speech-bubble-corner {
+  &:after {
+    content:"";
+    position:absolute;
+    left: -11px;
+    bottom: -5px;
+    width: 29px;
+    height: 28px;
+    background: transparent url(../images/speech-bubble-corner.svg) 0 0 no-repeat;
+    background-size: 100%;
+    z-index: 40;
+
+    @include respond-to(600px) {
+      width: 39px;
+      height: 38px;
+      left: -14px;
+      bottom: -8px;
+    }
+
+    @include respond-to(768px) {
+      left: -17px;
+      bottom: -9px;
+      width: 49px;
+      height: 48px;
+    }
+  }
+}
+
+%speech-bubble-corner-reversed {
+  @extend %speech-bubble-corner;
+  &:after {
+    left: auto;
+    right: -9px;
+    background-image: url(../images/speech-bubble-corner-reversed.svg);
+
+    @include respond-to(600px) {
+      right: -15px;
+    }
+
+    @include respond-to(768px) {
+      right: -17px;
+    }
+  }
+}
+
+%speech-bubble-corner-up {
+  &:after {
+    content:"";
+    position:absolute;
+    left: -6px;
+    top: -10px;
+    width: 28px;
+    height: 29px;
+    background: transparent url(../images/speech-bubble-corner-up.svg) 0 0 no-repeat;
+    background-size: 100%;
+    z-index: 40;
+
+    @include respond-to(600px) {
+      width: 38px;
+      height: 39px;
+      left: -8px;
+      top: -14px;
+    }
+
+    @include respond-to(768px) {
+      top: -17px;
+      left: -10px;
+      width: 48px;
+      height: 49px;
+    }
+  }
+}

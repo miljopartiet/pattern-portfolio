@@ -1,0 +1,120 @@
+body.has-billboard {
+  #site-banner {
+    @include respond-to(768px) {
+      .not-ie &,
+      .lte8 & {
+        background: rgba(0,0,0,.3);
+
+        &.detached {
+          background: rgba(43, 145, 4, .95);
+        }
+      }
+    }
+  }
+
+  &.navigation-is-open {
+    #site-banner {
+      @include respond-to(768px) {
+        background: $green;
+      }
+    }
+  }
+
+  #main {
+    @include respond-to(768px) {
+      .not-ie &,
+      .gte9 & {
+        padding-top: 0;
+      }
+    }
+  }
+
+  #secondary-nav {
+    @include respond-to(768px) {
+      background: transparent;
+    }
+  }
+}
+
+.billboard-campaign {
+  background: $cream;
+}
+
+.billboard-campaign-has-content-over {
+  position: relative;
+
+  .billboard-campaign-content-wrap {
+    @include respond-to(768px) {
+      position: absolute;
+      bottom: -60px;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .billboard-campaign-content {
+    margin-top: -25px;
+  }
+
+  + .main-section {
+    @include respond-to(768px) {
+      padding-top: (118em/16);
+    }
+  }
+}
+
+.billboard-campaign-media-inner {
+  max-width: 970px;
+  margin: 0 auto 0 auto;
+}
+
+.billboard-campaign-link {
+  display: block;
+  text-decoration: none;
+}
+
+.billboard-campaign-action-link {
+  text-decoration: underline;
+
+  .billboard-campaign-link:hover & {
+    text-decoration: none;
+  }
+}
+
+.billboard-campaign-content-wrap {
+  @extend %page-section-content;
+}
+
+.billboard-campaign-content {
+  margin: 0 18px;
+  @extend %speech-bubble;
+  @extend %speech-bubble-corner-up;
+
+  @include respond-to(600px) {
+    margin: 0;
+  }
+
+  h2 {
+    margin: 0;
+    @extend %typography-heading-medium;
+  }
+
+  p {
+    margin: .25em 0 0 0;
+    @extend %typography-heading-serif;
+  }
+}
+
+.billboard-campaign-caption {
+  max-width: 970px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 18px;
+
+  @extend %typography-text-small;
+  color: $text-light-grey;
+
+  a {
+    color: $text-light-grey;
+  }
+}

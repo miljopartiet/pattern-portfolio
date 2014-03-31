@@ -1,0 +1,77 @@
+// Breadcrumbs
+// Can be found both in the top of the page
+// and in the page footer
+nav.breadcrumbs {
+  display: block;
+
+  // The breadcrumbs is not used in the mobile view
+  // instead we point users to the more complete site navigation
+  #main > & {
+    display: none;
+    @extend %page-section-content;
+
+    @include respond-to(600px) {
+      display: block;
+      border: none;
+      margin-top: (50em/16);
+      margin-bottom: (25em/16);
+
+      & + .main-section {
+        padding-top: 0;
+      }
+    }
+
+    @include respond-to(768px) {
+      margin-top: (70em/16);
+    }
+
+    @include respond-to(1024px) {
+    }
+  }
+
+  footer & {
+    @extend %page-section-content-wide;
+    margin-bottom: 10px;
+
+    @include respond-to(768px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  p {
+    @extend %typography-text-small;
+    margin: 0;
+  }
+
+  a,
+  span {
+    color: $text-light-grey;
+    position: relative;
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  a {
+    padding-right: (20em/13);
+    margin-right: (5em/13);
+    background: url(../images/breadcrumb-slash.png) 100% 50% no-repeat;
+    background-size: 11px 18px;
+
+    html.svg & {
+      background-image: url(../images/breadcrumb-slash.svg);
+    }
+
+    &:hover {
+      text-decoration: underline;
+      color: $green;
+    }
+
+    &.last,
+    html.svg &.last {
+      padding-right: 0;
+      background-image: none;
+    }
+  }
+}
