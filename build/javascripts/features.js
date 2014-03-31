@@ -40,7 +40,7 @@
           $temp;
       html.push('<div class="main-section loading"><article>');
       html.push('<header></header>');
-      html.push('<h1><a href="/jamtland.html" class="topic">Östersund</a></h1>');
+      html.push('<h1><a href="/pages/region.html" class="topic">Östersund</a></h1>');
       html.push('</article></div>');
       $temp = $(html.join(''));
       $bubble.parent().after($temp);
