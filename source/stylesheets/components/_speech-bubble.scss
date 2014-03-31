@@ -1,0 +1,238 @@
+.speech-bubble {
+  @extend %speech-bubble;
+  margin-top: (20em/16);
+
+  @include respond-to(768px) {
+    margin-top: (30em/16);
+  }
+
+  @extend %speech-bubble-corner;
+
+  & + .labeled-list-container {
+    margin-top: 30px;
+
+    @include respond-to(768px) {
+      margin-top: 40px;
+    }
+  }
+
+  .main-section > & {
+    @extend %page-section-content;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  // Force green links and action buttons
+  .main-section & {
+    a {
+      color: $magenta;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .action,
+    .action a,
+    .form-submit {
+      @extend %action-magenta;
+    }
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  p,
+  ul {
+    margin-top: (4em/18);
+
+    @include respond-between(300px, 767px) {
+      margin-top: (2em/16);
+    }
+  }
+
+  li {
+    @extend %typography-text-body;
+    margin-left: 1em;
+
+    @include respond-to(768px) {
+      line-height: (24/18);
+    }
+  }
+
+  p {
+    @extend %typography-text-body;
+  }
+
+  form {
+    margin-right: (20em/16);
+  }
+
+  .main {
+    @include respond-to(768px) {
+      @include box-sizing(border-box);
+      float: left;
+      margin-top: 0;
+      border-right: 1px solid $magenta;
+      padding-right: 20px;
+      width: percentage(390/570);
+    }
+
+    @include respond-to(1024px) {
+      width: percentage(390/610);
+    }
+
+    ul:first-child {
+      @include respond-to(768px) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .aside {
+    margin-top: 1em;
+
+    @include respond-between(300px, 767px) {
+      margin-top: (10em/16);
+    }
+
+    @include respond-to(768px) {
+      @include box-sizing(border-box);
+      float: left;
+      margin-top: 0;
+      margin-left: -1px;
+      padding-left: 20px;
+      border-left: 1px solid $magenta;
+      width: percentage(179/570);
+
+      ul:first-child {
+        margin-top: 0;
+      }
+    }
+
+    @include respond-to(1024px) {
+      width: percentage(200/610);
+    }
+
+    li {
+      @include respond-between(300px, 767px) {
+        display: inline-block;
+        margin-left: 0;
+        margin-right: .3em;
+      }
+    }
+  }
+
+  &.vcard {
+    .main {
+      @include respond-between(300px, 767px) {
+        margin-top: (10em/16);
+      }
+    }
+
+    li {
+      @include respond-between(300px, 767px) {
+        display: inline-block;
+        margin-left: 0;
+        margin-right: .3em;
+      }
+    }
+  }
+
+  // FIXME what is this I don't even…
+  .vcard {
+    @include clearfix;
+
+    & + .vcard {
+      margin-top:1em;
+      padding-top:1em;
+
+      .organization-name {
+        display:none;
+      }
+
+      p {
+        @include respond-to(768px) {
+          margin-right: 20px;
+        }
+
+      }
+    }
+  }
+
+  .position-me {
+    margin-top: 15px;
+    text-align: center;
+
+    .choose {
+      @extend %typography-text-small;
+      margin-top: (8em/14);
+      display: block;
+    }
+  }
+}
+
+.vcard {
+  .inner {
+    @include respond-to(1024px) {
+      padding-right: 20px;
+    }
+  }
+
+  .main,
+  .aside {
+    @include respond-to(768px) {
+      margin-top: (2em/16);
+      width: 50%;
+    }
+
+    @include respond-to(1024px) {
+      margin-top: (10em/16);
+    }
+  }
+
+  .main {
+    @include respond-to(1024px) {
+      width: percentage(320/620);
+    }
+  }
+
+  .aside {
+    @include respond-to(1024px) {
+      width: percentage(300/620);
+    }
+  }
+}
+
+form.speech-bubble {
+  margin-bottom: 0;
+
+  .search {
+    padding: 10px 10px 0 10px;
+    margin-top: -10px;
+    margin-left: -10px;
+
+    input {
+      width: 100%;
+
+      @include respond-to(600px) {
+        width: 70%;
+      }
+    }
+
+    &.active-suggestions {
+      background: $yellow;
+      border-radius: 6px 6px 0 0;
+
+      input,
+      input:focus {
+        border: 1px solid transparent;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,289 @@
+.conversation {
+  list-style: none;
+  margin: (20em/16) 0 0 0;
+  padding: (23em/16) 0 0 0;
+
+  @include respond-to(1024px) {
+    float: left;
+    margin-top: (20em/16);
+    margin-right: percentage(40/640);
+    width: percentage(620/640);
+  }
+
+  a {
+    text-decoration: none;
+
+    .read-more {
+      color: $green;
+      text-decoration: underline;
+    }
+
+    &:hover {
+      .read-more {
+        color: $green-dark;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .content {
+    position: relative;
+    z-index: 60;
+    padding: 20px 25px;
+
+    @include respond-between(300px, 767px) {
+      padding: 15px 20px;
+    }
+
+    p {
+      color: #2A2A2A;
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
+
+  .byline {
+    p {
+      margin: 0;
+      @extend %typography-text-small;
+    }
+
+    img {
+      position: absolute;
+      bottom: (-23em/16);
+    }
+  }
+
+  .question {
+    position: relative;
+    z-index: 70;
+    margin-bottom: -.75em;
+    margin-right: percentage(110/620);
+    @extend %speech-bubble-corner;
+
+    @include respond-between(300px, 767px) {
+      margin-right: percentage(70/510);
+    }
+
+    .content {
+      padding-bottom: 25px;
+      background: $yellow;
+      border-radius: 7px;
+
+      &:after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: block;
+        width: percentage(441/510);
+        height: .75em;
+        content: "";
+        background: rgba(0, 0, 0, .04);
+        border-radius: 7px 0 7px 0;
+
+        @include respond-between(300px, 767px) {
+          width: percentage(445/510);
+        }
+      }
+
+      p {
+        @extend %typography-heading-small;
+      }
+    }
+
+    .byline {
+      p {
+        position: absolute;
+        top: (-23em/13);
+      }
+
+      img {
+        left: percentage(-75/510);
+      }
+    }
+  }
+
+  .answer {
+    position: relative;
+    margin-left: percentage(70/620);
+    margin-right: percentage(75/620);
+
+    @include respond-between(300px, 767px) {
+      margin-right: 0;
+    }
+
+    .content {
+      padding-top: 25px;
+      background: $cream;
+      border-radius: 7px;
+      @extend %speech-bubble-corner-reversed;
+
+      &:after {
+        background-image: url(../images/speech-bubble-corner-reversed-cream.svg);
+      }
+
+      p {
+        @extend %typography-text;
+      }
+    }
+
+    .byline {
+      img {
+        right: percentage(-80/510);
+      }
+
+      p {
+        position: static;
+        padding-top: (10em/13);
+      }
+    }
+  }
+
+  img {
+    @include respond-between(300px, 767px) {
+      display: none;
+    }
+  }
+}
+
+.conversations {
+  @include clearfix;
+
+  .article-section {
+    @include respond-to(1024px) {
+      @include clearfix;
+      width: percentage(695/640);
+      border-top: 1px solid $warm-grey;
+
+      &:first-child {
+        border-top: none;
+
+        .conversation {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .conversation {
+      @include respond-to(1024px) {
+        width: percentage(620/695);
+        margin-right: percentage(40/695);
+      }
+    }
+  }
+
+  .details {
+    @extend %typography-text-small;
+    color: $text-light-grey;
+    padding-top: (8em/13);
+    margin: 0 percentage(75/620) 0 percentage(70/620);
+
+    @include respond-between(300px, 767px) {
+      margin-right: 0;
+    }
+
+    @include respond-to(1024px) {
+      float: left;
+      border: none;
+      padding-top: 0;
+      margin-top: (20em/14);
+      margin-left: 0;
+      width: percentage(145/640);
+      margin-right: percentage(-165/640);
+    }
+
+    .topic {
+      display: block;
+    }
+
+    .voting,
+    .poll-results,
+    .toggler {
+      margin-top: (12em/13);
+    }
+
+    .voting {
+      .topic {
+        @include respond-to(1024px) {
+          margin-top: (12em/14);
+        }
+      }
+    }
+
+    .meta + .voting {
+      @include respond-to(1024px) {
+        border-top: 1px solid $warm-grey;
+      }
+    }
+
+    .time { @include respond-to(1024px) {
+        display: block;
+      }
+    }
+
+    .poll-results {
+      .answer,
+      .summary {
+        display: block;
+        margin-top: (12em/14);
+      }
+
+      .answer .summary {
+        margin-top: (4em/14);
+      }
+
+      b {
+        display: inline-block;
+        width: percentage(35/145);
+      }
+
+      .meter {
+        display: inline-block;
+        width: percentage(110/145);
+
+        span {
+          display: inline-block;
+          text-indent: -9999px;
+        }
+      }
+
+      .meter span {
+        background: $green;
+      }
+    }
+
+    .toggler {
+      display: block;
+      color: $text-light-grey;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .related {
+      display: block;
+      margin-top: (12em/13);
+    }
+  }
+
+  .fetch-more,
+  div.comments {
+    clear: both;
+    padding-top: (40em/16);
+  }
+
+  .fetch-more {
+    margin-left: percentage(70/620);
+  }
+
+  .comments {
+    @include respond-to(1024px) {
+      display: block;
+      margin-top: (12em/14);
+    }
+  }
+}

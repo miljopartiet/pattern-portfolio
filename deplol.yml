@@ -2,3 +2,5 @@ public_directory: build
 authentication:
   username: mp
   password: abborre
+branches:
+  new-navigation: navigation

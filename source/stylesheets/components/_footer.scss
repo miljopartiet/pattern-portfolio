@@ -1,0 +1,71 @@
+#site-footer {
+  @extend %page-section;
+  padding-top: (20em/16);
+  @extend %page-section-content-wide;
+
+  .inner {
+    @include clearfix;
+    border-top: 1px solid $warm-grey;
+    padding-top: (20em/16);
+
+    @include respond-to(1024px) {
+      padding-top: (25em/16);
+      padding-right: 310px;
+    }
+  }
+}
+
+#logo-full {
+  margin-top: 0;
+  margin-bottom: (10em/12);
+  float: right;
+
+  @include respond-to(1024px) {
+    float: right;
+    margin-right: -310px;
+  }
+
+  a {
+    width: 200px;
+    height: 32px;
+    background: transparent url(../images/logo-full.png) 0 0 no-repeat;
+    background-size: 100%;
+    text-indent: -9999em;
+    display: block;
+
+    @include respond-to(1024px) {
+      height: 46px;
+      width: 290px;
+      background-size: 290px 46px;
+    }
+
+    html.svg & {
+      background-image: url(../images/logo-full.svg);
+    }
+  }
+}
+
+#copyright {
+  margin-top: 0;
+  clear: right;
+  @include box-sizing(border-box);
+
+  padding-left: (30em/12);
+  background: transparent url(../images/cc.png) 0 2px no-repeat;
+  background-size: 20px 20px;
+
+  @include respond-to(1024px) {
+    clear: none;
+    float: left;
+    width: 80%;
+  }
+
+  a {
+    white-space: nowrap;
+  }
+
+  html.svg & {
+    background-image: url(../images/cc.svg);
+  }
+}
+

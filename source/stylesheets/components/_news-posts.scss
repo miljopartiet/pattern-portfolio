@@ -1,0 +1,12 @@
+.news-posts {
+  @include respond-to(1024px) {
+    width: auto;
+    margin-right: (20em/16);
+  }
+
+  a {
+    @include respond-to(1024px) {
+      margin-right: (35em/22);
+    }
+  }
+}

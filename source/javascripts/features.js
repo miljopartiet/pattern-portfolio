@@ -32,18 +32,18 @@
     e.preventDefault();
     var $element = $(e.liveFired),
         $bubble  = $element.parents('div.speech-bubble'),
-        $local_info = $bubble.siblings('.article-section.local');
+        $local_info = $('.local');
 
     if ($local_info.size() !== 0) {
       $bubble.hide();
       var html = [],
           $temp;
-      html.push('<section class="article-section loading">');
+      html.push('<div class="main-section loading"><article>');
       html.push('<header></header>');
-      html.push('<h2><a href="/jamtland.html" class="topic">Östersund</a></h2>');
-      html.push('</section>');
+      html.push('<h1><a href="/pages/region.html" class="topic">Östersund</a></h1>');
+      html.push('</article></div>');
       $temp = $(html.join(''));
-      $bubble.after($temp);
+      $bubble.parent().after($temp);
       setTimeout(function() {
         $temp.replaceWith($local_info.show());
       }, Math.floor(Math.random()*1901) + 100);
@@ -66,10 +66,7 @@
         .delegate('form', 'submit', toggleLocalityInfo);
     }).delegate('a.action', 'click', toggleLocalityInfo)
       .each(function() {
-        var $bubble = $(this).parents('div.speech-bubble'),
-            $local_info = $bubble.siblings('.article-section.local');
-
-        $local_info.hide();
+        $('.local').hide();
       });
 
     $('div.fetch-more a.action').click(function(e) {

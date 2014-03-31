@@ -41,89 +41,94 @@
     <!--[if lt IE 9]>
       <link href="stylesheets/ie.css" media="screen" rel="stylesheet" type="text/css" />
     <![endif]-->
-    <script src="javascripts/modernizr.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      ;window.Modernizr=function(a,b,c){function x(a){j.cssText=a}function y(a,b){return x(m.join(a+";")+(b||""))}function z(a,b){return typeof a===b}function A(a,b){return!!~(""+a).indexOf(b)}function B(a,b,d){for(var e in a){var f=b[a[e]];if(f!==c)return d===!1?a[e]:z(f,"function")?f.bind(d||b):f}return!1}var d="2.7.1",e={},f=!0,g=b.documentElement,h="modernizr",i=b.createElement(h),j=i.style,k,l={}.toString,m=" -webkit- -moz- -o- -ms- ".split(" "),n={svg:"http://www.w3.org/2000/svg"},o={},p={},q={},r=[],s=r.slice,t,u=function(a,c,d,e){var f,i,j,k,l=b.createElement("div"),m=b.body,n=m||b.createElement("body");if(parseInt(d,10))while(d--)j=b.createElement("div"),j.id=e?e[d]:h+(d+1),l.appendChild(j);return f=["&#173;",'<style id="s',h,'">',a,"</style>"].join(""),l.id=h,(m?l:n).innerHTML+=f,n.appendChild(l),m||(n.style.background="",n.style.overflow="hidden",k=g.style.overflow,g.style.overflow="hidden",g.appendChild(n)),i=c(l,a),m?l.parentNode.removeChild(l):(n.parentNode.removeChild(n),g.style.overflow=k),!!i},v={}.hasOwnProperty,w;!z(v,"undefined")&&!z(v.call,"undefined")?w=function(a,b){return v.call(a,b)}:w=function(a,b){return b in a&&z(a.constructor.prototype[b],"undefined")},Function.prototype.bind||(Function.prototype.bind=function(b){var c=this;if(typeof c!="function")throw new TypeError;var d=s.call(arguments,1),e=function(){if(this instanceof e){var a=function(){};a.prototype=c.prototype;var f=new a,g=c.apply(f,d.concat(s.call(arguments)));return Object(g)===g?g:f}return c.apply(b,d.concat(s.call(arguments)))};return e}),o.touch=function(){var c;return"ontouchstart"in a||a.DocumentTouch&&b instanceof DocumentTouch?c=!0:u(["@media (",m.join("touch-enabled),("),h,")","{#modernizr{top:9px;position:absolute}}"].join(""),function(a){c=a.offsetTop===9}),c},o.geolocation=function(){return"geolocation"in navigator},o.svg=function(){return!!b.createElementNS&&!!b.createElementNS(n.svg,"svg").createSVGRect};for(var C in o)w(o,C)&&(t=C.toLowerCase(),e[t]=o[C](),r.push((e[t]?"":"no-")+t));return e.addTest=function(a,b){if(typeof a=="object")for(var d in a)w(a,d)&&e.addTest(d,a[d]);else{a=a.toLowerCase();if(e[a]!==c)return e;b=typeof b=="function"?b():b,typeof f!="undefined"&&f&&(g.className+=" "+(b?"":"no-")+a),e[a]=b}return e},x(""),i=k=null,function(a,b){function l(a,b){var c=a.createElement("p"),d=a.getElementsByTagName("head")[0]||a.documentElement;return c.innerHTML="x<style>"+b+"</style>",d.insertBefore(c.lastChild,d.firstChild)}function m(){var a=s.elements;return typeof a=="string"?a.split(" "):a}function n(a){var b=j[a[h]];return b||(b={},i++,a[h]=i,j[i]=b),b}function o(a,c,d){c||(c=b);if(k)return c.createElement(a);d||(d=n(c));var g;return d.cache[a]?g=d.cache[a].cloneNode():f.test(a)?g=(d.cache[a]=d.createElem(a)).cloneNode():g=d.createElem(a),g.canHaveChildren&&!e.test(a)&&!g.tagUrn?d.frag.appendChild(g):g}function p(a,c){a||(a=b);if(k)return a.createDocumentFragment();c=c||n(a);var d=c.frag.cloneNode(),e=0,f=m(),g=f.length;for(;e<g;e++)d.createElement(f[e]);return d}function q(a,b){b.cache||(b.cache={},b.createElem=a.createElement,b.createFrag=a.createDocumentFragment,b.frag=b.createFrag()),a.createElement=function(c){return s.shivMethods?o(c,a,b):b.createElem(c)},a.createDocumentFragment=Function("h,f","return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&("+m().join().replace(/[\w\-]+/g,function(a){return b.createElem(a),b.frag.createElement(a),'c("'+a+'")'})+");return n}")(s,b.frag)}function r(a){a||(a=b);var c=n(a);return s.shivCSS&&!g&&!c.hasCSS&&(c.hasCSS=!!l(a,"article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}mark{background:#FF0;color:#000}template{display:none}")),k||q(a,c),a}var c="3.7.0",d=a.html5||{},e=/^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i,f=/^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i,g,h="_html5shiv",i=0,j={},k;(function(){try{var a=b.createElement("a");a.innerHTML="<xyz></xyz>",g="hidden"in a,k=a.childNodes.length==1||function(){b.createElement("a");var a=b.createDocumentFragment();return typeof a.cloneNode=="undefined"||typeof a.createDocumentFragment=="undefined"||typeof a.createElement=="undefined"}()}catch(c){g=!0,k=!0}})();var s={elements:d.elements||"abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video",version:c,shivCSS:d.shivCSS!==!1,supportsUnknownElements:k,shivMethods:d.shivMethods!==!1,type:"default",shivDocument:r,createElement:o,createDocumentFragment:p};a.html5=s,r(b)}(this,b),e._version=d,e._prefixes=m,e.testStyles=u,g.className=g.className.replace(/(^|\s)no-js(\s|$)/,"$1$2")+(f?" js "+r.join(" "):""),e}(this,this.document);
+    </script>
     
-
-    <script src="http://fast.fonts.com/jsapi/f5cda253-a403-4beb-bb36-e9d98c5ccae2.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script>
-    <!-- The cookies script is the one available in drupal -->
-    <script src="javascripts/cookies.js" type="text/javascript"></script>
-    <script src="javascripts/mp.js" type="text/javascript"></script>
-    <!-- This script is only to demonstrate features and should be implemented in drupal -->
-    <script src="javascripts/features.js" type="text/javascript"></script>
   </head>
-  <body>
-    <div id="wrap">
-      <header role="banner" id="site-banner">
-        <div id="logo">
-          <a href="/">Miljöpartiet</a>
-        </div>
-        <nav role="navigation" id="top-navigation">
-          <ul class="menu">
-            <li class="first leaf"><a href="/topics.html"><span>Vår politik</span></a></li>
-            <li class="leaf active-trail"><a href="/about.html"><span>Om Miljöpartiet de gröna</span></a></li>
-            <li class="leaf"><a href="/conversations.html"><span>Prata politik</span></a></li>
-          </ul>
-        </nav>
-        <div id="secondary-navigation" data-limit="3" data-show-more-copy="+ Fler" data-show-less-copy="– Färre">
-          <form action="/search" method="get" class="search">
-            <input type="search" name="searchtext" id="main-search" data-source="/data/search.json" autocomplete="off">
-            <button type="submit">Sök</button>
-          </form>
-          <div>
-            <ul class="menu">
-              <li class="first leaf"><a href="#">Bli medlem</a>
-              <li class="leaf"><a href="#">Kontakt</a>
-              <li class="leaf"><a href="#">Press</a>
-              <li class="leaf"><a href="#">Skolarbeten</a></li>
-              <li class="leaf"><a href="#">Other languages</a></li>
-              <li class="leaf"><a href="#">Lättläst</a></li>
-              <li class="leaf"><a href="#">Ge en gåva</a></li>
-              <li class="leaf"><a href="#">Lediga jobb</a></li>
-            </ul>
+<body>
+  <div id="wrap">
+    <header role="banner" id="site-banner">
+      <div class="inner">
+        <div class="navigation">
+          <div id="logo">
+            <a href="/">Miljöpartiet</a>
           </div>
-          <a href="#site-navigation" id="skip-to-navigation">Meny</a>
-        </div>
-      </header>
-      
-      <div id="main" role="main">
-        <article>
-  <header class="intro">
-    <h1>Ett modernt grönt parti</h1>
-    <div class="lead">
-      <p>Miljöpartiet de gröna är Sveriges tredje största riksdagsparti. Vi är med och styr i över hundra kommuner och landsting. Vi moderniserar Sverige.</p>
-    </div>
-  </header>
-  <div class="illustration">
-    <figure>
-      <div>
-        <div class="embedded-video widescreen vimeo">
-          <iframe src="http://player.vimeo.com/video/28932766?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="281" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+          <ul id="go-to-navigation">
+            <li><a href="#nav" id="skip-to-navigation" class="toggler">
+              <span>Meny</span>
+            </a></li><li><a href="#search" id="skip-to-search" class="toggler">
+              <span>Sök</span>
+            </a></li>
+          </ul>
+          <nav id="nav" role="navigation">
+            <ul id="primary-nav">
+              <li class="nav-item-primary first leaf"><a href="/topics.html"><span>Vår politik</span></a></li>
+              <li class="nav-item-primary leaf active-trail"><a href="/about.html"><span>Om oss</span></a></li>
+              <li class="nav-item-primary leaf"><a href="/conversations.html"><span>Prata politik</span></a></li>
+            </ul>
+            <ul id="secondary-nav">
+              <li class="nav-item-secondary leaf"><a href="#">Other languages</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Lättläst</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Kontakt</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Engagera dig</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Press</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Skolarbeten</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Lediga jobb</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Medlem</a></li>
+            </ul>
+          </nav>
+          <div id="search" role="search">
+            <form action="/search" method="get" class="search">
+              <input type="text" name="searchtext" id="main-search" data-suggestions-target="#search" data-source="/data/search.json" autocomplete="off">
+              <button type="submit" class="action">Sök</button>
+            </form>
+          </div>
         </div>
       </div>
-      <figcaption>
-        <b>Modernisering pågår!</b>
-        Vi bygger framtidens gröna samhälle. Två minuter film om hur Miljöpartiet påverkar redan nu.
-      </figcaption>
-    </figure>
-  </div>
-  <div class="body">
-    <p>Miljöpartiet är en del av en global grön rörelse som arbetar för hållbara och demokratiska samhällen, där människor tar ansvar lokalt och globalt.Partiet grundades 1981 och har funnits i vissa kommuner redan innan dess. I det senaste valet till Europaparlamentet fick vi 11% av rösterna.</p>
-    <p>
-      I det senaste valet till riksdagen fick vi 7,3 % av rösterna och blev Sveriges tredje största parti.
-    </p>
-    <ul class="horizontal">
-      <li><a href="#">Partiprogram</a></li>
-      <li><a href="#">Historia</a></li>
-      <li><a href="#">Stadgar</a></li>
-      <li><a href="#">Kongress</a></li>
-    </ul>
-  </div>
+    </header>
+      <div id="main">
+        
+        <div class="main-section">
+  <article>
+    <header class="intro">
+      <h1>Ett modernt grönt parti</h1>
+      <div class="lead">
+        <p>Miljöpartiet de gröna är Sveriges tredje största riksdagsparti. Vi är med och styr i över hundra kommuner och landsting. Vi moderniserar Sverige.</p>
+        <p>Miljöpartiet de gröna är Sveriges tredje största riksdagsparti. Vi är med och styr i över hundra kommuner och landsting. Vi moderniserar Sverige.</p>
+      </div>
+    </header>
+    <div class="illustration">
+      <figure>
+        <div>
+          <div class="embedded-video widescreen vimeo">
+            <iframe src="http://player.vimeo.com/video/28932766?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="281" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+          </div>
+        </div>
+        <figcaption>
+          <b>Modernisering pågår!</b>
+          Vi bygger framtidens gröna samhälle. Två minuter film om hur Miljöpartiet påverkar redan nu.
+        </figcaption>
+      </figure>
+    </div>
+    <div class="body">
+      <p>Miljöpartiet är en del av en global grön rörelse som arbetar för hållbara och demokratiska samhällen, där människor tar ansvar lokalt och globalt.Partiet grundades 1981 och har funnits i vissa kommuner redan innan dess. I det senaste valet till Europaparlamentet fick vi 11% av rösterna.</p>
+      <p>
+        I det senaste valet till riksdagen fick vi 7,3 % av rösterna och blev Sveriges tredje största parti.
+      </p>
+      <ul class="horizontal">
+        <li><a href="#">Partiprogram</a></li>
+        <li><a href="#">Historia</a></li>
+        <li><a href="#">Stadgar</a></li>
+        <li><a href="#">Kongress</a></li>
+      </ul>
+    </div>
+  </article>
+
   <div class="speech-bubble">
   <div class="inner">
     <div class="main">
-      <h2>Engagera dig, bli medem!</h2>
+      <h2>Engagera dig, bli medlem!</h2>
       <p>Lorem ipsum dolore Ita eniae et, aut iunt et prest, ad mos a disciatecea voluptature.</p>
     </div>
     <div class="aside">
@@ -136,78 +141,86 @@
   </div>
 </div>
 
+</div>
 
-  <section class="article-section people">
-    <header>
-      <p class="section-lead">
+<div class="main-section main-section-green">
+  <article>
+    <h1>Språkrör</h1>
+    <header class="section-vignette">
+      <span class="section-vignette-intro">
         <b>Inte en, utan två</b>
         Istället för en partiledare har vi två språkrör som för ut vår politik.
-      </p>
+      </span>
     </header>
-    <div class="grid"><div class="container">
+    <div class="people grid"><div class="container">
       <div class="column c2">
         <a href="/person.html">
-          <img src="images/sketch/people/gustaf-fridolin.jpg" alt="">
+          <img src="dynamic/people/gustaf-fridolin.jpg" alt="">
           <h2>Gustaf Fridolin</h2>
           <p>Språkrör, riksdagsledamot och folkhögskollärare</p>
         </a>
       </div><div class="column c2">
         <a href="/person.html">
-          <img src="images/sketch/people/asa-romson.jpg" alt="">
+          <img src="dynamic/people/asa-romson.jpg" alt="">
           <h2>Åsa Romson</h2>
           <p>Språkrör, riksdagsledamot och doktor i Miljörätt</p>
         </a>
       </div>
-  </div></div>
-  </section>
-  <section class="article-section people">
-    <header>
-      <p class="section-lead">
-        <b>Fler politiker</b>
+    </div></div>
+  </article>
+
+  <article>
+    <h1>Nyckelpersoner</h1>
+    <header class="section-vignette">
+      <span class="section-vignette-intro">
         Möt våra gröna politiker.
-      </p>
+      </span>
     </header>
-    <div class="grid"><div class="container">
+
+    <div class="people grid"><div class="container">
       <div class="column c3">
         <a href="/person.html">
-          <img src="images/sketch/people/anders-wallner.jpg" alt="">
+          <img src="dynamic/people/anders-wallner.jpg" alt="">
           <h2>Anders Wallner</h2>
           <p>Partisekreterare</p>
         </a>
       </div><div class="column c3">
         <a href="/person.html">
-          <img src="images/sketch/people/helene-oberg.jpg" alt="">
+          <img src="dynamic/people/helene-oberg.jpg" alt="">
           <h2>Helene Öberg</h2>
           <p>Sammankallande i partistyrelsen</p>
         </a>
       </div><div class="column c3">
         <a href="/person.html">
-          <img src="images/sketch/people/gunvor-g-ericson.jpg" alt="">
+          <img src="dynamic/people/gunvor-g-ericson.jpg" alt="">
           <h2>Gunvor G Ericson</h2>
           <p>Gruppledare i riksdagen</p>
         </a>
       </div><div class="column c3">
         <a href="/person.html">
-          <img src="images/sketch/people/mehmet-kaplan.jpg" alt="">
+          <img src="dynamic/people/mehmet-kaplan.jpg" alt="">
           <h2>Mehmet Kaplan</h2>
           <p>Gruppledare i riksdagen</p>
         </a>
       </div><div class="column c3">
         <a href="/person.html">
-          <img src="images/sketch/people/isabella-lovin.jpg" alt="">
+          <img src="dynamic/people/isabella-lovin.jpg" alt="">
           <h2>Isabella Lövin</h2>
           <p>EU-parlamentariker</p>
         </a>
       </div><div class="column c3">
         <a href="/person.html">
-          <img src="images/sketch/people/carl-schlyter.jpg" alt="">
+          <img src="dynamic/people/carl-schlyter.jpg" alt="">
           <h2>Carl Schlyter</h2>
           <p>EU-parlamentariker</p>
         </a>
       </div>
     </div></div>
-  </section>
+  </article>
+</div>
 
+
+<div class="main-section main-section-cream local-z">
   <div class="speech-bubble">
   <div class="inner">
     <div class="main">
@@ -345,247 +358,222 @@
   </div>
 </div>
 
-
-  <section class="article-section people local">
-    <header class="vignetted">
-      <span class="vignette">Nära dig</span>
-      <p class="section-lead">Här möter du lokala politiker från <a href="/jamtland.html">Östersund</a> och <a href="/jamtland.html">Jämtland</a>. Du kan enkelt <a href="">ändra kommun</a> om du vill.</p>
+  <article>
+    <h1>Nära dig</h1>
+    <header class="section-vignette">
+      <span class="section-vignette-intro">Här möter du lokala politiker från <a href="/jamtland.html">Östersund</a> och <a href="/jamtland.html">Jämtland</a>. Du kan enkelt <a href="">ändra kommun</a> om du vill.</span>
     </header>
-    <div class="grid"><div class="container">
+
+    <div class="people grid"><div class="container">
       <div class="column c3">
         <a href="/person.html">
-          <img src="images/sketch/people/karin-thomasson.jpg" alt="">
+          <img src="dynamic/people/karin-thomasson.jpg" alt="">
           <h2>Karin Thomasson</h2>
           <p>Kommunalråd</p>
         </a>
       </div><div class="column c3">
         <a href="/person.html">
-          <img src="images/sketch/people/bosse-sall.jpg" alt="">
+          <img src="dynamic/people/bosse-sall.jpg" alt="">
           <h2>Bosse Säll</h2>
           <p>Ordförande</p>
         </a>
       </div><div class="column c3">
         <a href="/person.html">
-          <img src="images/sketch/people/owen-laws.jpg" alt="">
+          <img src="dynamic/people/owen-laws.jpg" alt="">
           <h2>Owen Laws</h2>
           <p>Gruppledare (Jämtland)</p>
         </a>
       </div><div class="column c3">
         <a href="/person.html">
-          <img src="images/sketch/people/anna-hildebrand.jpg" alt="">
+          <img src="dynamic/people/anna-hildebrand.jpg" alt="">
           <h2>Anna Hildebrand</h2>
           <p>Landstingsråd (Jämtland)</p>
         </a>
       </div>
     </div></div>
-  </section>
-</article>
-<article>
-  <header class="intro">
-    <h1>Miljöpartiet runt om i Sverige</h1>
+  </article>
+</div>
+
+<div class="main-section">
+  <article>
+    <header class="intro">
+      <h1>Miljöpartiet runt om i Sverige</h1>
+      <div class="lead">
+        <p>Vi finns i hela landet. För att läsa om vår lokala politik kan du välja kommun här.</p>
+      </div>
+    </header>
     <form class="speech-bubble" action="/search/topics" method="get">
-      <div class="search">
+      <div class="search inner">
         <input type="search" placeholder="Sök kommun" id="list-search" data-target-list="#localities">
       </div>
     </form>
-  </header>
-  <div class="labeled-list-container" id="localities">
-    <ol class="labeled-list text-labels">
-    
-      <li class="group">
-        <h2 class="label">Blekinge län</h2>
-        <ol class="list">
-        <li>
-          <a href="#">Karlshamn</a>
-        </li><li>
-          <a href="#">Karlskrona</a>
-        </li><li>
-          <a href="#">Olofström</a>
-        </li><li>
-          <a href="#">Ronneby</a>
-        </li><li>
-          <a href="#">Sölvesborg</a>
+    <div class="labeled-list-container" id="localities">
+      <ol class="labeled-list text-labels">
+      
+        <li class="group">
+          <h2 class="label">Blekinge län</h2>
+          <ol class="list">
+          <li>
+            <a href="#">Karlshamn</a>
+          </li><li>
+            <a href="#">Karlskrona</a>
+          </li><li>
+            <a href="#">Olofström</a>
+          </li><li>
+            <a href="#">Ronneby</a>
+          </li><li>
+            <a href="#">Sölvesborg</a>
+          </li>
+          </ol>
         </li>
-        </ol>
-      </li>
-    
-      <li class="group">
-        <h2 class="label">Dalarnas län</h2>
-        <ol class="list">
-        <li>
-          <a href="#">Avesta</a>
-        </li><li>
-          <a href="#">Borlänge</a>
-        </li><li>
-          <a href="#">Falun</a>
-        </li><li>
-          <a href="#">Gagnef</a>
-        </li><li>
-          <a href="#">Hedemora</a>
-        </li><li>
-          <a href="#">Leksand </a>
-        </li><li>
-          <a href="#">Ludvika</a>
-        </li><li>
-          <a href="#">Malung</a>
-        </li><li>
-          <a href="#">Mora</a>
-        </li><li>
-          <a href="#">Orsa</a>
-        </li><li>
-          <a href="#">Rättvik</a>
-        </li><li>
-          <a href="#">Smedjebacken</a>
-        </li><li>
-          <a href="#">Säter</a>
-        </li><li>
-          <a href="#">Vansbro</a>
-        </li><li>
-          <a href="#">Älvdalen</a>
+      
+        <li class="group">
+          <h2 class="label">Dalarnas län</h2>
+          <ol class="list">
+          <li>
+            <a href="#">Avesta</a>
+          </li><li>
+            <a href="#">Borlänge</a>
+          </li><li>
+            <a href="#">Falun</a>
+          </li><li>
+            <a href="#">Gagnef</a>
+          </li><li>
+            <a href="#">Hedemora</a>
+          </li><li>
+            <a href="#">Leksand </a>
+          </li><li>
+            <a href="#">Ludvika</a>
+          </li><li>
+            <a href="#">Malung</a>
+          </li><li>
+            <a href="#">Mora</a>
+          </li><li>
+            <a href="#">Orsa</a>
+          </li><li>
+            <a href="#">Rättvik</a>
+          </li><li>
+            <a href="#">Smedjebacken</a>
+          </li><li>
+            <a href="#">Säter</a>
+          </li><li>
+            <a href="#">Vansbro</a>
+          </li><li>
+            <a href="#">Älvdalen</a>
+          </li>
+          </ol>
         </li>
-        </ol>
-      </li>
-    
-      <li class="group">
-        <h2 class="label">Gotlands län</h2>
-        <ol class="list">
-        <li>
-          <a href="#">Gotland</a>
+      
+        <li class="group">
+          <h2 class="label">Gotlands län</h2>
+          <ol class="list">
+          <li>
+            <a href="#">Gotland</a>
+          </li>
+          </ol>
         </li>
-        </ol>
-      </li>
-    
-      <li class="group">
-        <h2 class="label">Gävleborgs län</h2>
-        <ol class="list">
-        <li>
-          <a href="#">Bollnäs</a>
-        </li><li>
-          <a href="#">Gävle</a>
-        </li><li>
-          <a href="#">Hofors</a>
-        </li><li>
-          <a href="#">Hudiksvall</a>
-        </li><li>
-          <a href="#">Ljusdal</a>
-        </li><li>
-          <a href="#">Nordanstig</a>
-        </li><li>
-          <a href="#">Ockelbo</a>
-        </li><li>
-          <a href="#">Ovanåker</a>
-        </li><li>
-          <a href="#">Sandviken</a>
-        </li><li>
-          <a href="#">Söderhamn</a>
+      
+        <li class="group">
+          <h2 class="label">Gävleborgs län</h2>
+          <ol class="list">
+          <li>
+            <a href="#">Bollnäs</a>
+          </li><li>
+            <a href="#">Gävle</a>
+          </li><li>
+            <a href="#">Hofors</a>
+          </li><li>
+            <a href="#">Hudiksvall</a>
+          </li><li>
+            <a href="#">Ljusdal</a>
+          </li><li>
+            <a href="#">Nordanstig</a>
+          </li><li>
+            <a href="#">Ockelbo</a>
+          </li><li>
+            <a href="#">Ovanåker</a>
+          </li><li>
+            <a href="#">Sandviken</a>
+          </li><li>
+            <a href="#">Söderhamn</a>
+          </li>
+          </ol>
         </li>
-        </ol>
-      </li>
-    
-      <li class="group">
-        <h2 class="label">Stockholms län</h2>
-        <ol class="list">
-        <li>
-          <a href="#">Botkyrka</a>
-        </li><li>
-          <a href="#">Danderyd</a>
-        </li><li>
-          <a href="#">Ekerö</a>
-        </li><li>
-          <a href="#">Haninge</a>
-        </li><li>
-          <a href="#">Huddinge</a>
-        </li><li>
-          <a href="#">Järfälla</a>
-        </li><li>
-          <a href="#">Lidingö</a>
-        </li><li>
-          <a href="#">Nacka</a>
-        </li><li>
-          <a href="#">Norrtälje</a>
-        </li><li>
-          <a href="#">Nykvarn</a>
-        </li><li>
-          <a href="#">Nynäshamn</a>
-        </li><li>
-          <a href="#">Salem</a>
-        </li><li>
-          <a href="#">Sigtuna</a>
-        </li><li>
-          <a href="#">Sollentuna</a>
-        </li><li>
-          <a href="#">Solna</a>
-        </li><li>
-          <a href="#">Stockholm</a>
-        </li><li>
-          <a href="#">Sundbyberg</a>
-        </li><li>
-          <a href="#">Södertälje</a>
-        </li><li>
-          <a href="#">Tyresö</a>
-        </li><li>
-          <a href="#">Täby</a>
-        </li><li>
-          <a href="#">Upplands-Bro</a>
-        </li><li>
-          <a href="#">Upplands Väsby</a>
-        </li><li>
-          <a href="#">Vallentuna</a>
-        </li><li>
-          <a href="#">Vaxholm</a>
-        </li><li>
-          <a href="#">Värmdö</a>
-        </li><li>
-          <a href="#">Österåker</a>
+      
+        <li class="group">
+          <h2 class="label">Stockholms län</h2>
+          <ol class="list">
+          <li>
+            <a href="#">Botkyrka</a>
+          </li><li>
+            <a href="#">Danderyd</a>
+          </li><li>
+            <a href="#">Ekerö</a>
+          </li><li>
+            <a href="#">Haninge</a>
+          </li><li>
+            <a href="#">Huddinge</a>
+          </li><li>
+            <a href="#">Järfälla</a>
+          </li><li>
+            <a href="#">Lidingö</a>
+          </li><li>
+            <a href="#">Nacka</a>
+          </li><li>
+            <a href="#">Norrtälje</a>
+          </li><li>
+            <a href="#">Nykvarn</a>
+          </li><li>
+            <a href="#">Nynäshamn</a>
+          </li><li>
+            <a href="#">Salem</a>
+          </li><li>
+            <a href="#">Sigtuna</a>
+          </li><li>
+            <a href="#">Sollentuna</a>
+          </li><li>
+            <a href="#">Solna</a>
+          </li><li>
+            <a href="#">Stockholm</a>
+          </li><li>
+            <a href="#">Sundbyberg</a>
+          </li><li>
+            <a href="#">Södertälje</a>
+          </li><li>
+            <a href="#">Tyresö</a>
+          </li><li>
+            <a href="#">Täby</a>
+          </li><li>
+            <a href="#">Upplands-Bro</a>
+          </li><li>
+            <a href="#">Upplands Väsby</a>
+          </li><li>
+            <a href="#">Vallentuna</a>
+          </li><li>
+            <a href="#">Vaxholm</a>
+          </li><li>
+            <a href="#">Värmdö</a>
+          </li><li>
+            <a href="#">Österåker</a>
+          </li>
+          </ol>
         </li>
-        </ol>
-      </li>
-    
-    </ol>
-  </div>
-</article>
-
+      
+      </ol>
+    </div>
+  </article>
+</div>
 
       </div>
-      <footer>
+      <footer id="site-footer">
         
-        <nav role="navigation search" id="site-navigation" class="main-navigation">
-          <div class="inner">
-            <div class="sections">
-              <ul class="menu">
-                <li class="first leaf start"><a href="/">Hem</a></li>
-                <li class="leaf active-trail"><a href="/topics.html">Vår politik</a></li>
-                <li class="leaf"><a href="/about.html">Om Miljöpartiet de gröna</a></li>
-                <li class="leaf"><a href="/conversations.html">Prata politik</a></li>
-              </ul>
-            </div>
-            <div class="first">
-              <ul class="menu">
-                <li class="first leaf"><a href="#">Bli medlem</a></li>
-                <li class="leaf"><a href="#">Kontakt</a></li>
-                <li class="leaf"><a href="#">Press</a></li>
-                <li class="leaf"><a href="#">Skolarbeten</a></li>
-              </ul>
-            </div>
-            <div class="second">
-              <ul class="menu">
-                <li class="first leaf"><a href="#">Other languages</a></li>
-                <li class="leaf"><a href="#">Lättläst</a></li>
-                <li class="leaf"><a href="#">Ge en gåva</a></li>
-                <li class="leaf"><a href="#">Lediga jobb</a></li>
-              </ul>
-            </div>
-            <form action="/search" method="get" class="search">
-              <input type="search" name="query">
-              <button type="submit">Sök</button>
-            </form>
-          </div>
-        </nav>
-        <p id="logo-full"><a href="/">Miljöpartiet de gröna</a></p>
-        <p id="copyright" class="copy">
-          Allt innehåll är licensierat under en Creative Commons Erkännande 3.0 Unported Licens om inte annat anges.
-          Vi vill gärna ha dina synpunkter på vår webb. Kan vi förbättra något? <a href="mailto:mp@exaple.com">Skriv till oss och berätta!</a>
-        </p>
+        <div class="inner">
+          <p id="logo-full"><a href="/">Miljöpartiet de gröna</a></p>
+          <p id="copyright" class="copy">
+            Allt innehåll är licensierat under en Creative Commons Erkännande 3.0 Unported Licens om inte annat anges.
+            Vi vill gärna ha dina synpunkter på vår webb. Kan vi förbättra något? <a href="mailto:mp@exaple.com">Skriv till oss och berätta!</a>
+          </p>
+        </div>
       </footer>
     </div>
     <div id="cookies">
@@ -597,6 +585,13 @@
         <a href="#" class="confirm action">OK, stäng meddelandet</a>
       </div>
     </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script>
+    <!-- The cookies script is the one available in drupal -->
+    <script src="javascripts/cookies.js" type="text/javascript"></script>
+    <script src="javascripts/mp.js" type="text/javascript"></script>
+    <!-- This script is only to demonstrate features and should be implemented in drupal -->
+    <script src="javascripts/features.js" type="text/javascript"></script>
     <script src="javascripts/disqus.js" type="text/javascript"></script>
   </body>
 </html>

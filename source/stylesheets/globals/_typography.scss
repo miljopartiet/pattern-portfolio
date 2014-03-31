@@ -1,0 +1,145 @@
+@import "globals/fonts";
+
+%typography-base-text {
+  font-family: $font-family;
+  color: $font-color;
+  font-size: 1em;
+  line-height: (20/16);
+}
+
+%typography-heading-main {
+  font-family: $mp-sans;
+  font-weight: normal;
+  font-size: (40em/16);
+  line-height: (32/40);
+  text-rendering: optimizeLegibility;
+
+  @include respond-to(600px) {
+    font-size: (54em/16);
+  }
+
+  @include respond-to(768px) {
+    font-size: (64em/16);
+  }
+
+  @include respond-to(1024px) {
+    font-size: (84em/16);
+    line-height: (66/84);
+  }
+}
+
+%typography-heading-medium {
+  font-family: $mp-sans;
+  font-weight: normal;
+  font-size: (30em/16);
+  line-height: (24/30);
+  text-rendering: optimizeLegibility;
+
+  @include respond-to(600px) {
+    font-size: (36em/16);
+    line-height: (30/36);
+  }
+
+  @include respond-to(768px) {
+    font-size: (48em/16);
+    line-height: (40/48);
+  }
+}
+
+%typography-heading {
+  font-family: $mp-sans;
+  font-weight: normal;
+  font-size: (28em/16);
+  line-height: (24/28);
+  text-rendering: optimizeLegibility;
+
+  @include respond-to(768px) {
+    font-size: (38em/16);
+    line-height: (30/38);
+  }
+}
+
+// news lists and h2 in articles
+%typography-heading-serif {
+  font-family: $mp-serif;
+  font-weight: normal;
+  font-size: (21em/16);
+  line-height: (21/21);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  @include respond-to(768px) {
+    font-size: (30em/16);
+    line-height: (28/30);
+  }
+}
+
+%typography-heading-small {
+  font-family: $mp-serif;
+  font-weight: normal;
+  font-size: (18em/16);
+  line-height: (20/20);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  @include respond-to(768px) {
+    font-size: (24em/16);
+    line-height: (26/24);
+  }
+}
+
+%typography-text-lead {
+  font-family: $mp-serif;
+  font-size: (20em/16);
+  line-height: (22/20);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  @include respond-to(600px) {
+    font-size: (22em/16);
+    line-height: (26/22);
+  }
+
+  @include respond-to(768px) {
+    font-size: (24em/16);
+    line-height: (28/24);
+  }
+
+  @include respond-to(1024px) {
+    font-size: (28em/16);
+    line-height: (32/28);
+  }
+}
+
+%typography-text-body {
+  font-family: georgia, serif;
+  font-size: (16em/16);
+  line-height: (20/16);
+
+  @include respond-to(768px) {
+    font-size: (18em/16);
+    line-height: (25/18);
+  }
+}
+
+%typography-text {
+  font-family: georgia, serif;
+  font-size: (14em/16);
+  line-height: (17/14);
+
+  @include respond-to(768px) {
+    font-size: (16em/16);
+    line-height: (22/16);
+  }
+}
+
+%typography-text-small {
+  font-family: $arial;
+  font-size: (13em/16);
+  line-height: (16/13);
+
+  @include respond-to(768px) {
+    font-size: (14em/16);
+    line-height: (18/14);
+  }
+}

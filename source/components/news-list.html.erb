@@ -1,0 +1,18 @@
+<ul class="news-posts icon-list">
+<% News.all(3).each do |post| %>
+  <li>
+    <a href="#">
+      <span class="icon<%= ' mp' if post.source == 'mp.se' %>">
+        <img src="/images/sources/<%= post.icon %>" alt="">
+      </span>
+      <span class="title"><%= post.title %></span>
+      <span class="meta">
+        <%= post.time %>, <%= post.source_title %>, <%= post.source %>
+      </span>
+    </a>
+    <% if locals[:edit] %>
+      <a href="#" class="edit-link-simple">Redigera</a>
+    <% end %>
+  </li>
+<% end %>
+</ul>

@@ -1,0 +1,187 @@
+---
+body_class: "front has-billboard"
+layout: mp
+---
+
+<%= partial "components/billboard" %>
+
+<div class="main-section main-section-cream">
+  <%= partial 'components/follow' %>
+</div>
+
+<div class="main-section main-section-green">
+  <article>
+    <%= partial "pages/main_topics", locals: { title: "Vår politik" } %>
+
+    <p class="read-more">
+      <a href="/pages/topics.html">
+        <span class="icon-arrow"></span>Läs mer om hur vi vill modernisera Sverige
+      </a>
+    </p>
+  </article>
+</div>
+
+<div class="main-section">
+  <article>
+    <h1>Just nu</h1>
+    <%= partial 'components/news-list' %>
+
+    <div class="fetch-more">
+      <a href="#" class="action">
+        <span class="icon-plus"></span>
+        Visa fler nyheter
+      </a>
+    </div>
+  </article>
+</div>
+
+<div class="main-section main-section-cream local-x">
+  <%= partial 'components/localize' %>
+
+  <div id="loader" class="loading">
+    <article class="message">
+      <h1>Hämtar kommun</h1>
+    </article>
+
+    <article>
+      <header class="section-vignette">
+        <span class="section-vignette-intro">Här visar vi lokal politik från <a href="/pages/region.html">Östersund</a> och <a href="/pages/region.html">Jämtland</a>. Du kan enkelt <a href="">ändra kommun</a> om du vill.</span>
+      </header>
+
+      <h1>
+        <a href="#" class="topic">Östersund</a>
+        <span>En ekologisk kommun mitt i sameland</span>
+      </h1>
+
+      <div class="topics">
+        <div class="topic">
+          <h2><a href="#">En skola för livet.</a></h2>
+          <p>Miljöpartiet i Östersund vill ge de kommunala skolorna större pedagogisk frihet och satsa på matkvalitén i skolan. Vi vill anpassa barnomsorgen efter familjers behov och ha mindre barngrupper i förskolan.</p>
+        </div>
+        <div class="topic">
+          <h2><a href="#">Ungdomarnas situation.</a></h2>
+          <p>Kommunens satsning på ”Mötesplatser unga” ska utvecklas vidare. Vi vill också bygga boende för ungdomar/studenter, stärka arbetet mot droger och skapa satsa på praktikplatser och jobb för unga.</p>
+        </div>
+        <div class="topic">
+          <h2><a href="#">Ungdomarnas situation.</a></h2>
+          <p>Kommunens satsning på ”Mötesplatser unga” ska utvecklas vidare. Vi vill också bygga boende för ungdomar/studenter, stärka arbetet mot droger och skapa satsa på praktikplatser och jobb för unga.</p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h1>
+        <a href="/pages/region.html" class="topic">Jämtland</a>
+        <span>Ett livskraftigt Jämtland</span>
+      </h1>
+
+      <div class="topics">
+        <div class="topic">
+          <h2><a href="#">Stoppa klimatkatastrofen med förnybar energi.</a></h2>
+          <p>Klimathotet är globalt, men alla utsläpp är lokala. Miljöpartiet i Jämtland vill bygga ett center för miljöteknik i Sveg, utveckla järnvägstrafiken och bryt olje- och fossilbränsleberoendet. Jämtland, med sin potential för förnybar energi, ska vara drivande i klimatomställningen.</p>
+        </div>
+        <div class="topic">
+          <h2><a href="#">Matriket Jämtland.</a></h2>
+          <p>Mat ska hänga samman med livskvalitet och god miljö. Vi vill ha mer ekologisk mat, kortare djurtransporter och småskaliga slakterier.</p>
+        </div>
+        <div class="topic">
+          <h2><a href="#">Grönare närmiljö.</a></h2>
+          <p>Vi vill skapa ett friluftsområde på Storsjö strand, återställa Storsjön vid Sölvbacka strömmar och värna om en miljö fri från giftiga kemikalier.</p>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+
+<div class="main-section main-section-magenta">
+  <article>
+    <header class="intro">
+      <h1>Vårt parti</h1>
+      <div class="lead">
+        <p>Miljöpartiet de gröna är Sveriges tredje största riksdagsparti. Vi är med och styr i över hundra kommuner och landsting. Vi moderniserar Sverige.</p>
+      </div>
+    </header>
+    <div class="illustration">
+      <figure>
+        <div>
+          <div class="embedded-video widescreen vimeo">
+            <iframe src="http://player.vimeo.com/video/28932766?title=0&byline=0&portrait=0&color=ffffff" width="500" height="281" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+          </div>
+        </div>
+        <!--
+        <figcaption>
+          <b>Miljöpartiet de gröna</b>
+          Vi är ett modernt och växande grönt parti.
+        </figcaption>
+        -->
+      </figure>
+    </div>
+  </article>
+
+  <article>
+    <header class="section-vignette">
+      <p class="section-vignette-intro">
+        <b>Våra språkrör</b>
+        Istället för partiledare har vi två språkrör som för ut vår politik.
+      </p>
+    </header>
+    <div class="people grid"><div class="container">
+      <div class="column c2">
+        <a href="/pages/person.html">
+          <img src="/dynamic/people/gustaf-fridolin.jpg" alt="">
+          <h2>Gustaf Fridolin</h2>
+          <p>Språkrör, riksdagsledamot och folkhögskollärare</p>
+        </a>
+      </div><div class="column c2">
+        <a href="/pages/person.html">
+          <img src="/dynamic/people/asa-romson.jpg" alt="">
+          <h2>Åsa Romson</h2>
+          <p>Språkrör, riksdagsledamot och doktor i Miljörätt</p>
+        </a>
+      </div>
+    </div></div>
+    <p class="read-more">
+      <a href="/pages/about.html">
+        <span class="icon-arrow"></span>Fler personer i vårt parti och där du bor
+      </a>
+    </p>
+  </article>
+</div>
+
+<div class="main-section">
+  <article>
+    <header class="intro">
+      <h1>Prata med oss</h1>
+      <div class="lead">
+        <p>Politik angår oss alla. Genom att vara öppna för andras idéer kan vi utveckla den gröna politiken. Därför vill vi höra vad du tycker.</p>
+      </div>
+    </header>
+    <div class="conversations">
+      <section class="article-section">
+        <div class="conversation">
+          <div class="question">
+            <div class="content">
+              <p>
+                Det behövs en bred uppgörelse om långsiktighet i energipolitiken! Vad säger Miljöpartiet?
+              </p>
+            </div>
+            <div class="byline">
+              <img src="http://placehold.it/48x48" alt="">
+              <p>E.ON Sverige (@EON_Nordic) på twitter</p>
+            </div>
+          </div>
+          <div class="answer">
+            <div class="content">
+              <p>
+                Vi håller med. Vi har föreslagit samtal över blockgränserna om energipolitiken. Det finns en riksdagsmajoritet för 100% förnybar energi, men regerings fastlåsning hindrar tydliga beslut.
+              </p>
+            </div>
+            <div class="byline">
+              <img src="http://placehold.it/48x48" alt="">
+              <p><a href="#">Lise Nordin</a>, energipolitisk talesperson för Miljöpartiet</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </article>
+</div>

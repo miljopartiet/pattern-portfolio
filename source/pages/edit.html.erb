@@ -1,0 +1,149 @@
+---
+body_class: "front logged-in"
+layout: mp
+---
+<% content_for :head do %>
+  <title>Miljöpartiet</title>
+<% end%>
+<nav class="tabs">
+  			<h2 class="element-invisible">Primära flikar</h2><ul class="tabs primary"><li class="active"><a href="/politik/nya-jobb" class="active">Visa<span class="element-invisible">(aktiv flik)</span></a></li>
+<li><a href="/node/40/edit">Redigera</a></li>
+<li><a href="/node/40/revisions">Versioner</a></li>
+<li><a href="/node/40/log">Log</a></li>
+<li><a href="/node/40/devel">Devel</a></li>
+</ul>  		</nav>
+
+  		<ul class="action-links">
+          <li><a href="#">AVCTION</a></li>
+        </ul>
+
+  		<div class="drupal-messages">
+          <p>Some message</p>
+          </div>
+
+<div class="main-section">
+  <ul class="tabs primary"><li><a href="#">Redigera</a></li></ul>
+
+  <article>
+    <div class="illustration">
+      <figure>
+        <div>
+          <img src="/dynamic/living.jpg" alt="Bostadsbristen kräver politiskt agerande.">
+        </div>
+        <figcaption>
+          <b>Bostad</b>
+          Alla behöver en bostad. Men bristen på bostäder ökar. Därför vill Miljöpartiet bygga fler billiga och miljövänliga bostäder.
+        </figcaption>
+      </figure>
+    </div>
+    <section class="news-posts article-section">
+
+      <%= partial 'components/news-list', locals: { edit: true } %>
+
+      <div class="fetch-more">
+        <a href="#" class="action">
+          <span class="icon-plus"></span>
+          Visa fler nyheter
+        </a>
+      </div>
+
+    </section>
+
+    <%= partial 'components/follow', locals: { edit: true } %>
+  </article>
+</div>
+
+<div class="main-section main-section-green">
+  <ul class="tabs primary"><li><a href="#">Redigera</a></li></ul>
+  <article>
+  <%= partial "pages/main_topics", locals: { title: "Vår politik", edit: true } %>
+    <p><a href="/pages/topics.html">Läs mer om hur vi vill modernisera Sverige</a>
+    <%= partial 'components/localize' %>
+  </article>
+</div>
+
+<div class="main-section main-section-magenta">
+  <ul class="tabs primary"><li><a href="#">Redigera</a></li></ul>
+  <article>
+    <header class="intro">
+      <h1>Vårt parti</h1>
+      <div class="lead">
+        <p>Miljöpartiet de gröna är Sveriges tredje största riksdagsparti. Vi är med och styr i över hundra kommuner och landsting. Vi moderniserar Sverige.</p>
+      </div>
+    </header>
+    <div class="illustration">
+      <figure>
+        <div>
+          <div class="embedded-video widescreen vimeo">
+            <iframe src="http://player.vimeo.com/video/28932766?title=0&byline=0&portrait=0&color=ffffff" width="500" height="281" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+          </div>
+        </div>
+      </figure>
+    </div>
+    <section class="article-section">
+      <header>
+        <p class="section-lead">
+          <b>Våra språkrör</b>
+          Istället för partiledare har vi två språkrör som för ut vår politik.
+        </p>
+      </header>
+      <div class="people grid"><div class="container">
+        <div class="column c2">
+          <a href="/pages/person.html">
+            <img src="/dynamic/people/gustaf-fridolin.jpg" alt="">
+            <h2>Gustaf Fridolin</h2>
+            <p>Språkrör, riksdagsledamot och folkhögskollärare</p>
+          </a>
+          <a href="#" class="edit-link-simple">Redigera</a>
+        </div><div class="column c2">
+          <a href="/pages/person.html">
+            <img src="/dynamic/people/asa-romson.jpg" alt="">
+            <h2>Åsa Romson</h2>
+            <p>Språkrör, riksdagsledamot och doktor i Miljörätt</p>
+          </a>
+          <a href="#" class="edit-link-simple">Redigera</a>
+        </div>
+      </div></div>
+      <p><a href="/pages/about.html">Fler personer i vårt parti och där du bor.</a></p>
+    </section>
+  </article>
+</div>
+<div class="main-section">
+  <article>
+    <header class="intro">
+      <h1>Prata med oss</h1>
+      <div class="lead">
+        <p>Politik angår oss alla. Genom att vara öppna för andras idéer kan vi utveckla den gröna politiken. Därför vill vi höra vad du tycker.</p>
+      </div>
+    </header>
+    <div class="conversations">
+      <section class="article-section">
+        <div class="conversation">
+          <div class="question">
+            <div class="content">
+              <p>
+                Det behövs en bred uppgörelse om långsiktighet i energipolitiken! Vad säger Miljöpartiet?
+              </p>
+            </div>
+            <div class="byline">
+              <img src="http://placehold.it/48x48" alt="">
+              <p>E.ON Sverige (@EON_Nordic) på twitter</p>
+            </div>
+          </div>
+          <div class="answer">
+            <div class="content">
+              <p>
+                Vi håller med. Vi har föreslagit samtal över blockgränserna om energipolitiken. Det finns en riksdagsmajoritet för 100% förnybar energi, men regerings fastlåsning hindrar tydliga beslut.
+              </p>
+            </div>
+            <div class="byline">
+              <img src="http://placehold.it/48x48" alt="">
+              <p><a href="#">Lise Nordin</a>, energipolitisk talesperson för Miljöpartiet</p>
+            </div>
+          </div>
+          <a href="#" class="edit-link-simple">Redigera</a>
+        </div>
+      </section>
+    </div>
+  </article>
+</div>
