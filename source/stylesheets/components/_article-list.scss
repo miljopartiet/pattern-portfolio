@@ -1,4 +1,4 @@
-.topics {
+.article-list {
   @include clearfix;
   list-style: none;
   margin-top: (20em/16);
@@ -6,7 +6,7 @@
     margin-top: (40em/16);
   }
 
-  .topic {
+  .list-item {
     margin: (20em/16) 0 0 0;
 
     @include respond-to(1024px) {
@@ -23,6 +23,16 @@
     @extend %typography-heading-serif;
     margin: 0;
     position: relative;
+  }
+
+  p {
+    @extend %typography-text-body;
+  }
+}
+
+.article-list-pull-out {
+  h2,
+  h3 {
     @include respond-to(600px) {
       margin-left: -20px;
     }
@@ -39,9 +49,6 @@
     display: inline;
   }
 
-  p {
-    @extend %typography-text-body;
-  }
 }
 
 .related-topics {
