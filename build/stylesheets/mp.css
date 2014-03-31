@@ -2096,13 +2096,17 @@ header.intro .article-section {
   background: #000;
   color: #fff;
   padding: 8px 20px 16px 20px;
-  margin-top: -10px;
-  margin-bottom: 10px; }
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 98765;
+  -webkit-box-shadow: 0px -3px 18px 0px rgba(50, 50, 50, 0.3);
+  -moz-box-shadow: 0px -3px 18px 0px rgba(50, 50, 50, 0.3);
+  box-shadow: 0px -3px 18px 0px rgba(50, 50, 50, 0.3); }
   @media screen and (min-width: 768px) {
     #cookies {
-      text-align: center;
-      margin-top: -18px;
-      margin-bottom: 18px; } }
+      text-align: center; } }
   #cookies p {
     display: inline-block;
     margin: 8px .5em 0 0; }

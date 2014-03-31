@@ -3238,7 +3238,8 @@ if (typeof define !== 'undefined' && define.amd) {
         $message.hide();
         $.cookie('allow-cookies', true, { expires: 365, path: '/' });
       });
-      $('#site-banner').prepend($message.show());
+
+      $message.show();
     }
   };
 
