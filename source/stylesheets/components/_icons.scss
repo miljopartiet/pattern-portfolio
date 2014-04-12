@@ -21,6 +21,10 @@
   content: "➡";
 }
 
+.icon-arrow-downward:before {
+	content: "\2b07";
+}
+
 .icon-plus:before {
   content: "+";
 }
@@ -31,4 +35,8 @@
 
 .icon-twitter:before {
   content: "★";
+}
+
+.icon-heart:before {
+	content: "\e601";
 }
