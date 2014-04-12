@@ -1,9 +1,35 @@
 .take-action {
-  @extend %page-section-content-wide;
+  max-width: 970px;
+  margin: 0 auto;
   color: $magenta;
+
+  @include respond-between(600px, 1024px) {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
 
   a {
     color: $magenta;
+  }
+
+  .take-action-list {
+    @include respond-to(600px) {
+      @include clearfix;
+
+      .take-action-list-item {
+        text-align: center;
+      }
+
+      .take-action-list-item-primary {
+        float: left;
+        width: 33.3%;
+        margin: 0 0 .35em 0;
+      }
+
+      .take-action-list-item-secondary {
+        clear: left;
+      }
+    }
   }
 }
 
@@ -15,21 +41,5 @@
 
   @include respond-to(768px) {
     padding: 25px 35px 25px 35px;
-  }
-}
-
-.take-action-section {
-  @include respond-to(1024px) {
-    float: left;
-    width: 33%;
-    margin: 0;
-  }
-}
-
-.take-action-section-primary {
-  @include respond-to(1024px) {
-    width: 60%;
-    margin-right: 7%;
-    margin-bottom: 0;
   }
 }
