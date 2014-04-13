@@ -84,8 +84,7 @@ configure :build do
   activate :relative_assets
 
   compass_config do |config|
-    config.sass_options = { debug_info: false }
-    config.sass_options = { line_comments: false }
+    config.sass_options = { debug_info: false,  line_comments: false }
   end
   # Compress PNGs after build
   # First: gem install middleman-smusher
