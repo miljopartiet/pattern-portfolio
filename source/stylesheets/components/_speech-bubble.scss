@@ -72,6 +72,12 @@
     margin-right: (20em/16);
   }
 
+  input[type="text"],
+  textarea {
+    border: 1px solid #fff;
+  }
+
+
   .main {
     @include respond-to(768px) {
       @include box-sizing(border-box);

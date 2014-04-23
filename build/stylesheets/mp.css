@@ -497,7 +497,7 @@ input[type="week"], textarea {
   font-size: 1em;
   line-height: 1;
   color: #000;
-  border: 0;
+  border: 1px solid #f6f4e5;
   border-radius: 6px;
   background: #fff;
   padding: 6px 10px 5px 10px;
@@ -1419,6 +1419,9 @@ nav.breadcrumbs {
         line-height: 1.33333; } }
   .speech-bubble form {
     margin-right: 1.25em; }
+  .speech-bubble input[type="text"],
+  .speech-bubble textarea {
+    border: 1px solid #fff; }
   @media screen and (min-width: 768px) {
     .speech-bubble .main {
       -webkit-box-sizing: border-box;
@@ -2462,8 +2465,9 @@ header.intro .article-section {
       display: table; }
     #search form:after {
       clear: both; }
-  #search input {
-    float: left; }
+  #search input[type="text"] {
+    float: left;
+    border: 1px solid #fff; }
   #search .action {
     float: right;
     display: block;

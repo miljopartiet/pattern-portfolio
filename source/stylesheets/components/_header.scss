@@ -369,8 +369,9 @@ body.navigation-is-open {
     @include clearfix;
   }
 
-  input {
+  input[type="text"] {
     float: left;
+    border: 1px solid #fff;
   }
 
   .action {
