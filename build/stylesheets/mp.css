@@ -320,26 +320,26 @@ small, sup, figcaption, #wrap blockquote footer p, .meta, .vignette-intro, .sect
 footer nav.breadcrumbs, #site-footer, body.logged-in #wrap .main-section > .tabs.primary, #main > .tabs,
 #main > .action-links,
 #main > .drupal-messages, body.not-logged-in.page-user nav.tabs,
-body.not-logged-in.page-user #user-login, .content-column, .billboard-campaign-content-wrap, #main > nav.breadcrumbs, .main-section > .speech-bubble, article {
+body.not-logged-in.page-user #user-login, .content-column, .billboard-campaign-content-inner, #main > nav.breadcrumbs, .main-section > .speech-bubble, article {
   margin-right: auto;
   margin-left: auto; }
   @media screen and (min-width: 600px) {
     footer nav.breadcrumbs, #site-footer, body.logged-in #wrap .main-section > .tabs.primary, #main > .tabs,
     #main > .action-links,
     #main > .drupal-messages, body.not-logged-in.page-user nav.tabs,
-    body.not-logged-in.page-user #user-login, .content-column, .billboard-campaign-content-wrap, #main > nav.breadcrumbs, .main-section > .speech-bubble, article {
+    body.not-logged-in.page-user #user-login, .content-column, .billboard-campaign-content-inner, #main > nav.breadcrumbs, .main-section > .speech-bubble, article {
       width: 520px; } }
   @media screen and (min-width: 768px) {
     footer nav.breadcrumbs, #site-footer, body.logged-in #wrap .main-section > .tabs.primary, #main > .tabs,
     #main > .action-links,
     #main > .drupal-messages, body.not-logged-in.page-user nav.tabs,
-    body.not-logged-in.page-user #user-login, .content-column, .billboard-campaign-content-wrap, #main > nav.breadcrumbs, .main-section > .speech-bubble, article {
+    body.not-logged-in.page-user #user-login, .content-column, .billboard-campaign-content-inner, #main > nav.breadcrumbs, .main-section > .speech-bubble, article {
       width: 580px; } }
   @media screen and (min-width: 1024px) {
     footer nav.breadcrumbs, #site-footer, body.logged-in #wrap .main-section > .tabs.primary, #main > .tabs,
     #main > .action-links,
     #main > .drupal-messages, body.not-logged-in.page-user nav.tabs,
-    body.not-logged-in.page-user #user-login, .content-column, .billboard-campaign-content-wrap, #main > nav.breadcrumbs, .main-section > .speech-bubble, article {
+    body.not-logged-in.page-user #user-login, .content-column, .billboard-campaign-content-inner, #main > nav.breadcrumbs, .main-section > .speech-bubble, article {
       width: 640px; } }
 
 @media screen and (min-width: 1024px) {
