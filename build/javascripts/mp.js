@@ -3113,7 +3113,6 @@ if (typeof define !== 'undefined' && define.amd) {
       var targetClass = openIndicationClasses([$target.attr("id")])
       targetClass.push("navigation-is-open");
 
-      $toggler.trigger("blur");
 
       if ($target.hasClass("open")) {
         $body.addClass(targetClass.join(" "));
@@ -3121,6 +3120,7 @@ if (typeof define !== 'undefined' && define.amd) {
       } else {
         $body.removeClass(targetClass.join(" "));
       }
+      $toggler.trigger("blur");
     };
 
     var siblingTargets = function($siblings) {
