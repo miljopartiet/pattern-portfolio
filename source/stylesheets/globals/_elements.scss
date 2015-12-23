@@ -167,7 +167,7 @@ input[type="search"] {
   font-size: (16em/16);
   line-height: 1;
   color: #000;
-  border: 1px solid $cream;
+  border: 0;
   border-radius: 6px;
   background: #fff;
   padding: 6px 10px 5px 10px;
@@ -205,6 +205,13 @@ input[type="week"] {
   @include respond-to(600px) {
     width: 70%;
   }
+}
+
+#user-login input[type="text"],
+#user-login input[type="password"],
+#user-pass input[type="text"],
+#search-form input[type="text"] {
+  border: 1px solid $warm-grey;
 }
 
 textarea {
@@ -406,6 +413,47 @@ blockquote {
         @include respond-to(1024px) {
           text-decoration: none;
         }
+      }
+    }
+  }
+
+  #wrap &.twitter {
+    margin-bottom: 1em;
+
+    a {
+      color: $text-warm-grey;
+      white-space: nowrap;
+    }
+
+    @include respond-to(1024px) {
+      min-height: 74px;
+    }
+
+    footer {
+      img {
+        width: percentage(45/640);
+        margin: 0 percentage(6/320) 0 percentage(13/320);
+        @include respond-to(600px) {
+          margin: percentage(20/320) percentage(6/320) 0 percentage(13/320);
+        }
+        @include respond-to(1024px) {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 60px;
+          margin: 0 0 14px 100px;
+        }
+      }
+      p {
+        width: percentage(280/320);
+        @include respond-to(1024px) {
+          width: percentage(145/320);
+        }
+      }
+    }
+    div {
+      @include respond-to(1024px) {
+        width: percentage(640/790);
       }
     }
   }

@@ -17,26 +17,44 @@
   }
 }
 
+ul.social li {
+  display: list-item;
+  list-style-type: none;
+  margin-left: 0;
+  & a:before {
+    content: "ⓐ";
+    margin-right: 0.4em;
+    text-decoration: none;
+  }
+}
+
+
 .icon-arrow:before {
   content: "➡";
 }
-
 .icon-arrow-downward:before {
-	content: "\2b07";
+  content: "\2b07";
 }
-
 .icon-plus:before {
   content: "+";
 }
-
+ul.social .icon-facebook:before,
 .icon-facebook:before {
-  content: "✌";
+  content: "ⓕ";
 }
-
+ul.social .icon-twitter:before,
 .icon-twitter:before {
-  content: "★";
+  content: "ⓣ";
+}
+ul.social .icon-instagram:before,
+.icon-instagram:before {
+  content: "ⓘ";
+}
+ul.social .icon-googleplus:before,
+.icon-googleplus:before {
+  content: "ⓖ";
+}
+.icon-heart:before {
+  content: "\e601";
 }
 
-.icon-heart:before {
-	content: "\e601";
-}

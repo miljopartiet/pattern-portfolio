@@ -1,0 +1,115 @@
+---
+current_nav: about
+title: Miljöpartiet i EU-parlamentet
+url: http://www.mp.se/eu
+layout: mp
+---
+<% content_for :breadcrumbs do %>
+  <a href="/pages/start.html">Hem</a>
+  <a href="/pages/eu-group.html" class="last">Miljöpartiet i EU-parlamentet</a>
+<% end %>
+<% content_for :local_nav do %>
+              <li class="nav-item-secondary leaf"><a href="#" class="active">EU-politik</a></li>
+              <li class="nav-item-secondary leaf"><a href="#news">Senaste nytt</a></li>
+              <li class="nav-item-secondary leaf"><a href="#people">Politiker</a></li>
+              <li class="nav-item-secondary leaf"><a href="/pages/group.html">Personal</a></li>
+<% end %>
+<div class="main-section">
+  <article>
+    <header class="intro">
+      <h1>Miljöpartiet I Eu-Parlamentet</h1>
+      <div class="lead">
+        <p>Miljöpartiet arbetar tillsammans med Gröna gruppen i Europaparlamentet för att skapa ett grönare EU.</p>
+      </div>
+    </header>
+    <div class="illustration">
+     <figure>
+        <div>
+          <img src="/dynamic/eu-politiker.jpg">
+        </div>
+        <figcaption>
+          <b>Bild på gruppen</b>
+          går att lägga till genom att redigera sidan.
+        </figcaption>
+      </figure>
+    </div>
+    <div class="body">
+      <p>Möjligt att lägga till brödtext med</p>
+      <ul>
+        <li>rubriker,</li>
+        <li>stycken och</li>
+        <li>annat...</li>
+      </ul>
+    </div>
+  </article>
+</div>
+
+<div class="main-section main-section-cream" id="news">
+  <article>
+    <header class="intro">
+      <h1>Just nu</h1>
+    </header>
+    <%= partial 'components/news-list' %>
+
+    <div class="fetch-more">
+      <a href="#" class="action">
+        <span class="icon-plus"></span>
+        Visa fler nyheter
+      </a>
+    </div>
+  </article>
+</div>
+
+<div class="main-section main-section-green" id="people">
+  <article>
+    <header class="intro">
+      <h1>Våra politiker</h1>
+      <div class="lead"><p>Miljöpartiet har fyra EU-parlamentariker. Tillsammans med den gröna gruppen i Europaparlamentet arbetar de för ett humant och öppet EU.</p></div>
+    </header>
+
+    <div class="people">
+      <div class="presentation">
+        <a href="/pages/person.html">
+          <img src="/dynamic/people/bodil-ceballos.jpg"/>
+          <h2>Bodil Ceballos</h2>
+          <p>EU-parlamentariker med ansvar för migrations- och klimatfrågor.</p>
+        </a>
+      </div>
+
+      <div class="presentation">
+        <a href="/pages/person.html">
+          <img src="/dynamic/people/linnea-engstrom.jpg"/>
+          <h2>Linnéa Engström</h2>
+          <p>EU-parlamentariker med ansvar för jämställdhets- och ojämställdhetsfrågor.</p>
+        </a>
+<!--
+        <ul class="social-media horizontal">
+          <li><a href="#">Facebook</a></li><li><a href="#">Twitter</a></li><li><a href="#">Instagram</a></li>
+        </ul>
+-->
+      </div>
+
+      <div class="presentation">
+        <a href="/pages/person.html">
+          <img src="/dynamic/people/max-andersson.jpg"/>
+          <h2>Max Andersson</h2>
+          <p>EU-parlamentariker med ansvar för extra allt.</p>
+        </a>
+      </div>
+
+      <div class="presentation">
+        <a href="/pages/person.html">
+          <img src="/dynamic/people/peter-eriksson.jpg"/>
+          <h2>Peter Eriksson</h2>
+          <p>EU-parlamentariker med ansvar för potatis- och purjolöksfrågor.</p>
+        </a>
+      </div>
+    </div>
+  </article>
+</div>
+
+<div class="main-section">
+<%= partial 'components/share' %>
+</div>
+
+</div>

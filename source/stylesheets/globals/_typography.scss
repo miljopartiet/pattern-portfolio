@@ -9,10 +9,11 @@
 
 %typography-heading-main {
   font-family: $mp-sans;
+  text-transform: uppercase;
   font-weight: normal;
   font-size: (40em/16);
   line-height: (32/40);
-  text-rendering: optimizeLegibility;
+/*  text-rendering: optimizeLegibility;*/
 
   @include respond-to(600px) {
     font-size: (54em/16);
@@ -33,7 +34,7 @@
   font-weight: normal;
   font-size: (30em/16);
   line-height: (24/30);
-  text-rendering: optimizeLegibility;
+/*  text-rendering: optimizeLegibility;*/
 
   @include respond-to(600px) {
     font-size: (36em/16);
@@ -51,7 +52,7 @@
   font-weight: normal;
   font-size: (28em/16);
   line-height: (24/28);
-  text-rendering: optimizeLegibility;
+/*  text-rendering: optimizeLegibility;*/
 
   @include respond-to(768px) {
     font-size: (38em/16);
@@ -66,7 +67,7 @@
   font-size: (21em/16);
   line-height: (21/21);
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+/*  text-rendering: optimizeLegibility;*/
 
   @include respond-to(768px) {
     font-size: (30em/16);
@@ -80,7 +81,7 @@
   font-size: (18em/16);
   line-height: (20/20);
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+/*  text-rendering: optimizeLegibility;*/
 
   @include respond-to(768px) {
     font-size: (24em/16);
@@ -93,7 +94,7 @@
   font-size: (20em/16);
   line-height: (22/20);
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+/*  text-rendering: optimizeLegibility;*/
 
   @include respond-to(600px) {
     font-size: (22em/16);

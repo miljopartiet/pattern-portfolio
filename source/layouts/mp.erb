@@ -17,17 +17,17 @@
             <ul id="primary-nav">
               <li class="nav-item-primary first leaf<%= ' active-trail' if data.page.current_nav == 'topics' %>"><a href="/pages/topics.html"><span>Vår politik</span></a></li>
               <li class="nav-item-primary leaf<%= ' active-trail' if data.page.current_nav == 'about' %>"><a href="/pages/about.html"><span>Om oss</span></a></li>
-              <li class="nav-item-primary leaf<%= ' active-trail' if data.page.current_nav == 'conversations' %>"><a href="/pages/conversations.html"><span>Prata politik</span></a></li>
+              <li class="nav-item-primary leaf<%= ' active-trail' if data.page.current_nav == 'conversations' %>"><a href="#"><span>Engagera dig</span></a></li>
             </ul>
             <ul id="secondary-nav">
               <li class="nav-item-secondary leaf"><a href="#">Other languages</a></li>
               <li class="nav-item-secondary leaf"><a href="#">Lättläst</a></li>
               <li class="nav-item-secondary leaf"><a href="#">Kontakt</a></li>
-              <li class="nav-item-secondary leaf"><a href="#">Engagera dig</a></li>
               <li class="nav-item-secondary leaf"><a href="#">Press</a></li>
               <li class="nav-item-secondary leaf"><a href="#">Skolarbeten</a></li>
               <li class="nav-item-secondary leaf"><a href="#">Lediga jobb</a></li>
               <li class="nav-item-secondary leaf"><a href="#">Medlem</a></li>
+              <li class="nav-item-secondary leaf"><a href="/pages/conversations.html">Prata politik</a></li>
             </ul>
           </nav>
           <div id="search" role="search">
@@ -41,6 +41,16 @@
     </header>
 
     <div id="main">
+      <% if content_for? :local_nav %>
+      <nav id="local-nav">
+        <div class="inner">
+          <div class="navigation">
+            <div id="local-logo"><a href="/pages/eu-group.html">De gröna i Europaparlamentet</a></div>
+            <ul><%= yield_content :local_nav %></ul>
+          </div>
+        </div>
+      </nav>
+      <% end %>
       <% if content_for? :breadcrumbs %>
         <nav class="breadcrumbs">
           <p><%= yield_content :breadcrumbs %></p>

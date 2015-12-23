@@ -56,8 +56,7 @@ body.logged-in #wrap {
 }
 
 body.not-logged-in.page-user {
-  nav.tabs,
-  #user-login {
+  nav.tabs {
     @extend %page-section-content;
   }
 }

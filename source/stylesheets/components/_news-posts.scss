@@ -1,4 +1,8 @@
 .news-posts {
+  li {
+    @include clearfix;
+  }
+
   @include respond-to(1024px) {
     width: auto;
     margin-right: (20em/16);
@@ -8,5 +12,10 @@
     @include respond-to(1024px) {
       margin-right: (35em/22);
     }
+  }
+  img.news-image {
+    float: right;
+    margin-left: 0.5em;
+    width: percentage(1/3);
   }
 }

@@ -6,9 +6,11 @@
   a {
     text-decoration: none;
     color: #000;
-
     @include with-dark-sections {
       color: #fff;
+    }
+    &:hover h2 {
+      text-decoration: none;
     }
 
     h2 {
@@ -16,10 +18,6 @@
       text-decoration: underline;
       @extend %typography-heading-small;
       color: $green;
-
-      &:hover {
-        text-decoration: none;
-      }
 
       @include with-dark-sections {
         color: $yellow;
@@ -32,4 +30,56 @@
       text-decoration: none;
     }
   }
+  margin-bottom: 1.5em;
 }
+.people:last-child {
+  margin-bottom: 0;
+}
+
+.people .presentation {
+  @include clearfix;
+  margin-top: (20em/16);
+
+  @include respond-between(768px, 1023px) {
+    margin-top: (20em/16);
+  }
+
+  @include respond-to(1024px) {
+    margin-top: (30em/16);
+  }
+
+  h2 {
+    @extend %typography-heading;
+    text-decoration: none;
+    margin-top: 0;
+  }
+  h3 {
+    color: $yellow;
+  }
+  p {
+    @extend %typography-text-body;
+    @include with-dark-sections {
+      color: #fff;
+    }
+  }
+
+  a>img {
+    float: left;
+    margin: 0 20px 5px 0;
+    width: percentage(2/5);
+  }
+
+  ul.social-media li {
+    @extend %typography-text-body;
+    margin-right: 0.5em;
+    color: $yellow;
+    a:not(:hover) {
+      text-decoration: underline;
+    }
+  }
+  ul.social-media li:not(:first-child)::before {
+    content: "·";
+    margin-right: 0.5em;
+  }
+}
+

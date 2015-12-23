@@ -1,26 +1,32 @@
 @font-face{
-  font-family:"MP Sans";
+  font-family: "MP Sans";
   src: font-url("mp-sans.eot?#iefix");
   src: font-url("mp-sans.eot?#iefix") format("embedded-opentype"),
        font-url("mp-sans.woff") format("woff"),
        font-url("mp-sans.ttf") format("truetype"),
        font-url("mp-sans.svg#mp-sans") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face{
-  font-family:"MP Serif";
+  font-family: "MP Serif";
   src: font-url("mp-serif.eot?#iefix");
   src: font-url("mp-serif.eot?#iefix") format("embedded-opentype"),
        font-url("mp-serif.woff") format("woff"),
        font-url("mp-serif.ttf") format("truetype"),
        font-url("mp-serif.svg#mp-serif") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face{
-  font-family:"MP Icons";
+  font-family: "MP Icons";
   src: font-url("mp-icons.eot?#iefix");
   src: font-url("mp-icons.eot?#iefix") format("embedded-opentype"),
        font-url("mp-icons.woff") format("woff"),
        font-url("mp-icons.ttf") format("truetype"),
        font-url("mp-icons.svg#mp-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }

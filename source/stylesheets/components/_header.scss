@@ -9,6 +9,7 @@
 
   @include respond-to(768px) {
     padding: 18px 0 0 0;
+    background: rgba(43, 145, 4, .95);
   }
 
   .navigation-is-open &,
@@ -52,6 +53,62 @@
   }
 }
 
+#local-nav {
+  background-color: $cream;
+  padding: 8px 0;
+
+  .inner {
+    @include clearfix;
+    max-width: 970px;
+    margin: 0 auto;
+  }
+  ul {
+    margin: 0 0 0 67px;
+    @include respond-to(768px) {
+      margin: 0 -160px 0 20px;
+    }
+  }
+  li {
+    padding: 0;
+    margin: 0;
+    margin-right: 18px;
+    list-style: none;
+    width: auto;
+  }
+  li a {
+    color: $green;
+  }
+
+  #local-logo {
+    margin: 0 0 5px 0;
+    float: left;
+
+    @include respond-to(768px) {
+      margin: 0 0 8px -90px;
+      float: left;
+    }
+
+    a {
+      display: block;
+      text-indent: -9999px;
+      width: 67px;
+      height: 57px;
+      background: transparent url(../images/logo-gefa.png) 0 0 no-repeat;
+      background-size: 100%;
+      margin-top: 10px;
+
+      @include respond-to(768px) {
+        width: 90px;
+        height: 73px;
+      }
+    }
+  }
+  & a:hover,
+  & a.active {
+	color: $magenta;
+  }
+}
+
 #main {
   padding-top: 50px;
 
@@ -86,11 +143,12 @@ body.navigation-is-open {
 
 // Navigation elements
 
-#site-banner .navigation {
+#site-banner .navigation,
+#local-nav .navigation {
   @include clearfix;
   position: relative;
   padding: 0 18px;
-  z-index: 4000;
+  z-index: 500;
 
   @include respond-to(768px) {
     // Mirror the widths of logo and go to navigation
@@ -99,7 +157,7 @@ body.navigation-is-open {
   }
 
   @include respond-to(1024px) {
-    padding: 0;
+//    padding: 0;
   }
 }
 
@@ -132,7 +190,7 @@ body.navigation-is-open {
   margin: 0 -10px 10px 0;
 
   @include respond-to(768px) {
-    width: 160px;
+    width: 170px;
     margin-right: -160px;
     margin-bottom: 18px;
   }
@@ -369,9 +427,8 @@ body.navigation-is-open {
     @include clearfix;
   }
 
-  input[type="text"] {
+  input {
     float: left;
-    border: 1px solid #fff;
   }
 
   .action {

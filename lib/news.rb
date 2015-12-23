@@ -1,6 +1,6 @@
 require 'yaml'
 class News
-  attr_accessor :title, :time, :source, :source_title
+  attr_accessor :title, :time, :source, :source_title, :image_url
   def initialize attrs
     attrs.each do |meth, value|
       if self.respond_to? "#{meth}="
