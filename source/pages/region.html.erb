@@ -8,6 +8,12 @@ layout: mp
   <a href="/pages/start.html">Hem</a>
   <a href="/pages/about.html" class="last">Om Miljöpartiet de gröna</a>
 <% end %>
+<% content_for :local_nav do %>
+              <li class="nav-item-primary leaf active"><a href="#">Jämtland</a></li>
+              <li class="nav-item-secondary leaf"><a href="#news">Aktuellt</a></li>
+              <li class="nav-item-secondary leaf"><a href="#people">Våra politiker</a></li>
+              <li class="nav-item-secondary leaf"><a href="#topics">Vår politik</a></li>
+<% end %>
 <div class="main-section">
   <article>
     <header class="intro">
@@ -115,7 +121,7 @@ layout: mp
   </div>
 </div>
 
-<div class="main-section main-section-cream">
+<div class="main-section main-section-cream" id="news">
   <article>
     <header>
       <h1>Aktuellt i Jämtland</h1>
@@ -125,7 +131,7 @@ layout: mp
   </article>
 </div>
 
-<div class="main-section main-section-green">
+<div class="main-section main-section-green" id="people">
   <article>
     <h1>Nyckelpersoner</h1>
 
@@ -220,7 +226,7 @@ layout: mp
   </article>
 </div>
 
-<div class="main-section main-section-cream">
+<div class="main-section main-section-cream" id="topics">
   <article>
     <h1>Frågor i Jämtland A-Ö</h1>
     <div class="labeled-list-container">

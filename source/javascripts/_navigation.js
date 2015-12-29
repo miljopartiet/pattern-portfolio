@@ -90,6 +90,10 @@
       $toggler.toggleClass("active");
       $target.toggleClass("open");
 
+      if ($toggler.attr("href") == "#nav") {
+          $("#local-nav").toggleClass("open");
+      }
+
       var targetClass = openIndicationClasses([$target.attr("id")])
       targetClass.push("navigation-is-open");
 

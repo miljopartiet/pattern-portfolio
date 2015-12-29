@@ -53,62 +53,6 @@
   }
 }
 
-#local-nav {
-  background-color: $cream;
-  padding: 8px 0;
-
-  .inner {
-    @include clearfix;
-    max-width: 970px;
-    margin: 0 auto;
-  }
-  ul {
-    margin: 0 0 0 67px;
-    @include respond-to(768px) {
-      margin: 0 -160px 0 20px;
-    }
-  }
-  li {
-    padding: 0;
-    margin: 0;
-    margin-right: 18px;
-    list-style: none;
-    width: auto;
-  }
-  li a {
-    color: $green;
-  }
-
-  #local-logo {
-    margin: 0 0 5px 0;
-    float: left;
-
-    @include respond-to(768px) {
-      margin: 0 0 8px -90px;
-      float: left;
-    }
-
-    a {
-      display: block;
-      text-indent: -9999px;
-      width: 67px;
-      height: 57px;
-      background: transparent url(../images/logo-gefa.png) 0 0 no-repeat;
-      background-size: 100%;
-      margin-top: 10px;
-
-      @include respond-to(768px) {
-        width: 90px;
-        height: 73px;
-      }
-    }
-  }
-  & a:hover,
-  & a.active {
-	color: $magenta;
-  }
-}
-
 #main {
   padding-top: 50px;
 
@@ -144,7 +88,7 @@ body.navigation-is-open {
 // Navigation elements
 
 #site-banner .navigation,
-#local-nav .navigation {
+#group-nav .navigation {
   @include clearfix;
   position: relative;
   padding: 0 18px;
@@ -392,7 +336,7 @@ body.navigation-is-open {
   clear: both;
   border-top: 1px solid rgba(255, 255, 255, .2);
   padding-top: 7px;
-  margin: 0 -18px 10px -18px;
+  margin: 0 -18px;
   padding-bottom: 30px;
 
   @include respond-to(768px) {
@@ -404,6 +348,113 @@ body.navigation-is-open {
     .open & {
       display: block;
     }
+  }
+}
+
+#local-nav {
+  display: none;
+  clear: both;
+  padding-top: 7px;
+  background-color: $cream;
+  padding-bottom: 30px;
+
+  .nav-item-primary a {
+    border-bottom: 1px solid rgba(43, 145, 44, 0.2);
+  }
+  ul {
+    margin: 0;
+  }
+  li {
+    padding: 0;
+    list-style: none;
+  }
+  li a {
+    color: $green;
+  }
+  li.active a,
+  li a:hover {
+    color: $magenta;
+  }
+  
+  @include respond-to(768px) {
+    display: block;
+    padding: 7px 0 3px 0;
+    border-bottom: 1px solid rgba(43, 145, 44, 0.1);
+    ul {
+      padding: 0 18px;
+    }
+    .nav-item-primary a {
+      padding: 0;
+      font-size: 2em;
+      line-height: normal;
+      min-width: 155px;
+      border-bottom: 0;
+    }
+    .nav-item-secondary {
+      width: auto;
+    }
+    .nav-item-secondary a {
+      padding: 0 18px;
+    }
+  }
+  &.open {
+    display: block;
+  }
+}
+
+#group-nav {
+  background-color: $cream;
+  padding: 8px 0;
+
+  .inner {
+    @include clearfix;
+    max-width: 970px;
+    margin: 0 auto;
+  }
+  ul {
+    margin: 0 0 0 67px;
+    @include respond-to(768px) {
+      margin: 0 -160px 0 20px;
+    }
+  }
+  li {
+    padding: 0;
+    margin: 0;
+    margin-right: 18px;
+    list-style: none;
+    width: auto;
+  }
+  li a {
+    color: $green;
+  }
+
+  #local-logo {
+    margin: 0 0 5px 0;
+    float: left;
+
+    @include respond-to(768px) {
+      margin: 0 0 8px -90px;
+      float: left;
+    }
+
+    a {
+      display: block;
+      text-indent: -9999px;
+      width: 67px;
+      height: 57px;
+      background: transparent url(../images/logo-gefa.png) 0 0 no-repeat;
+      background-size: 100%;
+      margin-top: 10px;
+
+      @include respond-to(768px) {
+        width: 90px;
+        height: 73px;
+      }
+    }
+  }
+  & a:hover,
+  & a.active {
+	color: $magenta;
   }
 }
 

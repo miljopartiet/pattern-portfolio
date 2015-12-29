@@ -17,6 +17,40 @@
         float: left;
         width: percentage(640/805);
       }
+      position: relative;
+      .copyright {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.4);
+        transition: background-color 0.5s;
+        padding: 0 6px;
+        border-radius: 5px 0 0 0;
+        color: #fff;
+        text-decoration: none;
+        .ui-license {
+          background-image: url("/images/license-icons.svg");
+          background-size: 100px 210px;
+          overflow: hidden;
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          vertical-align: middle;
+        }
+        vertical-align: middle;
+        .name { 
+          vertical-align: middle;
+          font-size: small;
+          font-style: italic;
+          white-space: nowrap;
+        }
+        .cc1 { background-position: left -30px; width: 52px; }
+        .cc2 { background-position: left -60px; width: 76px; }
+        .cc3 { background-position: left -90px; width: 76px; }
+        .cc4 { background-position: left -120px; width: 76px; }
+        .cc5 { background-position: left -150px; width: 100px; }
+        .cc6 { background-position: left -180px; width: 100px; }
+      }
     }
 
     figcaption {

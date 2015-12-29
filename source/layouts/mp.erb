@@ -38,15 +38,24 @@
           </div>
         </div>
       </div>
+      <% if content_for? :local_nav %>
+      <nav id="local-nav" role="navigation">
+        <div class="inner">
+          <ul>
+      <%= yield_content :local_nav %>
+          </ul>
+        </div>
+      </nav>
+      <% end %>
     </header>
 
     <div id="main">
-      <% if content_for? :local_nav %>
-      <nav id="local-nav">
+      <% if content_for? :group_nav %>
+      <nav id="group-nav">
         <div class="inner">
           <div class="navigation">
             <div id="local-logo"><a href="/pages/eu-group.html">De gröna i Europaparlamentet</a></div>
-            <ul><%= yield_content :local_nav %></ul>
+            <ul><%= yield_content :group_nav %></ul>
           </div>
         </div>
       </nav>

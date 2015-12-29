@@ -1326,7 +1326,50 @@ div.comments {
   margin-top: 1.875em; }
   .illustration figure > div {
     float: left;
-    width: 79.50311%; }
+    width: 79.50311%;
+    position: relative; }
+    .illustration figure > div .copyright {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      transition: background-color 0.5s;
+      padding: 0 6px;
+      border-radius: 5px 0 0 0;
+      color: #fff;
+      text-decoration: none;
+      vertical-align: middle; }
+      .illustration figure > div .copyright .ui-license {
+        background-image: url("/images/license-icons.svg");
+        background-size: 100px 210px;
+        overflow: hidden;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        vertical-align: middle; }
+      .illustration figure > div .copyright .name {
+        vertical-align: middle;
+        font-size: small;
+        font-style: italic;
+        white-space: nowrap; }
+      .illustration figure > div .copyright .cc1 {
+        background-position: left -30px;
+        width: 52px; }
+      .illustration figure > div .copyright .cc2 {
+        background-position: left -60px;
+        width: 76px; }
+      .illustration figure > div .copyright .cc3 {
+        background-position: left -90px;
+        width: 76px; }
+      .illustration figure > div .copyright .cc4 {
+        background-position: left -120px;
+        width: 76px; }
+      .illustration figure > div .copyright .cc5 {
+        background-position: left -150px;
+        width: 100px; }
+      .illustration figure > div .copyright .cc6 {
+        background-position: left -180px;
+        width: 100px; }
   .illustration figure figcaption {
     color: #888888;
     float: right;
@@ -1924,47 +1967,6 @@ header.intro .article-section {
     #site-banner .inner:after {
       clear: both; }
 
-#local-nav {
-  background-color: #f6f4e5;
-  padding: 8px 0; }
-  #local-nav .inner {
-    *zoom: 1;
-    max-width: 970px;
-    margin: 0 auto; }
-    #local-nav .inner:before, #local-nav .inner:after {
-      content: " ";
-      display: table; }
-    #local-nav .inner:after {
-      clear: both; }
-  #local-nav ul {
-    margin: 0 0 0 67px;
-    margin: 0 -160px 0 20px; }
-  #local-nav li {
-    padding: 0;
-    margin: 0;
-    margin-right: 18px;
-    list-style: none;
-    width: auto; }
-  #local-nav li a {
-    color: #2b912c; }
-  #local-nav #local-logo {
-    margin: 0 0 5px 0;
-    float: left;
-    margin: 0 0 8px -90px;
-    float: left; }
-    #local-nav #local-logo a {
-      display: block;
-      text-indent: -9999px;
-      width: 67px;
-      height: 57px;
-      background: transparent url(../images/logo-gefa.png) 0 0 no-repeat;
-      background-size: 100%;
-      margin-top: 10px;
-      width: 90px;
-      height: 73px; }
-  #local-nav a:hover, #local-nav a.active {
-    color: #bd0076; }
-
 #main {
   padding-top: 50px;
   padding-top: 76px; }
@@ -1981,7 +1983,7 @@ header.intro .article-section {
     overflow: scroll; }
 
 #site-banner .navigation,
-#local-nav .navigation {
+#group-nav .navigation {
   *zoom: 1;
   position: relative;
   padding: 0 18px;
@@ -1989,12 +1991,12 @@ header.intro .article-section {
   margin-right: 160px;
   margin-left: 135px; }
   #site-banner .navigation:before, #site-banner .navigation:after,
-  #local-nav .navigation:before,
-  #local-nav .navigation:after {
+  #group-nav .navigation:before,
+  #group-nav .navigation:after {
     content: " ";
     display: table; }
   #site-banner .navigation:after,
-  #local-nav .navigation:after {
+  #group-nav .navigation:after {
     clear: both; }
 
 #logo {
@@ -2151,7 +2153,7 @@ header.intro .article-section {
   clear: both;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 7px;
-  margin: 0 -18px 10px -18px;
+  margin: 0 -18px;
   padding-bottom: 30px;
   display: none;
   margin: 0 -160px 30px -135px;
@@ -2163,6 +2165,83 @@ header.intro .article-section {
     clear: both; }
   .open #secondary-nav {
     display: block; }
+
+#local-nav {
+  display: none;
+  clear: both;
+  padding-top: 7px;
+  background-color: #f6f4e5;
+  padding-bottom: 30px;
+  display: block;
+  padding: 7px 0 3px 0;
+  border-bottom: 1px solid rgba(43, 145, 44, 0.1); }
+  #local-nav .nav-item-primary a {
+    border-bottom: 1px solid rgba(43, 145, 44, 0.2); }
+  #local-nav ul {
+    margin: 0; }
+  #local-nav li {
+    padding: 0;
+    list-style: none; }
+  #local-nav li a {
+    color: #2b912c; }
+  #local-nav li.active a,
+  #local-nav li a:hover {
+    color: #bd0076; }
+  #local-nav ul {
+    padding: 0 18px; }
+  #local-nav .nav-item-primary a {
+    padding: 0;
+    font-size: 2em;
+    line-height: normal;
+    min-width: 155px;
+    border-bottom: 0; }
+  #local-nav .nav-item-secondary {
+    width: auto; }
+  #local-nav .nav-item-secondary a {
+    padding: 0 18px; }
+  #local-nav.open {
+    display: block; }
+
+#group-nav {
+  background-color: #f6f4e5;
+  padding: 8px 0; }
+  #group-nav .inner {
+    *zoom: 1;
+    max-width: 970px;
+    margin: 0 auto; }
+    #group-nav .inner:before, #group-nav .inner:after {
+      content: " ";
+      display: table; }
+    #group-nav .inner:after {
+      clear: both; }
+  #group-nav ul {
+    margin: 0 0 0 67px;
+    margin: 0 -160px 0 20px; }
+  #group-nav li {
+    padding: 0;
+    margin: 0;
+    margin-right: 18px;
+    list-style: none;
+    width: auto; }
+  #group-nav li a {
+    color: #2b912c; }
+  #group-nav #local-logo {
+    margin: 0 0 5px 0;
+    float: left;
+    margin: 0 0 8px -90px;
+    float: left; }
+    #group-nav #local-logo a {
+      display: block;
+      text-indent: -9999px;
+      width: 67px;
+      height: 57px;
+      background: transparent url(../images/logo-gefa.png) 0 0 no-repeat;
+      background-size: 100%;
+      margin-top: 10px;
+      width: 90px;
+      height: 73px; }
+  #group-nav a:hover, #group-nav a.active {
+    color: #bd0076; }
 
 #search {
   display: none;
