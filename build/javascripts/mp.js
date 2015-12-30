@@ -3110,8 +3110,11 @@ if (typeof define !== 'undefined' && define.amd) {
       $toggler.toggleClass("active");
       $target.toggleClass("open");
 
+/* Special rules for local menu, due to positioning outside main nav element. */
       if ($toggler.attr("href") == "#nav") {
           $("#local-nav").toggleClass("open");
+      } else {
+          $("#local-nav").removeClass("open");
       }
 
       var targetClass = openIndicationClasses([$target.attr("id")])
