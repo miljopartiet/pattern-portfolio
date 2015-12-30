@@ -14,22 +14,23 @@ $(document).ready(function() {
   $('nav[id=local-nav] a[href*=#]').each(function() {
     var thisPath = filterPath(this.pathname) || locationPath;
     if (  locationPath == thisPath
-    && (location.hostname == this.hostname || !this.hostname)
-    && this.hash.replace(/#/,'') ) {
-      var $target = $(this.hash), target = this.hash;
+    && (location.hostname == this.hostname || !this.hostname) ) {
+      var $target = $(this.hash), target = this.hash.replace(/#/,'');
       if (target) {
         var targetOffset = $target.offset().top;
-        $(this).click(function(event) {
-          event.preventDefault();
-/* Close menu if open */
-          if ( $("body").hasClass("navigation-is-open") ) {
-            $("#skip-to-navigation").trigger("click");
-          }
-          $(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
-            location.hash = target;
-          });
-        });
+      } else {
+        var targetOffset = 0;
       }
+      $(this).click(function(event) {
+        event.preventDefault();
+/* Close menu if open */
+        if ( $("body").hasClass("navigation-is-open") ) {
+          $("#skip-to-navigation").trigger("click");
+        }
+        $(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
+          location.hash = target;
+        });
+      });
     }
   });
  
