@@ -24,9 +24,9 @@
         right: 0;
         background-color: rgba(0,0,0,0.4);
         transition: background-color 0.5s;
-        padding: 0 6px;
+        padding: 1px 10px 1px 6px;
         border-radius: 5px 0 0 0;
-        color: #fff;
+        color: rgba(255,255,255,0.9);
         text-decoration: none;
         .ui-license {
           background-image: url("/images/license-icons.svg");
@@ -39,9 +39,8 @@
         }
         vertical-align: middle;
         .name { 
+          @extend %typography-text-small;
           vertical-align: middle;
-          font-size: small;
-          font-style: italic;
           white-space: nowrap;
         }
         .cc1 { background-position: left -30px; width: 52px; }

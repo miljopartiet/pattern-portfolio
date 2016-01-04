@@ -242,7 +242,7 @@ article .body p, .article-list p, .people .presentation p, .people .presentation
   font-size: 1em;
   line-height: 1.375; }
 
-small, sup, figcaption, #wrap blockquote footer p, .meta, .vignette-intro, .section-vignette-intro, .billboard-campaign-caption, .icon-list li .meta, nav.breadcrumbs p, .speech-bubble .position-me .choose, .conversation .byline p, .conversations .details, #cookies, .main-search .category {
+small, sup, figcaption, #wrap blockquote footer p, .meta, .vignette-intro, .section-vignette-intro, .billboard-campaign-caption, .icon-list li .meta, nav.breadcrumbs p, .speech-bubble .position-me .choose, .illustration figure > div .copyright .name, .conversation .byline p, .conversations .details, #cookies, .main-search .category {
   font-family: arial, sans-serif;
   font-size: 0.8125em;
   line-height: 1.23077;
@@ -1334,9 +1334,9 @@ div.comments {
       right: 0;
       background-color: rgba(0, 0, 0, 0.4);
       transition: background-color 0.5s;
-      padding: 0 6px;
+      padding: 1px 10px 1px 6px;
       border-radius: 5px 0 0 0;
-      color: #fff;
+      color: rgba(255, 255, 255, 0.9);
       text-decoration: none;
       vertical-align: middle; }
       .illustration figure > div .copyright .ui-license {
@@ -1349,8 +1349,6 @@ div.comments {
         vertical-align: middle; }
       .illustration figure > div .copyright .name {
         vertical-align: middle;
-        font-size: small;
-        font-style: italic;
         white-space: nowrap; }
       .illustration figure > div .copyright .cc1 {
         background-position: left -30px;
