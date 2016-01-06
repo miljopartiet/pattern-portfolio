@@ -1,5 +1,5 @@
 body.has-billboard {
-  #site-banner {
+  #global-nav {
     @include respond-to(768px) {
       .not-ie &,
       .lte8 & {
@@ -11,9 +11,12 @@ body.has-billboard {
       }
     }
   }
+  #site-banner.detached #global-nav {
+    background: rgba(43, 145, 4, .95);
+  }
 
   &.navigation-is-open {
-    #site-banner {
+    #global-nav {
       @include respond-to(768px) {
         background: $green;
       }

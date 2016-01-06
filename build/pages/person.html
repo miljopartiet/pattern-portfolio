@@ -48,42 +48,44 @@
 
       <div id="wrap">
     <header role="banner" id="site-banner">
-      <div class="inner">
-        <div class="navigation">
-          <div id="logo">
-            <a href="/pages/start.html">Miljöpartiet</a>
+      <div id="global-nav">
+          <div class="inner">
+            <div class="navigation">
+              <div id="logo">
+                <a href="/pages/start.html">Miljöpartiet</a>
+              </div>
+              <ul id="go-to-navigation">
+                <li><a href="#nav" id="skip-to-navigation" class="toggler">
+                  <span>Meny</span>
+                </a></li><li><a href="#search" id="skip-to-search" class="toggler">
+                  <span>Sök</span>
+                </a></li>
+              </ul>
+              <nav id="nav" role="navigation">
+                <ul id="primary-nav">
+                  <li class="nav-item-primary first leaf"><a href="/pages/topics.html"><span>Vår politik</span></a></li>
+                  <li class="nav-item-primary leaf active-trail"><a href="/pages/about.html"><span>Om oss</span></a></li>
+                  <li class="nav-item-primary leaf"><a href="#"><span>Engagera dig</span></a></li>
+                </ul>
+                <ul id="secondary-nav">
+                  <li class="nav-item-secondary leaf"><a href="#">Other languages</a></li>
+                  <li class="nav-item-secondary leaf"><a href="#">Lättläst</a></li>
+                  <li class="nav-item-secondary leaf"><a href="#">Kontakt</a></li>
+                  <li class="nav-item-secondary leaf"><a href="#">Press</a></li>
+                  <li class="nav-item-secondary leaf"><a href="#">Skolarbeten</a></li>
+                  <li class="nav-item-secondary leaf"><a href="#">Lediga jobb</a></li>
+                  <li class="nav-item-secondary leaf"><a href="#">Medlem</a></li>
+                  <li class="nav-item-secondary leaf"><a href="/pages/conversations.html">Prata politik</a></li>
+                </ul>
+              </nav>
+              <div id="search" role="search">
+                <form action="/search" method="get" class="search">
+                  <input type="text" name="searchtext" id="main-search" data-suggestions-target="#search" data-source="/data/search.json" autocomplete="off">
+                  <button type="submit" class="action">Sök</button>
+                </form>
+              </div>
+            </div>
           </div>
-          <ul id="go-to-navigation">
-            <li><a href="#nav" id="skip-to-navigation" class="toggler">
-              <span>Meny</span>
-            </a></li><li><a href="#search" id="skip-to-search" class="toggler">
-              <span>Sök</span>
-            </a></li>
-          </ul>
-          <nav id="nav" role="navigation">
-            <ul id="primary-nav">
-              <li class="nav-item-primary first leaf"><a href="/pages/topics.html"><span>Vår politik</span></a></li>
-              <li class="nav-item-primary leaf active-trail"><a href="/pages/about.html"><span>Om oss</span></a></li>
-              <li class="nav-item-primary leaf"><a href="#"><span>Engagera dig</span></a></li>
-            </ul>
-            <ul id="secondary-nav">
-              <li class="nav-item-secondary leaf"><a href="#">Other languages</a></li>
-              <li class="nav-item-secondary leaf"><a href="#">Lättläst</a></li>
-              <li class="nav-item-secondary leaf"><a href="#">Kontakt</a></li>
-              <li class="nav-item-secondary leaf"><a href="#">Press</a></li>
-              <li class="nav-item-secondary leaf"><a href="#">Skolarbeten</a></li>
-              <li class="nav-item-secondary leaf"><a href="#">Lediga jobb</a></li>
-              <li class="nav-item-secondary leaf"><a href="#">Medlem</a></li>
-              <li class="nav-item-secondary leaf"><a href="/pages/conversations.html">Prata politik</a></li>
-            </ul>
-          </nav>
-          <div id="search" role="search">
-            <form action="/search" method="get" class="search">
-              <input type="text" name="searchtext" id="main-search" data-suggestions-target="#search" data-source="/data/search.json" autocomplete="off">
-              <button type="submit" class="action">Sök</button>
-            </form>
-          </div>
-        </div>
       </div>
     </header>
 

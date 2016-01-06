@@ -1,16 +1,9 @@
 #site-banner {
-  background: $green;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 10px 0 0 0;
   z-index: 100;
-
-  @include respond-to(768px) {
-    padding: 18px 0 0 0;
-    background: rgba(43, 145, 4, .95);
-  }
 
   .navigation-is-open &,
   &.detached {
@@ -35,13 +28,8 @@
 
   &.visible {
     opacity: 1;
-    background: $green;
     @include translate(0, 0);
-    @include transition(transform .25s, background-color .35s);
-
-    @include respond-to(768px) {
-      background: rgba(43, 145, 4, .95);
-    }
+    @include transition(transform .25s);
   }
 
   .inner {
@@ -50,6 +38,25 @@
     margin: 0 auto;
     position: relative;
     z-index: 99999;
+  }
+}
+
+#global-nav {
+  background: $green;
+  padding: 10px 0 0 0;
+  @include transition(background-color .35s);
+
+  @include respond-to(768px) {
+    padding: 18px 0 0 0;
+    background: rgba(43, 145, 4, .95);
+  }
+
+  &.visible {
+    @include transition(transform .25s);
+
+    @include respond-to(768px) {
+      background: rgba(43, 145, 4, .95);
+    }
   }
 }
 
@@ -72,6 +79,7 @@
   #site-banner {
     height: 100%;
     overflow: scroll;
+    background-color: $green;
   }
 }
 
@@ -377,9 +385,10 @@ body.navigation-is-open {
   }
   
   @include respond-to(768px) {
+    background-color: rgba(246, 244, 229, .95);
     display: block;
     padding: 7px 0 3px 0;
-    border-bottom: 1px solid rgba(43, 145, 44, 0.1);
+    border-bottom: 1px solid rgba(43, 145, 44, .1);
     ul {
       padding: 0 18px;
     }

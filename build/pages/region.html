@@ -48,42 +48,44 @@
 
       <div id="wrap">
     <header role="banner" id="site-banner">
-      <div class="inner">
-        <div class="navigation">
-          <div id="logo">
-            <a href="/pages/start.html">Miljöpartiet</a>
+      <div id="global-nav">
+          <div class="inner">
+            <div class="navigation">
+              <div id="logo">
+                <a href="/pages/start.html">Miljöpartiet</a>
+              </div>
+              <ul id="go-to-navigation">
+                <li><a href="#nav" id="skip-to-navigation" class="toggler">
+                  <span>Meny</span>
+                </a></li><li><a href="#search" id="skip-to-search" class="toggler">
+                  <span>Sök</span>
+                </a></li>
+              </ul>
+              <nav id="nav" role="navigation">
+                <ul id="primary-nav">
+                  <li class="nav-item-primary first leaf"><a href="/pages/topics.html"><span>Vår politik</span></a></li>
+                  <li class="nav-item-primary leaf active-trail"><a href="/pages/about.html"><span>Om oss</span></a></li>
+                  <li class="nav-item-primary leaf"><a href="#"><span>Engagera dig</span></a></li>
+                </ul>
+                <ul id="secondary-nav">
+                  <li class="nav-item-secondary leaf"><a href="#">Other languages</a></li>
+                  <li class="nav-item-secondary leaf"><a href="#">Lättläst</a></li>
+                  <li class="nav-item-secondary leaf"><a href="#">Kontakt</a></li>
+                  <li class="nav-item-secondary leaf"><a href="#">Press</a></li>
+                  <li class="nav-item-secondary leaf"><a href="#">Skolarbeten</a></li>
+                  <li class="nav-item-secondary leaf"><a href="#">Lediga jobb</a></li>
+                  <li class="nav-item-secondary leaf"><a href="#">Medlem</a></li>
+                  <li class="nav-item-secondary leaf"><a href="/pages/conversations.html">Prata politik</a></li>
+                </ul>
+              </nav>
+              <div id="search" role="search">
+                <form action="/search" method="get" class="search">
+                  <input type="text" name="searchtext" id="main-search" data-suggestions-target="#search" data-source="/data/search.json" autocomplete="off">
+                  <button type="submit" class="action">Sök</button>
+                </form>
+              </div>
+            </div>
           </div>
-          <ul id="go-to-navigation">
-            <li><a href="#nav" id="skip-to-navigation" class="toggler">
-              <span>Meny</span>
-            </a></li><li><a href="#search" id="skip-to-search" class="toggler">
-              <span>Sök</span>
-            </a></li>
-          </ul>
-          <nav id="nav" role="navigation">
-            <ul id="primary-nav">
-              <li class="nav-item-primary first leaf"><a href="/pages/topics.html"><span>Vår politik</span></a></li>
-              <li class="nav-item-primary leaf active-trail"><a href="/pages/about.html"><span>Om oss</span></a></li>
-              <li class="nav-item-primary leaf"><a href="#"><span>Engagera dig</span></a></li>
-            </ul>
-            <ul id="secondary-nav">
-              <li class="nav-item-secondary leaf"><a href="#">Other languages</a></li>
-              <li class="nav-item-secondary leaf"><a href="#">Lättläst</a></li>
-              <li class="nav-item-secondary leaf"><a href="#">Kontakt</a></li>
-              <li class="nav-item-secondary leaf"><a href="#">Press</a></li>
-              <li class="nav-item-secondary leaf"><a href="#">Skolarbeten</a></li>
-              <li class="nav-item-secondary leaf"><a href="#">Lediga jobb</a></li>
-              <li class="nav-item-secondary leaf"><a href="#">Medlem</a></li>
-              <li class="nav-item-secondary leaf"><a href="/pages/conversations.html">Prata politik</a></li>
-            </ul>
-          </nav>
-          <div id="search" role="search">
-            <form action="/search" method="get" class="search">
-              <input type="text" name="searchtext" id="main-search" data-suggestions-target="#search" data-source="/data/search.json" autocomplete="off">
-              <button type="submit" class="action">Sök</button>
-            </form>
-          </div>
-        </div>
       </div>
       <nav id="local-nav" role="navigation">
         <div class="inner">
@@ -460,9 +462,7 @@
             <span class="label">A</span>
             <ol class="list">
               <li>
-                <a href="#">Antidiskriminering</a>
-              </li><li>
-                <a href="#">Arbetslivstrygghet</a>
+                <a href="#">Arbetsmarknad</a>
               </li><li>
                 <a href="#">Arbetsrätt</a>
               </li><li>
@@ -474,11 +474,9 @@
             <span class="label">B</span>
             <ol class="list">
               <li>
-                <a href="#">Barn och ungdom</a>
-              </li><li>
                 <a href="#">Bensinpris</a>
               </li><li>
-                <a href="#">Betyg</a>
+                <a href="#">Boinflytande</a>
               </li>
             </ol>
           </li>
@@ -486,8 +484,6 @@
             <span class="label">C</span>
             <ol class="list">
               <li>
-                <a href="#">Civil olydnad</a>
-              </li><li>
                 <a href="#">Cykel</a>
               </li>
             </ol>
@@ -498,9 +494,11 @@
               <li>
                 <a href="#">Deltagande demokrati</a>
               </li><li>
-                <a href="#">Djurcirkus</a>
+                <a href="#">Demokrati</a>
               </li><li>
-                <a href="#">Djurförsök</a>
+                <a href="#">Djur i lantbruket</a>
+              </li><li>
+                <a href="#">Djurrätt</a>
               </li>
             </ol>
           </li>
@@ -508,15 +506,19 @@
             <span class="label">E</span>
             <ol class="list">
               <li>
-                <a href="#">E-Demokrati</a>
+                <a href="#">EU</a>
+              </li><li>
+                <a href="#">EU och demokratin</a>
+              </li><li>
+                <a href="#">EU och fiskepolitiken</a>
               </li><li>
                 <a href="#">EU och jordbrukspolitiken</a>
               </li><li>
-                <a href="#">EU och utvidgningen</a>
+                <a href="#">EU och miljön</a>
               </li><li>
-                <a href="#">EU:s utrikes- och säkerhetspolitik</a>
+                <a href="#">Energi</a>
               </li><li>
-                <a href="#">Ekologiskt lantbruk</a>
+                <a href="#">Euron</a>
               </li>
             </ol>
           </li>
