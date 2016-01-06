@@ -1,24 +1,26 @@
 <% wrap_layout :layout do %>
   <div id="wrap">
     <header role="banner" id="site-banner">
-      <div class="inner">
-        <div class="navigation">
-          <div id="logo">
-            <a href="/">Miljöpartiet</a>
+      <div id="global-nav">
+          <div class="inner">
+            <div class="navigation">
+              <div id="logo">
+                <a href="/">Miljöpartiet</a>
+              </div>
+              <ul id="go-to-navigation">
+                <li><a href="#nav" id="skip-to-navigation" class="toggler">
+                  <span>Meny</span>
+                </a></li>
+              </ul>
+              <nav id="nav" role="navigation">
+                <ul id="primary-nav">
+                  <li class="nav-item-primary first leaf<%= ' active-trail' if data.page.current_nav == 'basics' %>"><a href="/basics.html"><span>Basics</span></a></li>
+                  <li class="nav-item-primary first leaf<%= ' active-trail' if data.page.current_nav == 'components' %>"><a href="/components.html"><span>Pattern Library</span></a></li>
+                  <li class="nav-item-primary first leaf<%= ' active-trail' if data.page.current_nav == 'pages' %>"><a href="/pages/index.html"><span>Pages</span></a></li>
+                </ul>
+              </nav>
+            </div>
           </div>
-          <ul id="go-to-navigation">
-            <li><a href="#nav" id="skip-to-navigation" class="toggler">
-              <span>Meny</span>
-            </a></li>
-          </ul>
-          <nav id="nav" role="navigation">
-            <ul id="primary-nav">
-              <li class="nav-item-primary first leaf<%= ' active-trail' if data.page.current_nav == 'basics' %>"><a href="/basics.html"><span>Basics</span></a></li>
-              <li class="nav-item-primary first leaf<%= ' active-trail' if data.page.current_nav == 'components' %>"><a href="/components.html"><span>Pattern Library</span></a></li>
-              <li class="nav-item-primary first leaf<%= ' active-trail' if data.page.current_nav == 'pages' %>"><a href="/pages/index.html"><span>Pages</span></a></li>
-            </ul>
-          </nav>
-        </div>
       </div>
     </header>
 
