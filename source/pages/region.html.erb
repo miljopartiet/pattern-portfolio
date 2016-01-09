@@ -3,6 +3,7 @@ current_nav: about
 title: Jämtland
 url: http://www.mp.se/jamtland
 layout: mp
+body_class: "has-local-nav"
 ---
 <% content_for :breadcrumbs do %>
   <a href="/pages/start.html">Hem</a>
@@ -10,7 +11,7 @@ layout: mp
 <% end %>
 <% content_for :local_nav do %>
               <li class="nav-item-primary leaf active"><a href="/pages/region.html#wrap">Jämtland</a></li>
-              <li class="nav-item-secondary leaf"><a href="#news">Just nu</a></li>
+              <li class="nav-item-secondary leaf"><a href="#contact">Kontakt</a></li>
               <li class="nav-item-secondary leaf"><a href="#people">våra politiker</a></li>
               <li class="nav-item-secondary leaf"><a href="#topics">Vår politik</a></li>
 <% end %>
@@ -63,7 +64,7 @@ layout: mp
     </div>
   </article>
 
-  <div class="speech-bubble">
+  <div class="speech-bubble" id="contact">
     <div class="inner">
       <div class="vcard">
         <div class="org">

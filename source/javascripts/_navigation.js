@@ -11,7 +11,7 @@ $(document).ready(function() {
   var scrollElem = scrollableElement('html', 'body');
  
 /* Only for local-nav */
-  $('nav[id=local-nav] a[href*=#]').each(function() {
+  $('nav[id=local-nav] li a[href*=#]').each(function() {
     var thisPath = filterPath(this.pathname) || locationPath;
     if (  locationPath == thisPath
     && (location.hostname == this.hostname || !this.hostname) ) {
@@ -24,9 +24,8 @@ $(document).ready(function() {
       $(this).click(function(event) {
         event.preventDefault();
 /* Close menu if open */
-        if ( $("body").hasClass("navigation-is-open") ) {
-          $("#skip-to-navigation").trigger("click");
-        }
+        $("#local-nav.open a.toggler").trigger("click");
+
         $(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
           location.hash = target;
         });
@@ -145,15 +144,11 @@ $(document).ready(function() {
       $toggler.toggleClass("active");
       $target.toggleClass("open");
 
-/* Special rules for local menu, due to positioning outside main nav element. */
-      if ($toggler.attr("href") == "#nav") {
-          $("#local-nav").toggleClass("open");
-      } else {
-          $("#local-nav").removeClass("open");
-      }
-
       var targetClass = openIndicationClasses([$target.attr("id")])
-      targetClass.push("navigation-is-open");
+// No takeover for local menu.
+      if ($toggler.attr("href") !== "#local-nav") {
+        targetClass.push("navigation-is-open");
+      }
 
 
       if ($target.hasClass("open")) {

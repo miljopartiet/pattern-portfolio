@@ -2355,8 +2355,9 @@ header.intro .article-section {
   transition: background-color 0.35s; }
   @media screen and (min-width: 768px) {
     #global-nav {
-      padding: 18px 0 0 0;
-      background: rgba(43, 145, 4, 0.95); } }
+      background: rgba(43, 145, 4, 0.95); }
+      body:not(.has-local-nav) #global-nav {
+        padding: 18px 0 0 0; } }
   #global-nav.visible {
     -webkit-transition: -webkit-transform 0.25s;
     -moz-transition: -moz-transform 0.25s;
@@ -2412,7 +2413,7 @@ header.intro .article-section {
   #group-nav .navigation:after {
     clear: both; }
   @media screen and (min-width: 768px) {
-    #site-banner .navigation,
+    body:not(.has-local-nav) #site-banner .navigation, body:not(.has-local-nav)
     #group-nav .navigation {
       margin-right: 160px;
       margin-left: 135px; } }
@@ -2421,7 +2422,7 @@ header.intro .article-section {
   float: left;
   margin-bottom: 10px; }
   @media screen and (min-width: 768px) {
-    #logo {
+    body:not(.has-local-nav) #logo {
       margin: 0 0 18px -135px; } }
   #logo a {
     display: block;
@@ -2431,7 +2432,7 @@ header.intro .article-section {
     background: transparent url(../images/logo-side.svg) 0 0 no-repeat;
     background-size: 100%; }
     @media screen and (min-width: 768px) {
-      #logo a {
+      body:not(.has-local-nav) #logo a {
         width: 135px;
         height: 40px; } }
 
@@ -2445,7 +2446,7 @@ header.intro .article-section {
   #go-to-navigation:after {
     clear: both; }
   @media screen and (min-width: 768px) {
-    #go-to-navigation {
+    body:not(.has-local-nav) #go-to-navigation {
       width: 170px;
       margin-right: -160px;
       margin-bottom: 18px; } }
@@ -2466,7 +2467,7 @@ header.intro .article-section {
     text-decoration: none;
     padding: 0 12px; }
     @media screen and (min-width: 768px) {
-      #go-to-navigation a {
+      body:not(.has-local-nav) #go-to-navigation a {
         margin-top: 5px; } }
     li:first-child #go-to-navigation a {
       margin-left: 0; }
@@ -2501,14 +2502,15 @@ header.intro .article-section {
   @media screen and (min-width: 768px) {
     #nav {
       *zoom: 1;
-      padding: 0;
-      clear: none; }
+      padding: 0; }
       #nav:before, #nav:after {
         content: " ";
         display: table; }
       #nav:after {
         clear: both; }
-      .navigation #nav {
+      body:not(.has-local-nav) #nav {
+        clear: none; }
+      body:not(.has-local-nav) .navigation #nav {
         display: block; } }
   #nav li {
     padding: 0;
@@ -2543,13 +2545,13 @@ header.intro .article-section {
       .nav-item-primary a {
         float: left;
         border: none;
-        padding: 0 14px 0 14px;
+        padding: 0 14px;
         font-size: 2.125em;
         line-height: 40px; } }
     @media screen and (min-width: 1024px) {
       .nav-item-primary a {
         font-size: 2.375em;
-        padding: 0 18px 0 18px; } }
+        padding: 0 18px; } }
   .nav-item-primary.active-trail a {
     color: #ffe900; }
   .nav-item-primary:first-child a {
@@ -2584,12 +2586,29 @@ header.intro .article-section {
   border-top: 1px solid rgba(255, 255, 255, 0.2); }
   @media screen and (min-width: 768px) {
     #primary-nav {
-      border: none;
       margin-left: 0;
       margin-right: 0;
-      margin-bottom: 18px; } }
+      margin-bottom: 18px; }
+      body:not(.has-local-nav) #primary-nav {
+        border: none; }
+      body.has-local-nav #primary-nav {
+        padding-top: 14px;
+        padding-bottom: 10px;
+        margin-bottom: 0;
+        *zoom: 1; }
+        body.has-local-nav #primary-nav:before, body.has-local-nav #primary-nav:after {
+          content: " ";
+          display: table; }
+        body.has-local-nav #primary-nav:after {
+          clear: both; }
+        body.has-local-nav #primary-nav a {
+          padding: 0 18px;
+          margin-right: 20px; } }
+      @media screen and (min-width: 768px) and (min-width: 768px) {
+        body.has-local-nav #primary-nav {
+          margin: 0 -18px; } }
   @media screen and (min-width: 868px) {
-    #primary-nav {
+    body:not(.has-local-nav) #primary-nav {
       margin-left: 20px; } }
 
 #secondary-nav {
@@ -2606,30 +2625,46 @@ header.intro .article-section {
     clear: both; }
   @media screen and (min-width: 768px) {
     #secondary-nav {
-      display: none;
-      margin: 0 -160px 30px -135px;
-      padding: 0; }
+      display: none; }
+      body:not(.has-local-nav) #secondary-nav {
+        margin: 0 -160px 30px -135px;
+        padding: 0; }
       .open #secondary-nav {
         display: block; } }
 
 #local-nav {
-  display: none;
   clear: both;
-  padding-top: 7px;
-  background-color: #f6f4e5;
-  padding-bottom: 30px; }
+  background-color: #f6f4e5; }
+  body.navigation-is-open #local-nav {
+    display: none; }
   #local-nav .nav-item-primary a {
-    border-bottom: 1px solid rgba(43, 145, 44, 0.2); }
+    border-bottom: 1px solid rgba(43, 145, 44, 0.2);
+    padding-top: 8px;
+    padding-bottom: 3px;
+    color: #bd0076; }
+    #local-nav .nav-item-primary a:hover, #local-nav .nav-item-primary a.active {
+      color: #a60067; }
+  #local-nav .nav-item-secondary {
+    display: none;
+    float: none;
+    width: 100%; }
+    #local-nav .nav-item-secondary a {
+      color: #2b912c; }
+      #local-nav .nav-item-secondary a:hover, #local-nav .nav-item-secondary a.active {
+        color: #00730a; }
+  #local-nav.open {
+    border-bottom: 1px solid rgba(43, 145, 44, 0.2);
+    padding-bottom: 18px; }
+    #local-nav.open .nav-item-secondary {
+      display: list-item; }
+    @media screen and (min-width: 768px) {
+      #local-nav.open {
+        padding-bottom: 3px; } }
   #local-nav ul {
     margin: 0; }
   #local-nav li {
     padding: 0;
     list-style: none; }
-  #local-nav li a {
-    color: #2b912c; }
-  #local-nav li.active a,
-  #local-nav li a:hover {
-    color: #bd0076; }
   @media screen and (min-width: 768px) {
     #local-nav {
       background-color: rgba(246, 244, 229, 0.95);
@@ -2642,14 +2677,47 @@ header.intro .article-section {
         padding: 0;
         font-size: 2em;
         line-height: normal;
-        min-width: 155px;
+        min-width: 135px;
         border-bottom: 0; }
       #local-nav .nav-item-secondary {
-        width: auto; }
-      #local-nav .nav-item-secondary a {
-        padding: 0 18px; } }
-  #local-nav.open {
-    display: block; }
+        width: auto;
+        display: inline;
+        float: left; }
+        #local-nav .nav-item-secondary a {
+          padding: 0 18px; }
+      #local-nav .toggler {
+        display: none; } }
+  @media screen and (min-width: 868px) {
+    #local-nav .nav-item-primary a {
+      min-width: 155px; } }
+  #local-nav .toggler {
+    float: right;
+    font-family: "MP Sans", arial, sans-serif;
+    font-weight: normal;
+    font-size: 1.375em;
+    line-height: 30px;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+    padding: 0 12px;
+    margin: 5px 8px; }
+    #local-nav .toggler:after {
+      content: '';
+      background-image: url("../images/rotation-pointer.png");
+      background-size: 12px 12px;
+      background-repeat: no-repeat;
+      background-position: 0px 0px;
+      width: 12px;
+      height: 13px;
+      display: inline-block;
+      margin-left: 4px;
+      -webkit-transition: -webkit-transform 0.25s;
+      -moz-transition: -moz-transform 0.25s;
+      -o-transition: -o-transform 0.25s;
+      transition: transform 0.25s; }
+    .no-svg #local-nav .toggler:after {
+      background-image: url("../images/rotation-pointer.svg"); }
+    #local-nav .toggler.active:after {
+      transform: rotate(180deg); }
 
 #group-nav {
   background-color: #f6f4e5;
@@ -2705,7 +2773,7 @@ header.intro .article-section {
   padding: 18px 18px 18px 18px;
   border-top: 1px solid rgba(255, 255, 255, 0.2); }
   @media screen and (min-width: 768px) {
-    #search {
+    body:not(.has-local-nav) #search {
       margin: 0 -160px 18px -135px; } }
   #search.open {
     display: block; }
@@ -2770,6 +2838,12 @@ header.intro .article-section {
   .main-search .focused a {
     color: #ffe900;
     background: #00730a; }
+
+body.has-local-nav #main {
+  padding-top: 100px; }
+  @media screen and (min-width: 768px) {
+    body.has-local-nav #main {
+      padding-top: 80px; } }
 
 #site-footer {
   padding-top: 1.25em; }

@@ -3,16 +3,18 @@ current_nav: about
 title: Miljöpartiet i EU-parlamentet
 url: http://www.mp.se/eu
 layout: mp
+body_class: "has-local-nav"
 ---
 <% content_for :breadcrumbs do %>
   <a href="/pages/start.html">Hem</a>
   <a href="/pages/eu-group.html" class="last">Miljöpartiet i EU-parlamentet</a>
 <% end %>
-<% content_for :group_nav do %>
-              <li class="nav-item-secondary leaf"><a href="#" class="active">EU-politik</a></li>
-              <li class="nav-item-secondary leaf"><a href="#news">Senaste nytt</a></li>
-              <li class="nav-item-secondary leaf"><a href="#people">Politiker</a></li>
-              <li class="nav-item-secondary leaf"><a href="/pages/group.html">Personal</a></li>
+<% content_for :local_nav do %>
+              <li class="nav-item-primary leaf"><a href="#wrap">EU-parlamentet</a></li>
+              <li class="nav-item-secondary leaf"><a href="#news">Nyheter</a></li>
+              <li class="nav-item-secondary leaf"><a href="#people">Våra politiker</a></li>
+              <li class="nav-item-secondary leaf"><a href="#">Vår EU-politik</a></li>
+              <li class="nav-item-secondary leaf"><a href="/pages/group.html">Kontakt</a></li>
 <% end %>
 <div class="main-section">
   <article>

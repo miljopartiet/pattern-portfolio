@@ -1968,8 +1968,9 @@ header.intro .article-section {
   -moz-transition: background-color 0.35s;
   -o-transition: background-color 0.35s;
   transition: background-color 0.35s;
-  padding: 18px 0 0 0;
   background: rgba(43, 145, 4, 0.95); }
+  body:not(.has-local-nav) #global-nav {
+    padding: 18px 0 0 0; }
   #global-nav.visible {
     -webkit-transition: -webkit-transform 0.25s;
     -moz-transition: -moz-transform 0.25s;
@@ -1998,9 +1999,7 @@ header.intro .article-section {
   *zoom: 1;
   position: relative;
   padding: 0 18px;
-  z-index: 500;
-  margin-right: 160px;
-  margin-left: 135px; }
+  z-index: 500; }
   #site-banner .navigation:before, #site-banner .navigation:after,
   #group-nav .navigation:before,
   #group-nav .navigation:after {
@@ -2009,33 +2008,40 @@ header.intro .article-section {
   #site-banner .navigation:after,
   #group-nav .navigation:after {
     clear: both; }
+  body:not(.has-local-nav) #site-banner .navigation, body:not(.has-local-nav)
+  #group-nav .navigation {
+    margin-right: 160px;
+    margin-left: 135px; }
 
 #logo {
   float: left;
-  margin-bottom: 10px;
-  margin: 0 0 18px -135px; }
+  margin-bottom: 10px; }
+  body:not(.has-local-nav) #logo {
+    margin: 0 0 18px -135px; }
   #logo a {
     display: block;
     text-indent: -9999px;
     width: 101px;
     height: 30px;
     background: transparent url(../images/logo-side.svg) 0 0 no-repeat;
-    background-size: 100%;
-    width: 135px;
-    height: 40px; }
+    background-size: 100%; }
+    body:not(.has-local-nav) #logo a {
+      width: 135px;
+      height: 40px; }
 
 #go-to-navigation {
   *zoom: 1;
   float: right;
-  margin: 0 -10px 10px 0;
-  width: 170px;
-  margin-right: -160px;
-  margin-bottom: 18px; }
+  margin: 0 -10px 10px 0; }
   #go-to-navigation:before, #go-to-navigation:after {
     content: " ";
     display: table; }
   #go-to-navigation:after {
     clear: both; }
+  body:not(.has-local-nav) #go-to-navigation {
+    width: 170px;
+    margin-right: -160px;
+    margin-bottom: 18px; }
   #go-to-navigation li {
     margin: 0;
     padding: 0;
@@ -2051,8 +2057,9 @@ header.intro .article-section {
     line-height: 30px;
     -webkit-font-smoothing: antialiased;
     text-decoration: none;
-    padding: 0 12px;
-    margin-top: 5px; }
+    padding: 0 12px; }
+    body:not(.has-local-nav) #go-to-navigation a {
+      margin-top: 5px; }
     li:first-child #go-to-navigation a {
       margin-left: 0; }
     #go-to-navigation a.active {
@@ -2082,8 +2089,7 @@ header.intro .article-section {
   padding: 0;
   display: none;
   *zoom: 1;
-  padding: 0;
-  clear: none; }
+  padding: 0; }
   #nav.open {
     display: block; }
   #nav:before, #nav:after {
@@ -2091,7 +2097,9 @@ header.intro .article-section {
     display: table; }
   #nav:after {
     clear: both; }
-  .navigation #nav {
+  body:not(.has-local-nav) #nav {
+    clear: none; }
+  body:not(.has-local-nav) .navigation #nav {
     display: block; }
   #nav li {
     padding: 0;
@@ -2122,11 +2130,11 @@ header.intro .article-section {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     float: left;
     border: none;
-    padding: 0 14px 0 14px;
+    padding: 0 14px;
     font-size: 2.125em;
     line-height: 40px;
     font-size: 2.375em;
-    padding: 0 18px 0 18px; }
+    padding: 0 18px; }
   .nav-item-primary.active-trail a {
     color: #ffe900; }
   .nav-item-primary:first-child a {
@@ -2153,11 +2161,27 @@ header.intro .article-section {
 #primary-nav {
   margin: 0 -18px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  border: none;
   margin-left: 0;
   margin-right: 0;
-  margin-bottom: 18px;
-  margin-left: 20px; }
+  margin-bottom: 18px; }
+  body:not(.has-local-nav) #primary-nav {
+    border: none; }
+  body.has-local-nav #primary-nav {
+    padding-top: 14px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    *zoom: 1;
+    margin: 0 -18px; }
+    body.has-local-nav #primary-nav:before, body.has-local-nav #primary-nav:after {
+      content: " ";
+      display: table; }
+    body.has-local-nav #primary-nav:after {
+      clear: both; }
+    body.has-local-nav #primary-nav a {
+      padding: 0 18px;
+      margin-right: 20px; }
+  body:not(.has-local-nav) #primary-nav {
+    margin-left: 20px; }
 
 #secondary-nav {
   *zoom: 1;
@@ -2166,53 +2190,99 @@ header.intro .article-section {
   padding-top: 7px;
   margin: 0 -18px;
   padding-bottom: 30px;
-  display: none;
-  margin: 0 -160px 30px -135px;
-  padding: 0; }
+  display: none; }
   #secondary-nav:before, #secondary-nav:after {
     content: " ";
     display: table; }
   #secondary-nav:after {
     clear: both; }
+  body:not(.has-local-nav) #secondary-nav {
+    margin: 0 -160px 30px -135px;
+    padding: 0; }
   .open #secondary-nav {
     display: block; }
 
 #local-nav {
-  display: none;
   clear: both;
-  padding-top: 7px;
   background-color: #f6f4e5;
-  padding-bottom: 30px;
   background-color: rgba(246, 244, 229, 0.95);
   display: block;
   padding: 7px 0 3px 0;
   border-bottom: 1px solid rgba(43, 145, 44, 0.1); }
+  body.navigation-is-open #local-nav {
+    display: none; }
   #local-nav .nav-item-primary a {
-    border-bottom: 1px solid rgba(43, 145, 44, 0.2); }
+    border-bottom: 1px solid rgba(43, 145, 44, 0.2);
+    padding-top: 8px;
+    padding-bottom: 3px;
+    color: #bd0076; }
+    #local-nav .nav-item-primary a:hover, #local-nav .nav-item-primary a.active {
+      color: #a60067; }
+  #local-nav .nav-item-secondary {
+    display: none;
+    float: none;
+    width: 100%; }
+    #local-nav .nav-item-secondary a {
+      color: #2b912c; }
+      #local-nav .nav-item-secondary a:hover, #local-nav .nav-item-secondary a.active {
+        color: #00730a; }
+  #local-nav.open {
+    border-bottom: 1px solid rgba(43, 145, 44, 0.2);
+    padding-bottom: 18px;
+    padding-bottom: 3px; }
+    #local-nav.open .nav-item-secondary {
+      display: list-item; }
   #local-nav ul {
     margin: 0; }
   #local-nav li {
     padding: 0;
     list-style: none; }
-  #local-nav li a {
-    color: #2b912c; }
-  #local-nav li.active a,
-  #local-nav li a:hover {
-    color: #bd0076; }
   #local-nav ul {
     padding: 0 18px; }
   #local-nav .nav-item-primary a {
     padding: 0;
     font-size: 2em;
     line-height: normal;
-    min-width: 155px;
+    min-width: 135px;
     border-bottom: 0; }
   #local-nav .nav-item-secondary {
-    width: auto; }
-  #local-nav .nav-item-secondary a {
-    padding: 0 18px; }
-  #local-nav.open {
-    display: block; }
+    width: auto;
+    display: inline;
+    float: left; }
+    #local-nav .nav-item-secondary a {
+      padding: 0 18px; }
+  #local-nav .toggler {
+    display: none; }
+  #local-nav .nav-item-primary a {
+    min-width: 155px; }
+  #local-nav .toggler {
+    float: right;
+    font-family: "MP Sans", arial, sans-serif;
+    font-weight: normal;
+    font-size: 1.375em;
+    line-height: 30px;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+    padding: 0 12px;
+    margin: 5px 8px; }
+    #local-nav .toggler:after {
+      content: '';
+      background-image: url("../images/rotation-pointer.png");
+      background-size: 12px 12px;
+      background-repeat: no-repeat;
+      background-position: 0px 0px;
+      width: 12px;
+      height: 13px;
+      display: inline-block;
+      margin-left: 4px;
+      -webkit-transition: -webkit-transform 0.25s;
+      -moz-transition: -moz-transform 0.25s;
+      -o-transition: -o-transform 0.25s;
+      transition: transform 0.25s; }
+    .no-svg #local-nav .toggler:after {
+      background-image: url("../images/rotation-pointer.svg"); }
+    #local-nav .toggler.active:after {
+      transform: rotate(180deg); }
 
 #group-nav {
   background-color: #f6f4e5;
@@ -2260,8 +2330,9 @@ header.intro .article-section {
   clear: both;
   margin: 0 -18px;
   padding: 18px 18px 18px 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  margin: 0 -160px 18px -135px; }
+  border-top: 1px solid rgba(255, 255, 255, 0.2); }
+  body:not(.has-local-nav) #search {
+    margin: 0 -160px 18px -135px; }
   #search.open {
     display: block; }
   #search form {
@@ -2325,6 +2396,10 @@ header.intro .article-section {
   .main-search .focused a {
     color: #ffe900;
     background: #00730a; }
+
+body.has-local-nav #main {
+  padding-top: 100px;
+  padding-top: 80px; }
 
 #site-footer {
   padding-top: 1.25em; }

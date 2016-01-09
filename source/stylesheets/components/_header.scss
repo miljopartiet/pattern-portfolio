@@ -47,7 +47,9 @@
   @include transition(background-color .35s);
 
   @include respond-to(768px) {
-    padding: 18px 0 0 0;
+    body:not(.has-local-nav) & {
+      padding: 18px 0 0 0;
+    }
     background: rgba(43, 145, 4, .95);
   }
 
@@ -103,9 +105,11 @@ body.navigation-is-open {
   z-index: 500;
 
   @include respond-to(768px) {
-    // Mirror the widths of logo and go to navigation
-    margin-right: 160px;
-    margin-left: 135px;
+    body:not(.has-local-nav) & {
+      // Mirror the widths of logo and go to navigation
+      margin-right: 160px;
+      margin-left: 135px;
+    }
   }
 
   @include respond-to(1024px) {
@@ -118,7 +122,9 @@ body.navigation-is-open {
   margin-bottom: 10px;
 
   @include respond-to(768px) {
-    margin: 0 0 18px -135px;
+    body:not(.has-local-nav) & {
+      margin: 0 0 18px -135px;
+    }
   }
 
   a {
@@ -130,8 +136,10 @@ body.navigation-is-open {
     background-size: 100%;
 
     @include respond-to(768px) {
-      width: 135px;
-      height: 40px;
+      body:not(.has-local-nav) & {
+        width: 135px;
+        height: 40px;
+      }
     }
   }
 }
@@ -142,9 +150,11 @@ body.navigation-is-open {
   margin: 0 -10px 10px 0;
 
   @include respond-to(768px) {
-    width: 170px;
-    margin-right: -160px;
-    margin-bottom: 18px;
+    body:not(.has-local-nav) & {
+      width: 170px;
+      margin-right: -160px;
+      margin-bottom: 18px;
+    }
   }
 
   li {
@@ -167,7 +177,9 @@ body.navigation-is-open {
     padding: 0 12px;
 
     @include respond-to(768px) {
-      margin-top: 5px;
+      body:not(.has-local-nav) & {
+        margin-top: 5px;
+      }
     }
 
     li:first-child & {
@@ -220,8 +232,10 @@ body.navigation-is-open {
   @include respond-to(768px) {
     @include clearfix;
     padding: 0;
-    clear: none;
-    .navigation & {
+    body:not(.has-local-nav) & {
+      clear: none;
+    }
+    body:not(.has-local-nav) .navigation & {
       display: block;
     }
   }
@@ -268,8 +282,7 @@ body.navigation-is-open {
     @include respond-to(768px) {
       float: left;
       border: none;
-      padding: 0 14px 0 14px;
-
+      padding: 0 14px;
 
       font-size: (34em/16);
       line-height: 40px;
@@ -277,7 +290,7 @@ body.navigation-is-open {
 
     @include respond-to(1024px) {
       font-size: (38em/16);
-      padding: 0 18px 0 18px;
+      padding: 0 18px;
     }
   }
 
@@ -328,14 +341,31 @@ body.navigation-is-open {
   border-top: 1px solid rgba(255, 255, 255, .2);
 
   @include respond-to(768px) {
-    border: none;
+    body:not(.has-local-nav) & {
+      border: none;
+    }
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 18px;
+    body.has-local-nav & {
+      padding-top: 14px;
+      padding-bottom: 10px;
+      margin-bottom: 0;
+      @include clearfix;
+      a {
+        padding: 0 18px;
+        margin-right: 20px;
+      }
+      @include respond-to(768px) {
+        margin: 0 -18px;
+      }
+    }
   }
 
   @include respond-to(868px) {
-    margin-left: 20px;
+    body:not(.has-local-nav) & {
+      margin-left: 20px;
+    }
   }
 }
 
@@ -349,9 +379,11 @@ body.navigation-is-open {
 
   @include respond-to(768px) {
     display: none;
-    // Mirror got nav and logo offsets
-    margin: 0 -160px 30px -135px;
-    padding: 0;
+    body:not(.has-local-nav) & {
+      // Mirror got nav and logo offsets
+      margin: 0 -160px 30px -135px;
+      padding: 0;
+    }
 
     .open & {
       display: block;
@@ -360,14 +392,44 @@ body.navigation-is-open {
 }
 
 #local-nav {
-  display: none;
   clear: both;
-  padding-top: 7px;
   background-color: $cream;
-  padding-bottom: 30px;
+
+  body.navigation-is-open & {
+    display: none;
+  }
 
   .nav-item-primary a {
     border-bottom: 1px solid rgba(43, 145, 44, 0.2);
+    padding-top: 8px;
+    padding-bottom: 3px;
+    color: $magenta;
+    &:hover,
+    &.active {
+      color: $magenta-dark;
+    }
+  }
+  .nav-item-secondary {
+    display: none;
+    float: none;
+    width: 100%;
+    a {
+      color: $green;
+      &:hover,
+      &.active {
+        color: $green-dark;
+      }
+    }
+  }
+  &.open {
+    .nav-item-secondary {
+      display: list-item;
+    }
+    border-bottom: 1px solid rgba(43, 145, 44, 0.2);
+    padding-bottom: 18px;
+    @include respond-to(768px) {
+      padding-bottom: 3px;
+    }
   }
   ul {
     margin: 0;
@@ -375,13 +437,6 @@ body.navigation-is-open {
   li {
     padding: 0;
     list-style: none;
-  }
-  li a {
-    color: $green;
-  }
-  li.active a,
-  li a:hover {
-    color: $magenta;
   }
   
   @include respond-to(768px) {
@@ -396,18 +451,54 @@ body.navigation-is-open {
       padding: 0;
       font-size: 2em;
       line-height: normal;
-      min-width: 155px;
+      min-width: 135px;
       border-bottom: 0;
     }
     .nav-item-secondary {
       width: auto;
+      display: inline;
+      float: left;
+      a {
+        padding: 0 18px;
+      }
     }
-    .nav-item-secondary a {
-      padding: 0 18px;
+    .toggler {
+      display: none;
     }
   }
-  &.open {
-    display: block;
+  @include respond-to(868px) {
+    .nav-item-primary a {
+      min-width: 155px;
+    }
+  }
+  .toggler {
+    float: right;
+    font-family: $mp-sans;
+    font-weight: normal;
+    font-size: (22em/16);
+    line-height: 30px;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+    padding: 0 12px;
+    margin: 5px 8px;
+    &:after {
+      content: '';
+      background-image: url("../images/rotation-pointer.png");
+      background-size: 12px 12px;
+      background-repeat: no-repeat;
+      background-position: 0px 0px;
+      width: 12px;
+      height: 13px;
+      display: inline-block;
+      margin-left: 4px;
+      @include transition(transform 0.25s);
+    }
+    .no-svg &:after {
+      background-image: url("../images/rotation-pointer.svg");
+    }
+    &.active:after {
+      transform: rotate(180deg);
+    }
   }
 }
 
@@ -475,7 +566,9 @@ body.navigation-is-open {
   border-top: 1px solid rgba(255, 255, 255, .2);
 
   @include respond-to(768px) {
-    margin: 0 -160px 18px -135px;
+    body:not(.has-local-nav) & {
+      margin: 0 -160px 18px -135px;
+    }
   }
 
   &.open {
@@ -558,5 +651,12 @@ body.navigation-is-open {
   .focused a {
     color: $yellow;
     background: $green-dark;
+  }
+}
+
+body.has-local-nav #main {
+  padding-top: 100px; 
+  @include respond-to(768px) {
+    padding-top: 80px; 
   }
 }
