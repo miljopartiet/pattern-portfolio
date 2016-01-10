@@ -2209,52 +2209,45 @@ header.intro .article-section {
   display: block;
   padding: 7px 0 3px 0;
   border-bottom: 1px solid rgba(43, 145, 44, 0.1); }
+  #local-nav.open {
+    border-bottom: 1px solid rgba(43, 145, 44, 0.2);
+    padding-bottom: 18px; }
+    #local-nav.open .nav-item-secondary {
+      display: list-item; }
   body.navigation-is-open #local-nav {
     display: none; }
+  #local-nav ul {
+    margin: 0;
+    padding: 0 18px; }
+  #local-nav li {
+    padding: 0;
+    list-style: none; }
   #local-nav .nav-item-primary a {
     border-bottom: 1px solid rgba(43, 145, 44, 0.2);
     padding-top: 8px;
     padding-bottom: 3px;
-    color: #bd0076; }
+    color: #bd0076;
+    padding: 0 18px 0 0;
+    font-size: 2em;
+    line-height: normal;
+    border-bottom: 0;
+    min-width: 139px;
+    min-width: 109px; }
     #local-nav .nav-item-primary a:hover, #local-nav .nav-item-primary a.active {
       color: #a60067; }
   #local-nav .nav-item-secondary {
     display: none;
     float: none;
-    width: 100%; }
-    #local-nav .nav-item-secondary a {
-      color: #2b912c; }
-      #local-nav .nav-item-secondary a:hover, #local-nav .nav-item-secondary a.active {
-        color: #00730a; }
-  #local-nav.open {
-    border-bottom: 1px solid rgba(43, 145, 44, 0.2);
-    padding-bottom: 18px;
-    padding-bottom: 3px; }
-    #local-nav.open .nav-item-secondary {
-      display: list-item; }
-  #local-nav ul {
-    margin: 0; }
-  #local-nav li {
-    padding: 0;
-    list-style: none; }
-  #local-nav ul {
-    padding: 0 18px; }
-  #local-nav .nav-item-primary a {
-    padding: 0;
-    font-size: 2em;
-    line-height: normal;
-    min-width: 135px;
-    border-bottom: 0; }
-  #local-nav .nav-item-secondary {
+    width: 100%;
     width: auto;
     display: inline;
     float: left; }
     #local-nav .nav-item-secondary a {
+      color: #2b912c; }
+      #local-nav .nav-item-secondary a:hover, #local-nav .nav-item-secondary a.active {
+        color: #00730a; }
+    #local-nav .nav-item-secondary a {
       padding: 0 18px; }
-  #local-nav .toggler {
-    display: none; }
-  #local-nav .nav-item-primary a {
-    min-width: 155px; }
   #local-nav .toggler {
     float: right;
     font-family: "MP Sans", arial, sans-serif;
@@ -2264,7 +2257,8 @@ header.intro .article-section {
     -webkit-font-smoothing: antialiased;
     text-decoration: none;
     padding: 0 12px;
-    margin: 5px 8px; }
+    margin: 5px 8px;
+    display: none; }
     #local-nav .toggler:after {
       content: '';
       background-image: url("../images/rotation-pointer.png");
@@ -2284,35 +2278,43 @@ header.intro .article-section {
     #local-nav .toggler.active:after {
       transform: rotate(180deg); }
 
+/*
 #group-nav {
-  background-color: #f6f4e5;
-  padding: 8px 0; }
-  #group-nav .inner {
-    *zoom: 1;
+  background-color: $cream;
+  padding: 8px 0;
+
+  .inner {
+    @include clearfix;
     max-width: 970px;
-    margin: 0 auto; }
-    #group-nav .inner:before, #group-nav .inner:after {
-      content: " ";
-      display: table; }
-    #group-nav .inner:after {
-      clear: both; }
-  #group-nav ul {
+    margin: 0 auto;
+  }
+  ul {
     margin: 0 0 0 67px;
-    margin: 0 -160px 0 20px; }
-  #group-nav li {
+    @include respond-to(768px) {
+      margin: 0 -160px 0 20px;
+    }
+  }
+  li {
     padding: 0;
     margin: 0;
     margin-right: 18px;
     list-style: none;
-    width: auto; }
-  #group-nav li a {
-    color: #2b912c; }
-  #group-nav #local-logo {
+    width: auto;
+  }
+  li a {
+    color: $green;
+  }
+
+  #local-logo {
     margin: 0 0 5px 0;
     float: left;
-    margin: 0 0 8px -90px;
-    float: left; }
-    #group-nav #local-logo a {
+
+    @include respond-to(768px) {
+      margin: 0 0 8px -90px;
+      float: left;
+    }
+
+    a {
       display: block;
       text-indent: -9999px;
       width: 67px;
@@ -2320,11 +2322,19 @@ header.intro .article-section {
       background: transparent url(../images/logo-gefa.png) 0 0 no-repeat;
       background-size: 100%;
       margin-top: 10px;
-      width: 90px;
-      height: 73px; }
-  #group-nav a:hover, #group-nav a.active {
-    color: #bd0076; }
 
+      @include respond-to(768px) {
+        width: 90px;
+        height: 73px;
+      }
+    }
+  }
+  & a:hover,
+  & a.active {
+	color: $magenta;
+  }
+}
+*/
 #search {
   display: none;
   clear: both;

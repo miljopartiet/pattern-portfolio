@@ -395,8 +395,34 @@ body.navigation-is-open {
   clear: both;
   background-color: $cream;
 
+  &.open {
+    .nav-item-secondary {
+      display: list-item;
+    }
+    border-bottom: 1px solid rgba(43, 145, 44, 0.2);
+    padding-bottom: 18px;
+  }
+
+  @include respond-to(768px) {
+    background-color: rgba(246, 244, 229, .95);
+    display: block;
+    padding: 7px 0 3px 0;
+    border-bottom: 1px solid rgba(43, 145, 44, .1);
+  }
+
   body.navigation-is-open & {
     display: none;
+  }
+
+  ul {
+    margin: 0;
+    @include respond-to(768px) {
+      padding: 0 18px;
+    }
+  }
+  li {
+    padding: 0;
+    list-style: none;
   }
 
   .nav-item-primary a {
@@ -407,6 +433,18 @@ body.navigation-is-open {
     &:hover,
     &.active {
       color: $magenta-dark;
+    }
+    @include respond-to(768px) {
+      padding: 0 18px 0 0;
+      font-size: 2em;
+      line-height: normal;
+      border-bottom: 0;
+    }
+    @include respond-to(970px) {
+      min-width: 139px;
+    }
+    @include respond-to(1024px) {
+      min-width: 109px;
     }
   }
   .nav-item-secondary {
@@ -420,41 +458,7 @@ body.navigation-is-open {
         color: $green-dark;
       }
     }
-  }
-  &.open {
-    .nav-item-secondary {
-      display: list-item;
-    }
-    border-bottom: 1px solid rgba(43, 145, 44, 0.2);
-    padding-bottom: 18px;
     @include respond-to(768px) {
-      padding-bottom: 3px;
-    }
-  }
-  ul {
-    margin: 0;
-  }
-  li {
-    padding: 0;
-    list-style: none;
-  }
-  
-  @include respond-to(768px) {
-    background-color: rgba(246, 244, 229, .95);
-    display: block;
-    padding: 7px 0 3px 0;
-    border-bottom: 1px solid rgba(43, 145, 44, .1);
-    ul {
-      padding: 0 18px;
-    }
-    .nav-item-primary a {
-      padding: 0;
-      font-size: 2em;
-      line-height: normal;
-      min-width: 135px;
-      border-bottom: 0;
-    }
-    .nav-item-secondary {
       width: auto;
       display: inline;
       float: left;
@@ -462,15 +466,8 @@ body.navigation-is-open {
         padding: 0 18px;
       }
     }
-    .toggler {
-      display: none;
-    }
   }
-  @include respond-to(868px) {
-    .nav-item-primary a {
-      min-width: 155px;
-    }
-  }
+  
   .toggler {
     float: right;
     font-family: $mp-sans;
@@ -499,9 +496,13 @@ body.navigation-is-open {
     &.active:after {
       transform: rotate(180deg);
     }
+    @include respond-to(768px) {
+      display: none;
+    }
   }
 }
 
+/*
 #group-nav {
   background-color: $cream;
   padding: 8px 0;
@@ -557,6 +558,7 @@ body.navigation-is-open {
 	color: $magenta;
   }
 }
+*/
 
 #search {
   display: none;
